@@ -1,0 +1,51 @@
+{
+  "model": "gpt-4.1-mini",
+  "mode": "llm_api",
+  "total_edges": 1,
+  "enriched_edges": [
+    {
+      "edge_id": "index__click__state2",
+      "edge": {
+        "form_action": "",
+        "input_name": "",
+        "element_text": "Register",
+        "selector_tipo": "xpath",
+        "element_tag": "A",
+        "origem": "index",
+        "input_type": "",
+        "element_id": "",
+        "xpath_do_elemento": "/HTML[1]/BODY[1]/DIV[4]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/UL[1]/LI[1]/A[1]",
+        "related_frame": "",
+        "trigger_text": "Register",
+        "destino": "state2",
+        "href": "/register",
+        "title_attr": "",
+        "acao": "click",
+        "selector_valor": "/HTML[1]/BODY[1]/DIV[4]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/UL[1]/LI[1]/A[1]",
+        "input_id": "",
+        "aria_label": ""
+      },
+      "llm_semantics": {
+        "intent": "navigate_to_registration_page",
+        "confidence": 0.99,
+        "reason": "The user clicked on a 'Register' link from the homepage, which leads to a registration form page with personal details and password fields, indicating the intent to access the registration page.",
+        "entities": [
+          "Register",
+          "registration page",
+          "user registration"
+        ],
+        "alternatives": [
+          {
+            "intent": "navigate_to_account_creation",
+            "confidence": 0.95
+          },
+          {
+            "intent": "access_registration_form",
+            "confidence": 0.93
+          }
+        ]
+      },
+      "collector_status": "ok"
+    }
+  ]
+}

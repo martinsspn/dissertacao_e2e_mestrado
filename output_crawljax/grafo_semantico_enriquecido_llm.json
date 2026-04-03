@@ -1,0 +1,186 @@
+{
+  "model": "gpt-4.1-mini",
+  "mode": "llm_api",
+  "total_edges": 4,
+  "processed_edges": 4,
+  "completed": true,
+  "enriched_edges": [
+    {
+      "edge_id": "index__click__state2",
+      "edge": {
+        "form_action": "",
+        "input_name": "",
+        "element_text": "Register",
+        "selector_tipo": "xpath",
+        "element_tag": "A",
+        "origem": "index",
+        "input_type": "",
+        "element_id": "",
+        "xpath_do_elemento": "/HTML[1]/BODY[1]/DIV[4]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/UL[1]/LI[1]/A[1]",
+        "related_frame": "",
+        "trigger_text": "Register",
+        "destino": "state2",
+        "href": "/register",
+        "title_attr": "",
+        "acao": "click",
+        "selector_valor": "/HTML[1]/BODY[1]/DIV[4]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/UL[1]/LI[1]/A[1]",
+        "input_id": "",
+        "aria_label": ""
+      },
+      "llm_semantics": {
+        "intent": "navigate_to_registration_page",
+        "confidence": 0.99,
+        "reason": "The user clicked on a 'Register' link from the home page, which navigates to a registration form page with personal details and password fields, indicating the intent to access the registration page.",
+        "entities": [
+          "Register",
+          "registration page",
+          "personal details form",
+          "password form"
+        ],
+        "alternatives": [
+          {
+            "intent": "access_registration_form",
+            "confidence": 0.95
+          },
+          {
+            "intent": "start_account_creation",
+            "confidence": 0.9
+          }
+        ]
+      },
+      "collector_status": "ok"
+    },
+    {
+      "edge_id": "state2__click__state3",
+      "edge": {
+        "form_action": "",
+        "input_name": "register-button",
+        "element_text": "",
+        "selector_tipo": "xpath",
+        "element_tag": "INPUT",
+        "origem": "state2",
+        "input_type": "submit",
+        "element_id": "register-button",
+        "xpath_do_elemento": "/HTML[1]/BODY[1]/DIV[4]/DIV[1]/DIV[4]/DIV[2]/FORM[1]/DIV[1]/DIV[2]/DIV[4]/INPUT[1]",
+        "related_frame": "",
+        "trigger_text": "",
+        "destino": "state3",
+        "href": "",
+        "title_attr": "",
+        "acao": "click",
+        "selector_valor": "/HTML[1]/BODY[1]/DIV[4]/DIV[1]/DIV[4]/DIV[2]/FORM[1]/DIV[1]/DIV[2]/DIV[4]/INPUT[1]",
+        "input_id": "register-button",
+        "aria_label": ""
+      },
+      "llm_semantics": {
+        "intent": "submit_registration_form",
+        "confidence": 0.95,
+        "reason": "O usuário clicou no botão de registro em uma página de cadastro, mas a transição resultou em mensagens de erro indicando campos obrigatórios não preenchidos, caracterizando uma tentativa de submissão do formulário de registro com dados incompletos.",
+        "entities": [
+          "register-button",
+          "form",
+          "validation_errors"
+        ],
+        "alternatives": [
+          {
+            "intent": "submit_registration_form_with_errors",
+            "confidence": 0.9
+          },
+          {
+            "intent": "attempt_registration",
+            "confidence": 0.85
+          }
+        ]
+      },
+      "collector_status": "ok"
+    },
+    {
+      "edge_id": "state3__reload__state14",
+      "edge": {
+        "form_action": "",
+        "input_name": "",
+        "element_text": "",
+        "selector_tipo": "url",
+        "element_tag": "desconhecido",
+        "origem": "state3",
+        "input_type": "",
+        "element_id": "",
+        "xpath_do_elemento": "https://demowebshop.tricentis.com/",
+        "related_frame": "",
+        "trigger_text": "",
+        "destino": "state14",
+        "href": "",
+        "title_attr": "",
+        "acao": "reload",
+        "selector_valor": "https://demowebshop.tricentis.com/",
+        "input_id": "",
+        "aria_label": ""
+      },
+      "llm_semantics": {
+        "intent": "navigate_homepage",
+        "confidence": 0.95,
+        "reason": "A transição ocorreu de uma página de registro (state3) para a página principal do site (state14) com URL https://demowebshop.tricentis.com/, sem interação de formulário, indicando navegação para a homepage após possível recarregamento ou cancelamento do registro.",
+        "entities": [
+          "homepage",
+          "registro",
+          "navegação"
+        ],
+        "alternatives": [
+          {
+            "intent": "cancel_registration",
+            "confidence": 0.85
+          },
+          {
+            "intent": "reload_homepage",
+            "confidence": 0.8
+          }
+        ]
+      },
+      "collector_status": "ok"
+    },
+    {
+      "edge_id": "state14__reload__state14",
+      "edge": {
+        "form_action": "",
+        "input_name": "",
+        "element_text": "",
+        "selector_tipo": "url",
+        "element_tag": "desconhecido",
+        "origem": "state14",
+        "input_type": "",
+        "element_id": "",
+        "xpath_do_elemento": "https://demowebshop.tricentis.com/",
+        "related_frame": "",
+        "trigger_text": "",
+        "destino": "state14",
+        "href": "",
+        "title_attr": "",
+        "acao": "reload",
+        "selector_valor": "https://demowebshop.tricentis.com/",
+        "input_id": "",
+        "aria_label": ""
+      },
+      "llm_semantics": {
+        "intent": "reload_homepage",
+        "confidence": 0.95,
+        "reason": "A transição é um reload da mesma URL da página inicial do Demo Web Shop, sem alteração no estado ou navegação para outra página, indicando que o usuário recarregou a página principal do site.",
+        "entities": [
+          "reload",
+          "homepage",
+          "Demo Web Shop"
+        ],
+        "alternatives": [
+          {
+            "intent": "refresh_page",
+            "confidence": 0.9
+          },
+          {
+            "intent": "navigate_home",
+            "confidence": 0.7
+          }
+        ]
+      },
+      "collector_status": "ok"
+    }
+  ]
+}

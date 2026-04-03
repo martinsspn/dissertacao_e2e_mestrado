@@ -1,0 +1,45 @@
+services:
+  # 1. Navegador Chrome isolado (Selenium Grid standalone)
+  selenium_chrome:
+    image: selenium/standalone-chrome:4.9.0-20230421
+    container_name: selenium_chrome
+    shm_size: '2gb'
+    ports:
+      - "4444:4444"
+    networks:
+      - rede_dissertacao
+
+  # 2. Explorador Java (Crawljax)
+  crawljax_java:
+    build: 
+      context: ./crawljax_explorer
+    container_name: crawljax_explorer_runner
+    volumes:
+      - ./output_crawljax:/app/output # Pasta onde os HTMLs serão salvos
+    environment: 
+      - TARGET_URL=https://demowebshop.tricentis.com/
+      - SELENIUM_HUB_URL=http://selenium_chrome:4444/wd/hub
+    depends_on:
+      - selenium_chrome
+    networks:
+      - rede_dissertacao
+
+  # 3. Motor Semântico (Python)
+  python_enricher:
+    build: 
+      context: ./python_app
+    container_name: python_motor_semantico
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY:-}
+      - OPENAI_BASE_URL=${OPENAI_BASE_URL:-https://api.openai.com/v1}
+      - LLM_MODEL=${LLM_MODEL:-gpt-4.1-mini}
+    volumes:
+      - ./python_app:/app
+      - ./output_crawljax:/app/data_input # Pasta de onde os HTMLs serão lidos
+    networks:
+      - rede_dissertacao
+    command: tail -f /dev/null 
+
+networks:
+  rede_dissertacao:
+    driver: bridge

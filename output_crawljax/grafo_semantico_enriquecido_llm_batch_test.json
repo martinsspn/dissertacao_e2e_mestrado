@@ -1,0 +1,49 @@
+{
+  "model": "mock-multimodal",
+  "mode": "mock",
+  "total_edges": 1,
+  "processed_edges": 1,
+  "completed": true,
+  "enriched_edges": [
+    {
+      "edge_id": "index__click__state2",
+      "edge": {
+        "form_action": "",
+        "input_name": "",
+        "element_text": "Register",
+        "selector_tipo": "xpath",
+        "element_tag": "A",
+        "origem": "index",
+        "input_type": "",
+        "element_id": "",
+        "xpath_do_elemento": "/HTML[1]/BODY[1]/DIV[4]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/UL[1]/LI[1]/A[1]",
+        "related_frame": "",
+        "trigger_text": "Register",
+        "destino": "state2",
+        "href": "/register",
+        "title_attr": "",
+        "acao": "click",
+        "selector_valor": "/HTML[1]/BODY[1]/DIV[4]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/UL[1]/LI[1]/A[1]",
+        "input_id": "",
+        "aria_label": ""
+      },
+      "llm_semantics": {
+        "intent": "INTENT_NAVIGATE_TO_REGISTER",
+        "confidence": 0.8,
+        "reason": "Clique em elemento com texto de cadastro",
+        "entities": [
+          "navigation",
+          "register"
+        ],
+        "alternatives": [
+          {
+            "intent": "INTENT_OPEN_AUTH_ENTRY",
+            "confidence": 0.35
+          }
+        ],
+        "comment_ptbr": "A ação parece navegar para cadastro. Página destino: Demo Web Shop. Register."
+      },
+      "collector_status": "ok"
+    }
+  ]
+}
