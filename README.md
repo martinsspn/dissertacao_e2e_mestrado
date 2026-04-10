@@ -12,9 +12,12 @@
 Navegador remoto usado pelo Crawljax.
 
 ### Serviço `crawljax_java`
-Executa a exploração e exporta:
-- `output_crawljax/nos.json`
-- `output_crawljax/arestas.json`
+Executa a exploração e persiste o grafo navegacional no Neo4j:
+- Nós com label `PageState`
+- Relações `NAVIGATES_TO` com metadados básicos de interação (ação, seletor e tipo de gatilho)
+
+### Serviço `neo4j`
+Banco de grafo para armazenar os estados e transições de navegação.
 
 ### Serviço `python_enricher`
 Container de execução para o pipeline Python:
@@ -45,12 +48,22 @@ cp .env.example .env
 # edite .env e preencha OPENAI_API_KEY
 
 docker compose build python_enricher
-docker compose up -d selenium_chrome
+docker compose up -d neo4j selenium_chrome
 ```
 
 ### 1) Exploração (Crawljax)
 ```bash
 docker compose run --rm crawljax_java
+```
+
+Após executar, abra o Neo4j Browser em `http://localhost:7474` (usuário `neo4j`, senha `neo4j_password`) e rode:
+
+```cypher
+MATCH (n:PageState) RETURN n LIMIT 25;
+```
+
+```cypher
+MATCH (a:PageState)-[r:NAVIGATES_TO]->(b:PageState) RETURN a, r, b LIMIT 50;
 ```
 
 ### 2) Coleta multimodal (somente)
@@ -109,11 +122,12 @@ docker compose run --rm python_enricher \
 
 ## Saídas
 
-- `output_crawljax/nos.json`: nós do grafo navegacional
-- `output_crawljax/arestas.json`: transições entre estados
+- Neo4j (`PageState` e `NAVIGATES_TO`): grafo navegacional persistido
 - `output_crawljax/multimodal_dataset/multimodal_packages.json`: pacotes multimodais por aresta
 - `output_crawljax/multimodal_dataset/multimodal_packages_summary.json`: resumo da coleta
 - `output_crawljax/grafo_semantico_enriquecido_llm.json`: resultado do enriquecimento (parcial ou final)
+
+> Observação: o pipeline Python atual ainda lê `nos.json` e `arestas.json`. Nesta mudança, o crawler passa a gravar o grafo no Neo4j. A adaptação do pipeline Python para ler direto do Neo4j pode ser feita no próximo passo.
 
 ---
 
