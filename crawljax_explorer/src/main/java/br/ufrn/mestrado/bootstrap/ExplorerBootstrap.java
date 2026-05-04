@@ -29,9 +29,9 @@ public class ExplorerBootstrap {
         builder.setBrowserConfig(BrowserConfiguration.remoteConfig(1, seleniumHubUrl, capabilities));
 
         CrawlRuntimeProfile profile = new CrawlRuntimeProfile(
-            EnvironmentUtils.getIntEnvOrDefault("CRAWL_MAX_DEPTH", 8),
-            EnvironmentUtils.getIntEnvOrDefault("CRAWL_MAX_STATES", 400),
-            EnvironmentUtils.getIntEnvOrDefault("CRAWL_MAX_RUNTIME_MINUTES", 45),
+            EnvironmentUtils.getIntEnvOrDefault("CRAWL_MAX_DEPTH", 4),
+            EnvironmentUtils.getIntEnvOrDefault("CRAWL_MAX_STATES", 100),
+            EnvironmentUtils.getIntEnvOrDefault("CRAWL_MAX_RUNTIME_MINUTES", 10),
             EnvironmentUtils.getIntEnvOrDefault("CRAWL_WAIT_AFTER_RELOAD_MS", 3000),
             EnvironmentUtils.getIntEnvOrDefault("CRAWL_WAIT_AFTER_EVENT_MS", 2200),
             EnvironmentUtils.getBooleanEnvOrDefault("CRAWL_CLICK_ONCE", false),
