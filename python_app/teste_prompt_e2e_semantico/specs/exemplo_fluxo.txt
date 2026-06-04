@@ -1,0 +1,1 @@
+O usuario deve navegar ate uma pagina relevante para sua tarefa, executar a acao descrita pelo elemento mais apropriado disponivel no grafo e validar que a pagina ou estado esperado ficou visivel.

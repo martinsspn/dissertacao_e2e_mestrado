@@ -1,0 +1,1 @@
+O usuario deve navegar ate a pagina Contact Us a partir de uma area disponivel no site e validar que a pagina de contato foi aberta corretamente.

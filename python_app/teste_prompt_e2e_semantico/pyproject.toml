@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "teste-prompt-e2e-semantico"
+version = "0.1.0"
+description = "Gera prompts estruturados para testes E2E Playwright a partir de especificacoes em linguagem natural e grafo navegacional."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "neo4j==5.16.0",
+]
+
+[project.scripts]
+prompt-e2e = "teste_prompt_e2e_semantico.presentation.cli:main"
+evaluate-e2e = "teste_prompt_e2e_semantico.evaluation.presentation.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "."}
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["teste_prompt_e2e_semantico*"]

@@ -1,0 +1,1 @@
+O usuario deve acessar a categoria Digital downloads, visualizar os itens digitais disponiveis e validar que a pagina de downloads digitais esta visivel.
