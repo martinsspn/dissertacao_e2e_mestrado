@@ -32,6 +32,7 @@ A parte automatica mede propriedades objetivas e reprodutiveis.
 - teste Playwright gerado;
 - grafo navegacional usado no prompt;
 - prompt utilizado para gerar o teste;
+- relatorio `specification_coverage` produzido no prompt;
 - logs de execucao do Playwright;
 - resultado da execucao (`passed`, `failed`, `timed_out`, `syntax_error` etc.).
 
@@ -90,6 +91,7 @@ Um arquivo estruturado por teste, por exemplo:
 - Textos usados em locators aparecem em paginas/transicoes relevantes?
 - Seletores por `id`, `name`, `href`, texto ou role aparecem entre os seletores recomendados?
 - O teste usa rotas ou elementos que nao aparecem no contexto fornecido?
+- O teste respeita os requisitos marcados como `supported`, `partial` e `missing` em `specification_coverage`?
 
 #### Robustez De Seletores
 

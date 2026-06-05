@@ -20,6 +20,7 @@ def build_structured_prompt(spec: SpecPlan, base_url: str, context: RelevantGrap
         "specification_title": spec.title,
         "specification": spec.raw_text.strip(),
         "context_quality": _context_quality(graph_context),
+        "specification_coverage": _compact_coverage(context),
         "graph_context": graph_context,
     }
 
@@ -56,6 +57,8 @@ def build_structured_prompt(spec: SpecPlan, base_url: str, context: RelevantGrap
             "- Se houver multiplos caminhos candidatos, escolha o mais coerente com a especificacao e com seletores fortes.",
             "- Se os caminhos candidatos forem insuficientes, use as paginas e transicoes relevantes para compor o menor fluxo valido.",
             "- Trate transicoes com acao `reload` como evidencias de pagina, nao como passos preferenciais de interacao.",
+            "- Use `specification_coverage` para decidir o escopo do teste: priorize requisitos `supported`, trate `partial` com cautela e nao invente passos marcados como `missing`.",
+            "- Quando houver requisitos `missing`, gere apenas o teste suportado pelo grafo e inclua assercoes observaveis para as partes cobertas.",
             "",
             "## Politica De Seletores",
             "",
@@ -148,6 +151,46 @@ def _compact_selector(selector: SelectorCandidate) -> dict[str, object]:
         "score": round(selector.score, 3),
         "strength": selector.strength,
         "reason": selector.reason,
+    }
+
+
+def _compact_coverage(context: RelevantGraphContext) -> dict[str, object]:
+    coverage = context.coverage
+    if coverage is None:
+        return {
+            "overall_status": "unknown",
+            "coverage_score": 0.0,
+            "requirements": [],
+            "warnings": ["Cobertura da especificacao nao calculada."],
+        }
+    return {
+        "overall_status": coverage.overall_status,
+        "coverage_score": coverage.coverage_score,
+        "summary": {
+            "supported": coverage.supported_requirements,
+            "partial": coverage.partial_requirements,
+            "missing": coverage.missing_requirements,
+        },
+        "requirements": [
+            {
+                "text": requirement.text,
+                "terms": requirement.terms,
+                "status": requirement.status,
+                "confidence": requirement.confidence,
+                "warning": requirement.warning,
+                "evidence": [
+                    {
+                        "kind": evidence.kind,
+                        "label": evidence.label,
+                        "score": round(evidence.score, 3),
+                        "details": evidence.details,
+                    }
+                    for evidence in requirement.evidence
+                ],
+            }
+            for requirement in coverage.requirements
+        ],
+        "warnings": coverage.warnings,
     }
 
 

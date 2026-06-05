@@ -6,6 +6,7 @@ from teste_prompt_e2e_semantico.application.graph_relevance import rank_pages, r
 from teste_prompt_e2e_semantico.application.path_ranking import rank_candidate_paths
 from teste_prompt_e2e_semantico.application.ports import NavigationGraphRepository, PromptWriter, SpecRepository
 from teste_prompt_e2e_semantico.application.prompt_builder import build_structured_prompt
+from teste_prompt_e2e_semantico.application.spec_coverage import analyze_spec_coverage
 from teste_prompt_e2e_semantico.application.text_normalization import normalize_spec
 from teste_prompt_e2e_semantico.domain.models import GeneratedPrompt, RelevantGraphContext
 
@@ -57,7 +58,8 @@ class GeneratePromptsUseCase:
                 self._max_path_depth,
                 self._candidate_paths_limit,
             )
-            context = RelevantGraphContext(pages=pages, transitions=transitions, paths=paths)
+            coverage = analyze_spec_coverage(spec, pages, transitions, paths)
+            context = RelevantGraphContext(pages=pages, transitions=transitions, paths=paths, coverage=coverage)
             prompt = build_structured_prompt(spec, self._base_url, context)
 
             generated_prompt = GeneratedPrompt(
@@ -68,6 +70,8 @@ class GeneratePromptsUseCase:
                 relevant_pages=len(pages),
                 relevant_transitions=len(transitions),
                 candidate_paths=len(paths),
+                coverage_status=coverage.overall_status,
+                coverage_score=coverage.coverage_score,
             )
             output_path = self._prompt_writer.write(output_dir, generated_prompt)
             results.append(
@@ -79,6 +83,8 @@ class GeneratePromptsUseCase:
                     "relevant_pages": str(generated_prompt.relevant_pages),
                     "relevant_transitions": str(generated_prompt.relevant_transitions),
                     "candidate_paths": str(generated_prompt.candidate_paths),
+                    "coverage_status": generated_prompt.coverage_status,
+                    "coverage_score": f"{generated_prompt.coverage_score:.3f}",
                 }
             )
 

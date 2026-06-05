@@ -89,10 +89,40 @@ class PathCandidate:
 
 
 @dataclass(frozen=True)
+class CoverageEvidence:
+    kind: str
+    label: str
+    score: float
+    details: dict[str, object] = field(default_factory=dict)
+
+
+@dataclass(frozen=True)
+class RequirementCoverage:
+    text: str
+    terms: list[str]
+    status: str
+    confidence: float
+    evidence: list[CoverageEvidence]
+    warning: str = ""
+
+
+@dataclass(frozen=True)
+class SpecCoverageReport:
+    overall_status: str
+    coverage_score: float
+    supported_requirements: int
+    partial_requirements: int
+    missing_requirements: int
+    requirements: list[RequirementCoverage]
+    warnings: list[str] = field(default_factory=list)
+
+
+@dataclass(frozen=True)
 class RelevantGraphContext:
     pages: list[ScoredPage]
     transitions: list[ScoredTransition]
     paths: list[PathCandidate]
+    coverage: SpecCoverageReport | None = None
 
 
 @dataclass(frozen=True)
@@ -104,3 +134,5 @@ class GeneratedPrompt:
     relevant_pages: int
     relevant_transitions: int
     candidate_paths: int
+    coverage_status: str = "unknown"
+    coverage_score: float = 0.0

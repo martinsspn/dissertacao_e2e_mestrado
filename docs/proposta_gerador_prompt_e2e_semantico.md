@@ -26,7 +26,8 @@ Construir um pipeline que:
 2. Persiste no Neo4j um grafo com paginas, transicoes, atributos dos elementos, seletores e metadados textuais.
 3. Recebe uma especificacao de teste em linguagem natural.
 4. Seleciona paginas, transicoes e caminhos candidatos por relevancia textual e qualidade de seletores.
-5. Gera um prompt estruturado para uma LLM produzir um teste Playwright.
+5. Estima a cobertura da especificacao pelo grafo, indicando requisitos suportados, parciais e ausentes.
+6. Gera um prompt estruturado para uma LLM produzir um teste Playwright.
 
 A contribuicao nao e apenas "chamar uma LLM", mas transformar a aplicacao explorada em contexto semantico curado, auditavel e reutilizavel.
 
@@ -62,6 +63,8 @@ Para cada especificacao, gerar testes com a mesma LLM e avaliar:
 - Classificacao de falha: quando um teste falhar, separar `application_failure`, `generated_test_failure`, `environment_failure` e `inconclusive`.
 
 A avaliacao detalhada esta descrita em `docs/protocolo_avaliacao_hibrida.md`.
+
+A camada `specification_coverage`, usada para estimar o grau de fundamentacao da especificacao no grafo antes da geracao do teste, esta documentada em `docs/specification_coverage.md`.
 
 ## Artefatos Esperados
 
