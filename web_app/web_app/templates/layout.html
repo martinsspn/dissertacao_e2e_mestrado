@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Gerador E2E Semantico</title>
+    <link rel="stylesheet" href="/static/app.css">
+    {% block head %}{% endblock %}
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="brand">E2E Semantico</div>
+        <nav class="nav">
+          <a class="{{ 'active' if active == 'dashboard' else '' }}" href="/">Dashboard</a>
+          <a class="{{ 'active' if active == 'crawler' else '' }}" href="/crawler">Crawler</a>
+          <a class="{{ 'active' if active == 'graph' else '' }}" href="/graph">Grafo</a>
+          <a class="{{ 'active' if active == 'specs' else '' }}" href="/specs">Especificacoes</a>
+          <a class="{{ 'active' if active == 'prompts' else '' }}" href="/prompts">Prompts</a>
+          <a class="{{ 'active' if active == 'tests' else '' }}" href="/tests">Testes</a>
+          <a class="{{ 'active' if active == 'evaluation' else '' }}" href="/evaluation">Avaliacao</a>
+        </nav>
+      </aside>
+      <main class="main">
+        {% block content %}{% endblock %}
+      </main>
+    </div>
+    <script src="/static/app.js"></script>
+    {% block scripts %}{% endblock %}
+  </body>
+</html>

@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<header class="page-header">
+  <h1>Especificacoes</h1>
+  <p>Arquivos de entrada em linguagem natural.</p>
+</header>
+
+<section class="toolbar">
+  <form method="post" action="/specs/upload" enctype="multipart/form-data">
+    <input name="uploaded_specs" type="file" accept=".txt,text/plain" multiple required>
+    <button type="submit">Importar specs</button>
+  </form>
+</section>
+
+<section class="two-column">
+  <aside class="list-pane">
+    <a class="list-item {{ 'active' if not selected else '' }}" href="/specs?spec_id=">nova_spec</a>
+    <form method="post" action="/specs/delete" class="selection-list">
+      {% for spec in specs %}
+        <label class="selectable-row {{ 'active' if selected == spec.stem else '' }}">
+          <input type="checkbox" name="spec_ids" value="{{ spec.stem }}">
+          <a href="/specs?spec_id={{ spec.stem }}">{{ spec.stem }}</a>
+        </label>
+      {% endfor %}
+      <button type="submit" class="danger">Apagar selecionadas</button>
+    </form>
+  </aside>
+  <section class="editor-pane">
+    <form method="post" action="/specs/save">
+      <label for="spec_id">Identificador</label>
+      <input id="spec_id" name="spec_id" value="{{ selected or 'nova_spec' }}" required>
+      <label for="content">Especificacao</label>
+      <textarea id="content" name="content" rows="22">{{ content }}</textarea>
+      <button type="submit">Salvar especificacao</button>
+    </form>
+  </section>
+</section>
+{% endblock %}

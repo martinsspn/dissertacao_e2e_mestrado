@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<header class="page-header">
+  <h1>Prompts</h1>
+  <p>Prompts estruturados gerados a partir das especificacoes e do grafo.</p>
+</header>
+
+<section class="toolbar">
+  <form method="post" action="/prompts/generate">
+    <button type="submit">Gerar prompts</button>
+  </form>
+  <span class="muted">URL alvo: {{ target_url }}</span>
+  {% with job=latest_job %}{% include "_job_summary.html" %}{% endwith %}
+</section>
+
+<section class="two-column">
+  <aside class="list-pane">
+    <form id="promptSelection" method="post" class="selection-list">
+      <input type="hidden" name="download_scope" value="selected">
+      {% for prompt in prompts %}
+        {% set pid = prompt.name.removesuffix('.prompt.md') %}
+        <label class="selectable-row {{ 'active' if selected == pid else '' }}">
+          <input type="checkbox" name="prompt_ids" value="{{ pid }}">
+          <a href="/prompts?prompt_id={{ pid }}">{{ pid }}</a>
+        </label>
+      {% endfor %}
+      <div class="button-row">
+        <button type="button" data-select-all="#promptSelection input[type='checkbox']">Selecionar todos</button>
+        <button type="submit" formaction="/prompts/download">Baixar selecionados</button>
+        <button type="submit" formaction="/prompts/delete" class="danger">Apagar selecionados</button>
+      </div>
+    </form>
+  </aside>
+  <section class="editor-pane">
+    <div class="readonly-header">
+      <span>{{ selected or 'nenhum_prompt' }}</span>
+      <button type="button" data-copy-target="promptContent">Copiar</button>
+    </div>
+    <textarea id="promptContent" rows="28" readonly>{{ content }}</textarea>
+  </section>
+</section>
+{% endblock %}

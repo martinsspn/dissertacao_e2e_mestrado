@@ -1,0 +1,9 @@
+{% if job %}
+  <div class="job-line">
+    <span class="status {{ job.status }}">{{ job.status }}</span>
+    <span>{{ job.id }}</span>
+    <a href="/jobs/{{ job.id }}">logs</a>
+  </div>
+{% else %}
+  <span class="muted">sem execucao</span>
+{% endif %}

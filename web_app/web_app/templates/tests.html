@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<header class="page-header">
+  <h1>Testes</h1>
+  <p>Arquivos Playwright criados a partir das respostas da LLM.</p>
+</header>
+
+<section class="toolbar">
+  <a class="toggle {{ 'active' if approach == 'semantic_prompt' else '' }}" href="/tests?approach=semantic_prompt">semantic_prompt</a>
+  <a class="toggle {{ 'active' if approach == 'baseline' else '' }}" href="/tests?approach=baseline">baseline</a>
+</section>
+
+<section class="two-column">
+  <aside class="list-pane">
+    <a class="list-item {{ 'active' if not selected else '' }}" href="/tests?approach={{ approach }}&spec_id=">novo_teste</a>
+    {% for test in tests %}
+      {% set tid = test.name.removesuffix('.spec.ts') %}
+      <a class="list-item {{ 'active' if selected == tid else '' }}" href="/tests?approach={{ approach }}&spec_id={{ tid }}">{{ tid }}</a>
+    {% endfor %}
+  </aside>
+  <section class="editor-pane">
+    <form method="post" action="/tests/save">
+      <input type="hidden" name="approach" value="{{ approach }}">
+      <label for="spec_id">Identificador</label>
+      <input id="spec_id" name="spec_id" value="{{ selected or 'novo_teste' }}" required>
+      <label for="code">Codigo</label>
+      <textarea id="code" name="code" class="code-editor" rows="26">{{ code }}</textarea>
+      <button type="submit">Salvar teste</button>
+    </form>
+  </section>
+</section>
+{% endblock %}

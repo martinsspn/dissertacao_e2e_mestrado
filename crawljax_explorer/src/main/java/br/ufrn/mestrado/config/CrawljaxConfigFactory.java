@@ -10,16 +10,15 @@ public final class CrawljaxConfigFactory {
     }
 
     public static void applyRuntimeProfile(CrawljaxConfigurationBuilder builder, CrawlRuntimeProfile profile) {
-        // Regras para exploracao ampla e profunda da aplicacao.
+        // Politica padrao de exploracao: ampla o bastante para descobrir fluxos
+        // relevantes, mas limitada para manter o grafo finito e reprodutivel.
         builder.crawlRules().clickOnce(profile.clickOnce());
         builder.crawlRules().clickElementsInRandomOrder(profile.randomOrder());
         builder.crawlRules().crawlHiddenAnchors(true);
 
-        // Configura tempos de espera para lidar com carregamento dinamico (AJAX/JS).
         builder.crawlRules().waitAfterReloadUrl(profile.waitAfterReloadMs(), TimeUnit.MILLISECONDS);
         builder.crawlRules().waitAfterEvent(profile.waitAfterEventMs(), TimeUnit.MILLISECONDS);
 
-        // O que o crawler deve clicar.
         builder.crawlRules().clickDefaultElements();
         builder.crawlRules().click("label");
         builder.crawlRules().click("summary");
@@ -33,7 +32,6 @@ public final class CrawljaxConfigFactory {
         builder.crawlRules().click("li");
         builder.crawlRules().click("img");
 
-        // Limites de exploracao.
         builder.setMaximumDepth(profile.maxDepth());
         builder.setMaximumStates(profile.maxStates());
         builder.setMaximumRunTime(profile.maxRuntimeMinutes(), TimeUnit.MINUTES);

@@ -41,7 +41,7 @@ public final class SeleniumAvailabilityChecker {
         if (required) {
             throw new RuntimeException(message);
         }
-        System.out.println("Aviso: " + message + " Prosseguindo mesmo assim (SELENIUM_READY_REQUIRED=false).");
+        System.out.println("Aviso: " + message + " Prosseguindo com a politica padrao de exploracao.");
     }
 
     private static List<String> buildSeleniumStatusUrls(String seleniumHubUrl) {

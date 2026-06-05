@@ -3,8 +3,12 @@ package br.ufrn.mestrado.plugin;
 import br.ufrn.mestrado.infra.EnvironmentUtils;
 
 import com.crawljax.core.CrawlSession;
+import com.crawljax.core.CrawlerContext;
 import com.crawljax.core.ExitNotifier.ExitStatus;
+import com.crawljax.core.plugin.OnNewStatePlugin;
+import com.crawljax.core.plugin.PreStateCrawlingPlugin;
 import com.crawljax.core.plugin.PostCrawlingPlugin;
+import com.crawljax.core.CandidateElement;
 import com.crawljax.core.state.Element;
 import com.crawljax.core.state.Eventable;
 import com.crawljax.core.state.Identification;
@@ -12,12 +16,14 @@ import com.crawljax.core.state.StateFlowGraph;
 import com.crawljax.core.state.StateVertex;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.google.common.collect.ImmutableList;
 import org.neo4j.driver.AuthTokens;
 import org.neo4j.driver.Driver;
 import org.neo4j.driver.GraphDatabase;
 import org.neo4j.driver.Session;
 import org.neo4j.driver.TransactionContext;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -25,9 +31,24 @@ import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class SemanticExportPlugin implements PostCrawlingPlugin {
+public class SemanticExportPlugin implements OnNewStatePlugin, PreStateCrawlingPlugin, PostCrawlingPlugin {
 
     private static final ObjectMapper JSON_MAPPER = new ObjectMapper();
+    private final Map<String, String> stateScreenshots = new HashMap<>();
+
+    @Override
+    public void onNewState(CrawlerContext context, StateVertex newState) {
+        captureStateScreenshot(context, newState);
+    }
+
+    @Override
+    public void preStateCrawling(
+        CrawlerContext context,
+        ImmutableList<CandidateElement> candidateElements,
+        StateVertex state
+    ) {
+        captureStateScreenshot(context, state);
+    }
 
     @Override
     public void postCrawling(CrawlSession session, ExitStatus exitReason) {
@@ -65,6 +86,9 @@ public class SemanticExportPlugin implements PostCrawlingPlugin {
             String url = EnvironmentUtils.safeValue(state.getUrl(), "url_desconhecida");
             String dom = state.getDom() == null ? "" : state.getDom();
             String title = extractTitleFromDom(dom);
+            String h1 = extractFirstTagText(dom, "h1", "");
+            String visibleText = extractVisibleText(dom, 1200);
+            int interactiveCount = countInteractiveElements(dom);
 
             // Consolidar por URL - usar URL como chave única
             if (!urlToNode.containsKey(url)) {
@@ -73,12 +97,19 @@ public class SemanticExportPlugin implements PostCrawlingPlugin {
                 no.put("url", url);
                 no.put("title", title);
                 no.put("state_count", 1);  // Rastrear quantos estados foram consolidados
+                no.put("h1", h1);
+                no.put("visible_text_excerpt", visibleText);
+                no.put("interactive_count", interactiveCount);
+                no.put("screenshot_path", EnvironmentUtils.safeValue(stateScreenshots.get(state.getName()), ""));
                 urlToNode.put(url, no);
             } else {
                 // Incrementar contador de estados consolidados
                 Map<String, Object> existing = urlToNode.get(url);
                 int count = (Integer) existing.getOrDefault("state_count", 1);
                 existing.put("state_count", count + 1);
+                if (EnvironmentUtils.safeValue((String) existing.get("screenshot_path"), "").isEmpty()) {
+                    existing.put("screenshot_path", EnvironmentUtils.safeValue(stateScreenshots.get(state.getName()), ""));
+                }
             }
         }
 
@@ -145,13 +176,13 @@ public class SemanticExportPlugin implements PostCrawlingPlugin {
 
             // Montar mapa de seletores com múltiplas opções (usar identification como possível xpath/cs)
             Map<String, Object> selectors = new HashMap<>();
-            if (elementId != null && !elementId.isBlank()) selectors.put("id", elementId);
-            if (elementName != null && !elementName.isBlank()) selectors.put("name", elementName);
-            if (elementAria != null && !elementAria.isBlank()) selectors.put("aria_label", elementAria);
-            if (elementText != null && !elementText.isBlank()) selectors.put("text", elementText);
-            if (elementHref != null && !elementHref.isBlank()) selectors.put("href", elementHref);
-            if (elementClasses != null && !elementClasses.isBlank()) selectors.put("class", elementClasses);
-            if (elementRole != null && !elementRole.isBlank()) selectors.put("role", elementRole);
+            putSelectorIfUseful(selectors, "id", elementId, 120);
+            putSelectorIfUseful(selectors, "name", elementName, 120);
+            putSelectorIfUseful(selectors, "aria_label", elementAria, 120);
+            putSelectorIfUseful(selectors, "text", elementText, 80);
+            putSelectorIfUseful(selectors, "href", elementHref, 240);
+            putSelectorIfUseful(selectors, "class", elementClasses, 160);
+            putSelectorIfUseful(selectors, "role", elementRole, 80);
             // Se o identification contiver xpath/css, incluir como fallback
             if (selectorTipo != null && selectorValor != null && !"desconhecido".equals(selectorValor)) {
                 if (selectorTipo.contains("xpath")) {
@@ -164,17 +195,18 @@ public class SemanticExportPlugin implements PostCrawlingPlugin {
                 }
             }
 
-            // Score de robustez para priorização no gerador
+            // Score de robustez para priorização no gerador. Apenas seletores presentes
+            // entram no JSON para evitar que o planejador privilegie dados inexistentes.
             Map<String, Integer> selectorScores = new HashMap<>();
-            selectorScores.put("id", 5);
-            selectorScores.put("aria_label", 4);
-            selectorScores.put("name", 4);
-            selectorScores.put("text", 3);
-            selectorScores.put("href", 3);
-            selectorScores.put("css", 2);
-            selectorScores.put("class", 2);
-            selectorScores.put("role", 2);
-            selectorScores.put("xpath", 1);
+            putScoreIfSelectorExists(selectorScores, selectors, "id", 5);
+            putScoreIfSelectorExists(selectorScores, selectors, "aria_label", 4);
+            putScoreIfSelectorExists(selectorScores, selectors, "name", 4);
+            putScoreIfSelectorExists(selectorScores, selectors, "text", 3);
+            putScoreIfSelectorExists(selectorScores, selectors, "href", 3);
+            putScoreIfSelectorExists(selectorScores, selectors, "css", 2);
+            putScoreIfSelectorExists(selectorScores, selectors, "class", 2);
+            putScoreIfSelectorExists(selectorScores, selectors, "role", 2);
+            putScoreIfSelectorExists(selectorScores, selectors, "xpath", 1);
 
             transicao.put("selectorsJson", toJson(selectors));
             transicao.put("selectorScoresJson", toJson(selectorScores));
@@ -213,7 +245,13 @@ public class SemanticExportPlugin implements PostCrawlingPlugin {
                 tx.run(
                     "UNWIND $nodes AS node "
                         + "MERGE (n:PageState {id: node.id}) "
-                        + "SET n.url = node.url, n.title = node.title, n.state_count = node.state_count",
+                        + "SET n.url = node.url, "
+                        + "n.title = node.title, "
+                        + "n.state_count = node.state_count, "
+                        + "n.h1 = node.h1, "
+                        + "n.visible_text_excerpt = node.visible_text_excerpt, "
+                        + "n.interactive_count = node.interactive_count, "
+                        + "n.screenshot_path = node.screenshot_path",
                     Map.of("nodes", nos)
                 );
                 tx.run(
@@ -247,12 +285,109 @@ public class SemanticExportPlugin implements PostCrawlingPlugin {
         }
     }
 
+    private void captureStateScreenshot(CrawlerContext context, StateVertex state) {
+        if (context == null || state == null || stateScreenshots.containsKey(state.getName())) {
+            return;
+        }
+
+        File screenshotDir = new File("/app/output", "page_state_screenshots");
+        if (!screenshotDir.exists() && !screenshotDir.mkdirs()) {
+            System.out.println("Aviso: nao foi possivel criar diretorio de screenshots: " + screenshotDir);
+            return;
+        }
+
+        File screenshotFile = new File(screenshotDir, safeFileName(state.getName()) + ".png");
+        try {
+            context.getBrowser().saveScreenShot(screenshotFile);
+            stateScreenshots.put(state.getName(), screenshotFile.getPath());
+        } catch (Exception ex) {
+            System.out.println("Aviso: falha ao capturar screenshot do estado " + state.getName() + ": " + ex.getMessage());
+        }
+    }
+
     private String toJson(Map<?, ?> value) {
         try {
             return JSON_MAPPER.writeValueAsString(value);
         } catch (JsonProcessingException e) {
             return "{}";
         }
+    }
+
+    private void putScoreIfSelectorExists(
+        Map<String, Integer> selectorScores,
+        Map<String, Object> selectors,
+        String selectorName,
+        int score
+    ) {
+        Object value = selectors.get(selectorName);
+        if (value instanceof String text && !text.isBlank()) {
+            selectorScores.put(selectorName, score);
+        }
+    }
+
+    private void putSelectorIfUseful(Map<String, Object> selectors, String selectorName, String value, int maxLength) {
+        String normalized = EnvironmentUtils.safeValue(value, "");
+        if (!normalized.isBlank() && normalized.length() <= maxLength) {
+            selectors.put(selectorName, normalized);
+        }
+    }
+
+    private String extractFirstTagText(String dom, String tagName, String fallback) {
+        if (dom == null || dom.isBlank()) {
+            return fallback;
+        }
+
+        Pattern pattern = Pattern.compile("(?is)<" + tagName + "[^>]*>(.*?)</" + tagName + ">");
+        Matcher matcher = pattern.matcher(dom);
+        if (!matcher.find()) {
+            return fallback;
+        }
+        return normalizeHtmlText(matcher.group(1), 200);
+    }
+
+    private String extractVisibleText(String dom, int maxLength) {
+        if (dom == null || dom.isBlank()) {
+            return "";
+        }
+        String withoutScripts = dom
+            .replaceAll("(?is)<script[^>]*>.*?</script>", " ")
+            .replaceAll("(?is)<style[^>]*>.*?</style>", " ")
+            .replaceAll("(?is)<noscript[^>]*>.*?</noscript>", " ");
+        return normalizeHtmlText(withoutScripts, maxLength);
+    }
+
+    private String normalizeHtmlText(String html, int maxLength) {
+        String text = html
+            .replaceAll("(?is)<[^>]+>", " ")
+            .replace("&nbsp;", " ")
+            .replace("&amp;", "&")
+            .replace("&lt;", "<")
+            .replace("&gt;", ">")
+            .replace("&quot;", "\"")
+            .replace("&#39;", "'")
+            .replaceAll("\\s+", " ")
+            .trim();
+        if (text.length() <= maxLength) {
+            return text;
+        }
+        return text.substring(0, maxLength).trim();
+    }
+
+    private int countInteractiveElements(String dom) {
+        if (dom == null || dom.isBlank()) {
+            return 0;
+        }
+        Pattern pattern = Pattern.compile("(?is)<(a|button|input|select|textarea|summary)\\b");
+        Matcher matcher = pattern.matcher(dom);
+        int count = 0;
+        while (matcher.find()) {
+            count++;
+        }
+        return count;
+    }
+
+    private String safeFileName(String value) {
+        return EnvironmentUtils.safeValue(value, "state").replaceAll("[^a-zA-Z0-9._-]", "_");
     }
 
     private String extractTitleFromDom(String dom) {

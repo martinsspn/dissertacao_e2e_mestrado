@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<header class="page-header">
+  <h1>Dashboard</h1>
+  <p>Pipeline local de exploracao, prompts e avaliacao.</p>
+</header>
+
+<section class="metric-grid">
+  <div class="metric">
+    <span class="metric-label">Paginas</span>
+    <strong>{{ graph_summary.pages }}</strong>
+  </div>
+  <div class="metric">
+    <span class="metric-label">Transicoes</span>
+    <strong>{{ graph_summary.transitions }}</strong>
+  </div>
+  <div class="metric">
+    <span class="metric-label">Specs</span>
+    <strong>{{ specs|length }}</strong>
+  </div>
+  <div class="metric">
+    <span class="metric-label">Prompts</span>
+    <strong>{{ prompts|length }}</strong>
+  </div>
+  <div class="metric">
+    <span class="metric-label">Testes</span>
+    <strong>{{ semantic_tests|length + baseline_tests|length }}</strong>
+  </div>
+  <div class="metric">
+    <span class="metric-label">Relatorios</span>
+    <strong>{{ reports|length }}</strong>
+  </div>
+</section>
+
+<section class="band">
+  <h2>Execucoes</h2>
+  <table>
+    <tbody>
+      <tr><th>Crawler</th><td>{% with job=latest_jobs.crawl %}{% include "_job_summary.html" %}{% endwith %}</td></tr>
+      <tr><th>Prompts</th><td>{% with job=latest_jobs.prompts %}{% include "_job_summary.html" %}{% endwith %}</td></tr>
+      <tr><th>Avaliacao</th><td>{% with job=latest_jobs.evaluation %}{% include "_job_summary.html" %}{% endwith %}</td></tr>
+    </tbody>
+  </table>
+</section>
+
+{% if graph_summary.error %}
+<section class="notice error">{{ graph_summary.error }}</section>
+{% endif %}
+{% endblock %}

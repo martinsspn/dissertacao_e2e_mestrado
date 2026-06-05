@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<header class="page-header">
+  <h1>Crawler</h1>
+  <p>Exploracao da aplicacao e persistencia do grafo no Neo4j.</p>
+</header>
+
+<section class="band">
+  <h2>Executar exploracao</h2>
+  <form class="stacked-form" method="post" action="/crawler/run">
+    <label for="target_url">URL alvo</label>
+    <input id="target_url" name="target_url" type="url" value="{{ target_url }}" required>
+    <details>
+      <summary>Parametros avancados</summary>
+      <div class="advanced-grid">
+        <label>Profundidade maxima<input name="max_depth" type="number" min="1" value="{{ config.crawl_max_depth }}" required></label>
+        <label>Estados maximos<input name="max_states" type="number" min="1" value="{{ config.crawl_max_states }}" required></label>
+        <label>Tempo maximo min<input name="max_runtime_minutes" type="number" min="1" value="{{ config.crawl_max_runtime_minutes }}" required></label>
+        <label>Pausa apos carregar pagina ms<input name="wait_after_reload_ms" type="number" min="0" value="{{ config.crawl_wait_after_reload_ms }}" required><span class="field-help">Tempo para a tela estabilizar depois de uma navegacao.</span></label>
+        <label>Pausa apos clique/acao ms<input name="wait_after_event_ms" type="number" min="0" value="{{ config.crawl_wait_after_event_ms }}" required><span class="field-help">Tempo para a interface reagir depois de clicar ou alterar algo.</span></label>
+        <label class="checkbox"><input name="click_once" type="checkbox" {{ 'checked' if config.crawl_click_once else '' }}> clicar uma vez</label>
+        <label class="checkbox"><input name="random_order" type="checkbox" {{ 'checked' if config.crawl_random_order else '' }}> ordem aleatoria</label>
+      </div>
+    </details>
+    <button type="submit">Executar Crawljax</button>
+  </form>
+</section>
+
+<section class="band">
+  <h2>Resultado atual</h2>
+  <table>
+    <tbody>
+      <tr><th>Paginas</th><td>{{ graph_summary.pages }}</td></tr>
+      <tr><th>Transicoes</th><td>{{ graph_summary.transitions }}</td></tr>
+      <tr><th>Crawler</th><td>{% with job=latest_crawl %}{% include "_job_summary.html" %}{% endwith %}</td></tr>
+    </tbody>
+  </table>
+</section>
+{% endblock %}

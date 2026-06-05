@@ -20,24 +20,13 @@ public class ExplorerBootstrap {
         CrawljaxConfigurationBuilder builder = CrawljaxConfiguration.builderFor(targetUrl);
 
         String seleniumHubUrl = resolveSeleniumHubUrl();
-        int seleniumReadyTimeoutSeconds = EnvironmentUtils.getIntEnvOrDefault("SELENIUM_READY_TIMEOUT_SECONDS", 120);
-        boolean seleniumReadyRequired = EnvironmentUtils.getBooleanEnvOrDefault("SELENIUM_READY_REQUIRED", false);
-        SeleniumAvailabilityChecker.waitForSeleniumReady(seleniumHubUrl, seleniumReadyTimeoutSeconds, seleniumReadyRequired);
+        SeleniumAvailabilityChecker.waitForSeleniumReady(seleniumHubUrl, 180, false);
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setBrowserName("chrome");
         builder.setBrowserConfig(BrowserConfiguration.remoteConfig(1, seleniumHubUrl, capabilities));
 
-        CrawlRuntimeProfile profile = new CrawlRuntimeProfile(
-            EnvironmentUtils.getIntEnvOrDefault("CRAWL_MAX_DEPTH", 4),
-            EnvironmentUtils.getIntEnvOrDefault("CRAWL_MAX_STATES", 100),
-            EnvironmentUtils.getIntEnvOrDefault("CRAWL_MAX_RUNTIME_MINUTES", 10),
-            EnvironmentUtils.getIntEnvOrDefault("CRAWL_WAIT_AFTER_RELOAD_MS", 3000),
-            EnvironmentUtils.getIntEnvOrDefault("CRAWL_WAIT_AFTER_EVENT_MS", 2200),
-            EnvironmentUtils.getBooleanEnvOrDefault("CRAWL_CLICK_ONCE", false),
-            EnvironmentUtils.getBooleanEnvOrDefault("CRAWL_RANDOM_ORDER", true)
-        );
-
+        CrawlRuntimeProfile profile = CrawlRuntimeProfile.fromEnvironment();
         CrawljaxConfigFactory.applyRuntimeProfile(builder, profile);
         logRuntimeProfile(profile);
 
@@ -50,7 +39,7 @@ public class ExplorerBootstrap {
     private String resolveTargetUrl() {
         String targetUrl = System.getenv("TARGET_URL");
         if (targetUrl == null || targetUrl.isEmpty()) {
-            targetUrl = "http://example.com";
+            targetUrl = "https://demowebshop.tricentis.com/";
             System.out.println("Aviso: TARGET_URL não definida. Usando " + targetUrl);
         }
         return targetUrl;
@@ -66,7 +55,7 @@ public class ExplorerBootstrap {
 
     private void logRuntimeProfile(CrawlRuntimeProfile profile) {
         System.out.println(
-            "Perfil de crawl -> depth=" + profile.maxDepth()
+            "Perfil de exploracao -> depth=" + profile.maxDepth()
                 + ", states=" + profile.maxStates()
                 + ", runtime(min)=" + profile.maxRuntimeMinutes()
                 + ", waitReload(ms)=" + profile.waitAfterReloadMs()

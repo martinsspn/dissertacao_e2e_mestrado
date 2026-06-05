@@ -1,3 +1,21 @@
 .env
 __pycache__/
 *.pyc
+
+# Artefatos locais gerados pelo crawler e pelo gerador de prompts
+output_crawljax/
+python_app/teste_prompt_e2e_semantico/generated_prompts/
+
+# Artefatos de ferramentas e execucoes antigas
+node_modules/
+test-results/
+legacy/
+
+# Caches locais
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Dados locais da interface web
+web_app_data/
+web_app/.venv/

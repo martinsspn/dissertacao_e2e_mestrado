@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<header class="page-header">
+  <h1>Logs</h1>
+  {% if job %}
+    <p>{{ job.id }} · {{ job.status }}</p>
+  {% endif %}
+</header>
+
+{% if job %}
+<section class="band">
+  <table>
+    <tbody>
+      <tr><th>Tipo</th><td>{{ job.type }}</td></tr>
+      <tr><th>Inicio</th><td>{{ job.started_at or '-' }}</td></tr>
+      <tr><th>Fim</th><td>{{ job.finished_at or '-' }}</td></tr>
+      <tr><th>Exit code</th><td>{{ job.exit_code if job.exit_code is not none else '-' }}</td></tr>
+    </tbody>
+  </table>
+</section>
+<pre class="log-view">{{ log }}</pre>
+{% else %}
+<section class="notice error">Job nao encontrado.</section>
+{% endif %}
+{% endblock %}

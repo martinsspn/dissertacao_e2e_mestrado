@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<header class="page-header">
+  <h1>Avaliacao</h1>
+  <p>Relatorios automaticos e apoio para a rubrica humana.</p>
+</header>
+
+<section class="toolbar">
+  <form method="post" action="/evaluation/run">
+    <select name="approach">
+      <option value="semantic_prompt">semantic_prompt</option>
+      <option value="baseline">baseline</option>
+    </select>
+    <label class="checkbox"><input type="checkbox" name="use_graph" checked> usar grafo</label>
+    <button type="submit">Rodar avaliacao</button>
+  </form>
+  {% with job=latest_job %}{% include "_job_summary.html" %}{% endwith %}
+</section>
+
+<section class="two-column">
+  <aside class="list-pane">
+    {% for report in reports %}
+      <a class="list-item {{ 'active' if selected == report.stem else '' }}" href="/evaluation?report_id={{ report.stem }}">{{ report.name }}</a>
+    {% endfor %}
+  </aside>
+  <section class="editor-pane">
+    <pre class="json-view">{{ content }}</pre>
+  </section>
+</section>
+{% endblock %}
