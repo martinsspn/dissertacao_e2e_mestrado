@@ -57,7 +57,8 @@ def build_structured_prompt(spec: SpecPlan, base_url: str, context: RelevantGrap
             "- Se houver multiplos caminhos candidatos, escolha o mais coerente com a especificacao e com seletores fortes.",
             "- Se os caminhos candidatos forem insuficientes, use as paginas e transicoes relevantes para compor o menor fluxo valido.",
             "- Trate transicoes com acao `reload` como evidencias de pagina, nao como passos preferenciais de interacao.",
-            "- Use `specification_coverage` para decidir o escopo do teste: priorize requisitos `supported`, trate `partial` com cautela e nao invente passos marcados como `missing`.",
+            "- Use `specification_coverage` como gate de conformance: priorize requisitos `supported`, trate `partial` e `potentially_covered` como lacunas explicitas e nao invente passos `missing`.",
+            "- Respeite as facetas em `specification_coverage.requirements[].facets`: verbo, objeto, estado alvo, dados e assercao precisam estar sustentados por evidencia do grafo.",
             "- Quando houver requisitos `missing`, gere apenas o teste suportado pelo grafo e inclua assercoes observaveis para as partes cobertas.",
             "",
             "## Politica De Seletores",
@@ -175,8 +176,22 @@ def _compact_coverage(context: RelevantGraphContext) -> dict[str, object]:
             {
                 "text": requirement.text,
                 "terms": requirement.terms,
+                "facets": [
+                    {
+                        "kind": facet.kind,
+                        "text": facet.text,
+                        "terms": facet.terms,
+                        "weight": round(facet.weight, 3),
+                        "required": facet.required,
+                    }
+                    for facet in requirement.facets
+                ],
                 "status": requirement.status,
                 "confidence": requirement.confidence,
+                "fit_score": requirement.fit_score,
+                "support_type": requirement.support_type,
+                "alignment_cost": requirement.alignment_cost,
+                "unsupported_facets": requirement.unsupported_facets,
                 "warning": requirement.warning,
                 "evidence": [
                     {

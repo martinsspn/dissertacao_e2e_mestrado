@@ -97,11 +97,25 @@ class CoverageEvidence:
 
 
 @dataclass(frozen=True)
+class RequirementFacet:
+    kind: str
+    text: str
+    terms: list[str]
+    weight: float
+    required: bool = True
+
+
+@dataclass(frozen=True)
 class RequirementCoverage:
     text: str
     terms: list[str]
+    facets: list[RequirementFacet]
     status: str
     confidence: float
+    fit_score: float
+    support_type: str
+    alignment_cost: float
+    unsupported_facets: list[str]
     evidence: list[CoverageEvidence]
     warning: str = ""
 

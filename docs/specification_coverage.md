@@ -61,9 +61,23 @@ Pode virar:
 
 Para especificacoes passo a passo, cada linha tende a virar um requisito.
 
-### 2. Termos De Cobertura
+### 2. Facetas E Termos De Cobertura
 
-Cada requisito e normalizado em termos relevantes. Termos genericos sao removidos, por exemplo:
+Cada requisito e normalizado em facetas semanticas, seguindo a direcao proposta no PDF `Camada de Specification Coverage para Testes E2E Guiados por Grafo Navegacional.pdf`.
+
+As facetas atualmente extraidas sao:
+
+| Faceta | Papel |
+|---|---|
+| `action` | Verbo central do passo, como navegar, clicar, preencher, adicionar, remover, confirmar ou validar. |
+| `object` | Entidade principal manipulada ou observada. |
+| `target_state` | Pagina, tela, categoria ou estado de destino esperado. |
+| `assertion` | Efeito observavel que deveria virar assercao no teste. |
+| `data_binding` | Dados ou entidades que precisam permanecer consistentes entre passos. |
+
+Cada faceta recebe um peso. Objetos, destino, assercoes e dados tendem a pesar mais do que detalhes auxiliares, porque a literatura de conformance checking ponderado mostra que nem toda violacao tem o mesmo impacto comportamental.
+
+Os termos de cada faceta sao filtrados para remover palavras genericas, por exemplo:
 
 ```text
 usuario, deve, pagina, validar, acessar, clicar
@@ -93,6 +107,18 @@ livro -> book, books
 ```
 
 Essa camada nao traduz a especificacao inteira. Ela apenas reduz falsos negativos em termos importantes do dominio.
+
+O resultado e auditavel no prompt:
+
+```json
+{
+  "kind": "target_state",
+  "text": "digital downloads",
+  "terms": ["downloads", "digitais", "digital"],
+  "weight": 1.3,
+  "required": true
+}
+```
 
 ### 3. Busca De Evidencias No Grafo
 
@@ -132,9 +158,25 @@ Ou:
 }
 ```
 
-### 4. Classificacao Do Requisito
+### 4. Alinhamento E Classificacao Do Requisito
 
-Cada requisito recebe um status:
+Cada requisito e tratado como um pequeno alinhamento entre facetas textuais e evidencias do grafo.
+
+Em vez de aceitar apenas a pagina mais parecida, a camada calcula:
+
+- suporte por faceta;
+- custo de facetas sem evidencia;
+- penalidade por rota candidata com muitos desvios;
+- penalidade leve para frases ambiguas, como `confirmar`, `continuar`, `dados` ou `novamente`;
+- contradicoes simples de acao, por exemplo `adicionar` contra evidencia de `remove`.
+
+O `fit_score` aproxima a formula de fitness por custo descrita no PDF:
+
+```text
+fit_score = 1 - alignment_cost / reference_cost
+```
+
+O resultado recebe um status externo:
 
 | Status | Significado |
 |---|---|
@@ -142,14 +184,38 @@ Cada requisito recebe um status:
 | `partial` | Ha evidencia parcial, mas o fluxo nao esta completamente sustentado. |
 | `missing` | Nao ha evidencia suficiente no grafo para gerar esse passo sem risco de invencao. |
 
+Tambem ha um `support_type` interno:
+
+| Tipo | Significado |
+|---|---|
+| `direct` | Facetas sustentadas por transicao ou caminho candidato. |
+| `indirect` | Facetas sustentadas principalmente por pagina/estado observavel. |
+| `partial` | Algumas facetas estao sustentadas e outras nao. |
+| `potentially_covered` | Caso parcial com ambiguidade textual relevante. |
+| `absent` | Evidencia insuficiente. |
+| `contradictory` | Evidencia lexicalmente parecida, mas com acao oposta. |
+
 Exemplo:
 
 ```json
 {
   "text": "validar que a pagina de downloads digitais esta visivel",
   "terms": ["downloads", "digitais", "digital"],
+  "facets": [
+    {
+      "kind": "assertion",
+      "text": "estado observavel esperado",
+      "terms": ["downloads", "digitais", "digital"],
+      "weight": 1.25,
+      "required": true
+    }
+  ],
   "status": "supported",
   "confidence": 0.767,
+  "fit_score": 0.91,
+  "support_type": "indirect",
+  "alignment_cost": 0.12,
+  "unsupported_facets": [],
   "evidence": [
     {
       "kind": "page",
@@ -165,7 +231,7 @@ Exemplo:
 Depois de classificar os requisitos, o sistema calcula:
 
 ```text
-coverage_score = (supported + partial * 0.5) / total
+coverage_score = media(fit_score dos requisitos)
 ```
 
 E atribui um status geral:
@@ -193,8 +259,13 @@ O prompt gerado passa a incluir:
     {
       "text": "O usuario deve navegar ate a pagina Contact Us...",
       "terms": ["contact", "us", "site"],
+      "facets": [],
       "status": "supported",
       "confidence": 0.95,
+      "fit_score": 0.91,
+      "support_type": "direct",
+      "alignment_cost": 0.1,
+      "unsupported_facets": [],
       "warning": "",
       "evidence": []
     }
@@ -208,7 +279,8 @@ Tambem foram adicionadas regras para a LLM:
 ```text
 - Use specification_coverage para decidir o escopo do teste.
 - Priorize requisitos supported.
-- Trate requisitos partial com cautela.
+- Trate requisitos partial e potentially_covered com cautela.
+- Respeite as facetas e seus pesos.
 - Nao invente passos marcados como missing.
 ```
 
