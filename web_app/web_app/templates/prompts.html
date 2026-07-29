@@ -2,13 +2,13 @@
 
 {% block content %}
 <header class="page-header">
-  <h1>Prompts</h1>
-  <p>Prompts estruturados gerados a partir das especificacoes e do grafo.</p>
+  <h1>Prompts com contexto estruturado</h1>
+  <p>Um prompt com contexto estruturado e produzido para cada especificacao. O baseline usa diretamente o arquivo de especificacao.</p>
 </header>
 
 <section class="toolbar">
   <form method="post" action="/prompts/generate">
-    <button type="submit">Gerar prompts</button>
+    <button type="submit">Gerar prompts com contexto</button>
   </form>
   <span class="muted">URL alvo: {{ target_url }}</span>
   {% with job=latest_job %}{% include "_job_summary.html" %}{% endwith %}

@@ -1,0 +1,107 @@
+{
+  "mutations": [
+    {
+      "mutation_id": "fixture-insert-wrapper",
+      "stratum": "E1",
+      "operator": "insert_wrapper",
+      "target": {
+        "target_id": "target-search",
+        "page_url": "http://127.0.0.1:32123/",
+        "tag": "input",
+        "attributes": {
+          "id": "search",
+          "label": "Search:"
+        }
+      },
+      "parameters": {
+        "tag": "div"
+      }
+    },
+    {
+      "mutation_id": "fixture-insert-sibling",
+      "stratum": "E1",
+      "operator": "insert_noninteractive_sibling_before",
+      "target": {
+        "target_id": "target-search",
+        "page_url": "http://127.0.0.1:32123/",
+        "tag": "input",
+        "attributes": {
+          "id": "search",
+          "label": "Search:"
+        }
+      },
+      "parameters": {
+        "tag": "span"
+      }
+    },
+    {
+      "mutation_id": "fixture-rename-id",
+      "stratum": "E2",
+      "operator": "rename_id",
+      "target": {
+        "target_id": "target-search",
+        "page_url": "http://127.0.0.1:32123/",
+        "tag": "input",
+        "attributes": {
+          "id": "search",
+          "label": "Search:"
+        }
+      },
+      "parameters": {
+        "new_value": "search--e2"
+      }
+    },
+    {
+      "mutation_id": "fixture-rename-class",
+      "stratum": "E2",
+      "operator": "rename_class",
+      "target": {
+        "target_id": "target-search",
+        "page_url": "http://127.0.0.1:32123/",
+        "tag": "input",
+        "attributes": {
+          "id": "search",
+          "label": "Search:",
+          "classes": "search-field"
+        }
+      },
+      "parameters": {
+        "old_value": "search-field",
+        "new_value": "search-field--e2"
+      }
+    },
+    {
+      "mutation_id": "fixture-input-submit-to-button",
+      "stratum": "E2",
+      "operator": "input_submit_to_button",
+      "target": {
+        "target_id": "target-submit",
+        "page_url": "http://127.0.0.1:32123/",
+        "tag": "input",
+        "attributes": {
+          "id": "submit-search",
+          "input_type": "submit",
+          "value": "Search"
+        }
+      },
+      "parameters": {}
+    },
+    {
+      "mutation_id": "fixture-change-accessible-name",
+      "stratum": "E3",
+      "operator": "change_accessible_name",
+      "target": {
+        "target_id": "target-search",
+        "page_url": "http://127.0.0.1:32123/",
+        "tag": "input",
+        "attributes": {
+          "id": "search",
+          "label": "Search:"
+        }
+      },
+      "parameters": {
+        "suffix": " updated"
+      }
+    }
+  ]
+}

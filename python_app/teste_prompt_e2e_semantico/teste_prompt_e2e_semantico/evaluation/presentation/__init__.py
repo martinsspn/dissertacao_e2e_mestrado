@@ -1,1 +1,0 @@
-"""Evaluation command-line interface."""

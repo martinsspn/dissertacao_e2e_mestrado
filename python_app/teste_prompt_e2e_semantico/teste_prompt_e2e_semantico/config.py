@@ -20,8 +20,3 @@ class PromptGeneratorConfig:
     base_url: str = os.getenv("PROMPT_E2E_BASE_URL", "https://demowebshop.tricentis.com/")
     specs_dir: Path = _env_path("PROMPT_E2E_SPECS_DIR", "specs")
     output_dir: Path = _env_path("PROMPT_E2E_OUTPUT_DIR", "generated_prompts")
-    graph_max_edges: int = int(os.getenv("PROMPT_E2E_GRAPH_MAX_EDGES", "500"))
-    relevant_pages_limit: int = int(os.getenv("PROMPT_E2E_RELEVANT_PAGES_LIMIT", "12"))
-    relevant_transitions_limit: int = int(os.getenv("PROMPT_E2E_RELEVANT_TRANSITIONS_LIMIT", "20"))
-    candidate_paths_limit: int = int(os.getenv("PROMPT_E2E_CANDIDATE_PATHS_LIMIT", "5"))
-    max_path_depth: int = int(os.getenv("PROMPT_E2E_MAX_PATH_DEPTH", "6"))

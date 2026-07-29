@@ -15,7 +15,7 @@ class SpecRepository(Protocol):
 
 
 class NavigationGraphRepository(Protocol):
-    def get_navigation_graph(self, max_edges: int) -> NavigationGraph:
+    def get_navigation_graph(self) -> NavigationGraph:
         ...
 
     def close(self) -> None:
@@ -23,6 +23,9 @@ class NavigationGraphRepository(Protocol):
 
 
 class PromptWriter(Protocol):
+    def prune_stale(self, output_dir: Path, active_spec_ids: set[str]) -> int:
+        ...
+
     def write(self, output_dir: Path, generated_prompt: GeneratedPrompt) -> Path:
         ...
 

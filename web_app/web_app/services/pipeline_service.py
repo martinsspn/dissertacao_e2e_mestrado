@@ -48,21 +48,25 @@ class PipelineService:
             env={"TARGET_URL": target_url, "PROMPT_E2E_BASE_URL": target_url},
         )
 
-    def evaluate_tests(self, approach: str, use_graph: bool) -> Job:
+    def evaluate_tests(self, approach: str, use_graph: bool, target_url: str) -> Job:
         tests_dir = self._config.generated_tests_dir / approach
-        output_path = self._config.evaluation_reports_dir / f"{approach}.json"
+        output_path = self._config.evaluation_reports_dir / f"{approach}.md"
         command = [
             sys.executable,
             "-m",
-            "teste_prompt_e2e_semantico.evaluation",
+            "avaliacao_prompts",
             "--tests-dir",
             str(tests_dir),
             "--approach",
             approach,
             "--base-url",
-            self._config.target_url,
+            target_url,
             "--output",
             str(output_path),
+            "--prompt-dir",
+            str(self._config.prompts_dir),
+            "--specs-dir",
+            str(self._config.specs_dir),
         ]
         if use_graph:
             command.extend(
@@ -78,8 +82,8 @@ class PipelineService:
         else:
             command.append("--skip-graph")
         env = {
-            "PYTHONPATH": str(self._config.prompt_module_dir),
-            "PROMPT_E2E_BASE_URL": self._config.target_url,
+            "PYTHONPATH": str(self._config.evaluation_module_dir),
+            "PROMPT_E2E_BASE_URL": target_url,
         }
         return self._jobs.start("evaluation", command, env=env)
 

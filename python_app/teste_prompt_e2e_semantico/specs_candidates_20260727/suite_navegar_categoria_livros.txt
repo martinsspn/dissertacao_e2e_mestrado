@@ -1,0 +1,1 @@
+Browsing the Books category: The user accesses the Demo Web Shop home page. The user selects Books in the main category menu. The system displays the Books category page, its breadcrumb, and the available book products, including Computing and Internet, Fiction, and Health Book.

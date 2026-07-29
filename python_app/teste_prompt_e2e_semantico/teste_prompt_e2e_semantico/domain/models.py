@@ -24,13 +24,30 @@ class NavigationTransition:
     interaction_kind: str
     element: dict[str, str]
     selectors: dict[str, object] = field(default_factory=dict)
-    selector_scores: dict[str, object] = field(default_factory=dict)
+    observed_result: ObservedResult | None = None
+
+
+@dataclass(frozen=True)
+class UiElement:
+    page_url: str
+    kind: str
+    suggested_operation: str
+    element: dict[str, str]
+    selectors: dict[str, object] = field(default_factory=dict)
+
+
+@dataclass(frozen=True)
+class ObservedResult:
+    text: str
+    element_id: str = ""
+    role: str = ""
 
 
 @dataclass(frozen=True)
 class NavigationGraph:
     pages: list[PageNode]
     transitions: list[NavigationTransition]
+    ui_elements: list[UiElement] = field(default_factory=list)
 
 
 @dataclass(frozen=True)
@@ -41,112 +58,90 @@ class SpecPlan:
 
 
 @dataclass(frozen=True)
-class NormalizedSpec:
-    raw_text: str
-    terms: list[str]
-    phrases: list[str]
+class SpecificationStep:
+    id: str
+    text: str
 
 
 @dataclass(frozen=True)
 class SelectorCandidate:
     kind: str
     value: str
-    score: float
-    strength: str
-    reason: str
 
 
 @dataclass(frozen=True)
-class ScoredPage:
-    page: PageNode
-    score: float
-    matched_terms: list[str]
-
-
-@dataclass(frozen=True)
-class ScoredTransition:
-    transition: NavigationTransition
-    score: float
-    matched_terms: list[str]
-    selector_candidates: list[SelectorCandidate]
-
-
-@dataclass(frozen=True)
-class PathStep:
-    source_url: str
-    target_url: str
+class ContextElement:
+    page_url: str
     action: str
     interaction_kind: str
     element: dict[str, str]
-    recommended_selectors: list[SelectorCandidate]
+    selector: SelectorCandidate | None = None
+    destination_url: str = ""
 
 
 @dataclass(frozen=True)
-class PathCandidate:
-    id: str
-    score: float
-    steps: list[PathStep]
-
-
-@dataclass(frozen=True)
-class CoverageEvidence:
-    kind: str
-    label: str
-    score: float
-    details: dict[str, object] = field(default_factory=dict)
-
-
-@dataclass(frozen=True)
-class RequirementFacet:
-    kind: str
+class PageEvidence:
+    page_url: str
+    source: str
     text: str
-    terms: list[str]
-    weight: float
-    required: bool = True
 
 
 @dataclass(frozen=True)
-class RequirementCoverage:
-    text: str
-    terms: list[str]
-    facets: list[RequirementFacet]
-    status: str
-    confidence: float
-    fit_score: float
-    support_type: str
-    alignment_cost: float
-    unsupported_facets: list[str]
-    evidence: list[CoverageEvidence]
-    warning: str = ""
+class InteractionContext:
+    control: ContextElement
+    observed_result: ObservedResult | None = None
 
 
 @dataclass(frozen=True)
-class SpecCoverageReport:
-    overall_status: str
-    coverage_score: float
-    supported_requirements: int
-    partial_requirements: int
-    missing_requirements: int
-    requirements: list[RequirementCoverage]
-    warnings: list[str] = field(default_factory=list)
+class StepContext:
+    requirement_id: str
+    interactions: tuple[InteractionContext, ...] = ()
+    page_evidence: PageEvidence | None = None
+
+    @property
+    def controls(self) -> tuple[ContextElement, ...]:
+        return tuple(interaction.control for interaction in self.interactions)
+
+    @property
+    def control(self) -> ContextElement | None:
+        """Compatibility accessor for consumers that only need the first control."""
+        return self.interactions[0].control if self.interactions else None
+
+    @property
+    def observed_result(self) -> ObservedResult | None:
+        """Return the first observed result without losing per-control association."""
+        return next(
+            (
+                interaction.observed_result
+                for interaction in self.interactions
+                if interaction.observed_result is not None
+            ),
+            None,
+        )
 
 
 @dataclass(frozen=True)
-class RelevantGraphContext:
-    pages: list[ScoredPage]
-    transitions: list[ScoredTransition]
-    paths: list[PathCandidate]
-    coverage: SpecCoverageReport | None = None
+class StructuredContext:
+    steps: list[StepContext]
+
+    @property
+    def item_count(self) -> int:
+        return sum(
+            len(step.interactions)
+            + sum(
+                int(interaction.observed_result is not None)
+                for interaction in step.interactions
+            )
+            + int(step.page_evidence is not None)
+            for step in self.steps
+        )
 
 
 @dataclass(frozen=True)
 class GeneratedPrompt:
     spec: SpecPlan
+    approach: str
     prompt: str
-    graph_pages: int
-    graph_transitions: int
-    relevant_pages: int
-    relevant_transitions: int
-    candidate_paths: int
-    coverage_status: str = "unknown"
-    coverage_score: float = 0.0
+    requirement_count: int
+    context_item_count: int
+    character_count: int

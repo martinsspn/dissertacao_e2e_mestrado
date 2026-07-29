@@ -20,10 +20,12 @@ RUN mkdir -p /usr/local/lib/docker/cli-plugins \
 
 COPY web_app/ /app/web_app/
 COPY python_app/teste_prompt_e2e_semantico/ /app/python_app/teste_prompt_e2e_semantico/
+COPY python_app/avaliacao_prompts/ /app/python_app/avaliacao_prompts/
 
 RUN pip install \
     -r /app/web_app/requirements.txt \
-    -r /app/python_app/teste_prompt_e2e_semantico/requirements.txt
+    -r /app/python_app/teste_prompt_e2e_semantico/requirements.txt \
+    -r /app/python_app/avaliacao_prompts/requirements.txt
 
 WORKDIR /app/web_app
 

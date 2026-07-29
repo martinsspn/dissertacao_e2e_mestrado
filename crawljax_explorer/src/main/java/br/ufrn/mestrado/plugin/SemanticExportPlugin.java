@@ -1,5 +1,9 @@
 package br.ufrn.mestrado.plugin;
 
+import br.ufrn.mestrado.domain.ExtractedUiElement;
+import br.ufrn.mestrado.domain.ObservedResult;
+import br.ufrn.mestrado.extraction.ObservedResultExtractor;
+import br.ufrn.mestrado.extraction.UiElementExtractor;
 import br.ufrn.mestrado.infra.EnvironmentUtils;
 
 import com.crawljax.core.CrawlSession;
@@ -26,6 +30,7 @@ import org.neo4j.driver.TransactionContext;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.regex.Matcher;
@@ -35,6 +40,8 @@ public class SemanticExportPlugin implements OnNewStatePlugin, PreStateCrawlingP
 
     private static final ObjectMapper JSON_MAPPER = new ObjectMapper();
     private final Map<String, String> stateScreenshots = new HashMap<>();
+    private final UiElementExtractor uiElementExtractor = new UiElementExtractor();
+    private final ObservedResultExtractor observedResultExtractor = new ObservedResultExtractor();
 
     @Override
     public void onNewState(CrawlerContext context, StateVertex newState) {
@@ -64,9 +71,10 @@ public class SemanticExportPlugin implements OnNewStatePlugin, PreStateCrawlingP
         Map<String, String> stateUrlMapping = createStateUrlMapping(sfg);
         
         List<Map<String, Object>> nos = mapStatesToNodes(sfg);
+        List<Map<String, Object>> elementos = mapStatesToUiElements(sfg);
         List<Map<String, Object>> arestas = mapEdgesToRelationships(sfg, stateUrlMapping);
 
-        persistGraph(neo4jUri, neo4jUser, neo4jPassword, nos, arestas);
+        persistGraph(neo4jUri, neo4jUser, neo4jPassword, nos, elementos, arestas);
     }
 
     private Map<String, String> createStateUrlMapping(StateFlowGraph sfg) {
@@ -123,6 +131,40 @@ public class SemanticExportPlugin implements OnNewStatePlugin, PreStateCrawlingP
         return Math.abs(url.hashCode()) + "_" + url.replaceAll("[^a-zA-Z0-9]", "_").substring(0, Math.min(30, url.length()));
     }
 
+    private List<Map<String, Object>> mapStatesToUiElements(StateFlowGraph sfg) {
+        Map<String, Map<String, Object>> uniqueElements = new LinkedHashMap<>();
+        for (StateVertex state : sfg.getAllStates()) {
+            String pageUrl = EnvironmentUtils.safeValue(state.getUrl(), "url_desconhecida");
+            String dom = state.getDom() == null ? "" : state.getDom();
+            for (ExtractedUiElement element : uiElementExtractor.extract(pageUrl, dom)) {
+                Map<String, Object> data = new LinkedHashMap<>();
+                data.put("id", element.id());
+                data.put("page_id", generateIdFromUrl(pageUrl));
+                data.put("page_url", element.pageUrl());
+                data.put("kind", element.kind());
+                data.put("suggested_operation", element.suggestedOperation());
+                data.put("tag", element.tag());
+                data.put("text", element.text());
+                data.put("title", element.title());
+                data.put("label", element.label());
+                data.put("data_testid", element.dataTestId());
+                data.put("id_attribute", element.idAttribute());
+                data.put("name", element.name());
+                data.put("input_type", element.inputType());
+                data.put("value", element.value());
+                data.put("href", element.href());
+                data.put("role", element.role());
+                data.put("aria_label", element.ariaLabel());
+                data.put("placeholder", element.placeholder());
+                data.put("form_action", element.formAction());
+                data.put("form_method", element.formMethod());
+                uniqueElements.putIfAbsent(element.id(), data);
+            }
+        }
+        System.out.println("✓ Controles estruturados: " + uniqueElements.size());
+        return new ArrayList<>(uniqueElements.values());
+    }
+
     private List<Map<String, Object>> mapEdgesToRelationships(StateFlowGraph sfg, Map<String, String> stateUrlMapping) {
         List<Map<String, Object>> arestas = new ArrayList<>();
 
@@ -174,6 +216,14 @@ public class SemanticExportPlugin implements OnNewStatePlugin, PreStateCrawlingP
             transicao.put("inputType", inputType);
             transicao.put("interactionKind", classifyInteractionKind(elementTag, inputType, elementHref, elementRole));
 
+            ObservedResult observedResult = observedResultExtractor.extract(
+                edge.getSourceStateVertex().getDom(),
+                edge.getTargetStateVertex().getDom()
+            );
+            transicao.put("observedText", observedResult.text());
+            transicao.put("observedElementId", observedResult.elementId());
+            transicao.put("observedElementRole", observedResult.role());
+
             // Montar mapa de seletores com múltiplas opções (usar identification como possível xpath/cs)
             Map<String, Object> selectors = new HashMap<>();
             putSelectorIfUseful(selectors, "id", elementId, 120);
@@ -195,21 +245,7 @@ public class SemanticExportPlugin implements OnNewStatePlugin, PreStateCrawlingP
                 }
             }
 
-            // Score de robustez para priorização no gerador. Apenas seletores presentes
-            // entram no JSON para evitar que o planejador privilegie dados inexistentes.
-            Map<String, Integer> selectorScores = new HashMap<>();
-            putScoreIfSelectorExists(selectorScores, selectors, "id", 5);
-            putScoreIfSelectorExists(selectorScores, selectors, "aria_label", 4);
-            putScoreIfSelectorExists(selectorScores, selectors, "name", 4);
-            putScoreIfSelectorExists(selectorScores, selectors, "text", 3);
-            putScoreIfSelectorExists(selectorScores, selectors, "href", 3);
-            putScoreIfSelectorExists(selectorScores, selectors, "css", 2);
-            putScoreIfSelectorExists(selectorScores, selectors, "class", 2);
-            putScoreIfSelectorExists(selectorScores, selectors, "role", 2);
-            putScoreIfSelectorExists(selectorScores, selectors, "xpath", 1);
-
             transicao.put("selectorsJson", toJson(selectors));
-            transicao.put("selectorScoresJson", toJson(selectorScores));
 
             arestas.add(transicao);
         }
@@ -222,6 +258,7 @@ public class SemanticExportPlugin implements OnNewStatePlugin, PreStateCrawlingP
         String neo4jUser,
         String neo4jPassword,
         List<Map<String, Object>> nos,
+        List<Map<String, Object>> elementos,
         List<Map<String, Object>> arestas
     ) {
         try (Driver driver = GraphDatabase.driver(neo4jUri, AuthTokens.basic(neo4jUser, neo4jPassword));
@@ -231,11 +268,13 @@ public class SemanticExportPlugin implements OnNewStatePlugin, PreStateCrawlingP
             // Schema operations must run in a dedicated transaction.
             neo4jSession.executeWrite((TransactionContext tx) -> {
                 tx.run("CREATE CONSTRAINT page_state_id_unique IF NOT EXISTS FOR (n:PageState) REQUIRE n.id IS UNIQUE");
+                tx.run("CREATE CONSTRAINT ui_element_id_unique IF NOT EXISTS FOR (n:UiElement) REQUIRE n.id IS UNIQUE");
                 return null;
             });
 
             // Data cleanup in a separate write transaction.
             neo4jSession.executeWrite((TransactionContext tx) -> {
+                tx.run("MATCH (n:UiElement) DETACH DELETE n");
                 tx.run("MATCH (n:PageState) DETACH DELETE n");
                 return null;
             });
@@ -253,6 +292,31 @@ public class SemanticExportPlugin implements OnNewStatePlugin, PreStateCrawlingP
                         + "n.interactive_count = node.interactive_count, "
                         + "n.screenshot_path = node.screenshot_path",
                     Map.of("nodes", nos)
+                );
+                tx.run(
+                    "UNWIND $elements AS element "
+                        + "MATCH (page:PageState {id: element.page_id}) "
+                        + "MERGE (control:UiElement {id: element.id}) "
+                        + "SET control.page_url = element.page_url, "
+                        + "control.kind = element.kind, "
+                        + "control.suggested_operation = element.suggested_operation, "
+                        + "control.tag = element.tag, "
+                        + "control.text = element.text, "
+                        + "control.title = element.title, "
+                        + "control.label = element.label, "
+                        + "control.data_testid = element.data_testid, "
+                        + "control.id_attribute = element.id_attribute, "
+                        + "control.name = element.name, "
+                        + "control.input_type = element.input_type, "
+                        + "control.value = element.value, "
+                        + "control.href = element.href, "
+                        + "control.role = element.role, "
+                        + "control.aria_label = element.aria_label, "
+                        + "control.placeholder = element.placeholder, "
+                        + "control.form_action = element.form_action, "
+                        + "control.form_method = element.form_method "
+                        + "MERGE (page)-[:HAS_ELEMENT]->(control)",
+                    Map.of("elements", elementos)
                 );
                 tx.run(
                     "UNWIND $edges AS edge "
@@ -273,13 +337,19 @@ public class SemanticExportPlugin implements OnNewStatePlugin, PreStateCrawlingP
                         + "r.element_href = edge.elementHref, "
                         + "r.input_type = edge.inputType, "
                         + "r.selectors_json = edge.selectorsJson, "
-                        + "r.selector_scores_json = edge.selectorScoresJson",
+                        + "r.observed_text = edge.observedText, "
+                        + "r.observed_element_id = edge.observedElementId, "
+                        + "r.observed_element_role = edge.observedElementRole",
                     Map.of("edges", arestas)
                 );
                 return null;
             });
 
-            System.out.println("Persistência concluída no Neo4j. Nós: " + nos.size() + " | Arestas: " + arestas.size());
+            System.out.println(
+                "Persistência concluída no Neo4j. Páginas: " + nos.size()
+                    + " | Controles: " + elementos.size()
+                    + " | Transições: " + arestas.size()
+            );
         } catch (Exception e) {
             System.err.println("Erro ao persistir grafo no Neo4j: " + e.getMessage());
         }
@@ -310,18 +380,6 @@ public class SemanticExportPlugin implements OnNewStatePlugin, PreStateCrawlingP
             return JSON_MAPPER.writeValueAsString(value);
         } catch (JsonProcessingException e) {
             return "{}";
-        }
-    }
-
-    private void putScoreIfSelectorExists(
-        Map<String, Integer> selectorScores,
-        Map<String, Object> selectors,
-        String selectorName,
-        int score
-    ) {
-        Object value = selectors.get(selectorName);
-        if (value instanceof String text && !text.isBlank()) {
-            selectorScores.put(selectorName, score);
         }
     }
 

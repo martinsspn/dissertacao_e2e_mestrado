@@ -1,0 +1,1 @@
+Attempting to vote without selecting an answer: The user accesses the Demo Web Shop home page in a new browser context. In the Community poll titled Do you like nopCommerce?, the user does not select any answer and selects Vote. The system prevents the vote and informs the user to select an answer.

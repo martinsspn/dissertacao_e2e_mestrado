@@ -25,7 +25,7 @@ graph = GraphService(config)
 settings = SettingsService(config)
 pipeline = PipelineService(config, jobs)
 
-app = FastAPI(title="Gerador E2E Semantico")
+app = FastAPI(title="Gerador E2E Com Contexto Estruturado")
 app.mount("/static", StaticFiles(directory=str(config.repo_root / "web_app" / "web_app" / "static")), name="static")
 templates = Jinja2Templates(directory=str(config.repo_root / "web_app" / "web_app" / "templates"))
 
@@ -61,7 +61,7 @@ def dashboard(request: Request):
             "graph_summary": graph_summary,
             "specs": files.list_specs(),
             "prompts": files.list_prompts(),
-            "semantic_tests": files.list_tests("semantic_prompt"),
+            "structured_tests": files.list_tests("structured_context"),
             "baseline_tests": files.list_tests("baseline"),
             "reports": files.list_reports(),
             "latest_jobs": {
@@ -83,6 +83,7 @@ def crawler_page(request: Request):
             "config": config,
             "target_url": settings.target_url(),
             "graph_summary": graph.summary(),
+            "manifest": files.read_crawl_manifest(),
             "latest_crawl": jobs.latest("crawl"),
         },
     )
@@ -225,7 +226,7 @@ def delete_prompts(prompt_ids: list[str] = Form(default=[])):
 
 
 @app.get("/tests", response_class=HTMLResponse)
-def tests_page(request: Request, approach: str = "semantic_prompt", spec_id: str | None = None):
+def tests_page(request: Request, approach: str = "structured_context", spec_id: str | None = None):
     test_paths = files.list_tests(approach)
     selected = spec_id or (test_paths[0].name.removesuffix(".spec.ts") if test_paths else "")
     code = files.read_test(approach, selected) if selected else ""
@@ -268,7 +269,7 @@ def evaluation_page(request: Request, report_id: str | None = None):
 
 @app.post("/evaluation/run")
 def run_evaluation(approach: str = Form(...), use_graph: str | None = Form(None)):
-    pipeline.evaluate_tests(approach, use_graph == "on")
+    pipeline.evaluate_tests(approach, use_graph == "on", settings.target_url())
     return RedirectResponse("/evaluation", status_code=303)
 
 

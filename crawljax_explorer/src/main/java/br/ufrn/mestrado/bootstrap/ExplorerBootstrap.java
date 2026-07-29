@@ -2,7 +2,7 @@ package br.ufrn.mestrado.bootstrap;
 
 import br.ufrn.mestrado.config.CrawlRuntimeProfile;
 import br.ufrn.mestrado.config.CrawljaxConfigFactory;
-import br.ufrn.mestrado.infra.EnvironmentUtils;
+import br.ufrn.mestrado.infra.CrawlRunManifestWriter;
 import br.ufrn.mestrado.infra.SeleniumAvailabilityChecker;
 import br.ufrn.mestrado.plugin.SemanticExportPlugin;
 import com.crawljax.core.CrawljaxRunner;
@@ -29,6 +29,7 @@ public class ExplorerBootstrap {
         CrawlRuntimeProfile profile = CrawlRuntimeProfile.fromEnvironment();
         CrawljaxConfigFactory.applyRuntimeProfile(builder, profile);
         logRuntimeProfile(profile);
+        System.out.println("Manifesto da exploracao -> " + CrawlRunManifestWriter.write(targetUrl, profile));
 
         builder.addPlugin(new SemanticExportPlugin());
 

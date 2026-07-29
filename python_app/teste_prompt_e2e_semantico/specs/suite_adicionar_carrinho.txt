@@ -1,0 +1,1 @@
+Adding a product to the cart: The user searches for the product Blue Jeans in the Search store field. The user opens the product Blue Jeans in the search results. The user selects Add to cart on the product page. The system informs that the product has been added to the cart. The user accesses Shopping cart. The system displays Blue Jeans among the items in the cart.

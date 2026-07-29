@@ -37,4 +37,25 @@
     </tbody>
   </table>
 </section>
+
+<section class="band">
+  <h2>Parametros registrados</h2>
+  {% if manifest %}
+  <table>
+    <tbody>
+      <tr><th>URL explorada</th><td>{{ manifest.target_url }}</td></tr>
+      <tr><th>Inicio</th><td>{{ manifest.started_at }}</td></tr>
+      <tr><th>Profundidade maxima</th><td>{{ manifest.max_depth }}</td></tr>
+      <tr><th>Estados maximos</th><td>{{ manifest.max_states }}</td></tr>
+      <tr><th>Tempo maximo</th><td>{{ manifest.max_runtime_minutes }} min</td></tr>
+      <tr><th>Espera apos pagina</th><td>{{ manifest.wait_after_reload_ms }} ms</td></tr>
+      <tr><th>Espera apos acao</th><td>{{ manifest.wait_after_event_ms }} ms</td></tr>
+      <tr><th>Clicar uma vez</th><td>{{ manifest.click_once }}</td></tr>
+      <tr><th>Ordem aleatoria</th><td>{{ manifest.random_order }}</td></tr>
+    </tbody>
+  </table>
+  {% else %}
+  <p class="muted">Nenhum manifesto de exploracao foi encontrado.</p>
+  {% endif %}
+</section>
 {% endblock %}

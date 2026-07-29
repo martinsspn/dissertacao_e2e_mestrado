@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import json
 import re
 from pathlib import Path
 
@@ -7,6 +8,7 @@ from web_app.config import WebAppConfig
 
 
 _SAFE_ID = re.compile(r"[^a-zA-Z0-9_-]+")
+_SAFE_PROMPT_ID = re.compile(r"[^a-zA-Z0-9_.-]+")
 
 
 class FileSystemService:
@@ -43,10 +45,26 @@ class FileSystemService:
         return deleted
 
     def list_prompts(self) -> list[Path]:
-        return sorted(self._config.prompts_dir.glob("*.prompt.md")) if self._config.prompts_dir.exists() else []
+        if not self._config.prompts_dir.exists():
+            return []
+        return sorted(
+            path
+            for path in self._config.prompts_dir.glob("*.prompt.md")
+            if path.name.endswith(".structured_context.prompt.md")
+        )
 
     def read_prompt(self, prompt_id: str) -> str:
         return self._prompt_path(prompt_id).read_text(encoding="utf-8")
+
+    def read_crawl_manifest(self) -> dict[str, object]:
+        path = self._config.crawl_manifest_path
+        if not path.exists():
+            return {}
+        try:
+            data = json.loads(path.read_text(encoding="utf-8"))
+        except (OSError, json.JSONDecodeError):
+            return {}
+        return data if isinstance(data, dict) else {}
 
     def prompt_paths(self, prompt_ids: list[str] | None = None) -> list[Path]:
         if prompt_ids is None:
@@ -79,7 +97,7 @@ class FileSystemService:
         return path
 
     def list_reports(self) -> list[Path]:
-        return sorted(self._config.evaluation_reports_dir.glob("*.json"))
+        return sorted(self._config.evaluation_reports_dir.glob("*.md"))
 
     def read_report(self, report_id: str) -> str:
         return self._report_path(report_id).read_text(encoding="utf-8")
@@ -88,7 +106,7 @@ class FileSystemService:
         return self._config.specs_dir / f"{_safe_id(spec_id)}.txt"
 
     def _prompt_path(self, prompt_id: str) -> Path:
-        return self._config.prompts_dir / f"{_safe_id(prompt_id)}.prompt.md"
+        return self._config.prompts_dir / f"{_safe_prompt_id(prompt_id)}.prompt.md"
 
     def _tests_dir(self, approach: str) -> Path:
         return self._config.generated_tests_dir / _safe_id(approach)
@@ -97,9 +115,14 @@ class FileSystemService:
         return self._tests_dir(approach) / f"{_safe_id(spec_id)}.spec.ts"
 
     def _report_path(self, report_id: str) -> Path:
-        return self._config.evaluation_reports_dir / f"{_safe_id(report_id)}.json"
+        return self._config.evaluation_reports_dir / f"{_safe_id(report_id)}.md"
 
 
 def _safe_id(value: str) -> str:
     normalized = _SAFE_ID.sub("_", value.strip()).strip("_")
+    return normalized or "sem_titulo"
+
+
+def _safe_prompt_id(value: str) -> str:
+    normalized = _SAFE_PROMPT_ID.sub("_", value.strip()).strip("._-")
     return normalized or "sem_titulo"

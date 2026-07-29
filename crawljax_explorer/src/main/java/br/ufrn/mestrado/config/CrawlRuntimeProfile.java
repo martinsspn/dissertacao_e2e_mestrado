@@ -18,8 +18,8 @@ public record CrawlRuntimeProfile(
             45,
             3000,
             2200,
-            false,
-            true
+            true,
+            false
         );
     }
 

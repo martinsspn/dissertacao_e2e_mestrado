@@ -2,148 +2,110 @@ from __future__ import annotations
 
 import re
 
-from teste_prompt_e2e_semantico.domain.models import NavigationTransition, SelectorCandidate
+from teste_prompt_e2e_semantico.domain.models import NavigationTransition, SelectorCandidate, UiElement
 
 
-_STRONG_KEYS = ("role", "aria", "label", "testid", "data-testid", "data-test", "placeholder")
-_MEDIUM_KEYS = ("id", "name", "text", "href", "css")
-_WEAK_KEYS = ("xpath", "class", "nth", "index")
-_LOW_VALUE_TEXTS = {
-    "",
-    "(0)",
-    "0",
-    "home",
-    "home/",
-    "prev",
-    "next",
-    "wait...",
-    "loading",
-    "categories",
-}
+_PRIORITY = (
+    "data-testid",
+    "data-test",
+    "testid",
+    "aria_label",
+    "label",
+    "id",
+    "name",
+    "placeholder",
+    "role_name",
+    "text",
+    "href",
+    "role",
+    "css",
+)
+_REJECTED = ("xpath", "nth", "index")
+_DYNAMIC_COUNTER = re.compile(r"\s*\(\d+\)\s*$")
 
 
-def selector_candidates_for(transition: NavigationTransition, limit: int = 5) -> list[SelectorCandidate]:
-    candidates: list[SelectorCandidate] = []
-    for key, value in _flatten_selectors(transition.selectors).items():
-        candidate = _classify_selector(key, value, transition.selector_scores.get(key))
-        if candidate is not None:
-            candidates.append(candidate)
+def best_selector_for(control: NavigationTransition | UiElement) -> SelectorCandidate | None:
+    """Choose one selector by a fixed, documented priority order."""
+    selectors = _flatten_selectors(control.selectors)
+    text = control.element.get("text", "")
+    if _DYNAMIC_COUNTER.search(text):
+        for key, value in selectors:
+            if key.casefold() in {"data-testid", "data-test", "testid", "aria_label", "id", "name"}:
+                return SelectorCandidate(kind=key, value=value)
 
-    candidates.sort(key=lambda candidate: candidate.score, reverse=True)
-    return candidates[:limit]
+        # A destination alone is not necessarily unique: after an AJAX
+        # update, header, notification and menu links may share the same href.
+        # For links whose only varying part is a final counter, expose the
+        # counter-free accessible name and require an exact role/name match.
+        tag = control.element.get("tag", "").casefold()
+        if tag == "a" or control.kind.casefold() == "link":
+            stable_name = _DYNAMIC_COUNTER.sub("", text).strip()
+            if stable_name:
+                return SelectorCandidate(kind="role_name_exact", value=stable_name)
+
+        for key, value in selectors:
+            if key.casefold() == "href":
+                return SelectorCandidate(kind=key, value=value)
+    for marker in _PRIORITY:
+        for key, value in selectors:
+            normalized_key = key.casefold()
+            if marker in normalized_key and not any(item in normalized_key for item in _REJECTED):
+                return SelectorCandidate(kind=key, value=value)
+    return _selector_from_element(control)
 
 
-def selector_quality_score(transition: NavigationTransition) -> float:
-    candidates = selector_candidates_for(transition, limit=3)
-    if not candidates:
-        return 0.0
-    return sum(candidate.score for candidate in candidates) / len(candidates)
+def selector_priority_for(control: NavigationTransition | UiElement) -> int:
+    """Return the fixed selector-policy position used to break equivalent matches."""
+    selector = best_selector_for(control)
+    if selector is None:
+        return len(_PRIORITY) + 1
+    normalized_kind = selector.kind.casefold()
+    for index, marker in enumerate(_PRIORITY):
+        if marker in normalized_kind:
+            return index
+    return len(_PRIORITY)
 
 
-def _flatten_selectors(selectors: dict[str, object]) -> dict[str, str]:
-    flattened: dict[str, str] = {}
+def _flatten_selectors(selectors: dict[str, object]) -> list[tuple[str, str]]:
+    flattened: list[tuple[str, str]] = []
     for key, value in selectors.items():
-        if value is None:
-            continue
-        if isinstance(value, str):
-            if value.strip():
-                flattened[key] = value.strip()
-            continue
-        if isinstance(value, (int, float, bool)):
-            flattened[key] = str(value)
-            continue
-        if isinstance(value, list):
-            for index, item in enumerate(value):
-                if isinstance(item, str) and item.strip():
-                    flattened[f"{key}[{index}]"] = item.strip()
-            continue
-        if isinstance(value, dict):
-            for child_key, child_value in value.items():
-                if child_value is not None and str(child_value).strip():
-                    flattened[f"{key}.{child_key}"] = str(child_value).strip()
+        if isinstance(value, str) and value.strip():
+            flattened.append((key, value.strip()))
+        elif isinstance(value, (int, float, bool)):
+            flattened.append((key, str(value)))
+        elif isinstance(value, list):
+            flattened.extend(
+                (f"{key}[{index}]", item.strip())
+                for index, item in enumerate(value)
+                if isinstance(item, str) and item.strip()
+            )
+        elif isinstance(value, dict):
+            flattened.extend(
+                (f"{key}.{child_key}", str(child_value).strip())
+                for child_key, child_value in value.items()
+                if child_value is not None and str(child_value).strip()
+            )
     return flattened
 
 
-def _classify_selector(key: str, value: str, source_score: object) -> SelectorCandidate | None:
-    normalized_key = key.lower()
-    normalized_value = value.lower()
-    base = _coerce_score(source_score)
-    score_cap = 1.0
-    reason = "selector disponivel no grafo"
+def _selector_from_element(control: NavigationTransition | UiElement) -> SelectorCandidate | None:
+    element = control.element
+    for key in ("aria_label", "label", "id", "name", "placeholder"):
+        value = element.get(key, "").strip()
+        if value:
+            return SelectorCandidate(kind=key, value=value)
 
-    if any(marker in normalized_key for marker in _STRONG_KEYS):
-        base += 0.35
-        reason = "preferivel por representar atributo semantico ou de teste"
-    elif any(marker in normalized_key for marker in _MEDIUM_KEYS):
-        base += 0.15
-        reason = "util quando nao houver seletor semantico melhor"
-    elif any(marker in normalized_key for marker in _WEAK_KEYS):
-        base -= 0.45
-        score_cap = min(score_cap, 0.35)
-        reason = "fragil; usar apenas se nao houver alternativa"
+    tag = element.get("tag", "").casefold()
+    input_type = element.get("input_type", "").casefold()
+    accessible_name = element.get("value", "").strip()
+    # A value-only generic button can occur many times on the same page (for
+    # example, product-list "Add to cart" buttons). Submit controls are tied to
+    # one form and remain useful when no stable attribute exists.
+    if tag == "input" and input_type == "submit" and accessible_name:
+        return SelectorCandidate(kind="role_name", value=accessible_name)
 
-    if "xpath" in normalized_key:
-        base -= 0.35
-        score_cap = min(score_cap, 0.25)
-        reason = "xpath tende a quebrar com mudancas estruturais"
-    if "text" in normalized_key and _is_low_value_text(value):
-        base -= 0.65
-        score_cap = min(score_cap, 0.35)
-        reason = "texto pouco descritivo para acao de usuario"
-    if "nth-child" in normalized_value or re.search(r":nth-\w+\(", normalized_value):
-        base -= 0.3
-        score_cap = min(score_cap, 0.25)
-        reason = "depende de posicao no DOM"
-    if len(value) > 120:
-        base -= 0.45
-        score_cap = min(score_cap, 0.3)
-        reason = "seletor longo aumenta fragilidade"
-    if _looks_generated(value):
-        base -= 0.15
-        score_cap = min(score_cap, 0.45)
-        reason = "valor parece gerado dinamicamente"
-
-    if len(value) > 500:
-        return None
-
-    score = max(0.0, min(score_cap, base))
-    if score >= 0.7:
-        strength = "strong"
-    elif score >= 0.4:
-        strength = "medium"
-    else:
-        strength = "weak"
-
-    return SelectorCandidate(kind=key, value=value, score=score, strength=strength, reason=reason)
-
-
-def _coerce_score(value: object) -> float:
-    if isinstance(value, (int, float)):
-        return float(value)
-    if isinstance(value, str):
-        try:
-            return float(value)
-        except ValueError:
-            return 0.5
-    return 0.5
-
-
-def _looks_generated(value: str) -> bool:
-    return bool(
-        re.search(r"[a-f0-9]{8,}", value.lower())
-        or re.search(r"\b\d{5,}\b", value)
-        or re.search(r"(ember|react|vue|ng)-?\d+", value.lower())
-    )
-
-
-def _is_low_value_text(value: str) -> bool:
-    normalized = re.sub(r"\s+", " ", value).strip().lower()
-    if normalized in _LOW_VALUE_TEXTS:
-        return True
-    if not re.search(r"[a-zA-Z]", normalized):
-        return True
-    if len(normalized) <= 2:
-        return True
-    if len(value) > 40 and " " not in value.strip():
-        return True
-    return False
+    for key in ("text", "href", "role"):
+        value = element.get(key, "").strip()
+        if value:
+            return SelectorCandidate(kind=key, value=value)
+    return None

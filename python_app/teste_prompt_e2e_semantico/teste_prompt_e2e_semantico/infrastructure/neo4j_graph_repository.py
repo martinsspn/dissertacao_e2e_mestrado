@@ -9,7 +9,13 @@ except ModuleNotFoundError:  # pragma: no cover - external dependency
     GraphDatabase = None
 
 from teste_prompt_e2e_semantico.config import PromptGeneratorConfig
-from teste_prompt_e2e_semantico.domain.models import NavigationGraph, NavigationTransition, PageNode
+from teste_prompt_e2e_semantico.domain.models import (
+    NavigationGraph,
+    NavigationTransition,
+    ObservedResult,
+    PageNode,
+    UiElement,
+)
 
 
 class Neo4jNavigationGraphRepository:
@@ -27,11 +33,12 @@ class Neo4jNavigationGraphRepository:
     def close(self) -> None:
         self._driver.close()
 
-    def get_navigation_graph(self, max_edges: int) -> NavigationGraph:
+    def get_navigation_graph(self) -> NavigationGraph:
         self._wait_until_ready()
         return NavigationGraph(
             pages=self._get_page_catalog(),
-            transitions=self._get_transitions(max_edges),
+            transitions=self._get_transitions(),
+            ui_elements=self._get_ui_elements(),
         )
 
     def _get_page_catalog(self) -> list[PageNode]:
@@ -63,7 +70,7 @@ class Neo4jNavigationGraphRepository:
                 for record in result
             ]
 
-    def _get_transitions(self, max_edges: int) -> list[NavigationTransition]:
+    def _get_transitions(self) -> list[NavigationTransition]:
         query = """
             MATCH (source:PageState)-[rel:NAVIGATES_TO]->(target:PageState)
             RETURN source.url AS source_url,
@@ -81,11 +88,13 @@ class Neo4jNavigationGraphRepository:
                    coalesce(rel.element_href, '') AS element_href,
                    coalesce(rel.input_type, '') AS input_type,
                    coalesce(rel.selectors_json, '{}') AS selectors_json,
-                   coalesce(rel.selector_scores_json, '{}') AS selector_scores_json
-            LIMIT $max_edges
+                   coalesce(rel.observed_text, '') AS observed_text,
+                   coalesce(rel.observed_element_id, '') AS observed_element_id,
+                   coalesce(rel.observed_element_role, '') AS observed_element_role
+            ORDER BY source.url, target.url, element_text, element_id
         """
         with self._driver.session() as session:
-            records = session.run(query, max_edges=max_edges)
+            records = session.run(query)
             return [
                 NavigationTransition(
                     source={"url": record["source_url"], "title": record["source_title"]},
@@ -103,10 +112,73 @@ class Neo4jNavigationGraphRepository:
                         "input_type": record["input_type"],
                     },
                     selectors=_decode_json_object(record["selectors_json"]),
-                    selector_scores=_decode_json_object(record["selector_scores_json"]),
+                    observed_result=(
+                        ObservedResult(
+                            text=record["observed_text"],
+                            element_id=record["observed_element_id"],
+                            role=record["observed_element_role"],
+                        )
+                        if record["observed_text"]
+                        else None
+                    ),
                 )
                 for record in records
             ]
+
+    def _get_ui_elements(self) -> list[UiElement]:
+        query = """
+            MATCH (page:PageState)-[:HAS_ELEMENT]->(element:UiElement)
+            RETURN page.url AS page_url,
+                   coalesce(element.kind, '') AS kind,
+                   coalesce(element.suggested_operation, '') AS suggested_operation,
+                   coalesce(element.tag, '') AS tag,
+                   coalesce(element.text, '') AS text,
+                   coalesce(element.title, '') AS title,
+                   coalesce(element.label, '') AS label,
+                   coalesce(element.data_testid, '') AS data_testid,
+                   coalesce(element.id_attribute, '') AS id_attribute,
+                   coalesce(element.name, '') AS name,
+                   coalesce(element.input_type, '') AS input_type,
+                   coalesce(element.value, '') AS value,
+                   coalesce(element.href, '') AS href,
+                   coalesce(element.role, '') AS role,
+                   coalesce(element.aria_label, '') AS aria_label,
+                   coalesce(element.placeholder, '') AS placeholder,
+                   coalesce(element.form_action, '') AS form_action,
+                   coalesce(element.form_method, '') AS form_method
+            ORDER BY page.url, element.id
+        """
+        with self._driver.session() as session:
+            records = session.run(query)
+            elements = []
+            for record in records:
+                element = {
+                    "tag": record["tag"],
+                    "text": record["text"],
+                    "title": record["title"],
+                    "label": record["label"],
+                    "data_testid": record["data_testid"],
+                    "id": record["id_attribute"],
+                    "name": record["name"],
+                    "input_type": record["input_type"],
+                    "value": record["value"],
+                    "href": record["href"],
+                    "role": record["role"],
+                    "aria_label": record["aria_label"],
+                    "placeholder": record["placeholder"],
+                    "form_action": record["form_action"],
+                    "form_method": record["form_method"],
+                }
+                elements.append(
+                    UiElement(
+                        page_url=record["page_url"],
+                        kind=record["kind"],
+                        suggested_operation=record["suggested_operation"],
+                        element=element,
+                        selectors=_selectors_from_element(element),
+                    )
+                )
+            return elements
 
     def health_check(self) -> bool:
         with self._driver.session() as session:
@@ -131,3 +203,12 @@ def _decode_json_object(value: str) -> dict[str, object]:
     except json.JSONDecodeError:
         return {}
     return decoded if isinstance(decoded, dict) else {}
+
+
+def _selectors_from_element(element: dict[str, str]) -> dict[str, object]:
+    selectors = {}
+    for key in ("data_testid", "aria_label", "label", "id", "name", "placeholder", "text", "href", "role"):
+        value = element.get(key, "").strip()
+        if value:
+            selectors[key] = value
+    return selectors

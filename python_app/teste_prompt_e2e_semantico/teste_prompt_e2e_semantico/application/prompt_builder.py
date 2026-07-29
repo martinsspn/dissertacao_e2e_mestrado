@@ -3,247 +3,211 @@ from __future__ import annotations
 import json
 
 from teste_prompt_e2e_semantico.domain.models import (
-    PathCandidate,
-    PathStep,
-    RelevantGraphContext,
-    ScoredPage,
-    ScoredTransition,
-    SelectorCandidate,
+    ContextElement,
+    ObservedResult,
+    PageEvidence,
+    SpecificationStep,
     SpecPlan,
+    StructuredContext,
 )
 
 
-def build_structured_prompt(spec: SpecPlan, base_url: str, context: RelevantGraphContext) -> str:
-    graph_context = _compact_graph_context(context)
-    payload = {
-        "base_url": base_url.rstrip("/"),
-        "specification_title": spec.title,
-        "specification": spec.raw_text.strip(),
-        "context_quality": _context_quality(graph_context),
-        "specification_coverage": _compact_coverage(context),
-        "graph_context": graph_context,
-    }
+def build_structured_prompt(
+    spec: SpecPlan,
+    base_url: str,
+    requirements: list[SpecificationStep],
+    context: StructuredContext,
+) -> str:
+    parts = [
+        "# Geracao de teste E2E Playwright",
+        "",
+        "Gere um teste TypeScript Playwright fiel a especificacao.",
+        "",
+        "Regras:",
+        "- Retorne um unico bloco de codigo `typescript`, sem texto fora dele; o conteudo interno deve ser um arquivo Playwright `.spec.ts` completo e executavel por `npx playwright test`.",
+        "- Importe `test` e `expect` de `@playwright/test`.",
+        f"- Inicie com `await page.goto('{base_url.rstrip('/')}/')`; use URLs literais tambem em `toHaveURL`, sem regex ou links Markdown.",
+        "- Nao derive rotas do texto de links, produtos ou titulos. Use `toHaveURL` somente quando a URL exata estiver na base ou no contexto; sem URL observada, confirme a pagina por elementos visiveis.",
+        "- Use locators Playwright legiveis e unicos no modo estrito; evite XPath, indices e `waitForTimeout`.",
+        "- Cada valor `locator_playwright=...` e uma expressao TypeScript Playwright completa e executavel. Copie a expressao sem aspas adicionais e aplique a acao nela, por exemplo `await page.getByRole('button', { name: 'Search', exact: true }).click()` ou `await page.getByLabel('Email:', { exact: true }).fill(valor)`.",
+        "- Nunca passe uma expressao `page.getBy*` ou `page.locator` como argumento de `page.click`, `page.fill` ou `page.selectOption`; chame `.click()`, `.fill()` ou `.selectOption()` diretamente no locator.",
+        "- Nao use no codigo a notacao descritiva de `controle=...` nem invente engines como `role_name:`, `label:`, `id:`, `tag=` ou `text:`. Somente os valores de `locator_playwright=...` sao locators copiaveis.",
+        "- Quando o contexto fornecer `locator_playwright`, preserve esse locator; nao o substitua por um locator generico baseado apenas em papel e nome.",
+        "- Quando varios itens ou variantes compartilharem a mesma acao, relacione o controle escolhido ao nome visivel do item antes do clique e reutilize esse nome nas verificacoes posteriores; nao trate o titulo da pagina agrupadora como nome do item sem confirmar essa igualdade. Se o nome exato nao puder ser observado, verifique apenas a propriedade explicitada pela especificacao, sem inventar um rotulo.",
+        "- Inclua assercoes observaveis que comprovem o resultado esperado.",
+        "- O contexto é apenas um guia: combine-o com a especificacao e sua experiencia para navegar, localizar elementos e executar as acoes.",
+        "- Caso seja possível acessar a aplicação, entre nela e interaja validando o fluxo e os resultados e utilizando as informações obtidas nessa interação em conjunto do contexto e a especificacao e seu conhecimento de playwright para fazer o teste ts; caso contrario, use a especificacao, o contexto observado e seu conhecimento de Playwright sem afirmar que executou acoes.",
+        "",
+        f"Especificacao `{spec.title}` em etapas:",
+        *[f"{index}. {item.text}" for index, item in enumerate(requirements, start=1)],
+        "",
+        "Contexto estruturado por etapa:",
+        *_context_lines(context),
+        "",
+        "Use as informacoes observadas quando forem aplicaveis, sem limitar o teste a elas.",
+        "`pagina_evidencia` nao comprova uma transicao ate a pagina.",
+        "Sem contexto, siga a especificacao e interaja normalmente com a pagina; nao trate inferencias como fatos observados.",
+    ]
+    return "\n".join(parts).strip() + "\n"
 
-    return "\n".join(
-        [
-            "# Prompt Para Geracao De Teste E2E Playwright",
-            "",
-            "## Papel Da LLM",
-            "",
-            (
-                "Voce e uma especialista em testes E2E com Playwright. Gere um teste TypeScript robusto, "
-                "legivel e fiel a especificacao em linguagem natural."
-            ),
-            "",
-            "## Objetivo",
-            "",
-            (
-                "Gerar um arquivo .spec.ts usando a especificacao do usuario e o contexto do grafo navegacional. "
-                "O grafo foi selecionado por similaridade textual e qualidade de seletores; use-o como fonte de "
-                "verdade para paginas, transicoes e elementos disponiveis, mas escolha o fluxo mais coerente com a especificacao."
-            ),
-            "",
-            "## Regras Obrigatorias",
-            "",
-            "- Retorne apenas o codigo TypeScript do teste, sem Markdown.",
-            "- Importe `test` e `expect` de `@playwright/test`.",
-            "- Comece pela `base_url` fornecida nos dados estruturados.",
-            "- Nao invente rotas, textos ou seletores quando houver alternativa no grafo.",
-            "- Prefira locators semanticos do Playwright: `getByRole`, `getByLabel`, `getByPlaceholder` e `getByText`.",
-            "- Use atributos estaveis como `data-testid`, `data-test`, `id` ou `name` quando forem a melhor opcao disponivel.",
-            "- Evite XPath, `nth-child`, classes de layout e seletores longos, exceto como ultimo recurso.",
-            "- Inclua assercoes observaveis que comprovem que a especificacao foi atendida.",
-            "- Evite `waitForTimeout`; prefira esperas por estado visivel, URL, resposta ou elemento esperado.",
-            "- Se houver multiplos caminhos candidatos, escolha o mais coerente com a especificacao e com seletores fortes.",
-            "- Se os caminhos candidatos forem insuficientes, use as paginas e transicoes relevantes para compor o menor fluxo valido.",
-            "- Trate transicoes com acao `reload` como evidencias de pagina, nao como passos preferenciais de interacao.",
-            "- Use `specification_coverage` como gate de conformance: priorize requisitos `supported`, trate `partial` e `potentially_covered` como lacunas explicitas e nao invente passos `missing`.",
-            "- Respeite as facetas em `specification_coverage.requirements[].facets`: verbo, objeto, estado alvo, dados e assercao precisam estar sustentados por evidencia do grafo.",
-            "- Quando houver requisitos `missing`, gere apenas o teste suportado pelo grafo e inclua assercoes observaveis para as partes cobertas.",
-            "",
-            "## Politica De Seletores",
-            "",
-            "Prioridade recomendada:",
-            "",
-            "1. `getByRole(role, { name })` quando role/nome acessivel estiverem disponiveis.",
-            "2. `getByLabel`, `getByPlaceholder` ou `getByText` para elementos claramente identificaveis.",
-            "3. Locators por atributos estaveis (`data-testid`, `data-test`, `id`, `name`).",
-            "4. CSS curto e especifico quando nao houver seletor semantico.",
-            "5. XPath ou seletores estruturais apenas se nao houver alternativa melhor.",
-            "",
-            "## Dados Estruturados",
-            "",
-            "```json",
-            json.dumps(payload, indent=2, ensure_ascii=False),
-            "```",
-            "",
-            "## Auto-Verificacao Antes De Responder",
-            "",
-            "- O teste cobre a especificacao em linguagem natural?",
-            "- O fluxo escolhido existe ou e suportado pelo grafo navegacional?",
-            "- Os seletores escolhidos sao os mais robustos entre as opcoes disponiveis?",
-            "- Ha assercoes suficientes para validar o resultado esperado?",
-            "- O codigo final pode ser salvo diretamente como `.spec.ts`?",
-            "",
+
+def _context_lines(context: StructuredContext) -> list[str]:
+    if context.item_count == 0:
+        return [
+            "- Nenhum controle ou resultado correspondente foi observado para esta especificacao; "
+            "nenhuma evidencia literal de pagina foi encontrada."
         ]
+
+    lines = []
+    missing = []
+    for index, step in enumerate(context.steps, start=1):
+        if not step.interactions and step.page_evidence is None:
+            missing.append(str(index))
+            continue
+        lines.append(f"Etapa {index} ({step.requirement_id}):")
+        interaction_count = len(step.interactions)
+        interaction_pages = {
+            interaction.control.page_url
+            for interaction in step.interactions
+        }
+        shared_interaction_page = interaction_count > 1 and len(interaction_pages) == 1
+        if shared_interaction_page:
+            lines.append(f"- pagina={next(iter(interaction_pages))}")
+        for interaction_index, interaction in enumerate(step.interactions, start=1):
+            suffix = f"_{interaction_index}" if interaction_count > 1 else ""
+            lines.extend(
+                _control_lines(
+                    interaction.control,
+                    suffix,
+                    include_page=not shared_interaction_page,
+                )
+            )
+            if interaction.observed_result is not None:
+                lines.extend(_result_lines(interaction.observed_result, suffix))
+        if step.page_evidence is not None:
+            lines.extend(_page_evidence_lines(step.page_evidence))
+    if missing:
+        lines.append(f"Etapas sem contexto observado: {', '.join(missing)}.")
+    return lines
+
+
+def _control_lines(
+    control: ContextElement,
+    suffix: str = "",
+    *,
+    include_page: bool = True,
+) -> list[str]:
+    lines = [
+        f"- controle{suffix}={_element_label(control.element)}",
+        f"- operacao{suffix}={control.action or control.interaction_kind}",
+    ]
+    if include_page:
+        lines.insert(0, f"- pagina{suffix}={control.page_url}")
+    # A form action describes where the browser may submit data; it is not an
+    # observed navigation.  Only links expose a destination in the prompt.
+    if control.destination_url and control.element.get("href"):
+        lines.append(f"- destino{suffix}={control.destination_url}")
+    if control.selector is not None:
+        lines.append(f"- locator_playwright{suffix}={_selector_expression(control)}")
+    return lines
+
+
+def _selector_expression(control: ContextElement) -> str:
+    selector = control.selector
+    if selector is None:
+        return ""
+    kind = selector.kind.casefold()
+    value = _typescript_literal(selector.value)
+
+    if kind in {"role_name", "role_name_exact"}:
+        role = _accessible_role(control)
+        return (
+            f"page.getByRole({_typescript_literal(role)}, "
+            f"{{ name: {value}, exact: true }})"
+        )
+    if kind in {"data-testid", "testid"}:
+        return f"page.getByTestId({value})"
+    if kind == "data-test":
+        return _attribute_locator("data-test", selector.value)
+    if kind in {"aria_label", "label"}:
+        return f"page.getByLabel({value}, {{ exact: true }})"
+    if kind == "id":
+        return _attribute_locator("id", selector.value)
+    if kind == "name":
+        return _attribute_locator("name", selector.value)
+    if kind == "placeholder":
+        return f"page.getByPlaceholder({value}, {{ exact: true }})"
+    if kind == "text":
+        expression = f"page.getByText({value}, {{ exact: true }})"
+        if control.element.get("tag", "").casefold() == "a":
+            # Menus responsivos podem repetir o mesmo link no DOM. A política
+            # continua sem nth/index numérico, mas torna o locator executável
+            # no modo estrito escolhendo a primeira ocorrência observável.
+            return expression + ".first()"
+        return expression
+    if kind == "href":
+        return _attribute_locator("href", selector.value, tag="a")
+    if kind == "role":
+        return f"page.getByRole({value})"
+    if kind == "css":
+        return f"page.locator({value})"
+    raise ValueError(
+        f"Tipo de seletor sem tradução Playwright segura: {selector.kind!r}"
     )
 
 
-def _compact_graph_context(context: RelevantGraphContext) -> dict[str, object]:
-    return {
-        "candidate_paths": [_compact_path(path) for path in context.paths],
-        "relevant_pages": [_compact_page(page) for page in context.pages],
-        "relevant_transitions": [_compact_transition(transition) for transition in context.transitions],
-    }
+def _accessible_role(control: ContextElement) -> str:
+    tag = control.element.get("tag", "").casefold()
+    input_type = control.element.get("input_type", "").casefold()
+    if tag == "a":
+        return "link"
+    if tag == "button" or (tag == "input" and input_type in {"button", "submit", "reset"}):
+        return "button"
+    role = control.element.get("role", "").strip()
+    if role:
+        return role
+    return control.interaction_kind
 
 
-def _compact_path(path: PathCandidate) -> dict[str, object]:
-    return {
-        "path_id": path.id,
-        "score": round(path.score, 3),
-        "steps": [_compact_step(step) for step in path.steps],
-    }
+def _attribute_locator(attribute: str, value: str, *, tag: str = "") -> str:
+    escaped = value.replace("\\", "\\\\").replace('"', '\\"')
+    css = f'{tag}[{attribute}="{escaped}"]'
+    return f"page.locator({_typescript_literal(css)})"
 
 
-def _compact_step(step: PathStep) -> dict[str, object]:
-    return {
-        "source_url": step.source_url,
-        "target_url": step.target_url,
-        "action": step.action,
-        "interaction_kind": step.interaction_kind,
-        "element": _non_empty_dict(step.element),
-        "recommended_selectors": [_compact_selector(selector) for selector in step.recommended_selectors[:2]],
-    }
+def _typescript_literal(value: str) -> str:
+    return json.dumps(value, ensure_ascii=False)
 
 
-def _compact_page(scored_page: ScoredPage) -> dict[str, object]:
-    page = scored_page.page
-    return {
-        "url": page.url,
-        "title": page.title,
-        "h1": page.h1,
-        "visible_text_excerpt": _truncate(page.visible_text_excerpt, 500),
-        "interactive_count": page.interactive_count,
-        "relevance_score": round(scored_page.score, 3),
-        "matched_terms": scored_page.matched_terms,
-    }
+def _result_lines(result: ObservedResult, suffix: str = "") -> list[str]:
+    lines = [f"- resultado_observado{suffix}={result.text}"]
+    if result.element_id:
+        lines.append(
+            f"- locator_playwright_resultado{suffix}="
+            f"{_attribute_locator('id', result.element_id)}"
+        )
+    elif result.role:
+        lines.append(
+            f"- locator_playwright_resultado{suffix}="
+            f"page.getByRole({_typescript_literal(result.role)})"
+        )
+    return lines
 
 
-def _compact_transition(scored_transition: ScoredTransition) -> dict[str, object]:
-    transition = scored_transition.transition
-    return {
-        "source": transition.source,
-        "target": transition.target,
-        "action": transition.action,
-        "interaction_kind": transition.interaction_kind,
-        "element": _non_empty_dict(transition.element),
-        "relevance_score": round(scored_transition.score, 3),
-        "matched_terms": scored_transition.matched_terms,
-        "recommended_selectors": [
-            _compact_selector(selector) for selector in scored_transition.selector_candidates[:3]
-        ],
-    }
+def _page_evidence_lines(evidence: PageEvidence) -> list[str]:
+    return [
+        f"- pagina_evidencia={evidence.page_url}",
+        f"- evidencia_pagina={evidence.source}:{evidence.text}",
+    ]
 
 
-def _compact_selector(selector: SelectorCandidate) -> dict[str, object]:
-    return {
-        "kind": selector.kind,
-        "value": selector.value,
-        "score": round(selector.score, 3),
-        "strength": selector.strength,
-        "reason": selector.reason,
-    }
-
-
-def _compact_coverage(context: RelevantGraphContext) -> dict[str, object]:
-    coverage = context.coverage
-    if coverage is None:
-        return {
-            "overall_status": "unknown",
-            "coverage_score": 0.0,
-            "requirements": [],
-            "warnings": ["Cobertura da especificacao nao calculada."],
-        }
-    return {
-        "overall_status": coverage.overall_status,
-        "coverage_score": coverage.coverage_score,
-        "summary": {
-            "supported": coverage.supported_requirements,
-            "partial": coverage.partial_requirements,
-            "missing": coverage.missing_requirements,
-        },
-        "requirements": [
-            {
-                "text": requirement.text,
-                "terms": requirement.terms,
-                "facets": [
-                    {
-                        "kind": facet.kind,
-                        "text": facet.text,
-                        "terms": facet.terms,
-                        "weight": round(facet.weight, 3),
-                        "required": facet.required,
-                    }
-                    for facet in requirement.facets
-                ],
-                "status": requirement.status,
-                "confidence": requirement.confidence,
-                "fit_score": requirement.fit_score,
-                "support_type": requirement.support_type,
-                "alignment_cost": requirement.alignment_cost,
-                "unsupported_facets": requirement.unsupported_facets,
-                "warning": requirement.warning,
-                "evidence": [
-                    {
-                        "kind": evidence.kind,
-                        "label": evidence.label,
-                        "score": round(evidence.score, 3),
-                        "details": evidence.details,
-                    }
-                    for evidence in requirement.evidence
-                ],
-            }
-            for requirement in coverage.requirements
-        ],
-        "warnings": coverage.warnings,
-    }
-
-
-def _context_quality(graph_context: dict[str, object]) -> dict[str, object]:
-    paths = graph_context["candidate_paths"]
-    transitions = graph_context["relevant_transitions"]
-    selector_strengths = {"strong": 0, "medium": 0, "weak": 0}
-    reload_transitions = 0
-    for transition in transitions:
-        if transition["action"] == "reload":
-            reload_transitions += 1
-        for selector in transition["recommended_selectors"]:
-            strength = selector.get("strength")
-            if strength in selector_strengths:
-                selector_strengths[strength] += 1
-
-    warnings: list[str] = []
-    if not paths:
-        warnings.append("Nenhum caminho candidato acionavel foi encontrado; use transicoes relevantes como evidencia.")
-    if selector_strengths["strong"] == 0 and selector_strengths["medium"] == 0:
-        warnings.append("O contexto possui poucos seletores robustos; prefira assercoes por texto/titulo/URL.")
-    if reload_transitions:
-        warnings.append("Algumas transicoes relevantes sao reloads; elas indicam paginas, nao interacoes preferenciais.")
-
-    return {
-        "candidate_paths": len(paths),
-        "relevant_transitions": len(transitions),
-        "selector_strength_distribution": selector_strengths,
-        "warnings": warnings,
-    }
-
-
-def _non_empty_dict(value: dict[str, object]) -> dict[str, object]:
-    return {key: item for key, item in value.items() if item not in ("", None, [], {})}
-
-
-def _truncate(value: str, max_length: int) -> str:
-    normalized = " ".join(value.split())
-    if len(normalized) <= max_length:
-        return normalized
-    return normalized[:max_length].rstrip() + "..."
+def _element_label(element: dict[str, str]) -> str:
+    fields = [
+        f"{key}={element[key]}"
+        for key in (
+            "tag", "text", "title", "label", "data_testid", "id", "name", "input_type",
+            "value", "href", "role", "aria_label", "placeholder", "form_action", "form_method",
+        )
+        if element.get(key)
+    ]
+    return ", ".join(fields) or "elemento sem identificacao textual"

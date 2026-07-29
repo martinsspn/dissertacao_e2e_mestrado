@@ -1,0 +1,23 @@
+{
+  "name": "dissertacao_e2e_semantico",
+  "version": "1.0.0",
+  "description": "Este repositorio contem um pipeline para gerar prompts estruturados que auxiliam LLMs na criacao de testes E2E Playwright.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/martinsspn/dissertacao_e2e_mestrado.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/martinsspn/dissertacao_e2e_mestrado/issues"
+  },
+  "homepage": "https://github.com/martinsspn/dissertacao_e2e_mestrado#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.61.1"
+  }
+}

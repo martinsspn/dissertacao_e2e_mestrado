@@ -36,12 +36,16 @@ class WebAppConfig:
     crawl_max_runtime_minutes: int = _int_env("CRAWL_MAX_RUNTIME_MINUTES", 45)
     crawl_wait_after_reload_ms: int = _int_env("CRAWL_WAIT_AFTER_RELOAD_MS", 3000)
     crawl_wait_after_event_ms: int = _int_env("CRAWL_WAIT_AFTER_EVENT_MS", 2200)
-    crawl_click_once: bool = _bool_env("CRAWL_CLICK_ONCE", False)
-    crawl_random_order: bool = _bool_env("CRAWL_RANDOM_ORDER", True)
+    crawl_click_once: bool = _bool_env("CRAWL_CLICK_ONCE", True)
+    crawl_random_order: bool = _bool_env("CRAWL_RANDOM_ORDER", False)
 
     @property
     def prompt_module_dir(self) -> Path:
         return self.repo_root / "python_app" / "teste_prompt_e2e_semantico"
+
+    @property
+    def evaluation_module_dir(self) -> Path:
+        return self.repo_root / "python_app" / "avaliacao_prompts"
 
     @property
     def specs_dir(self) -> Path:
@@ -57,4 +61,8 @@ class WebAppConfig:
 
     @property
     def evaluation_reports_dir(self) -> Path:
-        return self.prompt_module_dir / "evaluation_reports"
+        return self.evaluation_module_dir / "relatorios"
+
+    @property
+    def crawl_manifest_path(self) -> Path:
+        return self.repo_root / "output_crawljax" / "crawl_run_manifest.json"

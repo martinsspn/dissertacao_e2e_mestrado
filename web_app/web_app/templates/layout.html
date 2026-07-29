@@ -3,14 +3,14 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Gerador E2E Semantico</title>
+    <title>Gerador E2E Com Contexto Estruturado</title>
     <link rel="stylesheet" href="/static/app.css">
     {% block head %}{% endblock %}
   </head>
   <body>
     <div class="app-shell">
       <aside class="sidebar">
-        <div class="brand">E2E Semantico</div>
+        <div class="brand">E2E Estruturado</div>
         <nav class="nav">
           <a class="{{ 'active' if active == 'dashboard' else '' }}" href="/">Dashboard</a>
           <a class="{{ 'active' if active == 'crawler' else '' }}" href="/crawler">Crawler</a>

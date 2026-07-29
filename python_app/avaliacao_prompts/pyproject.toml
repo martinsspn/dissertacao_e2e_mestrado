@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "avaliacao-prompts-e2e"
+version = "0.1.0"
+description = "Ferramenta auxiliar e nao oficial para analisar testes E2E produzidos por prompts."
+requires-python = ">=3.10"
+dependencies = [
+  "neo4j==5.16.0",
+]
+
+[project.scripts]
+avaliar-prompts = "avaliacao_prompts.presentation.cli:main"
+avaliar-resiliencia = "avaliacao_prompts.resilience.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "."}
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["avaliacao_prompts*"]

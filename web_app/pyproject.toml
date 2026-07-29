@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "semantic-e2e-web-app"
 version = "0.1.0"
-description = "Interface local para operar o pipeline de prompts E2E semanticos."
+description = "Interface local para operar o pipeline de prompts E2E com contexto estruturado."
 requires-python = ">=3.10"
 dependencies = [
   "fastapi>=0.115,<1.0",
