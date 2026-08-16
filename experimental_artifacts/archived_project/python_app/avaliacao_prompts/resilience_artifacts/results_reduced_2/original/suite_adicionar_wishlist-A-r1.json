@@ -1,0 +1,150 @@
+{
+  "config": {
+    "argv": [
+      "/usr/bin/node",
+      "/home/martinsspn/dissertacao_e2e_semantico/node_modules/.bin/playwright",
+      "test",
+      "suite_adicionar_wishlist.spec.ts",
+      "--config=/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/playwright.config.ts",
+      "--reporter=json"
+    ],
+    "configFile": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/playwright.config.ts",
+    "rootDir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_artifacts/prepared_execution/A",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/tmp/avaliacao-prompts-playwright",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_artifacts/prepared_execution/A",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 20000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.61.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "suite_adicionar_wishlist.spec.ts",
+      "file": "suite_adicionar_wishlist.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "adding a Camera product to the wishlist",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 20000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 255,
+                  "error": {
+                    "message": "Error: Define DEMO_WEB_SHOP_EMAIL and DEMO_WEB_SHOP_PASSWORD in the testing environment.",
+                    "stack": "Error: Define DEMO_WEB_SHOP_EMAIL and DEMO_WEB_SHOP_PASSWORD in the testing environment.\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_artifacts/prepared_execution/A/suite_adicionar_wishlist.spec.ts:8:11",
+                    "location": {
+                      "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_artifacts/prepared_execution/A/suite_adicionar_wishlist.spec.ts",
+                      "column": 11,
+                      "line": 8
+                    },
+                    "snippet": "   6 |\n   7 |   if (!email || !password) {\n>  8 |     throw new Error(\n     |           ^\n   9 |       'Define DEMO_WEB_SHOP_EMAIL and DEMO_WEB_SHOP_PASSWORD in the testing environment.',\n  10 |     );\n  11 |   }"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_artifacts/prepared_execution/A/suite_adicionar_wishlist.spec.ts",
+                        "column": 11,
+                        "line": 8
+                      },
+                      "message": "Error: Define DEMO_WEB_SHOP_EMAIL and DEMO_WEB_SHOP_PASSWORD in the testing environment.\n\n   6 |\n   7 |   if (!email || !password) {\n>  8 |     throw new Error(\n     |           ^\n   9 |       'Define DEMO_WEB_SHOP_EMAIL and DEMO_WEB_SHOP_PASSWORD in the testing environment.',\n  10 |     );\n  11 |   }\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_artifacts/prepared_execution/A/suite_adicionar_wishlist.spec.ts:8:11"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-07-20T17:43:32.656Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "resilience-mutation-events",
+                      "contentType": "application/json",
+                      "body": "W10="
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/tmp/avaliacao-prompts-playwright/suite_adicionar_wishlist-a-9dbe2-era-product-to-the-wishlist/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_artifacts/prepared_execution/A/suite_adicionar_wishlist.spec.ts",
+                    "column": 11,
+                    "line": 8
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "098796e0f623f352e24c-bd52b0d787f0bba3d0e6",
+          "file": "suite_adicionar_wishlist.spec.ts",
+          "line": 3,
+          "column": 5
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-07-20T17:43:31.468Z",
+    "duration": 1942.261,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

@@ -1,0 +1,987 @@
+{
+  "schema_version": 1,
+  "execution_manifest_sha256": "7ea83f9d577d598393058c5edcc85bfa256d38738677820026bda70af8b4427e",
+  "mutation_plan_sha256": "44fe459525f513719dc46a9bb394fa77d00c8fe1679bc77d4fbedb16b5da4e7b",
+  "repetitions": 1,
+  "selection": {
+    "mode": "deterministic_neutral_sample",
+    "mutations_per_scenario": 2,
+    "included_strata": [
+      "E1",
+      "E2"
+    ],
+    "rule": "one_E1_then_one_E2_when_available_then_hash_ranked_neutral_fill",
+    "selected_mutation_ids": [
+      "mutation-7c48b3e946d99eaa",
+      "mutation-766d2310c5144a4d",
+      "mutation-dd9a3b88732c15c6",
+      "mutation-8b066797110a117f",
+      "mutation-9eb1e5a299eb758d",
+      "mutation-361a9103a5072567",
+      "mutation-0631d1b7c50168dd",
+      "mutation-dfcce8f46a857a7c"
+    ]
+  },
+  "eligibility": {
+    "suite_adicionar_carrinho": {
+      "A": [
+        "passed"
+      ],
+      "B": [
+        "passed"
+      ]
+    },
+    "suite_adicionar_wishlist": {
+      "A": [
+        "environment_error"
+      ],
+      "B": [
+        "environment_error"
+      ]
+    },
+    "suite_busca_blue_jeans": {
+      "A": [
+        "passed"
+      ],
+      "B": [
+        "passed"
+      ]
+    },
+    "suite_checkout_blue_jeans": {
+      "A": [
+        "environment_error"
+      ],
+      "B": [
+        "skipped"
+      ]
+    },
+    "suite_configurar_desktop": {
+      "A": [
+        "failed"
+      ],
+      "B": [
+        "failed"
+      ]
+    },
+    "suite_detalhes_fiction": {
+      "A": [
+        "passed"
+      ],
+      "B": [
+        "passed"
+      ]
+    },
+    "suite_limpar_carrinho": {
+      "A": [
+        "passed"
+      ],
+      "B": [
+        "passed"
+      ]
+    },
+    "suite_limpar_wishlist": {
+      "A": [
+        "environment_error"
+      ],
+      "B": [
+        "skipped"
+      ]
+    },
+    "suite_login_invalido": {
+      "A": [
+        "environment_error"
+      ],
+      "B": [
+        "skipped"
+      ]
+    },
+    "suite_login_valido": {
+      "A": [
+        "environment_error"
+      ],
+      "B": [
+        "skipped"
+      ]
+    },
+    "suite_logout": {
+      "A": [
+        "environment_error"
+      ],
+      "B": [
+        "skipped"
+      ]
+    },
+    "suite_registro_usuario": {
+      "A": [
+        "environment_error"
+      ],
+      "B": [
+        "failed"
+      ]
+    }
+  },
+  "eligible_scenarios": [
+    "suite_adicionar_carrinho",
+    "suite_busca_blue_jeans",
+    "suite_detalhes_fiction",
+    "suite_limpar_carrinho"
+  ],
+  "mutation_results": [
+    {
+      "mutation_id": "mutation-7c48b3e946d99eaa",
+      "scenario_id": "suite_adicionar_carrinho",
+      "stratum": "E1",
+      "operator": "insert_noninteractive_sibling_before",
+      "control_valid": true,
+      "paired_applicable": false,
+      "invalid_reasons": [],
+      "control_runs": [
+        {
+          "repetition": 1,
+          "original": {
+            "status": "passed",
+            "mutation_events": [
+              {
+                "mutationId": "mutation-7c48b3e946d99eaa",
+                "targetId": "target-c1962e3b880d5873",
+                "url": "https://demowebshop.tricentis.com/blue-jeans",
+                "status": "marked",
+                "detail": ""
+              },
+              {
+                "mutationId": "mutation-7c48b3e946d99eaa",
+                "targetId": "target-c1962e3b880d5873",
+                "url": "https://demowebshop.tricentis.com/blue-jeans",
+                "status": "interacted",
+                "detail": "click"
+              }
+            ],
+            "control_observation": {
+              "supported": true,
+              "pathname": "/blue-jeans",
+              "search": "",
+              "heading": [
+                "Blue Jeans"
+              ],
+              "notifications": [
+                "Quantity should be positive"
+              ],
+              "targetPresent": true,
+              "targetValueChanged": true,
+              "pageErrors": [],
+              "failedResponses": []
+            }
+          },
+          "mutated": {
+            "status": "passed",
+            "mutation_events": [
+              {
+                "mutationId": "mutation-7c48b3e946d99eaa",
+                "targetId": "target-c1962e3b880d5873",
+                "url": "https://demowebshop.tricentis.com/blue-jeans",
+                "status": "applied",
+                "detail": ""
+              },
+              {
+                "mutationId": "mutation-7c48b3e946d99eaa",
+                "targetId": "target-c1962e3b880d5873",
+                "url": "https://demowebshop.tricentis.com/blue-jeans",
+                "status": "interacted",
+                "detail": "click"
+              }
+            ],
+            "control_observation": {
+              "supported": true,
+              "pathname": "/blue-jeans",
+              "search": "",
+              "heading": [
+                "Blue Jeans"
+              ],
+              "notifications": [
+                "Quantity should be positive"
+              ],
+              "targetPresent": true,
+              "targetValueChanged": true,
+              "pageErrors": [],
+              "failedResponses": []
+            }
+          },
+          "invalid_reasons": []
+        }
+      ],
+      "exposure_runs": [
+        {
+          "repetition": 1,
+          "order": [
+            "B",
+            "A"
+          ],
+          "conditions": {
+            "B": {
+              "status": "passed",
+              "interacted": true
+            },
+            "A": {
+              "status": "failed",
+              "interacted": false
+            }
+          }
+        }
+      ],
+      "condition_runs": []
+    },
+    {
+      "mutation_id": "mutation-766d2310c5144a4d",
+      "scenario_id": "suite_adicionar_carrinho",
+      "stratum": "E2",
+      "operator": "input_submit_to_button",
+      "control_valid": true,
+      "paired_applicable": true,
+      "invalid_reasons": [],
+      "control_runs": [
+        {
+          "repetition": 1,
+          "original": {
+            "status": "passed",
+            "mutation_events": [
+              {
+                "mutationId": "mutation-766d2310c5144a4d",
+                "targetId": "target-dc71d044e20dec79",
+                "url": "https://demowebshop.tricentis.com/",
+                "status": "marked",
+                "detail": ""
+              },
+              {
+                "mutationId": "mutation-766d2310c5144a4d",
+                "targetId": "target-dc71d044e20dec79",
+                "url": "https://demowebshop.tricentis.com/",
+                "status": "interacted",
+                "detail": "click"
+              }
+            ],
+            "control_observation": {
+              "supported": true,
+              "pathname": "/search",
+              "search": "?q=Blue+Jeans",
+              "heading": [
+                "Search"
+              ],
+              "notifications": [],
+              "targetPresent": false,
+              "targetValueChanged": null,
+              "pageErrors": [],
+              "failedResponses": []
+            }
+          },
+          "mutated": {
+            "status": "passed",
+            "mutation_events": [
+              {
+                "mutationId": "mutation-766d2310c5144a4d",
+                "targetId": "target-dc71d044e20dec79",
+                "url": "https://demowebshop.tricentis.com/",
+                "status": "applied",
+                "detail": ""
+              },
+              {
+                "mutationId": "mutation-766d2310c5144a4d",
+                "targetId": "target-dc71d044e20dec79",
+                "url": "https://demowebshop.tricentis.com/",
+                "status": "interacted",
+                "detail": "click"
+              }
+            ],
+            "control_observation": {
+              "supported": true,
+              "pathname": "/search",
+              "search": "?q=Blue+Jeans",
+              "heading": [
+                "Search"
+              ],
+              "notifications": [],
+              "targetPresent": false,
+              "targetValueChanged": null,
+              "pageErrors": [],
+              "failedResponses": []
+            }
+          },
+          "invalid_reasons": []
+        }
+      ],
+      "exposure_runs": [
+        {
+          "repetition": 1,
+          "order": [
+            "B",
+            "A"
+          ],
+          "conditions": {
+            "B": {
+              "status": "passed",
+              "interacted": true
+            },
+            "A": {
+              "status": "passed",
+              "interacted": true
+            }
+          }
+        }
+      ],
+      "condition_runs": [
+        {
+          "repetition": 1,
+          "order": [
+            "A",
+            "B"
+          ],
+          "outcomes": {
+            "A": "failed",
+            "B": "passed"
+          }
+        }
+      ]
+    },
+    {
+      "mutation_id": "mutation-dd9a3b88732c15c6",
+      "scenario_id": "suite_busca_blue_jeans",
+      "stratum": "E1",
+      "operator": "insert_noninteractive_sibling_before",
+      "control_valid": true,
+      "paired_applicable": true,
+      "invalid_reasons": [],
+      "control_runs": [
+        {
+          "repetition": 1,
+          "original": {
+            "status": "passed",
+            "mutation_events": [
+              {
+                "mutationId": "mutation-dd9a3b88732c15c6",
+                "targetId": "target-6f6fe7e4b2d96a06",
+                "url": "https://demowebshop.tricentis.com/",
+                "status": "marked",
+                "detail": ""
+              },
+              {
+                "mutationId": "mutation-dd9a3b88732c15c6",
+                "targetId": "target-6f6fe7e4b2d96a06",
+                "url": "https://demowebshop.tricentis.com/",
+                "status": "interacted",
+                "detail": "input"
+              }
+            ],
+            "control_observation": {
+              "supported": true,
+              "pathname": "/",
+              "search": "",
+              "heading": [],
+              "notifications": [],
+              "targetPresent": true,
+              "targetValueChanged": true,
+              "pageErrors": [],
+              "failedResponses": []
+            }
+          },
+          "mutated": {
+            "status": "passed",
+            "mutation_events": [
+              {
+                "mutationId": "mutation-dd9a3b88732c15c6",
+                "targetId": "target-6f6fe7e4b2d96a06",
+                "url": "https://demowebshop.tricentis.com/",
+                "status": "applied",
+                "detail": ""
+              },
+              {
+                "mutationId": "mutation-dd9a3b88732c15c6",
+                "targetId": "target-6f6fe7e4b2d96a06",
+                "url": "https://demowebshop.tricentis.com/",
+                "status": "interacted",
+                "detail": "input"
+              }
+            ],
+            "control_observation": {
+              "supported": true,
+              "pathname": "/",
+              "search": "",
+              "heading": [],
+              "notifications": [],
+              "targetPresent": true,
+              "targetValueChanged": true,
+              "pageErrors": [],
+              "failedResponses": []
+            }
+          },
+          "invalid_reasons": []
+        }
+      ],
+      "exposure_runs": [
+        {
+          "repetition": 1,
+          "order": [
+            "A",
+            "B"
+          ],
+          "conditions": {
+            "A": {
+              "status": "passed",
+              "interacted": true
+            },
+            "B": {
+              "status": "passed",
+              "interacted": true
+            }
+          }
+        }
+      ],
+      "condition_runs": [
+        {
+          "repetition": 1,
+          "order": [
+            "A",
+            "B"
+          ],
+          "outcomes": {
+            "A": "passed",
+            "B": "passed"
+          }
+        }
+      ]
+    },
+    {
+      "mutation_id": "mutation-8b066797110a117f",
+      "scenario_id": "suite_busca_blue_jeans",
+      "stratum": "E2",
+      "operator": "input_submit_to_button",
+      "control_valid": true,
+      "paired_applicable": true,
+      "invalid_reasons": [],
+      "control_runs": [
+        {
+          "repetition": 1,
+          "original": {
+            "status": "passed",
+            "mutation_events": [
+              {
+                "mutationId": "mutation-8b066797110a117f",
+                "targetId": "target-b07d4eccac8216ab",
+                "url": "https://demowebshop.tricentis.com/",
+                "status": "marked",
+                "detail": ""
+              },
+              {
+                "mutationId": "mutation-8b066797110a117f",
+                "targetId": "target-b07d4eccac8216ab",
+                "url": "https://demowebshop.tricentis.com/",
+                "status": "interacted",
+                "detail": "click"
+              }
+            ],
+            "control_observation": {
+              "supported": true,
+              "pathname": "/search",
+              "search": "?q=Blue+Jeans",
+              "heading": [
+                "Search"
+              ],
+              "notifications": [],
+              "targetPresent": false,
+              "targetValueChanged": null,
+              "pageErrors": [],
+              "failedResponses": []
+            }
+          },
+          "mutated": {
+            "status": "passed",
+            "mutation_events": [
+              {
+                "mutationId": "mutation-8b066797110a117f",
+                "targetId": "target-b07d4eccac8216ab",
+                "url": "https://demowebshop.tricentis.com/",
+                "status": "applied",
+                "detail": ""
+              },
+              {
+                "mutationId": "mutation-8b066797110a117f",
+                "targetId": "target-b07d4eccac8216ab",
+                "url": "https://demowebshop.tricentis.com/",
+                "status": "interacted",
+                "detail": "click"
+              }
+            ],
+            "control_observation": {
+              "supported": true,
+              "pathname": "/search",
+              "search": "?q=Blue+Jeans",
+              "heading": [
+                "Search"
+              ],
+              "notifications": [],
+              "targetPresent": false,
+              "targetValueChanged": null,
+              "pageErrors": [],
+              "failedResponses": []
+            }
+          },
+          "invalid_reasons": []
+        }
+      ],
+      "exposure_runs": [
+        {
+          "repetition": 1,
+          "order": [
+            "A",
+            "B"
+          ],
+          "conditions": {
+            "A": {
+              "status": "passed",
+              "interacted": true
+            },
+            "B": {
+              "status": "passed",
+              "interacted": true
+            }
+          }
+        }
+      ],
+      "condition_runs": [
+        {
+          "repetition": 1,
+          "order": [
+            "B",
+            "A"
+          ],
+          "outcomes": {
+            "B": "passed",
+            "A": "failed"
+          }
+        }
+      ]
+    },
+    {
+      "mutation_id": "mutation-9eb1e5a299eb758d",
+      "scenario_id": "suite_detalhes_fiction",
+      "stratum": "E1",
+      "operator": "insert_wrapper",
+      "control_valid": true,
+      "paired_applicable": true,
+      "invalid_reasons": [],
+      "control_runs": [
+        {
+          "repetition": 1,
+          "original": {
+            "status": "passed",
+            "mutation_events": [
+              {
+                "mutationId": "mutation-9eb1e5a299eb758d",
+                "targetId": "target-6d39364196ae5545",
+                "url": "https://demowebshop.tricentis.com/",
+                "status": "marked",
+                "detail": ""
+              },
+              {
+                "mutationId": "mutation-9eb1e5a299eb758d",
+                "targetId": "target-6d39364196ae5545",
+                "url": "https://demowebshop.tricentis.com/",
+                "status": "interacted",
+                "detail": "input"
+              }
+            ],
+            "control_observation": {
+              "supported": true,
+              "pathname": "/",
+              "search": "",
+              "heading": [],
+              "notifications": [],
+              "targetPresent": true,
+              "targetValueChanged": true,
+              "pageErrors": [],
+              "failedResponses": []
+            }
+          },
+          "mutated": {
+            "status": "passed",
+            "mutation_events": [
+              {
+                "mutationId": "mutation-9eb1e5a299eb758d",
+                "targetId": "target-6d39364196ae5545",
+                "url": "https://demowebshop.tricentis.com/",
+                "status": "applied",
+                "detail": ""
+              },
+              {
+                "mutationId": "mutation-9eb1e5a299eb758d",
+                "targetId": "target-6d39364196ae5545",
+                "url": "https://demowebshop.tricentis.com/",
+                "status": "interacted",
+                "detail": "input"
+              }
+            ],
+            "control_observation": {
+              "supported": true,
+              "pathname": "/",
+              "search": "",
+              "heading": [],
+              "notifications": [],
+              "targetPresent": true,
+              "targetValueChanged": true,
+              "pageErrors": [],
+              "failedResponses": []
+            }
+          },
+          "invalid_reasons": []
+        }
+      ],
+      "exposure_runs": [
+        {
+          "repetition": 1,
+          "order": [
+            "A",
+            "B"
+          ],
+          "conditions": {
+            "A": {
+              "status": "passed",
+              "interacted": true
+            },
+            "B": {
+              "status": "passed",
+              "interacted": true
+            }
+          }
+        }
+      ],
+      "condition_runs": [
+        {
+          "repetition": 1,
+          "order": [
+            "A",
+            "B"
+          ],
+          "outcomes": {
+            "A": "passed",
+            "B": "passed"
+          }
+        }
+      ]
+    },
+    {
+      "mutation_id": "mutation-361a9103a5072567",
+      "scenario_id": "suite_detalhes_fiction",
+      "stratum": "E2",
+      "operator": "input_submit_to_button",
+      "control_valid": true,
+      "paired_applicable": true,
+      "invalid_reasons": [],
+      "control_runs": [
+        {
+          "repetition": 1,
+          "original": {
+            "status": "passed",
+            "mutation_events": [
+              {
+                "mutationId": "mutation-361a9103a5072567",
+                "targetId": "target-ccee1138025fac43",
+                "url": "https://demowebshop.tricentis.com/",
+                "status": "marked",
+                "detail": ""
+              },
+              {
+                "mutationId": "mutation-361a9103a5072567",
+                "targetId": "target-ccee1138025fac43",
+                "url": "https://demowebshop.tricentis.com/",
+                "status": "interacted",
+                "detail": "click"
+              }
+            ],
+            "control_observation": {
+              "supported": true,
+              "pathname": "/search",
+              "search": "?q=Blue+Jeans",
+              "heading": [
+                "Search"
+              ],
+              "notifications": [],
+              "targetPresent": false,
+              "targetValueChanged": null,
+              "pageErrors": [],
+              "failedResponses": []
+            }
+          },
+          "mutated": {
+            "status": "passed",
+            "mutation_events": [
+              {
+                "mutationId": "mutation-361a9103a5072567",
+                "targetId": "target-ccee1138025fac43",
+                "url": "https://demowebshop.tricentis.com/",
+                "status": "applied",
+                "detail": ""
+              },
+              {
+                "mutationId": "mutation-361a9103a5072567",
+                "targetId": "target-ccee1138025fac43",
+                "url": "https://demowebshop.tricentis.com/",
+                "status": "interacted",
+                "detail": "click"
+              }
+            ],
+            "control_observation": {
+              "supported": true,
+              "pathname": "/search",
+              "search": "?q=Blue+Jeans",
+              "heading": [
+                "Search"
+              ],
+              "notifications": [],
+              "targetPresent": false,
+              "targetValueChanged": null,
+              "pageErrors": [],
+              "failedResponses": []
+            }
+          },
+          "invalid_reasons": []
+        }
+      ],
+      "exposure_runs": [
+        {
+          "repetition": 1,
+          "order": [
+            "B",
+            "A"
+          ],
+          "conditions": {
+            "B": {
+              "status": "passed",
+              "interacted": true
+            },
+            "A": {
+              "status": "passed",
+              "interacted": true
+            }
+          }
+        }
+      ],
+      "condition_runs": [
+        {
+          "repetition": 1,
+          "order": [
+            "B",
+            "A"
+          ],
+          "outcomes": {
+            "B": "passed",
+            "A": "failed"
+          }
+        }
+      ]
+    },
+    {
+      "mutation_id": "mutation-0631d1b7c50168dd",
+      "scenario_id": "suite_limpar_carrinho",
+      "stratum": "E1",
+      "operator": "insert_noninteractive_sibling_before",
+      "control_valid": true,
+      "paired_applicable": false,
+      "invalid_reasons": [],
+      "control_runs": [
+        {
+          "repetition": 1,
+          "original": {
+            "status": "passed",
+            "mutation_events": [
+              {
+                "mutationId": "mutation-0631d1b7c50168dd",
+                "targetId": "target-6e3ad5d74291ebba",
+                "url": "https://demowebshop.tricentis.com/blue-jeans",
+                "status": "marked",
+                "detail": ""
+              },
+              {
+                "mutationId": "mutation-0631d1b7c50168dd",
+                "targetId": "target-6e3ad5d74291ebba",
+                "url": "https://demowebshop.tricentis.com/blue-jeans",
+                "status": "interacted",
+                "detail": "click"
+              }
+            ],
+            "control_observation": {
+              "supported": true,
+              "pathname": "/blue-jeans",
+              "search": "",
+              "heading": [
+                "Blue Jeans"
+              ],
+              "notifications": [
+                "Quantity should be positive"
+              ],
+              "targetPresent": true,
+              "targetValueChanged": true,
+              "pageErrors": [],
+              "failedResponses": []
+            }
+          },
+          "mutated": {
+            "status": "passed",
+            "mutation_events": [
+              {
+                "mutationId": "mutation-0631d1b7c50168dd",
+                "targetId": "target-6e3ad5d74291ebba",
+                "url": "https://demowebshop.tricentis.com/blue-jeans",
+                "status": "applied",
+                "detail": ""
+              },
+              {
+                "mutationId": "mutation-0631d1b7c50168dd",
+                "targetId": "target-6e3ad5d74291ebba",
+                "url": "https://demowebshop.tricentis.com/blue-jeans",
+                "status": "interacted",
+                "detail": "click"
+              }
+            ],
+            "control_observation": {
+              "supported": true,
+              "pathname": "/blue-jeans",
+              "search": "",
+              "heading": [
+                "Blue Jeans"
+              ],
+              "notifications": [
+                "Quantity should be positive"
+              ],
+              "targetPresent": true,
+              "targetValueChanged": true,
+              "pageErrors": [],
+              "failedResponses": []
+            }
+          },
+          "invalid_reasons": []
+        }
+      ],
+      "exposure_runs": [
+        {
+          "repetition": 1,
+          "order": [
+            "B",
+            "A"
+          ],
+          "conditions": {
+            "B": {
+              "status": "passed",
+              "interacted": true
+            },
+            "A": {
+              "status": "failed",
+              "interacted": false
+            }
+          }
+        }
+      ],
+      "condition_runs": []
+    },
+    {
+      "mutation_id": "mutation-dfcce8f46a857a7c",
+      "scenario_id": "suite_limpar_carrinho",
+      "stratum": "E2",
+      "operator": "rename_id",
+      "control_valid": true,
+      "paired_applicable": false,
+      "invalid_reasons": [],
+      "control_runs": [
+        {
+          "repetition": 1,
+          "original": {
+            "status": "passed",
+            "mutation_events": [
+              {
+                "mutationId": "mutation-dfcce8f46a857a7c",
+                "targetId": "target-6e3ad5d74291ebba",
+                "url": "https://demowebshop.tricentis.com/blue-jeans",
+                "status": "marked",
+                "detail": ""
+              },
+              {
+                "mutationId": "mutation-dfcce8f46a857a7c",
+                "targetId": "target-6e3ad5d74291ebba",
+                "url": "https://demowebshop.tricentis.com/blue-jeans",
+                "status": "interacted",
+                "detail": "click"
+              }
+            ],
+            "control_observation": {
+              "supported": true,
+              "pathname": "/blue-jeans",
+              "search": "",
+              "heading": [
+                "Blue Jeans"
+              ],
+              "notifications": [
+                "Quantity should be positive"
+              ],
+              "targetPresent": true,
+              "targetValueChanged": true,
+              "pageErrors": [],
+              "failedResponses": []
+            }
+          },
+          "mutated": {
+            "status": "passed",
+            "mutation_events": [
+              {
+                "mutationId": "mutation-dfcce8f46a857a7c",
+                "targetId": "target-6e3ad5d74291ebba",
+                "url": "https://demowebshop.tricentis.com/blue-jeans",
+                "status": "applied",
+                "detail": ""
+              },
+              {
+                "mutationId": "mutation-dfcce8f46a857a7c",
+                "targetId": "target-6e3ad5d74291ebba",
+                "url": "https://demowebshop.tricentis.com/blue-jeans",
+                "status": "interacted",
+                "detail": "click"
+              }
+            ],
+            "control_observation": {
+              "supported": true,
+              "pathname": "/blue-jeans",
+              "search": "",
+              "heading": [
+                "Blue Jeans"
+              ],
+              "notifications": [
+                "Quantity should be positive"
+              ],
+              "targetPresent": true,
+              "targetValueChanged": true,
+              "pageErrors": [],
+              "failedResponses": []
+            }
+          },
+          "invalid_reasons": []
+        }
+      ],
+      "exposure_runs": [
+        {
+          "repetition": 1,
+          "order": [
+            "A",
+            "B"
+          ],
+          "conditions": {
+            "A": {
+              "status": "failed",
+              "interacted": false
+            },
+            "B": {
+              "status": "passed",
+              "interacted": true
+            }
+          }
+        }
+      ],
+      "condition_runs": []
+    }
+  ]
+}

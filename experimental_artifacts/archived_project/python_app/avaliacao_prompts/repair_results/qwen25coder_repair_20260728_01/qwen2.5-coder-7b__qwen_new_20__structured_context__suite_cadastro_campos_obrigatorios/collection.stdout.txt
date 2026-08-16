@@ -1,0 +1,3 @@
+Listing tests:
+  suite_cadastro_campos_obrigatorios.spec.ts:4:7 › Suite Cadastro Campos Obrigatorios › The user accesses the Register page of the Demo Web Shop and submits the form with empty fields
+Total: 1 test in 1 file

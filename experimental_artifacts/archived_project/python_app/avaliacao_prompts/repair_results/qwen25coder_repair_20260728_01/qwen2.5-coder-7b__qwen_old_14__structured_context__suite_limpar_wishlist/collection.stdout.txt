@@ -1,0 +1,3 @@
+Listing tests:
+  suite_limpar_wishlist.spec.ts:9:7 › Suite Limpar Wishlist › should clear the wishlist
+Total: 1 test in 1 file

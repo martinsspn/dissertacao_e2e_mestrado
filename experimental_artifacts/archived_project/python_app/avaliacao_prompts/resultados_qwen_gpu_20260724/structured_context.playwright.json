@@ -1,0 +1,1210 @@
+{
+  "config": {
+    "argv": [
+      "/usr/bin/node",
+      "/home/martinsspn/dissertacao_e2e_semantico/node_modules/.bin/playwright",
+      "test",
+      "--config=playwright.config.ts",
+      "--reporter=json"
+    ],
+    "configFile": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/playwright.config.ts",
+    "rootDir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/tmp/avaliacao-prompts-playwright",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 20000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.61.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "fluxo_computadores_desktops.spec.ts",
+      "file": "fluxo_computadores_desktops.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Fluxo Computadores Desktops",
+          "file": "fluxo_computadores_desktops.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "The user must access the Digital downloads category, view the available digital items, and validate that the digital downloads page is visible.",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 20000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 3602,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('a').filter({ hasText: 'Digital downloads' })\nExpected: visible\nError: strict mode violation: locator('a').filter({ hasText: 'Digital downloads' }) resolved to 3 elements:\n    1) <a href=\"/digital-downloads\">Digital downloads↵        </a> aka getByRole('link', { name: 'Digital downloads' }).first()\n    2) <a href=\"/digital-downloads\">Digital downloads↵        </a> aka getByText('Digital downloads').nth(1)\n    3) <a href=\"/digital-downloads\">Digital downloads↵        </a> aka getByRole('link', { name: 'Digital downloads' }).nth(1)\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 7000ms\u001b[22m\n\u001b[2m  - waiting for locator('a').filter({ hasText: 'Digital downloads' })\u001b[22m\n",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('a').filter({ hasText: 'Digital downloads' })\nExpected: visible\nError: strict mode violation: locator('a').filter({ hasText: 'Digital downloads' }) resolved to 3 elements:\n    1) <a href=\"/digital-downloads\">Digital downloads↵        </a> aka getByRole('link', { name: 'Digital downloads' }).first()\n    2) <a href=\"/digital-downloads\">Digital downloads↵        </a> aka getByText('Digital downloads').nth(1)\n    3) <a href=\"/digital-downloads\">Digital downloads↵        </a> aka getByRole('link', { name: 'Digital downloads' }).nth(1)\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 7000ms\u001b[22m\n\u001b[2m  - waiting for locator('a').filter({ hasText: 'Digital downloads' })\u001b[22m\n\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context/fluxo_computadores_desktops.spec.ts:9:40",
+                        "location": {
+                          "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context/fluxo_computadores_desktops.spec.ts",
+                          "column": 40,
+                          "line": 9
+                        },
+                        "snippet": "   7 |     // Etapa 1 (R1)\n   8 |     const digitalDownloadsLink = page.locator('a', { hasText: 'Digital downloads' });\n>  9 |     await expect(digitalDownloadsLink).toBeVisible();\n     |                                        ^\n  10 |     await digitalDownloadsLink.click();\n  11 |\n  12 |     await expect(page).toHaveURL('https://demowebshop.tricentis.com/digital-downloads');"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context/fluxo_computadores_desktops.spec.ts",
+                            "column": 40,
+                            "line": 9
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('a').filter({ hasText: 'Digital downloads' })\nExpected: visible\nError: strict mode violation: locator('a').filter({ hasText: 'Digital downloads' }) resolved to 3 elements:\n    1) <a href=\"/digital-downloads\">Digital downloads↵        </a> aka getByRole('link', { name: 'Digital downloads' }).first()\n    2) <a href=\"/digital-downloads\">Digital downloads↵        </a> aka getByText('Digital downloads').nth(1)\n    3) <a href=\"/digital-downloads\">Digital downloads↵        </a> aka getByRole('link', { name: 'Digital downloads' }).nth(1)\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 7000ms\u001b[22m\n\u001b[2m  - waiting for locator('a').filter({ hasText: 'Digital downloads' })\u001b[22m\n\n\n   7 |     // Etapa 1 (R1)\n   8 |     const digitalDownloadsLink = page.locator('a', { hasText: 'Digital downloads' });\n>  9 |     await expect(digitalDownloadsLink).toBeVisible();\n     |                                        ^\n  10 |     await digitalDownloadsLink.click();\n  11 |\n  12 |     await expect(page).toHaveURL('https://demowebshop.tricentis.com/digital-downloads');\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context/fluxo_computadores_desktops.spec.ts:9:40"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-24T18:57:20.260Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/tmp/avaliacao-prompts-playwright/fluxo_computadores_desktop-2fbba--downloads-page-is-visible-/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context/fluxo_computadores_desktops.spec.ts",
+                        "column": 40,
+                        "line": 9
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "5ffdfa1a8a18bafbf733-e752a2fb921e011c485a",
+              "file": "fluxo_computadores_desktops.spec.ts",
+              "line": 4,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "suite_adicionar_carrinho.spec.ts",
+      "file": "suite_adicionar_carrinho.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Suite Adicionar Carrinho",
+          "file": "suite_adicionar_carrinho.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Adicionar Blue Jeans ao carrinho",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 20000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 3333,
+                      "error": {
+                        "message": "Error: page.click: SyntaxError: Failed to execute 'querySelectorAll' on 'Document': 'role_name:Search' is not a valid selector.\n    at query (<anonymous>:5448:41)\n    at <anonymous>:5458:7\n    at SelectorEvaluatorImpl._cached (<anonymous>:5235:20)\n    at SelectorEvaluatorImpl._queryCSS (<anonymous>:5445:17)\n    at SelectorEvaluatorImpl._querySimple (<anonymous>:5325:19)\n    at <anonymous>:5273:29\n    at SelectorEvaluatorImpl._cached (<anonymous>:5235:20)\n    at SelectorEvaluatorImpl.query (<anonymous>:5266:19)\n    at Object.query (<anonymous>:5480:44)\n    at <anonymous>:5438:21\nCall log:\n\u001b[2m  - waiting for locator('role_name:Search')\u001b[22m\n",
+                        "stack": "Error: page.click: SyntaxError: Failed to execute 'querySelectorAll' on 'Document': 'role_name:Search' is not a valid selector.\n    at query (<anonymous>:5448:41)\n    at <anonymous>:5458:7\n    at SelectorEvaluatorImpl._cached (<anonymous>:5235:20)\n    at SelectorEvaluatorImpl._queryCSS (<anonymous>:5445:17)\n    at SelectorEvaluatorImpl._querySimple (<anonymous>:5325:19)\n    at <anonymous>:5273:29\n    at SelectorEvaluatorImpl._cached (<anonymous>:5235:20)\n    at SelectorEvaluatorImpl.query (<anonymous>:5266:19)\n    at Object.query (<anonymous>:5480:44)\n    at <anonymous>:5438:21\nCall log:\n\u001b[2m  - waiting for locator('role_name:Search')\u001b[22m\n\n    at query (<anonymous>:5448:41)\n    at <anonymous>:5458:7\n    at SelectorEvaluatorImpl._cached (<anonymous>:5235:20)\n    at SelectorEvaluatorImpl._queryCSS (<anonymous>:5445:17)\n    at SelectorEvaluatorImpl._querySimple (<anonymous>:5325:19)\n    at <anonymous>:5273:29\n    at SelectorEvaluatorImpl._cached (<anonymous>:5235:20)\n    at SelectorEvaluatorImpl.query (<anonymous>:5266:19)\n    at Object.query (<anonymous>:5480:44)\n    at <anonymous>:5438:21\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context/suite_adicionar_carrinho.spec.ts:9:16",
+                        "location": {
+                          "file": "<anonymous>",
+                          "column": 41,
+                          "line": 5448
+                        }
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "<anonymous>",
+                            "column": 41,
+                            "line": 5448
+                          },
+                          "message": "Error: page.click: SyntaxError: Failed to execute 'querySelectorAll' on 'Document': 'role_name:Search' is not a valid selector.\n    at query (<anonymous>:5448:41)\n    at <anonymous>:5458:7\n    at SelectorEvaluatorImpl._cached (<anonymous>:5235:20)\n    at SelectorEvaluatorImpl._queryCSS (<anonymous>:5445:17)\n    at SelectorEvaluatorImpl._querySimple (<anonymous>:5325:19)\n    at <anonymous>:5273:29\n    at SelectorEvaluatorImpl._cached (<anonymous>:5235:20)\n    at SelectorEvaluatorImpl.query (<anonymous>:5266:19)\n    at Object.query (<anonymous>:5480:44)\n    at <anonymous>:5438:21\nCall log:\n\u001b[2m  - waiting for locator('role_name:Search')\u001b[22m\n\n    at query (<anonymous>:5448:41)\n    at <anonymous>:5458:7\n    at SelectorEvaluatorImpl._cached (<anonymous>:5235:20)\n    at SelectorEvaluatorImpl._queryCSS (<anonymous>:5445:17)\n    at SelectorEvaluatorImpl._querySimple (<anonymous>:5325:19)\n    at <anonymous>:5273:29\n    at SelectorEvaluatorImpl._cached (<anonymous>:5235:20)\n    at SelectorEvaluatorImpl.query (<anonymous>:5266:19)\n    at Object.query (<anonymous>:5480:44)\n    at <anonymous>:5438:21\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context/suite_adicionar_carrinho.spec.ts:9:16"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-24T18:57:28.452Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/tmp/avaliacao-prompts-playwright/suite_adicionar_carrinho-S-413e0-onar-Blue-Jeans-ao-carrinho/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "<anonymous>",
+                        "column": 41,
+                        "line": 5448
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "17be0f5b16c4113dd3d5-18dc16c2c550311fea97",
+              "file": "suite_adicionar_carrinho.spec.ts",
+              "line": 4,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "suite_adicionar_wishlist.spec.ts",
+      "file": "suite_adicionar_wishlist.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Suite Adicionar Wishlist",
+          "file": "suite_adicionar_wishlist.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Adicionar produto à wishlist",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 20000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 3758,
+                      "error": {
+                        "message": "Error: page.click: SyntaxError: Failed to execute 'querySelectorAll' on 'Document': 'role_name:Search' is not a valid selector.\n    at query (<anonymous>:5448:41)\n    at <anonymous>:5458:7\n    at SelectorEvaluatorImpl._cached (<anonymous>:5235:20)\n    at SelectorEvaluatorImpl._queryCSS (<anonymous>:5445:17)\n    at SelectorEvaluatorImpl._querySimple (<anonymous>:5325:19)\n    at <anonymous>:5273:29\n    at SelectorEvaluatorImpl._cached (<anonymous>:5235:20)\n    at SelectorEvaluatorImpl.query (<anonymous>:5266:19)\n    at Object.query (<anonymous>:5480:44)\n    at <anonymous>:5438:21\nCall log:\n\u001b[2m  - waiting for locator('role_name:Search')\u001b[22m\n",
+                        "stack": "Error: page.click: SyntaxError: Failed to execute 'querySelectorAll' on 'Document': 'role_name:Search' is not a valid selector.\n    at query (<anonymous>:5448:41)\n    at <anonymous>:5458:7\n    at SelectorEvaluatorImpl._cached (<anonymous>:5235:20)\n    at SelectorEvaluatorImpl._queryCSS (<anonymous>:5445:17)\n    at SelectorEvaluatorImpl._querySimple (<anonymous>:5325:19)\n    at <anonymous>:5273:29\n    at SelectorEvaluatorImpl._cached (<anonymous>:5235:20)\n    at SelectorEvaluatorImpl.query (<anonymous>:5266:19)\n    at Object.query (<anonymous>:5480:44)\n    at <anonymous>:5438:21\nCall log:\n\u001b[2m  - waiting for locator('role_name:Search')\u001b[22m\n\n    at query (<anonymous>:5448:41)\n    at <anonymous>:5458:7\n    at SelectorEvaluatorImpl._cached (<anonymous>:5235:20)\n    at SelectorEvaluatorImpl._queryCSS (<anonymous>:5445:17)\n    at SelectorEvaluatorImpl._querySimple (<anonymous>:5325:19)\n    at <anonymous>:5273:29\n    at SelectorEvaluatorImpl._cached (<anonymous>:5235:20)\n    at SelectorEvaluatorImpl.query (<anonymous>:5266:19)\n    at Object.query (<anonymous>:5480:44)\n    at <anonymous>:5438:21\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context/suite_adicionar_wishlist.spec.ts:10:16",
+                        "location": {
+                          "file": "<anonymous>",
+                          "column": 41,
+                          "line": 5448
+                        }
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "<anonymous>",
+                            "column": 41,
+                            "line": 5448
+                          },
+                          "message": "Error: page.click: SyntaxError: Failed to execute 'querySelectorAll' on 'Document': 'role_name:Search' is not a valid selector.\n    at query (<anonymous>:5448:41)\n    at <anonymous>:5458:7\n    at SelectorEvaluatorImpl._cached (<anonymous>:5235:20)\n    at SelectorEvaluatorImpl._queryCSS (<anonymous>:5445:17)\n    at SelectorEvaluatorImpl._querySimple (<anonymous>:5325:19)\n    at <anonymous>:5273:29\n    at SelectorEvaluatorImpl._cached (<anonymous>:5235:20)\n    at SelectorEvaluatorImpl.query (<anonymous>:5266:19)\n    at Object.query (<anonymous>:5480:44)\n    at <anonymous>:5438:21\nCall log:\n\u001b[2m  - waiting for locator('role_name:Search')\u001b[22m\n\n    at query (<anonymous>:5448:41)\n    at <anonymous>:5458:7\n    at SelectorEvaluatorImpl._cached (<anonymous>:5235:20)\n    at SelectorEvaluatorImpl._queryCSS (<anonymous>:5445:17)\n    at SelectorEvaluatorImpl._querySimple (<anonymous>:5325:19)\n    at <anonymous>:5273:29\n    at SelectorEvaluatorImpl._cached (<anonymous>:5235:20)\n    at SelectorEvaluatorImpl.query (<anonymous>:5266:19)\n    at Object.query (<anonymous>:5480:44)\n    at <anonymous>:5438:21\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context/suite_adicionar_wishlist.spec.ts:10:16"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-24T18:57:33.336Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/tmp/avaliacao-prompts-playwright/suite_adicionar_wishlist-S-e647d-dicionar-produto-à-wishlist/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "<anonymous>",
+                        "column": 41,
+                        "line": 5448
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "098796e0f623f352e24c-1b24ca72555176bba561",
+              "file": "suite_adicionar_wishlist.spec.ts",
+              "line": 4,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "suite_busca_blue_jeans.spec.ts",
+      "file": "suite_busca_blue_jeans.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Suite Busca Blue Jeans",
+          "file": "suite_busca_blue_jeans.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should search for Blue Jeans and open its details page",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 20000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 13273,
+                      "error": {
+                        "message": "TimeoutError: locator.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('role=Search')\u001b[22m\n",
+                        "stack": "TimeoutError: locator.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('role=Search')\u001b[22m\n\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context/suite_busca_blue_jeans.spec.ts:11:24",
+                        "location": {
+                          "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context/suite_busca_blue_jeans.spec.ts",
+                          "column": 24,
+                          "line": 11
+                        },
+                        "snippet": "   9 |     await searchInput.fill('Blue Jeans');\n  10 |     const searchButton = page.locator('role=Search');\n> 11 |     await searchButton.click();\n     |                        ^\n  12 |\n  13 |     // Verifica se a URL contém o termo de pesquisa\n  14 |     await expect(page).toHaveURL(/blue-jeans/);"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context/suite_busca_blue_jeans.spec.ts",
+                            "column": 24,
+                            "line": 11
+                          },
+                          "message": "TimeoutError: locator.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('role=Search')\u001b[22m\n\n\n   9 |     await searchInput.fill('Blue Jeans');\n  10 |     const searchButton = page.locator('role=Search');\n> 11 |     await searchButton.click();\n     |                        ^\n  12 |\n  13 |     // Verifica se a URL contém o termo de pesquisa\n  14 |     await expect(page).toHaveURL(/blue-jeans/);\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context/suite_busca_blue_jeans.spec.ts:11:24"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-24T18:57:38.540Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/tmp/avaliacao-prompts-playwright/suite_busca_blue_jeans-Sui-97f7b-s-and-open-its-details-page/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context/suite_busca_blue_jeans.spec.ts",
+                        "column": 24,
+                        "line": 11
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "c2d5174642ec155dc900-200e387a64c887b54cc2",
+              "file": "suite_busca_blue_jeans.spec.ts",
+              "line": 4,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "suite_checkout_blue_jeans.spec.ts",
+      "file": "suite_checkout_blue_jeans.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Suite Checkout Blue Jeans",
+          "file": "suite_checkout_blue_jeans.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should complete the checkout process for blue jeans",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 20000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 3503,
+                      "error": {
+                        "message": "Error: page.click: SyntaxError: Failed to execute 'querySelectorAll' on 'Document': 'role_name:Search' is not a valid selector.\n    at query (<anonymous>:5448:41)\n    at <anonymous>:5458:7\n    at SelectorEvaluatorImpl._cached (<anonymous>:5235:20)\n    at SelectorEvaluatorImpl._queryCSS (<anonymous>:5445:17)\n    at SelectorEvaluatorImpl._querySimple (<anonymous>:5325:19)\n    at <anonymous>:5273:29\n    at SelectorEvaluatorImpl._cached (<anonymous>:5235:20)\n    at SelectorEvaluatorImpl.query (<anonymous>:5266:19)\n    at Object.query (<anonymous>:5480:44)\n    at <anonymous>:5438:21\nCall log:\n\u001b[2m  - waiting for locator('role_name:Search')\u001b[22m\n",
+                        "stack": "Error: page.click: SyntaxError: Failed to execute 'querySelectorAll' on 'Document': 'role_name:Search' is not a valid selector.\n    at query (<anonymous>:5448:41)\n    at <anonymous>:5458:7\n    at SelectorEvaluatorImpl._cached (<anonymous>:5235:20)\n    at SelectorEvaluatorImpl._queryCSS (<anonymous>:5445:17)\n    at SelectorEvaluatorImpl._querySimple (<anonymous>:5325:19)\n    at <anonymous>:5273:29\n    at SelectorEvaluatorImpl._cached (<anonymous>:5235:20)\n    at SelectorEvaluatorImpl.query (<anonymous>:5266:19)\n    at Object.query (<anonymous>:5480:44)\n    at <anonymous>:5438:21\nCall log:\n\u001b[2m  - waiting for locator('role_name:Search')\u001b[22m\n\n    at query (<anonymous>:5448:41)\n    at <anonymous>:5458:7\n    at SelectorEvaluatorImpl._cached (<anonymous>:5235:20)\n    at SelectorEvaluatorImpl._queryCSS (<anonymous>:5445:17)\n    at SelectorEvaluatorImpl._querySimple (<anonymous>:5325:19)\n    at <anonymous>:5273:29\n    at SelectorEvaluatorImpl._cached (<anonymous>:5235:20)\n    at SelectorEvaluatorImpl.query (<anonymous>:5266:19)\n    at Object.query (<anonymous>:5480:44)\n    at <anonymous>:5438:21\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context/suite_checkout_blue_jeans.spec.ts:9:16",
+                        "location": {
+                          "file": "<anonymous>",
+                          "column": 41,
+                          "line": 5448
+                        }
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "<anonymous>",
+                            "column": 41,
+                            "line": 5448
+                          },
+                          "message": "Error: page.click: SyntaxError: Failed to execute 'querySelectorAll' on 'Document': 'role_name:Search' is not a valid selector.\n    at query (<anonymous>:5448:41)\n    at <anonymous>:5458:7\n    at SelectorEvaluatorImpl._cached (<anonymous>:5235:20)\n    at SelectorEvaluatorImpl._queryCSS (<anonymous>:5445:17)\n    at SelectorEvaluatorImpl._querySimple (<anonymous>:5325:19)\n    at <anonymous>:5273:29\n    at SelectorEvaluatorImpl._cached (<anonymous>:5235:20)\n    at SelectorEvaluatorImpl.query (<anonymous>:5266:19)\n    at Object.query (<anonymous>:5480:44)\n    at <anonymous>:5438:21\nCall log:\n\u001b[2m  - waiting for locator('role_name:Search')\u001b[22m\n\n    at query (<anonymous>:5448:41)\n    at <anonymous>:5458:7\n    at SelectorEvaluatorImpl._cached (<anonymous>:5235:20)\n    at SelectorEvaluatorImpl._queryCSS (<anonymous>:5445:17)\n    at SelectorEvaluatorImpl._querySimple (<anonymous>:5325:19)\n    at <anonymous>:5273:29\n    at SelectorEvaluatorImpl._cached (<anonymous>:5235:20)\n    at SelectorEvaluatorImpl.query (<anonymous>:5266:19)\n    at Object.query (<anonymous>:5480:44)\n    at <anonymous>:5438:21\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context/suite_checkout_blue_jeans.spec.ts:9:16"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-24T18:57:53.195Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/tmp/avaliacao-prompts-playwright/suite_checkout_blue_jeans--bc7ac-kout-process-for-blue-jeans/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "<anonymous>",
+                        "column": 41,
+                        "line": 5448
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "1a70699396ff8c88bdf2-a59b473ef33b87e0d1c6",
+              "file": "suite_checkout_blue_jeans.spec.ts",
+              "line": 4,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "suite_configurar_desktop.spec.ts",
+      "file": "suite_configurar_desktop.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Suite Configurar Desktop",
+          "file": "suite_configurar_desktop.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should configure and add desktop to cart",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 20000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 5,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 15880,
+                      "error": {
+                        "message": "TimeoutError: page.selectOption: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#product_attribute_1')\u001b[22m\n",
+                        "stack": "TimeoutError: page.selectOption: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#product_attribute_1')\u001b[22m\n\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context/suite_configurar_desktop.spec.ts:19:16",
+                        "location": {
+                          "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context/suite_configurar_desktop.spec.ts",
+                          "column": 16,
+                          "line": 19
+                        },
+                        "snippet": "  17 |\n  18 |     // Etapa 3\n> 19 |     await page.selectOption('#product_attribute_1', 'Fast');\n     |                ^\n  20 |     await page.fill('#product_attribute_2', '4');\n  21 |     await page.selectOption('#product_attribute_3', '400 GB');\n  22 |     await page.click('text=Office Suite');"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context/suite_configurar_desktop.spec.ts",
+                            "column": 16,
+                            "line": 19
+                          },
+                          "message": "TimeoutError: page.selectOption: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#product_attribute_1')\u001b[22m\n\n\n  17 |\n  18 |     // Etapa 3\n> 19 |     await page.selectOption('#product_attribute_1', 'Fast');\n     |                ^\n  20 |     await page.fill('#product_attribute_2', '4');\n  21 |     await page.selectOption('#product_attribute_3', '400 GB');\n  22 |     await page.click('text=Office Suite');\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context/suite_configurar_desktop.spec.ts:19:16"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-24T18:58:01.083Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/tmp/avaliacao-prompts-playwright/suite_configurar_desktop-S-a4210-ure-and-add-desktop-to-cart/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context/suite_configurar_desktop.spec.ts",
+                        "column": 16,
+                        "line": 19
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "ded8edc9abcd61cf5d5b-509ab592ca3edc730945",
+              "file": "suite_configurar_desktop.spec.ts",
+              "line": 4,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "suite_detalhes_fiction.spec.ts",
+      "file": "suite_detalhes_fiction.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Suite Detalhes Fiction",
+          "file": "suite_detalhes_fiction.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "The user searches for the product Fiction in the Search store field and opens its details page",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 20000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 6,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 13753,
+                      "error": {
+                        "message": "TimeoutError: locator.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('role=Search')\u001b[22m\n",
+                        "stack": "TimeoutError: locator.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('role=Search')\u001b[22m\n\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context/suite_detalhes_fiction.spec.ts:11:24",
+                        "location": {
+                          "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context/suite_detalhes_fiction.spec.ts",
+                          "column": 24,
+                          "line": 11
+                        },
+                        "snippet": "   9 |     await searchInput.fill('Fiction');\n  10 |     const searchButton = page.locator('role=Search');\n> 11 |     await searchButton.click();\n     |                        ^\n  12 |\n  13 |     // Verifica se a URL contém '/fiction'\n  14 |     await expect(page).toHaveURL(/\\/fiction/);"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context/suite_detalhes_fiction.spec.ts",
+                            "column": 24,
+                            "line": 11
+                          },
+                          "message": "TimeoutError: locator.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('role=Search')\u001b[22m\n\n\n   9 |     await searchInput.fill('Fiction');\n  10 |     const searchButton = page.locator('role=Search');\n> 11 |     await searchButton.click();\n     |                        ^\n  12 |\n  13 |     // Verifica se a URL contém '/fiction'\n  14 |     await expect(page).toHaveURL(/\\/fiction/);\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context/suite_detalhes_fiction.spec.ts:11:24"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-24T18:58:18.342Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/tmp/avaliacao-prompts-playwright/suite_detalhes_fiction-Sui-7dac8--and-opens-its-details-page/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context/suite_detalhes_fiction.spec.ts",
+                        "column": 24,
+                        "line": 11
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "179492ad1a70311acabe-b7d549edd4bab8880e5c",
+              "file": "suite_detalhes_fiction.spec.ts",
+              "line": 4,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "suite_limpar_carrinho.spec.ts",
+      "file": "suite_limpar_carrinho.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Suite Limpar Carrinho",
+          "file": "suite_limpar_carrinho.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should clear the cart after removing an item",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 20000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 7,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 14746,
+                      "error": {
+                        "message": "TimeoutError: page.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('input[name=\"removefromcart_36\"]')\u001b[22m\n",
+                        "stack": "TimeoutError: page.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('input[name=\"removefromcart_36\"]')\u001b[22m\n\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context/suite_limpar_carrinho.spec.ts:15:16",
+                        "location": {
+                          "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context/suite_limpar_carrinho.spec.ts",
+                          "column": 16,
+                          "line": 15
+                        },
+                        "snippet": "  13 |\n  14 |     // Etapa 3: Marcar Blue Jeans para remoção\n> 15 |     await page.click('input[name=\"removefromcart_36\"]');\n     |                ^\n  16 |\n  17 |     // Etapa 4: Selecionar Atualizar carrinho\n  18 |     await page.click('button[name=\"updatecart\"]');"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context/suite_limpar_carrinho.spec.ts",
+                            "column": 16,
+                            "line": 15
+                          },
+                          "message": "TimeoutError: page.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('input[name=\"removefromcart_36\"]')\u001b[22m\n\n\n  13 |\n  14 |     // Etapa 3: Marcar Blue Jeans para remoção\n> 15 |     await page.click('input[name=\"removefromcart_36\"]');\n     |                ^\n  16 |\n  17 |     // Etapa 4: Selecionar Atualizar carrinho\n  18 |     await page.click('button[name=\"updatecart\"]');\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context/suite_limpar_carrinho.spec.ts:15:16"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-24T18:58:36.428Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/tmp/avaliacao-prompts-playwright/suite_limpar_carrinho-Suit-372fa-cart-after-removing-an-item/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context/suite_limpar_carrinho.spec.ts",
+                        "column": 16,
+                        "line": 15
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "1ab8afb3fceab06e4dc3-7f45bf15bf630313371c",
+              "file": "suite_limpar_carrinho.spec.ts",
+              "line": 4,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "suite_limpar_wishlist.spec.ts",
+      "file": "suite_limpar_wishlist.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Suite Limpar Wishlist",
+          "file": "suite_limpar_wishlist.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should clear the wishlist",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 20000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 8,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 13699,
+                      "error": {
+                        "message": "TimeoutError: locator.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('.product-item-name').filter({ hasText: 'Camera' })\u001b[22m\n",
+                        "stack": "TimeoutError: locator.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('.product-item-name').filter({ hasText: 'Camera' })\u001b[22m\n\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context/suite_limpar_wishlist.spec.ts:16:25",
+                        "location": {
+                          "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context/suite_limpar_wishlist.spec.ts",
+                          "column": 25,
+                          "line": 16
+                        },
+                        "snippet": "  14 |     // Etapa 4: Marca o produto Camera para remoção\n  15 |     const cameraProduct = page.locator('.product-item-name', { hasText: 'Camera' });\n> 16 |     await cameraProduct.click();\n     |                         ^\n  17 |     await expect(cameraProduct).toBeVisible();\n  18 |\n  19 |     // Etapa 5: Seleciona Atualizar Wishlist"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context/suite_limpar_wishlist.spec.ts",
+                            "column": 25,
+                            "line": 16
+                          },
+                          "message": "TimeoutError: locator.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('.product-item-name').filter({ hasText: 'Camera' })\u001b[22m\n\n\n  14 |     // Etapa 4: Marca o produto Camera para remoção\n  15 |     const cameraProduct = page.locator('.product-item-name', { hasText: 'Camera' });\n> 16 |     await cameraProduct.click();\n     |                         ^\n  17 |     await expect(cameraProduct).toBeVisible();\n  18 |\n  19 |     // Etapa 5: Seleciona Atualizar Wishlist\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context/suite_limpar_wishlist.spec.ts:16:25"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-24T18:58:52.572Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/tmp/avaliacao-prompts-playwright/suite_limpar_wishlist-Suit-0cb72-t-should-clear-the-wishlist/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context/suite_limpar_wishlist.spec.ts",
+                        "column": 25,
+                        "line": 16
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "d86af201ab92a631acc4-f089cdf07fe6695d1c68",
+              "file": "suite_limpar_wishlist.spec.ts",
+              "line": 9,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "suite_login_invalido.spec.ts",
+      "file": "suite_login_invalido.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Suite Login Invalido",
+          "file": "suite_login_invalido.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "The user accesses the Log in page of the Demo Web Shop and submits an invalid login form",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 20000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 9,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 11312,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#message-error')\nExpected substring: \u001b[32m\"Login was unsuccessful. Please correct the errors and try again.\"\u001b[39m\nTimeout: 7000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" with timeout 7000ms\u001b[22m\n\u001b[2m  - waiting for locator('#message-error')\u001b[22m\n",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#message-error')\nExpected substring: \u001b[32m\"Login was unsuccessful. Please correct the errors and try again.\"\u001b[39m\nTimeout: 7000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" with timeout 7000ms\u001b[22m\n\u001b[2m  - waiting for locator('#message-error')\u001b[22m\n\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context/suite_login_invalido.spec.ts:26:32",
+                        "location": {
+                          "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context/suite_login_invalido.spec.ts",
+                          "column": 32,
+                          "line": 26
+                        },
+                        "snippet": "  24 |     expect(page).toHaveURL('https://demowebshop.tricentis.com/login');\n  25 |     const errorMessage = page.locator('#message-error');\n> 26 |     await expect(errorMessage).toContainText('Login was unsuccessful. Please correct the errors and try again.');\n     |                                ^\n  27 |   });\n  28 | });\n  29 |"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context/suite_login_invalido.spec.ts",
+                            "column": 32,
+                            "line": 26
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#message-error')\nExpected substring: \u001b[32m\"Login was unsuccessful. Please correct the errors and try again.\"\u001b[39m\nTimeout: 7000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" with timeout 7000ms\u001b[22m\n\u001b[2m  - waiting for locator('#message-error')\u001b[22m\n\n\n  24 |     expect(page).toHaveURL('https://demowebshop.tricentis.com/login');\n  25 |     const errorMessage = page.locator('#message-error');\n> 26 |     await expect(errorMessage).toContainText('Login was unsuccessful. Please correct the errors and try again.');\n     |                                ^\n  27 |   });\n  28 | });\n  29 |\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context/suite_login_invalido.spec.ts:26:32"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-24T18:59:10.623Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/tmp/avaliacao-prompts-playwright/suite_login_invalido-Suite-5f8d0-bmits-an-invalid-login-form/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context/suite_login_invalido.spec.ts",
+                        "column": 32,
+                        "line": 26
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "7f7239a4016ce59b97ad-c71c8a140f08206a6d7b",
+              "file": "suite_login_invalido.spec.ts",
+              "line": 4,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "suite_login_valido.spec.ts",
+      "file": "suite_login_valido.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Suite Login Valido",
+          "file": "suite_login_valido.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should log in with valid credentials and display account links",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 20000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 10,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 11800,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected: \u001b[32m\"https://demowebshop.tricentis.com/\u001b[7mAccount/Manage\u001b[27m\"\u001b[39m\nReceived: \u001b[31m\"https://demowebshop.tricentis.com/\"\u001b[39m\nTimeout:  7000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveURL\" with timeout 7000ms\u001b[22m\n\u001b[2m    17 × unexpected value \"https://demowebshop.tricentis.com/\"\u001b[22m\n",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected: \u001b[32m\"https://demowebshop.tricentis.com/\u001b[7mAccount/Manage\u001b[27m\"\u001b[39m\nReceived: \u001b[31m\"https://demowebshop.tricentis.com/\"\u001b[39m\nTimeout:  7000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveURL\" with timeout 7000ms\u001b[22m\n\u001b[2m    17 × unexpected value \"https://demowebshop.tricentis.com/\"\u001b[22m\n\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context/suite_login_valido.spec.ts:24:18",
+                        "location": {
+                          "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context/suite_login_valido.spec.ts",
+                          "column": 18,
+                          "line": 24
+                        },
+                        "snippet": "  22 |\n  23 |     // Verificar que a página foi redirecionada para a conta do usuário\n> 24 |     expect(page).toHaveURL('https://demowebshop.tricentis.com/Account/Manage');\n     |                  ^\n  25 |\n  26 |     // Verificar que os links de conta e logout estão presentes\n  27 |     const accountLink = page.locator('text=Welcome, Please Sign In!');"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context/suite_login_valido.spec.ts",
+                            "column": 18,
+                            "line": 24
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected: \u001b[32m\"https://demowebshop.tricentis.com/\u001b[7mAccount/Manage\u001b[27m\"\u001b[39m\nReceived: \u001b[31m\"https://demowebshop.tricentis.com/\"\u001b[39m\nTimeout:  7000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveURL\" with timeout 7000ms\u001b[22m\n\u001b[2m    17 × unexpected value \"https://demowebshop.tricentis.com/\"\u001b[22m\n\n\n  22 |\n  23 |     // Verificar que a página foi redirecionada para a conta do usuário\n> 24 |     expect(page).toHaveURL('https://demowebshop.tricentis.com/Account/Manage');\n     |                  ^\n  25 |\n  26 |     // Verificar que os links de conta e logout estão presentes\n  27 |     const accountLink = page.locator('text=Welcome, Please Sign In!');\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context/suite_login_valido.spec.ts:24:18"
+                        },
+                        {
+                          "location": {
+                            "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context/suite_login_valido.spec.ts",
+                            "column": 31,
+                            "line": 28
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('text=Welcome, Please Sign In!')\nExpected: visible\nTimeout: 7000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 7000ms\u001b[22m\n\u001b[2m  - waiting for locator('text=Welcome, Please Sign In!')\u001b[22m\n\n\n  26 |     // Verificar que os links de conta e logout estão presentes\n  27 |     const accountLink = page.locator('text=Welcome, Please Sign In!');\n> 28 |     await expect(accountLink).toBeVisible();\n     |                               ^\n  29 |\n  30 |     const logoutLink = page.locator('text=Log out');\n  31 |     await expect(logoutLink).toBeVisible();\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context/suite_login_valido.spec.ts:28:31"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-24T18:59:23.316Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/tmp/avaliacao-prompts-playwright/suite_login_valido-Suite-L-cde05-s-and-display-account-links/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context/suite_login_valido.spec.ts",
+                        "column": 18,
+                        "line": 24
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "d7aa3dbcc5ebbdf3d199-8b539ea4c3dc5b6ca765",
+              "file": "suite_login_valido.spec.ts",
+              "line": 4,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "suite_logout.spec.ts",
+      "file": "suite_logout.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Suite Logout",
+          "file": "suite_logout.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "User logs out and is redirected to login page",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 20000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 11,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 13455,
+                      "error": {
+                        "message": "TimeoutError: locator.fill: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#Email')\u001b[22m\n",
+                        "stack": "TimeoutError: locator.fill: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#Email')\u001b[22m\n\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context/suite_logout.spec.ts:14:22",
+                        "location": {
+                          "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context/suite_logout.spec.ts",
+                          "column": 22,
+                          "line": 14
+                        },
+                        "snippet": "  12 |     const loginButton = page.locator('#login-button');\n  13 |\n> 14 |     await emailInput.fill('valid-email@example.com');\n     |                      ^\n  15 |     await passwordInput.fill('valid-password');\n  16 |     await loginButton.click();\n  17 |"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context/suite_logout.spec.ts",
+                            "column": 22,
+                            "line": 14
+                          },
+                          "message": "TimeoutError: locator.fill: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#Email')\u001b[22m\n\n\n  12 |     const loginButton = page.locator('#login-button');\n  13 |\n> 14 |     await emailInput.fill('valid-email@example.com');\n     |                      ^\n  15 |     await passwordInput.fill('valid-password');\n  16 |     await loginButton.click();\n  17 |\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context/suite_logout.spec.ts:14:22"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-24T18:59:36.532Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/tmp/avaliacao-prompts-playwright/suite_logout-Suite-Logout--9d8ae-is-redirected-to-login-page/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context/suite_logout.spec.ts",
+                        "column": 22,
+                        "line": 14
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "2f3a4af9c48bd28b3893-ff6efe32721683f44202",
+              "file": "suite_logout.spec.ts",
+              "line": 4,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "suite_registro_usuario.spec.ts",
+      "file": "suite_registro_usuario.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Suite Registro Usuario",
+          "file": "suite_registro_usuario.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should register a user and continue shopping",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 20000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 12,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 3487,
+                      "error": {
+                        "message": "Error: page.click: SyntaxError: Failed to execute 'querySelectorAll' on 'Document': 'text:Register' is not a valid selector.\n    at query (<anonymous>:5448:41)\n    at <anonymous>:5458:7\n    at SelectorEvaluatorImpl._cached (<anonymous>:5235:20)\n    at SelectorEvaluatorImpl._queryCSS (<anonymous>:5445:17)\n    at SelectorEvaluatorImpl._querySimple (<anonymous>:5325:19)\n    at <anonymous>:5273:29\n    at SelectorEvaluatorImpl._cached (<anonymous>:5235:20)\n    at SelectorEvaluatorImpl.query (<anonymous>:5266:19)\n    at Object.query (<anonymous>:5480:44)\n    at <anonymous>:5438:21\nCall log:\n\u001b[2m  - waiting for locator('text:Register')\u001b[22m\n",
+                        "stack": "Error: page.click: SyntaxError: Failed to execute 'querySelectorAll' on 'Document': 'text:Register' is not a valid selector.\n    at query (<anonymous>:5448:41)\n    at <anonymous>:5458:7\n    at SelectorEvaluatorImpl._cached (<anonymous>:5235:20)\n    at SelectorEvaluatorImpl._queryCSS (<anonymous>:5445:17)\n    at SelectorEvaluatorImpl._querySimple (<anonymous>:5325:19)\n    at <anonymous>:5273:29\n    at SelectorEvaluatorImpl._cached (<anonymous>:5235:20)\n    at SelectorEvaluatorImpl.query (<anonymous>:5266:19)\n    at Object.query (<anonymous>:5480:44)\n    at <anonymous>:5438:21\nCall log:\n\u001b[2m  - waiting for locator('text:Register')\u001b[22m\n\n    at query (<anonymous>:5448:41)\n    at <anonymous>:5458:7\n    at SelectorEvaluatorImpl._cached (<anonymous>:5235:20)\n    at SelectorEvaluatorImpl._queryCSS (<anonymous>:5445:17)\n    at SelectorEvaluatorImpl._querySimple (<anonymous>:5325:19)\n    at <anonymous>:5273:29\n    at SelectorEvaluatorImpl._cached (<anonymous>:5235:20)\n    at SelectorEvaluatorImpl.query (<anonymous>:5266:19)\n    at Object.query (<anonymous>:5480:44)\n    at <anonymous>:5438:21\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context/suite_registro_usuario.spec.ts:7:16",
+                        "location": {
+                          "file": "<anonymous>",
+                          "column": 41,
+                          "line": 5448
+                        }
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "<anonymous>",
+                            "column": 41,
+                            "line": 5448
+                          },
+                          "message": "Error: page.click: SyntaxError: Failed to execute 'querySelectorAll' on 'Document': 'text:Register' is not a valid selector.\n    at query (<anonymous>:5448:41)\n    at <anonymous>:5458:7\n    at SelectorEvaluatorImpl._cached (<anonymous>:5235:20)\n    at SelectorEvaluatorImpl._queryCSS (<anonymous>:5445:17)\n    at SelectorEvaluatorImpl._querySimple (<anonymous>:5325:19)\n    at <anonymous>:5273:29\n    at SelectorEvaluatorImpl._cached (<anonymous>:5235:20)\n    at SelectorEvaluatorImpl.query (<anonymous>:5266:19)\n    at Object.query (<anonymous>:5480:44)\n    at <anonymous>:5438:21\nCall log:\n\u001b[2m  - waiting for locator('text:Register')\u001b[22m\n\n    at query (<anonymous>:5448:41)\n    at <anonymous>:5458:7\n    at SelectorEvaluatorImpl._cached (<anonymous>:5235:20)\n    at SelectorEvaluatorImpl._queryCSS (<anonymous>:5445:17)\n    at SelectorEvaluatorImpl._querySimple (<anonymous>:5325:19)\n    at <anonymous>:5273:29\n    at SelectorEvaluatorImpl._cached (<anonymous>:5235:20)\n    at SelectorEvaluatorImpl.query (<anonymous>:5266:19)\n    at Object.query (<anonymous>:5480:44)\n    at <anonymous>:5438:21\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context/suite_registro_usuario.spec.ts:7:16"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-24T18:59:54.294Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/tmp/avaliacao-prompts-playwright/suite_registro_usuario-Sui-ef2d7--user-and-continue-shopping/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "<anonymous>",
+                        "column": 41,
+                        "line": 5448
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "ddea2ff8902a25e2f4d0-4f993e553770d3055d3e",
+              "file": "suite_registro_usuario.spec.ts",
+              "line": 4,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "user_registration_book_purchase.spec.ts",
+      "file": "user_registration_book_purchase.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "User Registration Book Purchase",
+          "file": "user_registration_book_purchase.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should register user and purchase book",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 20000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 13,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 3167,
+                      "error": {
+                        "message": "Error: page.click: Unknown engine \"tag\" while parsing selector tag=a, text=Register, href=/register\nCall log:\n\u001b[2m  - waiting for locator('tag=a, text=Register, href=/register')\u001b[22m\n",
+                        "stack": "Error: page.click: Unknown engine \"tag\" while parsing selector tag=a, text=Register, href=/register\nCall log:\n\u001b[2m  - waiting for locator('tag=a, text=Register, href=/register')\u001b[22m\n\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context/user_registration_book_purchase.spec.ts:8:16",
+                        "location": {
+                          "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context/user_registration_book_purchase.spec.ts",
+                          "column": 16,
+                          "line": 8
+                        },
+                        "snippet": "   6 |\n   7 |     // Step 2: Click on the Register link\n>  8 |     await page.click('tag=a, text=Register, href=/register');\n     |                ^\n   9 |     expect(page).toHaveURL('https://demowebshop.tricentis.com/register');\n  10 |\n  11 |     // Step 4: Fill in the email field"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context/user_registration_book_purchase.spec.ts",
+                            "column": 16,
+                            "line": 8
+                          },
+                          "message": "Error: page.click: Unknown engine \"tag\" while parsing selector tag=a, text=Register, href=/register\nCall log:\n\u001b[2m  - waiting for locator('tag=a, text=Register, href=/register')\u001b[22m\n\n\n   6 |\n   7 |     // Step 2: Click on the Register link\n>  8 |     await page.click('tag=a, text=Register, href=/register');\n     |                ^\n   9 |     expect(page).toHaveURL('https://demowebshop.tricentis.com/register');\n  10 |\n  11 |     // Step 4: Fill in the email field\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context/user_registration_book_purchase.spec.ts:8:16"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-24T18:59:59.187Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/tmp/avaliacao-prompts-playwright/user_registration_book_pur-82fa9-ster-user-and-purchase-book/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context/user_registration_book_purchase.spec.ts",
+                        "column": 16,
+                        "line": 8
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "f7557647539060876791-37549158bc5e04ba4382",
+              "file": "user_registration_book_purchase.spec.ts",
+              "line": 4,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-07-24T18:57:18.671Z",
+    "duration": 149468.844,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 14,
+    "flaky": 0
+  }
+}

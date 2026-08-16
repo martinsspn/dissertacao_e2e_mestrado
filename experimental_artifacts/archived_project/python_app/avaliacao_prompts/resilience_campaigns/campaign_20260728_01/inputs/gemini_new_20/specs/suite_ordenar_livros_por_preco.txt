@@ -1,0 +1,1 @@
+Sorting books by ascending price: The user accesses the Books category. The user selects Price: Low to High in the Sort by control. The system keeps the Books category visible and displays the products in nondecreasing order according to their current sale prices.

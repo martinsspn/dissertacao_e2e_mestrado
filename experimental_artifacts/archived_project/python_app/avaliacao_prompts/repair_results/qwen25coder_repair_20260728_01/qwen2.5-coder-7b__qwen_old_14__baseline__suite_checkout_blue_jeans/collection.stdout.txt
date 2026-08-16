@@ -1,0 +1,3 @@
+Listing tests:
+  suite_checkout_blue_jeans.spec.ts:12:7 › Blue Jeans Purchase › should complete the purchase of Blue Jeans
+Total: 1 test in 1 file

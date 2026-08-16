@@ -1,0 +1,3 @@
+Listing tests:
+  user_registration_book_purchase.spec.ts:4:7 › User Registration Book Purchase › should register user and purchase book
+Total: 1 test in 1 file

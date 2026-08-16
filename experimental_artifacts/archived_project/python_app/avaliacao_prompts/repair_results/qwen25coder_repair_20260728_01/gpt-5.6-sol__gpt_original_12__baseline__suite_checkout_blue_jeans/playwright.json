@@ -1,0 +1,145 @@
+{
+  "config": {
+    "argv": [
+      "/usr/bin/node",
+      "/home/martinsspn/dissertacao_e2e_semantico/node_modules/.bin/playwright",
+      "test",
+      "suite_checkout_blue_jeans.spec.ts",
+      "--config=/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/playwright.config.ts",
+      "--reporter=json"
+    ],
+    "configFile": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/playwright.config.ts",
+    "rootDir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/repair_runs/qwen25coder_repair_20260728_01/gpt-5-6-sol/gpt_original_12/baseline/suite_checkout_blue_jeans",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/tmp/avaliacao-prompts-playwright",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/repair_runs/qwen25coder_repair_20260728_01/gpt-5-6-sol/gpt_original_12/baseline/suite_checkout_blue_jeans",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 20000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.61.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "suite_checkout_blue_jeans.spec.ts",
+      "file": "suite_checkout_blue_jeans.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Complete purchase of the product Blue Jeans",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 20000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 18858,
+                  "error": {
+                    "message": "TimeoutError: locator.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#shipping-buttons-container input')\u001b[22m\n\u001b[2m    - locator resolved to <input type=\"button\" title=\"Continue\" value=\"Continue\" onclick=\"Shipping.save()\" class=\"button-1 new-address-next-step-button\"/>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not visible\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not visible\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    19 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is not visible\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n",
+                    "stack": "TimeoutError: locator.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#shipping-buttons-container input')\u001b[22m\n\u001b[2m    - locator resolved to <input type=\"button\" title=\"Continue\" value=\"Continue\" onclick=\"Shipping.save()\" class=\"button-1 new-address-next-step-button\"/>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not visible\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not visible\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    19 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is not visible\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/repair_runs/qwen25coder_repair_20260728_01/gpt-5-6-sol/gpt_original_12/baseline/suite_checkout_blue_jeans/suite_checkout_blue_jeans.spec.ts:175:59",
+                    "location": {
+                      "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/repair_runs/qwen25coder_repair_20260728_01/gpt-5-6-sol/gpt_original_12/baseline/suite_checkout_blue_jeans/suite_checkout_blue_jeans.spec.ts",
+                      "column": 59,
+                      "line": 175
+                    },
+                    "snippet": "  173 |   }\n  174 |\n> 175 |   await page.locator('#shipping-buttons-container input').click();\n      |                                                           ^\n  176 |\n  177 |   const shippingMethods = page.locator(\n  178 |     '#checkout-shipping-method-load input[type=\"radio\"]',"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/repair_runs/qwen25coder_repair_20260728_01/gpt-5-6-sol/gpt_original_12/baseline/suite_checkout_blue_jeans/suite_checkout_blue_jeans.spec.ts",
+                        "column": 59,
+                        "line": 175
+                      },
+                      "message": "TimeoutError: locator.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#shipping-buttons-container input')\u001b[22m\n\u001b[2m    - locator resolved to <input type=\"button\" title=\"Continue\" value=\"Continue\" onclick=\"Shipping.save()\" class=\"button-1 new-address-next-step-button\"/>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not visible\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not visible\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    19 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is not visible\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n\n\n  173 |   }\n  174 |\n> 175 |   await page.locator('#shipping-buttons-container input').click();\n      |                                                           ^\n  176 |\n  177 |   const shippingMethods = page.locator(\n  178 |     '#checkout-shipping-method-load input[type=\"radio\"]',\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/repair_runs/qwen25coder_repair_20260728_01/gpt-5-6-sol/gpt_original_12/baseline/suite_checkout_blue_jeans/suite_checkout_blue_jeans.spec.ts:175:59"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-07-28T15:06:38.145Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/tmp/avaliacao-prompts-playwright/suite_checkout_blue_jeans--bdd6e-e-of-the-product-Blue-Jeans/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/repair_runs/qwen25coder_repair_20260728_01/gpt-5-6-sol/gpt_original_12/baseline/suite_checkout_blue_jeans/suite_checkout_blue_jeans.spec.ts",
+                    "column": 59,
+                    "line": 175
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "1a70699396ff8c88bdf2-9ff47b28747aaa989055",
+          "file": "suite_checkout_blue_jeans.spec.ts",
+          "line": 72,
+          "column": 5
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-07-28T15:06:37.107Z",
+    "duration": 20323.943000000003,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

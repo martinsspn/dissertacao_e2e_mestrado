@@ -1,0 +1,82 @@
+{
+  "run_id": "ollama_qwen25coder_demowebshop20_20260727_01",
+  "status": "completed",
+  "model": "qwen2.5-coder:7b",
+  "quantization": "Q4_K_M",
+  "conditions": {
+    "baseline": {
+      "files": 20,
+      "playwright_collected_tests": 20,
+      "completed_responses": 20,
+      "done_reason_stop": 20,
+      "input_characters": 7232,
+      "input_tokens": 3944,
+      "output_tokens": 4500,
+      "client_seconds_total": 362.639,
+      "client_seconds_mean": 18.132,
+      "playwright_import": 20,
+      "test_block": 20,
+      "expect_assertion": 20,
+      "locator_count": 30,
+      "semantic_locator_count": 0,
+      "xpath_count": 0,
+      "wait_for_timeout_files": 0,
+      "selector_risk": {
+        "low": 0,
+        "medium": 11,
+        "high": 0,
+        "none": 9
+      }
+    },
+    "structured_context": {
+      "files": 20,
+      "playwright_collected_tests": 25,
+      "completed_responses": 20,
+      "done_reason_stop": 20,
+      "input_characters": 83751,
+      "input_tokens": 24789,
+      "output_tokens": 5879,
+      "client_seconds_total": 574.396,
+      "client_seconds_mean": 28.72,
+      "playwright_import": 20,
+      "test_block": 20,
+      "expect_assertion": 20,
+      "locator_count": 97,
+      "semantic_locator_count": 63,
+      "xpath_count": 0,
+      "wait_for_timeout_files": 0,
+      "selector_risk": {
+        "low": 11,
+        "medium": 9,
+        "high": 0,
+        "none": 0
+      }
+    }
+  },
+  "comparison": {
+    "input_token_increase_percent": 528.524,
+    "output_token_increase_percent": 30.644,
+    "client_time_increase_percent": 58.393
+  },
+  "settings": {
+    "temperature": 0,
+    "seed": 20260724,
+    "num_ctx": 8192,
+    "num_predict": 2048,
+    "stateless": true,
+    "context_reused": false
+  },
+  "generated_test_directories": {
+    "baseline": "python_app/teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01",
+    "structured_context": "python_app/teste_prompt_e2e_semantico/generated_tests/structured_context_qwen25coder_demowebshop20_20260727_01"
+  },
+  "static_reports": {
+    "baseline": "python_app/avaliacao_prompts/relatorios/qwen25coder_demowebshop20_baseline_20260727_01.md",
+    "structured_context": "python_app/avaliacao_prompts/relatorios/qwen25coder_demowebshop20_structured_20260727_01.md"
+  },
+  "notes": [
+    "The two-scenario smoke run used different context and output limits and is excluded.",
+    "Basic structure is not equivalent to successful Playwright execution or semantic conformity.",
+    "Graph conformity and live execution remain to be evaluated."
+  ]
+}

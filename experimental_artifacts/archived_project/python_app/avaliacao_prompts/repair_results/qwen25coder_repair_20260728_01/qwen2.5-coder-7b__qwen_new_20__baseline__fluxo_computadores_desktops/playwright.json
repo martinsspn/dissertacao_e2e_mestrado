@@ -1,0 +1,154 @@
+{
+  "config": {
+    "argv": [
+      "/usr/bin/node",
+      "/home/martinsspn/dissertacao_e2e_semantico/node_modules/.bin/playwright",
+      "test",
+      "fluxo_computadores_desktops.spec.ts",
+      "--config=/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/playwright.config.ts",
+      "--reporter=json"
+    ],
+    "configFile": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/playwright.config.ts",
+    "rootDir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/repair_runs/qwen25coder_repair_20260728_01/qwen2-5-coder-7b/qwen_new_20/baseline/fluxo_computadores_desktops",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/tmp/avaliacao-prompts-playwright",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/repair_runs/qwen25coder_repair_20260728_01/qwen2-5-coder-7b/qwen_new_20/baseline/fluxo_computadores_desktops",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 20000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.61.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "fluxo_computadores_desktops.spec.ts",
+      "file": "fluxo_computadores_desktops.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Digital Downloads Page",
+          "file": "fluxo_computadores_desktops.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should display the digital downloads page",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 20000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 10003,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.digital-items-section')\nExpected: visible\nTimeout: 7000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 7000ms\u001b[22m\n\u001b[2m  - waiting for locator('.digital-items-section')\u001b[22m\n",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.digital-items-section')\nExpected: visible\nTimeout: 7000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 7000ms\u001b[22m\n\u001b[2m  - waiting for locator('.digital-items-section')\u001b[22m\n\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/repair_runs/qwen25coder_repair_20260728_01/qwen2-5-coder-7b/qwen_new_20/baseline/fluxo_computadores_desktops/fluxo_computadores_desktops.spec.ts:10:39",
+                        "location": {
+                          "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/repair_runs/qwen25coder_repair_20260728_01/qwen2-5-coder-7b/qwen_new_20/baseline/fluxo_computadores_desktops/fluxo_computadores_desktops.spec.ts",
+                          "column": 39,
+                          "line": 10
+                        },
+                        "snippet": "   8 |     // Wait for the digital items section to be visible\n   9 |     const digitalItemsSection = page.locator('.digital-items-section');\n> 10 |     await expect(digitalItemsSection).toBeVisible();\n     |                                       ^\n  11 |\n  12 |     // Validate that the digital downloads page is visible\n  13 |     const pageTitle = page.locator('h1');"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/repair_runs/qwen25coder_repair_20260728_01/qwen2-5-coder-7b/qwen_new_20/baseline/fluxo_computadores_desktops/fluxo_computadores_desktops.spec.ts",
+                            "column": 39,
+                            "line": 10
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.digital-items-section')\nExpected: visible\nTimeout: 7000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 7000ms\u001b[22m\n\u001b[2m  - waiting for locator('.digital-items-section')\u001b[22m\n\n\n   8 |     // Wait for the digital items section to be visible\n   9 |     const digitalItemsSection = page.locator('.digital-items-section');\n> 10 |     await expect(digitalItemsSection).toBeVisible();\n     |                                       ^\n  11 |\n  12 |     // Validate that the digital downloads page is visible\n  13 |     const pageTitle = page.locator('h1');\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/repair_runs/qwen25coder_repair_20260728_01/qwen2-5-coder-7b/qwen_new_20/baseline/fluxo_computadores_desktops/fluxo_computadores_desktops.spec.ts:10:39"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-28T15:09:17.195Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/tmp/avaliacao-prompts-playwright/fluxo_computadores_desktop-09ce9--the-digital-downloads-page/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/repair_runs/qwen25coder_repair_20260728_01/qwen2-5-coder-7b/qwen_new_20/baseline/fluxo_computadores_desktops/fluxo_computadores_desktops.spec.ts",
+                        "column": 39,
+                        "line": 10
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "5ffdfa1a8a18bafbf733-8715cb57179142f6df7c",
+              "file": "fluxo_computadores_desktops.spec.ts",
+              "line": 4,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-07-28T15:09:16.181Z",
+    "duration": 11480.424,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

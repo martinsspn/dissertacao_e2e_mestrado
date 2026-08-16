@@ -1,0 +1,3 @@
+Listing tests:
+  suite_comparar_produtos.spec.ts:4:7 › Suite Comparar Produtos › should compare products and clear the list
+Total: 1 test in 1 file

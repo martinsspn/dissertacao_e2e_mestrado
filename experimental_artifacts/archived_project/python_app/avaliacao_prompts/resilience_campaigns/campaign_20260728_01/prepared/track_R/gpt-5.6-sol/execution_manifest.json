@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "mutation_plan": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaigns/campaign_20260728_01/plans/gpt_original_12.mutation_plan.json",
+  "mutation_plan_sha256": "054db1613694d3f96ce00a85fc77e01126e32b3e58225e63652864c038e81979",
+  "fixture": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaigns/campaign_20260728_01/runtime/playwright/fixture.ts",
+  "fixture_sha256": "754f39892284ec2553a52ec727dfb892d2e3208cea7309fb818a5cb74f926c10",
+  "track_id": "R",
+  "model_id": "gpt-5.6-sol",
+  "allowlist": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaigns/campaign_20260728_01/allowlists/track_R_gpt-5.6-sol.json",
+  "allowlist_sha256": "6a18fbc23e59571b52646dd8e1359ae2239193d67698942964baea32e0b63f93",
+  "semantic_review": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaigns/campaign_20260728_01/reviews/track_R_review_bundle.json",
+  "semantic_review_sha256": "800a6803b8ee13b1954c67a6a4eafa54a76be6cd353b82f26d92ea0702745bf8",
+  "transformation": "only_replace_import_source_from_@playwright/test_to_frozen_fixture",
+  "condition_key": {
+    "A": "baseline",
+    "B": "structured_context"
+  },
+  "pairs": [
+    {
+      "scenario_id": "suite_adicionar_carrinho",
+      "baseline_original": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaigns/campaign_20260728_01/cohort_sources/track_R/gpt-5.6-sol/baseline/suite_adicionar_carrinho.spec.ts",
+      "structured_original": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaigns/campaign_20260728_01/cohort_sources/track_R/gpt-5.6-sol/structured_context/suite_adicionar_carrinho.spec.ts",
+      "baseline_sha256": "d6a82c1bdc8cebd25c77b61dc9fa58a13f7a9242ffd27f8146b6f171a1ad3e77",
+      "structured_sha256": "581d507c7659ab93ec7b4394c6888e0a7a6d17c42012dce7068aa26f35117932",
+      "baseline_derived": "de538f230ea91975d19609218dca5a7b2cd0aab3709d563c13f16216166458a9",
+      "structured_derived": "395b743e99fcc24a814e669f3a9765999bea0cfc4ee33a2627f9bae8b055f854"
+    }
+  ],
+  "execution_manifest_sha256": "9a50ff72b76673470fc52f6efc9bf63d8710aef446e9127baadd8730d0162c7a"
+}

@@ -1,0 +1,3 @@
+Listing tests:
+  suite_login_invalido.spec.ts:4:7 › Login attempt with an invalid password › should keep the user unauthenticated and inform of failed login
+Total: 1 test in 1 file

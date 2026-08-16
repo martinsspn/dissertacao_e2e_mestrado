@@ -1,0 +1,3 @@
+Listing tests:
+  suite_cadastro_senha_curta.spec.ts:4:7 › Short registration password validation › should prevent registration with short password
+Total: 1 test in 1 file

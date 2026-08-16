@@ -1,0 +1,3 @@
+Listing tests:
+  suite_checkout_blue_jeans.spec.ts:38:7 › Suite Checkout Blue Jeans › finaliza a compra de Blue Jeans
+Total: 1 test in 1 file

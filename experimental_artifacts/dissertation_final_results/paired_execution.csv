@@ -1,0 +1,5 @@
+model,pairs,both_passed,baseline_only,structured_only,neither_passed
+gpt-5.6-sol,12,6,1,1,4
+gemini-3.6-flash,20,4,4,8,4
+qwen2.5-coder:7b,32,0,0,3,29
+

@@ -1,0 +1,1830 @@
+
+Running 25 tests using 1 worker
+
+[1/25] ../teste_prompt_e2e_semantico/generated_tests/structured_context_qwen25coder_demowebshop20_20260727_01/fluxo_computadores_desktops.spec.ts:4:7 › Fluxo Computadores Desktops › The user must access the Digital downloads category, view the available digital items, and validate that the digital downloads page is visible.
+[2/25] ../teste_prompt_e2e_semantico/generated_tests/structured_context_qwen25coder_demowebshop20_20260727_01/suite_adicionar_dois_produtos_carrinho.spec.ts:4:7 › Suite Adicionar Dois Produtos Carrinho › Adicionar Computing and Internet ao carrinho
+[3/25] ../teste_prompt_e2e_semantico/generated_tests/structured_context_qwen25coder_demowebshop20_20260727_01/suite_adicionar_dois_produtos_carrinho.spec.ts:10:7 › Suite Adicionar Dois Produtos Carrinho › Adicionar Fiction ao carrinho
+[4/25] ../teste_prompt_e2e_semantico/generated_tests/structured_context_qwen25coder_demowebshop20_20260727_01/suite_adicionar_dois_produtos_carrinho.spec.ts:16:7 › Suite Adicionar Dois Produtos Carrinho › Acessar carrinho
+[5/25] ../teste_prompt_e2e_semantico/generated_tests/structured_context_qwen25coder_demowebshop20_20260727_01/suite_adicionar_dois_produtos_carrinho.spec.ts:22:7 › Suite Adicionar Dois Produtos Carrinho › Verificar itens no carrinho
+  1) ../teste_prompt_e2e_semantico/generated_tests/structured_context_qwen25coder_demowebshop20_20260727_01/suite_adicionar_dois_produtos_carrinho.spec.ts:22:7 › Suite Adicionar Dois Produtos Carrinho › Verificar itens no carrinho 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByText('Computing and Internet')
+    Expected: visible
+    Timeout: 7000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 7000ms
+      - waiting for getByText('Computing and Internet')
+
+
+      22 |   test('Verificar itens no carrinho', async ({ page }) => {
+      23 |     await page.goto('https://demowebshop.tricentis.com/cart');
+    > 24 |     await expect(page.getByText("Computing and Internet")).toBeVisible();
+         |                                                            ^
+      25 |     await expect(page.getByText("Fiction")).toBeVisible();
+      26 |   });
+      27 | });
+        at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context_qwen25coder_demowebshop20_20260727_01/suite_adicionar_dois_produtos_carrinho.spec.ts:24:60
+
+    Error Context: ../../../../../tmp/avaliacao-prompts-playwright/suite_adicionar_dois_produ-93070-Verificar-itens-no-carrinho/error-context.md
+
+
+[6/25] ../teste_prompt_e2e_semantico/generated_tests/structured_context_qwen25coder_demowebshop20_20260727_01/suite_atualizar_quantidade_carrinho.spec.ts:4:7 › Suite Atualizar Quantidade Carrinho › should update quantity in cart and keep product with updated subtotal
+  2) ../teste_prompt_e2e_semantico/generated_tests/structured_context_qwen25coder_demowebshop20_20260727_01/suite_atualizar_quantidade_carrinho.spec.ts:4:7 › Suite Atualizar Quantidade Carrinho › should update quantity in cart and keep product with updated subtotal 
+
+    Error: expect(page).toHaveURL(expected) failed
+
+    Expected: "https://demowebshop.tricentis.com/cart"
+    Received: "https://demowebshop.tricentis.com/computing-and-internet"
+    Timeout:  7000ms
+
+    Call log:
+      - Expect "toHaveURL" with timeout 7000ms
+        17 × unexpected value "https://demowebshop.tricentis.com/computing-and-internet"
+
+
+       6 |     await page.goto('https://demowebshop.tricentis.com/computing-and-internet');
+       7 |     await page.locator("[id=\"add-to-cart-button-13\"]").click();
+    >  8 |     await expect(page).toHaveURL('https://demowebshop.tricentis.com/cart');
+         |                        ^
+       9 |
+      10 |     // Etapa 2: Acessar carrinho e alterar quantidade
+      11 |     await page.getByRole("link", { name: "Shopping cart", exact: true }).click();
+        at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context_qwen25coder_demowebshop20_20260727_01/suite_atualizar_quantidade_carrinho.spec.ts:8:24
+
+    Error Context: ../../../../../tmp/avaliacao-prompts-playwright/suite_atualizar_quantidade-2ffca-oduct-with-updated-subtotal/error-context.md
+
+
+[7/25] ../teste_prompt_e2e_semantico/generated_tests/structured_context_qwen25coder_demowebshop20_20260727_01/suite_busca_sem_resultados.spec.ts:4:7 › Suite Busca Sem Resultados › should display no products matched message when searching for a non-existent term
+  3) ../teste_prompt_e2e_semantico/generated_tests/structured_context_qwen25coder_demowebshop20_20260727_01/suite_busca_sem_resultados.spec.ts:4:7 › Suite Busca Sem Resultados › should display no products matched message when searching for a non-existent term 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByText('No products were found that matched your criteria!')
+    Expected: visible
+    Timeout: 7000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 7000ms
+      - waiting for getByText('No products were found that matched your criteria!')
+
+
+      17 |     // Verificação de que não há produtos correspondentes
+      18 |     const noResultsMessage = page.getByText('No products were found that matched your criteria!');
+    > 19 |     await expect(noResultsMessage).toBeVisible();
+         |                                    ^
+      20 |   });
+      21 | });
+      22 |
+        at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context_qwen25coder_demowebshop20_20260727_01/suite_busca_sem_resultados.spec.ts:19:36
+
+    Error Context: ../../../../../tmp/avaliacao-prompts-playwright/suite_busca_sem_resultados-20829-ing-for-a-non-existent-term/error-context.md
+
+
+[8/25] ../teste_prompt_e2e_semantico/generated_tests/structured_context_qwen25coder_demowebshop20_20260727_01/suite_cadastro_campos_obrigatorios.spec.ts:4:7 › Suite Cadastro Campos Obrigatorios › The user accesses the Register page of the Demo Web Shop and submits the form with empty fields
+  4) ../teste_prompt_e2e_semantico/generated_tests/structured_context_qwen25coder_demowebshop20_20260727_01/suite_cadastro_campos_obrigatorios.spec.ts:4:7 › Suite Cadastro Campos Obrigatorios › The user accesses the Register page of the Demo Web Shop and submits the form with empty fields 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByText('Password is required')
+    Expected: visible
+    Error: strict mode violation: getByText('Password is required') resolved to 2 elements:
+        1) <span class="" for="Password">Password is required.</span> aka getByText('Password is required.').first()
+        2) <span class="" for="ConfirmPassword">Password is required.</span> aka getByText('Password is required.').nth(1)
+
+    Call log:
+      - Expect "toBeVisible" with timeout 7000ms
+      - waiting for getByText('Password is required')
+
+
+      22 |     await expect(page.getByText("Last name is required")).toBeVisible();
+      23 |     await expect(page.getByText("Email is required")).toBeVisible();
+    > 24 |     await expect(page.getByText("Password is required")).toBeVisible();
+         |                                                          ^
+      25 |     await expect(page.getByText("Confirm password is required")).toBeVisible();
+      26 |   });
+      27 | });
+        at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context_qwen25coder_demowebshop20_20260727_01/suite_cadastro_campos_obrigatorios.spec.ts:24:58
+
+    Error Context: ../../../../../tmp/avaliacao-prompts-playwright/suite_cadastro_campos_obri-24890--the-form-with-empty-fields/error-context.md
+
+
+[9/25] ../teste_prompt_e2e_semantico/generated_tests/structured_context_qwen25coder_demowebshop20_20260727_01/suite_cadastro_confirmacao_senha.spec.ts:4:7 › Suite Cadastro Confirmacao Senha › should not register user with mismatched passwords
+  5) ../teste_prompt_e2e_semantico/generated_tests/structured_context_qwen25coder_demowebshop20_20260727_01/suite_cadastro_confirmacao_senha.spec.ts:4:7 › Suite Cadastro Confirmacao Senha › should not register user with mismatched passwords 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByText('The specified passwords do not match.')
+    Expected: visible
+    Timeout: 7000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 7000ms
+      - waiting for getByText('The specified passwords do not match.')
+
+
+      28 |     // Verifica se a mensagem de erro é exibida
+      29 |     expect(page).toHaveURL('https://demowebshop.tricentis.com/register');
+    > 30 |     await expect(page.getByText("The specified passwords do not match.")).toBeVisible();
+         |                                                                           ^
+      31 |   });
+      32 | });
+      33 |
+        at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context_qwen25coder_demowebshop20_20260727_01/suite_cadastro_confirmacao_senha.spec.ts:30:75
+
+    Error Context: ../../../../../tmp/avaliacao-prompts-playwright/suite_cadastro_confirmacao-b6852-r-with-mismatched-passwords/error-context.md
+
+
+[10/25] ../teste_prompt_e2e_semantico/generated_tests/structured_context_qwen25coder_demowebshop20_20260727_01/suite_cadastro_senha_curta.spec.ts:4:7 › Suite Cadastro Senha Curta › should not register user with short password
+  6) ../teste_prompt_e2e_semantico/generated_tests/structured_context_qwen25coder_demowebshop20_20260727_01/suite_cadastro_senha_curta.spec.ts:4:7 › Suite Cadastro Senha Curta › should not register user with short password 
+
+    Error: toHaveText can be only used with Locator object, was called with _Page <ref *1> _Page {
+      _events: [Object: null prototype] {
+        close: [Function: bound _handle] { listener: [Function (anonymous)] },
+        crash: [Function: bound _handle] { listener: [Function (anonymous)] }
+      },
+      _eventsCount: 2,
+      _maxListeners: 0,
+      _pendingHandlers: Map(0) {},
+      _platform: {
+        name: 'node',
+        boxedStackPrefixes: [Function: boxedStackPrefixes],
+        calculateSha1: [Function: calculateSha1],
+        colors: {
+          themes: {},
+          styles: [Object],
+          supportsColor: [Function: getSupportLevel],
+          enabled: true,
+          enable: [Function (anonymous)],
+          disable: [Function (anonymous)],
+          strip: [Function (anonymous)],
+          stripColors: [Function (anonymous)],
+          stylize: [Function: stylize2],
+          setTheme: [Function (anonymous)],
+          trap: [Function: runTheTrap],
+          zalgo: [Function: zalgo],
+          maps: [Object],
+          america: [Function (anonymous)],
+          zebra: [Function (anonymous)],
+          rainbow: [Function (anonymous)],
+          random: [Function (anonymous)]
+        },
+        coreDir: '/home/martinsspn/dissertacao_e2e_semantico/node_modules/playwright-core',
+        createGuid: [Function: createGuid],
+        defaultMaxListeners: [Function: defaultMaxListeners],
+        fs: [Function: fs],
+        env: {
+          LESSOPEN: '| /usr/bin/lesspipe %s',
+          VSCODE_CWD: '/mnt/c/Users/Gabriel Martins/AppData/Local/Programs/Microsoft VS Code',
+          VSCODE_ESM_ENTRYPOINT: 'vs/workbench/api/node/extensionHostProcess',
+          CODEX_CI: '1',
+          USER: 'martinsspn',
+          CODEX_INTERNAL_ORIGINATOR_OVERRIDE: 'codex_vscode',
+          VSCODE_NLS_CONFIG: '{"userLocale":"en","osLocale":"en","resolvedLanguage":"en","defaultMessagesFile":"/home/martinsspn/.vscode-server/bin/8a7abeba6e03ea3af87bfbce9a1b7e48fed567b8/out/nls.messages.json","locale":"en","availableLanguages":{}}',
+          npm_config_user_agent: 'npm/9.2.0 node/v18.19.1 linux x64 workspaces/false',
+          VSCODE_WSL_EXT_LOCATION: '/mnt/c/Users/Gabriel Martins/.vscode/extensions/ms-vscode-remote.remote-wsl-0.104.3',
+          VSCODE_HANDLES_UNCAUGHT_ERRORS: 'true',
+          DEBUG: 'release',
+          npm_node_execpath: '/usr/bin/node',
+          SHLVL: '1',
+          npm_config_noproxy: '',
+          HOME: '/home/martinsspn',
+          VSCODE_RECONNECTION_GRACE_TIME: '10800000',
+          VSCODE_IPC_HOOK_CLI: '/run/user/1000/vscode-ipc-01859935-9868-4202-b0f6-707fd0d40855.sock',
+          npm_package_json: '/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/package.json',
+          PAGER: 'cat',
+          LC_CTYPE: 'C.UTF-8',
+          npm_config_userconfig: '/home/martinsspn/.npmrc',
+          npm_config_local_prefix: '/home/martinsspn/dissertacao_e2e_semantico',
+          PLAYWRIGHT_JSON_OUTPUT_FILE: '/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resultados_qwen25coder_demowebshop20_20260727_01/structured_context.playwright.json',
+          NO_COLOR: '1',
+          DBUS_SESSION_BUS_ADDRESS: 'unix:path=/run/user/1000/bus',
+          COLORTERM: '',
+          WSL_DISTRO_NAME: 'Ubuntu',
+          COLOR: '0',
+          npm_config_metrics_registry: 'https://registry.npmjs.org/',
+          WAYLAND_DISPLAY: 'wayland-0',
+          CODEX_PERMISSION_PROFILE: ':workspace',
+          APPLICATION_INSIGHTS_NO_STATSBEAT: 'true',
+          RESILIENCE_TEST_DIR: '/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context_qwen25coder_demowebshop20_20260727_01',
+          LOGNAME: 'martinsspn',
+          NAME: 'Gabriel',
+          WSL_INTEROP: '/run/WSL/344_interop',
+          VSCODE_HANDLES_SIGPIPE: 'true',
+          PULSE_SERVER: 'unix:/mnt/wslg/PulseServer',
+          _: '/usr/bin/npx',
+          npm_config_prefix: '/home/martinsspn/.npm-global',
+          RUST_LOG: 'warn',
+          TERM: 'dumb',
+          npm_config_cache: '/home/martinsspn/.npm',
+          npm_config_node_gyp: '/usr/share/nodejs/node-gyp/bin/node-gyp.js',
+          PATH: '/home/martinsspn/dissertacao_e2e_semantico/node_modules/.bin:/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/node_modules/.bin:/home/martinsspn/dissertacao_e2e_semantico/python_app/node_modules/.bin:/home/martinsspn/dissertacao_e2e_semantico/node_modules/.bin:/home/martinsspn/node_modules/.bin:/home/node_modules/.bin:/node_modules/.bin:/usr/share/nodejs/@npmcli/run-script/lib/node-gyp-bin:/home/martinsspn/.local/bin:/home/martinsspn/bin:/home/martinsspn/.codex/tmp/arg0/codex-arg0jxfQSc:/home/martinsspn/.vscode-server/bin/8a7abeba6e03ea3af87bfbce9a1b7e48fed567b8/bin/remote-cli:/home/martinsspn/.local/bin:/home/martinsspn/bin:/home/martinsspn/.npm-global/bin:/home/martinsspn/.local/bin:/home/martinsspn/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/nodejs/:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Users/Gabriel Martins/AppData/Local/Programs/Python/Python312/Scripts/:/mnt/c/Users/Gabriel Martins/AppData/Local/Programs/Python/Python312/:/mnt/c/Users/Gabriel Martins/AppData/Local/Programs/Python/Launcher/:/mnt/c/Users/Gabriel Martins/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/Gabriel Martins/AppData/Roaming/npm:/mnt/c/Users/Gabriel Martins/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/Gabriel Martins/AppData/Local/GitHubDesktop/bin:/mnt/c/Users/Gabriel Martins/AppData/Local/Microsoft/WinGet/Links:/mnt/c/Users/Gabriel Martins/AppData/Local/Programs/Ollama:/snap/bin:/home/martinsspn/.vscode-server/extensions/openai.chatgpt-26.721.41059-linux-x64/bin/linux-x86_64',
+          NODE: '/usr/bin/node',
+          npm_package_name: 'dissertacao_e2e_semantico',
+          XDG_RUNTIME_DIR: '/run/user/1000/',
+          DISPLAY: ':0',
+          CODEX_SANDBOX_NETWORK_DISABLED: '1',
+          LANG: 'C.UTF-8',
+          GH_PAGER: 'cat',
+          LS_COLORS: 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:',
+          npm_lifecycle_script: 'playwright',
+          SHELL: '/bin/bash',
+          npm_package_version: '1.0.0',
+          npm_lifecycle_event: 'npx',
+          ELECTRON_RUN_AS_NODE: '1',
+          LESSCLOSE: '/usr/bin/lesspipe %s %s',
+          CODEX_THREAD_ID: '019f9511-2e6a-7542-b4bd-90f7a22d32ac',
+          PROMPT_E2E_BASE_URL: 'https://demowebshop.tricentis.com/',
+          GIT_PAGER: 'cat',
+          npm_config_globalconfig: '/etc/npmrc',
+          npm_config_init_module: '/home/martinsspn/.npm-init.js',
+          PWD: '/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts',
+          LC_ALL: 'C.UTF-8',
+          npm_config_globalignorefile: '/etc/npmignore',
+          npm_execpath: '/usr/share/nodejs/npm/bin/npx-cli.js',
+          XDG_DATA_DIRS: '/usr/local/share:/usr/share:/var/lib/snapd/desktop',
+          npm_config_global_prefix: '/home/martinsspn/.npm-global',
+          npm_command: 'exec',
+          WSL2_GUI_APPS_ENABLED: '1',
+          HOSTTYPE: 'x86_64',
+          WSLENV: 'VSCODE_WSL_EXT_LOCATION/up',
+          INIT_CWD: '/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts',
+          EDITOR: 'vi',
+          PLAYWRIGHT_TEST: '1',
+          FORCE_COLOR: '1',
+          DEBUG_COLORS: '1',
+          TEST_WORKER_INDEX: '5',
+          TEST_PARALLEL_INDEX: '0'
+        },
+        inspectCustom: Symbol(nodejs.util.inspect.custom),
+        isDebugMode: [Function: isDebugMode],
+        isJSDebuggerAttached: [Function: isJSDebuggerAttached],
+        isLogEnabled: [Function: isLogEnabled],
+        isUnderTest: [Function: isUnderTest],
+        log: [Function: log],
+        path: [Function: path],
+        pathSeparator: '/',
+        showInternalStackFrames: [Function: showInternalStackFrames],
+        streamFile: [AsyncFunction: streamFile],
+        streamReadable: [Function: streamReadable],
+        streamWritable: [Function: streamWritable],
+        zones: { current: [Function: current], empty: [_NodeZone] }
+      },
+      on: [Function: addListener],
+      off: [Function: removeListener],
+      _objects: Map(3) {
+        'frame@6c5b10d1350d2fd89754be60c696446f' => _Frame {
+          _events: [Object: null prototype] {},
+          _eventsCount: 0,
+          _maxListeners: 0,
+          _pendingHandlers: Map(0) {},
+          _platform: [Object],
+          on: [Function: addListener],
+          off: [Function: removeListener],
+          _objects: Map(0) {},
+          _eventToSubscriptionMapping: Map(0) {},
+          _wasCollected: false,
+          _connection: [Connection],
+          _type: 'Frame',
+          _guid: 'frame@6c5b10d1350d2fd89754be60c696446f',
+          _parent: [Circular *1],
+          _instrumentation: {},
+          _logger: undefined,
+          _channel: [EventEmitter3],
+          _initializer: [Object],
+          _parentFrame: null,
+          _url: 'https://demowebshop.tricentis.com/register',
+          _name: '',
+          _detached: false,
+          _childFrames: Set(0) {},
+          _eventEmitter: [EventEmitter3],
+          _loadStates: [Set],
+          _page: [Circular *1]
+        },
+        'request@c4b2107cdcf461e799159a7115ea55a3' => _Request {
+          _events: [Object: null prototype] {},
+          _eventsCount: 0,
+          _maxListeners: 0,
+          _pendingHandlers: Map(0) {},
+          _platform: [Object],
+          on: [Function: addListener],
+          off: [Function: removeListener],
+          _objects: [Map],
+          _eventToSubscriptionMapping: Map(0) {},
+          _wasCollected: false,
+          _connection: [Connection],
+          _type: 'Request',
+          _guid: 'request@c4b2107cdcf461e799159a7115ea55a3',
+          _parent: [Circular *1],
+          _instrumentation: {},
+          _logger: undefined,
+          _channel: [EventEmitter3],
+          _initializer: [Object],
+          _redirectedFrom: null,
+          _redirectedTo: null,
+          _failureText: null,
+          _response: [_Response],
+          _fallbackOverrides: {},
+          _provisionalHeaders: [_RawHeaders],
+          _timing: [Object]
+        },
+        'request@92e9ba7ec0ea6f08db36f8b36d5779fb' => _Request {
+          _events: [Object: null prototype] {},
+          _eventsCount: 0,
+          _maxListeners: 0,
+          _pendingHandlers: Map(0) {},
+          _platform: [Object],
+          on: [Function: addListener],
+          off: [Function: removeListener],
+          _objects: [Map],
+          _eventToSubscriptionMapping: Map(0) {},
+          _wasCollected: false,
+          _connection: [Connection],
+          _type: 'Request',
+          _guid: 'request@92e9ba7ec0ea6f08db36f8b36d5779fb',
+          _parent: [Circular *1],
+          _instrumentation: {},
+          _logger: undefined,
+          _channel: [EventEmitter3],
+          _initializer: [Object],
+          _redirectedFrom: null,
+          _redirectedTo: null,
+          _failureText: null,
+          _response: [_Response],
+          _fallbackOverrides: {},
+          _provisionalHeaders: [_RawHeaders],
+          _timing: [Object]
+        }
+      },
+      _eventToSubscriptionMapping: Map(7) {
+        'console' => 'console',
+        'dialog' => 'dialog',
+        'request' => 'request',
+        'response' => 'response',
+        'requestfinished' => 'requestFinished',
+        'requestfailed' => 'requestFailed',
+        'filechooser' => 'fileChooser'
+      },
+      _wasCollected: false,
+      _connection: <ref *2> Connection {
+        _events: [Object: null prototype] {},
+        _eventsCount: 0,
+        _maxListeners: undefined,
+        _pendingHandlers: Map(0) {},
+        _platform: {
+          name: 'node',
+          boxedStackPrefixes: [Function: boxedStackPrefixes],
+          calculateSha1: [Function: calculateSha1],
+          colors: [Object],
+          coreDir: '/home/martinsspn/dissertacao_e2e_semantico/node_modules/playwright-core',
+          createGuid: [Function: createGuid],
+          defaultMaxListeners: [Function: defaultMaxListeners],
+          fs: [Function: fs],
+          env: [Object],
+          inspectCustom: Symbol(nodejs.util.inspect.custom),
+          isDebugMode: [Function: isDebugMode],
+          isJSDebuggerAttached: [Function: isJSDebuggerAttached],
+          isLogEnabled: [Function: isLogEnabled],
+          isUnderTest: [Function: isUnderTest],
+          log: [Function: log],
+          path: [Function: path],
+          pathSeparator: '/',
+          showInternalStackFrames: [Function: showInternalStackFrames],
+          streamFile: [AsyncFunction: streamFile],
+          streamReadable: [Function: streamReadable],
+          streamWritable: [Function: streamWritable],
+          zones: [Object]
+        },
+        on: [Function: addListener],
+        off: [Function: removeListener],
+        _objects: Map(19) {
+          '' => [Root],
+          'browser-type@155a53b3e8c1c477e171248ed2b267eb' => [BrowserType2],
+          'browser-type@ecd368929601958aafe0587671bcd504' => [BrowserType2],
+          'browser-type@47f4098a969c8a5bf675d422ca379fca' => [BrowserType2],
+          'android@16ba60288900d3f6b33eea30c4e61e7b' => [Android2],
+          'electron@e59659d2686475144ca2ced3befe247b' => [Electron2],
+          'localUtils' => [LocalUtils],
+          'Playwright' => [Playwright2],
+          'browser@21c3803f813e650b4825f80e8b47a80d' => [Browser2],
+          'debugger@f0be7a0ad41f9a5d2ae09326e5e4c297' => [Debugger2],
+          'tracing@b7d926b24588f8ec2dfa9669469ff3e2' => [Tracing2],
+          'request-context@b18d4b22a634c9e80820fa94f6221f04' => [APIRequestContext2],
+          'browser-context@60ef86f1288cdbbf7646a956e7235d6e' => [_BrowserContext],
+          'frame@6c5b10d1350d2fd89754be60c696446f' => [_Frame],
+          'page@5632e02461d20a8d91eb09ce0a5b26bf' => [Circular *1],
+          'request@c4b2107cdcf461e799159a7115ea55a3' => [_Request],
+          'response@2a6e9d69394bb2efa35da468038ac686' => [_Response],
+          'request@92e9ba7ec0ea6f08db36f8b36d5779fb' => [_Request],
+          'response@79b68045e66fe6bda2e060f56da0b42b' => [_Response]
+        },
+        onmessage: [Function (anonymous)],
+        _lastId: 12,
+        _callbacks: Map(0) {},
+        _isRemote: false,
+        _rawBuffers: true,
+        _tracingCount: 0,
+        _objectFactories: Map(32) {
+          'Android' => [Function: Android],
+          'AndroidDevice' => [Function: AndroidDevice],
+          'AndroidSocket' => [Function: AndroidSocket],
+          'APIRequestContext' => [Function: APIRequestContext],
+          'Artifact' => [Function: Artifact],
+          'BindingCall' => [Function: BindingCall],
+          'Browser' => [Function: Browser],
+          'BrowserContext' => [Function: BrowserContext],
+          'BrowserType' => [Function: BrowserType],
+          'CDPSession' => [Function: CDPSession],
+          'Debugger' => [Function: Debugger],
+          'Dialog' => [Function: Dialog],
+          'Disposable' => [Function: Disposable],
+          'Electron' => [Function: Electron],
+          'ElectronApplication' => [Function: ElectronApplication],
+          'ElementHandle' => [Function: ElementHandle],
+          'Frame' => [Function: Frame],
+          'JSHandle' => [Function: JSHandle],
+          'JsonPipe' => [Function: JsonPipe],
+          'LocalUtils' => [Function: LocalUtils],
+          'Page' => [Function: Page],
+          'Playwright' => [Function: Playwright],
+          'Request' => [Function: Request],
+          'Response' => [Function: Response],
+          'Route' => [Function: Route],
+          'Stream' => [Function: Stream],
+          'SocksSupport' => [Function: SocksSupport],
+          'Tracing' => [Function: Tracing],
+          'WebSocket' => [Function: WebSocket],
+          'WebSocketRoute' => [Function: WebSocketRoute],
+          'Worker' => [Function: Worker],
+          'WritableStream' => [Function: WritableStream]
+        },
+        _instrumentation: {},
+        _localUtils: LocalUtils {
+          _events: [Object: null prototype] {},
+          _eventsCount: 0,
+          _maxListeners: 0,
+          _pendingHandlers: Map(0) {},
+          _platform: [Object],
+          on: [Function: addListener],
+          off: [Function: removeListener],
+          _objects: Map(0) {},
+          _eventToSubscriptionMapping: Map(0) {},
+          _wasCollected: false,
+          _connection: [Circular *2],
+          _type: 'LocalUtils',
+          _guid: 'localUtils',
+          _parent: [Root],
+          _instrumentation: {},
+          _logger: undefined,
+          _channel: [EventEmitter3],
+          _initializer: [Object],
+          devices: [Object]
+        },
+        _rootObject: Root {
+          _events: [Object: null prototype] {},
+          _eventsCount: 0,
+          _maxListeners: 0,
+          _pendingHandlers: Map(0) {},
+          _platform: [Object],
+          on: [Function: addListener],
+          off: [Function: removeListener],
+          _objects: [Map],
+          _eventToSubscriptionMapping: Map(0) {},
+          _wasCollected: false,
+          _connection: [Circular *2],
+          _type: 'Root',
+          _guid: '',
+          _parent: undefined,
+          _instrumentation: {},
+          _channel: [EventEmitter3],
+          _initializer: {}
+        },
+        headers: [],
+        toImpl: [Function (anonymous)]
+      },
+      _type: 'Page',
+      _guid: 'page@5632e02461d20a8d91eb09ce0a5b26bf',
+      _parent: <ref *3> _BrowserContext {
+        _events: [Object: null prototype] { close: [Array] },
+        _eventsCount: 1,
+        _maxListeners: 0,
+        _pendingHandlers: Map(0) {},
+        _platform: {
+          name: 'node',
+          boxedStackPrefixes: [Function: boxedStackPrefixes],
+          calculateSha1: [Function: calculateSha1],
+          colors: [Object],
+          coreDir: '/home/martinsspn/dissertacao_e2e_semantico/node_modules/playwright-core',
+          createGuid: [Function: createGuid],
+          defaultMaxListeners: [Function: defaultMaxListeners],
+          fs: [Function: fs],
+          env: [Object],
+          inspectCustom: Symbol(nodejs.util.inspect.custom),
+          isDebugMode: [Function: isDebugMode],
+          isJSDebuggerAttached: [Function: isJSDebuggerAttached],
+          isLogEnabled: [Function: isLogEnabled],
+          isUnderTest: [Function: isUnderTest],
+          log: [Function: log],
+          path: [Function: path],
+          pathSeparator: '/',
+          showInternalStackFrames: [Function: showInternalStackFrames],
+          streamFile: [AsyncFunction: streamFile],
+          streamReadable: [Function: streamReadable],
+          streamWritable: [Function: streamWritable],
+          zones: [Object]
+        },
+        on: [Function: addListener],
+        off: [Function: removeListener],
+        _objects: Map(4) {
+          'debugger@f0be7a0ad41f9a5d2ae09326e5e4c297' => [Debugger2],
+          'request-context@b18d4b22a634c9e80820fa94f6221f04' => [APIRequestContext2],
+          'tracing@b7d926b24588f8ec2dfa9669469ff3e2' => [Tracing2],
+          'page@5632e02461d20a8d91eb09ce0a5b26bf' => [Circular *1]
+        },
+        _eventToSubscriptionMapping: Map(6) {
+          'console' => 'console',
+          'dialog' => 'dialog',
+          'request' => 'request',
+          'response' => 'response',
+          'requestfinished' => 'requestFinished',
+          'requestfailed' => 'requestFailed'
+        },
+        _wasCollected: false,
+        _connection: <ref *2> Connection {
+          _events: [Object: null prototype] {},
+          _eventsCount: 0,
+          _maxListeners: undefined,
+          _pendingHandlers: Map(0) {},
+          _platform: [Object],
+          on: [Function: addListener],
+          off: [Function: removeListener],
+          _objects: [Map],
+          onmessage: [Function (anonymous)],
+          _lastId: 12,
+          _callbacks: Map(0) {},
+          _isRemote: false,
+          _rawBuffers: true,
+          _tracingCount: 0,
+          _objectFactories: [Map],
+          _instrumentation: {},
+          _localUtils: [LocalUtils],
+          _rootObject: [Root],
+          headers: [],
+          toImpl: [Function (anonymous)]
+        },
+        _type: 'BrowserContext',
+        _guid: 'browser-context@60ef86f1288cdbbf7646a956e7235d6e',
+        _parent: Browser2 {
+          _events: [Object: null prototype],
+          _eventsCount: 1,
+          _maxListeners: 0,
+          _pendingHandlers: Map(0) {},
+          _platform: [Object],
+          on: [Function: addListener],
+          off: [Function: removeListener],
+          _objects: [Map],
+          _eventToSubscriptionMapping: Map(0) {},
+          _wasCollected: false,
+          _connection: [Connection],
+          _type: 'Browser',
+          _guid: 'browser@21c3803f813e650b4825f80e8b47a80d',
+          _parent: [BrowserType2],
+          _instrumentation: {},
+          _logger: undefined,
+          _channel: [EventEmitter3],
+          _initializer: [Object],
+          _contexts: [Set],
+          _isConnected: true,
+          _shouldCloseConnectionOnClose: false,
+          _options: [Object],
+          _name: 'chromium',
+          _browserName: 'chromium',
+          _closedPromise: [Promise],
+          _browserType: [BrowserType2]
+        },
+        _instrumentation: {},
+        _logger: undefined,
+        _channel: EventEmitter3 {
+          _events: [Object: null prototype],
+          _eventsCount: 14,
+          _maxListeners: undefined,
+          _pendingHandlers: Map(0) {},
+          _platform: [Object],
+          on: [Function: addListener],
+          off: [Function: removeListener],
+          _object: [Circular *3]
+        },
+        _initializer: {
+          debugger: [EventEmitter3],
+          requestContext: [EventEmitter3],
+          tracing: [EventEmitter3],
+          options: [Object]
+        },
+        _pages: Set(1) { [Circular *1] },
+        _routes: [],
+        _webSocketRoutes: [],
+        _browser: Browser2 {
+          _events: [Object: null prototype],
+          _eventsCount: 1,
+          _maxListeners: 0,
+          _pendingHandlers: Map(0) {},
+          _platform: [Object],
+          on: [Function: addListener],
+          off: [Function: removeListener],
+          _objects: [Map],
+          _eventToSubscriptionMapping: Map(0) {},
+          _wasCollected: false,
+          _connection: [Connection],
+          _type: 'Browser',
+          _guid: 'browser@21c3803f813e650b4825f80e8b47a80d',
+          _parent: [BrowserType2],
+          _instrumentation: {},
+          _logger: undefined,
+          _channel: [EventEmitter3],
+          _initializer: [Object],
+          _contexts: [Set],
+          _isConnected: true,
+          _shouldCloseConnectionOnClose: false,
+          _options: [Object],
+          _name: 'chromium',
+          _browserName: 'chromium',
+          _closedPromise: [Promise],
+          _browserType: [BrowserType2]
+        },
+        _bindings: Map(0) {},
+        _forReuse: false,
+        _serviceWorkers: Set(0) {},
+        _closingStatus: 'none',
+        _harRouters: [],
+        _options: {
+          noDefaultViewport: false,
+          viewport: [Object],
+          ignoreHTTPSErrors: true,
+          javaScriptEnabled: true,
+          bypassCSP: false,
+          locale: 'en-US',
+          offline: false,
+          isMobile: false,
+          hasTouch: false,
+          colorScheme: 'light',
+          acceptDownloads: 'accept',
+          baseURL: 'https://demowebshop.tricentis.com/',
+          serviceWorkers: 'allow',
+          selectorEngines: [],
+          testIdAttributeName: 'data-testid'
+        },
+        _timeoutSettings: TimeoutSettings {
+          _parent: undefined,
+          _platform: [Object],
+          _defaultTimeout: 10000,
+          _defaultNavigationTimeout: 15000
+        },
+        debugger: Debugger2 {
+          _events: [Object: null prototype],
+          _eventsCount: 1,
+          _maxListeners: 0,
+          _pendingHandlers: Map(0) {},
+          _platform: [Object],
+          on: [Function: addListener],
+          off: [Function: removeListener],
+          _objects: Map(0) {},
+          _eventToSubscriptionMapping: Map(0) {},
+          _wasCollected: false,
+          _connection: [Connection],
+          _type: 'Debugger',
+          _guid: 'debugger@f0be7a0ad41f9a5d2ae09326e5e4c297',
+          _parent: [Circular *3],
+          _instrumentation: {},
+          _logger: undefined,
+          _channel: [EventEmitter3],
+          _initializer: {},
+          _pausedDetails: null
+        },
+        tracing: Tracing2 {
+          _events: [Object: null prototype] {},
+          _eventsCount: 0,
+          _maxListeners: 0,
+          _pendingHandlers: Map(0) {},
+          _platform: [Object],
+          on: [Function: addListener],
+          off: [Function: removeListener],
+          _objects: Map(0) {},
+          _eventToSubscriptionMapping: Map(0) {},
+          _wasCollected: false,
+          _connection: [Connection],
+          _type: 'Tracing',
+          _guid: 'tracing@b7d926b24588f8ec2dfa9669469ff3e2',
+          _parent: [Circular *3],
+          _instrumentation: {},
+          _logger: undefined,
+          _channel: [EventEmitter3],
+          _initializer: {},
+          _includeSources: false,
+          _additionalSources: Set(0) {},
+          _isLive: false,
+          _isTracing: false,
+          _harRecorders: Map(0) {},
+          _tracesDir: '/tmp/avaliacao-prompts-playwright/.playwright-artifacts-5/traces'
+        },
+        request: APIRequestContext2 {
+          _events: [Object: null prototype] {},
+          _eventsCount: 0,
+          _maxListeners: 0,
+          _pendingHandlers: Map(0) {},
+          _platform: [Object],
+          on: [Function: addListener],
+          off: [Function: removeListener],
+          _objects: Map(0) {},
+          _eventToSubscriptionMapping: Map(0) {},
+          _wasCollected: false,
+          _connection: [Connection],
+          _type: 'APIRequestContext',
+          _guid: 'request-context@b18d4b22a634c9e80820fa94f6221f04',
+          _parent: [Circular *3],
+          _instrumentation: {},
+          _logger: undefined,
+          _channel: [EventEmitter3],
+          _initializer: [Object],
+          tracing: [Tracing2],
+          _timeoutSettings: [TimeoutSettings]
+        },
+        clock: Clock2 { _browserContext: [Circular *3] },
+        credentials: Credentials2 { _browserContext: [Circular *3] },
+        _closedPromise: Promise {
+          <pending>,
+          [Symbol(async_id_symbol)]: 474,
+          [Symbol(trigger_async_id_symbol)]: 464,
+          [Symbol(kResourceStore)]: [_Zone]
+        }
+      },
+      _instrumentation: {},
+      _logger: undefined,
+      _channel: EventEmitter3 {
+        _events: [Object: null prototype] {
+          screencastFrame: [Function (anonymous)],
+          bindingCall: [Function (anonymous)],
+          close: [Function (anonymous)],
+          crash: [Function (anonymous)],
+          download: [Function (anonymous)],
+          fileChooser: [Function (anonymous)],
+          frameAttached: [Function (anonymous)],
+          frameDetached: [Function (anonymous)],
+          locatorHandlerTriggered: [Function (anonymous)],
+          route: [Function (anonymous)],
+          webSocketRoute: [Function (anonymous)],
+          viewportSizeChanged: [Function (anonymous)],
+          webSocket: [Function (anonymous)],
+          worker: [Function (anonymous)]
+        },
+        _eventsCount: 14,
+        _maxListeners: undefined,
+        _pendingHandlers: Map(0) {},
+        _platform: {
+          name: 'node',
+          boxedStackPrefixes: [Function: boxedStackPrefixes],
+          calculateSha1: [Function: calculateSha1],
+          colors: [Object],
+          coreDir: '/home/martinsspn/dissertacao_e2e_semantico/node_modules/playwright-core',
+          createGuid: [Function: createGuid],
+          defaultMaxListeners: [Function: defaultMaxListeners],
+          fs: [Function: fs],
+          env: [Object],
+          inspectCustom: Symbol(nodejs.util.inspect.custom),
+          isDebugMode: [Function: isDebugMode],
+          isJSDebuggerAttached: [Function: isJSDebuggerAttached],
+          isLogEnabled: [Function: isLogEnabled],
+          isUnderTest: [Function: isUnderTest],
+          log: [Function: log],
+          path: [Function: path],
+          pathSeparator: '/',
+          showInternalStackFrames: [Function: showInternalStackFrames],
+          streamFile: [AsyncFunction: streamFile],
+          streamReadable: [Function: streamReadable],
+          streamWritable: [Function: streamWritable],
+          zones: [Object]
+        },
+        on: [Function: addListener],
+        off: [Function: removeListener],
+        _object: [Circular *1]
+      },
+      _initializer: {
+        mainFrame: EventEmitter3 {
+          _events: [Object: null prototype],
+          _eventsCount: 2,
+          _maxListeners: undefined,
+          _pendingHandlers: Map(0) {},
+          _platform: [Object],
+          on: [Function: addListener],
+          off: [Function: removeListener],
+          _object: [_Frame]
+        },
+        viewportSize: { width: 1280, height: 720 },
+        isClosed: false
+      },
+      _apiName: 'Page',
+      _frames: Set(1) {
+        _Frame {
+          _events: [Object: null prototype] {},
+          _eventsCount: 0,
+          _maxListeners: 0,
+          _pendingHandlers: Map(0) {},
+          _platform: [Object],
+          on: [Function: addListener],
+          off: [Function: removeListener],
+          _objects: Map(0) {},
+          _eventToSubscriptionMapping: Map(0) {},
+          _wasCollected: false,
+          _connection: [Connection],
+          _type: 'Frame',
+          _guid: 'frame@6c5b10d1350d2fd89754be60c696446f',
+          _parent: [Circular *1],
+          _instrumentation: {},
+          _logger: undefined,
+          _channel: [EventEmitter3],
+          _initializer: [Object],
+          _parentFrame: null,
+          _url: 'https://demowebshop.tricentis.com/register',
+          _name: '',
+          _detached: false,
+          _childFrames: Set(0) {},
+          _eventEmitter: [EventEmitter3],
+          _loadStates: [Set],
+          _page: [Circular *1]
+        }
+      },
+      _workers: Set(0) {},
+      _closed: false,
+      _closedOrCrashedScope: LongStandingScope { _terminatePromises: Map(0) {}, _isClosed: false },
+      _routes: [],
+      _webSocketRoutes: [],
+      _bindings: Map(0) {},
+      _closeWasCalled: false,
+      _harRouters: [],
+      _locatorHandlers: Map(0) {},
+      _browserContext: <ref *3> _BrowserContext {
+        _events: [Object: null prototype] { close: [Array] },
+        _eventsCount: 1,
+        _maxListeners: 0,
+        _pendingHandlers: Map(0) {},
+        _platform: {
+          name: 'node',
+          boxedStackPrefixes: [Function: boxedStackPrefixes],
+          calculateSha1: [Function: calculateSha1],
+          colors: [Object],
+          coreDir: '/home/martinsspn/dissertacao_e2e_semantico/node_modules/playwright-core',
+          createGuid: [Function: createGuid],
+          defaultMaxListeners: [Function: defaultMaxListeners],
+          fs: [Function: fs],
+          env: [Object],
+          inspectCustom: Symbol(nodejs.util.inspect.custom),
+          isDebugMode: [Function: isDebugMode],
+          isJSDebuggerAttached: [Function: isJSDebuggerAttached],
+          isLogEnabled: [Function: isLogEnabled],
+          isUnderTest: [Function: isUnderTest],
+          log: [Function: log],
+          path: [Function: path],
+          pathSeparator: '/',
+          showInternalStackFrames: [Function: showInternalStackFrames],
+          streamFile: [AsyncFunction: streamFile],
+          streamReadable: [Function: streamReadable],
+          streamWritable: [Function: streamWritable],
+          zones: [Object]
+        },
+        on: [Function: addListener],
+        off: [Function: removeListener],
+        _objects: Map(4) {
+          'debugger@f0be7a0ad41f9a5d2ae09326e5e4c297' => [Debugger2],
+          'request-context@b18d4b22a634c9e80820fa94f6221f04' => [APIRequestContext2],
+          'tracing@b7d926b24588f8ec2dfa9669469ff3e2' => [Tracing2],
+          'page@5632e02461d20a8d91eb09ce0a5b26bf' => [Circular *1]
+        },
+        _eventToSubscriptionMapping: Map(6) {
+          'console' => 'console',
+          'dialog' => 'dialog',
+          'request' => 'request',
+          'response' => 'response',
+          'requestfinished' => 'requestFinished',
+          'requestfailed' => 'requestFailed'
+        },
+        _wasCollected: false,
+        _connection: <ref *2> Connection {
+          _events: [Object: null prototype] {},
+          _eventsCount: 0,
+          _maxListeners: undefined,
+          _pendingHandlers: Map(0) {},
+          _platform: [Object],
+          on: [Function: addListener],
+          off: [Function: removeListener],
+          _objects: [Map],
+          onmessage: [Function (anonymous)],
+          _lastId: 12,
+          _callbacks: Map(0) {},
+          _isRemote: false,
+          _rawBuffers: true,
+          _tracingCount: 0,
+          _objectFactories: [Map],
+          _instrumentation: {},
+          _localUtils: [LocalUtils],
+          _rootObject: [Root],
+          headers: [],
+          toImpl: [Function (anonymous)]
+        },
+        _type: 'BrowserContext',
+        _guid: 'browser-context@60ef86f1288cdbbf7646a956e7235d6e',
+        _parent: Browser2 {
+          _events: [Object: null prototype],
+          _eventsCount: 1,
+          _maxListeners: 0,
+          _pendingHandlers: Map(0) {},
+          _platform: [Object],
+          on: [Function: addListener],
+          off: [Function: removeListener],
+          _objects: [Map],
+          _eventToSubscriptionMapping: Map(0) {},
+          _wasCollected: false,
+          _connection: [Connection],
+          _type: 'Browser',
+          _guid: 'browser@21c3803f813e650b4825f80e8b47a80d',
+          _parent: [BrowserType2],
+          _instrumentation: {},
+          _logger: undefined,
+          _channel: [EventEmitter3],
+          _initializer: [Object],
+          _contexts: [Set],
+          _isConnected: true,
+          _shouldCloseConnectionOnClose: false,
+          _options: [Object],
+          _name: 'chromium',
+          _browserName: 'chromium',
+          _closedPromise: [Promise],
+          _browserType: [BrowserType2]
+        },
+        _instrumentation: {},
+        _logger: undefined,
+        _channel: EventEmitter3 {
+          _events: [Object: null prototype],
+          _eventsCount: 14,
+          _maxListeners: undefined,
+          _pendingHandlers: Map(0) {},
+          _platform: [Object],
+          on: [Function: addListener],
+          off: [Function: removeListener],
+          _object: [Circular *3]
+        },
+        _initializer: {
+          debugger: [EventEmitter3],
+          requestContext: [EventEmitter3],
+          tracing: [EventEmitter3],
+          options: [Object]
+        },
+        _pages: Set(1) { [Circular *1] },
+        _routes: [],
+        _webSocketRoutes: [],
+        _browser: Browser2 {
+          _events: [Object: null prototype],
+          _eventsCount: 1,
+          _maxListeners: 0,
+          _pendingHandlers: Map(0) {},
+          _platform: [Object],
+          on: [Function: addListener],
+          off: [Function: removeListener],
+          _objects: [Map],
+          _eventToSubscriptionMapping: Map(0) {},
+          _wasCollected: false,
+          _connection: [Connection],
+          _type: 'Browser',
+          _guid: 'browser@21c3803f813e650b4825f80e8b47a80d',
+          _parent: [BrowserType2],
+          _instrumentation: {},
+          _logger: undefined,
+          _channel: [EventEmitter3],
+          _initializer: [Object],
+          _contexts: [Set],
+          _isConnected: true,
+          _shouldCloseConnectionOnClose: false,
+          _options: [Object],
+          _name: 'chromium',
+          _browserName: 'chromium',
+          _closedPromise: [Promise],
+          _browserType: [BrowserType2]
+        },
+        _bindings: Map(0) {},
+        _forReuse: false,
+        _serviceWorkers: Set(0) {},
+        _closingStatus: 'none',
+        _harRouters: [],
+        _options: {
+          noDefaultViewport: false,
+          viewport: [Object],
+          ignoreHTTPSErrors: true,
+          javaScriptEnabled: true,
+          bypassCSP: false,
+          locale: 'en-US',
+          offline: false,
+          isMobile: false,
+          hasTouch: false,
+          colorScheme: 'light',
+          acceptDownloads: 'accept',
+          baseURL: 'https://demowebshop.tricentis.com/',
+          serviceWorkers: 'allow',
+          selectorEngines: [],
+          testIdAttributeName: 'data-testid'
+        },
+        _timeoutSettings: TimeoutSettings {
+          _parent: undefined,
+          _platform: [Object],
+          _defaultTimeout: 10000,
+          _defaultNavigationTimeout: 15000
+        },
+        debugger: Debugger2 {
+          _events: [Object: null prototype],
+          _eventsCount: 1,
+          _maxListeners: 0,
+          _pendingHandlers: Map(0) {},
+          _platform: [Object],
+          on: [Function: addListener],
+          off: [Function: removeListener],
+          _objects: Map(0) {},
+          _eventToSubscriptionMapping: Map(0) {},
+          _wasCollected: false,
+          _connection: [Connection],
+          _type: 'Debugger',
+          _guid: 'debugger@f0be7a0ad41f9a5d2ae09326e5e4c297',
+          _parent: [Circular *3],
+          _instrumentation: {},
+          _logger: undefined,
+          _channel: [EventEmitter3],
+          _initializer: {},
+          _pausedDetails: null
+        },
+        tracing: Tracing2 {
+          _events: [Object: null prototype] {},
+          _eventsCount: 0,
+          _maxListeners: 0,
+          _pendingHandlers: Map(0) {},
+          _platform: [Object],
+          on: [Function: addListener],
+          off: [Function: removeListener],
+          _objects: Map(0) {},
+          _eventToSubscriptionMapping: Map(0) {},
+          _wasCollected: false,
+          _connection: [Connection],
+          _type: 'Tracing',
+          _guid: 'tracing@b7d926b24588f8ec2dfa9669469ff3e2',
+          _parent: [Circular *3],
+          _instrumentation: {},
+          _logger: undefined,
+          _channel: [EventEmitter3],
+          _initializer: {},
+          _includeSources: false,
+          _additionalSources: Set(0) {},
+          _isLive: false,
+          _isTracing: false,
+          _harRecorders: Map(0) {},
+          _tracesDir: '/tmp/avaliacao-prompts-playwright/.playwright-artifacts-5/traces'
+        },
+        request: APIRequestContext2 {
+          _events: [Object: null prototype] {},
+          _eventsCount: 0,
+          _maxListeners: 0,
+          _pendingHandlers: Map(0) {},
+          _platform: [Object],
+          on: [Function: addListener],
+          off: [Function: removeListener],
+          _objects: Map(0) {},
+          _eventToSubscriptionMapping: Map(0) {},
+          _wasCollected: false,
+          _connection: [Connection],
+          _type: 'APIRequestContext',
+          _guid: 'request-context@b18d4b22a634c9e80820fa94f6221f04',
+          _parent: [Circular *3],
+          _instrumentation: {},
+          _logger: undefined,
+          _channel: [EventEmitter3],
+          _initializer: [Object],
+          tracing: [Tracing2],
+          _timeoutSettings: [TimeoutSettings]
+        },
+        clock: Clock2 { _browserContext: [Circular *3] },
+        credentials: Credentials2 { _browserContext: [Circular *3] },
+        _closedPromise: Promise {
+          <pending>,
+          [Symbol(async_id_symbol)]: 474,
+          [Symbol(trigger_async_id_symbol)]: 464,
+          [Symbol(kResourceStore)]: [_Zone]
+        }
+      },
+      _timeoutSettings: TimeoutSettings {
+        _parent: TimeoutSettings {
+          _parent: undefined,
+          _platform: [Object],
+          _defaultTimeout: 10000,
+          _defaultNavigationTimeout: 15000
+        },
+        _platform: {
+          name: 'node',
+          boxedStackPrefixes: [Function: boxedStackPrefixes],
+          calculateSha1: [Function: calculateSha1],
+          colors: [Object],
+          coreDir: '/home/martinsspn/dissertacao_e2e_semantico/node_modules/playwright-core',
+          createGuid: [Function: createGuid],
+          defaultMaxListeners: [Function: defaultMaxListeners],
+          fs: [Function: fs],
+          env: [Object],
+          inspectCustom: Symbol(nodejs.util.inspect.custom),
+          isDebugMode: [Function: isDebugMode],
+          isJSDebuggerAttached: [Function: isJSDebuggerAttached],
+          isLogEnabled: [Function: isLogEnabled],
+          isUnderTest: [Function: isUnderTest],
+          log: [Function: log],
+          path: [Function: path],
+          pathSeparator: '/',
+          showInternalStackFrames: [Function: showInternalStackFrames],
+          streamFile: [AsyncFunction: streamFile],
+          streamReadable: [Function: streamReadable],
+          streamWritable: [Function: streamWritable],
+          zones: [Object]
+        }
+      },
+      keyboard: Keyboard2 { _page: [Circular *1] },
+      mouse: Mouse2 { _page: [Circular *1] },
+      request: <ref *4> APIRequestContext2 {
+        _events: [Object: null prototype] {},
+        _eventsCount: 0,
+        _maxListeners: 0,
+        _pendingHandlers: Map(0) {},
+        _platform: {
+          name: 'node',
+          boxedStackPrefixes: [Function: boxedStackPrefixes],
+          calculateSha1: [Function: calculateSha1],
+          colors: [Object],
+          coreDir: '/home/martinsspn/dissertacao_e2e_semantico/node_modules/playwright-core',
+          createGuid: [Function: createGuid],
+          defaultMaxListeners: [Function: defaultMaxListeners],
+          fs: [Function: fs],
+          env: [Object],
+          inspectCustom: Symbol(nodejs.util.inspect.custom),
+          isDebugMode: [Function: isDebugMode],
+          isJSDebuggerAttached: [Function: isJSDebuggerAttached],
+          isLogEnabled: [Function: isLogEnabled],
+          isUnderTest: [Function: isUnderTest],
+          log: [Function: log],
+          path: [Function: path],
+          pathSeparator: '/',
+          showInternalStackFrames: [Function: showInternalStackFrames],
+          streamFile: [AsyncFunction: streamFile],
+          streamReadable: [Function: streamReadable],
+          streamWritable: [Function: streamWritable],
+          zones: [Object]
+        },
+        on: [Function: addListener],
+        off: [Function: removeListener],
+        _objects: Map(0) {},
+        _eventToSubscriptionMapping: Map(0) {},
+        _wasCollected: false,
+        _connection: <ref *2> Connection {
+          _events: [Object: null prototype] {},
+          _eventsCount: 0,
+          _maxListeners: undefined,
+          _pendingHandlers: Map(0) {},
+          _platform: [Object],
+          on: [Function: addListener],
+          off: [Function: removeListener],
+          _objects: [Map],
+          onmessage: [Function (anonymous)],
+          _lastId: 12,
+          _callbacks: Map(0) {},
+          _isRemote: false,
+          _rawBuffers: true,
+          _tracingCount: 0,
+          _objectFactories: [Map],
+          _instrumentation: {},
+          _localUtils: [LocalUtils],
+          _rootObject: [Root],
+          headers: [],
+          toImpl: [Function (anonymous)]
+        },
+        _type: 'APIRequestContext',
+        _guid: 'request-context@b18d4b22a634c9e80820fa94f6221f04',
+        _parent: <ref *3> _BrowserContext {
+          _events: [Object: null prototype],
+          _eventsCount: 1,
+          _maxListeners: 0,
+          _pendingHandlers: Map(0) {},
+          _platform: [Object],
+          on: [Function: addListener],
+          off: [Function: removeListener],
+          _objects: [Map],
+          _eventToSubscriptionMapping: [Map],
+          _wasCollected: false,
+          _connection: [Connection],
+          _type: 'BrowserContext',
+          _guid: 'browser-context@60ef86f1288cdbbf7646a956e7235d6e',
+          _parent: [Browser2],
+          _instrumentation: {},
+          _logger: undefined,
+          _channel: [EventEmitter3],
+          _initializer: [Object],
+          _pages: [Set],
+          _routes: [],
+          _webSocketRoutes: [],
+          _browser: [Browser2],
+          _bindings: Map(0) {},
+          _forReuse: false,
+          _serviceWorkers: Set(0) {},
+          _closingStatus: 'none',
+          _harRouters: [],
+          _options: [Object],
+          _timeoutSettings: [TimeoutSettings],
+          debugger: [Debugger2],
+          tracing: [Tracing2],
+          request: [Circular *4],
+          clock: [Clock2],
+          credentials: [Credentials2],
+          _closedPromise: [Promise]
+        },
+        _instrumentation: {},
+        _logger: undefined,
+        _channel: EventEmitter3 {
+          _events: [Object: null prototype] {},
+          _eventsCount: 0,
+          _maxListeners: undefined,
+          _pendingHandlers: Map(0) {},
+          _platform: [Object],
+          on: [Function: addListener],
+          off: [Function: removeListener],
+          _object: [Circular *4]
+        },
+        _initializer: { tracing: [EventEmitter3] },
+        tracing: Tracing2 {
+          _events: [Object: null prototype] {},
+          _eventsCount: 0,
+          _maxListeners: 0,
+          _pendingHandlers: Map(0) {},
+          _platform: [Object],
+          on: [Function: addListener],
+          off: [Function: removeListener],
+          _objects: Map(0) {},
+          _eventToSubscriptionMapping: Map(0) {},
+          _wasCollected: false,
+          _connection: [Connection],
+          _type: 'Tracing',
+          _guid: 'tracing@b7d926b24588f8ec2dfa9669469ff3e2',
+          _parent: [_BrowserContext],
+          _instrumentation: {},
+          _logger: undefined,
+          _channel: [EventEmitter3],
+          _initializer: {},
+          _includeSources: false,
+          _additionalSources: Set(0) {},
+          _isLive: false,
+          _isTracing: false,
+          _harRecorders: Map(0) {},
+          _tracesDir: '/tmp/avaliacao-prompts-playwright/.playwright-artifacts-5/traces'
+        },
+        _timeoutSettings: TimeoutSettings {
+          _parent: undefined,
+          _platform: [Object],
+          _defaultTimeout: 10000,
+          _defaultNavigationTimeout: 15000
+        }
+      },
+      touchscreen: Touchscreen2 { _page: [Circular *1] },
+      clock: <ref *5> Clock2 {
+        _browserContext: <ref *3> _BrowserContext {
+          _events: [Object: null prototype],
+          _eventsCount: 1,
+          _maxListeners: 0,
+          _pendingHandlers: Map(0) {},
+          _platform: [Object],
+          on: [Function: addListener],
+          off: [Function: removeListener],
+          _objects: [Map],
+          _eventToSubscriptionMapping: [Map],
+          _wasCollected: false,
+          _connection: [Connection],
+          _type: 'BrowserContext',
+          _guid: 'browser-context@60ef86f1288cdbbf7646a956e7235d6e',
+          _parent: [Browser2],
+          _instrumentation: {},
+          _logger: undefined,
+          _channel: [EventEmitter3],
+          _initializer: [Object],
+          _pages: [Set],
+          _routes: [],
+          _webSocketRoutes: [],
+          _browser: [Browser2],
+          _bindings: Map(0) {},
+          _forReuse: false,
+          _serviceWorkers: Set(0) {},
+          _closingStatus: 'none',
+          _harRouters: [],
+          _options: [Object],
+          _timeoutSettings: [TimeoutSettings],
+          debugger: [Debugger2],
+          tracing: [Tracing2],
+          request: [APIRequestContext2],
+          clock: [Circular *5],
+          credentials: [Credentials2],
+          _closedPromise: [Promise]
+        }
+      },
+      localStorage: WebStorage { _page: [Circular *1], _kind: 'local' },
+      sessionStorage: WebStorage { _page: [Circular *1], _kind: 'session' },
+      _mainFrame: <ref *6> _Frame {
+        _events: [Object: null prototype] {},
+        _eventsCount: 0,
+        _maxListeners: 0,
+        _pendingHandlers: Map(0) {},
+        _platform: {
+          name: 'node',
+          boxedStackPrefixes: [Function: boxedStackPrefixes],
+          calculateSha1: [Function: calculateSha1],
+          colors: [Object],
+          coreDir: '/home/martinsspn/dissertacao_e2e_semantico/node_modules/playwright-core',
+          createGuid: [Function: createGuid],
+          defaultMaxListeners: [Function: defaultMaxListeners],
+          fs: [Function: fs],
+          env: [Object],
+          inspectCustom: Symbol(nodejs.util.inspect.custom),
+          isDebugMode: [Function: isDebugMode],
+          isJSDebuggerAttached: [Function: isJSDebuggerAttached],
+          isLogEnabled: [Function: isLogEnabled],
+          isUnderTest: [Function: isUnderTest],
+          log: [Function: log],
+          path: [Function: path],
+          pathSeparator: '/',
+          showInternalStackFrames: [Function: showInternalStackFrames],
+          streamFile: [AsyncFunction: streamFile],
+          streamReadable: [Function: streamReadable],
+          streamWritable: [Function: streamWritable],
+          zones: [Object]
+        },
+        on: [Function: addListener],
+        off: [Function: removeListener],
+        _objects: Map(0) {},
+        _eventToSubscriptionMapping: Map(0) {},
+        _wasCollected: false,
+        _connection: <ref *2> Connection {
+          _events: [Object: null prototype] {},
+          _eventsCount: 0,
+          _maxListeners: undefined,
+          _pendingHandlers: Map(0) {},
+          _platform: [Object],
+          on: [Function: addListener],
+          off: [Function: removeListener],
+          _objects: [Map],
+          onmessage: [Function (anonymous)],
+          _lastId: 12,
+          _callbacks: Map(0) {},
+          _isRemote: false,
+          _rawBuffers: true,
+          _tracingCount: 0,
+          _objectFactories: [Map],
+          _instrumentation: {},
+          _localUtils: [LocalUtils],
+          _rootObject: [Root],
+          headers: [],
+          toImpl: [Function (anonymous)]
+        },
+        _type: 'Frame',
+        _guid: 'frame@6c5b10d1350d2fd89754be60c696446f',
+        _parent: [Circular *1],
+        _instrumentation: {},
+        _logger: undefined,
+        _channel: EventEmitter3 {
+          _events: [Object: null prototype],
+          _eventsCount: 2,
+          _maxListeners: undefined,
+          _pendingHandlers: Map(0) {},
+          _platform: [Object],
+          on: [Function: addListener],
+          off: [Function: removeListener],
+          _object: [Circular *6]
+        },
+        _initializer: { url: 'about:blank', name: '', loadStates: [Array] },
+        _parentFrame: null,
+        _url: 'https://demowebshop.tricentis.com/register',
+        _name: '',
+        _detached: false,
+        _childFrames: Set(0) {},
+        _eventEmitter: EventEmitter3 {
+          _events: [Object: null prototype] {},
+          _eventsCount: 0,
+          _maxListeners: 0,
+          _pendingHandlers: Map(0) {},
+          _platform: [Object],
+          on: [Function: addListener],
+          off: [Function: removeListener]
+        },
+        _loadStates: Set(3) { 'commit', 'domcontentloaded', 'load' },
+        _page: [Circular *1]
+      },
+      _viewportSize: { width: 1280, height: 720 },
+      _opener: null,
+      _video: Video {
+        _events: [Object: null prototype] {},
+        _eventsCount: 0,
+        _maxListeners: undefined,
+        _pendingHandlers: Map(0) {},
+        _platform: {
+          name: 'node',
+          boxedStackPrefixes: [Function: boxedStackPrefixes],
+          calculateSha1: [Function: calculateSha1],
+          colors: [Object],
+          coreDir: '/home/martinsspn/dissertacao_e2e_semantico/node_modules/playwright-core',
+          createGuid: [Function: createGuid],
+          defaultMaxListeners: [Function: defaultMaxListeners],
+          fs: [Function: fs],
+          env: [Object],
+          inspectCustom: Symbol(nodejs.util.inspect.custom),
+          isDebugMode: [Function: isDebugMode],
+          isJSDebuggerAttached: [Function: isJSDebuggerAttached],
+          isLogEnabled: [Function: isLogEnabled],
+          isUnderTest: [Function: isUnderTest],
+          log: [Function: log],
+          path: [Function: path],
+          pathSeparator: '/',
+          showInternalStackFrames: [Function: showInternalStackFrames],
+          streamFile: [AsyncFunction: streamFile],
+          streamReadable: [Function: streamReadable],
+          streamWritable: [Function: streamWritable],
+          zones: [Object]
+        },
+        on: [Function: addListener],
+        off: [Function: removeListener],
+        _isRemote: false,
+        _artifact: undefined
+      },
+      screencast: Screencast2 { _started: false, _onFrame: null, _page: [Circular *1] },
+      coverage: Coverage {
+        _channel: EventEmitter3 {
+          _events: [Object: null prototype],
+          _eventsCount: 14,
+          _maxListeners: undefined,
+          _pendingHandlers: Map(0) {},
+          _platform: [Object],
+          on: [Function: addListener],
+          off: [Function: removeListener],
+          _object: [Circular *1]
+        }
+      }
+    }
+
+      26 |     // Verifica se a mensagem de erro é exibida
+      27 |     const errorMessage = 'Password must have at least six characters';
+    > 28 |     expect(page).toHaveText(errorMessage);
+         |                  ^
+      29 |   });
+      30 | });
+      31 |
+        at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context_qwen25coder_demowebshop20_20260727_01/suite_cadastro_senha_curta.spec.ts:28:18
+
+    Error Context: ../../../../../tmp/avaliacao-prompts-playwright/suite_cadastro_senha_curta-73ab7-er-user-with-short-password/error-context.md
+
+
+[11/25] ../teste_prompt_e2e_semantico/generated_tests/structured_context_qwen25coder_demowebshop20_20260727_01/suite_carrinho_inicialmente_vazio.spec.ts:4:7 › Suite Carrinho Inicialmente Vazio › Viewing an empty shopping cart
+  7) ../teste_prompt_e2e_semantico/generated_tests/structured_context_qwen25coder_demowebshop20_20260727_01/suite_carrinho_inicialmente_vazio.spec.ts:4:7 › Suite Carrinho Inicialmente Vazio › Viewing an empty shopping cart 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByRole('heading', { name: 'No items added to your shopping cart' })
+    Expected: visible
+    Timeout: 7000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 7000ms
+      - waiting for getByRole('heading', { name: 'No items added to your shopping cart' })
+
+
+      10 |     // Etapa 2: Verificar que o carrinho está vazio
+      11 |     await expect(page.locator('h1')).toHaveText('Shopping cart');
+    > 12 |     await expect(page.getByRole('heading', { name: 'No items added to your shopping cart' })).toBeVisible();
+         |                                                                                               ^
+      13 |   });
+      14 | });
+      15 |
+        at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context_qwen25coder_demowebshop20_20260727_01/suite_carrinho_inicialmente_vazio.spec.ts:12:95
+
+    Error Context: ../../../../../tmp/avaliacao-prompts-playwright/suite_carrinho_inicialment-e875a-wing-an-empty-shopping-cart/error-context.md
+
+
+[12/25] ../teste_prompt_e2e_semantico/generated_tests/structured_context_qwen25coder_demowebshop20_20260727_01/suite_comparar_produtos.spec.ts:4:7 › Suite Comparar Produtos › should compare products and clear the list
+  8) ../teste_prompt_e2e_semantico/generated_tests/structured_context_qwen25coder_demowebshop20_20260727_01/suite_comparar_produtos.spec.ts:4:7 › Suite Comparar Produtos › should compare products and clear the list 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('.compare-products-page')
+    Expected: visible
+    Timeout: 7000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 7000ms
+      - waiting for locator('.compare-products-page')
+
+
+      14 |
+      15 |     // Etapa 3: Verifica se os produtos estão sendo comparados
+    > 16 |     await expect(page.locator('.compare-products-page')).toBeVisible();
+         |                                                          ^
+      17 |     await expect(page.locator('.product-name', { hasText: 'Computing and Internet' })).toBeVisible();
+      18 |     await expect(page.locator('.product-name', { hasText: 'Fiction' })).toBeVisible();
+      19 |
+        at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context_qwen25coder_demowebshop20_20260727_01/suite_comparar_produtos.spec.ts:16:58
+
+    Error Context: ../../../../../tmp/avaliacao-prompts-playwright/suite_comparar_produtos-Su-85c14-products-and-clear-the-list/error-context.md
+
+
+[13/25] ../teste_prompt_e2e_semantico/generated_tests/structured_context_qwen25coder_demowebshop20_20260727_01/suite_enquete_sem_resposta.spec.ts:4:7 › Suite Enquete Sem Resposta › The user accesses the Demo Web Shop home page in a new browser context and tries to vote without selecting an answer
+  9) ../teste_prompt_e2e_semantico/generated_tests/structured_context_qwen25coder_demowebshop20_20260727_01/suite_enquete_sem_resposta.spec.ts:4:7 › Suite Enquete Sem Resposta › The user accesses the Demo Web Shop home page in a new browser context and tries to vote without selecting an answer 
+
+    Error: expect(locator).toBeDisabled() failed
+
+    Locator:  locator('[id="vote-poll-1"]')
+    Expected: disabled
+    Received: enabled
+    Timeout:  7000ms
+
+    Call log:
+      - Expect "toBeDisabled" with timeout 7000ms
+      - waiting for locator('[id="vote-poll-1"]')
+        18 × locator resolved to <input value="Vote" type="button" id="vote-poll-1" class="button-2 vote-poll-button"/>
+           - unexpected value "enabled"
+
+
+       9 |     await voteButton.click();
+      10 |
+    > 11 |     await expect(voteButton).toBeDisabled();
+         |                              ^
+      12 |     await expect(page).toHaveText('Please select an answer before voting.');
+      13 |   });
+      14 | });
+        at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context_qwen25coder_demowebshop20_20260727_01/suite_enquete_sem_resposta.spec.ts:11:30
+
+    Error Context: ../../../../../tmp/avaliacao-prompts-playwright/suite_enquete_sem_resposta-5914d-without-selecting-an-answer/error-context.md
+
+
+[14/25] ../teste_prompt_e2e_semantico/generated_tests/structured_context_qwen25coder_demowebshop20_20260727_01/suite_exibir_quatro_livros.spec.ts:4:7 › Suite Exibir Quatro Livros › The user accesses the Books category and displays no more than four product items on the current page
+  10) ../teste_prompt_e2e_semantico/generated_tests/structured_context_qwen25coder_demowebshop20_20260727_01/suite_exibir_quatro_livros.spec.ts:4:7 › Suite Exibir Quatro Livros › The user accesses the Books category and displays no more than four product items on the current page 
+
+    Error: expect(locator).toHaveCount(expected) failed
+
+    Locator:  locator('.product-item')
+    Expected: 4
+    Received: 6
+    Timeout:  7000ms
+
+    Call log:
+      - Expect "toHaveCount" with timeout 7000ms
+      - waiting for locator('.product-item')
+        18 × locator resolved to 6 elements
+           - unexpected value "6"
+
+
+      10 |     // Etapa 3: Verify no more than four product items are displayed
+      11 |     const productItems = page.locator('.product-item');
+    > 12 |     await expect(productItems).toHaveCount(4);
+         |                                ^
+      13 |   });
+      14 | });
+      15 |
+        at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context_qwen25coder_demowebshop20_20260727_01/suite_exibir_quatro_livros.spec.ts:12:32
+
+    Error Context: ../../../../../tmp/avaliacao-prompts-playwright/suite_exibir_quatro_livros-ff9ff-t-items-on-the-current-page/error-context.md
+
+
+[15/25] ../teste_prompt_e2e_semantico/generated_tests/structured_context_qwen25coder_demowebshop20_20260727_01/suite_filtrar_livros_abaixo_25.spec.ts:4:7 › Suite Filtrar Livros Abaixo 25 › Filtrar livros abaixo de 25.00
+  11) ../teste_prompt_e2e_semantico/generated_tests/structured_context_qwen25coder_demowebshop20_20260727_01/suite_filtrar_livros_abaixo_25.spec.ts:4:7 › Suite Filtrar Livros Abaixo 25 › Filtrar livros abaixo de 25.00 
+
+    Error: expect(received).toBeLessThan(expected)
+
+    Expected: < 25
+    Received:   NaN
+
+      16 |     for (let product of await products.all()) {
+      17 |       const priceText = await product.getByRole('button', { name: 'Add to cart' }).first().textContent();
+    > 18 |       expect(parseFloat(priceText.replace('$', ''))).toBeLessThan(25);
+         |                                                      ^
+      19 |     }
+      20 |   });
+      21 | });
+        at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context_qwen25coder_demowebshop20_20260727_01/suite_filtrar_livros_abaixo_25.spec.ts:18:54
+
+    Error Context: ../../../../../tmp/avaliacao-prompts-playwright/suite_filtrar_livros_abaix-196c8-trar-livros-abaixo-de-25-00/error-context.md
+
+
+[16/25] ../teste_prompt_e2e_semantico/generated_tests/structured_context_qwen25coder_demowebshop20_20260727_01/suite_navegar_cartoes_presente.spec.ts:4:7 › Suite Navegar Cartoes Presente › The user accesses the Demo Web Shop home page
+[17/25] ../teste_prompt_e2e_semantico/generated_tests/structured_context_qwen25coder_demowebshop20_20260727_01/suite_navegar_cartoes_presente.spec.ts:9:7 › Suite Navegar Cartoes Presente › The user selects Gift Cards in the main category menu
+  12) ../teste_prompt_e2e_semantico/generated_tests/structured_context_qwen25coder_demowebshop20_20260727_01/suite_navegar_cartoes_presente.spec.ts:9:7 › Suite Navegar Cartoes Presente › The user selects Gift Cards in the main category menu 
+
+    TimeoutError: locator.click: Timeout 10000ms exceeded.
+    Call log:
+      - waiting for getByText('Gift Cards', { exact: true }).first()
+
+
+       8 |
+       9 |   test('The user selects Gift Cards in the main category menu', async ({ page }) => {
+    > 10 |     await page.getByText("Gift Cards", { exact: true }).first().click();
+         |                                                                 ^
+      11 |     await expect(page).toHaveURL('https://demowebshop.tricentis.com/gift-cards');
+      12 |   });
+      13 |
+        at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context_qwen25coder_demowebshop20_20260727_01/suite_navegar_cartoes_presente.spec.ts:10:65
+
+    Error Context: ../../../../../tmp/avaliacao-prompts-playwright/suite_navegar_cartoes_pres-5ad84-s-in-the-main-category-menu/error-context.md
+
+
+[18/25] ../teste_prompt_e2e_semantico/generated_tests/structured_context_qwen25coder_demowebshop20_20260727_01/suite_navegar_cartoes_presente.spec.ts:14:7 › Suite Navegar Cartoes Presente › The system displays the Gift Cards category page, its breadcrumb, and the available gift card products
+  13) ../teste_prompt_e2e_semantico/generated_tests/structured_context_qwen25coder_demowebshop20_20260727_01/suite_navegar_cartoes_presente.spec.ts:14:7 › Suite Navegar Cartoes Presente › The system displays the Gift Cards category page, its breadcrumb, and the available gift card products 
+
+    Error: expect(locator).toHaveText(expected) failed
+
+    Locator: locator('h1')
+    Expected: "Gift Cards"
+    Timeout: 7000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toHaveText" with timeout 7000ms
+      - waiting for locator('h1')
+
+
+      13 |
+      14 |   test('The system displays the Gift Cards category page, its breadcrumb, and the available gift card products', async ({ page }) => {
+    > 15 |     await expect(page.locator('h1')).toHaveText('Gift Cards');
+         |                                      ^
+      16 |   });
+      17 | });
+      18 |
+        at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context_qwen25coder_demowebshop20_20260727_01/suite_navegar_cartoes_presente.spec.ts:15:38
+
+    Error Context: ../../../../../tmp/avaliacao-prompts-playwright/suite_navegar_cartoes_pres-3bace-vailable-gift-card-products/error-context.md
+
+
+[19/25] ../teste_prompt_e2e_semantico/generated_tests/structured_context_qwen25coder_demowebshop20_20260727_01/suite_navegar_categoria_livros.spec.ts:4:7 › Suite Navegar Categoria Livros › The user accesses the Demo Web Shop home page and navigates to the Books category
+  14) ../teste_prompt_e2e_semantico/generated_tests/structured_context_qwen25coder_demowebshop20_20260727_01/suite_navegar_categoria_livros.spec.ts:4:7 › Suite Navegar Categoria Livros › The user accesses the Demo Web Shop home page and navigates to the Books category 
+
+    Error: expect(page).toHaveURL(expected) failed
+
+    Expected: "https://demowebshop.tricentis.com/books"
+    Received: ""
+
+    Call log:
+      - Expect "toHaveURL" with timeout 7000ms
+
+
+      12 |
+      13 |     // Verifica se foi redirecionado para a página de categorias de livros
+    > 14 |     expect(page).toHaveURL('https://demowebshop.tricentis.com/books');
+         |                  ^
+      15 |     expect(page.locator('h1')).toHaveText('Books');
+      16 |
+      17 |     // Etapa 3: Confirma que os subcategorias estão disponíveis
+        at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context_qwen25coder_demowebshop20_20260727_01/suite_navegar_categoria_livros.spec.ts:14:18
+
+    Error Context: ../../../../../tmp/avaliacao-prompts-playwright/suite_navegar_categoria_li-4ee37-gates-to-the-Books-category/error-context.md
+
+
+[20/25] ../teste_prompt_e2e_semantico/generated_tests/structured_context_qwen25coder_demowebshop20_20260727_01/suite_navegar_sobre_nos.spec.ts:4:7 › Suite Navegar Sobre Nos › The user accesses the Demo Web Shop home page and navigates to About us page
+[21/25] ../teste_prompt_e2e_semantico/generated_tests/structured_context_qwen25coder_demowebshop20_20260727_01/suite_ordenar_livros_por_preco.spec.ts:4:7 › Suite Ordenar Livros Por Preco › Ordenar livros por preço baixo para alto
+  15) ../teste_prompt_e2e_semantico/generated_tests/structured_context_qwen25coder_demowebshop20_20260727_01/suite_ordenar_livros_por_preco.spec.ts:4:7 › Suite Ordenar Livros Por Preco › Ordenar livros por preço baixo para alto 
+
+    TimeoutError: locator.click: Timeout 10000ms exceeded.
+    Call log:
+      - waiting for getByRole('button', { name: 'Sort by price: Low to High' })
+
+
+       9 |
+      10 |     // Etapa 2: Seleciona a opção de ordenar por preço baixo para alto
+    > 11 |     await page.getByRole('button', { name: 'Sort by price: Low to High' }).click();
+         |                                                                            ^
+      12 |
+      13 |     // Verifica se os livros estão em ordem crescente de preço
+      14 |     const prices = await page.locator('.product-box .price').allTextContents();
+        at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context_qwen25coder_demowebshop20_20260727_01/suite_ordenar_livros_por_preco.spec.ts:11:76
+
+    Error Context: ../../../../../tmp/avaliacao-prompts-playwright/suite_ordenar_livros_por_p-6c93d-s-por-preço-baixo-para-alto/error-context.md
+
+
+[22/25] ../teste_prompt_e2e_semantico/generated_tests/structured_context_qwen25coder_demowebshop20_20260727_01/suite_persistencia_carrinho_apos_login.spec.ts:4:7 › Suite Persistencia Carrinho Apos Login › should persist cart items after login
+  16) ../teste_prompt_e2e_semantico/generated_tests/structured_context_qwen25coder_demowebshop20_20260727_01/suite_persistencia_carrinho_apos_login.spec.ts:4:7 › Suite Persistencia Carrinho Apos Login › should persist cart items after login 
+
+    Error: page.fill: value: expected string, got undefined
+
+       6 |     await page.goto('https://demowebshop.tricentis.com/');
+       7 |     await page.getByText("Log in", { exact: true }).first().click();
+    >  8 |     await page.fill('input[name="Email"]', process.env.TEST_EMAIL);
+         |                ^
+       9 |     await page.fill('input[name="Password"]', process.env.TEST_PASSWORD);
+      10 |     await page.click('button[type="submit"]');
+      11 |     await expect(page).toHaveURL('https://demowebshop.tricentis.com/');
+        at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context_qwen25coder_demowebshop20_20260727_01/suite_persistencia_carrinho_apos_login.spec.ts:8:16
+
+    Error Context: ../../../../../tmp/avaliacao-prompts-playwright/suite_persistencia_carrinh-f2905-sist-cart-items-after-login/error-context.md
+
+
+[23/25] ../teste_prompt_e2e_semantico/generated_tests/structured_context_qwen25coder_demowebshop20_20260727_01/suite_produtos_visualizados_recentemente.spec.ts:4:7 › Suite Produtos Visualizados Recentemente › Viewing the product history and verifying recently viewed products
+  17) ../teste_prompt_e2e_semantico/generated_tests/structured_context_qwen25coder_demowebshop20_20260727_01/suite_produtos_visualizados_recentemente.spec.ts:4:7 › Suite Produtos Visualizados Recentemente › Viewing the product history and verifying recently viewed products 
+
+    Error: expect(received).toContain(expected) // indexOf
+
+    Matcher error: received value must not be null nor undefined
+
+    Received has value: undefined
+
+      14 |     const productItems = await page.locator('.product-item').allInnerTexts();
+      15 |     expect(productItems[0]).toContain('Blue Jeans');
+    > 16 |     expect(productItems[1]).toContain('Fiction');
+         |                             ^
+      17 |   });
+      18 | });
+      19 |
+        at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context_qwen25coder_demowebshop20_20260727_01/suite_produtos_visualizados_recentemente.spec.ts:16:29
+
+    Error Context: ../../../../../tmp/avaliacao-prompts-playwright/suite_produtos_visualizado-ad373-ng-recently-viewed-products/error-context.md
+
+
+[24/25] ../teste_prompt_e2e_semantico/generated_tests/structured_context_qwen25coder_demowebshop20_20260727_01/suite_visualizacao_livros_em_lista.spec.ts:4:7 › Suite Visualizacao Livros Em Lista › The user accesses the Books category and selects List view
+  18) ../teste_prompt_e2e_semantico/generated_tests/structured_context_qwen25coder_demowebshop20_20260727_01/suite_visualizacao_livros_em_lista.spec.ts:4:7 › Suite Visualizacao Livros Em Lista › The user accesses the Books category and selects List view 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('.product-item')
+    Expected: visible
+    Error: strict mode violation: locator('.product-item') resolved to 6 elements:
+        1) <div data-productid="13" class="product-item">…</div> aka locator('.product-item').first()
+        2) <div data-productid="79" class="product-item">…</div> aka locator('div:nth-child(2) > .product-item')
+        3) <div data-productid="45" class="product-item">…</div> aka locator('div:nth-child(3) > .product-item')
+        4) <div data-productid="78" class="product-item">…</div> aka locator('div:nth-child(4) > .product-item')
+        5) <div data-productid="22" class="product-item">…</div> aka locator('div:nth-child(5) > .product-item')
+        6) <div data-productid="27" class="product-item">…</div> aka locator('div:nth-child(6) > .product-item')
+
+    Call log:
+      - Expect "toBeVisible" with timeout 7000ms
+      - waiting for locator('.product-item')
+
+
+      17 |     await expect(page).toHaveURL('https://demowebshop.tricentis.com/books');
+      18 |     const productItems = page.locator('.product-item');
+    > 19 |     await expect(productItems).toBeVisible();
+         |                                ^
+      20 |   });
+      21 | });
+      22 |
+        at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context_qwen25coder_demowebshop20_20260727_01/suite_visualizacao_livros_em_lista.spec.ts:19:32
+
+    Error Context: ../../../../../tmp/avaliacao-prompts-playwright/suite_visualizacao_livros_-08ce1-egory-and-selects-List-view/error-context.md
+
+
+[25/25] ../teste_prompt_e2e_semantico/generated_tests/structured_context_qwen25coder_demowebshop20_20260727_01/user_registration_book_purchase.spec.ts:4:7 › User Registration Book Purchase › should register user and purchase book
+  19) ../teste_prompt_e2e_semantico/generated_tests/structured_context_qwen25coder_demowebshop20_20260727_01/user_registration_book_purchase.spec.ts:4:7 › User Registration Book Purchase › should register user and purchase book 
+
+    Error: expect(page).toHaveURL(expected) failed
+
+    Expected: "https://demowebshop.tricentis.com/cart"
+    Received: ""
+
+    Call log:
+      - Expect "toHaveURL" with timeout 7000ms
+
+
+      47 |     // Step 19: Navigate to the shopping cart to check the added item
+      48 |     await page.getByRole("link", { name: "Shopping cart", exact: true }).click();
+    > 49 |     expect(page).toHaveURL('https://demowebshop.tricentis.com/cart');
+         |                  ^
+      50 |     expect(page.locator('h1')).toContainText('Shopping cart');
+      51 |
+      52 |     // Step 20: The system displays the cart containing the book Health Book with quantity and price
+        at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context_qwen25coder_demowebshop20_20260727_01/user_registration_book_purchase.spec.ts:49:18
+
+    Error Context: ../../../../../tmp/avaliacao-prompts-playwright/user_registration_book_pur-82fa9-ster-user-and-purchase-book/error-context.md
+
+
+  19 failed
+    ../teste_prompt_e2e_semantico/generated_tests/structured_context_qwen25coder_demowebshop20_20260727_01/suite_adicionar_dois_produtos_carrinho.spec.ts:22:7 › Suite Adicionar Dois Produtos Carrinho › Verificar itens no carrinho 
+    ../teste_prompt_e2e_semantico/generated_tests/structured_context_qwen25coder_demowebshop20_20260727_01/suite_atualizar_quantidade_carrinho.spec.ts:4:7 › Suite Atualizar Quantidade Carrinho › should update quantity in cart and keep product with updated subtotal 
+    ../teste_prompt_e2e_semantico/generated_tests/structured_context_qwen25coder_demowebshop20_20260727_01/suite_busca_sem_resultados.spec.ts:4:7 › Suite Busca Sem Resultados › should display no products matched message when searching for a non-existent term 
+    ../teste_prompt_e2e_semantico/generated_tests/structured_context_qwen25coder_demowebshop20_20260727_01/suite_cadastro_campos_obrigatorios.spec.ts:4:7 › Suite Cadastro Campos Obrigatorios › The user accesses the Register page of the Demo Web Shop and submits the form with empty fields 
+    ../teste_prompt_e2e_semantico/generated_tests/structured_context_qwen25coder_demowebshop20_20260727_01/suite_cadastro_confirmacao_senha.spec.ts:4:7 › Suite Cadastro Confirmacao Senha › should not register user with mismatched passwords 
+    ../teste_prompt_e2e_semantico/generated_tests/structured_context_qwen25coder_demowebshop20_20260727_01/suite_cadastro_senha_curta.spec.ts:4:7 › Suite Cadastro Senha Curta › should not register user with short password 
+    ../teste_prompt_e2e_semantico/generated_tests/structured_context_qwen25coder_demowebshop20_20260727_01/suite_carrinho_inicialmente_vazio.spec.ts:4:7 › Suite Carrinho Inicialmente Vazio › Viewing an empty shopping cart 
+    ../teste_prompt_e2e_semantico/generated_tests/structured_context_qwen25coder_demowebshop20_20260727_01/suite_comparar_produtos.spec.ts:4:7 › Suite Comparar Produtos › should compare products and clear the list 
+    ../teste_prompt_e2e_semantico/generated_tests/structured_context_qwen25coder_demowebshop20_20260727_01/suite_enquete_sem_resposta.spec.ts:4:7 › Suite Enquete Sem Resposta › The user accesses the Demo Web Shop home page in a new browser context and tries to vote without selecting an answer 
+    ../teste_prompt_e2e_semantico/generated_tests/structured_context_qwen25coder_demowebshop20_20260727_01/suite_exibir_quatro_livros.spec.ts:4:7 › Suite Exibir Quatro Livros › The user accesses the Books category and displays no more than four product items on the current page 
+    ../teste_prompt_e2e_semantico/generated_tests/structured_context_qwen25coder_demowebshop20_20260727_01/suite_filtrar_livros_abaixo_25.spec.ts:4:7 › Suite Filtrar Livros Abaixo 25 › Filtrar livros abaixo de 25.00 
+    ../teste_prompt_e2e_semantico/generated_tests/structured_context_qwen25coder_demowebshop20_20260727_01/suite_navegar_cartoes_presente.spec.ts:9:7 › Suite Navegar Cartoes Presente › The user selects Gift Cards in the main category menu 
+    ../teste_prompt_e2e_semantico/generated_tests/structured_context_qwen25coder_demowebshop20_20260727_01/suite_navegar_cartoes_presente.spec.ts:14:7 › Suite Navegar Cartoes Presente › The system displays the Gift Cards category page, its breadcrumb, and the available gift card products 
+    ../teste_prompt_e2e_semantico/generated_tests/structured_context_qwen25coder_demowebshop20_20260727_01/suite_navegar_categoria_livros.spec.ts:4:7 › Suite Navegar Categoria Livros › The user accesses the Demo Web Shop home page and navigates to the Books category 
+    ../teste_prompt_e2e_semantico/generated_tests/structured_context_qwen25coder_demowebshop20_20260727_01/suite_ordenar_livros_por_preco.spec.ts:4:7 › Suite Ordenar Livros Por Preco › Ordenar livros por preço baixo para alto 
+    ../teste_prompt_e2e_semantico/generated_tests/structured_context_qwen25coder_demowebshop20_20260727_01/suite_persistencia_carrinho_apos_login.spec.ts:4:7 › Suite Persistencia Carrinho Apos Login › should persist cart items after login 
+    ../teste_prompt_e2e_semantico/generated_tests/structured_context_qwen25coder_demowebshop20_20260727_01/suite_produtos_visualizados_recentemente.spec.ts:4:7 › Suite Produtos Visualizados Recentemente › Viewing the product history and verifying recently viewed products 
+    ../teste_prompt_e2e_semantico/generated_tests/structured_context_qwen25coder_demowebshop20_20260727_01/suite_visualizacao_livros_em_lista.spec.ts:4:7 › Suite Visualizacao Livros Em Lista › The user accesses the Books category and selects List view 
+    ../teste_prompt_e2e_semantico/generated_tests/structured_context_qwen25coder_demowebshop20_20260727_01/user_registration_book_purchase.spec.ts:4:7 › User Registration Book Purchase › should register user and purchase book 
+  6 passed (3.5m)

@@ -1,0 +1,154 @@
+{
+  "schema_version": 1,
+  "campaign": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaigns/campaign_20260728_01",
+  "valid": true,
+  "status": "prepared_not_executed",
+  "live_site_requests_performed": false,
+  "campaign_manifest_sha256": "88e5019719ad6e9f3f245414efe9ffc9494dc7bade0254a1fa09a73ec4aabea4",
+  "campaign_files_aggregate_sha256": "19df85961205c9db61581a42499ed5b8b43b72600e6be7df79bf4a573dd82cab",
+  "inventory_files_checked": 121,
+  "runtime_files_checked": 7,
+  "plans": {
+    "gpt_original_12": {
+      "valid": true,
+      "catalog_size": 37,
+      "mutation_count": 138
+    },
+    "gemini_new_20": {
+      "valid": true,
+      "catalog_size": 53,
+      "mutation_count": 192
+    }
+  },
+  "cohorts": [
+    {
+      "track_id": "P",
+      "model_id": "gemini-3.6-flash",
+      "pair_count": 3,
+      "valid": true,
+      "scenarios": [
+        {
+          "scenario_id": "suite_cadastro_campos_obrigatorios",
+          "target_count": 6,
+          "neutral_mutation_count": 18,
+          "neutral_strata": [
+            "E1",
+            "E2"
+          ]
+        },
+        {
+          "scenario_id": "suite_cadastro_confirmacao_senha",
+          "target_count": 7,
+          "neutral_mutation_count": 21,
+          "neutral_strata": [
+            "E1",
+            "E2"
+          ]
+        },
+        {
+          "scenario_id": "suite_navegar_categoria_livros",
+          "target_count": 1,
+          "neutral_mutation_count": 2,
+          "neutral_strata": [
+            "E1"
+          ]
+        }
+      ]
+    },
+    {
+      "track_id": "P",
+      "model_id": "gpt-5.6-sol",
+      "pair_count": 5,
+      "valid": true,
+      "scenarios": [
+        {
+          "scenario_id": "suite_busca_blue_jeans",
+          "target_count": 2,
+          "neutral_mutation_count": 6,
+          "neutral_strata": [
+            "E1",
+            "E2"
+          ]
+        },
+        {
+          "scenario_id": "suite_detalhes_fiction",
+          "target_count": 2,
+          "neutral_mutation_count": 6,
+          "neutral_strata": [
+            "E1",
+            "E2"
+          ]
+        },
+        {
+          "scenario_id": "suite_limpar_carrinho",
+          "target_count": 2,
+          "neutral_mutation_count": 5,
+          "neutral_strata": [
+            "E1",
+            "E2"
+          ]
+        },
+        {
+          "scenario_id": "suite_login_invalido",
+          "target_count": 4,
+          "neutral_mutation_count": 11,
+          "neutral_strata": [
+            "E1",
+            "E2"
+          ]
+        },
+        {
+          "scenario_id": "suite_login_valido",
+          "target_count": 4,
+          "neutral_mutation_count": 11,
+          "neutral_strata": [
+            "E1",
+            "E2"
+          ]
+        }
+      ]
+    },
+    {
+      "track_id": "R",
+      "model_id": "gemini-3.6-flash",
+      "pair_count": 2,
+      "valid": true,
+      "scenarios": [
+        {
+          "scenario_id": "fluxo_computadores_desktops",
+          "target_count": 1,
+          "neutral_mutation_count": 2,
+          "neutral_strata": [
+            "E1"
+          ]
+        },
+        {
+          "scenario_id": "suite_navegar_sobre_nos",
+          "target_count": 1,
+          "neutral_mutation_count": 2,
+          "neutral_strata": [
+            "E1"
+          ]
+        }
+      ]
+    },
+    {
+      "track_id": "R",
+      "model_id": "gpt-5.6-sol",
+      "pair_count": 1,
+      "valid": true,
+      "scenarios": [
+        {
+          "scenario_id": "suite_adicionar_carrinho",
+          "target_count": 4,
+          "neutral_mutation_count": 11,
+          "neutral_strata": [
+            "E1",
+            "E2"
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": []
+}

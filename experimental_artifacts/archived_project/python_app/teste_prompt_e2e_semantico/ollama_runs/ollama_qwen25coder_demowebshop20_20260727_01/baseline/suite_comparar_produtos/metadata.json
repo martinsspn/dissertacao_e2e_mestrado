@@ -1,0 +1,23 @@
+{
+  "model": "qwen2.5-coder:7b",
+  "created_at": "2026-07-27T18:13:01.0328506Z",
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 15684918300,
+  "load_duration": 355050700,
+  "prompt_eval_count": 198,
+  "prompt_eval_duration": 2004951000,
+  "eval_count": 191,
+  "eval_duration": 13274001000,
+  "condition": "baseline",
+  "scenario": "suite_comparar_produtos",
+  "model_requested": "qwen2.5-coder:7b",
+  "seed": 20260724,
+  "temperature": 0,
+  "num_ctx": 8192,
+  "num_predict": 2048,
+  "elapsed_seconds_client": 15.192,
+  "input_sha256": "b72f12fddf824e687b18ca7db8e0dea99836e7a06de9666388e13b864b72bcc8",
+  "response_sha256": "0bdb17f71e5c55a31c9634847de376c532fffcac7cba3864fd096ba9dd5baacc",
+  "stateless": true
+}

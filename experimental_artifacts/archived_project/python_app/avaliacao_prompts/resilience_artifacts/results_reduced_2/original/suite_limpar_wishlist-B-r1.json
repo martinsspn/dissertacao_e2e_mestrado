@@ -1,0 +1,150 @@
+{
+  "config": {
+    "argv": [
+      "/usr/bin/node",
+      "/home/martinsspn/dissertacao_e2e_semantico/node_modules/.bin/playwright",
+      "test",
+      "suite_limpar_wishlist.spec.ts",
+      "--config=/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/playwright.config.ts",
+      "--reporter=json"
+    ],
+    "configFile": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/playwright.config.ts",
+    "rootDir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_artifacts/prepared_execution/B",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/tmp/avaliacao-prompts-playwright",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_artifacts/prepared_execution/B",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 20000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.61.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "suite_limpar_wishlist.spec.ts",
+      "file": "suite_limpar_wishlist.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Suite Limpar Wishlist",
+          "file": "suite_limpar_wishlist.spec.ts",
+          "line": 6,
+          "column": 6,
+          "specs": [
+            {
+              "title": "remove o produto Camera e exibe a wishlist vazia",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 20000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "Defina DEMO_WEB_SHOP_EMAIL e DEMO_WEB_SHOP_PASSWORD com credenciais válidas.",
+                      "location": {
+                        "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_artifacts/prepared_execution/B/suite_limpar_wishlist.spec.ts",
+                        "line": 8,
+                        "column": 10
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 155,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-20T17:45:29.420Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "Defina DEMO_WEB_SHOP_EMAIL e DEMO_WEB_SHOP_PASSWORD com credenciais válidas.",
+                          "location": {
+                            "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_artifacts/prepared_execution/B/suite_limpar_wishlist.spec.ts",
+                            "line": 8,
+                            "column": 10
+                          }
+                        }
+                      ],
+                      "attachments": [
+                        {
+                          "name": "resilience-mutation-events",
+                          "contentType": "application/json",
+                          "body": "W10="
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "d86af201ab92a631acc4-57c299adad72ce71b05e",
+              "file": "suite_limpar_wishlist.spec.ts",
+              "line": 7,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-07-20T17:45:28.253Z",
+    "duration": 1900.429,
+    "expected": 0,
+    "skipped": 1,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

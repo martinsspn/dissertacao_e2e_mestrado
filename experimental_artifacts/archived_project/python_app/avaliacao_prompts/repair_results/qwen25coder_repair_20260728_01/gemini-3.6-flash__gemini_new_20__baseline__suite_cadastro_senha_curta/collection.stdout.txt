@@ -1,0 +1,3 @@
+Listing tests:
+  suite_cadastro_senha_curta.spec.ts:4:7 › User Registration Validation › should reject registration when password has fewer than six characters
+Total: 1 test in 1 file

@@ -1,0 +1,23 @@
+{
+  "model": "qwen2.5-coder:7b",
+  "created_at": "2026-07-27T18:23:14.5885992Z",
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 25199519500,
+  "load_duration": 353486400,
+  "prompt_eval_count": 1106,
+  "prompt_eval_duration": 5708272000,
+  "eval_count": 260,
+  "eval_duration": 19126401000,
+  "condition": "structured_context",
+  "scenario": "suite_navegar_categoria_livros",
+  "model_requested": "qwen2.5-coder:7b",
+  "seed": 20260724,
+  "temperature": 0,
+  "num_ctx": 8192,
+  "num_predict": 2048,
+  "elapsed_seconds_client": 23.304,
+  "input_sha256": "dff589d41bb00032d4334dc88a0f0bb3c8435cbb4e0a27c92036ab629f37ad06",
+  "response_sha256": "253d8d866bd2e547ba212aba60676c2dff256d4da720590bf78fb85c4327efcd",
+  "stateless": true
+}

@@ -1,0 +1,3413 @@
+{
+  "schema_version": 1,
+  "selection_method": "exhaustive_all_applicable_operators_without_reading_generated_tests",
+  "source_disclosure": "Targets are parsed from structured prompts produced before test generation. The plan generator does not read .spec.ts files or evaluation results.",
+  "source_aggregate_sha256": "4060012ad6e4749ebbfde1609ad8ffc3066c96741260361bbf10b5d6d2459ed4",
+  "specification_sha256": {
+    "suite_adicionar_carrinho.txt": "34a3467a2da27407309cec8a39c4998275dd3ecee5c764450b1b3ea621ff878b",
+    "suite_adicionar_wishlist.txt": "feacb201a95b47a1f100a1ba7bfca5fe74cdb83681d96610c32403af63fa8e16",
+    "suite_busca_blue_jeans.txt": "6d4c399430110b6621efb814eb4eb91ab2e0246c2092fa36f514c3049dda9d4e",
+    "suite_checkout_blue_jeans.txt": "0ed1f6db20d398cd4498afeaa7170e14b453e0882ed7cd2bc406eeec4a981cd5",
+    "suite_configurar_desktop.txt": "1fd7f85f0af3b80d1f57e7b77350184b22fe835074915e488b0edde55de208c8",
+    "suite_detalhes_fiction.txt": "ff8fbb17eb0dee14d18804f9882250f1eceec11eca32acb7e9d495212ed66df7",
+    "suite_limpar_carrinho.txt": "f755d8636bffcd2f06cdf0b71e9d7a57ca8d3d953893f0b59971eb605d46dcfd",
+    "suite_limpar_wishlist.txt": "a06272dba6c8f92dd4113850a9aa3350fb3f0a00cba01e8f107ac594bc1aef36",
+    "suite_login_invalido.txt": "183a4bb2ad67bb38b2af6dff320559103ac2f547937e08d9cd8724f790d755a4",
+    "suite_login_valido.txt": "ac34ed1c20b8351d64f24083e32e72224e0ae78208cf10d5a7c65fbb32d52059",
+    "suite_logout.txt": "799ee59b17d2b2a4b95184182fb9d6fa414dc724f8f19ca642825e49b7629a44",
+    "suite_registro_usuario.txt": "50d5eb5cd83d9df0d3e6b73c13f27bd3d51098b87bc29b59cfff4a55eb82e373"
+  },
+  "structured_prompt_sha256": {
+    "suite_adicionar_carrinho.structured_context.prompt.md": "f33771b5837c95fc1ac61900dcd1a3109e32ea034c5633a0b73bc17c4a50916f",
+    "suite_adicionar_wishlist.structured_context.prompt.md": "3a55e3ce3e0ac2239b4e70b0111c3e08e59e38e17b04aee77c3cdd8885068ef3",
+    "suite_busca_blue_jeans.structured_context.prompt.md": "4e0b99b39270e0395d19ac7f268cdf52338739752faf998c93684461085dc6eb",
+    "suite_checkout_blue_jeans.structured_context.prompt.md": "5092f2c3baffd31503d72bcd489c24b600e8bc53d9d7fdf61d46889148b068c8",
+    "suite_configurar_desktop.structured_context.prompt.md": "30753c999d3caee38670a0cafecd2a1cfe43902af24e3bb136577035c49eff90",
+    "suite_detalhes_fiction.structured_context.prompt.md": "c460b6eb6e3b5fc61c4150d02e7e424a0ccb4454d2fb0d109d0399c773c2d01e",
+    "suite_limpar_carrinho.structured_context.prompt.md": "ee3a3d6be8beac0625d7ebd5ef8aec009c27977adcb6a0f0ad586db167239558",
+    "suite_limpar_wishlist.structured_context.prompt.md": "fc33601e9a2191595c86faad12d7f0097a8be9f07dbb4fbf1502c3f24cfaffcf",
+    "suite_login_invalido.structured_context.prompt.md": "70ac44e7c54ed425dc0108b90d4425ff93ca90c424829d200171597014a6949d",
+    "suite_login_valido.structured_context.prompt.md": "49cded28cdf0db07a8d59c6e3b450a6cbed276dfc9f3336f3b9e7397954f99c5",
+    "suite_logout.structured_context.prompt.md": "86e21f709c27803429ec0a0aaa1fb017a8ccd4e6a5270ee26bd65955efbcdc59",
+    "suite_registro_usuario.structured_context.prompt.md": "84b3908084621cef735a013e89dd9ba59874601c61782b4bbfb8c695c5e2a00a"
+  },
+  "catalog_size": 37,
+  "mutation_count": 138,
+  "strata": {
+    "E1": "DOM structure changed; visible and accessible contract preserved",
+    "E2": "implementation attribute or equivalent markup changed; perceptible contract preserved",
+    "E3": "visible or accessible contract changed; reported separately",
+    "E4": "explicit test contract changed; reported separately"
+  },
+  "mutations": [
+    {
+      "mutation_id": "mutation-958eb2a97903f1ef",
+      "stratum": "E1",
+      "operator": "insert_wrapper",
+      "target": {
+        "target_id": "target-05b6a828fd8a572f",
+        "scenario_id": "suite_registro_usuario",
+        "step": 3,
+        "ordinal": "2",
+        "page_url": "https://demowebshop.tricentis.com/register",
+        "action": "fill",
+        "tag": "input",
+        "attributes": {
+          "label": "Last name:",
+          "id": "LastName",
+          "name": "LastName",
+          "input_type": "text",
+          "form_action": "/register",
+          "form_method": "POST"
+        },
+        "source_prompt": "suite_registro_usuario.structured_context.prompt.md"
+      },
+      "parameters": {
+        "tag": "div"
+      }
+    },
+    {
+      "mutation_id": "mutation-00b0d3b884b628db",
+      "stratum": "E1",
+      "operator": "insert_noninteractive_sibling_before",
+      "target": {
+        "target_id": "target-05b6a828fd8a572f",
+        "scenario_id": "suite_registro_usuario",
+        "step": 3,
+        "ordinal": "2",
+        "page_url": "https://demowebshop.tricentis.com/register",
+        "action": "fill",
+        "tag": "input",
+        "attributes": {
+          "label": "Last name:",
+          "id": "LastName",
+          "name": "LastName",
+          "input_type": "text",
+          "form_action": "/register",
+          "form_method": "POST"
+        },
+        "source_prompt": "suite_registro_usuario.structured_context.prompt.md"
+      },
+      "parameters": {
+        "tag": "span"
+      }
+    },
+    {
+      "mutation_id": "mutation-9d1d2fd67df0dd91",
+      "stratum": "E2",
+      "operator": "rename_id",
+      "target": {
+        "target_id": "target-05b6a828fd8a572f",
+        "scenario_id": "suite_registro_usuario",
+        "step": 3,
+        "ordinal": "2",
+        "page_url": "https://demowebshop.tricentis.com/register",
+        "action": "fill",
+        "tag": "input",
+        "attributes": {
+          "label": "Last name:",
+          "id": "LastName",
+          "name": "LastName",
+          "input_type": "text",
+          "form_action": "/register",
+          "form_method": "POST"
+        },
+        "source_prompt": "suite_registro_usuario.structured_context.prompt.md"
+      },
+      "parameters": {
+        "new_value": "LastName--e2"
+      }
+    },
+    {
+      "mutation_id": "mutation-fa151065b2703d52",
+      "stratum": "E3",
+      "operator": "change_accessible_name",
+      "target": {
+        "target_id": "target-05b6a828fd8a572f",
+        "scenario_id": "suite_registro_usuario",
+        "step": 3,
+        "ordinal": "2",
+        "page_url": "https://demowebshop.tricentis.com/register",
+        "action": "fill",
+        "tag": "input",
+        "attributes": {
+          "label": "Last name:",
+          "id": "LastName",
+          "name": "LastName",
+          "input_type": "text",
+          "form_action": "/register",
+          "form_method": "POST"
+        },
+        "source_prompt": "suite_registro_usuario.structured_context.prompt.md"
+      },
+      "parameters": {
+        "suffix": " updated"
+      }
+    },
+    {
+      "mutation_id": "mutation-c22d69241db87169",
+      "stratum": "E1",
+      "operator": "insert_wrapper",
+      "target": {
+        "target_id": "target-096fc77e7f2b194d",
+        "scenario_id": "suite_registro_usuario",
+        "step": 5,
+        "ordinal": "1",
+        "page_url": "https://demowebshop.tricentis.com/register",
+        "action": "fill",
+        "tag": "input",
+        "attributes": {
+          "label": "Password:",
+          "id": "Password",
+          "name": "Password",
+          "input_type": "password",
+          "form_action": "/register",
+          "form_method": "POST"
+        },
+        "source_prompt": "suite_registro_usuario.structured_context.prompt.md"
+      },
+      "parameters": {
+        "tag": "div"
+      }
+    },
+    {
+      "mutation_id": "mutation-56fc20690f5f76e5",
+      "stratum": "E1",
+      "operator": "insert_noninteractive_sibling_before",
+      "target": {
+        "target_id": "target-096fc77e7f2b194d",
+        "scenario_id": "suite_registro_usuario",
+        "step": 5,
+        "ordinal": "1",
+        "page_url": "https://demowebshop.tricentis.com/register",
+        "action": "fill",
+        "tag": "input",
+        "attributes": {
+          "label": "Password:",
+          "id": "Password",
+          "name": "Password",
+          "input_type": "password",
+          "form_action": "/register",
+          "form_method": "POST"
+        },
+        "source_prompt": "suite_registro_usuario.structured_context.prompt.md"
+      },
+      "parameters": {
+        "tag": "span"
+      }
+    },
+    {
+      "mutation_id": "mutation-c7cdf392d486bd07",
+      "stratum": "E2",
+      "operator": "rename_id",
+      "target": {
+        "target_id": "target-096fc77e7f2b194d",
+        "scenario_id": "suite_registro_usuario",
+        "step": 5,
+        "ordinal": "1",
+        "page_url": "https://demowebshop.tricentis.com/register",
+        "action": "fill",
+        "tag": "input",
+        "attributes": {
+          "label": "Password:",
+          "id": "Password",
+          "name": "Password",
+          "input_type": "password",
+          "form_action": "/register",
+          "form_method": "POST"
+        },
+        "source_prompt": "suite_registro_usuario.structured_context.prompt.md"
+      },
+      "parameters": {
+        "new_value": "Password--e2"
+      }
+    },
+    {
+      "mutation_id": "mutation-cc90ad590885dc4e",
+      "stratum": "E3",
+      "operator": "change_accessible_name",
+      "target": {
+        "target_id": "target-096fc77e7f2b194d",
+        "scenario_id": "suite_registro_usuario",
+        "step": 5,
+        "ordinal": "1",
+        "page_url": "https://demowebshop.tricentis.com/register",
+        "action": "fill",
+        "tag": "input",
+        "attributes": {
+          "label": "Password:",
+          "id": "Password",
+          "name": "Password",
+          "input_type": "password",
+          "form_action": "/register",
+          "form_method": "POST"
+        },
+        "source_prompt": "suite_registro_usuario.structured_context.prompt.md"
+      },
+      "parameters": {
+        "suffix": " updated"
+      }
+    },
+    {
+      "mutation_id": "mutation-784090fa79c8b567",
+      "stratum": "E1",
+      "operator": "insert_wrapper",
+      "target": {
+        "target_id": "target-1a9bfdd08ead4866",
+        "scenario_id": "suite_registro_usuario",
+        "step": 4,
+        "ordinal": "0",
+        "page_url": "https://demowebshop.tricentis.com/register",
+        "action": "fill",
+        "tag": "input",
+        "attributes": {
+          "label": "Email:",
+          "id": "Email",
+          "name": "Email",
+          "input_type": "text",
+          "form_action": "/register",
+          "form_method": "POST"
+        },
+        "source_prompt": "suite_registro_usuario.structured_context.prompt.md"
+      },
+      "parameters": {
+        "tag": "div"
+      }
+    },
+    {
+      "mutation_id": "mutation-79444752ada39fe2",
+      "stratum": "E1",
+      "operator": "insert_noninteractive_sibling_before",
+      "target": {
+        "target_id": "target-1a9bfdd08ead4866",
+        "scenario_id": "suite_registro_usuario",
+        "step": 4,
+        "ordinal": "0",
+        "page_url": "https://demowebshop.tricentis.com/register",
+        "action": "fill",
+        "tag": "input",
+        "attributes": {
+          "label": "Email:",
+          "id": "Email",
+          "name": "Email",
+          "input_type": "text",
+          "form_action": "/register",
+          "form_method": "POST"
+        },
+        "source_prompt": "suite_registro_usuario.structured_context.prompt.md"
+      },
+      "parameters": {
+        "tag": "span"
+      }
+    },
+    {
+      "mutation_id": "mutation-e53a384700f91408",
+      "stratum": "E2",
+      "operator": "rename_id",
+      "target": {
+        "target_id": "target-1a9bfdd08ead4866",
+        "scenario_id": "suite_registro_usuario",
+        "step": 4,
+        "ordinal": "0",
+        "page_url": "https://demowebshop.tricentis.com/register",
+        "action": "fill",
+        "tag": "input",
+        "attributes": {
+          "label": "Email:",
+          "id": "Email",
+          "name": "Email",
+          "input_type": "text",
+          "form_action": "/register",
+          "form_method": "POST"
+        },
+        "source_prompt": "suite_registro_usuario.structured_context.prompt.md"
+      },
+      "parameters": {
+        "new_value": "Email--e2"
+      }
+    },
+    {
+      "mutation_id": "mutation-7c5a1419cd4bcf91",
+      "stratum": "E3",
+      "operator": "change_accessible_name",
+      "target": {
+        "target_id": "target-1a9bfdd08ead4866",
+        "scenario_id": "suite_registro_usuario",
+        "step": 4,
+        "ordinal": "0",
+        "page_url": "https://demowebshop.tricentis.com/register",
+        "action": "fill",
+        "tag": "input",
+        "attributes": {
+          "label": "Email:",
+          "id": "Email",
+          "name": "Email",
+          "input_type": "text",
+          "form_action": "/register",
+          "form_method": "POST"
+        },
+        "source_prompt": "suite_registro_usuario.structured_context.prompt.md"
+      },
+      "parameters": {
+        "suffix": " updated"
+      }
+    },
+    {
+      "mutation_id": "mutation-5ac2f8278abf3e89",
+      "stratum": "E1",
+      "operator": "insert_wrapper",
+      "target": {
+        "target_id": "target-2956b02db02c6a0c",
+        "scenario_id": "suite_checkout_blue_jeans",
+        "step": 2,
+        "ordinal": "2",
+        "page_url": "https://demowebshop.tricentis.com/",
+        "action": "click",
+        "tag": "input",
+        "attributes": {
+          "input_type": "submit",
+          "value": "Search",
+          "form_action": "/search",
+          "form_method": "GET"
+        },
+        "source_prompt": "suite_checkout_blue_jeans.structured_context.prompt.md"
+      },
+      "parameters": {
+        "tag": "div"
+      }
+    },
+    {
+      "mutation_id": "mutation-94c84e766eedef25",
+      "stratum": "E1",
+      "operator": "insert_noninteractive_sibling_before",
+      "target": {
+        "target_id": "target-2956b02db02c6a0c",
+        "scenario_id": "suite_checkout_blue_jeans",
+        "step": 2,
+        "ordinal": "2",
+        "page_url": "https://demowebshop.tricentis.com/",
+        "action": "click",
+        "tag": "input",
+        "attributes": {
+          "input_type": "submit",
+          "value": "Search",
+          "form_action": "/search",
+          "form_method": "GET"
+        },
+        "source_prompt": "suite_checkout_blue_jeans.structured_context.prompt.md"
+      },
+      "parameters": {
+        "tag": "span"
+      }
+    },
+    {
+      "mutation_id": "mutation-e1fce4c3c60abcdd",
+      "stratum": "E2",
+      "operator": "input_submit_to_button",
+      "target": {
+        "target_id": "target-2956b02db02c6a0c",
+        "scenario_id": "suite_checkout_blue_jeans",
+        "step": 2,
+        "ordinal": "2",
+        "page_url": "https://demowebshop.tricentis.com/",
+        "action": "click",
+        "tag": "input",
+        "attributes": {
+          "input_type": "submit",
+          "value": "Search",
+          "form_action": "/search",
+          "form_method": "GET"
+        },
+        "source_prompt": "suite_checkout_blue_jeans.structured_context.prompt.md"
+      },
+      "parameters": {}
+    },
+    {
+      "mutation_id": "mutation-6df286d0f225f17a",
+      "stratum": "E3",
+      "operator": "change_accessible_name",
+      "target": {
+        "target_id": "target-2956b02db02c6a0c",
+        "scenario_id": "suite_checkout_blue_jeans",
+        "step": 2,
+        "ordinal": "2",
+        "page_url": "https://demowebshop.tricentis.com/",
+        "action": "click",
+        "tag": "input",
+        "attributes": {
+          "input_type": "submit",
+          "value": "Search",
+          "form_action": "/search",
+          "form_method": "GET"
+        },
+        "source_prompt": "suite_checkout_blue_jeans.structured_context.prompt.md"
+      },
+      "parameters": {
+        "suffix": " updated"
+      }
+    },
+    {
+      "mutation_id": "mutation-8f3ee4276609aaaa",
+      "stratum": "E1",
+      "operator": "insert_wrapper",
+      "target": {
+        "target_id": "target-2ae9f46d35b0a6c1",
+        "scenario_id": "suite_adicionar_carrinho",
+        "step": 1,
+        "ordinal": "1",
+        "page_url": "https://demowebshop.tricentis.com/",
+        "action": "fill",
+        "tag": "input",
+        "attributes": {
+          "id": "small-searchterms",
+          "name": "q",
+          "input_type": "text",
+          "value": "Search store",
+          "form_action": "/search",
+          "form_method": "GET"
+        },
+        "source_prompt": "suite_adicionar_carrinho.structured_context.prompt.md"
+      },
+      "parameters": {
+        "tag": "div"
+      }
+    },
+    {
+      "mutation_id": "mutation-97c0898e46b5caf4",
+      "stratum": "E1",
+      "operator": "insert_noninteractive_sibling_before",
+      "target": {
+        "target_id": "target-2ae9f46d35b0a6c1",
+        "scenario_id": "suite_adicionar_carrinho",
+        "step": 1,
+        "ordinal": "1",
+        "page_url": "https://demowebshop.tricentis.com/",
+        "action": "fill",
+        "tag": "input",
+        "attributes": {
+          "id": "small-searchterms",
+          "name": "q",
+          "input_type": "text",
+          "value": "Search store",
+          "form_action": "/search",
+          "form_method": "GET"
+        },
+        "source_prompt": "suite_adicionar_carrinho.structured_context.prompt.md"
+      },
+      "parameters": {
+        "tag": "span"
+      }
+    },
+    {
+      "mutation_id": "mutation-635633b0387b8909",
+      "stratum": "E2",
+      "operator": "rename_id",
+      "target": {
+        "target_id": "target-2ae9f46d35b0a6c1",
+        "scenario_id": "suite_adicionar_carrinho",
+        "step": 1,
+        "ordinal": "1",
+        "page_url": "https://demowebshop.tricentis.com/",
+        "action": "fill",
+        "tag": "input",
+        "attributes": {
+          "id": "small-searchterms",
+          "name": "q",
+          "input_type": "text",
+          "value": "Search store",
+          "form_action": "/search",
+          "form_method": "GET"
+        },
+        "source_prompt": "suite_adicionar_carrinho.structured_context.prompt.md"
+      },
+      "parameters": {
+        "new_value": "small-searchterms--e2"
+      }
+    },
+    {
+      "mutation_id": "mutation-ecb1e729ae2b5a9b",
+      "stratum": "E3",
+      "operator": "change_accessible_name",
+      "target": {
+        "target_id": "target-2ae9f46d35b0a6c1",
+        "scenario_id": "suite_adicionar_carrinho",
+        "step": 1,
+        "ordinal": "1",
+        "page_url": "https://demowebshop.tricentis.com/",
+        "action": "fill",
+        "tag": "input",
+        "attributes": {
+          "id": "small-searchterms",
+          "name": "q",
+          "input_type": "text",
+          "value": "Search store",
+          "form_action": "/search",
+          "form_method": "GET"
+        },
+        "source_prompt": "suite_adicionar_carrinho.structured_context.prompt.md"
+      },
+      "parameters": {
+        "suffix": " updated"
+      }
+    },
+    {
+      "mutation_id": "mutation-b6377c3034b021ae",
+      "stratum": "E1",
+      "operator": "insert_wrapper",
+      "target": {
+        "target_id": "target-2f1d5f47d5e3a493",
+        "scenario_id": "suite_login_valido",
+        "step": 3,
+        "ordinal": "0",
+        "page_url": "https://demowebshop.tricentis.com/login",
+        "action": "click",
+        "tag": "input",
+        "attributes": {
+          "input_type": "submit",
+          "value": "Log in",
+          "form_action": "/login",
+          "form_method": "POST"
+        },
+        "source_prompt": "suite_login_valido.structured_context.prompt.md"
+      },
+      "parameters": {
+        "tag": "div"
+      }
+    },
+    {
+      "mutation_id": "mutation-ac2305bb5ac9e7a3",
+      "stratum": "E1",
+      "operator": "insert_noninteractive_sibling_before",
+      "target": {
+        "target_id": "target-2f1d5f47d5e3a493",
+        "scenario_id": "suite_login_valido",
+        "step": 3,
+        "ordinal": "0",
+        "page_url": "https://demowebshop.tricentis.com/login",
+        "action": "click",
+        "tag": "input",
+        "attributes": {
+          "input_type": "submit",
+          "value": "Log in",
+          "form_action": "/login",
+          "form_method": "POST"
+        },
+        "source_prompt": "suite_login_valido.structured_context.prompt.md"
+      },
+      "parameters": {
+        "tag": "span"
+      }
+    },
+    {
+      "mutation_id": "mutation-01c92a29170fe542",
+      "stratum": "E2",
+      "operator": "input_submit_to_button",
+      "target": {
+        "target_id": "target-2f1d5f47d5e3a493",
+        "scenario_id": "suite_login_valido",
+        "step": 3,
+        "ordinal": "0",
+        "page_url": "https://demowebshop.tricentis.com/login",
+        "action": "click",
+        "tag": "input",
+        "attributes": {
+          "input_type": "submit",
+          "value": "Log in",
+          "form_action": "/login",
+          "form_method": "POST"
+        },
+        "source_prompt": "suite_login_valido.structured_context.prompt.md"
+      },
+      "parameters": {}
+    },
+    {
+      "mutation_id": "mutation-6879ee12e1a27f1a",
+      "stratum": "E3",
+      "operator": "change_accessible_name",
+      "target": {
+        "target_id": "target-2f1d5f47d5e3a493",
+        "scenario_id": "suite_login_valido",
+        "step": 3,
+        "ordinal": "0",
+        "page_url": "https://demowebshop.tricentis.com/login",
+        "action": "click",
+        "tag": "input",
+        "attributes": {
+          "input_type": "submit",
+          "value": "Log in",
+          "form_action": "/login",
+          "form_method": "POST"
+        },
+        "source_prompt": "suite_login_valido.structured_context.prompt.md"
+      },
+      "parameters": {
+        "suffix": " updated"
+      }
+    },
+    {
+      "mutation_id": "mutation-9ced762c1140ecd0",
+      "stratum": "E1",
+      "operator": "insert_wrapper",
+      "target": {
+        "target_id": "target-3b3fcbb6bcae4249",
+        "scenario_id": "suite_login_valido",
+        "step": 1,
+        "ordinal": "0",
+        "page_url": "https://demowebshop.tricentis.com/",
+        "action": "click",
+        "tag": "a",
+        "attributes": {
+          "text": "Log in",
+          "href": "/login"
+        },
+        "source_prompt": "suite_login_valido.structured_context.prompt.md"
+      },
+      "parameters": {
+        "tag": "div"
+      }
+    },
+    {
+      "mutation_id": "mutation-aa59cd4760cac9de",
+      "stratum": "E1",
+      "operator": "insert_noninteractive_sibling_before",
+      "target": {
+        "target_id": "target-3b3fcbb6bcae4249",
+        "scenario_id": "suite_login_valido",
+        "step": 1,
+        "ordinal": "0",
+        "page_url": "https://demowebshop.tricentis.com/",
+        "action": "click",
+        "tag": "a",
+        "attributes": {
+          "text": "Log in",
+          "href": "/login"
+        },
+        "source_prompt": "suite_login_valido.structured_context.prompt.md"
+      },
+      "parameters": {
+        "tag": "span"
+      }
+    },
+    {
+      "mutation_id": "mutation-cac63525157f7551",
+      "stratum": "E3",
+      "operator": "change_accessible_name",
+      "target": {
+        "target_id": "target-3b3fcbb6bcae4249",
+        "scenario_id": "suite_login_valido",
+        "step": 1,
+        "ordinal": "0",
+        "page_url": "https://demowebshop.tricentis.com/",
+        "action": "click",
+        "tag": "a",
+        "attributes": {
+          "text": "Log in",
+          "href": "/login"
+        },
+        "source_prompt": "suite_login_valido.structured_context.prompt.md"
+      },
+      "parameters": {
+        "suffix": " updated"
+      }
+    },
+    {
+      "mutation_id": "mutation-7ca766ebe7ecb7bc",
+      "stratum": "E1",
+      "operator": "insert_wrapper",
+      "target": {
+        "target_id": "target-3d1e0b2862b409a2",
+        "scenario_id": "suite_checkout_blue_jeans",
+        "step": 2,
+        "ordinal": "1",
+        "page_url": "https://demowebshop.tricentis.com/",
+        "action": "fill",
+        "tag": "input",
+        "attributes": {
+          "id": "small-searchterms",
+          "name": "q",
+          "input_type": "text",
+          "value": "Search store",
+          "form_action": "/search",
+          "form_method": "GET"
+        },
+        "source_prompt": "suite_checkout_blue_jeans.structured_context.prompt.md"
+      },
+      "parameters": {
+        "tag": "div"
+      }
+    },
+    {
+      "mutation_id": "mutation-c477b52eb39811ee",
+      "stratum": "E1",
+      "operator": "insert_noninteractive_sibling_before",
+      "target": {
+        "target_id": "target-3d1e0b2862b409a2",
+        "scenario_id": "suite_checkout_blue_jeans",
+        "step": 2,
+        "ordinal": "1",
+        "page_url": "https://demowebshop.tricentis.com/",
+        "action": "fill",
+        "tag": "input",
+        "attributes": {
+          "id": "small-searchterms",
+          "name": "q",
+          "input_type": "text",
+          "value": "Search store",
+          "form_action": "/search",
+          "form_method": "GET"
+        },
+        "source_prompt": "suite_checkout_blue_jeans.structured_context.prompt.md"
+      },
+      "parameters": {
+        "tag": "span"
+      }
+    },
+    {
+      "mutation_id": "mutation-0273160754df70fe",
+      "stratum": "E2",
+      "operator": "rename_id",
+      "target": {
+        "target_id": "target-3d1e0b2862b409a2",
+        "scenario_id": "suite_checkout_blue_jeans",
+        "step": 2,
+        "ordinal": "1",
+        "page_url": "https://demowebshop.tricentis.com/",
+        "action": "fill",
+        "tag": "input",
+        "attributes": {
+          "id": "small-searchterms",
+          "name": "q",
+          "input_type": "text",
+          "value": "Search store",
+          "form_action": "/search",
+          "form_method": "GET"
+        },
+        "source_prompt": "suite_checkout_blue_jeans.structured_context.prompt.md"
+      },
+      "parameters": {
+        "new_value": "small-searchterms--e2"
+      }
+    },
+    {
+      "mutation_id": "mutation-ca6d6a4233392bc8",
+      "stratum": "E3",
+      "operator": "change_accessible_name",
+      "target": {
+        "target_id": "target-3d1e0b2862b409a2",
+        "scenario_id": "suite_checkout_blue_jeans",
+        "step": 2,
+        "ordinal": "1",
+        "page_url": "https://demowebshop.tricentis.com/",
+        "action": "fill",
+        "tag": "input",
+        "attributes": {
+          "id": "small-searchterms",
+          "name": "q",
+          "input_type": "text",
+          "value": "Search store",
+          "form_action": "/search",
+          "form_method": "GET"
+        },
+        "source_prompt": "suite_checkout_blue_jeans.structured_context.prompt.md"
+      },
+      "parameters": {
+        "suffix": " updated"
+      }
+    },
+    {
+      "mutation_id": "mutation-0c791c4085a3b529",
+      "stratum": "E1",
+      "operator": "insert_wrapper",
+      "target": {
+        "target_id": "target-3e35e4029f81fb2e",
+        "scenario_id": "suite_login_invalido",
+        "step": 2,
+        "ordinal": "2",
+        "page_url": "https://demowebshop.tricentis.com/login",
+        "action": "fill",
+        "tag": "input",
+        "attributes": {
+          "label": "Password:",
+          "id": "Password",
+          "name": "Password",
+          "input_type": "password",
+          "form_action": "/login",
+          "form_method": "POST"
+        },
+        "source_prompt": "suite_login_invalido.structured_context.prompt.md"
+      },
+      "parameters": {
+        "tag": "div"
+      }
+    },
+    {
+      "mutation_id": "mutation-efe013d4684bc586",
+      "stratum": "E1",
+      "operator": "insert_noninteractive_sibling_before",
+      "target": {
+        "target_id": "target-3e35e4029f81fb2e",
+        "scenario_id": "suite_login_invalido",
+        "step": 2,
+        "ordinal": "2",
+        "page_url": "https://demowebshop.tricentis.com/login",
+        "action": "fill",
+        "tag": "input",
+        "attributes": {
+          "label": "Password:",
+          "id": "Password",
+          "name": "Password",
+          "input_type": "password",
+          "form_action": "/login",
+          "form_method": "POST"
+        },
+        "source_prompt": "suite_login_invalido.structured_context.prompt.md"
+      },
+      "parameters": {
+        "tag": "span"
+      }
+    },
+    {
+      "mutation_id": "mutation-439ad347e64028d4",
+      "stratum": "E2",
+      "operator": "rename_id",
+      "target": {
+        "target_id": "target-3e35e4029f81fb2e",
+        "scenario_id": "suite_login_invalido",
+        "step": 2,
+        "ordinal": "2",
+        "page_url": "https://demowebshop.tricentis.com/login",
+        "action": "fill",
+        "tag": "input",
+        "attributes": {
+          "label": "Password:",
+          "id": "Password",
+          "name": "Password",
+          "input_type": "password",
+          "form_action": "/login",
+          "form_method": "POST"
+        },
+        "source_prompt": "suite_login_invalido.structured_context.prompt.md"
+      },
+      "parameters": {
+        "new_value": "Password--e2"
+      }
+    },
+    {
+      "mutation_id": "mutation-928e88acd2a44a4c",
+      "stratum": "E3",
+      "operator": "change_accessible_name",
+      "target": {
+        "target_id": "target-3e35e4029f81fb2e",
+        "scenario_id": "suite_login_invalido",
+        "step": 2,
+        "ordinal": "2",
+        "page_url": "https://demowebshop.tricentis.com/login",
+        "action": "fill",
+        "tag": "input",
+        "attributes": {
+          "label": "Password:",
+          "id": "Password",
+          "name": "Password",
+          "input_type": "password",
+          "form_action": "/login",
+          "form_method": "POST"
+        },
+        "source_prompt": "suite_login_invalido.structured_context.prompt.md"
+      },
+      "parameters": {
+        "suffix": " updated"
+      }
+    },
+    {
+      "mutation_id": "mutation-5bc95e3c2bbac0db",
+      "stratum": "E1",
+      "operator": "insert_wrapper",
+      "target": {
+        "target_id": "target-3f92668d6a7358e5",
+        "scenario_id": "suite_adicionar_wishlist",
+        "step": 6,
+        "ordinal": "0",
+        "page_url": "https://demowebshop.tricentis.com/digital-slr-camera",
+        "action": "click",
+        "tag": "a",
+        "attributes": {
+          "text": "Wishlist",
+          "href": "/wishlist"
+        },
+        "source_prompt": "suite_adicionar_wishlist.structured_context.prompt.md"
+      },
+      "parameters": {
+        "tag": "div"
+      }
+    },
+    {
+      "mutation_id": "mutation-e867e9c92a183647",
+      "stratum": "E1",
+      "operator": "insert_noninteractive_sibling_before",
+      "target": {
+        "target_id": "target-3f92668d6a7358e5",
+        "scenario_id": "suite_adicionar_wishlist",
+        "step": 6,
+        "ordinal": "0",
+        "page_url": "https://demowebshop.tricentis.com/digital-slr-camera",
+        "action": "click",
+        "tag": "a",
+        "attributes": {
+          "text": "Wishlist",
+          "href": "/wishlist"
+        },
+        "source_prompt": "suite_adicionar_wishlist.structured_context.prompt.md"
+      },
+      "parameters": {
+        "tag": "span"
+      }
+    },
+    {
+      "mutation_id": "mutation-e28e7128eefd697a",
+      "stratum": "E3",
+      "operator": "change_accessible_name",
+      "target": {
+        "target_id": "target-3f92668d6a7358e5",
+        "scenario_id": "suite_adicionar_wishlist",
+        "step": 6,
+        "ordinal": "0",
+        "page_url": "https://demowebshop.tricentis.com/digital-slr-camera",
+        "action": "click",
+        "tag": "a",
+        "attributes": {
+          "text": "Wishlist",
+          "href": "/wishlist"
+        },
+        "source_prompt": "suite_adicionar_wishlist.structured_context.prompt.md"
+      },
+      "parameters": {
+        "suffix": " updated"
+      }
+    },
+    {
+      "mutation_id": "mutation-c4b63671f09aaed5",
+      "stratum": "E1",
+      "operator": "insert_wrapper",
+      "target": {
+        "target_id": "target-47d520b9ba855fec",
+        "scenario_id": "suite_limpar_wishlist",
+        "step": 3,
+        "ordinal": "0",
+        "page_url": "https://demowebshop.tricentis.com/",
+        "action": "click",
+        "tag": "a",
+        "attributes": {
+          "text": "Wishlist",
+          "href": "/wishlist"
+        },
+        "source_prompt": "suite_limpar_wishlist.structured_context.prompt.md"
+      },
+      "parameters": {
+        "tag": "div"
+      }
+    },
+    {
+      "mutation_id": "mutation-b77e7ce5b05aeaf8",
+      "stratum": "E1",
+      "operator": "insert_noninteractive_sibling_before",
+      "target": {
+        "target_id": "target-47d520b9ba855fec",
+        "scenario_id": "suite_limpar_wishlist",
+        "step": 3,
+        "ordinal": "0",
+        "page_url": "https://demowebshop.tricentis.com/",
+        "action": "click",
+        "tag": "a",
+        "attributes": {
+          "text": "Wishlist",
+          "href": "/wishlist"
+        },
+        "source_prompt": "suite_limpar_wishlist.structured_context.prompt.md"
+      },
+      "parameters": {
+        "tag": "span"
+      }
+    },
+    {
+      "mutation_id": "mutation-cd11dfc81a804983",
+      "stratum": "E3",
+      "operator": "change_accessible_name",
+      "target": {
+        "target_id": "target-47d520b9ba855fec",
+        "scenario_id": "suite_limpar_wishlist",
+        "step": 3,
+        "ordinal": "0",
+        "page_url": "https://demowebshop.tricentis.com/",
+        "action": "click",
+        "tag": "a",
+        "attributes": {
+          "text": "Wishlist",
+          "href": "/wishlist"
+        },
+        "source_prompt": "suite_limpar_wishlist.structured_context.prompt.md"
+      },
+      "parameters": {
+        "suffix": " updated"
+      }
+    },
+    {
+      "mutation_id": "mutation-83a7d47898243818",
+      "stratum": "E1",
+      "operator": "insert_wrapper",
+      "target": {
+        "target_id": "target-49bc93871f7eecf4",
+        "scenario_id": "suite_registro_usuario",
+        "step": 3,
+        "ordinal": "1",
+        "page_url": "https://demowebshop.tricentis.com/register",
+        "action": "fill",
+        "tag": "input",
+        "attributes": {
+          "label": "First name:",
+          "id": "FirstName",
+          "name": "FirstName",
+          "input_type": "text",
+          "form_action": "/register",
+          "form_method": "POST"
+        },
+        "source_prompt": "suite_registro_usuario.structured_context.prompt.md"
+      },
+      "parameters": {
+        "tag": "div"
+      }
+    },
+    {
+      "mutation_id": "mutation-af030b1196d70c81",
+      "stratum": "E1",
+      "operator": "insert_noninteractive_sibling_before",
+      "target": {
+        "target_id": "target-49bc93871f7eecf4",
+        "scenario_id": "suite_registro_usuario",
+        "step": 3,
+        "ordinal": "1",
+        "page_url": "https://demowebshop.tricentis.com/register",
+        "action": "fill",
+        "tag": "input",
+        "attributes": {
+          "label": "First name:",
+          "id": "FirstName",
+          "name": "FirstName",
+          "input_type": "text",
+          "form_action": "/register",
+          "form_method": "POST"
+        },
+        "source_prompt": "suite_registro_usuario.structured_context.prompt.md"
+      },
+      "parameters": {
+        "tag": "span"
+      }
+    },
+    {
+      "mutation_id": "mutation-b6f40949aeb548ab",
+      "stratum": "E2",
+      "operator": "rename_id",
+      "target": {
+        "target_id": "target-49bc93871f7eecf4",
+        "scenario_id": "suite_registro_usuario",
+        "step": 3,
+        "ordinal": "1",
+        "page_url": "https://demowebshop.tricentis.com/register",
+        "action": "fill",
+        "tag": "input",
+        "attributes": {
+          "label": "First name:",
+          "id": "FirstName",
+          "name": "FirstName",
+          "input_type": "text",
+          "form_action": "/register",
+          "form_method": "POST"
+        },
+        "source_prompt": "suite_registro_usuario.structured_context.prompt.md"
+      },
+      "parameters": {
+        "new_value": "FirstName--e2"
+      }
+    },
+    {
+      "mutation_id": "mutation-ddbe1b97406d4a7f",
+      "stratum": "E3",
+      "operator": "change_accessible_name",
+      "target": {
+        "target_id": "target-49bc93871f7eecf4",
+        "scenario_id": "suite_registro_usuario",
+        "step": 3,
+        "ordinal": "1",
+        "page_url": "https://demowebshop.tricentis.com/register",
+        "action": "fill",
+        "tag": "input",
+        "attributes": {
+          "label": "First name:",
+          "id": "FirstName",
+          "name": "FirstName",
+          "input_type": "text",
+          "form_action": "/register",
+          "form_method": "POST"
+        },
+        "source_prompt": "suite_registro_usuario.structured_context.prompt.md"
+      },
+      "parameters": {
+        "suffix": " updated"
+      }
+    },
+    {
+      "mutation_id": "mutation-7714d7caacd4f6b1",
+      "stratum": "E1",
+      "operator": "insert_wrapper",
+      "target": {
+        "target_id": "target-5d0e63e369026131",
+        "scenario_id": "suite_checkout_blue_jeans",
+        "step": 4,
+        "ordinal": "0",
+        "page_url": "https://demowebshop.tricentis.com/blue-jeans",
+        "action": "click",
+        "tag": "a",
+        "attributes": {
+          "text": "Shopping cart",
+          "href": "/cart"
+        },
+        "source_prompt": "suite_checkout_blue_jeans.structured_context.prompt.md"
+      },
+      "parameters": {
+        "tag": "div"
+      }
+    },
+    {
+      "mutation_id": "mutation-943337053a3a1a85",
+      "stratum": "E1",
+      "operator": "insert_noninteractive_sibling_before",
+      "target": {
+        "target_id": "target-5d0e63e369026131",
+        "scenario_id": "suite_checkout_blue_jeans",
+        "step": 4,
+        "ordinal": "0",
+        "page_url": "https://demowebshop.tricentis.com/blue-jeans",
+        "action": "click",
+        "tag": "a",
+        "attributes": {
+          "text": "Shopping cart",
+          "href": "/cart"
+        },
+        "source_prompt": "suite_checkout_blue_jeans.structured_context.prompt.md"
+      },
+      "parameters": {
+        "tag": "span"
+      }
+    },
+    {
+      "mutation_id": "mutation-c594ef776e5b1cf2",
+      "stratum": "E3",
+      "operator": "change_accessible_name",
+      "target": {
+        "target_id": "target-5d0e63e369026131",
+        "scenario_id": "suite_checkout_blue_jeans",
+        "step": 4,
+        "ordinal": "0",
+        "page_url": "https://demowebshop.tricentis.com/blue-jeans",
+        "action": "click",
+        "tag": "a",
+        "attributes": {
+          "text": "Shopping cart",
+          "href": "/cart"
+        },
+        "source_prompt": "suite_checkout_blue_jeans.structured_context.prompt.md"
+      },
+      "parameters": {
+        "suffix": " updated"
+      }
+    },
+    {
+      "mutation_id": "mutation-66f8f9699198b40f",
+      "stratum": "E1",
+      "operator": "insert_wrapper",
+      "target": {
+        "target_id": "target-61b396807c6d49be",
+        "scenario_id": "suite_configurar_desktop",
+        "step": 1,
+        "ordinal": "2",
+        "page_url": "https://demowebshop.tricentis.com/",
+        "action": "click",
+        "tag": "a",
+        "attributes": {
+          "text": "Desktops",
+          "href": "/desktops"
+        },
+        "source_prompt": "suite_configurar_desktop.structured_context.prompt.md"
+      },
+      "parameters": {
+        "tag": "div"
+      }
+    },
+    {
+      "mutation_id": "mutation-c4dc9fb375946545",
+      "stratum": "E1",
+      "operator": "insert_noninteractive_sibling_before",
+      "target": {
+        "target_id": "target-61b396807c6d49be",
+        "scenario_id": "suite_configurar_desktop",
+        "step": 1,
+        "ordinal": "2",
+        "page_url": "https://demowebshop.tricentis.com/",
+        "action": "click",
+        "tag": "a",
+        "attributes": {
+          "text": "Desktops",
+          "href": "/desktops"
+        },
+        "source_prompt": "suite_configurar_desktop.structured_context.prompt.md"
+      },
+      "parameters": {
+        "tag": "span"
+      }
+    },
+    {
+      "mutation_id": "mutation-6f5e701ae4062f9d",
+      "stratum": "E3",
+      "operator": "change_accessible_name",
+      "target": {
+        "target_id": "target-61b396807c6d49be",
+        "scenario_id": "suite_configurar_desktop",
+        "step": 1,
+        "ordinal": "2",
+        "page_url": "https://demowebshop.tricentis.com/",
+        "action": "click",
+        "tag": "a",
+        "attributes": {
+          "text": "Desktops",
+          "href": "/desktops"
+        },
+        "source_prompt": "suite_configurar_desktop.structured_context.prompt.md"
+      },
+      "parameters": {
+        "suffix": " updated"
+      }
+    },
+    {
+      "mutation_id": "mutation-808a626d963bb400",
+      "stratum": "E1",
+      "operator": "insert_wrapper",
+      "target": {
+        "target_id": "target-663b9f67b38a7834",
+        "scenario_id": "suite_adicionar_wishlist",
+        "step": 2,
+        "ordinal": "1",
+        "page_url": "https://demowebshop.tricentis.com/",
+        "action": "fill",
+        "tag": "input",
+        "attributes": {
+          "id": "small-searchterms",
+          "name": "q",
+          "input_type": "text",
+          "value": "Search store",
+          "form_action": "/search",
+          "form_method": "GET"
+        },
+        "source_prompt": "suite_adicionar_wishlist.structured_context.prompt.md"
+      },
+      "parameters": {
+        "tag": "div"
+      }
+    },
+    {
+      "mutation_id": "mutation-36be8718c69ddadf",
+      "stratum": "E1",
+      "operator": "insert_noninteractive_sibling_before",
+      "target": {
+        "target_id": "target-663b9f67b38a7834",
+        "scenario_id": "suite_adicionar_wishlist",
+        "step": 2,
+        "ordinal": "1",
+        "page_url": "https://demowebshop.tricentis.com/",
+        "action": "fill",
+        "tag": "input",
+        "attributes": {
+          "id": "small-searchterms",
+          "name": "q",
+          "input_type": "text",
+          "value": "Search store",
+          "form_action": "/search",
+          "form_method": "GET"
+        },
+        "source_prompt": "suite_adicionar_wishlist.structured_context.prompt.md"
+      },
+      "parameters": {
+        "tag": "span"
+      }
+    },
+    {
+      "mutation_id": "mutation-5e39dcfa8cdb6c46",
+      "stratum": "E2",
+      "operator": "rename_id",
+      "target": {
+        "target_id": "target-663b9f67b38a7834",
+        "scenario_id": "suite_adicionar_wishlist",
+        "step": 2,
+        "ordinal": "1",
+        "page_url": "https://demowebshop.tricentis.com/",
+        "action": "fill",
+        "tag": "input",
+        "attributes": {
+          "id": "small-searchterms",
+          "name": "q",
+          "input_type": "text",
+          "value": "Search store",
+          "form_action": "/search",
+          "form_method": "GET"
+        },
+        "source_prompt": "suite_adicionar_wishlist.structured_context.prompt.md"
+      },
+      "parameters": {
+        "new_value": "small-searchterms--e2"
+      }
+    },
+    {
+      "mutation_id": "mutation-30685c5e9658f818",
+      "stratum": "E3",
+      "operator": "change_accessible_name",
+      "target": {
+        "target_id": "target-663b9f67b38a7834",
+        "scenario_id": "suite_adicionar_wishlist",
+        "step": 2,
+        "ordinal": "1",
+        "page_url": "https://demowebshop.tricentis.com/",
+        "action": "fill",
+        "tag": "input",
+        "attributes": {
+          "id": "small-searchterms",
+          "name": "q",
+          "input_type": "text",
+          "value": "Search store",
+          "form_action": "/search",
+          "form_method": "GET"
+        },
+        "source_prompt": "suite_adicionar_wishlist.structured_context.prompt.md"
+      },
+      "parameters": {
+        "suffix": " updated"
+      }
+    },
+    {
+      "mutation_id": "mutation-3fb1271d13a7c1e6",
+      "stratum": "E1",
+      "operator": "insert_wrapper",
+      "target": {
+        "target_id": "target-690d7b29cc430944",
+        "scenario_id": "suite_login_valido",
+        "step": 2,
+        "ordinal": "1",
+        "page_url": "https://demowebshop.tricentis.com/login",
+        "action": "fill",
+        "tag": "input",
+        "attributes": {
+          "label": "Email:",
+          "id": "Email",
+          "name": "Email",
+          "input_type": "text",
+          "form_action": "/login",
+          "form_method": "POST"
+        },
+        "source_prompt": "suite_login_valido.structured_context.prompt.md"
+      },
+      "parameters": {
+        "tag": "div"
+      }
+    },
+    {
+      "mutation_id": "mutation-e86322ccb5b349a0",
+      "stratum": "E1",
+      "operator": "insert_noninteractive_sibling_before",
+      "target": {
+        "target_id": "target-690d7b29cc430944",
+        "scenario_id": "suite_login_valido",
+        "step": 2,
+        "ordinal": "1",
+        "page_url": "https://demowebshop.tricentis.com/login",
+        "action": "fill",
+        "tag": "input",
+        "attributes": {
+          "label": "Email:",
+          "id": "Email",
+          "name": "Email",
+          "input_type": "text",
+          "form_action": "/login",
+          "form_method": "POST"
+        },
+        "source_prompt": "suite_login_valido.structured_context.prompt.md"
+      },
+      "parameters": {
+        "tag": "span"
+      }
+    },
+    {
+      "mutation_id": "mutation-5891158f143b2e49",
+      "stratum": "E2",
+      "operator": "rename_id",
+      "target": {
+        "target_id": "target-690d7b29cc430944",
+        "scenario_id": "suite_login_valido",
+        "step": 2,
+        "ordinal": "1",
+        "page_url": "https://demowebshop.tricentis.com/login",
+        "action": "fill",
+        "tag": "input",
+        "attributes": {
+          "label": "Email:",
+          "id": "Email",
+          "name": "Email",
+          "input_type": "text",
+          "form_action": "/login",
+          "form_method": "POST"
+        },
+        "source_prompt": "suite_login_valido.structured_context.prompt.md"
+      },
+      "parameters": {
+        "new_value": "Email--e2"
+      }
+    },
+    {
+      "mutation_id": "mutation-970226cfd2e215b1",
+      "stratum": "E3",
+      "operator": "change_accessible_name",
+      "target": {
+        "target_id": "target-690d7b29cc430944",
+        "scenario_id": "suite_login_valido",
+        "step": 2,
+        "ordinal": "1",
+        "page_url": "https://demowebshop.tricentis.com/login",
+        "action": "fill",
+        "tag": "input",
+        "attributes": {
+          "label": "Email:",
+          "id": "Email",
+          "name": "Email",
+          "input_type": "text",
+          "form_action": "/login",
+          "form_method": "POST"
+        },
+        "source_prompt": "suite_login_valido.structured_context.prompt.md"
+      },
+      "parameters": {
+        "suffix": " updated"
+      }
+    },
+    {
+      "mutation_id": "mutation-734eba6b980b8b06",
+      "stratum": "E1",
+      "operator": "insert_wrapper",
+      "target": {
+        "target_id": "target-6a1267a08eda9712",
+        "scenario_id": "suite_registro_usuario",
+        "step": 5,
+        "ordinal": "2",
+        "page_url": "https://demowebshop.tricentis.com/register",
+        "action": "fill",
+        "tag": "input",
+        "attributes": {
+          "label": "Confirm password:",
+          "id": "ConfirmPassword",
+          "name": "ConfirmPassword",
+          "input_type": "password",
+          "form_action": "/register",
+          "form_method": "POST"
+        },
+        "source_prompt": "suite_registro_usuario.structured_context.prompt.md"
+      },
+      "parameters": {
+        "tag": "div"
+      }
+    },
+    {
+      "mutation_id": "mutation-d569f09298e2345f",
+      "stratum": "E1",
+      "operator": "insert_noninteractive_sibling_before",
+      "target": {
+        "target_id": "target-6a1267a08eda9712",
+        "scenario_id": "suite_registro_usuario",
+        "step": 5,
+        "ordinal": "2",
+        "page_url": "https://demowebshop.tricentis.com/register",
+        "action": "fill",
+        "tag": "input",
+        "attributes": {
+          "label": "Confirm password:",
+          "id": "ConfirmPassword",
+          "name": "ConfirmPassword",
+          "input_type": "password",
+          "form_action": "/register",
+          "form_method": "POST"
+        },
+        "source_prompt": "suite_registro_usuario.structured_context.prompt.md"
+      },
+      "parameters": {
+        "tag": "span"
+      }
+    },
+    {
+      "mutation_id": "mutation-c93f0839b40e5786",
+      "stratum": "E2",
+      "operator": "rename_id",
+      "target": {
+        "target_id": "target-6a1267a08eda9712",
+        "scenario_id": "suite_registro_usuario",
+        "step": 5,
+        "ordinal": "2",
+        "page_url": "https://demowebshop.tricentis.com/register",
+        "action": "fill",
+        "tag": "input",
+        "attributes": {
+          "label": "Confirm password:",
+          "id": "ConfirmPassword",
+          "name": "ConfirmPassword",
+          "input_type": "password",
+          "form_action": "/register",
+          "form_method": "POST"
+        },
+        "source_prompt": "suite_registro_usuario.structured_context.prompt.md"
+      },
+      "parameters": {
+        "new_value": "ConfirmPassword--e2"
+      }
+    },
+    {
+      "mutation_id": "mutation-059078ddc4025e2e",
+      "stratum": "E3",
+      "operator": "change_accessible_name",
+      "target": {
+        "target_id": "target-6a1267a08eda9712",
+        "scenario_id": "suite_registro_usuario",
+        "step": 5,
+        "ordinal": "2",
+        "page_url": "https://demowebshop.tricentis.com/register",
+        "action": "fill",
+        "tag": "input",
+        "attributes": {
+          "label": "Confirm password:",
+          "id": "ConfirmPassword",
+          "name": "ConfirmPassword",
+          "input_type": "password",
+          "form_action": "/register",
+          "form_method": "POST"
+        },
+        "source_prompt": "suite_registro_usuario.structured_context.prompt.md"
+      },
+      "parameters": {
+        "suffix": " updated"
+      }
+    },
+    {
+      "mutation_id": "mutation-7ba31a9fb73679f9",
+      "stratum": "E1",
+      "operator": "insert_wrapper",
+      "target": {
+        "target_id": "target-6cdb57db5998ed2b",
+        "scenario_id": "suite_configurar_desktop",
+        "step": 1,
+        "ordinal": "1",
+        "page_url": "https://demowebshop.tricentis.com/",
+        "action": "click",
+        "tag": "a",
+        "attributes": {
+          "text": "Computers",
+          "href": "/computers"
+        },
+        "source_prompt": "suite_configurar_desktop.structured_context.prompt.md"
+      },
+      "parameters": {
+        "tag": "div"
+      }
+    },
+    {
+      "mutation_id": "mutation-20cf270819f18eca",
+      "stratum": "E1",
+      "operator": "insert_noninteractive_sibling_before",
+      "target": {
+        "target_id": "target-6cdb57db5998ed2b",
+        "scenario_id": "suite_configurar_desktop",
+        "step": 1,
+        "ordinal": "1",
+        "page_url": "https://demowebshop.tricentis.com/",
+        "action": "click",
+        "tag": "a",
+        "attributes": {
+          "text": "Computers",
+          "href": "/computers"
+        },
+        "source_prompt": "suite_configurar_desktop.structured_context.prompt.md"
+      },
+      "parameters": {
+        "tag": "span"
+      }
+    },
+    {
+      "mutation_id": "mutation-c09b21a68eb14ede",
+      "stratum": "E3",
+      "operator": "change_accessible_name",
+      "target": {
+        "target_id": "target-6cdb57db5998ed2b",
+        "scenario_id": "suite_configurar_desktop",
+        "step": 1,
+        "ordinal": "1",
+        "page_url": "https://demowebshop.tricentis.com/",
+        "action": "click",
+        "tag": "a",
+        "attributes": {
+          "text": "Computers",
+          "href": "/computers"
+        },
+        "source_prompt": "suite_configurar_desktop.structured_context.prompt.md"
+      },
+      "parameters": {
+        "suffix": " updated"
+      }
+    },
+    {
+      "mutation_id": "mutation-9eb1e5a299eb758d",
+      "stratum": "E1",
+      "operator": "insert_wrapper",
+      "target": {
+        "target_id": "target-6d39364196ae5545",
+        "scenario_id": "suite_detalhes_fiction",
+        "step": 1,
+        "ordinal": "1",
+        "page_url": "https://demowebshop.tricentis.com/",
+        "action": "fill",
+        "tag": "input",
+        "attributes": {
+          "id": "small-searchterms",
+          "name": "q",
+          "input_type": "text",
+          "value": "Search store",
+          "form_action": "/search",
+          "form_method": "GET"
+        },
+        "source_prompt": "suite_detalhes_fiction.structured_context.prompt.md"
+      },
+      "parameters": {
+        "tag": "div"
+      }
+    },
+    {
+      "mutation_id": "mutation-b745f8523a2ad8e7",
+      "stratum": "E1",
+      "operator": "insert_noninteractive_sibling_before",
+      "target": {
+        "target_id": "target-6d39364196ae5545",
+        "scenario_id": "suite_detalhes_fiction",
+        "step": 1,
+        "ordinal": "1",
+        "page_url": "https://demowebshop.tricentis.com/",
+        "action": "fill",
+        "tag": "input",
+        "attributes": {
+          "id": "small-searchterms",
+          "name": "q",
+          "input_type": "text",
+          "value": "Search store",
+          "form_action": "/search",
+          "form_method": "GET"
+        },
+        "source_prompt": "suite_detalhes_fiction.structured_context.prompt.md"
+      },
+      "parameters": {
+        "tag": "span"
+      }
+    },
+    {
+      "mutation_id": "mutation-54439ef3f0658bed",
+      "stratum": "E2",
+      "operator": "rename_id",
+      "target": {
+        "target_id": "target-6d39364196ae5545",
+        "scenario_id": "suite_detalhes_fiction",
+        "step": 1,
+        "ordinal": "1",
+        "page_url": "https://demowebshop.tricentis.com/",
+        "action": "fill",
+        "tag": "input",
+        "attributes": {
+          "id": "small-searchterms",
+          "name": "q",
+          "input_type": "text",
+          "value": "Search store",
+          "form_action": "/search",
+          "form_method": "GET"
+        },
+        "source_prompt": "suite_detalhes_fiction.structured_context.prompt.md"
+      },
+      "parameters": {
+        "new_value": "small-searchterms--e2"
+      }
+    },
+    {
+      "mutation_id": "mutation-6cfcc1efbdb6ab5c",
+      "stratum": "E3",
+      "operator": "change_accessible_name",
+      "target": {
+        "target_id": "target-6d39364196ae5545",
+        "scenario_id": "suite_detalhes_fiction",
+        "step": 1,
+        "ordinal": "1",
+        "page_url": "https://demowebshop.tricentis.com/",
+        "action": "fill",
+        "tag": "input",
+        "attributes": {
+          "id": "small-searchterms",
+          "name": "q",
+          "input_type": "text",
+          "value": "Search store",
+          "form_action": "/search",
+          "form_method": "GET"
+        },
+        "source_prompt": "suite_detalhes_fiction.structured_context.prompt.md"
+      },
+      "parameters": {
+        "suffix": " updated"
+      }
+    },
+    {
+      "mutation_id": "mutation-56f714145f2b9e5f",
+      "stratum": "E1",
+      "operator": "insert_wrapper",
+      "target": {
+        "target_id": "target-6e3ad5d74291ebba",
+        "scenario_id": "suite_limpar_carrinho",
+        "step": 1,
+        "ordinal": "0",
+        "page_url": "https://demowebshop.tricentis.com/blue-jeans",
+        "action": "click",
+        "tag": "input",
+        "attributes": {
+          "id": "add-to-cart-button-36",
+          "input_type": "button",
+          "value": "Add to cart",
+          "form_action": "/blue-jeans",
+          "form_method": "POST"
+        },
+        "source_prompt": "suite_limpar_carrinho.structured_context.prompt.md"
+      },
+      "parameters": {
+        "tag": "div"
+      }
+    },
+    {
+      "mutation_id": "mutation-0631d1b7c50168dd",
+      "stratum": "E1",
+      "operator": "insert_noninteractive_sibling_before",
+      "target": {
+        "target_id": "target-6e3ad5d74291ebba",
+        "scenario_id": "suite_limpar_carrinho",
+        "step": 1,
+        "ordinal": "0",
+        "page_url": "https://demowebshop.tricentis.com/blue-jeans",
+        "action": "click",
+        "tag": "input",
+        "attributes": {
+          "id": "add-to-cart-button-36",
+          "input_type": "button",
+          "value": "Add to cart",
+          "form_action": "/blue-jeans",
+          "form_method": "POST"
+        },
+        "source_prompt": "suite_limpar_carrinho.structured_context.prompt.md"
+      },
+      "parameters": {
+        "tag": "span"
+      }
+    },
+    {
+      "mutation_id": "mutation-dfcce8f46a857a7c",
+      "stratum": "E2",
+      "operator": "rename_id",
+      "target": {
+        "target_id": "target-6e3ad5d74291ebba",
+        "scenario_id": "suite_limpar_carrinho",
+        "step": 1,
+        "ordinal": "0",
+        "page_url": "https://demowebshop.tricentis.com/blue-jeans",
+        "action": "click",
+        "tag": "input",
+        "attributes": {
+          "id": "add-to-cart-button-36",
+          "input_type": "button",
+          "value": "Add to cart",
+          "form_action": "/blue-jeans",
+          "form_method": "POST"
+        },
+        "source_prompt": "suite_limpar_carrinho.structured_context.prompt.md"
+      },
+      "parameters": {
+        "new_value": "add-to-cart-button-36--e2"
+      }
+    },
+    {
+      "mutation_id": "mutation-2be55cd22ea3f5a3",
+      "stratum": "E3",
+      "operator": "change_accessible_name",
+      "target": {
+        "target_id": "target-6e3ad5d74291ebba",
+        "scenario_id": "suite_limpar_carrinho",
+        "step": 1,
+        "ordinal": "0",
+        "page_url": "https://demowebshop.tricentis.com/blue-jeans",
+        "action": "click",
+        "tag": "input",
+        "attributes": {
+          "id": "add-to-cart-button-36",
+          "input_type": "button",
+          "value": "Add to cart",
+          "form_action": "/blue-jeans",
+          "form_method": "POST"
+        },
+        "source_prompt": "suite_limpar_carrinho.structured_context.prompt.md"
+      },
+      "parameters": {
+        "suffix": " updated"
+      }
+    },
+    {
+      "mutation_id": "mutation-be80f440f71f979c",
+      "stratum": "E1",
+      "operator": "insert_wrapper",
+      "target": {
+        "target_id": "target-6f6fe7e4b2d96a06",
+        "scenario_id": "suite_busca_blue_jeans",
+        "step": 1,
+        "ordinal": "1",
+        "page_url": "https://demowebshop.tricentis.com/",
+        "action": "fill",
+        "tag": "input",
+        "attributes": {
+          "id": "small-searchterms",
+          "name": "q",
+          "input_type": "text",
+          "value": "Search store",
+          "form_action": "/search",
+          "form_method": "GET"
+        },
+        "source_prompt": "suite_busca_blue_jeans.structured_context.prompt.md"
+      },
+      "parameters": {
+        "tag": "div"
+      }
+    },
+    {
+      "mutation_id": "mutation-dd9a3b88732c15c6",
+      "stratum": "E1",
+      "operator": "insert_noninteractive_sibling_before",
+      "target": {
+        "target_id": "target-6f6fe7e4b2d96a06",
+        "scenario_id": "suite_busca_blue_jeans",
+        "step": 1,
+        "ordinal": "1",
+        "page_url": "https://demowebshop.tricentis.com/",
+        "action": "fill",
+        "tag": "input",
+        "attributes": {
+          "id": "small-searchterms",
+          "name": "q",
+          "input_type": "text",
+          "value": "Search store",
+          "form_action": "/search",
+          "form_method": "GET"
+        },
+        "source_prompt": "suite_busca_blue_jeans.structured_context.prompt.md"
+      },
+      "parameters": {
+        "tag": "span"
+      }
+    },
+    {
+      "mutation_id": "mutation-a073fc378f07ed98",
+      "stratum": "E2",
+      "operator": "rename_id",
+      "target": {
+        "target_id": "target-6f6fe7e4b2d96a06",
+        "scenario_id": "suite_busca_blue_jeans",
+        "step": 1,
+        "ordinal": "1",
+        "page_url": "https://demowebshop.tricentis.com/",
+        "action": "fill",
+        "tag": "input",
+        "attributes": {
+          "id": "small-searchterms",
+          "name": "q",
+          "input_type": "text",
+          "value": "Search store",
+          "form_action": "/search",
+          "form_method": "GET"
+        },
+        "source_prompt": "suite_busca_blue_jeans.structured_context.prompt.md"
+      },
+      "parameters": {
+        "new_value": "small-searchterms--e2"
+      }
+    },
+    {
+      "mutation_id": "mutation-af2f98c21d5856c6",
+      "stratum": "E3",
+      "operator": "change_accessible_name",
+      "target": {
+        "target_id": "target-6f6fe7e4b2d96a06",
+        "scenario_id": "suite_busca_blue_jeans",
+        "step": 1,
+        "ordinal": "1",
+        "page_url": "https://demowebshop.tricentis.com/",
+        "action": "fill",
+        "tag": "input",
+        "attributes": {
+          "id": "small-searchterms",
+          "name": "q",
+          "input_type": "text",
+          "value": "Search store",
+          "form_action": "/search",
+          "form_method": "GET"
+        },
+        "source_prompt": "suite_busca_blue_jeans.structured_context.prompt.md"
+      },
+      "parameters": {
+        "suffix": " updated"
+      }
+    },
+    {
+      "mutation_id": "mutation-0d9f5f3db96d8061",
+      "stratum": "E1",
+      "operator": "insert_wrapper",
+      "target": {
+        "target_id": "target-75695125c26f9f80",
+        "scenario_id": "suite_checkout_blue_jeans",
+        "step": 3,
+        "ordinal": "0",
+        "page_url": "https://demowebshop.tricentis.com/blue-jeans",
+        "action": "click",
+        "tag": "input",
+        "attributes": {
+          "id": "add-to-cart-button-36",
+          "input_type": "button",
+          "value": "Add to cart",
+          "form_action": "/blue-jeans",
+          "form_method": "POST"
+        },
+        "source_prompt": "suite_checkout_blue_jeans.structured_context.prompt.md"
+      },
+      "parameters": {
+        "tag": "div"
+      }
+    },
+    {
+      "mutation_id": "mutation-c90d9f87dcad3a94",
+      "stratum": "E1",
+      "operator": "insert_noninteractive_sibling_before",
+      "target": {
+        "target_id": "target-75695125c26f9f80",
+        "scenario_id": "suite_checkout_blue_jeans",
+        "step": 3,
+        "ordinal": "0",
+        "page_url": "https://demowebshop.tricentis.com/blue-jeans",
+        "action": "click",
+        "tag": "input",
+        "attributes": {
+          "id": "add-to-cart-button-36",
+          "input_type": "button",
+          "value": "Add to cart",
+          "form_action": "/blue-jeans",
+          "form_method": "POST"
+        },
+        "source_prompt": "suite_checkout_blue_jeans.structured_context.prompt.md"
+      },
+      "parameters": {
+        "tag": "span"
+      }
+    },
+    {
+      "mutation_id": "mutation-3e5969e1f183dbd1",
+      "stratum": "E2",
+      "operator": "rename_id",
+      "target": {
+        "target_id": "target-75695125c26f9f80",
+        "scenario_id": "suite_checkout_blue_jeans",
+        "step": 3,
+        "ordinal": "0",
+        "page_url": "https://demowebshop.tricentis.com/blue-jeans",
+        "action": "click",
+        "tag": "input",
+        "attributes": {
+          "id": "add-to-cart-button-36",
+          "input_type": "button",
+          "value": "Add to cart",
+          "form_action": "/blue-jeans",
+          "form_method": "POST"
+        },
+        "source_prompt": "suite_checkout_blue_jeans.structured_context.prompt.md"
+      },
+      "parameters": {
+        "new_value": "add-to-cart-button-36--e2"
+      }
+    },
+    {
+      "mutation_id": "mutation-aa8e3361c6a349a7",
+      "stratum": "E3",
+      "operator": "change_accessible_name",
+      "target": {
+        "target_id": "target-75695125c26f9f80",
+        "scenario_id": "suite_checkout_blue_jeans",
+        "step": 3,
+        "ordinal": "0",
+        "page_url": "https://demowebshop.tricentis.com/blue-jeans",
+        "action": "click",
+        "tag": "input",
+        "attributes": {
+          "id": "add-to-cart-button-36",
+          "input_type": "button",
+          "value": "Add to cart",
+          "form_action": "/blue-jeans",
+          "form_method": "POST"
+        },
+        "source_prompt": "suite_checkout_blue_jeans.structured_context.prompt.md"
+      },
+      "parameters": {
+        "suffix": " updated"
+      }
+    },
+    {
+      "mutation_id": "mutation-578fc093ff941ddc",
+      "stratum": "E1",
+      "operator": "insert_wrapper",
+      "target": {
+        "target_id": "target-82f2cd701900cecc",
+        "scenario_id": "suite_login_valido",
+        "step": 2,
+        "ordinal": "2",
+        "page_url": "https://demowebshop.tricentis.com/login",
+        "action": "fill",
+        "tag": "input",
+        "attributes": {
+          "label": "Password:",
+          "id": "Password",
+          "name": "Password",
+          "input_type": "password",
+          "form_action": "/login",
+          "form_method": "POST"
+        },
+        "source_prompt": "suite_login_valido.structured_context.prompt.md"
+      },
+      "parameters": {
+        "tag": "div"
+      }
+    },
+    {
+      "mutation_id": "mutation-e4d2477521bec9e9",
+      "stratum": "E1",
+      "operator": "insert_noninteractive_sibling_before",
+      "target": {
+        "target_id": "target-82f2cd701900cecc",
+        "scenario_id": "suite_login_valido",
+        "step": 2,
+        "ordinal": "2",
+        "page_url": "https://demowebshop.tricentis.com/login",
+        "action": "fill",
+        "tag": "input",
+        "attributes": {
+          "label": "Password:",
+          "id": "Password",
+          "name": "Password",
+          "input_type": "password",
+          "form_action": "/login",
+          "form_method": "POST"
+        },
+        "source_prompt": "suite_login_valido.structured_context.prompt.md"
+      },
+      "parameters": {
+        "tag": "span"
+      }
+    },
+    {
+      "mutation_id": "mutation-577d05557a9d47f5",
+      "stratum": "E2",
+      "operator": "rename_id",
+      "target": {
+        "target_id": "target-82f2cd701900cecc",
+        "scenario_id": "suite_login_valido",
+        "step": 2,
+        "ordinal": "2",
+        "page_url": "https://demowebshop.tricentis.com/login",
+        "action": "fill",
+        "tag": "input",
+        "attributes": {
+          "label": "Password:",
+          "id": "Password",
+          "name": "Password",
+          "input_type": "password",
+          "form_action": "/login",
+          "form_method": "POST"
+        },
+        "source_prompt": "suite_login_valido.structured_context.prompt.md"
+      },
+      "parameters": {
+        "new_value": "Password--e2"
+      }
+    },
+    {
+      "mutation_id": "mutation-d1331b39f7c7033b",
+      "stratum": "E3",
+      "operator": "change_accessible_name",
+      "target": {
+        "target_id": "target-82f2cd701900cecc",
+        "scenario_id": "suite_login_valido",
+        "step": 2,
+        "ordinal": "2",
+        "page_url": "https://demowebshop.tricentis.com/login",
+        "action": "fill",
+        "tag": "input",
+        "attributes": {
+          "label": "Password:",
+          "id": "Password",
+          "name": "Password",
+          "input_type": "password",
+          "form_action": "/login",
+          "form_method": "POST"
+        },
+        "source_prompt": "suite_login_valido.structured_context.prompt.md"
+      },
+      "parameters": {
+        "suffix": " updated"
+      }
+    },
+    {
+      "mutation_id": "mutation-d018d5c5d555bd4f",
+      "stratum": "E1",
+      "operator": "insert_wrapper",
+      "target": {
+        "target_id": "target-937e3aada3cab780",
+        "scenario_id": "suite_registro_usuario",
+        "step": 1,
+        "ordinal": "0",
+        "page_url": "https://demowebshop.tricentis.com/",
+        "action": "click",
+        "tag": "a",
+        "attributes": {
+          "text": "Register",
+          "href": "/register"
+        },
+        "source_prompt": "suite_registro_usuario.structured_context.prompt.md"
+      },
+      "parameters": {
+        "tag": "div"
+      }
+    },
+    {
+      "mutation_id": "mutation-ee517cd8dae9a3e7",
+      "stratum": "E1",
+      "operator": "insert_noninteractive_sibling_before",
+      "target": {
+        "target_id": "target-937e3aada3cab780",
+        "scenario_id": "suite_registro_usuario",
+        "step": 1,
+        "ordinal": "0",
+        "page_url": "https://demowebshop.tricentis.com/",
+        "action": "click",
+        "tag": "a",
+        "attributes": {
+          "text": "Register",
+          "href": "/register"
+        },
+        "source_prompt": "suite_registro_usuario.structured_context.prompt.md"
+      },
+      "parameters": {
+        "tag": "span"
+      }
+    },
+    {
+      "mutation_id": "mutation-2b430411650bb42f",
+      "stratum": "E3",
+      "operator": "change_accessible_name",
+      "target": {
+        "target_id": "target-937e3aada3cab780",
+        "scenario_id": "suite_registro_usuario",
+        "step": 1,
+        "ordinal": "0",
+        "page_url": "https://demowebshop.tricentis.com/",
+        "action": "click",
+        "tag": "a",
+        "attributes": {
+          "text": "Register",
+          "href": "/register"
+        },
+        "source_prompt": "suite_registro_usuario.structured_context.prompt.md"
+      },
+      "parameters": {
+        "suffix": " updated"
+      }
+    },
+    {
+      "mutation_id": "mutation-e42fcc0f6577bed2",
+      "stratum": "E1",
+      "operator": "insert_wrapper",
+      "target": {
+        "target_id": "target-998942ef96009287",
+        "scenario_id": "suite_registro_usuario",
+        "step": 6,
+        "ordinal": "0",
+        "page_url": "https://demowebshop.tricentis.com/register",
+        "action": "click",
+        "tag": "input",
+        "attributes": {
+          "id": "register-button",
+          "name": "register-button",
+          "input_type": "submit",
+          "value": "Register",
+          "form_action": "/register",
+          "form_method": "POST"
+        },
+        "source_prompt": "suite_registro_usuario.structured_context.prompt.md"
+      },
+      "parameters": {
+        "tag": "div"
+      }
+    },
+    {
+      "mutation_id": "mutation-b75bae695de6085d",
+      "stratum": "E1",
+      "operator": "insert_noninteractive_sibling_before",
+      "target": {
+        "target_id": "target-998942ef96009287",
+        "scenario_id": "suite_registro_usuario",
+        "step": 6,
+        "ordinal": "0",
+        "page_url": "https://demowebshop.tricentis.com/register",
+        "action": "click",
+        "tag": "input",
+        "attributes": {
+          "id": "register-button",
+          "name": "register-button",
+          "input_type": "submit",
+          "value": "Register",
+          "form_action": "/register",
+          "form_method": "POST"
+        },
+        "source_prompt": "suite_registro_usuario.structured_context.prompt.md"
+      },
+      "parameters": {
+        "tag": "span"
+      }
+    },
+    {
+      "mutation_id": "mutation-386006c3933b7bf8",
+      "stratum": "E2",
+      "operator": "rename_id",
+      "target": {
+        "target_id": "target-998942ef96009287",
+        "scenario_id": "suite_registro_usuario",
+        "step": 6,
+        "ordinal": "0",
+        "page_url": "https://demowebshop.tricentis.com/register",
+        "action": "click",
+        "tag": "input",
+        "attributes": {
+          "id": "register-button",
+          "name": "register-button",
+          "input_type": "submit",
+          "value": "Register",
+          "form_action": "/register",
+          "form_method": "POST"
+        },
+        "source_prompt": "suite_registro_usuario.structured_context.prompt.md"
+      },
+      "parameters": {
+        "new_value": "register-button--e2"
+      }
+    },
+    {
+      "mutation_id": "mutation-9bfb5f69b61a0779",
+      "stratum": "E2",
+      "operator": "input_submit_to_button",
+      "target": {
+        "target_id": "target-998942ef96009287",
+        "scenario_id": "suite_registro_usuario",
+        "step": 6,
+        "ordinal": "0",
+        "page_url": "https://demowebshop.tricentis.com/register",
+        "action": "click",
+        "tag": "input",
+        "attributes": {
+          "id": "register-button",
+          "name": "register-button",
+          "input_type": "submit",
+          "value": "Register",
+          "form_action": "/register",
+          "form_method": "POST"
+        },
+        "source_prompt": "suite_registro_usuario.structured_context.prompt.md"
+      },
+      "parameters": {}
+    },
+    {
+      "mutation_id": "mutation-7802bc343609605c",
+      "stratum": "E3",
+      "operator": "change_accessible_name",
+      "target": {
+        "target_id": "target-998942ef96009287",
+        "scenario_id": "suite_registro_usuario",
+        "step": 6,
+        "ordinal": "0",
+        "page_url": "https://demowebshop.tricentis.com/register",
+        "action": "click",
+        "tag": "input",
+        "attributes": {
+          "id": "register-button",
+          "name": "register-button",
+          "input_type": "submit",
+          "value": "Register",
+          "form_action": "/register",
+          "form_method": "POST"
+        },
+        "source_prompt": "suite_registro_usuario.structured_context.prompt.md"
+      },
+      "parameters": {
+        "suffix": " updated"
+      }
+    },
+    {
+      "mutation_id": "mutation-5fdf1828cabd53de",
+      "stratum": "E1",
+      "operator": "insert_wrapper",
+      "target": {
+        "target_id": "target-ab0e88088e6baad5",
+        "scenario_id": "suite_login_invalido",
+        "step": 2,
+        "ordinal": "1",
+        "page_url": "https://demowebshop.tricentis.com/login",
+        "action": "fill",
+        "tag": "input",
+        "attributes": {
+          "label": "Email:",
+          "id": "Email",
+          "name": "Email",
+          "input_type": "text",
+          "form_action": "/login",
+          "form_method": "POST"
+        },
+        "source_prompt": "suite_login_invalido.structured_context.prompt.md"
+      },
+      "parameters": {
+        "tag": "div"
+      }
+    },
+    {
+      "mutation_id": "mutation-de617bdfe5b33a7f",
+      "stratum": "E1",
+      "operator": "insert_noninteractive_sibling_before",
+      "target": {
+        "target_id": "target-ab0e88088e6baad5",
+        "scenario_id": "suite_login_invalido",
+        "step": 2,
+        "ordinal": "1",
+        "page_url": "https://demowebshop.tricentis.com/login",
+        "action": "fill",
+        "tag": "input",
+        "attributes": {
+          "label": "Email:",
+          "id": "Email",
+          "name": "Email",
+          "input_type": "text",
+          "form_action": "/login",
+          "form_method": "POST"
+        },
+        "source_prompt": "suite_login_invalido.structured_context.prompt.md"
+      },
+      "parameters": {
+        "tag": "span"
+      }
+    },
+    {
+      "mutation_id": "mutation-d1e05894886c9d70",
+      "stratum": "E2",
+      "operator": "rename_id",
+      "target": {
+        "target_id": "target-ab0e88088e6baad5",
+        "scenario_id": "suite_login_invalido",
+        "step": 2,
+        "ordinal": "1",
+        "page_url": "https://demowebshop.tricentis.com/login",
+        "action": "fill",
+        "tag": "input",
+        "attributes": {
+          "label": "Email:",
+          "id": "Email",
+          "name": "Email",
+          "input_type": "text",
+          "form_action": "/login",
+          "form_method": "POST"
+        },
+        "source_prompt": "suite_login_invalido.structured_context.prompt.md"
+      },
+      "parameters": {
+        "new_value": "Email--e2"
+      }
+    },
+    {
+      "mutation_id": "mutation-b87dc913921eb86e",
+      "stratum": "E3",
+      "operator": "change_accessible_name",
+      "target": {
+        "target_id": "target-ab0e88088e6baad5",
+        "scenario_id": "suite_login_invalido",
+        "step": 2,
+        "ordinal": "1",
+        "page_url": "https://demowebshop.tricentis.com/login",
+        "action": "fill",
+        "tag": "input",
+        "attributes": {
+          "label": "Email:",
+          "id": "Email",
+          "name": "Email",
+          "input_type": "text",
+          "form_action": "/login",
+          "form_method": "POST"
+        },
+        "source_prompt": "suite_login_invalido.structured_context.prompt.md"
+      },
+      "parameters": {
+        "suffix": " updated"
+      }
+    },
+    {
+      "mutation_id": "mutation-d8b61502680949e3",
+      "stratum": "E1",
+      "operator": "insert_wrapper",
+      "target": {
+        "target_id": "target-ad6d2d4887b98f82",
+        "scenario_id": "suite_login_invalido",
+        "step": 1,
+        "ordinal": "0",
+        "page_url": "https://demowebshop.tricentis.com/",
+        "action": "click",
+        "tag": "a",
+        "attributes": {
+          "text": "Log in",
+          "href": "/login"
+        },
+        "source_prompt": "suite_login_invalido.structured_context.prompt.md"
+      },
+      "parameters": {
+        "tag": "div"
+      }
+    },
+    {
+      "mutation_id": "mutation-26e8772fa1def39f",
+      "stratum": "E1",
+      "operator": "insert_noninteractive_sibling_before",
+      "target": {
+        "target_id": "target-ad6d2d4887b98f82",
+        "scenario_id": "suite_login_invalido",
+        "step": 1,
+        "ordinal": "0",
+        "page_url": "https://demowebshop.tricentis.com/",
+        "action": "click",
+        "tag": "a",
+        "attributes": {
+          "text": "Log in",
+          "href": "/login"
+        },
+        "source_prompt": "suite_login_invalido.structured_context.prompt.md"
+      },
+      "parameters": {
+        "tag": "span"
+      }
+    },
+    {
+      "mutation_id": "mutation-a9689c93e2b08753",
+      "stratum": "E3",
+      "operator": "change_accessible_name",
+      "target": {
+        "target_id": "target-ad6d2d4887b98f82",
+        "scenario_id": "suite_login_invalido",
+        "step": 1,
+        "ordinal": "0",
+        "page_url": "https://demowebshop.tricentis.com/",
+        "action": "click",
+        "tag": "a",
+        "attributes": {
+          "text": "Log in",
+          "href": "/login"
+        },
+        "source_prompt": "suite_login_invalido.structured_context.prompt.md"
+      },
+      "parameters": {
+        "suffix": " updated"
+      }
+    },
+    {
+      "mutation_id": "mutation-f707d54eb72b33b8",
+      "stratum": "E1",
+      "operator": "insert_wrapper",
+      "target": {
+        "target_id": "target-b07d4eccac8216ab",
+        "scenario_id": "suite_busca_blue_jeans",
+        "step": 1,
+        "ordinal": "2",
+        "page_url": "https://demowebshop.tricentis.com/",
+        "action": "click",
+        "tag": "input",
+        "attributes": {
+          "input_type": "submit",
+          "value": "Search",
+          "form_action": "/search",
+          "form_method": "GET"
+        },
+        "source_prompt": "suite_busca_blue_jeans.structured_context.prompt.md"
+      },
+      "parameters": {
+        "tag": "div"
+      }
+    },
+    {
+      "mutation_id": "mutation-f026cc4f906a76d1",
+      "stratum": "E1",
+      "operator": "insert_noninteractive_sibling_before",
+      "target": {
+        "target_id": "target-b07d4eccac8216ab",
+        "scenario_id": "suite_busca_blue_jeans",
+        "step": 1,
+        "ordinal": "2",
+        "page_url": "https://demowebshop.tricentis.com/",
+        "action": "click",
+        "tag": "input",
+        "attributes": {
+          "input_type": "submit",
+          "value": "Search",
+          "form_action": "/search",
+          "form_method": "GET"
+        },
+        "source_prompt": "suite_busca_blue_jeans.structured_context.prompt.md"
+      },
+      "parameters": {
+        "tag": "span"
+      }
+    },
+    {
+      "mutation_id": "mutation-8b066797110a117f",
+      "stratum": "E2",
+      "operator": "input_submit_to_button",
+      "target": {
+        "target_id": "target-b07d4eccac8216ab",
+        "scenario_id": "suite_busca_blue_jeans",
+        "step": 1,
+        "ordinal": "2",
+        "page_url": "https://demowebshop.tricentis.com/",
+        "action": "click",
+        "tag": "input",
+        "attributes": {
+          "input_type": "submit",
+          "value": "Search",
+          "form_action": "/search",
+          "form_method": "GET"
+        },
+        "source_prompt": "suite_busca_blue_jeans.structured_context.prompt.md"
+      },
+      "parameters": {}
+    },
+    {
+      "mutation_id": "mutation-35fc7a27ef8ce89c",
+      "stratum": "E3",
+      "operator": "change_accessible_name",
+      "target": {
+        "target_id": "target-b07d4eccac8216ab",
+        "scenario_id": "suite_busca_blue_jeans",
+        "step": 1,
+        "ordinal": "2",
+        "page_url": "https://demowebshop.tricentis.com/",
+        "action": "click",
+        "tag": "input",
+        "attributes": {
+          "input_type": "submit",
+          "value": "Search",
+          "form_action": "/search",
+          "form_method": "GET"
+        },
+        "source_prompt": "suite_busca_blue_jeans.structured_context.prompt.md"
+      },
+      "parameters": {
+        "suffix": " updated"
+      }
+    },
+    {
+      "mutation_id": "mutation-636e509bf8ecdbc2",
+      "stratum": "E1",
+      "operator": "insert_wrapper",
+      "target": {
+        "target_id": "target-b24237af617acae0",
+        "scenario_id": "suite_adicionar_wishlist",
+        "step": 2,
+        "ordinal": "2",
+        "page_url": "https://demowebshop.tricentis.com/",
+        "action": "click",
+        "tag": "input",
+        "attributes": {
+          "input_type": "submit",
+          "value": "Search",
+          "form_action": "/search",
+          "form_method": "GET"
+        },
+        "source_prompt": "suite_adicionar_wishlist.structured_context.prompt.md"
+      },
+      "parameters": {
+        "tag": "div"
+      }
+    },
+    {
+      "mutation_id": "mutation-5c1de3cf088a9a12",
+      "stratum": "E1",
+      "operator": "insert_noninteractive_sibling_before",
+      "target": {
+        "target_id": "target-b24237af617acae0",
+        "scenario_id": "suite_adicionar_wishlist",
+        "step": 2,
+        "ordinal": "2",
+        "page_url": "https://demowebshop.tricentis.com/",
+        "action": "click",
+        "tag": "input",
+        "attributes": {
+          "input_type": "submit",
+          "value": "Search",
+          "form_action": "/search",
+          "form_method": "GET"
+        },
+        "source_prompt": "suite_adicionar_wishlist.structured_context.prompt.md"
+      },
+      "parameters": {
+        "tag": "span"
+      }
+    },
+    {
+      "mutation_id": "mutation-e3591c97d8ac94d7",
+      "stratum": "E2",
+      "operator": "input_submit_to_button",
+      "target": {
+        "target_id": "target-b24237af617acae0",
+        "scenario_id": "suite_adicionar_wishlist",
+        "step": 2,
+        "ordinal": "2",
+        "page_url": "https://demowebshop.tricentis.com/",
+        "action": "click",
+        "tag": "input",
+        "attributes": {
+          "input_type": "submit",
+          "value": "Search",
+          "form_action": "/search",
+          "form_method": "GET"
+        },
+        "source_prompt": "suite_adicionar_wishlist.structured_context.prompt.md"
+      },
+      "parameters": {}
+    },
+    {
+      "mutation_id": "mutation-f504292a6fd89688",
+      "stratum": "E3",
+      "operator": "change_accessible_name",
+      "target": {
+        "target_id": "target-b24237af617acae0",
+        "scenario_id": "suite_adicionar_wishlist",
+        "step": 2,
+        "ordinal": "2",
+        "page_url": "https://demowebshop.tricentis.com/",
+        "action": "click",
+        "tag": "input",
+        "attributes": {
+          "input_type": "submit",
+          "value": "Search",
+          "form_action": "/search",
+          "form_method": "GET"
+        },
+        "source_prompt": "suite_adicionar_wishlist.structured_context.prompt.md"
+      },
+      "parameters": {
+        "suffix": " updated"
+      }
+    },
+    {
+      "mutation_id": "mutation-1eea986ea967582a",
+      "stratum": "E1",
+      "operator": "insert_wrapper",
+      "target": {
+        "target_id": "target-befaa376d4cf57fd",
+        "scenario_id": "suite_configurar_desktop",
+        "step": 6,
+        "ordinal": "0",
+        "page_url": "https://demowebshop.tricentis.com/desktops",
+        "action": "click",
+        "tag": "a",
+        "attributes": {
+          "text": "Shopping cart",
+          "href": "/cart"
+        },
+        "source_prompt": "suite_configurar_desktop.structured_context.prompt.md"
+      },
+      "parameters": {
+        "tag": "div"
+      }
+    },
+    {
+      "mutation_id": "mutation-8fc29e7837ee0bed",
+      "stratum": "E1",
+      "operator": "insert_noninteractive_sibling_before",
+      "target": {
+        "target_id": "target-befaa376d4cf57fd",
+        "scenario_id": "suite_configurar_desktop",
+        "step": 6,
+        "ordinal": "0",
+        "page_url": "https://demowebshop.tricentis.com/desktops",
+        "action": "click",
+        "tag": "a",
+        "attributes": {
+          "text": "Shopping cart",
+          "href": "/cart"
+        },
+        "source_prompt": "suite_configurar_desktop.structured_context.prompt.md"
+      },
+      "parameters": {
+        "tag": "span"
+      }
+    },
+    {
+      "mutation_id": "mutation-1843a85f95d514ec",
+      "stratum": "E3",
+      "operator": "change_accessible_name",
+      "target": {
+        "target_id": "target-befaa376d4cf57fd",
+        "scenario_id": "suite_configurar_desktop",
+        "step": 6,
+        "ordinal": "0",
+        "page_url": "https://demowebshop.tricentis.com/desktops",
+        "action": "click",
+        "tag": "a",
+        "attributes": {
+          "text": "Shopping cart",
+          "href": "/cart"
+        },
+        "source_prompt": "suite_configurar_desktop.structured_context.prompt.md"
+      },
+      "parameters": {
+        "suffix": " updated"
+      }
+    },
+    {
+      "mutation_id": "mutation-1896c11ad4e44edf",
+      "stratum": "E1",
+      "operator": "insert_wrapper",
+      "target": {
+        "target_id": "target-bfc1ea84d57ae86d",
+        "scenario_id": "suite_adicionar_carrinho",
+        "step": 5,
+        "ordinal": "0",
+        "page_url": "https://demowebshop.tricentis.com/blue-jeans",
+        "action": "click",
+        "tag": "a",
+        "attributes": {
+          "text": "Shopping cart",
+          "href": "/cart"
+        },
+        "source_prompt": "suite_adicionar_carrinho.structured_context.prompt.md"
+      },
+      "parameters": {
+        "tag": "div"
+      }
+    },
+    {
+      "mutation_id": "mutation-1463f2a7088fad79",
+      "stratum": "E1",
+      "operator": "insert_noninteractive_sibling_before",
+      "target": {
+        "target_id": "target-bfc1ea84d57ae86d",
+        "scenario_id": "suite_adicionar_carrinho",
+        "step": 5,
+        "ordinal": "0",
+        "page_url": "https://demowebshop.tricentis.com/blue-jeans",
+        "action": "click",
+        "tag": "a",
+        "attributes": {
+          "text": "Shopping cart",
+          "href": "/cart"
+        },
+        "source_prompt": "suite_adicionar_carrinho.structured_context.prompt.md"
+      },
+      "parameters": {
+        "tag": "span"
+      }
+    },
+    {
+      "mutation_id": "mutation-8960d73c8646cf6b",
+      "stratum": "E3",
+      "operator": "change_accessible_name",
+      "target": {
+        "target_id": "target-bfc1ea84d57ae86d",
+        "scenario_id": "suite_adicionar_carrinho",
+        "step": 5,
+        "ordinal": "0",
+        "page_url": "https://demowebshop.tricentis.com/blue-jeans",
+        "action": "click",
+        "tag": "a",
+        "attributes": {
+          "text": "Shopping cart",
+          "href": "/cart"
+        },
+        "source_prompt": "suite_adicionar_carrinho.structured_context.prompt.md"
+      },
+      "parameters": {
+        "suffix": " updated"
+      }
+    },
+    {
+      "mutation_id": "mutation-9dd9372159597765",
+      "stratum": "E1",
+      "operator": "insert_wrapper",
+      "target": {
+        "target_id": "target-c1962e3b880d5873",
+        "scenario_id": "suite_adicionar_carrinho",
+        "step": 3,
+        "ordinal": "0",
+        "page_url": "https://demowebshop.tricentis.com/blue-jeans",
+        "action": "click",
+        "tag": "input",
+        "attributes": {
+          "id": "add-to-cart-button-36",
+          "input_type": "button",
+          "value": "Add to cart",
+          "form_action": "/blue-jeans",
+          "form_method": "POST"
+        },
+        "source_prompt": "suite_adicionar_carrinho.structured_context.prompt.md"
+      },
+      "parameters": {
+        "tag": "div"
+      }
+    },
+    {
+      "mutation_id": "mutation-7c48b3e946d99eaa",
+      "stratum": "E1",
+      "operator": "insert_noninteractive_sibling_before",
+      "target": {
+        "target_id": "target-c1962e3b880d5873",
+        "scenario_id": "suite_adicionar_carrinho",
+        "step": 3,
+        "ordinal": "0",
+        "page_url": "https://demowebshop.tricentis.com/blue-jeans",
+        "action": "click",
+        "tag": "input",
+        "attributes": {
+          "id": "add-to-cart-button-36",
+          "input_type": "button",
+          "value": "Add to cart",
+          "form_action": "/blue-jeans",
+          "form_method": "POST"
+        },
+        "source_prompt": "suite_adicionar_carrinho.structured_context.prompt.md"
+      },
+      "parameters": {
+        "tag": "span"
+      }
+    },
+    {
+      "mutation_id": "mutation-de3bc97238a13a1d",
+      "stratum": "E2",
+      "operator": "rename_id",
+      "target": {
+        "target_id": "target-c1962e3b880d5873",
+        "scenario_id": "suite_adicionar_carrinho",
+        "step": 3,
+        "ordinal": "0",
+        "page_url": "https://demowebshop.tricentis.com/blue-jeans",
+        "action": "click",
+        "tag": "input",
+        "attributes": {
+          "id": "add-to-cart-button-36",
+          "input_type": "button",
+          "value": "Add to cart",
+          "form_action": "/blue-jeans",
+          "form_method": "POST"
+        },
+        "source_prompt": "suite_adicionar_carrinho.structured_context.prompt.md"
+      },
+      "parameters": {
+        "new_value": "add-to-cart-button-36--e2"
+      }
+    },
+    {
+      "mutation_id": "mutation-ff5f3cbaf6d8b844",
+      "stratum": "E3",
+      "operator": "change_accessible_name",
+      "target": {
+        "target_id": "target-c1962e3b880d5873",
+        "scenario_id": "suite_adicionar_carrinho",
+        "step": 3,
+        "ordinal": "0",
+        "page_url": "https://demowebshop.tricentis.com/blue-jeans",
+        "action": "click",
+        "tag": "input",
+        "attributes": {
+          "id": "add-to-cart-button-36",
+          "input_type": "button",
+          "value": "Add to cart",
+          "form_action": "/blue-jeans",
+          "form_method": "POST"
+        },
+        "source_prompt": "suite_adicionar_carrinho.structured_context.prompt.md"
+      },
+      "parameters": {
+        "suffix": " updated"
+      }
+    },
+    {
+      "mutation_id": "mutation-4546e712c84b0802",
+      "stratum": "E1",
+      "operator": "insert_wrapper",
+      "target": {
+        "target_id": "target-c7ff22456821bf05",
+        "scenario_id": "suite_login_invalido",
+        "step": 3,
+        "ordinal": "0",
+        "page_url": "https://demowebshop.tricentis.com/login",
+        "action": "click",
+        "tag": "input",
+        "attributes": {
+          "input_type": "submit",
+          "value": "Log in",
+          "form_action": "/login",
+          "form_method": "POST"
+        },
+        "source_prompt": "suite_login_invalido.structured_context.prompt.md"
+      },
+      "parameters": {
+        "tag": "div"
+      }
+    },
+    {
+      "mutation_id": "mutation-87ed38b4900e67ec",
+      "stratum": "E1",
+      "operator": "insert_noninteractive_sibling_before",
+      "target": {
+        "target_id": "target-c7ff22456821bf05",
+        "scenario_id": "suite_login_invalido",
+        "step": 3,
+        "ordinal": "0",
+        "page_url": "https://demowebshop.tricentis.com/login",
+        "action": "click",
+        "tag": "input",
+        "attributes": {
+          "input_type": "submit",
+          "value": "Log in",
+          "form_action": "/login",
+          "form_method": "POST"
+        },
+        "source_prompt": "suite_login_invalido.structured_context.prompt.md"
+      },
+      "parameters": {
+        "tag": "span"
+      }
+    },
+    {
+      "mutation_id": "mutation-ce87928d6bed94c8",
+      "stratum": "E2",
+      "operator": "input_submit_to_button",
+      "target": {
+        "target_id": "target-c7ff22456821bf05",
+        "scenario_id": "suite_login_invalido",
+        "step": 3,
+        "ordinal": "0",
+        "page_url": "https://demowebshop.tricentis.com/login",
+        "action": "click",
+        "tag": "input",
+        "attributes": {
+          "input_type": "submit",
+          "value": "Log in",
+          "form_action": "/login",
+          "form_method": "POST"
+        },
+        "source_prompt": "suite_login_invalido.structured_context.prompt.md"
+      },
+      "parameters": {}
+    },
+    {
+      "mutation_id": "mutation-485eae38f0a402f5",
+      "stratum": "E3",
+      "operator": "change_accessible_name",
+      "target": {
+        "target_id": "target-c7ff22456821bf05",
+        "scenario_id": "suite_login_invalido",
+        "step": 3,
+        "ordinal": "0",
+        "page_url": "https://demowebshop.tricentis.com/login",
+        "action": "click",
+        "tag": "input",
+        "attributes": {
+          "input_type": "submit",
+          "value": "Log in",
+          "form_action": "/login",
+          "form_method": "POST"
+        },
+        "source_prompt": "suite_login_invalido.structured_context.prompt.md"
+      },
+      "parameters": {
+        "suffix": " updated"
+      }
+    },
+    {
+      "mutation_id": "mutation-bc7c97dad1e638b3",
+      "stratum": "E1",
+      "operator": "insert_wrapper",
+      "target": {
+        "target_id": "target-ccee1138025fac43",
+        "scenario_id": "suite_detalhes_fiction",
+        "step": 1,
+        "ordinal": "2",
+        "page_url": "https://demowebshop.tricentis.com/",
+        "action": "click",
+        "tag": "input",
+        "attributes": {
+          "input_type": "submit",
+          "value": "Search",
+          "form_action": "/search",
+          "form_method": "GET"
+        },
+        "source_prompt": "suite_detalhes_fiction.structured_context.prompt.md"
+      },
+      "parameters": {
+        "tag": "div"
+      }
+    },
+    {
+      "mutation_id": "mutation-c8a1a9a09b318afe",
+      "stratum": "E1",
+      "operator": "insert_noninteractive_sibling_before",
+      "target": {
+        "target_id": "target-ccee1138025fac43",
+        "scenario_id": "suite_detalhes_fiction",
+        "step": 1,
+        "ordinal": "2",
+        "page_url": "https://demowebshop.tricentis.com/",
+        "action": "click",
+        "tag": "input",
+        "attributes": {
+          "input_type": "submit",
+          "value": "Search",
+          "form_action": "/search",
+          "form_method": "GET"
+        },
+        "source_prompt": "suite_detalhes_fiction.structured_context.prompt.md"
+      },
+      "parameters": {
+        "tag": "span"
+      }
+    },
+    {
+      "mutation_id": "mutation-361a9103a5072567",
+      "stratum": "E2",
+      "operator": "input_submit_to_button",
+      "target": {
+        "target_id": "target-ccee1138025fac43",
+        "scenario_id": "suite_detalhes_fiction",
+        "step": 1,
+        "ordinal": "2",
+        "page_url": "https://demowebshop.tricentis.com/",
+        "action": "click",
+        "tag": "input",
+        "attributes": {
+          "input_type": "submit",
+          "value": "Search",
+          "form_action": "/search",
+          "form_method": "GET"
+        },
+        "source_prompt": "suite_detalhes_fiction.structured_context.prompt.md"
+      },
+      "parameters": {}
+    },
+    {
+      "mutation_id": "mutation-e5e8c4d2365f9acf",
+      "stratum": "E3",
+      "operator": "change_accessible_name",
+      "target": {
+        "target_id": "target-ccee1138025fac43",
+        "scenario_id": "suite_detalhes_fiction",
+        "step": 1,
+        "ordinal": "2",
+        "page_url": "https://demowebshop.tricentis.com/",
+        "action": "click",
+        "tag": "input",
+        "attributes": {
+          "input_type": "submit",
+          "value": "Search",
+          "form_action": "/search",
+          "form_method": "GET"
+        },
+        "source_prompt": "suite_detalhes_fiction.structured_context.prompt.md"
+      },
+      "parameters": {
+        "suffix": " updated"
+      }
+    },
+    {
+      "mutation_id": "mutation-88fa5397ec8b7532",
+      "stratum": "E1",
+      "operator": "insert_wrapper",
+      "target": {
+        "target_id": "target-dc71d044e20dec79",
+        "scenario_id": "suite_adicionar_carrinho",
+        "step": 1,
+        "ordinal": "2",
+        "page_url": "https://demowebshop.tricentis.com/",
+        "action": "click",
+        "tag": "input",
+        "attributes": {
+          "input_type": "submit",
+          "value": "Search",
+          "form_action": "/search",
+          "form_method": "GET"
+        },
+        "source_prompt": "suite_adicionar_carrinho.structured_context.prompt.md"
+      },
+      "parameters": {
+        "tag": "div"
+      }
+    },
+    {
+      "mutation_id": "mutation-defa59a332c6148b",
+      "stratum": "E1",
+      "operator": "insert_noninteractive_sibling_before",
+      "target": {
+        "target_id": "target-dc71d044e20dec79",
+        "scenario_id": "suite_adicionar_carrinho",
+        "step": 1,
+        "ordinal": "2",
+        "page_url": "https://demowebshop.tricentis.com/",
+        "action": "click",
+        "tag": "input",
+        "attributes": {
+          "input_type": "submit",
+          "value": "Search",
+          "form_action": "/search",
+          "form_method": "GET"
+        },
+        "source_prompt": "suite_adicionar_carrinho.structured_context.prompt.md"
+      },
+      "parameters": {
+        "tag": "span"
+      }
+    },
+    {
+      "mutation_id": "mutation-766d2310c5144a4d",
+      "stratum": "E2",
+      "operator": "input_submit_to_button",
+      "target": {
+        "target_id": "target-dc71d044e20dec79",
+        "scenario_id": "suite_adicionar_carrinho",
+        "step": 1,
+        "ordinal": "2",
+        "page_url": "https://demowebshop.tricentis.com/",
+        "action": "click",
+        "tag": "input",
+        "attributes": {
+          "input_type": "submit",
+          "value": "Search",
+          "form_action": "/search",
+          "form_method": "GET"
+        },
+        "source_prompt": "suite_adicionar_carrinho.structured_context.prompt.md"
+      },
+      "parameters": {}
+    },
+    {
+      "mutation_id": "mutation-6c5a65a42f187cc5",
+      "stratum": "E3",
+      "operator": "change_accessible_name",
+      "target": {
+        "target_id": "target-dc71d044e20dec79",
+        "scenario_id": "suite_adicionar_carrinho",
+        "step": 1,
+        "ordinal": "2",
+        "page_url": "https://demowebshop.tricentis.com/",
+        "action": "click",
+        "tag": "input",
+        "attributes": {
+          "input_type": "submit",
+          "value": "Search",
+          "form_action": "/search",
+          "form_method": "GET"
+        },
+        "source_prompt": "suite_adicionar_carrinho.structured_context.prompt.md"
+      },
+      "parameters": {
+        "suffix": " updated"
+      }
+    },
+    {
+      "mutation_id": "mutation-80a675e447bcd139",
+      "stratum": "E1",
+      "operator": "insert_wrapper",
+      "target": {
+        "target_id": "target-e79d0412a3511bd6",
+        "scenario_id": "suite_limpar_carrinho",
+        "step": 2,
+        "ordinal": "0",
+        "page_url": "https://demowebshop.tricentis.com/blue-jeans",
+        "action": "click",
+        "tag": "a",
+        "attributes": {
+          "text": "Shopping cart",
+          "href": "/cart"
+        },
+        "source_prompt": "suite_limpar_carrinho.structured_context.prompt.md"
+      },
+      "parameters": {
+        "tag": "div"
+      }
+    },
+    {
+      "mutation_id": "mutation-c8537f70592c0cc5",
+      "stratum": "E1",
+      "operator": "insert_noninteractive_sibling_before",
+      "target": {
+        "target_id": "target-e79d0412a3511bd6",
+        "scenario_id": "suite_limpar_carrinho",
+        "step": 2,
+        "ordinal": "0",
+        "page_url": "https://demowebshop.tricentis.com/blue-jeans",
+        "action": "click",
+        "tag": "a",
+        "attributes": {
+          "text": "Shopping cart",
+          "href": "/cart"
+        },
+        "source_prompt": "suite_limpar_carrinho.structured_context.prompt.md"
+      },
+      "parameters": {
+        "tag": "span"
+      }
+    },
+    {
+      "mutation_id": "mutation-16d233d19a928b14",
+      "stratum": "E3",
+      "operator": "change_accessible_name",
+      "target": {
+        "target_id": "target-e79d0412a3511bd6",
+        "scenario_id": "suite_limpar_carrinho",
+        "step": 2,
+        "ordinal": "0",
+        "page_url": "https://demowebshop.tricentis.com/blue-jeans",
+        "action": "click",
+        "tag": "a",
+        "attributes": {
+          "text": "Shopping cart",
+          "href": "/cart"
+        },
+        "source_prompt": "suite_limpar_carrinho.structured_context.prompt.md"
+      },
+      "parameters": {
+        "suffix": " updated"
+      }
+    },
+    {
+      "mutation_id": "mutation-7a22c6567f432c3b",
+      "stratum": "E1",
+      "operator": "insert_wrapper",
+      "target": {
+        "target_id": "target-f616b44067074c07",
+        "scenario_id": "suite_adicionar_wishlist",
+        "step": 4,
+        "ordinal": "0",
+        "page_url": "https://demowebshop.tricentis.com/digital-slr-camera",
+        "action": "click",
+        "tag": "input",
+        "attributes": {
+          "id": "add-to-wishlist-button-18",
+          "input_type": "button",
+          "value": "Add to wishlist",
+          "form_action": "/digital-slr-camera",
+          "form_method": "POST"
+        },
+        "source_prompt": "suite_adicionar_wishlist.structured_context.prompt.md"
+      },
+      "parameters": {
+        "tag": "div"
+      }
+    },
+    {
+      "mutation_id": "mutation-aae0d34aeda4d7a5",
+      "stratum": "E1",
+      "operator": "insert_noninteractive_sibling_before",
+      "target": {
+        "target_id": "target-f616b44067074c07",
+        "scenario_id": "suite_adicionar_wishlist",
+        "step": 4,
+        "ordinal": "0",
+        "page_url": "https://demowebshop.tricentis.com/digital-slr-camera",
+        "action": "click",
+        "tag": "input",
+        "attributes": {
+          "id": "add-to-wishlist-button-18",
+          "input_type": "button",
+          "value": "Add to wishlist",
+          "form_action": "/digital-slr-camera",
+          "form_method": "POST"
+        },
+        "source_prompt": "suite_adicionar_wishlist.structured_context.prompt.md"
+      },
+      "parameters": {
+        "tag": "span"
+      }
+    },
+    {
+      "mutation_id": "mutation-3be839a933d71f3b",
+      "stratum": "E2",
+      "operator": "rename_id",
+      "target": {
+        "target_id": "target-f616b44067074c07",
+        "scenario_id": "suite_adicionar_wishlist",
+        "step": 4,
+        "ordinal": "0",
+        "page_url": "https://demowebshop.tricentis.com/digital-slr-camera",
+        "action": "click",
+        "tag": "input",
+        "attributes": {
+          "id": "add-to-wishlist-button-18",
+          "input_type": "button",
+          "value": "Add to wishlist",
+          "form_action": "/digital-slr-camera",
+          "form_method": "POST"
+        },
+        "source_prompt": "suite_adicionar_wishlist.structured_context.prompt.md"
+      },
+      "parameters": {
+        "new_value": "add-to-wishlist-button-18--e2"
+      }
+    },
+    {
+      "mutation_id": "mutation-be5faa2a70265c0e",
+      "stratum": "E3",
+      "operator": "change_accessible_name",
+      "target": {
+        "target_id": "target-f616b44067074c07",
+        "scenario_id": "suite_adicionar_wishlist",
+        "step": 4,
+        "ordinal": "0",
+        "page_url": "https://demowebshop.tricentis.com/digital-slr-camera",
+        "action": "click",
+        "tag": "input",
+        "attributes": {
+          "id": "add-to-wishlist-button-18",
+          "input_type": "button",
+          "value": "Add to wishlist",
+          "form_action": "/digital-slr-camera",
+          "form_method": "POST"
+        },
+        "source_prompt": "suite_adicionar_wishlist.structured_context.prompt.md"
+      },
+      "parameters": {
+        "suffix": " updated"
+      }
+    }
+  ],
+  "plan_sha256": "054db1613694d3f96ce00a85fc77e01126e32b3e58225e63652864c038e81979"
+}

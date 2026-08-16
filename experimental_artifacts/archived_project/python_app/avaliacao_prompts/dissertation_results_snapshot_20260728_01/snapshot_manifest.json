@@ -1,0 +1,31 @@
+{
+  "snapshot_id": "dissertation_results_snapshot_20260728_01",
+  "files": [
+    {
+      "path": "metrics_summary.json",
+      "sha256": "5129eb7dae52971c3a1a78ca71ef79bfbc3a639cee9f0353ef4433dd3ac8c2d5",
+      "bytes": 24403
+    },
+    {
+      "path": "metrics_summary.md",
+      "sha256": "b9b3072eccb88dbef8b599797817391434663116f22b4f833c86fe0bdbe530b5",
+      "bytes": 1479
+    },
+    {
+      "path": "generation_execution_semantic.csv",
+      "sha256": "e116e1810fea94b163665ba2221722507135a65322711a1490e2f727f258829f",
+      "bytes": 678
+    },
+    {
+      "path": "paired_semantic_comparison.csv",
+      "sha256": "a93f9c64da6c43c93a8e0b59ef978f422557e6c887c783bae000cfec211b7716",
+      "bytes": 264
+    },
+    {
+      "path": "artifact_index.csv",
+      "sha256": "cc51a7cd32dc863181705135afeff46845c352d416cab5775e449ccd86c96262",
+      "bytes": 3463
+    }
+  ],
+  "snapshot_sha256": "25b811d900a3594854b5f0477e76f2bfb9ec28887bf08d6a7fdcfb1434261f63"
+}

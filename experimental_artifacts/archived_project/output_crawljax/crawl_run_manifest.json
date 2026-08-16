@@ -1,0 +1,21 @@
+{
+  "target_url" : "https://demowebshop.tricentis.com/",
+  "started_at" : "2026-07-13T23:34:04.663866483Z",
+  "max_depth" : 8,
+  "max_states" : 400,
+  "max_runtime_minutes" : 45,
+  "wait_after_reload_ms" : 3000,
+  "wait_after_event_ms" : 2200,
+  "click_once" : true,
+  "random_order" : false,
+  "crawl_priority" : "SHALLOW_FIRST",
+  "crawl_hidden_anchors" : false,
+  "follow_external_links" : false,
+  "exploration_actions" : "navigation_anchors_only",
+  "clicked_element_tags" : [ "a" ],
+  "ignored_dynamic_regions" : [ "slider-wrapper", "block-recently-viewed-products" ],
+  "excluded_click_regions" : [ "slider-wrapper", "picture", "picture-thumbs", "a[href=#]" ],
+  "graph_schema_version" : 2,
+  "structured_ui_elements" : true,
+  "observed_transition_results" : true
+}

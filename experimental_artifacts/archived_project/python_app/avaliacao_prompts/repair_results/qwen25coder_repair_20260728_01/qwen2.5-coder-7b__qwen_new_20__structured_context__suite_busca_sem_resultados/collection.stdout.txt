@@ -1,0 +1,3 @@
+Listing tests:
+  suite_busca_sem_resultados.spec.ts:4:7 › Suite Busca Sem Resultados › should display no products matched message when searching for a non-existent term
+Total: 1 test in 1 file

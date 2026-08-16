@@ -1,0 +1,23 @@
+{
+  "model": "qwen2.5-coder:7b",
+  "created_at": "2026-07-27T18:22:27.7865428Z",
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 29196565400,
+  "load_duration": 359054100,
+  "prompt_eval_count": 1200,
+  "prompt_eval_duration": 7163812000,
+  "eval_count": 292,
+  "eval_duration": 21661323000,
+  "condition": "structured_context",
+  "scenario": "suite_filtrar_livros_abaixo_25",
+  "model_requested": "qwen2.5-coder:7b",
+  "seed": 20260724,
+  "temperature": 0,
+  "num_ctx": 8192,
+  "num_predict": 2048,
+  "elapsed_seconds_client": 27.243,
+  "input_sha256": "775cb4f030de30974667eb6a019fc0ef42a77d9d4295e9e4aafe79845cdaafdb",
+  "response_sha256": "7f7a3fec5331ed9eec2ff26bbea1a0621b63a1c72a3935507e4651bde276b4bf",
+  "stateless": true
+}

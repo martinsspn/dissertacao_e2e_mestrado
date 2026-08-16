@@ -1,0 +1,23 @@
+{
+  "model": "qwen2.5-coder:7b",
+  "created_at": "2026-07-27T18:11:11.7978905Z",
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 21323654500,
+  "load_duration": 360220000,
+  "prompt_eval_count": 198,
+  "prompt_eval_duration": 2023425000,
+  "eval_count": 271,
+  "eval_duration": 18864002000,
+  "condition": "baseline",
+  "scenario": "suite_atualizar_quantidade_carrinho",
+  "model_requested": "qwen2.5-coder:7b",
+  "seed": 20260724,
+  "temperature": 0,
+  "num_ctx": 8192,
+  "num_predict": 2048,
+  "elapsed_seconds_client": 20.241,
+  "input_sha256": "7124844c6083db02a82e8ed08768bf33bb18502c2e00ae8a264f07bc5b5e5538",
+  "response_sha256": "5723ca40abd435516ded84154ce26a4ba764b5c7c0d37e53019b4a06acda738a",
+  "stateless": true
+}

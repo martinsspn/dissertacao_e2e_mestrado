@@ -1,0 +1,3 @@
+Listing tests:
+  user_registration_book_purchase.spec.ts:4:7 › Book purchase flow (registration + cart) › should register a new user, add a book to the cart, and verify the cart
+Total: 1 test in 1 file

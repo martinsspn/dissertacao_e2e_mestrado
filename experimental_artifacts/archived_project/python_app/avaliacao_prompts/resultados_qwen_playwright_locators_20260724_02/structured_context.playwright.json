@@ -1,0 +1,1146 @@
+{
+  "config": {
+    "argv": [
+      "/usr/bin/node",
+      "/home/martinsspn/dissertacao_e2e_semantico/node_modules/.bin/playwright",
+      "test",
+      "--config=playwright.config.ts",
+      "--reporter=json"
+    ],
+    "configFile": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/playwright.config.ts",
+    "rootDir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context_playwright_locators_20260724_02",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/tmp/avaliacao-prompts-playwright",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context_playwright_locators_20260724_02",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 20000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.61.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "fluxo_computadores_desktops.spec.ts",
+      "file": "fluxo_computadores_desktops.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Fluxo Computadores Desktops",
+          "file": "fluxo_computadores_desktops.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "The user must access the Digital downloads category, view the available digital items, and validate that the digital downloads page is visible.",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 20000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 4050,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-24T19:28:47.877Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "5ffdfa1a8a18bafbf733-e752a2fb921e011c485a",
+              "file": "fluxo_computadores_desktops.spec.ts",
+              "line": 4,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "suite_adicionar_carrinho.spec.ts",
+      "file": "suite_adicionar_carrinho.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Suite Adicionar Carrinho",
+          "file": "suite_adicionar_carrinho.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Adicionar Blue Jeans ao carrinho",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 20000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 11127,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected: \u001b[32m\"https://demowebshop.tricentis.com/\u001b[7mb\u001b[27mlue\u001b[7m-j\u001b[27means\"\u001b[39m\nReceived: \u001b[31m\"https://demowebshop.tricentis.com/\u001b[7msearch?q=B\u001b[27mlue\u001b[7m+J\u001b[27means\"\u001b[39m\nTimeout:  7000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveURL\" with timeout 7000ms\u001b[22m\n\u001b[2m    17 × unexpected value \"https://demowebshop.tricentis.com/search?q=Blue+Jeans\"\u001b[22m\n",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected: \u001b[32m\"https://demowebshop.tricentis.com/\u001b[7mb\u001b[27mlue\u001b[7m-j\u001b[27means\"\u001b[39m\nReceived: \u001b[31m\"https://demowebshop.tricentis.com/\u001b[7msearch?q=B\u001b[27mlue\u001b[7m+J\u001b[27means\"\u001b[39m\nTimeout:  7000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveURL\" with timeout 7000ms\u001b[22m\n\u001b[2m    17 × unexpected value \"https://demowebshop.tricentis.com/search?q=Blue+Jeans\"\u001b[22m\n\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context_playwright_locators_20260724_02/suite_adicionar_carrinho.spec.ts:11:24",
+                        "location": {
+                          "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context_playwright_locators_20260724_02/suite_adicionar_carrinho.spec.ts",
+                          "column": 24,
+                          "line": 11
+                        },
+                        "snippet": "   9 |\n  10 |     // Etapa 2: Abre a página do produto Blue Jeans\n> 11 |     await expect(page).toHaveURL('https://demowebshop.tricentis.com/blue-jeans');\n     |                        ^\n  12 |\n  13 |     // Etapa 3: Adiciona o produto ao carrinho\n  14 |     await page.locator(\"[id=\\\"add-to-cart-button-36\\\"]\").click();"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context_playwright_locators_20260724_02/suite_adicionar_carrinho.spec.ts",
+                            "column": 24,
+                            "line": 11
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected: \u001b[32m\"https://demowebshop.tricentis.com/\u001b[7mb\u001b[27mlue\u001b[7m-j\u001b[27means\"\u001b[39m\nReceived: \u001b[31m\"https://demowebshop.tricentis.com/\u001b[7msearch?q=B\u001b[27mlue\u001b[7m+J\u001b[27means\"\u001b[39m\nTimeout:  7000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveURL\" with timeout 7000ms\u001b[22m\n\u001b[2m    17 × unexpected value \"https://demowebshop.tricentis.com/search?q=Blue+Jeans\"\u001b[22m\n\n\n   9 |\n  10 |     // Etapa 2: Abre a página do produto Blue Jeans\n> 11 |     await expect(page).toHaveURL('https://demowebshop.tricentis.com/blue-jeans');\n     |                        ^\n  12 |\n  13 |     // Etapa 3: Adiciona o produto ao carrinho\n  14 |     await page.locator(\"[id=\\\"add-to-cart-button-36\\\"]\").click();\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context_playwright_locators_20260724_02/suite_adicionar_carrinho.spec.ts:11:24"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-24T19:28:52.238Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/tmp/avaliacao-prompts-playwright/suite_adicionar_carrinho-S-413e0-onar-Blue-Jeans-ao-carrinho/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context_playwright_locators_20260724_02/suite_adicionar_carrinho.spec.ts",
+                        "column": 24,
+                        "line": 11
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "17be0f5b16c4113dd3d5-18dc16c2c550311fea97",
+              "file": "suite_adicionar_carrinho.spec.ts",
+              "line": 4,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "suite_adicionar_wishlist.spec.ts",
+      "file": "suite_adicionar_wishlist.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Suite Adicionar Wishlist",
+          "file": "suite_adicionar_wishlist.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Adicionar produto à wishlist",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 20000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 4484,
+                      "error": {
+                        "message": "Error: locator.click: Error: strict mode violation: locator('[href=\"/digital-slr-camera\"]') resolved to 2 elements:\n    1) <a href=\"/digital-slr-camera\" title=\"Show details for Digital SLR Camera 12.2 Mpixel\">…</a> aka getByRole('link', { name: 'Picture of Digital SLR Camera' })\n    2) <a href=\"/digital-slr-camera\">Digital SLR Camera 12.2 Mpixel</a> aka getByRole('link', { name: 'Digital SLR Camera 12.2 Mpixel', exact: true })\n\nCall log:\n\u001b[2m  - waiting for locator('[href=\"/digital-slr-camera\"]')\u001b[22m\n",
+                        "stack": "Error: locator.click: Error: strict mode violation: locator('[href=\"/digital-slr-camera\"]') resolved to 2 elements:\n    1) <a href=\"/digital-slr-camera\" title=\"Show details for Digital SLR Camera 12.2 Mpixel\">…</a> aka getByRole('link', { name: 'Picture of Digital SLR Camera' })\n    2) <a href=\"/digital-slr-camera\">Digital SLR Camera 12.2 Mpixel</a> aka getByRole('link', { name: 'Digital SLR Camera 12.2 Mpixel', exact: true })\n\nCall log:\n\u001b[2m  - waiting for locator('[href=\"/digital-slr-camera\"]')\u001b[22m\n\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context_playwright_locators_20260724_02/suite_adicionar_wishlist.spec.ts:14:58",
+                        "location": {
+                          "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context_playwright_locators_20260724_02/suite_adicionar_wishlist.spec.ts",
+                          "column": 58,
+                          "line": 14
+                        },
+                        "snippet": "  12 |     // Etapa 3: Abertura do produto Camera\n  13 |     await expect(page).toHaveURL('https://demowebshop.tricentis.com/search?q=Camera');\n> 14 |     await page.locator(\"[href=\\\"/digital-slr-camera\\\"]\").click();\n     |                                                          ^\n  15 |     await expect(page).toHaveURL('https://demowebshop.tricentis.com/digital-slr-camera');\n  16 |     \n  17 |     // Etapa 4: Adicionar ao carrinho"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context_playwright_locators_20260724_02/suite_adicionar_wishlist.spec.ts",
+                            "column": 58,
+                            "line": 14
+                          },
+                          "message": "Error: locator.click: Error: strict mode violation: locator('[href=\"/digital-slr-camera\"]') resolved to 2 elements:\n    1) <a href=\"/digital-slr-camera\" title=\"Show details for Digital SLR Camera 12.2 Mpixel\">…</a> aka getByRole('link', { name: 'Picture of Digital SLR Camera' })\n    2) <a href=\"/digital-slr-camera\">Digital SLR Camera 12.2 Mpixel</a> aka getByRole('link', { name: 'Digital SLR Camera 12.2 Mpixel', exact: true })\n\nCall log:\n\u001b[2m  - waiting for locator('[href=\"/digital-slr-camera\"]')\u001b[22m\n\n\n  12 |     // Etapa 3: Abertura do produto Camera\n  13 |     await expect(page).toHaveURL('https://demowebshop.tricentis.com/search?q=Camera');\n> 14 |     await page.locator(\"[href=\\\"/digital-slr-camera\\\"]\").click();\n     |                                                          ^\n  15 |     await expect(page).toHaveURL('https://demowebshop.tricentis.com/digital-slr-camera');\n  16 |     \n  17 |     // Etapa 4: Adicionar ao carrinho\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context_playwright_locators_20260724_02/suite_adicionar_wishlist.spec.ts:14:58"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-24T19:29:07.405Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/tmp/avaliacao-prompts-playwright/suite_adicionar_wishlist-S-e647d-dicionar-produto-à-wishlist/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context_playwright_locators_20260724_02/suite_adicionar_wishlist.spec.ts",
+                        "column": 58,
+                        "line": 14
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "098796e0f623f352e24c-1b24ca72555176bba561",
+              "file": "suite_adicionar_wishlist.spec.ts",
+              "line": 4,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "suite_busca_blue_jeans.spec.ts",
+      "file": "suite_busca_blue_jeans.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Suite Busca Blue Jeans",
+          "file": "suite_busca_blue_jeans.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should search for Blue Jeans and open its details page",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 20000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 11083,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.product-list-item-name')\nExpected substring: \u001b[32m\"Blue Jeans\"\u001b[39m\nTimeout: 7000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" with timeout 7000ms\u001b[22m\n\u001b[2m  - waiting for locator('.product-list-item-name')\u001b[22m\n",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.product-list-item-name')\nExpected substring: \u001b[32m\"Blue Jeans\"\u001b[39m\nTimeout: 7000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" with timeout 7000ms\u001b[22m\n\u001b[2m  - waiting for locator('.product-list-item-name')\u001b[22m\n\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context_playwright_locators_20260724_02/suite_busca_blue_jeans.spec.ts:12:33",
+                        "location": {
+                          "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context_playwright_locators_20260724_02/suite_busca_blue_jeans.spec.ts",
+                          "column": 33,
+                          "line": 12
+                        },
+                        "snippet": "  10 |     // Etapa 3: Verificar que os resultados da busca contêm Blue Jeans\n  11 |     const searchResults = page.locator('.product-list-item-name');\n> 12 |     await expect(searchResults).toContainText('Blue Jeans');\n     |                                 ^\n  13 |\n  14 |     // Etapa 4: Abrir a página de detalhes do produto Blue Jeans\n  15 |     await searchResults.first().click();"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context_playwright_locators_20260724_02/suite_busca_blue_jeans.spec.ts",
+                            "column": 33,
+                            "line": 12
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.product-list-item-name')\nExpected substring: \u001b[32m\"Blue Jeans\"\u001b[39m\nTimeout: 7000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" with timeout 7000ms\u001b[22m\n\u001b[2m  - waiting for locator('.product-list-item-name')\u001b[22m\n\n\n  10 |     // Etapa 3: Verificar que os resultados da busca contêm Blue Jeans\n  11 |     const searchResults = page.locator('.product-list-item-name');\n> 12 |     await expect(searchResults).toContainText('Blue Jeans');\n     |                                 ^\n  13 |\n  14 |     // Etapa 4: Abrir a página de detalhes do produto Blue Jeans\n  15 |     await searchResults.first().click();\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context_playwright_locators_20260724_02/suite_busca_blue_jeans.spec.ts:12:33"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-24T19:29:13.274Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/tmp/avaliacao-prompts-playwright/suite_busca_blue_jeans-Sui-97f7b-s-and-open-its-details-page/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context_playwright_locators_20260724_02/suite_busca_blue_jeans.spec.ts",
+                        "column": 33,
+                        "line": 12
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "c2d5174642ec155dc900-200e387a64c887b54cc2",
+              "file": "suite_busca_blue_jeans.spec.ts",
+              "line": 4,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "suite_checkout_blue_jeans.spec.ts",
+      "file": "suite_checkout_blue_jeans.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Suite Checkout Blue Jeans",
+          "file": "suite_checkout_blue_jeans.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should complete the checkout process for blue jeans",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 20000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 11413,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected: \u001b[32m\"https://demowebshop.tricentis.com/\u001b[7mb\u001b[27mlue\u001b[7m-j\u001b[27means\"\u001b[39m\nReceived: \u001b[31m\"https://demowebshop.tricentis.com/\u001b[7msearch?q=B\u001b[27mlue\u001b[7m+J\u001b[27means\"\u001b[39m\nTimeout:  7000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveURL\" with timeout 7000ms\u001b[22m\n\u001b[2m    17 × unexpected value \"https://demowebshop.tricentis.com/search?q=Blue+Jeans\"\u001b[22m\n",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected: \u001b[32m\"https://demowebshop.tricentis.com/\u001b[7mb\u001b[27mlue\u001b[7m-j\u001b[27means\"\u001b[39m\nReceived: \u001b[31m\"https://demowebshop.tricentis.com/\u001b[7msearch?q=B\u001b[27mlue\u001b[7m+J\u001b[27means\"\u001b[39m\nTimeout:  7000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveURL\" with timeout 7000ms\u001b[22m\n\u001b[2m    17 × unexpected value \"https://demowebshop.tricentis.com/search?q=Blue+Jeans\"\u001b[22m\n\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context_playwright_locators_20260724_02/suite_checkout_blue_jeans.spec.ts:9:24",
+                        "location": {
+                          "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context_playwright_locators_20260724_02/suite_checkout_blue_jeans.spec.ts",
+                          "column": 24,
+                          "line": 9
+                        },
+                        "snippet": "   7 |     await page.locator(\"[id=\\\"small-searchterms\\\"]\").fill('Blue Jeans');\n   8 |     await page.getByRole(\"button\", { name: \"Search\", exact: true }).click();\n>  9 |     await expect(page).toHaveURL('https://demowebshop.tricentis.com/blue-jeans');\n     |                        ^\n  10 |\n  11 |     // Step 3: Add Blue Jeans to the cart\n  12 |     await page.locator(\"[id=\\\"add-to-cart-button-36\\\"]\").click();"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context_playwright_locators_20260724_02/suite_checkout_blue_jeans.spec.ts",
+                            "column": 24,
+                            "line": 9
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected: \u001b[32m\"https://demowebshop.tricentis.com/\u001b[7mb\u001b[27mlue\u001b[7m-j\u001b[27means\"\u001b[39m\nReceived: \u001b[31m\"https://demowebshop.tricentis.com/\u001b[7msearch?q=B\u001b[27mlue\u001b[7m+J\u001b[27means\"\u001b[39m\nTimeout:  7000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveURL\" with timeout 7000ms\u001b[22m\n\u001b[2m    17 × unexpected value \"https://demowebshop.tricentis.com/search?q=Blue+Jeans\"\u001b[22m\n\n\n   7 |     await page.locator(\"[id=\\\"small-searchterms\\\"]\").fill('Blue Jeans');\n   8 |     await page.getByRole(\"button\", { name: \"Search\", exact: true }).click();\n>  9 |     await expect(page).toHaveURL('https://demowebshop.tricentis.com/blue-jeans');\n     |                        ^\n  10 |\n  11 |     // Step 3: Add Blue Jeans to the cart\n  12 |     await page.locator(\"[id=\\\"add-to-cart-button-36\\\"]\").click();\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context_playwright_locators_20260724_02/suite_checkout_blue_jeans.spec.ts:9:24"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-24T19:29:25.718Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/tmp/avaliacao-prompts-playwright/suite_checkout_blue_jeans--bc7ac-kout-process-for-blue-jeans/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context_playwright_locators_20260724_02/suite_checkout_blue_jeans.spec.ts",
+                        "column": 24,
+                        "line": 9
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "1a70699396ff8c88bdf2-a59b473ef33b87e0d1c6",
+              "file": "suite_checkout_blue_jeans.spec.ts",
+              "line": 4,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "suite_configurar_desktop.spec.ts",
+      "file": "suite_configurar_desktop.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Suite Configurar Desktop",
+          "file": "suite_configurar_desktop.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should configure and add desktop to cart",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 20000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 14717,
+                      "error": {
+                        "message": "TimeoutError: locator.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByText('Fast', { exact: true })\u001b[22m\n",
+                        "stack": "TimeoutError: locator.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByText('Fast', { exact: true })\u001b[22m\n\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context_playwright_locators_20260724_02/suite_configurar_desktop.spec.ts:15:51",
+                        "location": {
+                          "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context_playwright_locators_20260724_02/suite_configurar_desktop.spec.ts",
+                          "column": 51,
+                          "line": 15
+                        },
+                        "snippet": "  13 |\n  14 |     // Step 3: Select options for Fast processor, 4 GB memory, 400 GB disk, and Office Suite software\n> 15 |     await page.getByText(\"Fast\", { exact: true }).click();\n     |                                                   ^\n  16 |     await page.getByText(\"4GB [+$25.00]\", { exact: true }).click();\n  17 |     await page.getByText(\"400GB [+$10.00]\", { exact: true }).click();\n  18 |     await page.getByText(\"Microsoft Office Suite [+$79.00]\", { exact: true }).click();"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context_playwright_locators_20260724_02/suite_configurar_desktop.spec.ts",
+                            "column": 51,
+                            "line": 15
+                          },
+                          "message": "TimeoutError: locator.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByText('Fast', { exact: true })\u001b[22m\n\n\n  13 |\n  14 |     // Step 3: Select options for Fast processor, 4 GB memory, 400 GB disk, and Office Suite software\n> 15 |     await page.getByText(\"Fast\", { exact: true }).click();\n     |                                                   ^\n  16 |     await page.getByText(\"4GB [+$25.00]\", { exact: true }).click();\n  17 |     await page.getByText(\"400GB [+$10.00]\", { exact: true }).click();\n  18 |     await page.getByText(\"Microsoft Office Suite [+$79.00]\", { exact: true }).click();\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context_playwright_locators_20260724_02/suite_configurar_desktop.spec.ts:15:51"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-24T19:29:41.450Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/tmp/avaliacao-prompts-playwright/suite_configurar_desktop-S-a4210-ure-and-add-desktop-to-cart/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context_playwright_locators_20260724_02/suite_configurar_desktop.spec.ts",
+                        "column": 51,
+                        "line": 15
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "ded8edc9abcd61cf5d5b-509ab592ca3edc730945",
+              "file": "suite_configurar_desktop.spec.ts",
+              "line": 4,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "suite_detalhes_fiction.spec.ts",
+      "file": "suite_detalhes_fiction.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Suite Detalhes Fiction",
+          "file": "suite_detalhes_fiction.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "The user searches for the product Fiction in the Search store field and opens its details page",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 20000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 5,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 11472,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected: \u001b[32m\"https://demowebshop.tricentis.com/\u001b[7mf\u001b[27miction\"\u001b[39m\nReceived: \u001b[31m\"https://demowebshop.tricentis.com/\u001b[7msearch?q=F\u001b[27miction\"\u001b[39m\nTimeout:  7000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveURL\" with timeout 7000ms\u001b[22m\n\u001b[2m    17 × unexpected value \"https://demowebshop.tricentis.com/search?q=Fiction\"\u001b[22m\n",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected: \u001b[32m\"https://demowebshop.tricentis.com/\u001b[7mf\u001b[27miction\"\u001b[39m\nReceived: \u001b[31m\"https://demowebshop.tricentis.com/\u001b[7msearch?q=F\u001b[27miction\"\u001b[39m\nTimeout:  7000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveURL\" with timeout 7000ms\u001b[22m\n\u001b[2m    17 × unexpected value \"https://demowebshop.tricentis.com/search?q=Fiction\"\u001b[22m\n\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context_playwright_locators_20260724_02/suite_detalhes_fiction.spec.ts:14:24",
+                        "location": {
+                          "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context_playwright_locators_20260724_02/suite_detalhes_fiction.spec.ts",
+                          "column": 24,
+                          "line": 14
+                        },
+                        "snippet": "  12 |\n  13 |     // Etapa 2: The user opens the product Fiction in the search results.\n> 14 |     await expect(page).toHaveURL('https://demowebshop.tricentis.com/fiction');\n     |                        ^\n  15 |\n  16 |     // Etapa 3: The system displays the details page with the name Fiction.\n  17 |     const fictionTitle = page.locator(\"h1\", { hasText: \"Fiction\" });"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context_playwright_locators_20260724_02/suite_detalhes_fiction.spec.ts",
+                            "column": 24,
+                            "line": 14
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected: \u001b[32m\"https://demowebshop.tricentis.com/\u001b[7mf\u001b[27miction\"\u001b[39m\nReceived: \u001b[31m\"https://demowebshop.tricentis.com/\u001b[7msearch?q=F\u001b[27miction\"\u001b[39m\nTimeout:  7000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveURL\" with timeout 7000ms\u001b[22m\n\u001b[2m    17 × unexpected value \"https://demowebshop.tricentis.com/search?q=Fiction\"\u001b[22m\n\n\n  12 |\n  13 |     // Etapa 2: The user opens the product Fiction in the search results.\n> 14 |     await expect(page).toHaveURL('https://demowebshop.tricentis.com/fiction');\n     |                        ^\n  15 |\n  16 |     // Etapa 3: The system displays the details page with the name Fiction.\n  17 |     const fictionTitle = page.locator(\"h1\", { hasText: \"Fiction\" });\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context_playwright_locators_20260724_02/suite_detalhes_fiction.spec.ts:14:24"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-24T19:29:57.526Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/tmp/avaliacao-prompts-playwright/suite_detalhes_fiction-Sui-7dac8--and-opens-its-details-page/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context_playwright_locators_20260724_02/suite_detalhes_fiction.spec.ts",
+                        "column": 24,
+                        "line": 14
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "179492ad1a70311acabe-b7d549edd4bab8880e5c",
+              "file": "suite_detalhes_fiction.spec.ts",
+              "line": 4,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "suite_limpar_carrinho.spec.ts",
+      "file": "suite_limpar_carrinho.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Suite Limpar Carrinho",
+          "file": "suite_limpar_carrinho.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should clear the cart after removing an item",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 20000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 6,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 14160,
+                      "error": {
+                        "message": "TimeoutError: locator.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[name=\"removefromcart_1\"]')\u001b[22m\n",
+                        "stack": "TimeoutError: locator.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[name=\"removefromcart_1\"]')\u001b[22m\n\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context_playwright_locators_20260724_02/suite_limpar_carrinho.spec.ts:14:55",
+                        "location": {
+                          "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context_playwright_locators_20260724_02/suite_limpar_carrinho.spec.ts",
+                          "column": 55,
+                          "line": 14
+                        },
+                        "snippet": "  12 |\n  13 |     // Etapa 3: Marcar Blue Jeans para remoção\n> 14 |     await page.locator(\"[name=\\\"removefromcart_1\\\"]\").click();\n     |                                                       ^\n  15 |\n  16 |     // Etapa 4: Selecionar Atualizar Carrinho\n  17 |     await page.getByRole(\"button\", { name: \"Update shopping cart\" }).click();"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context_playwright_locators_20260724_02/suite_limpar_carrinho.spec.ts",
+                            "column": 55,
+                            "line": 14
+                          },
+                          "message": "TimeoutError: locator.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[name=\"removefromcart_1\"]')\u001b[22m\n\n\n  12 |\n  13 |     // Etapa 3: Marcar Blue Jeans para remoção\n> 14 |     await page.locator(\"[name=\\\"removefromcart_1\\\"]\").click();\n     |                                                       ^\n  15 |\n  16 |     // Etapa 4: Selecionar Atualizar Carrinho\n  17 |     await page.getByRole(\"button\", { name: \"Update shopping cart\" }).click();\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context_playwright_locators_20260724_02/suite_limpar_carrinho.spec.ts:14:55"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-24T19:30:13.274Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/tmp/avaliacao-prompts-playwright/suite_limpar_carrinho-Suit-372fa-cart-after-removing-an-item/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context_playwright_locators_20260724_02/suite_limpar_carrinho.spec.ts",
+                        "column": 55,
+                        "line": 14
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "1ab8afb3fceab06e4dc3-7f45bf15bf630313371c",
+              "file": "suite_limpar_carrinho.spec.ts",
+              "line": 4,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "suite_limpar_wishlist.spec.ts",
+      "file": "suite_limpar_wishlist.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Suite Limpar Wishlist",
+          "file": "suite_limpar_wishlist.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should clear the wishlist",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 20000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 7,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 13905,
+                      "error": {
+                        "message": "TimeoutError: locator.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByText('Camera').getByRole('button', { name: 'Remove from Wishlist' })\u001b[22m\n",
+                        "stack": "TimeoutError: locator.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByText('Camera').getByRole('button', { name: 'Remove from Wishlist' })\u001b[22m\n\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context_playwright_locators_20260724_02/suite_limpar_wishlist.spec.ts:15:90",
+                        "location": {
+                          "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context_playwright_locators_20260724_02/suite_limpar_wishlist.spec.ts",
+                          "column": 90,
+                          "line": 15
+                        },
+                        "snippet": "  13 |\n  14 |     // Step 4: The user marks the Camera product for removal\n> 15 |     await page.getByText('Camera').getByRole(\"button\", { name: \"Remove from Wishlist\" }).click();\n     |                                                                                          ^\n  16 |\n  17 |     // Step 5: The user selects Update wishlist\n  18 |     await page.getByRole(\"button\", { name: \"Update Wishlist\" }).click();"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context_playwright_locators_20260724_02/suite_limpar_wishlist.spec.ts",
+                            "column": 90,
+                            "line": 15
+                          },
+                          "message": "TimeoutError: locator.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByText('Camera').getByRole('button', { name: 'Remove from Wishlist' })\u001b[22m\n\n\n  13 |\n  14 |     // Step 4: The user marks the Camera product for removal\n> 15 |     await page.getByText('Camera').getByRole(\"button\", { name: \"Remove from Wishlist\" }).click();\n     |                                                                                          ^\n  16 |\n  17 |     // Step 5: The user selects Update wishlist\n  18 |     await page.getByRole(\"button\", { name: \"Update Wishlist\" }).click();\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context_playwright_locators_20260724_02/suite_limpar_wishlist.spec.ts:15:90"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-24T19:30:28.770Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/tmp/avaliacao-prompts-playwright/suite_limpar_wishlist-Suit-0cb72-t-should-clear-the-wishlist/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context_playwright_locators_20260724_02/suite_limpar_wishlist.spec.ts",
+                        "column": 90,
+                        "line": 15
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "d86af201ab92a631acc4-f089cdf07fe6695d1c68",
+              "file": "suite_limpar_wishlist.spec.ts",
+              "line": 9,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "suite_login_invalido.spec.ts",
+      "file": "suite_login_invalido.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Suite Login Invalido",
+          "file": "suite_login_invalido.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "The user accesses the Log in page of the Demo Web Shop and attempts to log in with an invalid password",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 20000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 8,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 4291,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-24T19:30:46.965Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "7f7239a4016ce59b97ad-e3a96fd9ecc5f0b2b2ec",
+              "file": "suite_login_invalido.spec.ts",
+              "line": 4,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "suite_login_valido.spec.ts",
+      "file": "suite_login_valido.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Suite Login Valido",
+          "file": "suite_login_valido.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should log in with valid credentials and display account links",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 20000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 8,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 4104,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 3\u001b[39m\n\n\u001b[32m- Welcome, Please Sign In!\u001b[39m\n\u001b[31m+\u001b[39m\n\u001b[31m+             Categories\u001b[39m\n\u001b[31m+ \u001b[43m        \u001b[49m\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 3\u001b[39m\n\n\u001b[32m- Welcome, Please Sign In!\u001b[39m\n\u001b[31m+\u001b[39m\n\u001b[31m+             Categories\u001b[39m\n\u001b[31m+ \u001b[43m        \u001b[49m\u001b[39m\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context_playwright_locators_20260724_02/suite_login_valido.spec.ts:9:46",
+                        "location": {
+                          "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context_playwright_locators_20260724_02/suite_login_valido.spec.ts",
+                          "column": 46,
+                          "line": 9
+                        },
+                        "snippet": "   7 |     await page.getByText(\"Log in\", { exact: true }).first().click();\n   8 |     expect(page).toHaveURL('https://demowebshop.tricentis.com/login');\n>  9 |     expect(await page.textContent('.title')).toBe('Welcome, Please Sign In!');\n     |                                              ^\n  10 |\n  11 |     // Etapa 2: Preencher os campos de email e senha\n  12 |     await page.getByLabel(\"Email:\", { exact: true }).fill(process.env.EMAIL || 'test@example.com');"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context_playwright_locators_20260724_02/suite_login_valido.spec.ts",
+                            "column": 46,
+                            "line": 9
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 3\u001b[39m\n\n\u001b[32m- Welcome, Please Sign In!\u001b[39m\n\u001b[31m+\u001b[39m\n\u001b[31m+             Categories\u001b[39m\n\u001b[31m+ \u001b[43m        \u001b[49m\u001b[39m\n\n   7 |     await page.getByText(\"Log in\", { exact: true }).first().click();\n   8 |     expect(page).toHaveURL('https://demowebshop.tricentis.com/login');\n>  9 |     expect(await page.textContent('.title')).toBe('Welcome, Please Sign In!');\n     |                                              ^\n  10 |\n  11 |     // Etapa 2: Preencher os campos de email e senha\n  12 |     await page.getByLabel(\"Email:\", { exact: true }).fill(process.env.EMAIL || 'test@example.com');\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context_playwright_locators_20260724_02/suite_login_valido.spec.ts:9:46"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-24T19:30:51.553Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/tmp/avaliacao-prompts-playwright/suite_login_valido-Suite-L-cde05-s-and-display-account-links/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context_playwright_locators_20260724_02/suite_login_valido.spec.ts",
+                        "column": 46,
+                        "line": 9
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "d7aa3dbcc5ebbdf3d199-8b539ea4c3dc5b6ca765",
+              "file": "suite_login_valido.spec.ts",
+              "line": 4,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "suite_logout.spec.ts",
+      "file": "suite_logout.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Suite Logout",
+          "file": "suite_logout.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "User logs out and is redirected to login page",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 20000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 9,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 13377,
+                      "error": {
+                        "message": "TimeoutError: locator.fill: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByLabel('Email:', { exact: true })\u001b[22m\n",
+                        "stack": "TimeoutError: locator.fill: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByLabel('Email:', { exact: true })\u001b[22m\n\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context_playwright_locators_20260724_02/suite_logout.spec.ts:7:54",
+                        "location": {
+                          "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context_playwright_locators_20260724_02/suite_logout.spec.ts",
+                          "column": 54,
+                          "line": 7
+                        },
+                        "snippet": "   5 |     // Step 1: The user is authenticated with valid credentials provided by the testing environment.\n   6 |     await page.goto('https://demowebshop.tricentis.com/');\n>  7 |     await page.getByLabel('Email:', { exact: true }).fill(process.env.TEST_EMAIL || 'test@example.com');\n     |                                                      ^\n   8 |     await page.getByLabel('Password:', { exact: true }).fill(process.env.TEST_PASSWORD || 'password');\n   9 |     await page.getByRole('button', { name: 'Log in', exact: true }).click();\n  10 |"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context_playwright_locators_20260724_02/suite_logout.spec.ts",
+                            "column": 54,
+                            "line": 7
+                          },
+                          "message": "TimeoutError: locator.fill: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByLabel('Email:', { exact: true })\u001b[22m\n\n\n   5 |     // Step 1: The user is authenticated with valid credentials provided by the testing environment.\n   6 |     await page.goto('https://demowebshop.tricentis.com/');\n>  7 |     await page.getByLabel('Email:', { exact: true }).fill(process.env.TEST_EMAIL || 'test@example.com');\n     |                                                      ^\n   8 |     await page.getByLabel('Password:', { exact: true }).fill(process.env.TEST_PASSWORD || 'password');\n   9 |     await page.getByRole('button', { name: 'Log in', exact: true }).click();\n  10 |\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context_playwright_locators_20260724_02/suite_logout.spec.ts:7:54"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-24T19:30:56.801Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/tmp/avaliacao-prompts-playwright/suite_logout-Suite-Logout--9d8ae-is-redirected-to-login-page/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context_playwright_locators_20260724_02/suite_logout.spec.ts",
+                        "column": 54,
+                        "line": 7
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "2f3a4af9c48bd28b3893-ff6efe32721683f44202",
+              "file": "suite_logout.spec.ts",
+              "line": 4,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "suite_registro_usuario.spec.ts",
+      "file": "suite_registro_usuario.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Suite Registro Usuario",
+          "file": "suite_registro_usuario.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should register a user and continue shopping",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 20000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 10,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 5823,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected: \u001b[32m\"https://demowebshop.tricentis.com/\"\u001b[39m\nReceived: \u001b[31m\"\"\u001b[39m\n\nCall log:\n\u001b[2m  - Expect \"toHaveURL\" with timeout 7000ms\u001b[22m\n",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected: \u001b[32m\"https://demowebshop.tricentis.com/\"\u001b[39m\nReceived: \u001b[31m\"\"\u001b[39m\n\nCall log:\n\u001b[2m  - Expect \"toHaveURL\" with timeout 7000ms\u001b[22m\n\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context_playwright_locators_20260724_02/suite_registro_usuario.spec.ts:37:18",
+                        "location": {
+                          "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context_playwright_locators_20260724_02/suite_registro_usuario.spec.ts",
+                          "column": 18,
+                          "line": 37
+                        },
+                        "snippet": "  35 |     // Etapa 8: Seleciona Continue e retorna à loja autenticada\n  36 |     await page.getByRole('button', { name: 'Continue' }).click();\n> 37 |     expect(page).toHaveURL('https://demowebshop.tricentis.com/');\n     |                  ^\n  38 |   });\n  39 | });\n  40 |"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context_playwright_locators_20260724_02/suite_registro_usuario.spec.ts",
+                            "column": 18,
+                            "line": 37
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected: \u001b[32m\"https://demowebshop.tricentis.com/\"\u001b[39m\nReceived: \u001b[31m\"\"\u001b[39m\n\nCall log:\n\u001b[2m  - Expect \"toHaveURL\" with timeout 7000ms\u001b[22m\n\n\n  35 |     // Etapa 8: Seleciona Continue e retorna à loja autenticada\n  36 |     await page.getByRole('button', { name: 'Continue' }).click();\n> 37 |     expect(page).toHaveURL('https://demowebshop.tricentis.com/');\n     |                  ^\n  38 |   });\n  39 | });\n  40 |\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context_playwright_locators_20260724_02/suite_registro_usuario.spec.ts:37:18"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-24T19:31:11.531Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/tmp/avaliacao-prompts-playwright/suite_registro_usuario-Sui-ef2d7--user-and-continue-shopping/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context_playwright_locators_20260724_02/suite_registro_usuario.spec.ts",
+                        "column": 18,
+                        "line": 37
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "ddea2ff8902a25e2f4d0-4f993e553770d3055d3e",
+              "file": "suite_registro_usuario.spec.ts",
+              "line": 4,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "user_registration_book_purchase.spec.ts",
+      "file": "user_registration_book_purchase.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "User Registration Book Purchase",
+          "file": "user_registration_book_purchase.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should register user and purchase book",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 20000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 11,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 8452,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected: \u001b[32m\"https://demowebshop.tricentis.com/cart\"\u001b[39m\nReceived: \u001b[31m\"\"\u001b[39m\n\nCall log:\n\u001b[2m  - Expect \"toHaveURL\" with timeout 7000ms\u001b[22m\n",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected: \u001b[32m\"https://demowebshop.tricentis.com/cart\"\u001b[39m\nReceived: \u001b[31m\"\"\u001b[39m\n\nCall log:\n\u001b[2m  - Expect \"toHaveURL\" with timeout 7000ms\u001b[22m\n\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context_playwright_locators_20260724_02/user_registration_book_purchase.spec.ts:49:18",
+                        "location": {
+                          "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context_playwright_locators_20260724_02/user_registration_book_purchase.spec.ts",
+                          "column": 18,
+                          "line": 49
+                        },
+                        "snippet": "  47 |     // Step 19: Navigate to the shopping cart to check the added item\n  48 |     await page.getByRole(\"link\", { name: \"Shopping cart\", exact: true }).click();\n> 49 |     expect(page).toHaveURL('https://demowebshop.tricentis.com/cart');\n     |                  ^\n  50 |     expect(page.locator('h1')).toContainText('Shopping cart');\n  51 |\n  52 |     // Step 20: The system displays the cart containing the book Health Book with quantity and price"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context_playwright_locators_20260724_02/user_registration_book_purchase.spec.ts",
+                            "column": 18,
+                            "line": 49
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected: \u001b[32m\"https://demowebshop.tricentis.com/cart\"\u001b[39m\nReceived: \u001b[31m\"\"\u001b[39m\n\nCall log:\n\u001b[2m  - Expect \"toHaveURL\" with timeout 7000ms\u001b[22m\n\n\n  47 |     // Step 19: Navigate to the shopping cart to check the added item\n  48 |     await page.getByRole(\"link\", { name: \"Shopping cart\", exact: true }).click();\n> 49 |     expect(page).toHaveURL('https://demowebshop.tricentis.com/cart');\n     |                  ^\n  50 |     expect(page.locator('h1')).toContainText('Shopping cart');\n  51 |\n  52 |     // Step 20: The system displays the cart containing the book Health Book with quantity and price\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context_playwright_locators_20260724_02/user_registration_book_purchase.spec.ts:49:18"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-24T19:31:21.707Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/tmp/avaliacao-prompts-playwright/user_registration_book_pur-82fa9-ster-user-and-purchase-book/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context_playwright_locators_20260724_02/user_registration_book_purchase.spec.ts",
+                        "column": 18,
+                        "line": 49
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "f7557647539060876791-37549158bc5e04ba4382",
+              "file": "user_registration_book_purchase.spec.ts",
+              "line": 4,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-07-24T19:28:46.776Z",
+    "duration": 149165.31,
+    "expected": 2,
+    "skipped": 0,
+    "unexpected": 12,
+    "flaky": 0
+  }
+}

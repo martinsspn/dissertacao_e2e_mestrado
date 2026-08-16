@@ -1,0 +1,7 @@
+model_origin,round,condition,scenario,flow_correctness,target_correctness,assertion_correctness,semantic_total_6,semantic_classification,review_note
+gemini-3.6-flash,gemini_new_20,baseline,fluxo_computadores_desktops,2,2,2,6,adequate,"Corrige o fallback para o Demo Web Shop, navega até Digital downloads e valida página, grade e presença de produtos."
+gemini-3.6-flash,gemini_new_20,structured_context,suite_navegar_sobre_nos,2,2,2,6,adequate,"Mantém a navegação solicitada e corrige a verificação do heading About us."
+gemini-3.6-flash,gemini_new_20,structured_context,suite_persistencia_carrinho_apos_login,2,2,2,6,adequate,"Autentica, limpa o estado, adiciona o produto, reloga, comprova persistência e restaura o carrinho."
+gpt-5.6-sol,gpt_original_12,baseline,suite_adicionar_carrinho,2,2,2,6,adequate,"Remove a ambiguidade do botão de inclusão e preserva busca, produto, notificação e verificação no carrinho."
+qwen2.5-coder:7b,qwen_new_20,structured_context,suite_visualizacao_livros_em_lista,1,1,0,2,inadequate,"Passa sem selecionar List: procura um botão inexistente de forma opcional e usa a contagem de seis produtos como oráculo, sem comprovar visualização em lista."
+qwen2.5-coder:7b,qwen_old_14,structured_context,suite_login_valido,2,2,2,6,adequate,"Usa as credenciais configuradas, autentica e comprova a presença dos controles de conta e logout; as expectativas de URL sem await são redundantes."

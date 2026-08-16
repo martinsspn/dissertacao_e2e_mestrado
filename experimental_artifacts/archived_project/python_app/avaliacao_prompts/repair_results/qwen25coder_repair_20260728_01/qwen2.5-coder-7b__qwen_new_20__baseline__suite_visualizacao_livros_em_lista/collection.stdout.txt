@@ -1,0 +1,3 @@
+Listing tests:
+  suite_visualizacao_livros_em_lista.spec.ts:4:7 › Changing the book catalog view › should switch to list view when user selects List in the View as control
+Total: 1 test in 1 file

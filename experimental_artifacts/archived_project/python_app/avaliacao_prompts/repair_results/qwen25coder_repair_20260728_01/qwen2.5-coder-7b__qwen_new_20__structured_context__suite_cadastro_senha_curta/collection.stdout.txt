@@ -1,0 +1,3 @@
+Listing tests:
+  suite_cadastro_senha_curta.spec.ts:3:5 › Suite Cadastro Senha Curta
+Total: 1 test in 1 file

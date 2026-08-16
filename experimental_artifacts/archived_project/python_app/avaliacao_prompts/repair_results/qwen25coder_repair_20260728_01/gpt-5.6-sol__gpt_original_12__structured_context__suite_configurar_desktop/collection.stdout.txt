@@ -1,0 +1,3 @@
+Listing tests:
+  suite_configurar_desktop.spec.ts:4:7 › Suite Configurar Desktop › configura um desktop e o adiciona ao carrinho
+Total: 1 test in 1 file

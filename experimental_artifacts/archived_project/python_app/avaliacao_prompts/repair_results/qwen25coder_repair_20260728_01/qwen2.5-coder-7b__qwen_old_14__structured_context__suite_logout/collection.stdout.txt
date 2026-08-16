@@ -1,0 +1,3 @@
+Listing tests:
+  suite_logout.spec.ts:4:7 › Suite Logout › User logs out and is redirected to login page
+Total: 1 test in 1 file

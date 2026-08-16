@@ -1,0 +1,154 @@
+{
+  "config": {
+    "argv": [
+      "/usr/bin/node",
+      "/home/martinsspn/dissertacao_e2e_semantico/node_modules/.bin/playwright",
+      "test",
+      "suite_comparar_produtos.spec.ts",
+      "--config=/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/playwright.config.ts",
+      "--reporter=json"
+    ],
+    "configFile": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/playwright.config.ts",
+    "rootDir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/repair_runs/qwen25coder_repair_20260728_01/qwen2-5-coder-7b/qwen_new_20/structured_context/suite_comparar_produtos",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/tmp/avaliacao-prompts-playwright",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/repair_runs/qwen25coder_repair_20260728_01/qwen2-5-coder-7b/qwen_new_20/structured_context/suite_comparar_produtos",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 20000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.61.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "suite_comparar_produtos.spec.ts",
+      "file": "suite_comparar_produtos.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Suite Comparar Produtos",
+          "file": "suite_comparar_produtos.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should compare products and clear the list",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 20000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 15862,
+                      "error": {
+                        "message": "TimeoutError: locator.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('link', { name: 'Fiction' })\u001b[22m\n",
+                        "stack": "TimeoutError: locator.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('link', { name: 'Fiction' })\u001b[22m\n\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/repair_runs/qwen25coder_repair_20260728_01/qwen2-5-coder-7b/qwen_new_20/structured_context/suite_comparar_produtos/suite_comparar_produtos.spec.ts:13:55",
+                        "location": {
+                          "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/repair_runs/qwen25coder_repair_20260728_01/qwen2-5-coder-7b/qwen_new_20/structured_context/suite_comparar_produtos/suite_comparar_produtos.spec.ts",
+                          "column": 55,
+                          "line": 13
+                        },
+                        "snippet": "  11 |     await page.goto('https://demowebshop.tricentis.com/fiction');\n  12 |     await expect(page).toHaveURL('https://demowebshop.tricentis.com/fiction');\n> 13 |     await page.getByRole('link', { name: 'Fiction' }).click();\n     |                                                       ^\n  14 |\n  15 |     // Etapa 3: Verifica se os produtos estão sendo comparados\n  16 |     await expect(page.locator('.compare-products-page')).toBeVisible();"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/repair_runs/qwen25coder_repair_20260728_01/qwen2-5-coder-7b/qwen_new_20/structured_context/suite_comparar_produtos/suite_comparar_produtos.spec.ts",
+                            "column": 55,
+                            "line": 13
+                          },
+                          "message": "TimeoutError: locator.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('link', { name: 'Fiction' })\u001b[22m\n\n\n  11 |     await page.goto('https://demowebshop.tricentis.com/fiction');\n  12 |     await expect(page).toHaveURL('https://demowebshop.tricentis.com/fiction');\n> 13 |     await page.getByRole('link', { name: 'Fiction' }).click();\n     |                                                       ^\n  14 |\n  15 |     // Etapa 3: Verifica se os produtos estão sendo comparados\n  16 |     await expect(page.locator('.compare-products-page')).toBeVisible();\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/repair_runs/qwen25coder_repair_20260728_01/qwen2-5-coder-7b/qwen_new_20/structured_context/suite_comparar_produtos/suite_comparar_produtos.spec.ts:13:55"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-28T15:18:33.817Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/tmp/avaliacao-prompts-playwright/suite_comparar_produtos-Su-85c14-products-and-clear-the-list/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/repair_runs/qwen25coder_repair_20260728_01/qwen2-5-coder-7b/qwen_new_20/structured_context/suite_comparar_produtos/suite_comparar_produtos.spec.ts",
+                        "column": 55,
+                        "line": 13
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "c7461115bb411687791d-e70a49e40fdd3b46dd88",
+              "file": "suite_comparar_produtos.spec.ts",
+              "line": 4,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-07-28T15:18:32.816Z",
+    "duration": 17295.107,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

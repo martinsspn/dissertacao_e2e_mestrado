@@ -1,0 +1,3 @@
+Listing tests:
+  suite_exibir_quatro_livros.spec.ts:4:7 › Suite Exibir Quatro Livros › The user accesses the Books category and displays no more than four product items on the current page
+Total: 1 test in 1 file

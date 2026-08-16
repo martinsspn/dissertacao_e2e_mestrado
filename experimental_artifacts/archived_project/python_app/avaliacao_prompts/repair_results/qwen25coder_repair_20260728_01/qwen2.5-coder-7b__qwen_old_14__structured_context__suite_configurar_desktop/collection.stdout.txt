@@ -1,0 +1,3 @@
+Listing tests:
+  suite_configurar_desktop.spec.ts:4:7 › Suite Configurar Desktop › should configure and add desktop to cart
+Total: 1 test in 1 file

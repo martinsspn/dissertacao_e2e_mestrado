@@ -1,0 +1,154 @@
+{
+  "config": {
+    "argv": [
+      "/usr/bin/node",
+      "/home/martinsspn/dissertacao_e2e_semantico/node_modules/.bin/playwright",
+      "test",
+      "suite_cadastro_confirmacao_senha.spec.ts",
+      "--config=/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/playwright.config.ts",
+      "--reporter=json"
+    ],
+    "configFile": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/playwright.config.ts",
+    "rootDir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/repair_runs/qwen25coder_repair_20260728_01/qwen2-5-coder-7b/qwen_new_20/baseline/suite_cadastro_confirmacao_senha",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/tmp/avaliacao-prompts-playwright",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/repair_runs/qwen25coder_repair_20260728_01/qwen2-5-coder-7b/qwen_new_20/baseline/suite_cadastro_confirmacao_senha",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 20000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.61.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "suite_cadastro_confirmacao_senha.spec.ts",
+      "file": "suite_cadastro_confirmacao_senha.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Validation of mismatched registration passwords",
+          "file": "suite_cadastro_confirmacao_senha.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should inform when password and confirmation password do not match",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 20000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 12959,
+                      "error": {
+                        "message": "TimeoutError: page.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#RegisterButton')\u001b[22m\n",
+                        "stack": "TimeoutError: page.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#RegisterButton')\u001b[22m\n\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/repair_runs/qwen25coder_repair_20260728_01/qwen2-5-coder-7b/qwen_new_20/baseline/suite_cadastro_confirmacao_senha/suite_cadastro_confirmacao_senha.spec.ts:22:16",
+                        "location": {
+                          "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/repair_runs/qwen25coder_repair_20260728_01/qwen2-5-coder-7b/qwen_new_20/baseline/suite_cadastro_confirmacao_senha/suite_cadastro_confirmacao_senha.spec.ts",
+                          "column": 16,
+                          "line": 22
+                        },
+                        "snippet": "  20 |\n  21 |     // Submit the form using the Register button\n> 22 |     await page.click('#RegisterButton');\n     |                ^\n  23 |\n  24 |     // The system does not register the user and informs that the password and confirmation password do not match\n  25 |     const errorMessage = await page.textContent('.validation-summary-errors');"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/repair_runs/qwen25coder_repair_20260728_01/qwen2-5-coder-7b/qwen_new_20/baseline/suite_cadastro_confirmacao_senha/suite_cadastro_confirmacao_senha.spec.ts",
+                            "column": 16,
+                            "line": 22
+                          },
+                          "message": "TimeoutError: page.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#RegisterButton')\u001b[22m\n\n\n  20 |\n  21 |     // Submit the form using the Register button\n> 22 |     await page.click('#RegisterButton');\n     |                ^\n  23 |\n  24 |     // The system does not register the user and informs that the password and confirmation password do not match\n  25 |     const errorMessage = await page.textContent('.validation-summary-errors');\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/repair_runs/qwen25coder_repair_20260728_01/qwen2-5-coder-7b/qwen_new_20/baseline/suite_cadastro_confirmacao_senha/suite_cadastro_confirmacao_senha.spec.ts:22:16"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-28T15:10:53.901Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/tmp/avaliacao-prompts-playwright/suite_cadastro_confirmacao-3bc51-ation-password-do-not-match/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/repair_runs/qwen25coder_repair_20260728_01/qwen2-5-coder-7b/qwen_new_20/baseline/suite_cadastro_confirmacao_senha/suite_cadastro_confirmacao_senha.spec.ts",
+                        "column": 16,
+                        "line": 22
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "51f27eb1d4e883d20ddc-a03c4b048f1f04919e08",
+              "file": "suite_cadastro_confirmacao_senha.spec.ts",
+              "line": 4,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-07-28T15:10:52.904Z",
+    "duration": 14365.489000000001,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

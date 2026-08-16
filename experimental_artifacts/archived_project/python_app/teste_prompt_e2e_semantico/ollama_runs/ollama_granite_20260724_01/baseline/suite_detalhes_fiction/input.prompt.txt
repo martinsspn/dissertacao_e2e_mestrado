@@ -1,0 +1,1 @@
+Consulting product details: The user searches for the product Fiction in the Search store field. The user opens the product Fiction in the search results. The system displays the details page with the name Fiction. The system presents the available price information for the product.

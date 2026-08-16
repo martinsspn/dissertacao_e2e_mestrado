@@ -1,0 +1,3 @@
+Listing tests:
+  fluxo_computadores_desktops.spec.ts:4:7 › Digital Downloads Category › should access Digital downloads, view items, and confirm page visibility
+Total: 1 test in 1 file

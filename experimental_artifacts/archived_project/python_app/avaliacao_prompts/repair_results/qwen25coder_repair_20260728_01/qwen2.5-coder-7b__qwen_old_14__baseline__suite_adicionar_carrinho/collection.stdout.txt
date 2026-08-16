@@ -1,0 +1,3 @@
+Listing tests:
+  suite_adicionar_carrinho.spec.ts:4:7 › Adding a product to the cart › should add Blue Jeans to the cart and display it in the shopping cart
+Total: 1 test in 1 file

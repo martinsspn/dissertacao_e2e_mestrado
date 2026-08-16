@@ -1,0 +1,90 @@
+Condição experimental: structured_context
+
+ESPECIFICAÇÃO ORIGINAL:
+Removal of all products from the cart: The user adds the product Blue Jeans to the cart to prepare the scenario. The user accesses Shopping cart. The user marks Blue Jeans for removal. The user selects Update shopping cart. The system displays the empty cart.
+
+
+ARQUIVO GERADO QUE DEVE SER REPARADO:
+```typescript
+import { test, expect } from '@playwright/test';
+
+test.describe('Suite Limpar Carrinho', () => {
+  test('should clear the cart after removing an item', async ({ page }) => {
+    // Etapa 1: Adicionar o produto Blue Jeans ao carrinho
+    await page.goto('https://demowebshop.tricentis.com/blue-jeans');
+    await page.locator("[id=\"add-to-cart-button-36\"]").click();
+
+    // Etapa 2: Acessar Carrinho de Compras
+    await page.getByRole("link", { name: "Shopping cart", exact: true }).click();
+    await expect(page).toHaveURL('https://demowebshop.tricentis.com/cart');
+
+    // Etapa 3: Marcar Blue Jeans para remoção
+    await page.locator("[name=\"removefromcart_1\"]").click();
+
+    // Etapa 4: Selecionar Atualizar Carrinho
+    await page.getByRole("button", { name: "Update shopping cart" }).click();
+
+    // Etapa 5: Sistema exibe carrinho vazio
+    await expect(page.locator("[class=\"empty-cart\"]")).toBeVisible();
+  });
+});
+
+```
+
+EVIDÊNCIA DA FALHA DE EXECUÇÃO:
+TimeoutError: locator.click: Timeout 10000ms exceeded.
+Call log:
+  - waiting for locator('[name="removefromcart_1"]')
+
+DIAGNÓSTICO DA REVISÃO:
+Preparação e navegação estão corretas; nome de remoção e região de carrinho vazio foram inventados.
+
+PROMPT ESTRUTURADO ORIGINAL DESTA CONDIÇÃO:
+# Geracao de teste E2E Playwright
+
+Gere um teste TypeScript Playwright fiel a especificacao.
+
+Regras:
+- Retorne um unico bloco de codigo `typescript`, sem texto fora dele; o conteudo interno deve ser um arquivo Playwright `.spec.ts` completo e executavel por `npx playwright test`.
+- Importe `test` e `expect` de `@playwright/test`.
+- Inicie com `await page.goto('https://demowebshop.tricentis.com/')`; use URLs literais tambem em `toHaveURL`, sem regex ou links Markdown.
+- Nao derive rotas do texto de links, produtos ou titulos. Use `toHaveURL` somente quando a URL exata estiver na base ou no contexto; sem URL observada, confirme a pagina por elementos visiveis.
+- Use locators Playwright legiveis e unicos no modo estrito; evite XPath, indices e `waitForTimeout`.
+- Cada valor `locator_playwright=...` e uma expressao TypeScript Playwright completa e executavel. Copie a expressao sem aspas adicionais e aplique a acao nela, por exemplo `await page.getByRole('button', { name: 'Search', exact: true }).click()` ou `await page.getByLabel('Email:', { exact: true }).fill(valor)`.
+- Nunca passe uma expressao `page.getBy*` ou `page.locator` como argumento de `page.click`, `page.fill` ou `page.selectOption`; chame `.click()`, `.fill()` ou `.selectOption()` diretamente no locator.
+- Nao use no codigo a notacao descritiva de `controle=...` nem invente engines como `role_name:`, `label:`, `id:`, `tag=` ou `text:`. Somente os valores de `locator_playwright=...` sao locators copiaveis.
+- Quando o contexto fornecer `locator_playwright`, preserve esse locator; nao o substitua por um locator generico baseado apenas em papel e nome.
+- Quando varios itens ou variantes compartilharem a mesma acao, relacione o controle escolhido ao nome visivel do item antes do clique e reutilize esse nome nas verificacoes posteriores; nao trate o titulo da pagina agrupadora como nome do item sem confirmar essa igualdade. Se o nome exato nao puder ser observado, verifique apenas a propriedade explicitada pela especificacao, sem inventar um rotulo.
+- Inclua assercoes observaveis que comprovem o resultado esperado.
+- O contexto é apenas um guia: combine-o com a especificacao e sua experiencia para navegar, localizar elementos e executar as acoes.
+- Caso seja possível acessar a aplicação, entre nela e interaja validando o fluxo e os resultados e utilizando as informações obtidas nessa interação em conjunto do contexto e a especificacao e seu conhecimento de playwright para fazer o teste ts; caso contrario, use a especificacao, o contexto observado e seu conhecimento de Playwright sem afirmar que executou acoes.
+
+Especificacao `Suite Limpar Carrinho` em etapas:
+1. The user adds the product Blue Jeans to the cart to prepare the scenario.
+2. The user accesses Shopping cart.
+3. The user marks Blue Jeans for removal.
+4. The user selects Update shopping cart.
+5. The system displays the empty cart.
+
+Contexto estruturado por etapa:
+Etapa 1 (R1):
+- pagina=https://demowebshop.tricentis.com/blue-jeans
+- controle=tag=input, id=add-to-cart-button-36, input_type=button, value=Add to cart, form_action=/blue-jeans, form_method=POST
+- operacao=click
+- locator_playwright=page.locator("[id=\"add-to-cart-button-36\"]")
+Etapa 2 (R2):
+- pagina=https://demowebshop.tricentis.com/blue-jeans
+- controle=tag=a, text=Shopping cart, href=/cart
+- operacao=click
+- destino=https://demowebshop.tricentis.com/cart
+- locator_playwright=page.getByRole("link", { name: "Shopping cart", exact: true })
+- pagina_evidencia=https://demowebshop.tricentis.com/cart
+- evidencia_pagina=h1:Shopping cart
+Etapas sem contexto observado: 3, 4, 5.
+
+Use as informacoes observadas quando forem aplicaveis, sem limitar o teste a elas.
+`pagina_evidencia` nao comprova uma transicao ate a pagina.
+Sem contexto, siga a especificacao e interaja normalmente com a pagina; nao trate inferencias como fatos observados.
+
+
+Faça uma única tentativa de reparo. Mantenha todas as verificações exigidas e devolva o arquivo TypeScript completo.

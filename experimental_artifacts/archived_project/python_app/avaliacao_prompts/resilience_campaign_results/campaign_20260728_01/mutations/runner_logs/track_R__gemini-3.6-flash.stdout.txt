@@ -1,0 +1,2 @@
+[avaliar-resiliencia] JSON: /home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/mutations/track_R/gemini-3.6-flash/resilience_results.json
+[avaliar-resiliencia] Markdown: /home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/mutations/track_R/gemini-3.6-flash/resilience_results.md

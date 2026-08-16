@@ -1,0 +1,83 @@
+$ docker compose run --rm crawljax_java
+
+ Container neo4j_graph  Running
+Iniciando exploração no alvo: https://demowebshop.tricentis.com/
+Aguardando Selenium ficar pronto em: http://selenium_chrome:4444/wd/hub/status | http://selenium_chrome:4444/status
+Selenium pronto para receber sessões WebDriver.
+Perfil de exploracao -> depth=8, states=400, runtime(min)=45, waitReload(ms)=3000, waitEvent(ms)=2200, clickOnce=true, randomOrder=false
+Manifesto da exploracao -> /app/output/crawl_run_manifest.json
+21:23:22.583 [main] INFO  com.crawljax.core.plugin.Plugins - Loaded br.ufrn.mestrado.plugin.SemanticExportPlugin@5b444398 as a OnNewStatePlugin
+21:23:22.587 [main] INFO  com.crawljax.core.plugin.Plugins - Loaded br.ufrn.mestrado.plugin.SemanticExportPlugin@5b444398 as a PreStateCrawlingPlugin
+21:23:22.587 [main] INFO  com.crawljax.core.plugin.Plugins - Loaded br.ufrn.mestrado.plugin.SemanticExportPlugin@5b444398 as a PostCrawlingPlugin
+21:23:31.911 [main] INFO  c.c.core.UnfiredFragmentCandidates - There are 1 states with unfired actions: [0]
+21:23:31.914 [main] INFO  c.c.c.state.InMemoryStateFlowGraph - Number of states in the graph is now 1
+21:23:31.936 [pool-1-thread-2] INFO  com.crawljax.core.Crawler - backtrack status: true, reached NearDuplicate : -1 
+21:23:31.940 [pool-1-thread-2] INFO  com.crawljax.core.Crawler -  Event xpath /HTML[1]/BODY[1]/DIV[4]/DIV[1]/DIV[1]/DIV[1]/A[1]
+21:23:31.995 [pool-1-thread-2] INFO  com.crawljax.core.Crawler - Changing related inputs for 1 with 0  to 0 
+21:23:32.220 [pool-1-thread-2] INFO  c.c.core.UnfiredFragmentCandidates - Changing related inputs to worked inputs 0 for 1
+21:23:32.220 [pool-1-thread-2] INFO  c.c.core.UnfiredFragmentCandidates - event 1 - Before 0
+21:23:32.220 [pool-1-thread-2] INFO  c.c.core.UnfiredFragmentCandidates - event 1 - After 0
+21:23:32.220 [pool-1-thread-2] INFO  c.c.core.UnfiredFragmentCandidates - input for 1, 0
+21:23:35.902 [pool-1-thread-2] INFO  c.c.c.state.InMemoryStateFlowGraph - Number of states in the graph is now 2
+21:23:35.906 [pool-1-thread-2] INFO  c.crawljax.core.state.StateMachine - State state1 added to the StateMachine.
+21:23:36.067 [pool-1-thread-2] INFO  com.crawljax.core.Crawler - New DOM is a new state! crawl depth is now 1
+21:23:36.067 [pool-1-thread-2] INFO  com.crawljax.core.Crawler - Parsing DOM of state state1 for candidate elements
+21:23:36.107 [pool-1-thread-2] INFO  c.c.core.UnfiredFragmentCandidates - There are 1 states with unfired actions: [1]
+21:23:36.118 [pool-1-thread-2] INFO  com.crawljax.core.Crawler -  Event xpath /HTML[1]/BODY[1]/DIV[4]/DIV[1]/DIV[4]/DIV[3]/DIV[1]/DIV[1]/DIV[1]/DIV[2]/A[1]
+21:23:36.165 [pool-1-thread-2] INFO  com.crawljax.core.Crawler - Changing related inputs for 2 with 0  to 0 
+21:23:36.281 [pool-1-thread-2] INFO  c.c.core.UnfiredFragmentCandidates - Changing related inputs to worked inputs 0 for 2
+21:23:36.281 [pool-1-thread-2] INFO  c.c.core.UnfiredFragmentCandidates - event 2 - Before 0
+21:23:36.281 [pool-1-thread-2] INFO  c.c.core.UnfiredFragmentCandidates - event 2 - After 0
+21:23:36.281 [pool-1-thread-2] INFO  c.c.core.UnfiredFragmentCandidates - input for 2, 0
+21:23:41.761 [pool-1-thread-2] INFO  c.c.c.state.InMemoryStateFlowGraph - Number of states in the graph is now 3
+21:23:41.761 [pool-1-thread-2] INFO  c.crawljax.core.state.StateMachine - State state2 added to the StateMachine.
+21:23:41.924 [pool-1-thread-2] INFO  com.crawljax.core.Crawler - New DOM is a new state! crawl depth is now 2
+21:23:41.924 [pool-1-thread-2] INFO  com.crawljax.core.Crawler - Parsing DOM of state state2 for candidate elements
+21:23:41.963 [pool-1-thread-2] INFO  com.crawljax.core.Crawler - Resetting the crawler and Going to state index
+21:23:41.975 [pool-1-thread-2] INFO  com.crawljax.core.CrawlSession - Adding CrawlPath to session !!
+21:23:41.975 [pool-1-thread-2] INFO  com.crawljax.core.Crawler - BT-state0:-1index_1_state1state1_2_state2
+21:23:44.781 [pool-1-thread-2] INFO  c.c.c.state.InMemoryStateFlowGraph - Number of states in the graph is now 4
+21:23:44.909 [pool-1-thread-2] INFO  com.crawljax.core.Crawler - Parsing DOM of state state3 for candidate elements
+21:23:44.921 [pool-1-thread-2] INFO  com.crawljax.core.Crawler - Added a reload edge from state2 to state3
+21:23:44.921 [pool-1-thread-2] INFO  com.crawljax.core.Crawler - Initial state not the same as current state : Getting shortest path from current state
+21:23:44.928 [pool-1-thread-2] INFO  com.crawljax.core.Crawler - index no path from state3
+21:23:44.930 [pool-1-thread-2] INFO  com.crawljax.core.Crawler - Not a valid path anymore index: index
+21:23:44.930 [pool-1-thread-2] INFO  com.crawljax.core.Crawler - Tried to follow 
+21:23:44.931 [pool-1-thread-2] INFO  com.crawljax.core.Crawler - 
+21:23:44.931 [pool-1-thread-2] INFO  com.crawljax.core.Crawler - Saving failed backtracking path to 0
+21:23:44.931 [pool-1-thread-2] INFO  com.crawljax.core.Crawler - backtrack status: false, reached NearDuplicate : -1 
+21:23:47.717 [pool-1-thread-2] INFO  com.crawljax.core.Crawler - index has changed to: state3
+21:23:47.718 [pool-1-thread-2] INFO  com.crawljax.core.Crawler - Added a reload edge from state3 to state3
+21:23:47.719 [pool-1-thread-2] INFO  com.crawljax.core.Crawler - index no path from state3
+21:23:47.719 [pool-1-thread-2] INFO  com.crawljax.core.Crawler - state unreachable: Removing from candidate actions index
+21:23:47.719 [pool-1-thread-2] INFO  c.c.core.UnfiredFragmentCandidates - Placing purged actions in unreachable cache for index
+21:23:47.719 [pool-1-thread-2] INFO  com.crawljax.core.Crawler - Resetting the crawler and Going to state state1
+21:23:50.517 [pool-1-thread-2] INFO  com.crawljax.core.Crawler - index has changed to: state3
+21:23:50.519 [pool-1-thread-2] INFO  com.crawljax.core.Crawler - Did not add reload edge from state3 to state3
+21:23:50.519 [pool-1-thread-2] INFO  com.crawljax.core.Crawler - Initial state not the same as current state : Getting shortest path from current state
+21:23:50.519 [pool-1-thread-2] INFO  com.crawljax.core.Crawler - state1 no path from state3
+21:23:50.520 [pool-1-thread-2] INFO  c.crawljax.core.state.StateMachine - Cannot go to state: 'state1' from: 'state3'
+21:23:50.520 [pool-1-thread-2] INFO  com.crawljax.core.Crawler - Not a valid path anymore index: state1
+21:23:50.520 [pool-1-thread-2] INFO  com.crawljax.core.Crawler - Tried to follow 
+21:23:50.520 [pool-1-thread-2] INFO  com.crawljax.core.Crawler - index_1_state1
+21:23:50.520 [pool-1-thread-2] INFO  com.crawljax.core.Crawler - Saving failed backtracking path to 1
+21:23:50.520 [pool-1-thread-2] INFO  com.crawljax.core.Crawler - backtrack status: false, reached NearDuplicate : -1 
+21:23:53.285 [pool-1-thread-2] INFO  com.crawljax.core.Crawler - index has changed to: state3
+21:23:53.286 [pool-1-thread-2] INFO  com.crawljax.core.Crawler - Did not add reload edge from state3 to state3
+21:23:53.286 [pool-1-thread-2] INFO  com.crawljax.core.Crawler - state1 no path from state3
+21:23:53.286 [pool-1-thread-2] INFO  com.crawljax.core.Crawler - state unreachable: Removing from candidate actions state1
+21:23:53.286 [pool-1-thread-2] INFO  c.c.core.UnfiredFragmentCandidates - Placing purged actions in unreachable cache for state1
+21:23:53.286 [pool-1-thread-2] INFO  com.crawljax.core.Crawler - Crawler thread interrupted. Flushing crawlpaths
+21:23:53.286 [pool-1-thread-2] INFO  com.crawljax.core.Crawler - BT-state1:failed:-1
+21:23:53.286 [pool-1-thread-2] INFO  com.crawljax.core.Crawler - Adding current crawlpath
+21:23:53.286 [main] INFO  com.crawljax.core.CrawlController - Received shutdown notice. Reason is Exhausted
+21:23:53.320 [pool-1-thread-2] ERROR c.c.f.FragmentationPlugin - Error exporting Crawlpaths
+21:23:53.320 [pool-1-thread-2] INFO  com.crawljax.core.Crawler - Closing browser
+21:23:53.320 [pool-1-thread-2] INFO  c.c.b.WebDriverBackedEmbeddedBrowser - Closing the browser...
+Exploração finalizada. Motivo: Exhausted
+Iniciando persistência dos estados e transições no Neo4j...
+21:23:53.340 [ForkJoinPool.commonPool-worker-1] WARN  i.g.bonigarcia.wdm.WebDriverManager - WebDriver object(s) not available
+✓ Nós consolidados: 1 URLs únicas de 4 estados
+✓ Controles estruturados: 80
+Persistência concluída no Neo4j. Páginas: 1 | Controles: 80 | Transições: 4
+21:23:54.913 [main] INFO  com.crawljax.core.CrawlController - Shutdown process complete

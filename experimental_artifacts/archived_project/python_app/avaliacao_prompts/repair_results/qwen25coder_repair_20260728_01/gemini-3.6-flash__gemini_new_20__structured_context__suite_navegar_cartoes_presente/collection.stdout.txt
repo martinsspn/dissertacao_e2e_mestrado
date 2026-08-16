@@ -1,0 +1,3 @@
+Listing tests:
+  suite_navegar_cartoes_presente.spec.ts:4:7 › Suite Navegar Cartoes Presente › Navegar para a categoria de Cartões de Presente e verificar produtos
+Total: 1 test in 1 file

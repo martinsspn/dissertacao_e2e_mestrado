@@ -1,0 +1,123 @@
+{
+  "schema_version": 1,
+  "mutation_plan": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_artifacts/id_class_exploratory_plan.json",
+  "mutation_plan_sha256": "eb8b218eb4610c65ff6e57943d2b3af64e71d11aed779640c90fc6b050fba0c8",
+  "fixture": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/playwright_resilience/fixture.ts",
+  "fixture_sha256": "87a255cb75994e290798ef6ae305c15a57a08579b58ed26fe23bebd8fc7a057d",
+  "transformation": "only_replace_import_source_from_@playwright/test_to_frozen_fixture",
+  "condition_key": {
+    "A": "baseline",
+    "B": "structured_context"
+  },
+  "pairs": [
+    {
+      "scenario_id": "suite_adicionar_carrinho",
+      "baseline_original": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline/teste_adicionar_carrinho_baseline.spec.ts",
+      "structured_original": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context/teste_adicionar_carrinho_estruturado.spec.ts",
+      "baseline_sha256": "934b9ac36baca8ea5ac2a1f0dcf9bb042c7afef700a202fccdf178c61501460a",
+      "structured_sha256": "581d507c7659ab93ec7b4394c6888e0a7a6d17c42012dce7068aa26f35117932",
+      "baseline_derived": "0fbcdc3c13fea2f39e3cf4795365cc6e63e05a57a1fd19481cae004bf5a9d2ea",
+      "structured_derived": "ef119d25db7d5dc08f5bacac03dc6dd5297caa2e1120c6e8f0d0ca5b9c3f7ef3"
+    },
+    {
+      "scenario_id": "suite_adicionar_wishlist",
+      "baseline_original": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline/teste_wishlist_baseline.spec.ts",
+      "structured_original": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context/teste_wishlist_estruturado.spec.ts",
+      "baseline_sha256": "038be50a9a04311ef22f6391c3323d24435f4b60e339230acb70d9b858fb194f",
+      "structured_sha256": "14b84875d9083ed299cc8d2976a917c777ed7601eb683f45e48e86185640f15e",
+      "baseline_derived": "2edb8287dc658cf1cf91930fb2659e788f882dd513f459b47002bd78c75c33c3",
+      "structured_derived": "5159bc2e44903b6fc243119bdd64df0099ae4dade4b67f22ada54c114ef09e46"
+    },
+    {
+      "scenario_id": "suite_busca_blue_jeans",
+      "baseline_original": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline/teste_buscar_blue_jeans_baseline.spec.ts",
+      "structured_original": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context/teste_buscar_blue_jeans_estruturado.spec.ts",
+      "baseline_sha256": "17ec6c09f2ce08cb07ab469e30f5bac03d5cabc4dcbcddb2eaf96d5a79551d1a",
+      "structured_sha256": "e10cc3926ee28b9bd0741c5b3cb62c91de1b698c50b45462620d9fd92fac9dd0",
+      "baseline_derived": "59cf6ed0dc420e48f269ac0f0430917aeddd9c4f1de44d6973a1f832f9ab3f71",
+      "structured_derived": "94227144624913dffedfbc4b7875b7f5a64699ee887f98e6c486389da2489e90"
+    },
+    {
+      "scenario_id": "suite_checkout_blue_jeans",
+      "baseline_original": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline/teste_checkout_blue_jeans_baseline.spec.ts",
+      "structured_original": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context/teste_checkout_blue_jeans_estruturado.spec.ts",
+      "baseline_sha256": "ce5ed4ed772f595e5206699a0c1fb2ead4ebae710c83e3e4ae7f04a949e8b18a",
+      "structured_sha256": "1ffbf2e77da80f50d1078a6c84811e1b1b901ed6746970f614e3c655e8f6ade1",
+      "baseline_derived": "21ed0cbfa3091bd8ca7bf0ffb762326c4e3a25871fc9a52306583dfd6486fc18",
+      "structured_derived": "7deef83886aa4a7ecde5d78d05f27be7cb6cbb987a351fbc33c68e65d3662f7d"
+    },
+    {
+      "scenario_id": "suite_configurar_desktop",
+      "baseline_original": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline/teste_configurar_desktop_baseline.spec.ts",
+      "structured_original": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context/teste_configurar_desktop_estruturado.spec.ts",
+      "baseline_sha256": "94fb75246e0ed040d041eb691f8ccfc4b2bcc3851d7bfa98eb458c148193a4f1",
+      "structured_sha256": "03c6490b2e134ae8b8159552b3ca7a576dc254093c3991025d10f725418517e1",
+      "baseline_derived": "e7134ed93723a1a3935e52c376ee40a393215da9558bc776849d067f1da00529",
+      "structured_derived": "577a85c26954c4c437caf497cbf4cfb8dfe384ce19089e369b62090b54ca7e09"
+    },
+    {
+      "scenario_id": "suite_detalhes_fiction",
+      "baseline_original": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline/teste_detalhes_fiction_baseline.spec.ts",
+      "structured_original": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context/teste_detalhes_fiction_estruturado.spec.ts",
+      "baseline_sha256": "e37acf41a8f7ef479386f4a0883ab6b3d67d2bf89cc052c729d80689b93084b9",
+      "structured_sha256": "90733e4dbe579605b96c2a75e08af62646816b9dd718c0e1cf1a63d10f49f994",
+      "baseline_derived": "a9ea1de5a7aaafb295e482d6db618933ac7d2dbb23688d7068cec86471fae0b0",
+      "structured_derived": "6a084931eaa18b81421b61f3136ddbb2a82b12c321e296050586dec424ab061c"
+    },
+    {
+      "scenario_id": "suite_limpar_carrinho",
+      "baseline_original": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline/teste_limpar_carrinho_baseline.spec.ts",
+      "structured_original": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context/teste_limpar_carrinho_estruturado.spec.ts",
+      "baseline_sha256": "3f3281654537451fdd86ff7a143a5625f0b1e69d86caf63277105e64defad857",
+      "structured_sha256": "e3c5a47e651f7e646804a66338588ef3fdf0d66b3835ee6fc1715ec01746f435",
+      "baseline_derived": "9c877d42ba739d234cff14704076eb4ffdf4fa2cc73abdde8d63096c4da504ab",
+      "structured_derived": "028df7999623462b44e8be2ea3bcae18d826cbe27fb66bf8c2cdbef5be9da7dd"
+    },
+    {
+      "scenario_id": "suite_limpar_wishlist",
+      "baseline_original": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline/teste_limpar_wishlist_baseline.spec.ts",
+      "structured_original": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context/teste_limpar_wishlist_estruturado.spec.ts",
+      "baseline_sha256": "078a4829ad4cf31bd338b356b029f350aceee16c225e96929d2e22e021383d14",
+      "structured_sha256": "38146cb384281eb57119190b59b362bdaa0d37a76bb5a7d8acf7b33d7cc1eee9",
+      "baseline_derived": "7ecb33bf434533952a6557211b0aeda91feb1a0c7fb76311bf8c6d2c463c7d66",
+      "structured_derived": "19260c0e5f65417090a14e4a9280ab0c6af35233206f0ed6a541edbe98d38339"
+    },
+    {
+      "scenario_id": "suite_login_invalido",
+      "baseline_original": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline/teste_login_invalido_baseline.spec.ts",
+      "structured_original": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context/teste_login_invalido_estruturado.spec.ts",
+      "baseline_sha256": "7c9a3f0564c97e1872f7c38905caf9f6bf998e47f7acef900d4ee9158b082304",
+      "structured_sha256": "3c7900621e6808f93c27263b4a4c0266af045336462b5479ce67f98f1b9bd627",
+      "baseline_derived": "75beb0f4f971f5ca53d2c6a599bd76c931d8ff02146fe09cc1f8648cd3d2b47c",
+      "structured_derived": "17a23b6dc0c30e1c4675ee0c6df5570542a8c81a26b6c66803f1fe52185ebad1"
+    },
+    {
+      "scenario_id": "suite_login_valido",
+      "baseline_original": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline/teste_login_valido_baseline.spec.ts",
+      "structured_original": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context/teste_login_valido_estruturado.spec.ts",
+      "baseline_sha256": "1e47ef9724fb3ebc42dd0ee577ad69ff9d39600ffc7f69f0ed76f179240bb11a",
+      "structured_sha256": "c52624d5408e36154f5d87b09c661c7e3841732f4af3a38fb485819471748e37",
+      "baseline_derived": "503665385882a775c2b156c4253d493157cc40a59dfd5aab41aa54cde4aa3e00",
+      "structured_derived": "48b45d18354fcfdbb43f67a8fab4579a7eba97cdc451a26bf8bb115e1e46aca5"
+    },
+    {
+      "scenario_id": "suite_logout",
+      "baseline_original": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline/teste_logout_baseline.spec.ts",
+      "structured_original": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context/teste_logout_estruturado.spec.ts",
+      "baseline_sha256": "362afff3a8bb7f7e984b5b4e2db52c72f20fc008c7f43371d4aeaf85dc1e6a7a",
+      "structured_sha256": "500fce99bd5b650d31df277f05881c8d6fa74cdb03448630f1ecc143e6b75c85",
+      "baseline_derived": "bf4ef274b4b51bbb15732467ae18b6a6d8710147e549d62dc648a5c2411e8eeb",
+      "structured_derived": "0d090278de68b6809446dbdac0b5b1e6a3159817432e2cd8bb1c8eafde8d6307"
+    },
+    {
+      "scenario_id": "suite_registro_usuario",
+      "baseline_original": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline/teste_registro_usuario_baseline.spec.ts",
+      "structured_original": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context/teste_registro_usuario_estruturado.spec.ts",
+      "baseline_sha256": "f8394a9192a38e64ac44f79ecb97b1f83ea2a63a8af9149a80e5f5dabfba2800",
+      "structured_sha256": "4da522dca6592c3085057375527ecaf0becb03d6cd530e4a50c8aedc131021c9",
+      "baseline_derived": "bc81bdb704c0f9c3f399cecd2f512104c5b5204b9971a9a294382ce57dc7fc0d",
+      "structured_derived": "caf1349f58f058f23b0e11aa24b61d4d8c56b25985bcfaadb165dbf5b9ff8219"
+    }
+  ],
+  "execution_manifest_sha256": "8409a00f726df7fb326a5dfc5f84ebeabc19f81d83f55c6acac8cd893c0d56e0"
+}

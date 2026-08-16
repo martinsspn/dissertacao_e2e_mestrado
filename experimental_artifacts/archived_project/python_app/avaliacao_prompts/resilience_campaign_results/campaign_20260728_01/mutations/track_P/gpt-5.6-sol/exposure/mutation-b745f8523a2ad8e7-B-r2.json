@@ -1,0 +1,144 @@
+{
+  "config": {
+    "argv": [
+      "/usr/bin/node",
+      "/home/martinsspn/dissertacao_e2e_semantico/node_modules/.bin/playwright",
+      "test",
+      "suite_detalhes_fiction.spec.ts",
+      "--config=/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaigns/campaign_20260728_01/runtime/playwright/playwright.config.ts",
+      "--reporter=json",
+      "--workers=1",
+      "--retries=0",
+      "--trace=on",
+      "--output=/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/mutations/track_P/gpt-5.6-sol/exposure/mutation-b745f8523a2ad8e7-B-r2.artifacts"
+    ],
+    "configFile": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaigns/campaign_20260728_01/runtime/playwright/playwright.config.ts",
+    "rootDir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaigns/campaign_20260728_01/prepared/track_P/gpt-5.6-sol/B",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/mutations/track_P/gpt-5.6-sol/exposure/mutation-b745f8523a2ad8e7-B-r2.artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaigns/campaign_20260728_01/prepared/track_P/gpt-5.6-sol/B",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 20000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.61.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "suite_detalhes_fiction.spec.ts",
+      "file": "suite_detalhes_fiction.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Suite Detalhes Fiction",
+          "file": "suite_detalhes_fiction.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "exibe os detalhes e o preço disponível do produto Fiction",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 20000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 6006,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-28T19:33:15.730Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/mutations/track_P/gpt-5.6-sol/exposure/mutation-b745f8523a2ad8e7-B-r2.artifacts/suite_detalhes_fiction-Sui-4236f-sponível-do-produto-Fiction/test-finished-1.png"
+                        },
+                        {
+                          "name": "resilience-mutation-events",
+                          "contentType": "application/json",
+                          "body": "WwogIHsKICAgICJtdXRhdGlvbklkIjogIm11dGF0aW9uLWI3NDVmODUyM2EyYWQ4ZTciLAogICAgInRhcmdldElkIjogInRhcmdldC02ZDM5MzY0MTk2YWU1NTQ1IiwKICAgICJ1cmwiOiAiaHR0cHM6Ly9kZW1vd2Vic2hvcC50cmljZW50aXMuY29tLyIsCiAgICAic3RhdHVzIjogIm1hcmtlZCIsCiAgICAiZGV0YWlsIjogIiIKICB9LAogIHsKICAgICJtdXRhdGlvbklkIjogIm11dGF0aW9uLWI3NDVmODUyM2EyYWQ4ZTciLAogICAgInRhcmdldElkIjogInRhcmdldC02ZDM5MzY0MTk2YWU1NTQ1IiwKICAgICJ1cmwiOiAiaHR0cHM6Ly9kZW1vd2Vic2hvcC50cmljZW50aXMuY29tLyIsCiAgICAic3RhdHVzIjogImludGVyYWN0ZWQiLAogICAgImRldGFpbCI6ICJpbnB1dCIKICB9LAogIHsKICAgICJtdXRhdGlvbklkIjogIm11dGF0aW9uLWI3NDVmODUyM2EyYWQ4ZTciLAogICAgInRhcmdldElkIjogInRhcmdldC02ZDM5MzY0MTk2YWU1NTQ1IiwKICAgICJ1cmwiOiAiaHR0cHM6Ly9kZW1vd2Vic2hvcC50cmljZW50aXMuY29tLyIsCiAgICAic3RhdHVzIjogImludGVyYWN0ZWQiLAogICAgImRldGFpbCI6ICJjaGFuZ2UiCiAgfQpd"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/mutations/track_P/gpt-5.6-sol/exposure/mutation-b745f8523a2ad8e7-B-r2.artifacts/suite_detalhes_fiction-Sui-4236f-sponível-do-produto-Fiction/trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "179492ad1a70311acabe-04d82351cf78d08d1901",
+              "file": "suite_detalhes_fiction.spec.ts",
+              "line": 4,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-07-28T19:33:14.710Z",
+    "duration": 7744.421,
+    "expected": 1,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

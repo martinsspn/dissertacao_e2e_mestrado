@@ -1,0 +1,154 @@
+{
+  "config": {
+    "argv": [
+      "/usr/bin/node",
+      "/home/martinsspn/dissertacao_e2e_semantico/node_modules/.bin/playwright",
+      "test",
+      "suite_registro_usuario.spec.ts",
+      "--config=/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/playwright.config.ts",
+      "--reporter=json"
+    ],
+    "configFile": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/playwright.config.ts",
+    "rootDir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/repair_runs/qwen25coder_repair_20260728_01/qwen2-5-coder-7b/qwen_old_14/structured_context/suite_registro_usuario",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/tmp/avaliacao-prompts-playwright",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/repair_runs/qwen25coder_repair_20260728_01/qwen2-5-coder-7b/qwen_old_14/structured_context/suite_registro_usuario",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 20000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.61.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "suite_registro_usuario.spec.ts",
+      "file": "suite_registro_usuario.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Suite Registro Usuario",
+          "file": "suite_registro_usuario.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should register a user and continue shopping",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 20000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 5778,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected: \u001b[32m\"https://demowebshop.tricentis.com/\u001b[7mregisterresult\u001b[27m\"\u001b[39m\nReceived: \u001b[31m\"https://demowebshop.tricentis.com/\"\u001b[39m\n\nCall log:\n\u001b[2m  - Expect \"toHaveURL\" with timeout 7000ms\u001b[22m\n\u001b[2m    - unexpected value \"https://demowebshop.tricentis.com/registerresult/1\"\u001b[22m\n\u001b[2m    - waiting for navigation to finish...\u001b[22m\n\u001b[2m    - navigated to \"https://demowebshop.tricentis.com/\"\u001b[22m\n\u001b[2m    - unexpected value \"https://demowebshop.tricentis.com/\"\u001b[22m\n",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected: \u001b[32m\"https://demowebshop.tricentis.com/\u001b[7mregisterresult\u001b[27m\"\u001b[39m\nReceived: \u001b[31m\"https://demowebshop.tricentis.com/\"\u001b[39m\n\nCall log:\n\u001b[2m  - Expect \"toHaveURL\" with timeout 7000ms\u001b[22m\n\u001b[2m    - unexpected value \"https://demowebshop.tricentis.com/registerresult/1\"\u001b[22m\n\u001b[2m    - waiting for navigation to finish...\u001b[22m\n\u001b[2m    - navigated to \"https://demowebshop.tricentis.com/\"\u001b[22m\n\u001b[2m    - unexpected value \"https://demowebshop.tricentis.com/\"\u001b[22m\n\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/repair_runs/qwen25coder_repair_20260728_01/qwen2-5-coder-7b/qwen_old_14/structured_context/suite_registro_usuario/suite_registro_usuario.spec.ts:32:18",
+                        "location": {
+                          "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/repair_runs/qwen25coder_repair_20260728_01/qwen2-5-coder-7b/qwen_old_14/structured_context/suite_registro_usuario/suite_registro_usuario.spec.ts",
+                          "column": 18,
+                          "line": 32
+                        },
+                        "snippet": "  30 |\n  31 |     // Etapa 7: Confirma que a registro foi concluído (presumindo uma mensagem de sucesso)\n> 32 |     expect(page).toHaveURL('https://demowebshop.tricentis.com/registerresult');\n     |                  ^\n  33 |     await expect(page.getByText(\"Your registration completed\")).toBeVisible();\n  34 |\n  35 |     // Etapa 8: Seleciona Continue e retorna à loja autenticada"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/repair_runs/qwen25coder_repair_20260728_01/qwen2-5-coder-7b/qwen_old_14/structured_context/suite_registro_usuario/suite_registro_usuario.spec.ts",
+                            "column": 18,
+                            "line": 32
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected: \u001b[32m\"https://demowebshop.tricentis.com/\u001b[7mregisterresult\u001b[27m\"\u001b[39m\nReceived: \u001b[31m\"https://demowebshop.tricentis.com/\"\u001b[39m\n\nCall log:\n\u001b[2m  - Expect \"toHaveURL\" with timeout 7000ms\u001b[22m\n\u001b[2m    - unexpected value \"https://demowebshop.tricentis.com/registerresult/1\"\u001b[22m\n\u001b[2m    - waiting for navigation to finish...\u001b[22m\n\u001b[2m    - navigated to \"https://demowebshop.tricentis.com/\"\u001b[22m\n\u001b[2m    - unexpected value \"https://demowebshop.tricentis.com/\"\u001b[22m\n\n\n  30 |\n  31 |     // Etapa 7: Confirma que a registro foi concluído (presumindo uma mensagem de sucesso)\n> 32 |     expect(page).toHaveURL('https://demowebshop.tricentis.com/registerresult');\n     |                  ^\n  33 |     await expect(page.getByText(\"Your registration completed\")).toBeVisible();\n  34 |\n  35 |     // Etapa 8: Seleciona Continue e retorna à loja autenticada\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/repair_runs/qwen25coder_repair_20260728_01/qwen2-5-coder-7b/qwen_old_14/structured_context/suite_registro_usuario/suite_registro_usuario.spec.ts:32:18"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-28T15:28:52.373Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/tmp/avaliacao-prompts-playwright/suite_registro_usuario-Sui-ef2d7--user-and-continue-shopping/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/repair_runs/qwen25coder_repair_20260728_01/qwen2-5-coder-7b/qwen_old_14/structured_context/suite_registro_usuario/suite_registro_usuario.spec.ts",
+                        "column": 18,
+                        "line": 32
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "ddea2ff8902a25e2f4d0-4f993e553770d3055d3e",
+              "file": "suite_registro_usuario.spec.ts",
+              "line": 4,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-07-28T15:28:51.347Z",
+    "duration": 7285.705,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

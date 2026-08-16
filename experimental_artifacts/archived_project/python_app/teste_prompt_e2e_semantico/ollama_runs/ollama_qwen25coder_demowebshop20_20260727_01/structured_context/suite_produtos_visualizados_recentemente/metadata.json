@@ -1,0 +1,23 @@
+{
+  "model": "qwen2.5-coder:7b",
+  "created_at": "2026-07-27T18:25:11.6053018Z",
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 23375654000,
+  "load_duration": 375970200,
+  "prompt_eval_count": 1113,
+  "prompt_eval_duration": 5730095000,
+  "eval_count": 232,
+  "eval_duration": 17031369999,
+  "condition": "structured_context",
+  "scenario": "suite_produtos_visualizados_recentemente",
+  "model_requested": "qwen2.5-coder:7b",
+  "seed": 20260724,
+  "temperature": 0,
+  "num_ctx": 8192,
+  "num_predict": 2048,
+  "elapsed_seconds_client": 22.129,
+  "input_sha256": "3400eda1a4f7171fabf1552e6e09459bc3fdf65c68bb698a50bce71ac63a56bd",
+  "response_sha256": "de3928278570aefde5ded2fd9e3316540660a4765bd1810079cbb40062170481",
+  "stateless": true
+}

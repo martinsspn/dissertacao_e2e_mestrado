@@ -1,0 +1,3 @@
+Listing tests:
+  suite_exibir_quatro_livros.spec.ts:8:7 › Books Category Display Control › displays no more than four product items when 4 is selected in the Display control
+Total: 1 test in 1 file

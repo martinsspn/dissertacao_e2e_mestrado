@@ -1,0 +1,3 @@
+Listing tests:
+  suite_registro_usuario.spec.ts:4:7 › Suite Registro Usuario › registra um novo usuario e retorna autenticado para a loja
+Total: 1 test in 1 file

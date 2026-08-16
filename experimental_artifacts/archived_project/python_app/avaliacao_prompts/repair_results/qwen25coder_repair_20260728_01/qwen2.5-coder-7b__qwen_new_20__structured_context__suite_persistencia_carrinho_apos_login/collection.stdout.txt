@@ -1,0 +1,3 @@
+Listing tests:
+  suite_persistencia_carrinho_apos_login.spec.ts:4:7 › Suite Persistencia Carrinho Apos Login › should persist cart items after login
+Total: 1 test in 1 file

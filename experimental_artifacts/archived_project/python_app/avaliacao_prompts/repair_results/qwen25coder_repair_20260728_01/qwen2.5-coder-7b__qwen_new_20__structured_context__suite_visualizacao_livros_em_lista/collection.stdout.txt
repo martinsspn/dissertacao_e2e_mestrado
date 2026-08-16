@@ -1,0 +1,3 @@
+Listing tests:
+  suite_visualizacao_livros_em_lista.spec.ts:4:7 › Suite Visualizacao Livros Em Lista › The user accesses the Books category and selects List view
+Total: 1 test in 1 file

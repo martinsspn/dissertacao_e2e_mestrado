@@ -1,0 +1,3 @@
+Listing tests:
+  suite_visualizacao_livros_em_lista.spec.ts:4:7 › Book Catalog View › user can switch Books category view from Grid to List
+Total: 1 test in 1 file

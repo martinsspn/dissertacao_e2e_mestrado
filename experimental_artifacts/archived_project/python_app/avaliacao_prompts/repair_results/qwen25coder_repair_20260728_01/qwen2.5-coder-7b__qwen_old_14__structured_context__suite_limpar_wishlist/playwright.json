@@ -1,0 +1,154 @@
+{
+  "config": {
+    "argv": [
+      "/usr/bin/node",
+      "/home/martinsspn/dissertacao_e2e_semantico/node_modules/.bin/playwright",
+      "test",
+      "suite_limpar_wishlist.spec.ts",
+      "--config=/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/playwright.config.ts",
+      "--reporter=json"
+    ],
+    "configFile": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/playwright.config.ts",
+    "rootDir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/repair_runs/qwen25coder_repair_20260728_01/qwen2-5-coder-7b/qwen_old_14/structured_context/suite_limpar_wishlist",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/tmp/avaliacao-prompts-playwright",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/repair_runs/qwen25coder_repair_20260728_01/qwen2-5-coder-7b/qwen_old_14/structured_context/suite_limpar_wishlist",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 20000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.61.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "suite_limpar_wishlist.spec.ts",
+      "file": "suite_limpar_wishlist.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Suite Limpar Wishlist",
+          "file": "suite_limpar_wishlist.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should clear the wishlist",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 20000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 13841,
+                      "error": {
+                        "message": "TimeoutError: locator.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('text=Camera').getByRole('button', { name: 'Remove from Wishlist' })\u001b[22m\n",
+                        "stack": "TimeoutError: locator.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('text=Camera').getByRole('button', { name: 'Remove from Wishlist' })\u001b[22m\n\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/repair_runs/qwen25coder_repair_20260728_01/qwen2-5-coder-7b/qwen_old_14/structured_context/suite_limpar_wishlist/suite_limpar_wishlist.spec.ts:15:93",
+                        "location": {
+                          "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/repair_runs/qwen25coder_repair_20260728_01/qwen2-5-coder-7b/qwen_old_14/structured_context/suite_limpar_wishlist/suite_limpar_wishlist.spec.ts",
+                          "column": 93,
+                          "line": 15
+                        },
+                        "snippet": "  13 |\n  14 |     // Step 4: The user marks the Camera product for removal\n> 15 |     await page.locator('text=Camera').getByRole(\"button\", { name: \"Remove from Wishlist\" }).click();\n     |                                                                                             ^\n  16 |\n  17 |     // Step 5: The user selects Update wishlist\n  18 |     await page.getByRole(\"button\", { name: \"Update Wishlist\" }).click();"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/repair_runs/qwen25coder_repair_20260728_01/qwen2-5-coder-7b/qwen_old_14/structured_context/suite_limpar_wishlist/suite_limpar_wishlist.spec.ts",
+                            "column": 93,
+                            "line": 15
+                          },
+                          "message": "TimeoutError: locator.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('text=Camera').getByRole('button', { name: 'Remove from Wishlist' })\u001b[22m\n\n\n  13 |\n  14 |     // Step 4: The user marks the Camera product for removal\n> 15 |     await page.locator('text=Camera').getByRole(\"button\", { name: \"Remove from Wishlist\" }).click();\n     |                                                                                             ^\n  16 |\n  17 |     // Step 5: The user selects Update wishlist\n  18 |     await page.getByRole(\"button\", { name: \"Update Wishlist\" }).click();\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/repair_runs/qwen25coder_repair_20260728_01/qwen2-5-coder-7b/qwen_old_14/structured_context/suite_limpar_wishlist/suite_limpar_wishlist.spec.ts:15:93"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-28T15:27:57.390Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/tmp/avaliacao-prompts-playwright/suite_limpar_wishlist-Suit-0cb72-t-should-clear-the-wishlist/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/repair_runs/qwen25coder_repair_20260728_01/qwen2-5-coder-7b/qwen_old_14/structured_context/suite_limpar_wishlist/suite_limpar_wishlist.spec.ts",
+                        "column": 93,
+                        "line": 15
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "d86af201ab92a631acc4-f089cdf07fe6695d1c68",
+              "file": "suite_limpar_wishlist.spec.ts",
+              "line": 9,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-07-28T15:27:56.377Z",
+    "duration": 15309.228000000001,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

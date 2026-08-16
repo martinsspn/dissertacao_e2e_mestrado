@@ -1,0 +1,154 @@
+{
+  "config": {
+    "argv": [
+      "/usr/bin/node",
+      "/home/martinsspn/dissertacao_e2e_semantico/node_modules/.bin/playwright",
+      "test",
+      "suite_limpar_wishlist.spec.ts",
+      "--config=/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/playwright.config.ts",
+      "--reporter=json"
+    ],
+    "configFile": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/playwright.config.ts",
+    "rootDir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/repair_runs/qwen25coder_repair_20260728_01/gpt-5-6-sol/gpt_original_12/structured_context/suite_limpar_wishlist",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/tmp/avaliacao-prompts-playwright",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/repair_runs/qwen25coder_repair_20260728_01/gpt-5-6-sol/gpt_original_12/structured_context/suite_limpar_wishlist",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 20000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.61.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "suite_limpar_wishlist.spec.ts",
+      "file": "suite_limpar_wishlist.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Suite Limpar Wishlist",
+          "file": "suite_limpar_wishlist.spec.ts",
+          "line": 6,
+          "column": 6,
+          "specs": [
+            {
+              "title": "remove o produto Camera e exibe a wishlist vazia",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 20000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 6207,
+                      "error": {
+                        "message": "Error: locator.click: Error: strict mode violation: getByRole('button', { name: 'Add to wishlist', exact: true }) resolved to 2 elements:\n    1) <input type=\"button\" data-productid=\"18\" value=\"Add to wishlist\" id=\"add-to-wishlist-button-18\" class=\"button-2 add-to-wishlist-button\" onclick=\"AjaxCart.addproducttocart_details('/addproducttocart/details/18/2', '#product-details-form');return false;\"/> aka locator('#add-to-wishlist-button-18')\n    2) <input type=\"button\" data-productid=\"19\" value=\"Add to wishlist\" id=\"add-to-wishlist-button-19\" class=\"button-2 add-to-wishlist-button\" onclick=\"AjaxCart.addproducttocart_details('/addproducttocart/details/19/2', '#product-details-form');return false;\"/> aka locator('#add-to-wishlist-button-19')\n\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'Add to wishlist', exact: true })\u001b[22m\n",
+                        "stack": "Error: locator.click: Error: strict mode violation: getByRole('button', { name: 'Add to wishlist', exact: true }) resolved to 2 elements:\n    1) <input type=\"button\" data-productid=\"18\" value=\"Add to wishlist\" id=\"add-to-wishlist-button-18\" class=\"button-2 add-to-wishlist-button\" onclick=\"AjaxCart.addproducttocart_details('/addproducttocart/details/18/2', '#product-details-form');return false;\"/> aka locator('#add-to-wishlist-button-18')\n    2) <input type=\"button\" data-productid=\"19\" value=\"Add to wishlist\" id=\"add-to-wishlist-button-19\" class=\"button-2 add-to-wishlist-button\" onclick=\"AjaxCart.addproducttocart_details('/addproducttocart/details/19/2', '#product-details-form');return false;\"/> aka locator('#add-to-wishlist-button-19')\n\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'Add to wishlist', exact: true })\u001b[22m\n\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/repair_runs/qwen25coder_repair_20260728_01/gpt-5-6-sol/gpt_original_12/structured_context/suite_limpar_wishlist/suite_limpar_wishlist.spec.ts:52:8",
+                        "location": {
+                          "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/repair_runs/qwen25coder_repair_20260728_01/gpt-5-6-sol/gpt_original_12/structured_context/suite_limpar_wishlist/suite_limpar_wishlist.spec.ts",
+                          "column": 8,
+                          "line": 52
+                        },
+                        "snippet": "  50 |     await page\n  51 |       .getByRole('button', { name: 'Add to wishlist', exact: true })\n> 52 |       .click();\n     |        ^\n  53 |\n  54 |     const notification = page.locator('#bar-notification');\n  55 |"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/repair_runs/qwen25coder_repair_20260728_01/gpt-5-6-sol/gpt_original_12/structured_context/suite_limpar_wishlist/suite_limpar_wishlist.spec.ts",
+                            "column": 8,
+                            "line": 52
+                          },
+                          "message": "Error: locator.click: Error: strict mode violation: getByRole('button', { name: 'Add to wishlist', exact: true }) resolved to 2 elements:\n    1) <input type=\"button\" data-productid=\"18\" value=\"Add to wishlist\" id=\"add-to-wishlist-button-18\" class=\"button-2 add-to-wishlist-button\" onclick=\"AjaxCart.addproducttocart_details('/addproducttocart/details/18/2', '#product-details-form');return false;\"/> aka locator('#add-to-wishlist-button-18')\n    2) <input type=\"button\" data-productid=\"19\" value=\"Add to wishlist\" id=\"add-to-wishlist-button-19\" class=\"button-2 add-to-wishlist-button\" onclick=\"AjaxCart.addproducttocart_details('/addproducttocart/details/19/2', '#product-details-form');return false;\"/> aka locator('#add-to-wishlist-button-19')\n\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'Add to wishlist', exact: true })\u001b[22m\n\n\n  50 |     await page\n  51 |       .getByRole('button', { name: 'Add to wishlist', exact: true })\n> 52 |       .click();\n     |        ^\n  53 |\n  54 |     const notification = page.locator('#bar-notification');\n  55 |\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/repair_runs/qwen25coder_repair_20260728_01/gpt-5-6-sol/gpt_original_12/structured_context/suite_limpar_wishlist/suite_limpar_wishlist.spec.ts:52:8"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-28T15:08:41.157Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/tmp/avaliacao-prompts-playwright/suite_limpar_wishlist-Suit-f5892-ra-e-exibe-a-wishlist-vazia/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/repair_runs/qwen25coder_repair_20260728_01/gpt-5-6-sol/gpt_original_12/structured_context/suite_limpar_wishlist/suite_limpar_wishlist.spec.ts",
+                        "column": 8,
+                        "line": 52
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "d86af201ab92a631acc4-57c299adad72ce71b05e",
+              "file": "suite_limpar_wishlist.spec.ts",
+              "line": 7,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-07-28T15:08:36.673Z",
+    "duration": 7699.227000000001,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

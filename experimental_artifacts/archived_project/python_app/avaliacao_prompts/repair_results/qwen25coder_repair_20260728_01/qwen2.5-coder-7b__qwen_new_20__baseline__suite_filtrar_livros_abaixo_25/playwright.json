@@ -1,0 +1,154 @@
+{
+  "config": {
+    "argv": [
+      "/usr/bin/node",
+      "/home/martinsspn/dissertacao_e2e_semantico/node_modules/.bin/playwright",
+      "test",
+      "suite_filtrar_livros_abaixo_25.spec.ts",
+      "--config=/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/playwright.config.ts",
+      "--reporter=json"
+    ],
+    "configFile": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/playwright.config.ts",
+    "rootDir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/repair_runs/qwen25coder_repair_20260728_01/qwen2-5-coder-7b/qwen_new_20/baseline/suite_filtrar_livros_abaixo_25",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/tmp/avaliacao-prompts-playwright",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/repair_runs/qwen25coder_repair_20260728_01/qwen2-5-coder-7b/qwen_new_20/baseline/suite_filtrar_livros_abaixo_25",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 20000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.61.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "suite_filtrar_livros_abaixo_25.spec.ts",
+      "file": "suite_filtrar_livros_abaixo_25.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Filtering books by price",
+          "file": "suite_filtrar_livros_abaixo_25.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should keep the Books category visible and display only products under 25.00",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 20000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 13844,
+                      "error": {
+                        "message": "TimeoutError: page.textContent: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('.product-price')\u001b[22m\n",
+                        "stack": "TimeoutError: page.textContent: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('.product-price')\u001b[22m\n\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/repair_runs/qwen25coder_repair_20260728_01/qwen2-5-coder-7b/qwen_new_20/baseline/suite_filtrar_livros_abaixo_25/suite_filtrar_livros_abaixo_25.spec.ts:15:38",
+                        "location": {
+                          "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/repair_runs/qwen25coder_repair_20260728_01/qwen2-5-coder-7b/qwen_new_20/baseline/suite_filtrar_livros_abaixo_25/suite_filtrar_livros_abaixo_25.spec.ts",
+                          "column": 38,
+                          "line": 15
+                        },
+                        "snippet": "  13 |\n  14 |     // Verify that only products under 25.00 are displayed\n> 15 |     const productPrices = await page.textContent('.product-price');\n     |                                      ^\n  16 |     expect(productPrices).not.toContain('Over 25.00');\n  17 |\n  18 |     // Additional verification: Check if all prices are below 25.00"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/repair_runs/qwen25coder_repair_20260728_01/qwen2-5-coder-7b/qwen_new_20/baseline/suite_filtrar_livros_abaixo_25/suite_filtrar_livros_abaixo_25.spec.ts",
+                            "column": 38,
+                            "line": 15
+                          },
+                          "message": "TimeoutError: page.textContent: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('.product-price')\u001b[22m\n\n\n  13 |\n  14 |     // Verify that only products under 25.00 are displayed\n> 15 |     const productPrices = await page.textContent('.product-price');\n     |                                      ^\n  16 |     expect(productPrices).not.toContain('Over 25.00');\n  17 |\n  18 |     // Additional verification: Check if all prices are below 25.00\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/repair_runs/qwen25coder_repair_20260728_01/qwen2-5-coder-7b/qwen_new_20/baseline/suite_filtrar_livros_abaixo_25/suite_filtrar_livros_abaixo_25.spec.ts:15:38"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-28T15:13:00.141Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/tmp/avaliacao-prompts-playwright/suite_filtrar_livros_abaix-f8ce0-y-only-products-under-25-00/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/repair_runs/qwen25coder_repair_20260728_01/qwen2-5-coder-7b/qwen_new_20/baseline/suite_filtrar_livros_abaixo_25/suite_filtrar_livros_abaixo_25.spec.ts",
+                        "column": 38,
+                        "line": 15
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "f9dda60718c7fc964024-c0d3a2816256f8b42e01",
+              "file": "suite_filtrar_livros_abaixo_25.spec.ts",
+              "line": 4,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-07-28T15:12:59.113Z",
+    "duration": 15318.435999999998,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

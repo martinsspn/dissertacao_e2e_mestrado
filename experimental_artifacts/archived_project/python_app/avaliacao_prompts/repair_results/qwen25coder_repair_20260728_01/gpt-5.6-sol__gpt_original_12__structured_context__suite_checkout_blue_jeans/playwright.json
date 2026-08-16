@@ -1,0 +1,154 @@
+{
+  "config": {
+    "argv": [
+      "/usr/bin/node",
+      "/home/martinsspn/dissertacao_e2e_semantico/node_modules/.bin/playwright",
+      "test",
+      "suite_checkout_blue_jeans.spec.ts",
+      "--config=/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/playwright.config.ts",
+      "--reporter=json"
+    ],
+    "configFile": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/playwright.config.ts",
+    "rootDir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/repair_runs/qwen25coder_repair_20260728_01/gpt-5-6-sol/gpt_original_12/structured_context/suite_checkout_blue_jeans",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/tmp/avaliacao-prompts-playwright",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/repair_runs/qwen25coder_repair_20260728_01/gpt-5-6-sol/gpt_original_12/structured_context/suite_checkout_blue_jeans",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 20000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.61.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "suite_checkout_blue_jeans.spec.ts",
+      "file": "suite_checkout_blue_jeans.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Suite Checkout Blue Jeans",
+          "file": "suite_checkout_blue_jeans.spec.ts",
+          "line": 37,
+          "column": 6,
+          "specs": [
+            {
+              "title": "finaliza a compra de Blue Jeans",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 20000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 15917,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('#shipping-buttons-container')\nExpected: visible\nReceived: hidden\nTimeout:  7000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 7000ms\u001b[22m\n\u001b[2m  - waiting for locator('#shipping-buttons-container')\u001b[22m\n\u001b[2m    17 × locator resolved to <div class=\"buttons\" id=\"shipping-buttons-container\">…</div>\u001b[22m\n\u001b[2m       - unexpected value \"hidden\"\u001b[22m\n",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('#shipping-buttons-container')\nExpected: visible\nReceived: hidden\nTimeout:  7000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 7000ms\u001b[22m\n\u001b[2m  - waiting for locator('#shipping-buttons-container')\u001b[22m\n\u001b[2m    17 × locator resolved to <div class=\"buttons\" id=\"shipping-buttons-container\">…</div>\u001b[22m\n\u001b[2m       - unexpected value \"hidden\"\u001b[22m\n\n    at continueCheckoutStep (/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/repair_runs/qwen25coder_repair_20260728_01/gpt-5-6-sol/gpt_original_12/structured_context/suite_checkout_blue_jeans/suite_checkout_blue_jeans.spec.ts:26:27)\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/repair_runs/qwen25coder_repair_20260728_01/gpt-5-6-sol/gpt_original_12/structured_context/suite_checkout_blue_jeans/suite_checkout_blue_jeans.spec.ts:142:11",
+                        "location": {
+                          "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/repair_runs/qwen25coder_repair_20260728_01/gpt-5-6-sol/gpt_original_12/structured_context/suite_checkout_blue_jeans/suite_checkout_blue_jeans.spec.ts",
+                          "column": 27,
+                          "line": 26
+                        },
+                        "snippet": "  24 | ): Promise<void> {\n  25 |   const container = page.locator(containerSelector);\n> 26 |   await expect(container).toBeVisible();\n     |                           ^\n  27 |\n  28 |   const continueButton = container.getByRole('button', {\n  29 |     name: 'Continue',"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/repair_runs/qwen25coder_repair_20260728_01/gpt-5-6-sol/gpt_original_12/structured_context/suite_checkout_blue_jeans/suite_checkout_blue_jeans.spec.ts",
+                            "column": 27,
+                            "line": 26
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('#shipping-buttons-container')\nExpected: visible\nReceived: hidden\nTimeout:  7000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 7000ms\u001b[22m\n\u001b[2m  - waiting for locator('#shipping-buttons-container')\u001b[22m\n\u001b[2m    17 × locator resolved to <div class=\"buttons\" id=\"shipping-buttons-container\">…</div>\u001b[22m\n\u001b[2m       - unexpected value \"hidden\"\u001b[22m\n\n\n  24 | ): Promise<void> {\n  25 |   const container = page.locator(containerSelector);\n> 26 |   await expect(container).toBeVisible();\n     |                           ^\n  27 |\n  28 |   const continueButton = container.getByRole('button', {\n  29 |     name: 'Continue',\n    at continueCheckoutStep (/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/repair_runs/qwen25coder_repair_20260728_01/gpt-5-6-sol/gpt_original_12/structured_context/suite_checkout_blue_jeans/suite_checkout_blue_jeans.spec.ts:26:27)\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/repair_runs/qwen25coder_repair_20260728_01/gpt-5-6-sol/gpt_original_12/structured_context/suite_checkout_blue_jeans/suite_checkout_blue_jeans.spec.ts:142:11"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-28T15:07:53.323Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/tmp/avaliacao-prompts-playwright/suite_checkout_blue_jeans--8447c-liza-a-compra-de-Blue-Jeans/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/repair_runs/qwen25coder_repair_20260728_01/gpt-5-6-sol/gpt_original_12/structured_context/suite_checkout_blue_jeans/suite_checkout_blue_jeans.spec.ts",
+                        "column": 27,
+                        "line": 26
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "1a70699396ff8c88bdf2-5a0edf785d6fb8a3ec8d",
+              "file": "suite_checkout_blue_jeans.spec.ts",
+              "line": 38,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-07-28T15:07:52.248Z",
+    "duration": 17427.276,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

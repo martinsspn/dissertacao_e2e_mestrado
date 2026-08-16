@@ -1,0 +1,154 @@
+{
+  "config": {
+    "argv": [
+      "/usr/bin/node",
+      "/home/martinsspn/dissertacao_e2e_semantico/node_modules/.bin/playwright",
+      "test",
+      "suite_adicionar_wishlist.spec.ts",
+      "--config=/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/playwright.config.ts",
+      "--reporter=json"
+    ],
+    "configFile": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/playwright.config.ts",
+    "rootDir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/repair_runs/qwen25coder_repair_20260728_01/qwen2-5-coder-7b/qwen_old_14/structured_context/suite_adicionar_wishlist",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/tmp/avaliacao-prompts-playwright",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/repair_runs/qwen25coder_repair_20260728_01/qwen2-5-coder-7b/qwen_old_14/structured_context/suite_adicionar_wishlist",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 20000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.61.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "suite_adicionar_wishlist.spec.ts",
+      "file": "suite_adicionar_wishlist.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Suite Adicionar Wishlist",
+          "file": "suite_adicionar_wishlist.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Adicionar produto à wishlist",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 20000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 4253,
+                      "error": {
+                        "message": "Error: locator.click: Error: strict mode violation: locator('[href=\"/digital-slr-camera\"]') resolved to 2 elements:\n    1) <a href=\"/digital-slr-camera\" title=\"Show details for Digital SLR Camera 12.2 Mpixel\">…</a> aka getByRole('link', { name: 'Picture of Digital SLR Camera' })\n    2) <a href=\"/digital-slr-camera\">Digital SLR Camera 12.2 Mpixel</a> aka getByRole('link', { name: 'Digital SLR Camera 12.2 Mpixel', exact: true })\n\nCall log:\n\u001b[2m  - waiting for locator('[href=\"/digital-slr-camera\"]')\u001b[22m\n",
+                        "stack": "Error: locator.click: Error: strict mode violation: locator('[href=\"/digital-slr-camera\"]') resolved to 2 elements:\n    1) <a href=\"/digital-slr-camera\" title=\"Show details for Digital SLR Camera 12.2 Mpixel\">…</a> aka getByRole('link', { name: 'Picture of Digital SLR Camera' })\n    2) <a href=\"/digital-slr-camera\">Digital SLR Camera 12.2 Mpixel</a> aka getByRole('link', { name: 'Digital SLR Camera 12.2 Mpixel', exact: true })\n\nCall log:\n\u001b[2m  - waiting for locator('[href=\"/digital-slr-camera\"]')\u001b[22m\n\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/repair_runs/qwen25coder_repair_20260728_01/qwen2-5-coder-7b/qwen_old_14/structured_context/suite_adicionar_wishlist/suite_adicionar_wishlist.spec.ts:15:25",
+                        "location": {
+                          "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/repair_runs/qwen25coder_repair_20260728_01/qwen2-5-coder-7b/qwen_old_14/structured_context/suite_adicionar_wishlist/suite_adicionar_wishlist.spec.ts",
+                          "column": 25,
+                          "line": 15
+                        },
+                        "snippet": "  13 |     await expect(page).toHaveURL('https://demowebshop.tricentis.com/search?q=Camera');\n  14 |     const cameraProduct = page.locator(\"[href=\\\"/digital-slr-camera\\\"]\");\n> 15 |     await cameraProduct.click();\n     |                         ^\n  16 |     await expect(page).toHaveURL('https://demowebshop.tricentis.com/digital-slr-camera');\n  17 |     \n  18 |     // Etapa 4: Adicionar ao carrinho"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/repair_runs/qwen25coder_repair_20260728_01/qwen2-5-coder-7b/qwen_old_14/structured_context/suite_adicionar_wishlist/suite_adicionar_wishlist.spec.ts",
+                            "column": 25,
+                            "line": 15
+                          },
+                          "message": "Error: locator.click: Error: strict mode violation: locator('[href=\"/digital-slr-camera\"]') resolved to 2 elements:\n    1) <a href=\"/digital-slr-camera\" title=\"Show details for Digital SLR Camera 12.2 Mpixel\">…</a> aka getByRole('link', { name: 'Picture of Digital SLR Camera' })\n    2) <a href=\"/digital-slr-camera\">Digital SLR Camera 12.2 Mpixel</a> aka getByRole('link', { name: 'Digital SLR Camera 12.2 Mpixel', exact: true })\n\nCall log:\n\u001b[2m  - waiting for locator('[href=\"/digital-slr-camera\"]')\u001b[22m\n\n\n  13 |     await expect(page).toHaveURL('https://demowebshop.tricentis.com/search?q=Camera');\n  14 |     const cameraProduct = page.locator(\"[href=\\\"/digital-slr-camera\\\"]\");\n> 15 |     await cameraProduct.click();\n     |                         ^\n  16 |     await expect(page).toHaveURL('https://demowebshop.tricentis.com/digital-slr-camera');\n  17 |     \n  18 |     // Etapa 4: Adicionar ao carrinho\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/repair_runs/qwen25coder_repair_20260728_01/qwen2-5-coder-7b/qwen_old_14/structured_context/suite_adicionar_wishlist/suite_adicionar_wishlist.spec.ts:15:25"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-28T15:26:14.319Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/tmp/avaliacao-prompts-playwright/suite_adicionar_wishlist-S-e647d-dicionar-produto-à-wishlist/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/repair_runs/qwen25coder_repair_20260728_01/qwen2-5-coder-7b/qwen_old_14/structured_context/suite_adicionar_wishlist/suite_adicionar_wishlist.spec.ts",
+                        "column": 25,
+                        "line": 15
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "098796e0f623f352e24c-1b24ca72555176bba561",
+              "file": "suite_adicionar_wishlist.spec.ts",
+              "line": 4,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-07-28T15:26:13.284Z",
+    "duration": 5794.288,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

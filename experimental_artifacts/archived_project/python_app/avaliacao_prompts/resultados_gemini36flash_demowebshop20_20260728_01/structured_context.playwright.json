@@ -1,0 +1,1296 @@
+{
+  "config": {
+    "argv": [
+      "/usr/bin/node",
+      "/home/martinsspn/dissertacao_e2e_semantico/node_modules/.bin/playwright",
+      "test",
+      "--config=python_app/avaliacao_prompts/playwright.config.ts",
+      "--reporter=json"
+    ],
+    "configFile": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/playwright.config.ts",
+    "rootDir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context_gemini36flash_demowebshop20_20260727_01",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/tmp/avaliacao-prompts-playwright",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context_gemini36flash_demowebshop20_20260727_01",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 20000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.61.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "fluxo_computadores_desktops.spec.ts",
+      "file": "fluxo_computadores_desktops.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Fluxo Computadores Desktops",
+          "file": "fluxo_computadores_desktops.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "The user accesses the Digital downloads category and validates page visibility",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 20000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 4596,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-28T13:32:07.639Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "5ffdfa1a8a18bafbf733-cab90b0ebf8f9a846985",
+              "file": "fluxo_computadores_desktops.spec.ts",
+              "line": 4,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "suite_adicionar_dois_produtos_carrinho.spec.ts",
+      "file": "suite_adicionar_dois_produtos_carrinho.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Suite Adicionar Dois Produtos Carrinho",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 20000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 7394,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-07-28T13:32:15.353Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "733afb2cd731fa9edb91-94b9b827a0097e83d0a5",
+          "file": "suite_adicionar_dois_produtos_carrinho.spec.ts",
+          "line": 3,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "suite_atualizar_quantidade_carrinho.spec.ts",
+      "file": "suite_atualizar_quantidade_carrinho.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Suite Atualizar Quantidade Carrinho",
+          "file": "suite_atualizar_quantidade_carrinho.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Atualizar quantidade do produto Computing and Internet no carrinho",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 20000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 14785,
+                      "error": {
+                        "message": "TimeoutError: locator.fill: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('input.qty-input').first()\u001b[22m\n",
+                        "stack": "TimeoutError: locator.fill: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('input.qty-input').first()\u001b[22m\n\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context_gemini36flash_demowebshop20_20260727_01/suite_atualizar_quantidade_carrinho.spec.ts:18:20",
+                        "location": {
+                          "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context_gemini36flash_demowebshop20_20260727_01/suite_atualizar_quantidade_carrinho.spec.ts",
+                          "column": 20,
+                          "line": 18
+                        },
+                        "snippet": "  16 |     // Alterar a quantidade do produto de 1 para 2\n  17 |     const qtyInput = page.locator('input.qty-input').first();\n> 18 |     await qtyInput.fill('2');\n     |                    ^\n  19 |\n  20 |     // Etapa 3: Selecionar Atualizar carrinho de compras\n  21 |     await page.getByRole('button', { name: 'Update shopping cart' }).click();"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context_gemini36flash_demowebshop20_20260727_01/suite_atualizar_quantidade_carrinho.spec.ts",
+                            "column": 20,
+                            "line": 18
+                          },
+                          "message": "TimeoutError: locator.fill: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('input.qty-input').first()\u001b[22m\n\n\n  16 |     // Alterar a quantidade do produto de 1 para 2\n  17 |     const qtyInput = page.locator('input.qty-input').first();\n> 18 |     await qtyInput.fill('2');\n     |                    ^\n  19 |\n  20 |     // Etapa 3: Selecionar Atualizar carrinho de compras\n  21 |     await page.getByRole('button', { name: 'Update shopping cart' }).click();\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context_gemini36flash_demowebshop20_20260727_01/suite_atualizar_quantidade_carrinho.spec.ts:18:20"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-28T13:32:22.785Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/tmp/avaliacao-prompts-playwright/suite_atualizar_quantidade-c4326-ng-and-Internet-no-carrinho/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context_gemini36flash_demowebshop20_20260727_01/suite_atualizar_quantidade_carrinho.spec.ts",
+                        "column": 20,
+                        "line": 18
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "0631d563be86abbaa468-b08da95709a2e7db9fe9",
+              "file": "suite_atualizar_quantidade_carrinho.spec.ts",
+              "line": 4,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "suite_busca_sem_resultados.spec.ts",
+      "file": "suite_busca_sem_resultados.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Suite Busca Sem Resultados",
+          "file": "suite_busca_sem_resultados.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Deve exibir mensagem informando que nenhum produto foi encontrado ao buscar termo inexistente",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 20000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 4463,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-28T13:32:38.769Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "2fa21ebe7e7d4f5dd10e-792f9bd69be69089e699",
+              "file": "suite_busca_sem_resultados.spec.ts",
+              "line": 4,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "suite_cadastro_campos_obrigatorios.spec.ts",
+      "file": "suite_cadastro_campos_obrigatorios.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Suite Cadastro Campos Obrigatorios",
+          "file": "suite_cadastro_campos_obrigatorios.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Deve validar mensagens de erro ao submeter formulario de cadastro com campos obrigatorios vazios",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 20000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 4110,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-28T13:32:43.545Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "aaa9aa6f840f1d71d364-a4c47cb92c4de4164666",
+              "file": "suite_cadastro_campos_obrigatorios.spec.ts",
+              "line": 4,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "suite_cadastro_confirmacao_senha.spec.ts",
+      "file": "suite_cadastro_confirmacao_senha.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Suite Cadastro Confirmacao Senha",
+          "file": "suite_cadastro_confirmacao_senha.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Deve exibir erro ao tentar cadastrar com senhas divergentes",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 20000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 4200,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-28T13:32:50.447Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "51f27eb1d4e883d20ddc-fe9ee056e0a54c24a1ad",
+              "file": "suite_cadastro_confirmacao_senha.spec.ts",
+              "line": 4,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "suite_cadastro_senha_curta.spec.ts",
+      "file": "suite_cadastro_senha_curta.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Cadastro com senha curta deve exibir mensagem de erro",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 20000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3810,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-07-28T13:32:54.667Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "17823d8be8fb679760fc-17e95ec9e455a6eb1d56",
+          "file": "suite_cadastro_senha_curta.spec.ts",
+          "line": 3,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "suite_carrinho_inicialmente_vazio.spec.ts",
+      "file": "suite_carrinho_inicialmente_vazio.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Suite Carrinho Inicialmente Vazio",
+          "file": "suite_carrinho_inicialmente_vazio.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Viewing an empty shopping cart",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 20000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 4017,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-28T13:32:58.509Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "416516fdabcf7507d9d7-57358e692de4cdfa1673",
+              "file": "suite_carrinho_inicialmente_vazio.spec.ts",
+              "line": 4,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "suite_comparar_produtos.spec.ts",
+      "file": "suite_comparar_produtos.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Suite Comparar Produtos",
+          "file": "suite_comparar_produtos.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Deve adicionar produtos a lista de comparacao e depois limpar a lista",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 20000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 14890,
+                      "error": {
+                        "message": "TimeoutError: locator.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByText('Fiction', { exact: true }).first()\u001b[22m\n",
+                        "stack": "TimeoutError: locator.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByText('Fiction', { exact: true }).first()\u001b[22m\n\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context_gemini36flash_demowebshop20_20260727_01/suite_comparar_produtos.spec.ts:14:62",
+                        "location": {
+                          "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context_gemini36flash_demowebshop20_20260727_01/suite_comparar_produtos.spec.ts",
+                          "column": 62,
+                          "line": 14
+                        },
+                        "snippet": "  12 |\n  13 |     // Etapa 2: Acessa a pagina do produto Fiction e adiciona a lista de comparacao\n> 14 |     await page.getByText(\"Fiction\", { exact: true }).first().click();\n     |                                                              ^\n  15 |     await expect(page.getByRole('heading', { name: 'Fiction' })).toBeVisible();\n  16 |     await page.getByRole('button', { name: 'Add to compare list' }).click();\n  17 |"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context_gemini36flash_demowebshop20_20260727_01/suite_comparar_produtos.spec.ts",
+                            "column": 62,
+                            "line": 14
+                          },
+                          "message": "TimeoutError: locator.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByText('Fiction', { exact: true }).first()\u001b[22m\n\n\n  12 |\n  13 |     // Etapa 2: Acessa a pagina do produto Fiction e adiciona a lista de comparacao\n> 14 |     await page.getByText(\"Fiction\", { exact: true }).first().click();\n     |                                                              ^\n  15 |     await expect(page.getByRole('heading', { name: 'Fiction' })).toBeVisible();\n  16 |     await page.getByRole('button', { name: 'Add to compare list' }).click();\n  17 |\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context_gemini36flash_demowebshop20_20260727_01/suite_comparar_produtos.spec.ts:14:62"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-28T13:33:02.552Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/tmp/avaliacao-prompts-playwright/suite_comparar_produtos-Su-6e5b1-cao-e-depois-limpar-a-lista/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context_gemini36flash_demowebshop20_20260727_01/suite_comparar_produtos.spec.ts",
+                        "column": 62,
+                        "line": 14
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "c7461115bb411687791d-cdb98ae21826ec47cd9f",
+              "file": "suite_comparar_produtos.spec.ts",
+              "line": 4,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "suite_enquete_sem_resposta.spec.ts",
+      "file": "suite_enquete_sem_resposta.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Suite Enquete Sem Resposta",
+          "file": "suite_enquete_sem_resposta.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Deve impedir a votação sem selecionar uma resposta",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 20000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 10747,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('#block-poll-vote-error-1')\nExpected: visible\nReceived: hidden\nTimeout:  7000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 7000ms\u001b[22m\n\u001b[2m  - waiting for locator('#block-poll-vote-error-1')\u001b[22m\n\u001b[2m    17 × locator resolved to <div class=\"poll-vote-error\" id=\"block-poll-vote-error-1\">↵        </div>\u001b[22m\n\u001b[2m       - unexpected value \"hidden\"\u001b[22m\n",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('#block-poll-vote-error-1')\nExpected: visible\nReceived: hidden\nTimeout:  7000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 7000ms\u001b[22m\n\u001b[2m  - waiting for locator('#block-poll-vote-error-1')\u001b[22m\n\u001b[2m    17 × locator resolved to <div class=\"poll-vote-error\" id=\"block-poll-vote-error-1\">↵        </div>\u001b[22m\n\u001b[2m       - unexpected value \"hidden\"\u001b[22m\n\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context_gemini36flash_demowebshop20_20260727_01/suite_enquete_sem_resposta.spec.ts:14:32",
+                        "location": {
+                          "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context_gemini36flash_demowebshop20_20260727_01/suite_enquete_sem_resposta.spec.ts",
+                          "column": 32,
+                          "line": 14
+                        },
+                        "snippet": "  12 |     // Etapa 3: O sistema impede o voto e informa o usuário para selecionar uma resposta\n  13 |     const errorElement = page.locator('#block-poll-vote-error-1');\n> 14 |     await expect(errorElement).toBeVisible();\n     |                                ^\n  15 |     await expect(errorElement).toHaveText('Please select an answer');\n  16 |   });\n  17 | });"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context_gemini36flash_demowebshop20_20260727_01/suite_enquete_sem_resposta.spec.ts",
+                            "column": 32,
+                            "line": 14
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('#block-poll-vote-error-1')\nExpected: visible\nReceived: hidden\nTimeout:  7000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 7000ms\u001b[22m\n\u001b[2m  - waiting for locator('#block-poll-vote-error-1')\u001b[22m\n\u001b[2m    17 × locator resolved to <div class=\"poll-vote-error\" id=\"block-poll-vote-error-1\">↵        </div>\u001b[22m\n\u001b[2m       - unexpected value \"hidden\"\u001b[22m\n\n\n  12 |     // Etapa 3: O sistema impede o voto e informa o usuário para selecionar uma resposta\n  13 |     const errorElement = page.locator('#block-poll-vote-error-1');\n> 14 |     await expect(errorElement).toBeVisible();\n     |                                ^\n  15 |     await expect(errorElement).toHaveText('Please select an answer');\n  16 |   });\n  17 | });\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context_gemini36flash_demowebshop20_20260727_01/suite_enquete_sem_resposta.spec.ts:14:32"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-28T13:33:18.629Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/tmp/avaliacao-prompts-playwright/suite_enquete_sem_resposta-ec283-sem-selecionar-uma-resposta/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context_gemini36flash_demowebshop20_20260727_01/suite_enquete_sem_resposta.spec.ts",
+                        "column": 32,
+                        "line": 14
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "4387e95b3423d9c93de2-2bf5b6d381ef1d4d4fe7",
+              "file": "suite_enquete_sem_resposta.spec.ts",
+              "line": 4,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "suite_exibir_quatro_livros.spec.ts",
+      "file": "suite_exibir_quatro_livros.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Suite Exibir Quatro Livros",
+          "file": "suite_exibir_quatro_livros.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Deve exibir ate quatro livros na pagina da categoria Books",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 20000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 5021,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-28T13:33:33.348Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "05e94cded513047be844-740e1aff036c9ac6f164",
+              "file": "suite_exibir_quatro_livros.spec.ts",
+              "line": 4,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "suite_filtrar_livros_abaixo_25.spec.ts",
+      "file": "suite_filtrar_livros_abaixo_25.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Suite Filtrar Livros Abaixo 25",
+          "file": "suite_filtrar_livros_abaixo_25.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Filtrar livros com preco abaixo de 25.00",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 20000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 5496,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-28T13:33:38.643Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "f9dda60718c7fc964024-a8ed1ac4b8273daea040",
+              "file": "suite_filtrar_livros_abaixo_25.spec.ts",
+              "line": 4,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "suite_navegar_cartoes_presente.spec.ts",
+      "file": "suite_navegar_cartoes_presente.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Suite Navegar Cartoes Presente",
+          "file": "suite_navegar_cartoes_presente.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Navegar para a categoria de Cartões de Presente e verificar produtos",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 20000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 4386,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.product-item')\nExpected: visible\nError: strict mode violation: locator('.product-item') resolved to 4 elements:\n    1) <div data-productid=\"1\" class=\"product-item\">…</div> aka locator('.product-item').first()\n    2) <div data-productid=\"2\" class=\"product-item\">…</div> aka locator('div:nth-child(2) > .product-item')\n    3) <div data-productid=\"3\" class=\"product-item\">…</div> aka locator('div:nth-child(3) > .product-item')\n    4) <div data-productid=\"4\" class=\"product-item\">…</div> aka locator('div:nth-child(4) > .product-item')\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 7000ms\u001b[22m\n\u001b[2m  - waiting for locator('.product-item')\u001b[22m\n",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.product-item')\nExpected: visible\nError: strict mode violation: locator('.product-item') resolved to 4 elements:\n    1) <div data-productid=\"1\" class=\"product-item\">…</div> aka locator('.product-item').first()\n    2) <div data-productid=\"2\" class=\"product-item\">…</div> aka locator('div:nth-child(2) > .product-item')\n    3) <div data-productid=\"3\" class=\"product-item\">…</div> aka locator('div:nth-child(3) > .product-item')\n    4) <div data-productid=\"4\" class=\"product-item\">…</div> aka locator('div:nth-child(4) > .product-item')\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 7000ms\u001b[22m\n\u001b[2m  - waiting for locator('.product-item')\u001b[22m\n\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context_gemini36flash_demowebshop20_20260727_01/suite_navegar_cartoes_presente.spec.ts:16:49",
+                        "location": {
+                          "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context_gemini36flash_demowebshop20_20260727_01/suite_navegar_cartoes_presente.spec.ts",
+                          "column": 49,
+                          "line": 16
+                        },
+                        "snippet": "  14 |     await expect(page.getByRole('heading', { name: 'Gift Cards', exact: true })).toBeVisible();\n  15 |     await expect(page.locator('.breadcrumb')).toBeVisible();\n> 16 |     await expect(page.locator('.product-item')).toBeVisible();\n     |                                                 ^\n  17 |   });\n  18 | });\n  19 |"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context_gemini36flash_demowebshop20_20260727_01/suite_navegar_cartoes_presente.spec.ts",
+                            "column": 49,
+                            "line": 16
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.product-item')\nExpected: visible\nError: strict mode violation: locator('.product-item') resolved to 4 elements:\n    1) <div data-productid=\"1\" class=\"product-item\">…</div> aka locator('.product-item').first()\n    2) <div data-productid=\"2\" class=\"product-item\">…</div> aka locator('div:nth-child(2) > .product-item')\n    3) <div data-productid=\"3\" class=\"product-item\">…</div> aka locator('div:nth-child(3) > .product-item')\n    4) <div data-productid=\"4\" class=\"product-item\">…</div> aka locator('div:nth-child(4) > .product-item')\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 7000ms\u001b[22m\n\u001b[2m  - waiting for locator('.product-item')\u001b[22m\n\n\n  14 |     await expect(page.getByRole('heading', { name: 'Gift Cards', exact: true })).toBeVisible();\n  15 |     await expect(page.locator('.breadcrumb')).toBeVisible();\n> 16 |     await expect(page.locator('.product-item')).toBeVisible();\n     |                                                 ^\n  17 |   });\n  18 | });\n  19 |\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context_gemini36flash_demowebshop20_20260727_01/suite_navegar_cartoes_presente.spec.ts:16:49"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-28T13:33:44.164Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/tmp/avaliacao-prompts-playwright/suite_navegar_cartoes_pres-3546d-esente-e-verificar-produtos/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context_gemini36flash_demowebshop20_20260727_01/suite_navegar_cartoes_presente.spec.ts",
+                        "column": 49,
+                        "line": 16
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "0f27faa2236d41ed8b7f-76e69a27da7046ed5417",
+              "file": "suite_navegar_cartoes_presente.spec.ts",
+              "line": 4,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "suite_navegar_categoria_livros.spec.ts",
+      "file": "suite_navegar_categoria_livros.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Suite Navegar Categoria Livros",
+          "file": "suite_navegar_categoria_livros.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Navegar para a categoria Livros e validar breadcrumb e produtos",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 20000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 4004,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-28T13:33:49.745Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "61bc05f7827c8102ba30-d025d4b636d8f6103f5d",
+              "file": "suite_navegar_categoria_livros.spec.ts",
+              "line": 4,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "suite_navegar_sobre_nos.spec.ts",
+      "file": "suite_navegar_sobre_nos.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Suite Navegar Sobre Nos",
+          "file": "suite_navegar_sobre_nos.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Deve navegar para a pagina About us a partir do rodape",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 20000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 10906,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('heading', { name: 'About us', exact: true })\nExpected: visible\nTimeout: 7000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 7000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('heading', { name: 'About us', exact: true })\u001b[22m\n",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('heading', { name: 'About us', exact: true })\nExpected: visible\nTimeout: 7000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 7000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('heading', { name: 'About us', exact: true })\u001b[22m\n\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context_gemini36flash_demowebshop20_20260727_01/suite_navegar_sobre_nos.spec.ts:13:80",
+                        "location": {
+                          "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context_gemini36flash_demowebshop20_20260727_01/suite_navegar_sobre_nos.spec.ts",
+                          "column": 80,
+                          "line": 13
+                        },
+                        "snippet": "  11 |     // Etapa 3: O sistema exibe a pagina About us e seu titulo correspondente.\n  12 |     await expect(page).toHaveURL('https://demowebshop.tricentis.com/about-us');\n> 13 |     await expect(page.getByRole('heading', { name: 'About us', exact: true })).toBeVisible();\n     |                                                                                ^\n  14 |   });\n  15 | });\n  16 |"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context_gemini36flash_demowebshop20_20260727_01/suite_navegar_sobre_nos.spec.ts",
+                            "column": 80,
+                            "line": 13
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('heading', { name: 'About us', exact: true })\nExpected: visible\nTimeout: 7000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 7000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('heading', { name: 'About us', exact: true })\u001b[22m\n\n\n  11 |     // Etapa 3: O sistema exibe a pagina About us e seu titulo correspondente.\n  12 |     await expect(page).toHaveURL('https://demowebshop.tricentis.com/about-us');\n> 13 |     await expect(page.getByRole('heading', { name: 'About us', exact: true })).toBeVisible();\n     |                                                                                ^\n  14 |   });\n  15 | });\n  16 |\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context_gemini36flash_demowebshop20_20260727_01/suite_navegar_sobre_nos.spec.ts:13:80"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-28T13:33:54.029Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/tmp/avaliacao-prompts-playwright/suite_navegar_sobre_nos-Su-74226-About-us-a-partir-do-rodape/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context_gemini36flash_demowebshop20_20260727_01/suite_navegar_sobre_nos.spec.ts",
+                        "column": 80,
+                        "line": 13
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "a4f6fd2d19baf70beb70-8b703489a1b3bc89d752",
+              "file": "suite_navegar_sobre_nos.spec.ts",
+              "line": 4,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "suite_ordenar_livros_por_preco.spec.ts",
+      "file": "suite_ordenar_livros_por_preco.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Suite Ordenar Livros Por Preco",
+          "file": "suite_ordenar_livros_por_preco.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Deve ordenar livros por preco do menor para o maior",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 20000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 5,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 14108,
+                      "error": {
+                        "message": "TimeoutError: locator.selectOption: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByLabel('Sort by')\u001b[22m\n",
+                        "stack": "TimeoutError: locator.selectOption: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByLabel('Sort by')\u001b[22m\n\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context_gemini36flash_demowebshop20_20260727_01/suite_ordenar_livros_por_preco.spec.ts:12:38",
+                        "location": {
+                          "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context_gemini36flash_demowebshop20_20260727_01/suite_ordenar_livros_por_preco.spec.ts",
+                          "column": 38,
+                          "line": 12
+                        },
+                        "snippet": "  10 |\n  11 |     // Etapa 2: Selecionar \"Price: Low to High\" no controle de ordenacao\n> 12 |     await page.getByLabel('Sort by').selectOption({ label: 'Price: Low to High' });\n     |                                      ^\n  13 |\n  14 |     // Etapa 3: Verificar que a categoria Books continua visivel e os produtos estao ordenados por preco crescente\n  15 |     await expect(page.getByRole('heading', { name: 'Books', exact: true })).toBeVisible();"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context_gemini36flash_demowebshop20_20260727_01/suite_ordenar_livros_por_preco.spec.ts",
+                            "column": 38,
+                            "line": 12
+                          },
+                          "message": "TimeoutError: locator.selectOption: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByLabel('Sort by')\u001b[22m\n\n\n  10 |\n  11 |     // Etapa 2: Selecionar \"Price: Low to High\" no controle de ordenacao\n> 12 |     await page.getByLabel('Sort by').selectOption({ label: 'Price: Low to High' });\n     |                                      ^\n  13 |\n  14 |     // Etapa 3: Verificar que a categoria Books continua visivel e os produtos estao ordenados por preco crescente\n  15 |     await expect(page.getByRole('heading', { name: 'Books', exact: true })).toBeVisible();\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context_gemini36flash_demowebshop20_20260727_01/suite_ordenar_livros_por_preco.spec.ts:12:38"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-28T13:34:08.626Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/tmp/avaliacao-prompts-playwright/suite_ordenar_livros_por_p-2bb89-preco-do-menor-para-o-maior/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context_gemini36flash_demowebshop20_20260727_01/suite_ordenar_livros_por_preco.spec.ts",
+                        "column": 38,
+                        "line": 12
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "6a0ecf7bc5c58eb26676-4c37e3edf276cf74bdd1",
+              "file": "suite_ordenar_livros_por_preco.spec.ts",
+              "line": 4,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "suite_persistencia_carrinho_apos_login.spec.ts",
+      "file": "suite_persistencia_carrinho_apos_login.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Suite Persistencia Carrinho Apos Login",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 20000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 17654,
+                  "error": {
+                    "message": "TimeoutError: locator.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('link', { name: 'Log out' })\u001b[22m\n",
+                    "stack": "TimeoutError: locator.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('link', { name: 'Log out' })\u001b[22m\n\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context_gemini36flash_demowebshop20_20260727_01/suite_persistencia_carrinho_apos_login.spec.ts:35:53",
+                    "location": {
+                      "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context_gemini36flash_demowebshop20_20260727_01/suite_persistencia_carrinho_apos_login.spec.ts",
+                      "column": 53,
+                      "line": 35
+                    },
+                    "snippet": "  33 |\n  34 |   // 3. Log out and log in again with the same account\n> 35 |   await page.getByRole('link', { name: 'Log out' }).click();\n     |                                                     ^\n  36 |   await page.getByText(\"Log in\", { exact: true }).first().click();\n  37 |   await page.getByLabel('Email:', { exact: true }).fill(email);\n  38 |   await page.getByLabel('Password:', { exact: true }).fill(password);"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context_gemini36flash_demowebshop20_20260727_01/suite_persistencia_carrinho_apos_login.spec.ts",
+                        "column": 53,
+                        "line": 35
+                      },
+                      "message": "TimeoutError: locator.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('link', { name: 'Log out' })\u001b[22m\n\n\n  33 |\n  34 |   // 3. Log out and log in again with the same account\n> 35 |   await page.getByRole('link', { name: 'Log out' }).click();\n     |                                                     ^\n  36 |   await page.getByText(\"Log in\", { exact: true }).first().click();\n  37 |   await page.getByLabel('Email:', { exact: true }).fill(email);\n  38 |   await page.getByLabel('Password:', { exact: true }).fill(password);\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context_gemini36flash_demowebshop20_20260727_01/suite_persistencia_carrinho_apos_login.spec.ts:35:53"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-07-28T13:34:24.157Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/tmp/avaliacao-prompts-playwright/suite_persistencia_carrinh-e0a06-stencia-Carrinho-Apos-Login/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context_gemini36flash_demowebshop20_20260727_01/suite_persistencia_carrinho_apos_login.spec.ts",
+                    "column": 53,
+                    "line": 35
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "41c61cdee9c7da90c203-ffb770dfadc98522962c",
+          "file": "suite_persistencia_carrinho_apos_login.spec.ts",
+          "line": 3,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "suite_produtos_visualizados_recentemente.spec.ts",
+      "file": "suite_produtos_visualizados_recentemente.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Suite Produtos Visualizados Recentemente",
+          "file": "suite_produtos_visualizados_recentemente.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "deve exibir produtos visualizados recentemente na ordem correta",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 20000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 7,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 7632,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-28T13:34:45.817Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d98f5a1d4f9f872bf201-b94cd0be91ea825bc557",
+              "file": "suite_produtos_visualizados_recentemente.spec.ts",
+              "line": 4,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "suite_visualizacao_livros_em_lista.spec.ts",
+      "file": "suite_visualizacao_livros_em_lista.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Suite Visualizacao Livros Em Lista",
+          "file": "suite_visualizacao_livros_em_lista.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "deve alternar a exibição da categoria Books para o modo lista",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 20000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 7,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 14147,
+                      "error": {
+                        "message": "TimeoutError: locator.selectOption: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByLabel('View as')\u001b[22m\n",
+                        "stack": "TimeoutError: locator.selectOption: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByLabel('View as')\u001b[22m\n\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context_gemini36flash_demowebshop20_20260727_01/suite_visualizacao_livros_em_lista.spec.ts:13:38",
+                        "location": {
+                          "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context_gemini36flash_demowebshop20_20260727_01/suite_visualizacao_livros_em_lista.spec.ts",
+                          "column": 38,
+                          "line": 13
+                        },
+                        "snippet": "  11 |\n  12 |     // Etapa 2: O usuário seleciona List no controle View as\n> 13 |     await page.getByLabel('View as').selectOption({ label: 'List' });\n     |                                      ^\n  14 |\n  15 |     // Etapa 3: O sistema mantém a categoria Books visível e apresenta os produtos em lista\n  16 |     await expect(page.getByRole('heading', { name: 'Books' })).toBeVisible();"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context_gemini36flash_demowebshop20_20260727_01/suite_visualizacao_livros_em_lista.spec.ts",
+                            "column": 38,
+                            "line": 13
+                          },
+                          "message": "TimeoutError: locator.selectOption: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByLabel('View as')\u001b[22m\n\n\n  11 |\n  12 |     // Etapa 2: O usuário seleciona List no controle View as\n> 13 |     await page.getByLabel('View as').selectOption({ label: 'List' });\n     |                                      ^\n  14 |\n  15 |     // Etapa 3: O sistema mantém a categoria Books visível e apresenta os produtos em lista\n  16 |     await expect(page.getByRole('heading', { name: 'Books' })).toBeVisible();\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context_gemini36flash_demowebshop20_20260727_01/suite_visualizacao_livros_em_lista.spec.ts:13:38"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-28T13:34:53.717Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/tmp/avaliacao-prompts-playwright/suite_visualizacao_livros_-4e94c-ria-Books-para-o-modo-lista/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context_gemini36flash_demowebshop20_20260727_01/suite_visualizacao_livros_em_lista.spec.ts",
+                        "column": 38,
+                        "line": 13
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "85a035ab5d29d2279d94-2816776832fe11f72bce",
+              "file": "suite_visualizacao_livros_em_lista.spec.ts",
+              "line": 4,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "user_registration_book_purchase.spec.ts",
+      "file": "user_registration_book_purchase.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "User Registration and Book Purchase Flow",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 20000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 8,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 8579,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-07-28T13:35:11.626Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f7557647539060876791-af0c5c84ae30b5eae1fe",
+          "file": "user_registration_book_purchase.spec.ts",
+          "line": 3,
+          "column": 5
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-07-28T13:32:06.483Z",
+    "duration": 178407.511,
+    "expected": 12,
+    "skipped": 0,
+    "unexpected": 8,
+    "flaky": 0
+  }
+}

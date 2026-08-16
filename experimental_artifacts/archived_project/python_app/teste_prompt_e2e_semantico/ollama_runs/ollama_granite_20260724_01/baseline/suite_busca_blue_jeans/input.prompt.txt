@@ -1,0 +1,1 @@
+Searching and opening a product: The user searches for the product Blue Jeans in the Search store field. The system displays the results related to the search. The user opens the product Blue Jeans from the results. The system displays the details page with the name Blue Jeans.

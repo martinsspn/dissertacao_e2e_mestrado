@@ -1,0 +1,144 @@
+{
+  "config": {
+    "argv": [
+      "/usr/bin/node",
+      "/home/martinsspn/dissertacao_e2e_semantico/node_modules/.bin/playwright",
+      "test",
+      "fluxo_computadores_desktops.spec.ts",
+      "--config=/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaigns/campaign_20260728_01/runtime/playwright/playwright.config.ts",
+      "--reporter=json",
+      "--workers=1",
+      "--retries=0",
+      "--trace=on",
+      "--output=/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/eligibility/track_R/gemini-3.6-flash/runs/fluxo_computadores_desktops-A-r1.artifacts"
+    ],
+    "configFile": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaigns/campaign_20260728_01/runtime/playwright/playwright.config.ts",
+    "rootDir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaigns/campaign_20260728_01/prepared/track_R/gemini-3.6-flash/A",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/eligibility/track_R/gemini-3.6-flash/runs/fluxo_computadores_desktops-A-r1.artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaigns/campaign_20260728_01/prepared/track_R/gemini-3.6-flash/A",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 20000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.61.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "fluxo_computadores_desktops.spec.ts",
+      "file": "fluxo_computadores_desktops.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Digital Downloads Category",
+          "file": "fluxo_computadores_desktops.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should access Digital downloads, view items, and confirm page visibility",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 20000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 4492,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-28T19:03:03.556Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/eligibility/track_R/gemini-3.6-flash/runs/fluxo_computadores_desktops-A-r1.artifacts/fluxo_computadores_desktop-87a72-and-confirm-page-visibility/test-finished-1.png"
+                        },
+                        {
+                          "name": "resilience-mutation-events",
+                          "contentType": "application/json",
+                          "body": "W10="
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/eligibility/track_R/gemini-3.6-flash/runs/fluxo_computadores_desktops-A-r1.artifacts/fluxo_computadores_desktop-87a72-and-confirm-page-visibility/trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "5ffdfa1a8a18bafbf733-c58c0f80a0b55fdb4077",
+              "file": "fluxo_computadores_desktops.spec.ts",
+              "line": 4,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-07-28T19:03:02.318Z",
+    "duration": 6683.491,
+    "expected": 1,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

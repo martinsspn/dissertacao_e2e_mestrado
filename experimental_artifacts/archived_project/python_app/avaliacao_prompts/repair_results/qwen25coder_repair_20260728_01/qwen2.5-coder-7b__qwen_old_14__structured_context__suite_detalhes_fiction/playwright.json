@@ -1,0 +1,154 @@
+{
+  "config": {
+    "argv": [
+      "/usr/bin/node",
+      "/home/martinsspn/dissertacao_e2e_semantico/node_modules/.bin/playwright",
+      "test",
+      "suite_detalhes_fiction.spec.ts",
+      "--config=/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/playwright.config.ts",
+      "--reporter=json"
+    ],
+    "configFile": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/playwright.config.ts",
+    "rootDir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/repair_runs/qwen25coder_repair_20260728_01/qwen2-5-coder-7b/qwen_old_14/structured_context/suite_detalhes_fiction",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/tmp/avaliacao-prompts-playwright",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/repair_runs/qwen25coder_repair_20260728_01/qwen2-5-coder-7b/qwen_old_14/structured_context/suite_detalhes_fiction",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 20000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.61.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "suite_detalhes_fiction.spec.ts",
+      "file": "suite_detalhes_fiction.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Suite Detalhes Fiction",
+          "file": "suite_detalhes_fiction.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "The user searches for the product Fiction in the Search store field and opens its details page",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 20000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 4220,
+                      "error": {
+                        "message": "Error: locator.click: Error: strict mode violation: locator('a[href*=\\'fiction\\']') resolved to 4 elements:\n    1) <a href=\"/fiction\" title=\"Show details for Fiction\">…</a> aka getByRole('link', { name: 'Picture of Fiction', exact: true })\n    2) <a href=\"/fiction\">Fiction</a> aka getByRole('link', { name: 'Fiction', exact: true })\n    3) <a href=\"/fiction-ex\" title=\"Show details for Fiction EX\">…</a> aka getByRole('link', { name: 'Picture of Fiction EX' })\n    4) <a href=\"/fiction-ex\">Fiction EX</a> aka getByRole('link', { name: 'Fiction EX', exact: true })\n\nCall log:\n\u001b[2m  - waiting for locator('a[href*=\\'fiction\\']')\u001b[22m\n",
+                        "stack": "Error: locator.click: Error: strict mode violation: locator('a[href*=\\'fiction\\']') resolved to 4 elements:\n    1) <a href=\"/fiction\" title=\"Show details for Fiction\">…</a> aka getByRole('link', { name: 'Picture of Fiction', exact: true })\n    2) <a href=\"/fiction\">Fiction</a> aka getByRole('link', { name: 'Fiction', exact: true })\n    3) <a href=\"/fiction-ex\" title=\"Show details for Fiction EX\">…</a> aka getByRole('link', { name: 'Picture of Fiction EX' })\n    4) <a href=\"/fiction-ex\">Fiction EX</a> aka getByRole('link', { name: 'Fiction EX', exact: true })\n\nCall log:\n\u001b[2m  - waiting for locator('a[href*=\\'fiction\\']')\u001b[22m\n\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/repair_runs/qwen25coder_repair_20260728_01/qwen2-5-coder-7b/qwen_old_14/structured_context/suite_detalhes_fiction/suite_detalhes_fiction.spec.ts:15:23",
+                        "location": {
+                          "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/repair_runs/qwen25coder_repair_20260728_01/qwen2-5-coder-7b/qwen_old_14/structured_context/suite_detalhes_fiction/suite_detalhes_fiction.spec.ts",
+                          "column": 23,
+                          "line": 15
+                        },
+                        "snippet": "  13 |     // Etapa 2: The user opens the product Fiction in the search results.\n  14 |     const fictionLink = page.locator(\"a[href*='fiction']\");\n> 15 |     await fictionLink.click();\n     |                       ^\n  16 |\n  17 |     // Etapa 3: The system displays the details page with the name Fiction.\n  18 |     const fictionTitle = page.locator(\"h1\", { hasText: \"Fiction\" });"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/repair_runs/qwen25coder_repair_20260728_01/qwen2-5-coder-7b/qwen_old_14/structured_context/suite_detalhes_fiction/suite_detalhes_fiction.spec.ts",
+                            "column": 23,
+                            "line": 15
+                          },
+                          "message": "Error: locator.click: Error: strict mode violation: locator('a[href*=\\'fiction\\']') resolved to 4 elements:\n    1) <a href=\"/fiction\" title=\"Show details for Fiction\">…</a> aka getByRole('link', { name: 'Picture of Fiction', exact: true })\n    2) <a href=\"/fiction\">Fiction</a> aka getByRole('link', { name: 'Fiction', exact: true })\n    3) <a href=\"/fiction-ex\" title=\"Show details for Fiction EX\">…</a> aka getByRole('link', { name: 'Picture of Fiction EX' })\n    4) <a href=\"/fiction-ex\">Fiction EX</a> aka getByRole('link', { name: 'Fiction EX', exact: true })\n\nCall log:\n\u001b[2m  - waiting for locator('a[href*=\\'fiction\\']')\u001b[22m\n\n\n  13 |     // Etapa 2: The user opens the product Fiction in the search results.\n  14 |     const fictionLink = page.locator(\"a[href*='fiction']\");\n> 15 |     await fictionLink.click();\n     |                       ^\n  16 |\n  17 |     // Etapa 3: The system displays the details page with the name Fiction.\n  18 |     const fictionTitle = page.locator(\"h1\", { hasText: \"Fiction\" });\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/repair_runs/qwen25coder_repair_20260728_01/qwen2-5-coder-7b/qwen_old_14/structured_context/suite_detalhes_fiction/suite_detalhes_fiction.spec.ts:15:23"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-28T15:27:24.908Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/tmp/avaliacao-prompts-playwright/suite_detalhes_fiction-Sui-7dac8--and-opens-its-details-page/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/repair_runs/qwen25coder_repair_20260728_01/qwen2-5-coder-7b/qwen_old_14/structured_context/suite_detalhes_fiction/suite_detalhes_fiction.spec.ts",
+                        "column": 23,
+                        "line": 15
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "179492ad1a70311acabe-b7d549edd4bab8880e5c",
+              "file": "suite_detalhes_fiction.spec.ts",
+              "line": 4,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-07-28T15:27:23.903Z",
+    "duration": 5691.704,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

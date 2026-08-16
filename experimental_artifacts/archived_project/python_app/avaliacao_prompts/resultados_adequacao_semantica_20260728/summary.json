@@ -1,0 +1,147 @@
+{
+  "total_files": 132,
+  "conditions": [
+    {
+      "model": "gemini-3.6-flash",
+      "round": "gemini_new_20",
+      "condition": "baseline",
+      "files": 20,
+      "adequate": 12,
+      "partially_adequate": 8,
+      "inadequate": 0,
+      "adequacy_rate": 0.6,
+      "mean_semantic_score_6": 5.5,
+      "execution_passed": 8,
+      "syntax_errors": 1
+    },
+    {
+      "model": "gemini-3.6-flash",
+      "round": "gemini_new_20",
+      "condition": "structured_context",
+      "files": 20,
+      "adequate": 18,
+      "partially_adequate": 2,
+      "inadequate": 0,
+      "adequacy_rate": 0.9,
+      "mean_semantic_score_6": 5.9,
+      "execution_passed": 12,
+      "syntax_errors": 0
+    },
+    {
+      "model": "gpt-5.6-sol",
+      "round": "gpt_original_12",
+      "condition": "baseline",
+      "files": 12,
+      "adequate": 7,
+      "partially_adequate": 5,
+      "inadequate": 0,
+      "adequacy_rate": 0.5833,
+      "mean_semantic_score_6": 5.583,
+      "execution_passed": 7,
+      "syntax_errors": 0
+    },
+    {
+      "model": "gpt-5.6-sol",
+      "round": "gpt_original_12",
+      "condition": "structured_context",
+      "files": 12,
+      "adequate": 7,
+      "partially_adequate": 5,
+      "inadequate": 0,
+      "adequacy_rate": 0.5833,
+      "mean_semantic_score_6": 5.583,
+      "execution_passed": 7,
+      "syntax_errors": 0
+    },
+    {
+      "model": "qwen2.5-coder:7b",
+      "round": "qwen_new_20",
+      "condition": "baseline",
+      "files": 20,
+      "adequate": 0,
+      "partially_adequate": 19,
+      "inadequate": 1,
+      "adequacy_rate": 0.0,
+      "mean_semantic_score_6": 3.7,
+      "execution_passed": 0,
+      "syntax_errors": 0
+    },
+    {
+      "model": "qwen2.5-coder:7b",
+      "round": "qwen_new_20",
+      "condition": "structured_context",
+      "files": 20,
+      "adequate": 0,
+      "partially_adequate": 16,
+      "inadequate": 4,
+      "adequacy_rate": 0.0,
+      "mean_semantic_score_6": 3.9,
+      "execution_passed": 2,
+      "syntax_errors": 0
+    },
+    {
+      "model": "qwen2.5-coder:7b",
+      "round": "qwen_old_14",
+      "condition": "baseline",
+      "files": 14,
+      "adequate": 0,
+      "partially_adequate": 13,
+      "inadequate": 1,
+      "adequacy_rate": 0.0,
+      "mean_semantic_score_6": 3.143,
+      "execution_passed": 0,
+      "syntax_errors": 0
+    },
+    {
+      "model": "qwen2.5-coder:7b",
+      "round": "qwen_old_14",
+      "condition": "structured_context",
+      "files": 14,
+      "adequate": 0,
+      "partially_adequate": 12,
+      "inadequate": 2,
+      "adequacy_rate": 0.0,
+      "mean_semantic_score_6": 3.571,
+      "execution_passed": 2,
+      "syntax_errors": 0
+    }
+  ],
+  "paired_comparison": [
+    {
+      "model": "gemini-3.6-flash",
+      "round": "gemini_new_20",
+      "pairs": 20,
+      "structured_improved": 8,
+      "same_score": 11,
+      "structured_worsened": 1,
+      "mean_score_delta": 0.4
+    },
+    {
+      "model": "gpt-5.6-sol",
+      "round": "gpt_original_12",
+      "pairs": 12,
+      "structured_improved": 1,
+      "same_score": 10,
+      "structured_worsened": 1,
+      "mean_score_delta": 0.0
+    },
+    {
+      "model": "qwen2.5-coder:7b",
+      "round": "qwen_new_20",
+      "pairs": 20,
+      "structured_improved": 9,
+      "same_score": 6,
+      "structured_worsened": 5,
+      "mean_score_delta": 0.2
+    },
+    {
+      "model": "qwen2.5-coder:7b",
+      "round": "qwen_old_14",
+      "pairs": 14,
+      "structured_improved": 8,
+      "same_score": 3,
+      "structured_worsened": 3,
+      "mean_score_delta": 0.429
+    }
+  ]
+}

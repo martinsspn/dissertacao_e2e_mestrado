@@ -1,0 +1,3 @@
+Listing tests:
+  suite_enquete_sem_resposta.spec.ts:4:7 › Suite Enquete Sem Resposta › Deve impedir a votação sem selecionar uma resposta
+Total: 1 test in 1 file

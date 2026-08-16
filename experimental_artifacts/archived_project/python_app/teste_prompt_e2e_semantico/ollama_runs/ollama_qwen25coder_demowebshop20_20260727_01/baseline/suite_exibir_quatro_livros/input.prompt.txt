@@ -1,0 +1,1 @@
+Changing the number of books displayed per page: The user accesses the Books category. The user selects 4 in the Display control. The system keeps the Books category visible and displays no more than four product items on the current page.

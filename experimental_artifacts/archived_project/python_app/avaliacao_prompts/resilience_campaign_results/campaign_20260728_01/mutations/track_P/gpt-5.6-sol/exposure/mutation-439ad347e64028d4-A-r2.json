@@ -1,0 +1,135 @@
+{
+  "config": {
+    "argv": [
+      "/usr/bin/node",
+      "/home/martinsspn/dissertacao_e2e_semantico/node_modules/.bin/playwright",
+      "test",
+      "suite_login_invalido.spec.ts",
+      "--config=/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaigns/campaign_20260728_01/runtime/playwright/playwright.config.ts",
+      "--reporter=json",
+      "--workers=1",
+      "--retries=0",
+      "--trace=on",
+      "--output=/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/mutations/track_P/gpt-5.6-sol/exposure/mutation-439ad347e64028d4-A-r2.artifacts"
+    ],
+    "configFile": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaigns/campaign_20260728_01/runtime/playwright/playwright.config.ts",
+    "rootDir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaigns/campaign_20260728_01/prepared/track_P/gpt-5.6-sol/A",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/mutations/track_P/gpt-5.6-sol/exposure/mutation-439ad347e64028d4-A-r2.artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaigns/campaign_20260728_01/prepared/track_P/gpt-5.6-sol/A",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 20000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.61.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "suite_login_invalido.spec.ts",
+      "file": "suite_login_invalido.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Login attempt with an invalid password",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 20000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5042,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-07-28T19:42:13.174Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/mutations/track_P/gpt-5.6-sol/exposure/mutation-439ad347e64028d4-A-r2.artifacts/suite_login_invalido-Login-attempt-with-an-invalid-password/test-finished-1.png"
+                    },
+                    {
+                      "name": "resilience-mutation-events",
+                      "contentType": "application/json",
+                      "body": "WwogIHsKICAgICJtdXRhdGlvbklkIjogIm11dGF0aW9uLTQzOWFkMzQ3ZTY0MDI4ZDQiLAogICAgInRhcmdldElkIjogInRhcmdldC0zZTM1ZTQwMjlmODFmYjJlIiwKICAgICJ1cmwiOiAiaHR0cHM6Ly9kZW1vd2Vic2hvcC50cmljZW50aXMuY29tL2xvZ2luIiwKICAgICJzdGF0dXMiOiAibWFya2VkIiwKICAgICJkZXRhaWwiOiAiIgogIH0sCiAgewogICAgIm11dGF0aW9uSWQiOiAibXV0YXRpb24tNDM5YWQzNDdlNjQwMjhkNCIsCiAgICAidGFyZ2V0SWQiOiAidGFyZ2V0LTNlMzVlNDAyOWY4MWZiMmUiLAogICAgInVybCI6ICJodHRwczovL2RlbW93ZWJzaG9wLnRyaWNlbnRpcy5jb20vbG9naW4iLAogICAgInN0YXR1cyI6ICJpbnRlcmFjdGVkIiwKICAgICJkZXRhaWwiOiAiaW5wdXQiCiAgfSwKICB7CiAgICAibXV0YXRpb25JZCI6ICJtdXRhdGlvbi00MzlhZDM0N2U2NDAyOGQ0IiwKICAgICJ0YXJnZXRJZCI6ICJ0YXJnZXQtM2UzNWU0MDI5ZjgxZmIyZSIsCiAgICAidXJsIjogImh0dHBzOi8vZGVtb3dlYnNob3AudHJpY2VudGlzLmNvbS9sb2dpbiIsCiAgICAic3RhdHVzIjogImludGVyYWN0ZWQiLAogICAgImRldGFpbCI6ICJjaGFuZ2UiCiAgfSwKICB7CiAgICAibXV0YXRpb25JZCI6ICJtdXRhdGlvbi00MzlhZDM0N2U2NDAyOGQ0IiwKICAgICJ0YXJnZXRJZCI6ICJ0YXJnZXQtM2UzNWU0MDI5ZjgxZmIyZSIsCiAgICAidXJsIjogImh0dHBzOi8vZGVtb3dlYnNob3AudHJpY2VudGlzLmNvbS9sb2dpbiIsCiAgICAic3RhdHVzIjogIm1hcmtlZCIsCiAgICAiZGV0YWlsIjogIiIKICB9Cl0="
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/mutations/track_P/gpt-5.6-sol/exposure/mutation-439ad347e64028d4-A-r2.artifacts/suite_login_invalido-Login-attempt-with-an-invalid-password/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7f7239a4016ce59b97ad-9634f87e32e4fcc0fed4",
+          "file": "suite_login_invalido.spec.ts",
+          "line": 13,
+          "column": 5
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-07-28T19:42:12.115Z",
+    "duration": 6825.477,
+    "expected": 1,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

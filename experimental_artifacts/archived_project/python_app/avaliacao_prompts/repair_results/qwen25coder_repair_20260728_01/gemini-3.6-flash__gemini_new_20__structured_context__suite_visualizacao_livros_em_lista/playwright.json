@@ -1,0 +1,154 @@
+{
+  "config": {
+    "argv": [
+      "/usr/bin/node",
+      "/home/martinsspn/dissertacao_e2e_semantico/node_modules/.bin/playwright",
+      "test",
+      "suite_visualizacao_livros_em_lista.spec.ts",
+      "--config=/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/playwright.config.ts",
+      "--reporter=json"
+    ],
+    "configFile": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/playwright.config.ts",
+    "rootDir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/repair_runs/qwen25coder_repair_20260728_01/gemini-3-6-flash/gemini_new_20/structured_context/suite_visualizacao_livros_em_lista",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/tmp/avaliacao-prompts-playwright",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/repair_runs/qwen25coder_repair_20260728_01/gemini-3-6-flash/gemini_new_20/structured_context/suite_visualizacao_livros_em_lista",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 20000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.61.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "suite_visualizacao_livros_em_lista.spec.ts",
+      "file": "suite_visualizacao_livros_em_lista.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Suite Visualizacao Livros Em Lista",
+          "file": "suite_visualizacao_livros_em_lista.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "deve alternar a exibição da categoria Books para o modo lista",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 20000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 14273,
+                      "error": {
+                        "message": "TimeoutError: locator.selectOption: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#product-list').getByLabel('View as')\u001b[22m\n",
+                        "stack": "TimeoutError: locator.selectOption: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#product-list').getByLabel('View as')\u001b[22m\n\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/repair_runs/qwen25coder_repair_20260728_01/gemini-3-6-flash/gemini_new_20/structured_context/suite_visualizacao_livros_em_lista/suite_visualizacao_livros_em_lista.spec.ts:13:63",
+                        "location": {
+                          "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/repair_runs/qwen25coder_repair_20260728_01/gemini-3-6-flash/gemini_new_20/structured_context/suite_visualizacao_livros_em_lista/suite_visualizacao_livros_em_lista.spec.ts",
+                          "column": 63,
+                          "line": 13
+                        },
+                        "snippet": "  11 |\n  12 |     // Etapa 2: O usuário seleciona List no controle View as\n> 13 |     await page.locator('#product-list').getByLabel('View as').selectOption({ label: 'List' });\n     |                                                               ^\n  14 |\n  15 |     // Etapa 3: O sistema mantém a categoria Books visível e apresenta os produtos em lista\n  16 |     await expect(page.getByRole('heading', { name: 'Books' })).toBeVisible();"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/repair_runs/qwen25coder_repair_20260728_01/gemini-3-6-flash/gemini_new_20/structured_context/suite_visualizacao_livros_em_lista/suite_visualizacao_livros_em_lista.spec.ts",
+                            "column": 63,
+                            "line": 13
+                          },
+                          "message": "TimeoutError: locator.selectOption: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#product-list').getByLabel('View as')\u001b[22m\n\n\n  11 |\n  12 |     // Etapa 2: O usuário seleciona List no controle View as\n> 13 |     await page.locator('#product-list').getByLabel('View as').selectOption({ label: 'List' });\n     |                                                               ^\n  14 |\n  15 |     // Etapa 3: O sistema mantém a categoria Books visível e apresenta os produtos em lista\n  16 |     await expect(page.getByRole('heading', { name: 'Books' })).toBeVisible();\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/repair_runs/qwen25coder_repair_20260728_01/gemini-3-6-flash/gemini_new_20/structured_context/suite_visualizacao_livros_em_lista/suite_visualizacao_livros_em_lista.spec.ts:13:63"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-28T15:05:44.198Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/tmp/avaliacao-prompts-playwright/suite_visualizacao_livros_-4e94c-ria-Books-para-o-modo-lista/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/repair_runs/qwen25coder_repair_20260728_01/gemini-3-6-flash/gemini_new_20/structured_context/suite_visualizacao_livros_em_lista/suite_visualizacao_livros_em_lista.spec.ts",
+                        "column": 63,
+                        "line": 13
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "85a035ab5d29d2279d94-2816776832fe11f72bce",
+              "file": "suite_visualizacao_livros_em_lista.spec.ts",
+              "line": 4,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-07-28T15:05:43.061Z",
+    "duration": 15865.247,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

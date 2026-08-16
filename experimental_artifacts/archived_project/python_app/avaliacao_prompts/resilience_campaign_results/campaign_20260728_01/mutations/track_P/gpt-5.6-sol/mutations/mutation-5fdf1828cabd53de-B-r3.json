@@ -1,0 +1,144 @@
+{
+  "config": {
+    "argv": [
+      "/usr/bin/node",
+      "/home/martinsspn/dissertacao_e2e_semantico/node_modules/.bin/playwright",
+      "test",
+      "suite_login_invalido.spec.ts",
+      "--config=/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaigns/campaign_20260728_01/runtime/playwright/playwright.config.ts",
+      "--reporter=json",
+      "--workers=1",
+      "--retries=0",
+      "--trace=on",
+      "--output=/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/mutations/track_P/gpt-5.6-sol/mutations/mutation-5fdf1828cabd53de-B-r3.artifacts"
+    ],
+    "configFile": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaigns/campaign_20260728_01/runtime/playwright/playwright.config.ts",
+    "rootDir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaigns/campaign_20260728_01/prepared/track_P/gpt-5.6-sol/B",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/mutations/track_P/gpt-5.6-sol/mutations/mutation-5fdf1828cabd53de-B-r3.artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaigns/campaign_20260728_01/prepared/track_P/gpt-5.6-sol/B",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 20000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.61.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "suite_login_invalido.spec.ts",
+      "file": "suite_login_invalido.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Suite Login Invalido",
+          "file": "suite_login_invalido.spec.ts",
+          "line": 6,
+          "column": 6,
+          "specs": [
+            {
+              "title": "mantem o usuario nao autenticado ao informar senha invalida",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 20000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 4841,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-28T19:40:38.719Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/mutations/track_P/gpt-5.6-sol/mutations/mutation-5fdf1828cabd53de-B-r3.artifacts/suite_login_invalido-Suite-66829--ao-informar-senha-invalida/test-finished-1.png"
+                        },
+                        {
+                          "name": "resilience-mutation-events",
+                          "contentType": "application/json",
+                          "body": "WwogIHsKICAgICJtdXRhdGlvbklkIjogIm11dGF0aW9uLTVmZGYxODI4Y2FiZDUzZGUiLAogICAgInRhcmdldElkIjogInRhcmdldC1hYjBlODgwODhlNmJhYWQ1IiwKICAgICJ1cmwiOiAiaHR0cHM6Ly9kZW1vd2Vic2hvcC50cmljZW50aXMuY29tL2xvZ2luIiwKICAgICJzdGF0dXMiOiAiYXBwbGllZCIsCiAgICAiZGV0YWlsIjogIiIKICB9LAogIHsKICAgICJtdXRhdGlvbklkIjogIm11dGF0aW9uLTVmZGYxODI4Y2FiZDUzZGUiLAogICAgInRhcmdldElkIjogInRhcmdldC1hYjBlODgwODhlNmJhYWQ1IiwKICAgICJ1cmwiOiAiaHR0cHM6Ly9kZW1vd2Vic2hvcC50cmljZW50aXMuY29tL2xvZ2luIiwKICAgICJzdGF0dXMiOiAiaW50ZXJhY3RlZCIsCiAgICAiZGV0YWlsIjogImlucHV0IgogIH0sCiAgewogICAgIm11dGF0aW9uSWQiOiAibXV0YXRpb24tNWZkZjE4MjhjYWJkNTNkZSIsCiAgICAidGFyZ2V0SWQiOiAidGFyZ2V0LWFiMGU4ODA4OGU2YmFhZDUiLAogICAgInVybCI6ICJodHRwczovL2RlbW93ZWJzaG9wLnRyaWNlbnRpcy5jb20vbG9naW4iLAogICAgInN0YXR1cyI6ICJpbnRlcmFjdGVkIiwKICAgICJkZXRhaWwiOiAiY2hhbmdlIgogIH0sCiAgewogICAgIm11dGF0aW9uSWQiOiAibXV0YXRpb24tNWZkZjE4MjhjYWJkNTNkZSIsCiAgICAidGFyZ2V0SWQiOiAidGFyZ2V0LWFiMGU4ODA4OGU2YmFhZDUiLAogICAgInVybCI6ICJodHRwczovL2RlbW93ZWJzaG9wLnRyaWNlbnRpcy5jb20vbG9naW4iLAogICAgInN0YXR1cyI6ICJhcHBsaWVkIiwKICAgICJkZXRhaWwiOiAiIgogIH0KXQ=="
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/mutations/track_P/gpt-5.6-sol/mutations/mutation-5fdf1828cabd53de-B-r3.artifacts/suite_login_invalido-Suite-66829--ao-informar-senha-invalida/trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "7f7239a4016ce59b97ad-51396274fc9430dd432c",
+              "file": "suite_login_invalido.spec.ts",
+              "line": 7,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-07-28T19:40:37.629Z",
+    "duration": 6714.471,
+    "expected": 1,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

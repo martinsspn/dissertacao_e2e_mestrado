@@ -1,0 +1,144 @@
+{
+  "config": {
+    "argv": [
+      "/usr/bin/node",
+      "/home/martinsspn/dissertacao_e2e_semantico/node_modules/.bin/playwright",
+      "test",
+      "suite_cadastro_confirmacao_senha.spec.ts",
+      "--config=/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaigns/campaign_20260728_01/runtime/playwright/playwright.config.ts",
+      "--reporter=json",
+      "--workers=1",
+      "--retries=0",
+      "--trace=on",
+      "--output=/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/mutations/track_P/gemini-3.6-flash/exposure/mutation-d5cd8e90b29b1b31-B-r2.artifacts"
+    ],
+    "configFile": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaigns/campaign_20260728_01/runtime/playwright/playwright.config.ts",
+    "rootDir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaigns/campaign_20260728_01/prepared/track_P/gemini-3.6-flash/B",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/mutations/track_P/gemini-3.6-flash/exposure/mutation-d5cd8e90b29b1b31-B-r2.artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaigns/campaign_20260728_01/prepared/track_P/gemini-3.6-flash/B",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 20000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.61.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "suite_cadastro_confirmacao_senha.spec.ts",
+      "file": "suite_cadastro_confirmacao_senha.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Suite Cadastro Confirmacao Senha",
+          "file": "suite_cadastro_confirmacao_senha.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Deve exibir erro ao tentar cadastrar com senhas divergentes",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 20000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 4942,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-28T19:20:46.264Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/mutations/track_P/gemini-3.6-flash/exposure/mutation-d5cd8e90b29b1b31-B-r2.artifacts/suite_cadastro_confirmacao-dda84-trar-com-senhas-divergentes/test-finished-1.png"
+                        },
+                        {
+                          "name": "resilience-mutation-events",
+                          "contentType": "application/json",
+                          "body": "WwogIHsKICAgICJtdXRhdGlvbklkIjogIm11dGF0aW9uLWQ1Y2Q4ZTkwYjI5YjFiMzEiLAogICAgInRhcmdldElkIjogInRhcmdldC1kMzBhYmE1OTYyM2EzNjlkIiwKICAgICJ1cmwiOiAiaHR0cHM6Ly9kZW1vd2Vic2hvcC50cmljZW50aXMuY29tL3JlZ2lzdGVyIiwKICAgICJzdGF0dXMiOiAibWFya2VkIiwKICAgICJkZXRhaWwiOiAiIgogIH0sCiAgewogICAgIm11dGF0aW9uSWQiOiAibXV0YXRpb24tZDVjZDhlOTBiMjliMWIzMSIsCiAgICAidGFyZ2V0SWQiOiAidGFyZ2V0LWQzMGFiYTU5NjIzYTM2OWQiLAogICAgInVybCI6ICJodHRwczovL2RlbW93ZWJzaG9wLnRyaWNlbnRpcy5jb20vcmVnaXN0ZXIiLAogICAgInN0YXR1cyI6ICJpbnRlcmFjdGVkIiwKICAgICJkZXRhaWwiOiAiaW5wdXQiCiAgfSwKICB7CiAgICAibXV0YXRpb25JZCI6ICJtdXRhdGlvbi1kNWNkOGU5MGIyOWIxYjMxIiwKICAgICJ0YXJnZXRJZCI6ICJ0YXJnZXQtZDMwYWJhNTk2MjNhMzY5ZCIsCiAgICAidXJsIjogImh0dHBzOi8vZGVtb3dlYnNob3AudHJpY2VudGlzLmNvbS9yZWdpc3RlciIsCiAgICAic3RhdHVzIjogImludGVyYWN0ZWQiLAogICAgImRldGFpbCI6ICJjaGFuZ2UiCiAgfQpd"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/mutations/track_P/gemini-3.6-flash/exposure/mutation-d5cd8e90b29b1b31-B-r2.artifacts/suite_cadastro_confirmacao-dda84-trar-com-senhas-divergentes/trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "51f27eb1d4e883d20ddc-fe9ee056e0a54c24a1ad",
+              "file": "suite_cadastro_confirmacao_senha.spec.ts",
+              "line": 4,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-07-28T19:20:45.193Z",
+    "duration": 6745.66,
+    "expected": 1,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

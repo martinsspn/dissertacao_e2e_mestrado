@@ -1,0 +1,3 @@
+Listing tests:
+  suite_enquete_sem_resposta.spec.ts:4:7 › Suite Enquete Sem Resposta › The user accesses the Demo Web Shop home page in a new browser context and tries to vote without selecting an answer
+Total: 1 test in 1 file

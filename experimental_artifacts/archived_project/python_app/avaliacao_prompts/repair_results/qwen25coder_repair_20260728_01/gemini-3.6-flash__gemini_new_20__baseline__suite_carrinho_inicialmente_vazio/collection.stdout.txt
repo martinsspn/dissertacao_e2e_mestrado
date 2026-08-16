@@ -1,0 +1,3 @@
+Listing tests:
+  suite_carrinho_inicialmente_vazio.spec.ts:4:7 › Shopping Cart - Empty State › displays empty cart message and zero item count when accessed without adding products
+Total: 1 test in 1 file

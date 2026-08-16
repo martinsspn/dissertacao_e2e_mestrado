@@ -1,0 +1,93 @@
+{
+  "schema_version": 1,
+  "selection_method": "exploratory_homepage_search_controls_without_reading_test_locators",
+  "source_disclosure": "Targets came from the frozen pre-generation catalog. Class names were read from the public DOM on 2026-07-20. This is a separate exploratory plan created after initial results and is not part of the confirmatory frozen plan.",
+  "source_plan_sha256": "44fe459525f513719dc46a9bb394fa77d00c8fe1679bc77d4fbedb16b5da4e7b",
+  "observed_dom_classes": {
+    "small-searchterms": "search-box-text ui-autocomplete-input",
+    "Search submit": "button-1 search-box-button"
+  },
+  "catalog_size": 2,
+  "mutation_count": 3,
+  "mutations": [
+    {
+      "mutation_id": "mutation-7b4b97f072a744db",
+      "stratum": "implementation_attribute_change",
+      "operator": "rename_id",
+      "target": {
+        "target_id": "target-6f6fe7e4b2d96a06",
+        "scenario_id": "suite_busca_blue_jeans",
+        "step": 1,
+        "ordinal": "1",
+        "page_url": "https://demowebshop.tricentis.com/",
+        "action": "fill",
+        "tag": "input",
+        "attributes": {
+          "id": "small-searchterms",
+          "name": "q",
+          "input_type": "text",
+          "value": "Search store",
+          "form_action": "/search",
+          "form_method": "GET"
+        },
+        "source_prompt": "suite_busca_blue_jeans.structured_context.prompt.md"
+      },
+      "parameters": {
+        "new_value": "small-searchterms--exploratory"
+      }
+    },
+    {
+      "mutation_id": "mutation-c46dd5a0d76ba968",
+      "stratum": "implementation_attribute_change",
+      "operator": "rename_class",
+      "target": {
+        "target_id": "target-6f6fe7e4b2d96a06",
+        "scenario_id": "suite_busca_blue_jeans",
+        "step": 1,
+        "ordinal": "1",
+        "page_url": "https://demowebshop.tricentis.com/",
+        "action": "fill",
+        "tag": "input",
+        "attributes": {
+          "id": "small-searchterms",
+          "name": "q",
+          "input_type": "text",
+          "value": "Search store",
+          "form_action": "/search",
+          "form_method": "GET"
+        },
+        "source_prompt": "suite_busca_blue_jeans.structured_context.prompt.md"
+      },
+      "parameters": {
+        "old_value": "search-box-text",
+        "new_value": "search-box-text--exploratory"
+      }
+    },
+    {
+      "mutation_id": "mutation-62c12f9ceba25067",
+      "stratum": "implementation_attribute_change",
+      "operator": "rename_class",
+      "target": {
+        "target_id": "target-b07d4eccac8216ab",
+        "scenario_id": "suite_busca_blue_jeans",
+        "step": 1,
+        "ordinal": "2",
+        "page_url": "https://demowebshop.tricentis.com/",
+        "action": "click",
+        "tag": "input",
+        "attributes": {
+          "input_type": "submit",
+          "value": "Search",
+          "form_action": "/search",
+          "form_method": "GET"
+        },
+        "source_prompt": "suite_busca_blue_jeans.structured_context.prompt.md"
+      },
+      "parameters": {
+        "old_value": "search-box-button",
+        "new_value": "search-box-button--exploratory"
+      }
+    }
+  ],
+  "plan_sha256": "eb8b218eb4610c65ff6e57943d2b3af64e71d11aed779640c90fc6b050fba0c8"
+}

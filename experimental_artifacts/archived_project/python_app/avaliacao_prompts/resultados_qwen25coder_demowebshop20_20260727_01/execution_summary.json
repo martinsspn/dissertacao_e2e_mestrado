@@ -1,0 +1,87 @@
+{
+  "run_id": "ollama_qwen25coder_demowebshop20_20260727_01",
+  "model": "qwen2.5-coder:7b",
+  "application": "https://demowebshop.tricentis.com/",
+  "playwright_version": "1.61.1",
+  "aggregation_unit": "generated_file_and_natural_language_specification",
+  "conditions": {
+    "baseline": {
+      "generated_files": 20,
+      "playwright_test_blocks": 20,
+      "passed_test_blocks": 0,
+      "failed_test_blocks": 20,
+      "passed_files": 0,
+      "failed_files": 20,
+      "file_pass_rate": 0.0,
+      "playwright_wall_duration_seconds": 280.457,
+      "aggregated_test_duration_seconds": 251.041,
+      "failure_types_by_file": {
+        "locator_timeout": 16,
+        "assertion_failure": 4
+      },
+      "passed_file_names": []
+    },
+    "structured_context": {
+      "generated_files": 20,
+      "playwright_test_blocks": 25,
+      "passed_test_blocks": 6,
+      "failed_test_blocks": 19,
+      "block_pass_rate": 0.24,
+      "passed_files": 2,
+      "failed_files": 18,
+      "file_pass_rate": 0.1,
+      "playwright_wall_duration_seconds": 209.805,
+      "aggregated_test_duration_seconds_after_authenticated_rerun": 192.235,
+      "failure_types_by_file_after_authenticated_rerun": {
+        "locator_timeout": 3,
+        "selector_ambiguity": 2,
+        "assertion_failure": 13
+      },
+      "passed_file_names": [
+        "fluxo_computadores_desktops",
+        "suite_navegar_sobre_nos"
+      ]
+    }
+  },
+  "comparison": {
+    "file_pass_rate_difference_percentage_points": 10.0,
+    "additional_passed_files_with_structured_context": 2
+  },
+  "execution_settings": {
+    "headless": true,
+    "browser_name": "chromium",
+    "channel": "chromium",
+    "workers": 1,
+    "fully_parallel": false,
+    "retries": 0,
+    "test_timeout_ms": 20000,
+    "expect_timeout_ms": 7000,
+    "navigation_timeout_ms": 15000,
+    "action_timeout_ms": 10000,
+    "fresh_browser_context_per_playwright_test": true,
+    "condition_runs_separate": true
+  },
+  "authenticated_scenario": {
+    "scenario": "suite_persistencia_carrinho_apos_login",
+    "initial_result": "environment_not_configured",
+    "mitigation": "created a unique synthetic account and reran only this scenario with TEST_EMAIL and TEST_PASSWORD",
+    "authenticated_rerun_result": "failed",
+    "authenticated_rerun_failure": "generated locator button[type=\"submit\"] did not match the real login submit control",
+    "credentials_recorded_in_artifacts": false
+  },
+  "artifacts": {
+    "baseline_playwright_json": "baseline.playwright.json",
+    "baseline_log": "baseline.playwright.log",
+    "structured_playwright_json": "structured_context.playwright.json",
+    "structured_log": "structured_context.playwright.log",
+    "authenticated_rerun_json": "structured_context.authenticated_rerun.playwright.json",
+    "authenticated_rerun_log": "structured_context.authenticated_rerun.playwright.log",
+    "baseline_report": "../relatorios/qwen25coder_demowebshop20_baseline_execucao_20260727_01.md",
+    "structured_report": "../relatorios/qwen25coder_demowebshop20_structured_execucao_20260727_01.md"
+  },
+  "notes": [
+    "A generated file is considered passed only when all Playwright test() blocks in that file pass.",
+    "Passing isolated blocks from a fragmented scenario does not make the natural-language specification pass.",
+    "Execution success alone does not establish semantic conformity."
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "track_id": "P",
+  "model_id": "gemini-3.6-flash",
+  "scenario_ids": [
+    "suite_cadastro_campos_obrigatorios",
+    "suite_cadastro_confirmacao_senha",
+    "suite_navegar_categoria_livros"
+  ]
+}

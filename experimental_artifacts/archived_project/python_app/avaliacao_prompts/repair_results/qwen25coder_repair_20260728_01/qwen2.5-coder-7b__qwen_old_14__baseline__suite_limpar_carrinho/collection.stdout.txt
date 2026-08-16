@@ -1,0 +1,3 @@
+Listing tests:
+  suite_limpar_carrinho.spec.ts:11:7 › Remove all products from the cart › should remove Blue Jeans from the cart
+Total: 1 test in 1 file

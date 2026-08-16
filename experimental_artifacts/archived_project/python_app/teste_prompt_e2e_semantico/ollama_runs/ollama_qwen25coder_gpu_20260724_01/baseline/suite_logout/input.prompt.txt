@@ -1,0 +1,1 @@
+User session termination: The user is authenticated with valid credentials provided by the testing environment. The user selects Log out. The system terminates the session. The system displays the Log in link again.

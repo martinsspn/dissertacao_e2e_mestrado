@@ -1,0 +1,3 @@
+Listing tests:
+  suite_detalhes_fiction.spec.ts:4:7 › Suite Detalhes Fiction › The user searches for the product Fiction in the Search store field and opens its details page
+Total: 1 test in 1 file

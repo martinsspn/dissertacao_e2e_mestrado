@@ -1,0 +1,23 @@
+{
+  "model": "granite3.2-vision:latest",
+  "created_at": "2026-07-24T17:53:36.754576495Z",
+  "done": true,
+  "done_reason": "length",
+  "total_duration": 981170671030,
+  "load_duration": 70394859,
+  "prompt_eval_count": 1201,
+  "prompt_eval_duration": 34457095801,
+  "eval_count": 4096,
+  "eval_duration": 944229143221,
+  "condition": "structured_context",
+  "scenario": "suite_configurar_desktop",
+  "model_requested": "granite3.2-vision:latest",
+  "seed": 20260724,
+  "temperature": 0,
+  "num_ctx": 16384,
+  "num_predict": 4096,
+  "elapsed_seconds_client": 981.187,
+  "input_sha256": "30753c999d3caee38670a0cafecd2a1cfe43902af24e3bb136577035c49eff90",
+  "response_sha256": "d6eee9325d0c978f959e04745c44625126e1ab895400449fa5e34c386230ee24",
+  "stateless": true
+}

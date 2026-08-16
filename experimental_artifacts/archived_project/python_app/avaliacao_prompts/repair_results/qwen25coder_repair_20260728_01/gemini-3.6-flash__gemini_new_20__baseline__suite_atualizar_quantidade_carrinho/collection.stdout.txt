@@ -1,0 +1,3 @@
+Listing tests:
+  suite_atualizar_quantidade_carrinho.spec.ts:4:7 › Shopping Cart Quantity Update › should update product quantity in cart and reflect correct subtotal
+Total: 1 test in 1 file

@@ -1,0 +1,3 @@
+Listing tests:
+  suite_exibir_quatro_livros.spec.ts:4:7 › Books Category Display Control › should keep Books visible and display no more than 4 items when 4 is selected
+Total: 1 test in 1 file

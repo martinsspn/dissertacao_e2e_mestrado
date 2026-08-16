@@ -1,0 +1,18 @@
+$ docker compose run --rm prompt_e2e
+
+ Container neo4j_graph  Running
+ Container selenium_chrome  Running
+[prompt-e2e] /app/specs/fluxo_computadores_desktops.txt [structured_context] -> /app/generated_prompts/fluxo_computadores_desktops.structured_context.prompt.md (1 etapas, 2 itens de contexto, 2362 caracteres)
+[prompt-e2e] /app/specs/suite_adicionar_carrinho.txt [structured_context] -> /app/generated_prompts/suite_adicionar_carrinho.structured_context.prompt.md (6 etapas, 6 itens de contexto, 3348 caracteres)
+[prompt-e2e] /app/specs/suite_adicionar_wishlist.txt [structured_context] -> /app/generated_prompts/suite_adicionar_wishlist.structured_context.prompt.md (7 etapas, 6 itens de contexto, 3481 caracteres)
+[prompt-e2e] /app/specs/suite_busca_blue_jeans.txt [structured_context] -> /app/generated_prompts/suite_busca_blue_jeans.structured_context.prompt.md (4 etapas, 4 itens de contexto, 2756 caracteres)
+[prompt-e2e] /app/specs/suite_checkout_blue_jeans.txt [structured_context] -> /app/generated_prompts/suite_checkout_blue_jeans.structured_context.prompt.md (12 etapas, 6 itens de contexto, 3789 caracteres)
+[prompt-e2e] /app/specs/suite_configurar_desktop.txt [structured_context] -> /app/generated_prompts/suite_configurar_desktop.structured_context.prompt.md (7 etapas, 6 itens de contexto, 3198 caracteres)
+[prompt-e2e] /app/specs/suite_detalhes_fiction.txt [structured_context] -> /app/generated_prompts/suite_detalhes_fiction.structured_context.prompt.md (4 etapas, 4 itens de contexto, 2754 caracteres)
+[prompt-e2e] /app/specs/suite_limpar_carrinho.txt [structured_context] -> /app/generated_prompts/suite_limpar_carrinho.structured_context.prompt.md (5 etapas, 3 itens de contexto, 2736 caracteres)
+[prompt-e2e] /app/specs/suite_limpar_wishlist.txt [structured_context] -> /app/generated_prompts/suite_limpar_wishlist.structured_context.prompt.md (6 etapas, 2 itens de contexto, 2570 caracteres)
+[prompt-e2e] /app/specs/suite_login_invalido.txt [structured_context] -> /app/generated_prompts/suite_login_invalido.structured_context.prompt.md (4 etapas, 5 itens de contexto, 3050 caracteres)
+[prompt-e2e] /app/specs/suite_login_valido.txt [structured_context] -> /app/generated_prompts/suite_login_valido.structured_context.prompt.md (4 etapas, 5 itens de contexto, 3002 caracteres)
+[prompt-e2e] /app/specs/suite_logout.txt [structured_context] -> /app/generated_prompts/suite_logout.structured_context.prompt.md (4 etapas, 0 itens de contexto, 2192 caracteres)
+[prompt-e2e] /app/specs/suite_registro_usuario.txt [structured_context] -> /app/generated_prompts/suite_registro_usuario.structured_context.prompt.md (8 etapas, 8 itens de contexto, 4044 caracteres)
+[prompt-e2e] /app/specs/user_registration_book_purchase.txt [structured_context] -> /app/generated_prompts/user_registration_book_purchase.structured_context.prompt.md (21 etapas, 16 itens de contexto, 6371 caracteres)

@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "mutation_plan": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaigns/campaign_20260728_01/plans/gemini_new_20.mutation_plan.json",
+  "mutation_plan_sha256": "7e1ed1318e46271b4a055e9a475e38b85f31b6f22c4614d4033656450fcbbbfc",
+  "fixture": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaigns/campaign_20260728_01/runtime/playwright/fixture.ts",
+  "fixture_sha256": "754f39892284ec2553a52ec727dfb892d2e3208cea7309fb818a5cb74f926c10",
+  "track_id": "R",
+  "model_id": "gemini-3.6-flash",
+  "allowlist": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaigns/campaign_20260728_01/allowlists/track_R_gemini-3.6-flash.json",
+  "allowlist_sha256": "fe789a8242dbb9eac6b2f8b54dec0c416732ac6d7f439b822b5ecdf057bf9abc",
+  "semantic_review": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaigns/campaign_20260728_01/reviews/track_R_review_bundle.json",
+  "semantic_review_sha256": "800a6803b8ee13b1954c67a6a4eafa54a76be6cd353b82f26d92ea0702745bf8",
+  "transformation": "only_replace_import_source_from_@playwright/test_to_frozen_fixture",
+  "condition_key": {
+    "A": "baseline",
+    "B": "structured_context"
+  },
+  "pairs": [
+    {
+      "scenario_id": "fluxo_computadores_desktops",
+      "baseline_original": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaigns/campaign_20260728_01/cohort_sources/track_R/gemini-3.6-flash/baseline/fluxo_computadores_desktops.spec.ts",
+      "structured_original": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaigns/campaign_20260728_01/cohort_sources/track_R/gemini-3.6-flash/structured_context/fluxo_computadores_desktops.spec.ts",
+      "baseline_sha256": "44661686d0404f8ac51146749ae839fe584768152177451e8ad0103e1f45e1a2",
+      "structured_sha256": "fc7bbd655c1726c681346cab4ad68a77fa924912dacfb5c62a1148fb73a03ec5",
+      "baseline_derived": "013126ca0f60657804cdd68297284092a999419b734f907759ed395be02d6fb1",
+      "structured_derived": "7870e2dc18142212af55dfd3ff88a373898555bb6d4f5d4d2d52651a8747ed72"
+    },
+    {
+      "scenario_id": "suite_navegar_sobre_nos",
+      "baseline_original": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaigns/campaign_20260728_01/cohort_sources/track_R/gemini-3.6-flash/baseline/suite_navegar_sobre_nos.spec.ts",
+      "structured_original": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaigns/campaign_20260728_01/cohort_sources/track_R/gemini-3.6-flash/structured_context/suite_navegar_sobre_nos.spec.ts",
+      "baseline_sha256": "0c6b0d29fc76a1c16010c4ee1ce17c17c04dc55b0e53bf43c6653f5bdb13c8ff",
+      "structured_sha256": "e79c29d2ec369c3dbd348e6aff0b98fe3c1bfb17e3134a359fd0e5764ec2f654",
+      "baseline_derived": "e56643fb8c6c904cd216f7c6dc21e8cc83a17d76804370bb74b5000169ca4b6c",
+      "structured_derived": "c1de68c2079007ca694c1197bd0c0bab7aeb3e752930c517cd51e1dd0a31a312"
+    }
+  ],
+  "execution_manifest_sha256": "80fd5e10decfc8045b98f2e4d0defced0e2e0bb067f9ce00f38df892afd9bdeb"
+}

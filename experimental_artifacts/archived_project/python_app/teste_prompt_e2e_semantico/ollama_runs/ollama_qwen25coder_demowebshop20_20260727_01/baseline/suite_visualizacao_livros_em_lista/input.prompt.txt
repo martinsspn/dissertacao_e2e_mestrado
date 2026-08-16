@@ -1,0 +1,1 @@
+Changing the book catalog view: The user accesses the Books category, which initially presents the Grid view. The user selects List in the View as control. The system keeps the Books category visible and presents its products using the list view.

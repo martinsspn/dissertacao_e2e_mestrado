@@ -1,0 +1,6 @@
+$ docker compose up -d neo4j selenium_chrome
+
+ Container 5cb3393c0e26_selenium_chrome  Created
+ Container 1620f46a737b_neo4j_graph  Running
+ Container 5cb3393c0e26_selenium_chrome  Starting
+ Container 5cb3393c0e26_selenium_chrome  Started

@@ -1,0 +1,1704 @@
+{
+  "config": {
+    "argv": [
+      "/usr/bin/node",
+      "/home/martinsspn/dissertacao_e2e_semantico/node_modules/.bin/playwright",
+      "test",
+      "--config",
+      "playwright.config.ts",
+      "--reporter=line,json"
+    ],
+    "configFile": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/playwright.config.ts",
+    "rootDir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/tmp/avaliacao-prompts-playwright",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 20000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "line"
+      ],
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.61.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "fluxo_computadores_desktops.spec.ts",
+      "file": "fluxo_computadores_desktops.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Digital Downloads Page",
+          "file": "fluxo_computadores_desktops.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should display the digital downloads page",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 20000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 11791,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.digital-item')\nExpected: visible\nTimeout: 7000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 7000ms\u001b[22m\n\u001b[2m  - waiting for locator('.digital-item')\u001b[22m\n",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.digital-item')\nExpected: visible\nTimeout: 7000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 7000ms\u001b[22m\n\u001b[2m  - waiting for locator('.digital-item')\u001b[22m\n\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/fluxo_computadores_desktops.spec.ts:10:32",
+                        "location": {
+                          "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/fluxo_computadores_desktops.spec.ts",
+                          "column": 32,
+                          "line": 10
+                        },
+                        "snippet": "   8 |     // Wait for the digital items to be visible\n   9 |     const digitalItems = page.locator('.digital-item');\n> 10 |     await expect(digitalItems).toBeVisible();\n     |                                ^\n  11 |\n  12 |     // Validate that the digital downloads page is visible\n  13 |     const pageTitle = page.locator('h1');"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/fluxo_computadores_desktops.spec.ts",
+                            "column": 32,
+                            "line": 10
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.digital-item')\nExpected: visible\nTimeout: 7000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 7000ms\u001b[22m\n\u001b[2m  - waiting for locator('.digital-item')\u001b[22m\n\n\n   8 |     // Wait for the digital items to be visible\n   9 |     const digitalItems = page.locator('.digital-item');\n> 10 |     await expect(digitalItems).toBeVisible();\n     |                                ^\n  11 |\n  12 |     // Validate that the digital downloads page is visible\n  13 |     const pageTitle = page.locator('h1');\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/fluxo_computadores_desktops.spec.ts:10:32"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-27T18:42:00.195Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/tmp/avaliacao-prompts-playwright/fluxo_computadores_desktop-09ce9--the-digital-downloads-page/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/fluxo_computadores_desktops.spec.ts",
+                        "column": 32,
+                        "line": 10
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "5ffdfa1a8a18bafbf733-8715cb57179142f6df7c",
+              "file": "fluxo_computadores_desktops.spec.ts",
+              "line": 4,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "suite_adicionar_dois_produtos_carrinho.spec.ts",
+      "file": "suite_adicionar_dois_produtos_carrinho.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Cart Test",
+          "file": "suite_adicionar_dois_produtos_carrinho.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Adding two different products to the cart",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 20000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 13823,
+                      "error": {
+                        "message": "TimeoutError: page.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#computing-product')\u001b[22m\n",
+                        "stack": "TimeoutError: page.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#computing-product')\u001b[22m\n\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_adicionar_dois_produtos_carrinho.spec.ts:9:16",
+                        "location": {
+                          "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_adicionar_dois_produtos_carrinho.spec.ts",
+                          "column": 16,
+                          "line": 9
+                        },
+                        "snippet": "   7 |\n   8 |     // Add Computing product to the cart\n>  9 |     await page.click('#computing-product');\n     |                ^\n  10 |     await page.click('#add-to-cart-computing');\n  11 |\n  12 |     // Add Fiction product to the cart"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_adicionar_dois_produtos_carrinho.spec.ts",
+                            "column": 16,
+                            "line": 9
+                          },
+                          "message": "TimeoutError: page.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#computing-product')\u001b[22m\n\n\n   7 |\n   8 |     // Add Computing product to the cart\n>  9 |     await page.click('#computing-product');\n     |                ^\n  10 |     await page.click('#add-to-cart-computing');\n  11 |\n  12 |     // Add Fiction product to the cart\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_adicionar_dois_produtos_carrinho.spec.ts:9:16"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-27T18:42:14.166Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/tmp/avaliacao-prompts-playwright/suite_adicionar_dois_produ-61d4e-ferent-products-to-the-cart/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_adicionar_dois_produtos_carrinho.spec.ts",
+                        "column": 16,
+                        "line": 9
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "733afb2cd731fa9edb91-2ffcf83aa57319cf0a5a",
+              "file": "suite_adicionar_dois_produtos_carrinho.spec.ts",
+              "line": 4,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "suite_atualizar_quantidade_carrinho.spec.ts",
+      "file": "suite_atualizar_quantidade_carrinho.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Updating a product quantity in the cart",
+          "file": "suite_atualizar_quantidade_carrinho.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should update the quantity of Computing and Internet to two and keep it in the cart",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 20000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 12870,
+                      "error": {
+                        "message": "TimeoutError: page.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('text=Computing and Internet')\u001b[22m\n",
+                        "stack": "TimeoutError: page.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('text=Computing and Internet')\u001b[22m\n\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_atualizar_quantidade_carrinho.spec.ts:7:16",
+                        "location": {
+                          "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_atualizar_quantidade_carrinho.spec.ts",
+                          "column": 16,
+                          "line": 7
+                        },
+                        "snippet": "   5 |     // Add Computing and Internet to the cart\n   6 |     await page.goto('/products');\n>  7 |     await page.click('text=Computing and Internet');\n     |                ^\n   8 |     await page.click('button=add-to-cart');\n   9 |\n  10 |     // Access Shopping cart"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_atualizar_quantidade_carrinho.spec.ts",
+                            "column": 16,
+                            "line": 7
+                          },
+                          "message": "TimeoutError: page.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('text=Computing and Internet')\u001b[22m\n\n\n   5 |     // Add Computing and Internet to the cart\n   6 |     await page.goto('/products');\n>  7 |     await page.click('text=Computing and Internet');\n     |                ^\n   8 |     await page.click('button=add-to-cart');\n   9 |\n  10 |     // Access Shopping cart\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_atualizar_quantidade_carrinho.spec.ts:7:16"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-27T18:42:33.032Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/tmp/avaliacao-prompts-playwright/suite_atualizar_quantidade-69f93-two-and-keep-it-in-the-cart/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_atualizar_quantidade_carrinho.spec.ts",
+                        "column": 16,
+                        "line": 7
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "0631d563be86abbaa468-1fedc2e4bb640b1eac09",
+              "file": "suite_atualizar_quantidade_carrinho.spec.ts",
+              "line": 4,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "suite_busca_sem_resultados.spec.ts",
+      "file": "suite_busca_sem_resultados.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Search for nonexistent product",
+          "file": "suite_busca_sem_resultados.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should display no results message when searching for a nonexistent product",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 20000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 13923,
+                      "error": {
+                        "message": "TimeoutError: locator.fill: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#search-input')\u001b[22m\n",
+                        "stack": "TimeoutError: locator.fill: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#search-input')\u001b[22m\n\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_busca_sem_resultados.spec.ts:10:23",
+                        "location": {
+                          "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_busca_sem_resultados.spec.ts",
+                          "column": 23,
+                          "line": 10
+                        },
+                        "snippet": "   8 |     // Enter a unique term that does not correspond to any product\n   9 |     const searchInput = page.locator('#search-input');\n> 10 |     await searchInput.fill('nonexistent-product-term');\n     |                       ^\n  11 |\n  12 |     // Submit the search\n  13 |     const searchButton = page.locator('#search-button');"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_busca_sem_resultados.spec.ts",
+                            "column": 23,
+                            "line": 10
+                          },
+                          "message": "TimeoutError: locator.fill: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#search-input')\u001b[22m\n\n\n   8 |     // Enter a unique term that does not correspond to any product\n   9 |     const searchInput = page.locator('#search-input');\n> 10 |     await searchInput.fill('nonexistent-product-term');\n     |                       ^\n  11 |\n  12 |     // Submit the search\n  13 |     const searchButton = page.locator('#search-button');\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_busca_sem_resultados.spec.ts:10:23"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-27T18:42:47.321Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/tmp/avaliacao-prompts-playwright/suite_busca_sem_resultados-82470-g-for-a-nonexistent-product/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_busca_sem_resultados.spec.ts",
+                        "column": 23,
+                        "line": 10
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "2fa21ebe7e7d4f5dd10e-7ccd052e4fd34f192db6",
+              "file": "suite_busca_sem_resultados.spec.ts",
+              "line": 4,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "suite_cadastro_campos_obrigatorios.spec.ts",
+      "file": "suite_cadastro_campos_obrigatorios.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Validation of required registration fields",
+          "file": "suite_cadastro_campos_obrigatorios.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should display validation messages for empty fields",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 20000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 13146,
+                      "error": {
+                        "message": "TimeoutError: page.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button[type=\"submit\"]')\u001b[22m\n",
+                        "stack": "TimeoutError: page.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button[type=\"submit\"]')\u001b[22m\n\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_cadastro_campos_obrigatorios.spec.ts:19:16",
+                        "location": {
+                          "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_cadastro_campos_obrigatorios.spec.ts",
+                          "column": 16,
+                          "line": 19
+                        },
+                        "snippet": "  17 |\n  18 |     // Submit the form\n> 19 |     await page.click('button[type=\"submit\"]');\n     |                ^\n  20 |\n  21 |     // Check for validation messages\n  22 |     await expect(page.locator('.message-error')).toHaveText('First name is required.');"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_cadastro_campos_obrigatorios.spec.ts",
+                            "column": 16,
+                            "line": 19
+                          },
+                          "message": "TimeoutError: page.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button[type=\"submit\"]')\u001b[22m\n\n\n  17 |\n  18 |     // Submit the form\n> 19 |     await page.click('button[type=\"submit\"]');\n     |                ^\n  20 |\n  21 |     // Check for validation messages\n  22 |     await expect(page.locator('.message-error')).toHaveText('First name is required.');\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_cadastro_campos_obrigatorios.spec.ts:19:16"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-27T18:43:06.237Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/tmp/avaliacao-prompts-playwright/suite_cadastro_campos_obri-7f462-n-messages-for-empty-fields/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_cadastro_campos_obrigatorios.spec.ts",
+                        "column": 16,
+                        "line": 19
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "aaa9aa6f840f1d71d364-da22adffabf28bdb7ec8",
+              "file": "suite_cadastro_campos_obrigatorios.spec.ts",
+              "line": 4,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "suite_cadastro_confirmacao_senha.spec.ts",
+      "file": "suite_cadastro_confirmacao_senha.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Validation of mismatched registration passwords",
+          "file": "suite_cadastro_confirmacao_senha.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should inform when password and confirmation password do not match",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 20000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 5,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 13067,
+                      "error": {
+                        "message": "TimeoutError: page.fill: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#firstName')\u001b[22m\n",
+                        "stack": "TimeoutError: page.fill: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#firstName')\u001b[22m\n\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_cadastro_confirmacao_senha.spec.ts:9:16",
+                        "location": {
+                          "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_cadastro_confirmacao_senha.spec.ts",
+                          "column": 16,
+                          "line": 9
+                        },
+                        "snippet": "   7 |\n   8 |     // Fill in First name and Last name with valid data\n>  9 |     await page.fill('#firstName', 'John');\n     |                ^\n  10 |     await page.fill('#lastName', 'Doe');\n  11 |\n  12 |     // Fill in Email with a unique address generated for this execution"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_cadastro_confirmacao_senha.spec.ts",
+                            "column": 16,
+                            "line": 9
+                          },
+                          "message": "TimeoutError: page.fill: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#firstName')\u001b[22m\n\n\n   7 |\n   8 |     // Fill in First name and Last name with valid data\n>  9 |     await page.fill('#firstName', 'John');\n     |                ^\n  10 |     await page.fill('#lastName', 'Doe');\n  11 |\n  12 |     // Fill in Email with a unique address generated for this execution\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_cadastro_confirmacao_senha.spec.ts:9:16"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-27T18:43:20.795Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/tmp/avaliacao-prompts-playwright/suite_cadastro_confirmacao-3bc51-ation-password-do-not-match/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_cadastro_confirmacao_senha.spec.ts",
+                        "column": 16,
+                        "line": 9
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "51f27eb1d4e883d20ddc-a03c4b048f1f04919e08",
+              "file": "suite_cadastro_confirmacao_senha.spec.ts",
+              "line": 4,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "suite_cadastro_senha_curta.spec.ts",
+      "file": "suite_cadastro_senha_curta.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Short registration password validation",
+          "file": "suite_cadastro_senha_curta.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should prevent registration with short password",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 20000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 6,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 12894,
+                      "error": {
+                        "message": "TimeoutError: page.fill: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#firstName')\u001b[22m\n",
+                        "stack": "TimeoutError: page.fill: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#firstName')\u001b[22m\n\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_cadastro_senha_curta.spec.ts:9:16",
+                        "location": {
+                          "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_cadastro_senha_curta.spec.ts",
+                          "column": 16,
+                          "line": 9
+                        },
+                        "snippet": "   7 |\n   8 |     // Fill in First name and Last name with valid data\n>  9 |     await page.fill('#firstName', 'John');\n     |                ^\n  10 |     await page.fill('#lastName', 'Doe');\n  11 |\n  12 |     // Fill in Email with a unique address generated for this execution"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_cadastro_senha_curta.spec.ts",
+                            "column": 16,
+                            "line": 9
+                          },
+                          "message": "TimeoutError: page.fill: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#firstName')\u001b[22m\n\n\n   7 |\n   8 |     // Fill in First name and Last name with valid data\n>  9 |     await page.fill('#firstName', 'John');\n     |                ^\n  10 |     await page.fill('#lastName', 'Doe');\n  11 |\n  12 |     // Fill in Email with a unique address generated for this execution\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_cadastro_senha_curta.spec.ts:9:16"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-27T18:43:35.295Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/tmp/avaliacao-prompts-playwright/suite_cadastro_senha_curta-3c45c-tration-with-short-password/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_cadastro_senha_curta.spec.ts",
+                        "column": 16,
+                        "line": 9
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "17823d8be8fb679760fc-90cb0f756d7edc2761b9",
+              "file": "suite_cadastro_senha_curta.spec.ts",
+              "line": 4,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "suite_carrinho_inicialmente_vazio.spec.ts",
+      "file": "suite_carrinho_inicialmente_vazio.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Viewing an empty shopping cart",
+          "file": "suite_carrinho_inicialmente_vazio.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should display the shopping cart page with zero items and an empty message",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 20000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 7,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 12753,
+                      "error": {
+                        "message": "TimeoutError: page.textContent: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('.item-count')\u001b[22m\n",
+                        "stack": "TimeoutError: page.textContent: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('.item-count')\u001b[22m\n\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_carrinho_inicialmente_vazio.spec.ts:9:34",
+                        "location": {
+                          "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_carrinho_inicialmente_vazio.spec.ts",
+                          "column": 34,
+                          "line": 9
+                        },
+                        "snippet": "   7 |\n   8 |     // Check if the item count is displayed as zero\n>  9 |     const itemCount = await page.textContent('.item-count');\n     |                                  ^\n  10 |     expect(itemCount).toBe('0');\n  11 |\n  12 |     // Check if the empty cart message is displayed"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_carrinho_inicialmente_vazio.spec.ts",
+                            "column": 34,
+                            "line": 9
+                          },
+                          "message": "TimeoutError: page.textContent: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('.item-count')\u001b[22m\n\n\n   7 |\n   8 |     // Check if the item count is displayed as zero\n>  9 |     const itemCount = await page.textContent('.item-count');\n     |                                  ^\n  10 |     expect(itemCount).toBe('0');\n  11 |\n  12 |     // Check if the empty cart message is displayed\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_carrinho_inicialmente_vazio.spec.ts:9:34"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-27T18:43:53.221Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/tmp/avaliacao-prompts-playwright/suite_carrinho_inicialment-cbf1c--items-and-an-empty-message/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_carrinho_inicialmente_vazio.spec.ts",
+                        "column": 34,
+                        "line": 9
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "416516fdabcf7507d9d7-fbf496259751d58fb394",
+              "file": "suite_carrinho_inicialmente_vazio.spec.ts",
+              "line": 4,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "suite_comparar_produtos.spec.ts",
+      "file": "suite_comparar_produtos.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Product Comparison",
+          "file": "suite_comparar_produtos.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should add two products to compare list and display them on Compare Products page",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 20000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 8,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 13817,
+                      "error": {
+                        "message": "TimeoutError: page.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#addToCompareButton')\u001b[22m\n",
+                        "stack": "TimeoutError: page.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#addToCompareButton')\u001b[22m\n\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_comparar_produtos.spec.ts:8:16",
+                        "location": {
+                          "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_comparar_produtos.spec.ts",
+                          "column": 16,
+                          "line": 8
+                        },
+                        "snippet": "   6 |     await page.goto('/computing-and-internet');\n   7 |     // Select Add to compare list\n>  8 |     await page.click('#addToCompareButton');\n     |                ^\n   9 |\n  10 |     // Navigate to Fiction product page\n  11 |     await page.goto('/fiction');"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_comparar_produtos.spec.ts",
+                            "column": 16,
+                            "line": 8
+                          },
+                          "message": "TimeoutError: page.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#addToCompareButton')\u001b[22m\n\n\n   6 |     await page.goto('/computing-and-internet');\n   7 |     // Select Add to compare list\n>  8 |     await page.click('#addToCompareButton');\n     |                ^\n   9 |\n  10 |     // Navigate to Fiction product page\n  11 |     await page.goto('/fiction');\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_comparar_produtos.spec.ts:8:16"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-27T18:44:07.363Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/tmp/avaliacao-prompts-playwright/suite_comparar_produtos-Pr-8e467-em-on-Compare-Products-page/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_comparar_produtos.spec.ts",
+                        "column": 16,
+                        "line": 8
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "c7461115bb411687791d-eb7ed4bad23755fc047d",
+              "file": "suite_comparar_produtos.spec.ts",
+              "line": 4,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "suite_enquete_sem_resposta.spec.ts",
+      "file": "suite_enquete_sem_resposta.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Community Poll Voting",
+          "file": "suite_enquete_sem_resposta.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should prevent voting without selecting an answer",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 20000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 9,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 13422,
+                      "error": {
+                        "message": "TimeoutError: page.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('text=\"Community polls\"')\u001b[22m\n",
+                        "stack": "TimeoutError: page.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('text=\"Community polls\"')\u001b[22m\n\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_enquete_sem_resposta.spec.ts:9:16",
+                        "location": {
+                          "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_enquete_sem_resposta.spec.ts",
+                          "column": 16,
+                          "line": 9
+                        },
+                        "snippet": "   7 |\n   8 |     // Navigate to the Community poll titled \"Do you like nopCommerce?\"\n>  9 |     await page.click('text=\"Community polls\"');\n     |                ^\n  10 |     await page.click('text=\"Do you like nopCommerce?\"');\n  11 |\n  12 |     // Attempt to vote without selecting an answer"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_enquete_sem_resposta.spec.ts",
+                            "column": 16,
+                            "line": 9
+                          },
+                          "message": "TimeoutError: page.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('text=\"Community polls\"')\u001b[22m\n\n\n   7 |\n   8 |     // Navigate to the Community poll titled \"Do you like nopCommerce?\"\n>  9 |     await page.click('text=\"Community polls\"');\n     |                ^\n  10 |     await page.click('text=\"Do you like nopCommerce?\"');\n  11 |\n  12 |     // Attempt to vote without selecting an answer\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_enquete_sem_resposta.spec.ts:9:16"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-27T18:44:26.213Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/tmp/avaliacao-prompts-playwright/suite_enquete_sem_resposta-793a9-without-selecting-an-answer/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_enquete_sem_resposta.spec.ts",
+                        "column": 16,
+                        "line": 9
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "4387e95b3423d9c93de2-c8aad2b2a22d30cfe9e6",
+              "file": "suite_enquete_sem_resposta.spec.ts",
+              "line": 4,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "suite_exibir_quatro_livros.spec.ts",
+      "file": "suite_exibir_quatro_livros.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Books Category Display Control",
+          "file": "suite_exibir_quatro_livros.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "displays no more than four product items when 4 is selected in the Display control",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 20000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 10,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 13005,
+                      "error": {
+                        "message": "TimeoutError: locator.selectOption: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#display-control')\u001b[22m\n",
+                        "stack": "TimeoutError: locator.selectOption: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#display-control')\u001b[22m\n\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_exibir_quatro_livros.spec.ts:10:44",
+                        "location": {
+                          "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_exibir_quatro_livros.spec.ts",
+                          "column": 44,
+                          "line": 10
+                        },
+                        "snippet": "   8 |   test('displays no more than four product items when 4 is selected in the Display control', async ({ page }) => {\n   9 |     // Select 4 in the Display control\n> 10 |     await page.locator('#display-control').selectOption('4');\n     |                                            ^\n  11 |\n  12 |     // Wait for the products to update\n  13 |     await page.waitForSelector('.product-item');"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_exibir_quatro_livros.spec.ts",
+                            "column": 44,
+                            "line": 10
+                          },
+                          "message": "TimeoutError: locator.selectOption: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#display-control')\u001b[22m\n\n\n   8 |   test('displays no more than four product items when 4 is selected in the Display control', async ({ page }) => {\n   9 |     // Select 4 in the Display control\n> 10 |     await page.locator('#display-control').selectOption('4');\n     |                                            ^\n  11 |\n  12 |     // Wait for the products to update\n  13 |     await page.waitForSelector('.product-item');\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_exibir_quatro_livros.spec.ts:10:44"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-27T18:44:41.069Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/tmp/avaliacao-prompts-playwright/suite_exibir_quatro_livros-6ef10-cted-in-the-Display-control/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_exibir_quatro_livros.spec.ts",
+                        "column": 44,
+                        "line": 10
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "05e94cded513047be844-fcc7b38ad5ec361d2b08",
+              "file": "suite_exibir_quatro_livros.spec.ts",
+              "line": 8,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "suite_filtrar_livros_abaixo_25.spec.ts",
+      "file": "suite_filtrar_livros_abaixo_25.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Filtering books by price",
+          "file": "suite_filtrar_livros_abaixo_25.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should keep the Books category visible and display only products under 25.00",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 20000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 11,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 13978,
+                      "error": {
+                        "message": "TimeoutError: page.textContent: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('.product-price')\u001b[22m\n",
+                        "stack": "TimeoutError: page.textContent: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('.product-price')\u001b[22m\n\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_filtrar_livros_abaixo_25.spec.ts:15:38",
+                        "location": {
+                          "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_filtrar_livros_abaixo_25.spec.ts",
+                          "column": 38,
+                          "line": 15
+                        },
+                        "snippet": "  13 |\n  14 |     // Verify that only products under 25.00 are displayed\n> 15 |     const productPrices = await page.textContent('.product-price');\n     |                                      ^\n  16 |     expect(productPrices).not.toContain('Over 25.00');\n  17 |   });\n  18 | });"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_filtrar_livros_abaixo_25.spec.ts",
+                            "column": 38,
+                            "line": 15
+                          },
+                          "message": "TimeoutError: page.textContent: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('.product-price')\u001b[22m\n\n\n  13 |\n  14 |     // Verify that only products under 25.00 are displayed\n> 15 |     const productPrices = await page.textContent('.product-price');\n     |                                      ^\n  16 |     expect(productPrices).not.toContain('Over 25.00');\n  17 |   });\n  18 | });\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_filtrar_livros_abaixo_25.spec.ts:15:38"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-27T18:44:59.132Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/tmp/avaliacao-prompts-playwright/suite_filtrar_livros_abaix-f8ce0-y-only-products-under-25-00/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_filtrar_livros_abaixo_25.spec.ts",
+                        "column": 38,
+                        "line": 15
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "f9dda60718c7fc964024-c0d3a2816256f8b42e01",
+              "file": "suite_filtrar_livros_abaixo_25.spec.ts",
+              "line": 4,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "suite_navegar_cartoes_presente.spec.ts",
+      "file": "suite_navegar_cartoes_presente.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Gift Cards Category",
+          "file": "suite_navegar_cartoes_presente.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "displays the Gift Cards category page with breadcrumb and products",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 20000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 12,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 12148,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.breadcrumb')\nTimeout: 7000ms\n\u001b[32m- Expected substring  - 1\u001b[39m\n\u001b[31m+ Received string     + 9\u001b[39m\n\n\u001b[32m- Home > Gift Cards\u001b[39m\n\u001b[31m+\u001b[39m\n\u001b[31m+ \u001b[43m        \u001b[49m\u001b[39m\n\u001b[31m+             Home\u001b[39m\n\u001b[31m+                 /\u001b[43m \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m                \u001b[49m\u001b[39m\n\u001b[31m+                         Gift Cards\u001b[39m\n\u001b[31m+ \u001b[43m                \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m        \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m    \u001b[49m\u001b[39m\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" with timeout 7000ms\u001b[22m\n\u001b[2m  - waiting for locator('.breadcrumb')\u001b[22m\n\u001b[2m    18 × locator resolved to <div class=\"breadcrumb\">…</div>\u001b[22m\n\u001b[2m       - unexpected value \"\u001b[22m\n\u001b[2m        \u001b[22m\n\u001b[2m            Home\u001b[22m\n\u001b[2m                / \u001b[22m\n\u001b[2m                \u001b[22m\n\u001b[2m                        Gift Cards\u001b[22m\n\u001b[2m                \u001b[22m\n\u001b[2m        \u001b[22m\n\u001b[2m    \"\u001b[22m\n",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.breadcrumb')\nTimeout: 7000ms\n\u001b[32m- Expected substring  - 1\u001b[39m\n\u001b[31m+ Received string     + 9\u001b[39m\n\n\u001b[32m- Home > Gift Cards\u001b[39m\n\u001b[31m+\u001b[39m\n\u001b[31m+ \u001b[43m        \u001b[49m\u001b[39m\n\u001b[31m+             Home\u001b[39m\n\u001b[31m+                 /\u001b[43m \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m                \u001b[49m\u001b[39m\n\u001b[31m+                         Gift Cards\u001b[39m\n\u001b[31m+ \u001b[43m                \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m        \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m    \u001b[49m\u001b[39m\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" with timeout 7000ms\u001b[22m\n\u001b[2m  - waiting for locator('.breadcrumb')\u001b[22m\n\u001b[2m    18 × locator resolved to <div class=\"breadcrumb\">…</div>\u001b[22m\n\u001b[2m       - unexpected value \"\u001b[22m\n\u001b[2m        \u001b[22m\n\u001b[2m            Home\u001b[22m\n\u001b[2m                / \u001b[22m\n\u001b[2m                \u001b[22m\n\u001b[2m                        Gift Cards\u001b[22m\n\u001b[2m                \u001b[22m\n\u001b[2m        \u001b[22m\n\u001b[2m    \"\u001b[22m\n\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_navegar_cartoes_presente.spec.ts:13:47",
+                        "location": {
+                          "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_navegar_cartoes_presente.spec.ts",
+                          "column": 47,
+                          "line": 13
+                        },
+                        "snippet": "  11 |     // System displays the Gift Cards category page, its breadcrumb, and the available gift card products\n  12 |     await expect(page.locator('h1')).toHaveText('Gift Cards');\n> 13 |     await expect(page.locator('.breadcrumb')).toContainText('Home > Gift Cards');\n     |                                               ^\n  14 |     await expect(page.locator('.product-list-item')).toBeVisible();\n  15 |   });\n  16 | });"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_navegar_cartoes_presente.spec.ts",
+                            "column": 47,
+                            "line": 13
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.breadcrumb')\nTimeout: 7000ms\n\u001b[32m- Expected substring  - 1\u001b[39m\n\u001b[31m+ Received string     + 9\u001b[39m\n\n\u001b[32m- Home > Gift Cards\u001b[39m\n\u001b[31m+\u001b[39m\n\u001b[31m+ \u001b[43m        \u001b[49m\u001b[39m\n\u001b[31m+             Home\u001b[39m\n\u001b[31m+                 /\u001b[43m \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m                \u001b[49m\u001b[39m\n\u001b[31m+                         Gift Cards\u001b[39m\n\u001b[31m+ \u001b[43m                \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m        \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m    \u001b[49m\u001b[39m\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" with timeout 7000ms\u001b[22m\n\u001b[2m  - waiting for locator('.breadcrumb')\u001b[22m\n\u001b[2m    18 × locator resolved to <div class=\"breadcrumb\">…</div>\u001b[22m\n\u001b[2m       - unexpected value \"\u001b[22m\n\u001b[2m        \u001b[22m\n\u001b[2m            Home\u001b[22m\n\u001b[2m                / \u001b[22m\n\u001b[2m                \u001b[22m\n\u001b[2m                        Gift Cards\u001b[22m\n\u001b[2m                \u001b[22m\n\u001b[2m        \u001b[22m\n\u001b[2m    \"\u001b[22m\n\n\n  11 |     // System displays the Gift Cards category page, its breadcrumb, and the available gift card products\n  12 |     await expect(page.locator('h1')).toHaveText('Gift Cards');\n> 13 |     await expect(page.locator('.breadcrumb')).toContainText('Home > Gift Cards');\n     |                                               ^\n  14 |     await expect(page.locator('.product-list-item')).toBeVisible();\n  15 |   });\n  16 | });\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_navegar_cartoes_presente.spec.ts:13:47"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-27T18:45:14.507Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/tmp/avaliacao-prompts-playwright/suite_navegar_cartoes_pres-ab661-ith-breadcrumb-and-products/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_navegar_cartoes_presente.spec.ts",
+                        "column": 47,
+                        "line": 13
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "0f27faa2236d41ed8b7f-22fffa2afc542902abf5",
+              "file": "suite_navegar_cartoes_presente.spec.ts",
+              "line": 4,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "suite_navegar_categoria_livros.spec.ts",
+      "file": "suite_navegar_categoria_livros.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Books Category Test",
+          "file": "suite_navegar_categoria_livros.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should display the Books category page with correct breadcrumb and products",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 20000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 13,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 10873,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.breadcrumb')\nTimeout: 7000ms\n\u001b[32m- Expected substring  - 1\u001b[39m\n\u001b[31m+ Received string     + 9\u001b[39m\n\n\u001b[32m- Home > Books\u001b[39m\n\u001b[31m+\u001b[39m\n\u001b[31m+ \u001b[43m        \u001b[49m\u001b[39m\n\u001b[31m+             Home\u001b[39m\n\u001b[31m+                 /\u001b[43m \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m                \u001b[49m\u001b[39m\n\u001b[31m+                         Books\u001b[39m\n\u001b[31m+ \u001b[43m                \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m        \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m    \u001b[49m\u001b[39m\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" with timeout 7000ms\u001b[22m\n\u001b[2m  - waiting for locator('.breadcrumb')\u001b[22m\n\u001b[2m    18 × locator resolved to <div class=\"breadcrumb\">…</div>\u001b[22m\n\u001b[2m       - unexpected value \"\u001b[22m\n\u001b[2m        \u001b[22m\n\u001b[2m            Home\u001b[22m\n\u001b[2m                / \u001b[22m\n\u001b[2m                \u001b[22m\n\u001b[2m                        Books\u001b[22m\n\u001b[2m                \u001b[22m\n\u001b[2m        \u001b[22m\n\u001b[2m    \"\u001b[22m\n",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.breadcrumb')\nTimeout: 7000ms\n\u001b[32m- Expected substring  - 1\u001b[39m\n\u001b[31m+ Received string     + 9\u001b[39m\n\n\u001b[32m- Home > Books\u001b[39m\n\u001b[31m+\u001b[39m\n\u001b[31m+ \u001b[43m        \u001b[49m\u001b[39m\n\u001b[31m+             Home\u001b[39m\n\u001b[31m+                 /\u001b[43m \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m                \u001b[49m\u001b[39m\n\u001b[31m+                         Books\u001b[39m\n\u001b[31m+ \u001b[43m                \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m        \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m    \u001b[49m\u001b[39m\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" with timeout 7000ms\u001b[22m\n\u001b[2m  - waiting for locator('.breadcrumb')\u001b[22m\n\u001b[2m    18 × locator resolved to <div class=\"breadcrumb\">…</div>\u001b[22m\n\u001b[2m       - unexpected value \"\u001b[22m\n\u001b[2m        \u001b[22m\n\u001b[2m            Home\u001b[22m\n\u001b[2m                / \u001b[22m\n\u001b[2m                \u001b[22m\n\u001b[2m                        Books\u001b[22m\n\u001b[2m                \u001b[22m\n\u001b[2m        \u001b[22m\n\u001b[2m    \"\u001b[22m\n\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_navegar_categoria_livros.spec.ts:12:47",
+                        "location": {
+                          "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_navegar_categoria_livros.spec.ts",
+                          "column": 47,
+                          "line": 12
+                        },
+                        "snippet": "  10 |\n  11 |     // System displays the Books category page, its breadcrumb, and the available book products\n> 12 |     await expect(page.locator('.breadcrumb')).toContainText('Home > Books');\n     |                                               ^\n  13 |     await expect(page.locator('.product-list-item')).toHaveCount(3);\n  14 |     await expect(page.locator('.product-name:has-text(\"Computing and Internet\")')).toBeVisible();\n  15 |     await expect(page.locator('.product-name:has-text(\"Fiction\")')).toBeVisible();"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_navegar_categoria_livros.spec.ts",
+                            "column": 47,
+                            "line": 12
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.breadcrumb')\nTimeout: 7000ms\n\u001b[32m- Expected substring  - 1\u001b[39m\n\u001b[31m+ Received string     + 9\u001b[39m\n\n\u001b[32m- Home > Books\u001b[39m\n\u001b[31m+\u001b[39m\n\u001b[31m+ \u001b[43m        \u001b[49m\u001b[39m\n\u001b[31m+             Home\u001b[39m\n\u001b[31m+                 /\u001b[43m \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m                \u001b[49m\u001b[39m\n\u001b[31m+                         Books\u001b[39m\n\u001b[31m+ \u001b[43m                \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m        \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m    \u001b[49m\u001b[39m\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" with timeout 7000ms\u001b[22m\n\u001b[2m  - waiting for locator('.breadcrumb')\u001b[22m\n\u001b[2m    18 × locator resolved to <div class=\"breadcrumb\">…</div>\u001b[22m\n\u001b[2m       - unexpected value \"\u001b[22m\n\u001b[2m        \u001b[22m\n\u001b[2m            Home\u001b[22m\n\u001b[2m                / \u001b[22m\n\u001b[2m                \u001b[22m\n\u001b[2m                        Books\u001b[22m\n\u001b[2m                \u001b[22m\n\u001b[2m        \u001b[22m\n\u001b[2m    \"\u001b[22m\n\n\n  10 |\n  11 |     // System displays the Books category page, its breadcrumb, and the available book products\n> 12 |     await expect(page.locator('.breadcrumb')).toContainText('Home > Books');\n     |                                               ^\n  13 |     await expect(page.locator('.product-list-item')).toHaveCount(3);\n  14 |     await expect(page.locator('.product-name:has-text(\"Computing and Internet\")')).toBeVisible();\n  15 |     await expect(page.locator('.product-name:has-text(\"Fiction\")')).toBeVisible();\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_navegar_categoria_livros.spec.ts:12:47"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-27T18:45:31.676Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/tmp/avaliacao-prompts-playwright/suite_navegar_categoria_li-0408a-ect-breadcrumb-and-products/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_navegar_categoria_livros.spec.ts",
+                        "column": 47,
+                        "line": 12
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "61bc05f7827c8102ba30-3515529da9dc5272f129",
+              "file": "suite_navegar_categoria_livros.spec.ts",
+              "line": 4,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "suite_navegar_sobre_nos.spec.ts",
+      "file": "suite_navegar_sobre_nos.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Institutional Information Page",
+          "file": "suite_navegar_sobre_nos.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should display the About us page and its corresponding heading",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 20000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 14,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 11169,
+                      "error": {
+                        "message": "TimeoutError: page.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('footer a:has-text(\"Information\")')\u001b[22m\n",
+                        "stack": "TimeoutError: page.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('footer a:has-text(\"Information\")')\u001b[22m\n\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_navegar_sobre_nos.spec.ts:9:16",
+                        "location": {
+                          "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_navegar_sobre_nos.spec.ts",
+                          "column": 16,
+                          "line": 9
+                        },
+                        "snippet": "   7 |\n   8 |     // Select About us in the Information section of the footer\n>  9 |     await page.click('footer a:has-text(\"Information\")');\n     |                ^\n  10 |     await page.click('a:has-text(\"About us\")');\n  11 |\n  12 |     // Verify that the About us page is displayed"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_navegar_sobre_nos.spec.ts",
+                            "column": 16,
+                            "line": 9
+                          },
+                          "message": "TimeoutError: page.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('footer a:has-text(\"Information\")')\u001b[22m\n\n\n   7 |\n   8 |     // Select About us in the Information section of the footer\n>  9 |     await page.click('footer a:has-text(\"Information\")');\n     |                ^\n  10 |     await page.click('a:has-text(\"About us\")');\n  11 |\n  12 |     // Verify that the About us page is displayed\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_navegar_sobre_nos.spec.ts:9:16"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-27T18:45:43.961Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/tmp/avaliacao-prompts-playwright/suite_navegar_sobre_nos-In-eb6a3-d-its-corresponding-heading/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_navegar_sobre_nos.spec.ts",
+                        "column": 16,
+                        "line": 9
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "a4f6fd2d19baf70beb70-7d0fb056862b67033abd",
+              "file": "suite_navegar_sobre_nos.spec.ts",
+              "line": 4,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "suite_ordenar_livros_por_preco.spec.ts",
+      "file": "suite_ordenar_livros_por_preco.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Sorting books by ascending price",
+          "file": "suite_ordenar_livros_por_preco.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should sort books by ascending price",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 20000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 15,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 13191,
+                      "error": {
+                        "message": "TimeoutError: page.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('text=Price: Low to High')\u001b[22m\n\u001b[2m    - locator resolved to <option value=\"https://demowebshop.tricentis.com/books?orderby=10\">Price: Low to High</option>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not visible\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not visible\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    19 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is not visible\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n",
+                        "stack": "TimeoutError: page.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('text=Price: Low to High')\u001b[22m\n\u001b[2m    - locator resolved to <option value=\"https://demowebshop.tricentis.com/books?orderby=10\">Price: Low to High</option>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not visible\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not visible\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    19 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is not visible\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_ordenar_livros_por_preco.spec.ts:10:16",
+                        "location": {
+                          "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_ordenar_livros_por_preco.spec.ts",
+                          "column": 16,
+                          "line": 10
+                        },
+                        "snippet": "   8 |     // Select Price: Low to High in the Sort by control\n   9 |     await page.click('text=Sort by');\n> 10 |     await page.click('text=Price: Low to High');\n     |                ^\n  11 |\n  12 |     // The system keeps the Books category visible and displays the products in nondecreasing order according to their current sale prices\n  13 |     const productPrices = await page.locator('.product-price').allTextContents();"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_ordenar_livros_por_preco.spec.ts",
+                            "column": 16,
+                            "line": 10
+                          },
+                          "message": "TimeoutError: page.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('text=Price: Low to High')\u001b[22m\n\u001b[2m    - locator resolved to <option value=\"https://demowebshop.tricentis.com/books?orderby=10\">Price: Low to High</option>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not visible\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not visible\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    19 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is not visible\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n\n\n   8 |     // Select Price: Low to High in the Sort by control\n   9 |     await page.click('text=Sort by');\n> 10 |     await page.click('text=Price: Low to High');\n     |                ^\n  11 |\n  12 |     // The system keeps the Books category visible and displays the products in nondecreasing order according to their current sale prices\n  13 |     const productPrices = await page.locator('.product-price').allTextContents();\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_ordenar_livros_por_preco.spec.ts:10:16"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-27T18:45:56.609Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/tmp/avaliacao-prompts-playwright/suite_ordenar_livros_por_p-9bc33-rt-books-by-ascending-price/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_ordenar_livros_por_preco.spec.ts",
+                        "column": 16,
+                        "line": 10
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "6a0ecf7bc5c58eb26676-47727fbebd0163367abc",
+              "file": "suite_ordenar_livros_por_preco.spec.ts",
+              "line": 4,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "suite_persistencia_carrinho_apos_login.spec.ts",
+      "file": "suite_persistencia_carrinho_apos_login.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Persistence of an authenticated user's cart",
+          "file": "suite_persistencia_carrinho_apos_login.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should persist the cart across sessions",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 20000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 16,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 10349,
+                      "error": {
+                        "message": "TimeoutError: page.fill: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#username')\u001b[22m\n",
+                        "stack": "TimeoutError: page.fill: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#username')\u001b[22m\n\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_persistencia_carrinho_apos_login.spec.ts:17:16",
+                        "location": {
+                          "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_persistencia_carrinho_apos_login.spec.ts",
+                          "column": 16,
+                          "line": 17
+                        },
+                        "snippet": "  15 |     // Authenticate with valid credentials\n  16 |     await page.goto('https://example.com/login');\n> 17 |     await page.fill('#username', 'testuser');\n     |                ^\n  18 |     await page.fill('#password', 'testpass');\n  19 |     await page.click('#login-button');\n  20 |"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_persistencia_carrinho_apos_login.spec.ts",
+                            "column": 16,
+                            "line": 17
+                          },
+                          "message": "TimeoutError: page.fill: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#username')\u001b[22m\n\n\n  15 |     // Authenticate with valid credentials\n  16 |     await page.goto('https://example.com/login');\n> 17 |     await page.fill('#username', 'testuser');\n     |                ^\n  18 |     await page.fill('#password', 'testpass');\n  19 |     await page.click('#login-button');\n  20 |\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_persistencia_carrinho_apos_login.spec.ts:17:16"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-27T18:46:14.795Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/tmp/avaliacao-prompts-playwright/suite_persistencia_carrinh-5e532-st-the-cart-across-sessions/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_persistencia_carrinho_apos_login.spec.ts",
+                        "column": 16,
+                        "line": 17
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "41c61cdee9c7da90c203-2670d24219293a371be6",
+              "file": "suite_persistencia_carrinho_apos_login.spec.ts",
+              "line": 14,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "suite_produtos_visualizados_recentemente.spec.ts",
+      "file": "suite_produtos_visualizados_recentemente.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Product History",
+          "file": "suite_produtos_visualizados_recentemente.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "displays recently viewed products in the correct order",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 20000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 17,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 10511,
+                      "error": {
+                        "message": "TimeoutError: page.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('text=Customer Service')\u001b[22m\n",
+                        "stack": "TimeoutError: page.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('text=Customer Service')\u001b[22m\n\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_produtos_visualizados_recentemente.spec.ts:16:19",
+                        "location": {
+                          "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_produtos_visualizados_recentemente.spec.ts",
+                          "column": 19,
+                          "line": 16
+                        },
+                        "snippet": "  14 |\n  15 |     // Select Recently viewed products in the Customer service section\n> 16 |     await newPage.click('text=Customer Service');\n     |                   ^\n  17 |     await newPage.click('text=Recently Viewed Products');\n  18 |\n  19 |     // Check if both products are displayed"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_produtos_visualizados_recentemente.spec.ts",
+                            "column": 19,
+                            "line": 16
+                          },
+                          "message": "TimeoutError: page.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('text=Customer Service')\u001b[22m\n\n\n  14 |\n  15 |     // Select Recently viewed products in the Customer service section\n> 16 |     await newPage.click('text=Customer Service');\n     |                   ^\n  17 |     await newPage.click('text=Recently Viewed Products');\n  18 |\n  19 |     // Check if both products are displayed\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_produtos_visualizados_recentemente.spec.ts:16:19"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-27T18:46:26.548Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/tmp/avaliacao-prompts-playwright/suite_produtos_visualizado-6df6c-oducts-in-the-correct-order/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_produtos_visualizados_recentemente.spec.ts",
+                        "column": 19,
+                        "line": 16
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "d98f5a1d4f9f872bf201-eb16e0265f09c29f0bf4",
+              "file": "suite_produtos_visualizados_recentemente.spec.ts",
+              "line": 4,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "suite_visualizacao_livros_em_lista.spec.ts",
+      "file": "suite_visualizacao_livros_em_lista.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Changing the book catalog view",
+          "file": "suite_visualizacao_livros_em_lista.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should switch to list view when user selects List in the View as control",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 20000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 18,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 10254,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.grid-view')\nExpected: visible\nTimeout: 7000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 7000ms\u001b[22m\n\u001b[2m  - waiting for locator('.grid-view')\u001b[22m\n",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.grid-view')\nExpected: visible\nTimeout: 7000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 7000ms\u001b[22m\n\u001b[2m  - waiting for locator('.grid-view')\u001b[22m\n\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_visualizacao_livros_em_lista.spec.ts:10:22",
+                        "location": {
+                          "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_visualizacao_livros_em_lista.spec.ts",
+                          "column": 22,
+                          "line": 10
+                        },
+                        "snippet": "   8 |     // Verify initial Grid view\n   9 |     const gridView = page.locator('.grid-view');\n> 10 |     expect(gridView).toBeVisible();\n     |                      ^\n  11 |\n  12 |     // Select List view\n  13 |     await page.click('button.view-as-list');"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_visualizacao_livros_em_lista.spec.ts",
+                            "column": 22,
+                            "line": 10
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.grid-view')\nExpected: visible\nTimeout: 7000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 7000ms\u001b[22m\n\u001b[2m  - waiting for locator('.grid-view')\u001b[22m\n\n\n   8 |     // Verify initial Grid view\n   9 |     const gridView = page.locator('.grid-view');\n> 10 |     expect(gridView).toBeVisible();\n     |                      ^\n  11 |\n  12 |     // Select List view\n  13 |     await page.click('button.view-as-list');\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_visualizacao_livros_em_lista.spec.ts:10:22"
+                        },
+                        {
+                          "location": {
+                            "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_visualizacao_livros_em_lista.spec.ts",
+                            "column": 16,
+                            "line": 13
+                          },
+                          "message": "Error: page.click: Test ended.\nCall log:\n\u001b[2m  - waiting for locator('button.view-as-list')\u001b[22m\n\n\n  11 |\n  12 |     // Select List view\n> 13 |     await page.click('button.view-as-list');\n     |                ^\n  14 |\n  15 |     // Verify List view is displayed\n  16 |     const listView = page.locator('.list-view');\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_visualizacao_livros_em_lista.spec.ts:13:16"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-27T18:46:42.078Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/tmp/avaliacao-prompts-playwright/suite_visualizacao_livros_-11166-List-in-the-View-as-control/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_visualizacao_livros_em_lista.spec.ts",
+                        "column": 22,
+                        "line": 10
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "85a035ab5d29d2279d94-d98b8d71126d39e2a989",
+              "file": "suite_visualizacao_livros_em_lista.spec.ts",
+              "line": 4,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "user_registration_book_purchase.spec.ts",
+      "file": "user_registration_book_purchase.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Book purchase flow (registration + cart)",
+          "file": "user_registration_book_purchase.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should register a new user, add a book to the cart, and verify the cart",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 20000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 19,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 14057,
+                      "error": {
+                        "message": "TimeoutError: page.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button[type=\"submit\"]')\u001b[22m\n",
+                        "stack": "TimeoutError: page.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button[type=\"submit\"]')\u001b[22m\n\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/user_registration_book_purchase.spec.ts:27:16",
+                        "location": {
+                          "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/user_registration_book_purchase.spec.ts",
+                          "column": 16,
+                          "line": 27
+                        },
+                        "snippet": "  25 |\n  26 |     // Click on the Register button to complete the registration\n> 27 |     await page.click('button[type=\"submit\"]');\n     |                ^\n  28 |\n  29 |     // Verify that the user is logged in and redirected to the home page\n  30 |     expect(page.url()).toContain('/customer/account');"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/user_registration_book_purchase.spec.ts",
+                            "column": 16,
+                            "line": 27
+                          },
+                          "message": "TimeoutError: page.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button[type=\"submit\"]')\u001b[22m\n\n\n  25 |\n  26 |     // Click on the Register button to complete the registration\n> 27 |     await page.click('button[type=\"submit\"]');\n     |                ^\n  28 |\n  29 |     // Verify that the user is logged in and redirected to the home page\n  30 |     expect(page.url()).toContain('/customer/account');\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/user_registration_book_purchase.spec.ts:27:16"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-27T18:46:53.722Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/tmp/avaliacao-prompts-playwright/user_registration_book_pur-f7865-he-cart-and-verify-the-cart/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/user_registration_book_purchase.spec.ts",
+                        "column": 16,
+                        "line": 27
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "f7557647539060876791-2d14ecdac6faeb90d7a9",
+              "file": "user_registration_book_purchase.spec.ts",
+              "line": 4,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-07-27T18:41:59.076Z",
+    "duration": 280457.39,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 20,
+    "flaky": 0
+  }
+}

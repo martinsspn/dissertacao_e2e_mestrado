@@ -1,0 +1,3 @@
+Listing tests:
+  suite_comparar_produtos.spec.ts:4:7 › Suite Comparar Produtos › Deve adicionar produtos a lista de comparacao e depois limpar a lista
+Total: 1 test in 1 file

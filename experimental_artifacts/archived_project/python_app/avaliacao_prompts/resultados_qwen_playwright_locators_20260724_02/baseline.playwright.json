@@ -1,0 +1,1206 @@
+{
+  "config": {
+    "argv": [
+      "/usr/bin/node",
+      "/home/martinsspn/dissertacao_e2e_semantico/node_modules/.bin/playwright",
+      "test",
+      "--config=playwright.config.ts",
+      "--reporter=json"
+    ],
+    "configFile": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/playwright.config.ts",
+    "rootDir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_playwright_locators_20260724_02",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/tmp/avaliacao-prompts-playwright",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_playwright_locators_20260724_02",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 20000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.61.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "fluxo_computadores_desktops.spec.ts",
+      "file": "fluxo_computadores_desktops.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Digital Downloads Page",
+          "file": "fluxo_computadores_desktops.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should display the digital downloads page",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 20000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 10132,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.digital-item')\nExpected: visible\nTimeout: 7000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 7000ms\u001b[22m\n\u001b[2m  - waiting for locator('.digital-item')\u001b[22m\n",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.digital-item')\nExpected: visible\nTimeout: 7000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 7000ms\u001b[22m\n\u001b[2m  - waiting for locator('.digital-item')\u001b[22m\n\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_playwright_locators_20260724_02/fluxo_computadores_desktops.spec.ts:10:32",
+                        "location": {
+                          "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_playwright_locators_20260724_02/fluxo_computadores_desktops.spec.ts",
+                          "column": 32,
+                          "line": 10
+                        },
+                        "snippet": "   8 |     // Wait for the digital items to be visible\n   9 |     const digitalItems = page.locator('.digital-item');\n> 10 |     await expect(digitalItems).toBeVisible();\n     |                                ^\n  11 |\n  12 |     // Validate that the digital downloads page is visible\n  13 |     const pageTitle = page.locator('h1');"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_playwright_locators_20260724_02/fluxo_computadores_desktops.spec.ts",
+                            "column": 32,
+                            "line": 10
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.digital-item')\nExpected: visible\nTimeout: 7000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 7000ms\u001b[22m\n\u001b[2m  - waiting for locator('.digital-item')\u001b[22m\n\n\n   8 |     // Wait for the digital items to be visible\n   9 |     const digitalItems = page.locator('.digital-item');\n> 10 |     await expect(digitalItems).toBeVisible();\n     |                                ^\n  11 |\n  12 |     // Validate that the digital downloads page is visible\n  13 |     const pageTitle = page.locator('h1');\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_playwright_locators_20260724_02/fluxo_computadores_desktops.spec.ts:10:32"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-24T19:25:18.220Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/tmp/avaliacao-prompts-playwright/fluxo_computadores_desktop-09ce9--the-digital-downloads-page/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_playwright_locators_20260724_02/fluxo_computadores_desktops.spec.ts",
+                        "column": 32,
+                        "line": 10
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "5ffdfa1a8a18bafbf733-8715cb57179142f6df7c",
+              "file": "fluxo_computadores_desktops.spec.ts",
+              "line": 4,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "suite_adicionar_carrinho.spec.ts",
+      "file": "suite_adicionar_carrinho.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Adding a product to the cart",
+          "file": "suite_adicionar_carrinho.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should add Blue Jeans to the cart and display it in the shopping cart",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 20000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 10430,
+                      "error": {
+                        "message": "TimeoutError: page.fill: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[data-test=\"search-input\"]')\u001b[22m\n",
+                        "stack": "TimeoutError: page.fill: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[data-test=\"search-input\"]')\u001b[22m\n\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_playwright_locators_20260724_02/suite_adicionar_carrinho.spec.ts:7:16",
+                        "location": {
+                          "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_playwright_locators_20260724_02/suite_adicionar_carrinho.spec.ts",
+                          "column": 16,
+                          "line": 7
+                        },
+                        "snippet": "   5 |     // Step 1: Search for the product \"Blue Jeans\"\n   6 |     await page.goto('https://example.com');\n>  7 |     await page.fill('[data-test=\"search-input\"]', 'Blue Jeans');\n     |                ^\n   8 |     await page.click('[data-test=\"search-button\"]');\n   9 |     \n  10 |     // Step 2: Open the product \"Blue Jeans\" in search results"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_playwright_locators_20260724_02/suite_adicionar_carrinho.spec.ts",
+                            "column": 16,
+                            "line": 7
+                          },
+                          "message": "TimeoutError: page.fill: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[data-test=\"search-input\"]')\u001b[22m\n\n\n   5 |     // Step 1: Search for the product \"Blue Jeans\"\n   6 |     await page.goto('https://example.com');\n>  7 |     await page.fill('[data-test=\"search-input\"]', 'Blue Jeans');\n     |                ^\n   8 |     await page.click('[data-test=\"search-button\"]');\n   9 |     \n  10 |     // Step 2: Open the product \"Blue Jeans\" in search results\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_playwright_locators_20260724_02/suite_adicionar_carrinho.spec.ts:7:16"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-24T19:25:32.705Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/tmp/avaliacao-prompts-playwright/suite_adicionar_carrinho-A-8bd86-lay-it-in-the-shopping-cart/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_playwright_locators_20260724_02/suite_adicionar_carrinho.spec.ts",
+                        "column": 16,
+                        "line": 7
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "17be0f5b16c4113dd3d5-f38221091c418aacd738",
+              "file": "suite_adicionar_carrinho.spec.ts",
+              "line": 4,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "suite_adicionar_wishlist.spec.ts",
+      "file": "suite_adicionar_wishlist.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Add a product to the wishlist",
+          "file": "suite_adicionar_wishlist.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should add product to wishlist and display it",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 20000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 12806,
+                      "error": {
+                        "message": "TimeoutError: page.fill: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#username')\u001b[22m\n",
+                        "stack": "TimeoutError: page.fill: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#username')\u001b[22m\n\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_playwright_locators_20260724_02/suite_adicionar_wishlist.spec.ts:7:16",
+                        "location": {
+                          "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_playwright_locators_20260724_02/suite_adicionar_wishlist.spec.ts",
+                          "column": 16,
+                          "line": 7
+                        },
+                        "snippet": "   5 |     // Assuming there's a fixture for authentication with valid credentials\n   6 |     await page.goto('/login');\n>  7 |     await page.fill('#username', 'validUsername');\n     |                ^\n   8 |     await page.fill('#password', 'validPassword');\n   9 |     await page.click('button[type=\"submit\"]');\n  10 |     await expect(page).toHaveURL('/dashboard');"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_playwright_locators_20260724_02/suite_adicionar_wishlist.spec.ts",
+                            "column": 16,
+                            "line": 7
+                          },
+                          "message": "TimeoutError: page.fill: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#username')\u001b[22m\n\n\n   5 |     // Assuming there's a fixture for authentication with valid credentials\n   6 |     await page.goto('/login');\n>  7 |     await page.fill('#username', 'validUsername');\n     |                ^\n   8 |     await page.fill('#password', 'validPassword');\n   9 |     await page.click('button[type=\"submit\"]');\n  10 |     await expect(page).toHaveURL('/dashboard');\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_playwright_locators_20260724_02/suite_adicionar_wishlist.spec.ts:7:16"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-24T19:25:44.490Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/tmp/avaliacao-prompts-playwright/suite_adicionar_wishlist-A-4a6a2--to-wishlist-and-display-it/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_playwright_locators_20260724_02/suite_adicionar_wishlist.spec.ts",
+                        "column": 16,
+                        "line": 7
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "098796e0f623f352e24c-1504a1af2d127ec3692d",
+              "file": "suite_adicionar_wishlist.spec.ts",
+              "line": 13,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "suite_busca_blue_jeans.spec.ts",
+      "file": "suite_busca_blue_jeans.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Searching and opening a product",
+          "file": "suite_busca_blue_jeans.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should display the details page for Blue Jeans",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 20000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 12859,
+                      "error": {
+                        "message": "TimeoutError: locator.fill: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#search-input')\u001b[22m\n",
+                        "stack": "TimeoutError: locator.fill: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#search-input')\u001b[22m\n\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_playwright_locators_20260724_02/suite_busca_blue_jeans.spec.ts:10:23",
+                        "location": {
+                          "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_playwright_locators_20260724_02/suite_busca_blue_jeans.spec.ts",
+                          "column": 23,
+                          "line": 10
+                        },
+                        "snippet": "   8 |     // Search for 'Blue Jeans'\n   9 |     const searchInput = page.locator('#search-input');\n> 10 |     await searchInput.fill('Blue Jeans');\n     |                       ^\n  11 |     await searchInput.press('Enter');\n  12 |\n  13 |     // Wait for results to load"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_playwright_locators_20260724_02/suite_busca_blue_jeans.spec.ts",
+                            "column": 23,
+                            "line": 10
+                          },
+                          "message": "TimeoutError: locator.fill: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#search-input')\u001b[22m\n\n\n   8 |     // Search for 'Blue Jeans'\n   9 |     const searchInput = page.locator('#search-input');\n> 10 |     await searchInput.fill('Blue Jeans');\n     |                       ^\n  11 |     await searchInput.press('Enter');\n  12 |\n  13 |     // Wait for results to load\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_playwright_locators_20260724_02/suite_busca_blue_jeans.spec.ts:10:23"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-24T19:25:58.639Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/tmp/avaliacao-prompts-playwright/suite_busca_blue_jeans-Sea-7ce40-details-page-for-Blue-Jeans/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_playwright_locators_20260724_02/suite_busca_blue_jeans.spec.ts",
+                        "column": 23,
+                        "line": 10
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "c2d5174642ec155dc900-636196a00ddbaf86f341",
+              "file": "suite_busca_blue_jeans.spec.ts",
+              "line": 4,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "suite_checkout_blue_jeans.spec.ts",
+      "file": "suite_checkout_blue_jeans.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Blue Jeans Purchase",
+          "file": "suite_checkout_blue_jeans.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should complete the purchase of Blue Jeans",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 20000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 10361,
+                      "error": {
+                        "message": "TimeoutError: page.fill: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#username')\u001b[22m\n",
+                        "stack": "TimeoutError: page.fill: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#username')\u001b[22m\n\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_playwright_locators_20260724_02/suite_checkout_blue_jeans.spec.ts:7:16",
+                        "location": {
+                          "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_playwright_locators_20260724_02/suite_checkout_blue_jeans.spec.ts",
+                          "column": 16,
+                          "line": 7
+                        },
+                        "snippet": "   5 |     // Assuming authentication is handled by a fixture or setup function\n   6 |     await page.goto('https://example.com/login');\n>  7 |     await page.fill('#username', 'testuser');\n     |                ^\n   8 |     await page.fill('#password', 'testpass');\n   9 |     await page.click('#login-button');\n  10 |   });"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_playwright_locators_20260724_02/suite_checkout_blue_jeans.spec.ts",
+                            "column": 16,
+                            "line": 7
+                          },
+                          "message": "TimeoutError: page.fill: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#username')\u001b[22m\n\n\n   5 |     // Assuming authentication is handled by a fixture or setup function\n   6 |     await page.goto('https://example.com/login');\n>  7 |     await page.fill('#username', 'testuser');\n     |                ^\n   8 |     await page.fill('#password', 'testpass');\n   9 |     await page.click('#login-button');\n  10 |   });\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_playwright_locators_20260724_02/suite_checkout_blue_jeans.spec.ts:7:16"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-24T19:26:15.819Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/tmp/avaliacao-prompts-playwright/suite_checkout_blue_jeans--7897b--the-purchase-of-Blue-Jeans/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_playwright_locators_20260724_02/suite_checkout_blue_jeans.spec.ts",
+                        "column": 16,
+                        "line": 7
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "1a70699396ff8c88bdf2-1a3ba833bd54b35b357f",
+              "file": "suite_checkout_blue_jeans.spec.ts",
+              "line": 12,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "suite_configurar_desktop.spec.ts",
+      "file": "suite_configurar_desktop.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Desktop Configuration Test",
+          "file": "suite_configurar_desktop.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should configure and add a desktop to the cart",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 20000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 5,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 13467,
+                      "error": {
+                        "message": "TimeoutError: page.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('text=Desktops')\u001b[22m\n\u001b[2m    - locator resolved to 4 elements. Proceeding with the first one: <a href=\"/desktops\">Desktops↵        </a>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not visible\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not visible\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    19 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is not visible\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n",
+                        "stack": "TimeoutError: page.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('text=Desktops')\u001b[22m\n\u001b[2m    - locator resolved to 4 elements. Proceeding with the first one: <a href=\"/desktops\">Desktops↵        </a>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not visible\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not visible\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    19 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is not visible\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_playwright_locators_20260724_02/suite_configurar_desktop.spec.ts:7:16",
+                        "location": {
+                          "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_playwright_locators_20260724_02/suite_configurar_desktop.spec.ts",
+                          "column": 16,
+                          "line": 7
+                        },
+                        "snippet": "   5 |     // Access Computers and open the Desktops category\n   6 |     await page.goto('/computers');\n>  7 |     await page.click('text=Desktops');\n     |                ^\n   8 |\n   9 |     // Open a desktop that allows choosing its configuration\n  10 |     await page.click('text=Configure this desktop');"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_playwright_locators_20260724_02/suite_configurar_desktop.spec.ts",
+                            "column": 16,
+                            "line": 7
+                          },
+                          "message": "TimeoutError: page.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('text=Desktops')\u001b[22m\n\u001b[2m    - locator resolved to 4 elements. Proceeding with the first one: <a href=\"/desktops\">Desktops↵        </a>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not visible\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not visible\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    19 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is not visible\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n\n\n   5 |     // Access Computers and open the Desktops category\n   6 |     await page.goto('/computers');\n>  7 |     await page.click('text=Desktops');\n     |                ^\n   8 |\n   9 |     // Open a desktop that allows choosing its configuration\n  10 |     await page.click('text=Configure this desktop');\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_playwright_locators_20260724_02/suite_configurar_desktop.spec.ts:7:16"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-24T19:26:27.598Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/tmp/avaliacao-prompts-playwright/suite_configurar_desktop-D-601dd-d-add-a-desktop-to-the-cart/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_playwright_locators_20260724_02/suite_configurar_desktop.spec.ts",
+                        "column": 16,
+                        "line": 7
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "ded8edc9abcd61cf5d5b-9ccb4d8c76575ac63abb",
+              "file": "suite_configurar_desktop.spec.ts",
+              "line": 4,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "suite_detalhes_fiction.spec.ts",
+      "file": "suite_detalhes_fiction.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Product Details Test",
+          "file": "suite_detalhes_fiction.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should display product details and price information",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 20000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 6,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 10361,
+                      "error": {
+                        "message": "TimeoutError: page.fill: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('input[name=\"search\"]')\u001b[22m\n",
+                        "stack": "TimeoutError: page.fill: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('input[name=\"search\"]')\u001b[22m\n\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_playwright_locators_20260724_02/suite_detalhes_fiction.spec.ts:9:16",
+                        "location": {
+                          "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_playwright_locators_20260724_02/suite_detalhes_fiction.spec.ts",
+                          "column": 16,
+                          "line": 9
+                        },
+                        "snippet": "   7 |\n   8 |     // Search for the product \"Fiction\"\n>  9 |     await page.fill('input[name=\"search\"]', 'Fiction');\n     |                ^\n  10 |     await page.click('button[type=\"submit\"]');\n  11 |\n  12 |     // Open the product details page"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_playwright_locators_20260724_02/suite_detalhes_fiction.spec.ts",
+                            "column": 16,
+                            "line": 9
+                          },
+                          "message": "TimeoutError: page.fill: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('input[name=\"search\"]')\u001b[22m\n\n\n   7 |\n   8 |     // Search for the product \"Fiction\"\n>  9 |     await page.fill('input[name=\"search\"]', 'Fiction');\n     |                ^\n  10 |     await page.click('button[type=\"submit\"]');\n  11 |\n  12 |     // Open the product details page\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_playwright_locators_20260724_02/suite_detalhes_fiction.spec.ts:9:16"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-24T19:26:45.171Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/tmp/avaliacao-prompts-playwright/suite_detalhes_fiction-Pro-7fb52-tails-and-price-information/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_playwright_locators_20260724_02/suite_detalhes_fiction.spec.ts",
+                        "column": 16,
+                        "line": 9
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "179492ad1a70311acabe-cb5f42388dfaedb05a87",
+              "file": "suite_detalhes_fiction.spec.ts",
+              "line": 4,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "suite_limpar_carrinho.spec.ts",
+      "file": "suite_limpar_carrinho.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Remove all products from the cart",
+          "file": "suite_limpar_carrinho.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should remove Blue Jeans from the cart",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 20000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 7,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 12908,
+                      "error": {
+                        "message": "TimeoutError: page.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('text=Blue Jeans')\u001b[22m\n",
+                        "stack": "TimeoutError: page.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('text=Blue Jeans')\u001b[22m\n\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_playwright_locators_20260724_02/suite_limpar_carrinho.spec.ts:7:16",
+                        "location": {
+                          "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_playwright_locators_20260724_02/suite_limpar_carrinho.spec.ts",
+                          "column": 16,
+                          "line": 7
+                        },
+                        "snippet": "   5 |     // Add Blue Jeans to the cart\n   6 |     await page.goto('/products');\n>  7 |     await page.click('text=Blue Jeans');\n     |                ^\n   8 |     await page.click('button=add-to-cart');\n   9 |   });\n  10 |"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_playwright_locators_20260724_02/suite_limpar_carrinho.spec.ts",
+                            "column": 16,
+                            "line": 7
+                          },
+                          "message": "TimeoutError: page.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('text=Blue Jeans')\u001b[22m\n\n\n   5 |     // Add Blue Jeans to the cart\n   6 |     await page.goto('/products');\n>  7 |     await page.click('text=Blue Jeans');\n     |                ^\n   8 |     await page.click('button=add-to-cart');\n   9 |   });\n  10 |\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_playwright_locators_20260724_02/suite_limpar_carrinho.spec.ts:7:16"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-24T19:26:56.926Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/tmp/avaliacao-prompts-playwright/suite_limpar_carrinho-Remo-64c8b-ve-Blue-Jeans-from-the-cart/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_playwright_locators_20260724_02/suite_limpar_carrinho.spec.ts",
+                        "column": 16,
+                        "line": 7
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "1ab8afb3fceab06e4dc3-65eb2a20877ad8d7dc7d",
+              "file": "suite_limpar_carrinho.spec.ts",
+              "line": 11,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "suite_limpar_wishlist.spec.ts",
+      "file": "suite_limpar_wishlist.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Wishlist Management",
+          "file": "suite_limpar_wishlist.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Removal of all products from the wishlist",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 20000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 8,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 187,
+                      "error": {
+                        "message": "ReferenceError: authenticateWithValidCredentials is not defined",
+                        "stack": "ReferenceError: authenticateWithValidCredentials is not defined\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_playwright_locators_20260724_02/suite_limpar_wishlist.spec.ts:6:5",
+                        "location": {
+                          "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_playwright_locators_20260724_02/suite_limpar_wishlist.spec.ts",
+                          "column": 5,
+                          "line": 6
+                        },
+                        "snippet": "  4 |   test.beforeEach(async ({ page }) => {\n  5 |     // Assuming there's a function to authenticate with valid credentials\n> 6 |     await authenticateWithValidCredentials(page);\n    |     ^\n  7 |   });\n  8 |\n  9 |   test('Removal of all products from the wishlist', async ({ page }) => {"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_playwright_locators_20260724_02/suite_limpar_wishlist.spec.ts",
+                            "column": 5,
+                            "line": 6
+                          },
+                          "message": "ReferenceError: authenticateWithValidCredentials is not defined\n\n  4 |   test.beforeEach(async ({ page }) => {\n  5 |     // Assuming there's a function to authenticate with valid credentials\n> 6 |     await authenticateWithValidCredentials(page);\n    |     ^\n  7 |   });\n  8 |\n  9 |   test('Removal of all products from the wishlist', async ({ page }) => {\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_playwright_locators_20260724_02/suite_limpar_wishlist.spec.ts:6:5"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-24T19:27:11.191Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/tmp/avaliacao-prompts-playwright/suite_limpar_wishlist-Wish-5f8de--products-from-the-wishlist/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_playwright_locators_20260724_02/suite_limpar_wishlist.spec.ts",
+                        "column": 5,
+                        "line": 6
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "d86af201ab92a631acc4-10c14abd754a89607bec",
+              "file": "suite_limpar_wishlist.spec.ts",
+              "line": 9,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "suite_login_invalido.spec.ts",
+      "file": "suite_login_invalido.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Login attempt with an invalid password",
+          "file": "suite_login_invalido.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should keep the user unauthenticated and inform of failed login",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 20000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 9,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 12999,
+                      "error": {
+                        "message": "TimeoutError: page.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#login-button')\u001b[22m\n",
+                        "stack": "TimeoutError: page.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#login-button')\u001b[22m\n\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_playwright_locators_20260724_02/suite_login_invalido.spec.ts:15:16",
+                        "location": {
+                          "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_playwright_locators_20260724_02/suite_login_invalido.spec.ts",
+                          "column": 16,
+                          "line": 15
+                        },
+                        "snippet": "  13 |\n  14 |     // Submit the login form\n> 15 |     await page.click('#login-button');\n     |                ^\n  16 |\n  17 |     // Verify that the user is kept unauthenticated and informed of failed login\n  18 |     const errorMessage = await page.textContent('.message-error');"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_playwright_locators_20260724_02/suite_login_invalido.spec.ts",
+                            "column": 16,
+                            "line": 15
+                          },
+                          "message": "TimeoutError: page.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#login-button')\u001b[22m\n\n\n  13 |\n  14 |     // Submit the login form\n> 15 |     await page.click('#login-button');\n     |                ^\n  16 |\n  17 |     // Verify that the user is kept unauthenticated and informed of failed login\n  18 |     const errorMessage = await page.textContent('.message-error');\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_playwright_locators_20260724_02/suite_login_invalido.spec.ts:15:16"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-24T19:27:15.442Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/tmp/avaliacao-prompts-playwright/suite_login_invalido-Login-7370d--and-inform-of-failed-login/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_playwright_locators_20260724_02/suite_login_invalido.spec.ts",
+                        "column": 16,
+                        "line": 15
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "7f7239a4016ce59b97ad-98617d9e39dc2abbe288",
+              "file": "suite_login_invalido.spec.ts",
+              "line": 4,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "suite_login_valido.spec.ts",
+      "file": "suite_login_valido.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Login with valid credentials",
+          "file": "suite_login_valido.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should authenticate user and display account and logout links",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 20000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 10,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 12938,
+                      "error": {
+                        "message": "TimeoutError: page.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button[type=\"submit\"]')\u001b[22m\n",
+                        "stack": "TimeoutError: page.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button[type=\"submit\"]')\u001b[22m\n\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_playwright_locators_20260724_02/suite_login_valido.spec.ts:13:16",
+                        "location": {
+                          "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_playwright_locators_20260724_02/suite_login_valido.spec.ts",
+                          "column": 16,
+                          "line": 13
+                        },
+                        "snippet": "  11 |\n  12 |     // Submit the login form\n> 13 |     await page.click('button[type=\"submit\"]');\n     |                ^\n  14 |\n  15 |     // The system authenticates the user and displays the account and Log out links\n  16 |     await expect(page.locator('.account')).toBeVisible();"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_playwright_locators_20260724_02/suite_login_valido.spec.ts",
+                            "column": 16,
+                            "line": 13
+                          },
+                          "message": "TimeoutError: page.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button[type=\"submit\"]')\u001b[22m\n\n\n  11 |\n  12 |     // Submit the login form\n> 13 |     await page.click('button[type=\"submit\"]');\n     |                ^\n  14 |\n  15 |     // The system authenticates the user and displays the account and Log out links\n  16 |     await expect(page.locator('.account')).toBeVisible();\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_playwright_locators_20260724_02/suite_login_valido.spec.ts:13:16"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-24T19:27:29.791Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/tmp/avaliacao-prompts-playwright/suite_login_valido-Login-w-f1489-ay-account-and-logout-links/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_playwright_locators_20260724_02/suite_login_valido.spec.ts",
+                        "column": 16,
+                        "line": 13
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "d7aa3dbcc5ebbdf3d199-382546be1a5982c94a4c",
+              "file": "suite_login_valido.spec.ts",
+              "line": 4,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "suite_logout.spec.ts",
+      "file": "suite_logout.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "User Session Termination",
+          "file": "suite_logout.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should terminate session and display login link",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 20000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 11,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 12994,
+                      "error": {
+                        "message": "TimeoutError: page.fill: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#username')\u001b[22m\n",
+                        "stack": "TimeoutError: page.fill: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#username')\u001b[22m\n\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_playwright_locators_20260724_02/suite_logout.spec.ts:9:16",
+                        "location": {
+                          "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_playwright_locators_20260724_02/suite_logout.spec.ts",
+                          "column": 16,
+                          "line": 9
+                        },
+                        "snippet": "   7 |\n   8 |     // Fill in valid credentials and submit the form\n>  9 |     await page.fill('#username', 'validUsername');\n     |                ^\n  10 |     await page.fill('#password', 'validPassword');\n  11 |     await page.click('button[type=\"submit\"]');\n  12 |"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_playwright_locators_20260724_02/suite_logout.spec.ts",
+                            "column": 16,
+                            "line": 9
+                          },
+                          "message": "TimeoutError: page.fill: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#username')\u001b[22m\n\n\n   7 |\n   8 |     // Fill in valid credentials and submit the form\n>  9 |     await page.fill('#username', 'validUsername');\n     |                ^\n  10 |     await page.fill('#password', 'validPassword');\n  11 |     await page.click('button[type=\"submit\"]');\n  12 |\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_playwright_locators_20260724_02/suite_logout.spec.ts:9:16"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-24T19:27:44.083Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/tmp/avaliacao-prompts-playwright/suite_logout-User-Session--fe945-sion-and-display-login-link/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_playwright_locators_20260724_02/suite_logout.spec.ts",
+                        "column": 16,
+                        "line": 9
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "2f3a4af9c48bd28b3893-b206717fbb98a2c697c1",
+              "file": "suite_logout.spec.ts",
+              "line": 4,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "suite_registro_usuario.spec.ts",
+      "file": "suite_registro_usuario.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "User Registration",
+          "file": "suite_registro_usuario.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should register a new user successfully",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 20000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 12,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 15014,
+                      "error": {
+                        "message": "TimeoutError: page.fill: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#Email')\u001b[22m\n",
+                        "stack": "TimeoutError: page.fill: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#Email')\u001b[22m\n\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_playwright_locators_20260724_02/suite_registro_usuario.spec.ts:32:16",
+                        "location": {
+                          "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_playwright_locators_20260724_02/suite_registro_usuario.spec.ts",
+                          "column": 16,
+                          "line": 32
+                        },
+                        "snippet": "  30 |     // User selects Continue and returns to the store authenticated\n  31 |     await page.click('a[href=\"/logout\"]');\n> 32 |     await page.fill('#Email', email);\n     |                ^\n  33 |     await page.fill('#Password', password);\n  34 |     await page.click('#login-button');\n  35 |     await expect(page.locator('.account')).toContainText(email);"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_playwright_locators_20260724_02/suite_registro_usuario.spec.ts",
+                            "column": 16,
+                            "line": 32
+                          },
+                          "message": "TimeoutError: page.fill: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#Email')\u001b[22m\n\n\n  30 |     // User selects Continue and returns to the store authenticated\n  31 |     await page.click('a[href=\"/logout\"]');\n> 32 |     await page.fill('#Email', email);\n     |                ^\n  33 |     await page.fill('#Password', password);\n  34 |     await page.click('#login-button');\n  35 |     await expect(page.locator('.account')).toContainText(email);\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_playwright_locators_20260724_02/suite_registro_usuario.spec.ts:32:16"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-24T19:28:01.344Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/tmp/avaliacao-prompts-playwright/suite_registro_usuario-Use-d495d-ter-a-new-user-successfully/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_playwright_locators_20260724_02/suite_registro_usuario.spec.ts",
+                        "column": 16,
+                        "line": 32
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "ddea2ff8902a25e2f4d0-6d33848ff1c0d41839d7",
+              "file": "suite_registro_usuario.spec.ts",
+              "line": 4,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "user_registration_book_purchase.spec.ts",
+      "file": "user_registration_book_purchase.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Book purchase flow (registration + cart)",
+          "file": "user_registration_book_purchase.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should register a new user, add a book to the cart, and verify the cart",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 20000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 13,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 14106,
+                      "error": {
+                        "message": "TimeoutError: page.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button[type=\"submit\"]')\u001b[22m\n",
+                        "stack": "TimeoutError: page.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button[type=\"submit\"]')\u001b[22m\n\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_playwright_locators_20260724_02/user_registration_book_purchase.spec.ts:27:16",
+                        "location": {
+                          "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_playwright_locators_20260724_02/user_registration_book_purchase.spec.ts",
+                          "column": 16,
+                          "line": 27
+                        },
+                        "snippet": "  25 |\n  26 |     // Click on the Register button to complete the registration\n> 27 |     await page.click('button[type=\"submit\"]');\n     |                ^\n  28 |\n  29 |     // Verify that the user is logged in and redirected to the home page\n  30 |     expect(page.url()).toContain('/customer/account');"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_playwright_locators_20260724_02/user_registration_book_purchase.spec.ts",
+                            "column": 16,
+                            "line": 27
+                          },
+                          "message": "TimeoutError: page.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button[type=\"submit\"]')\u001b[22m\n\n\n  25 |\n  26 |     // Click on the Register button to complete the registration\n> 27 |     await page.click('button[type=\"submit\"]');\n     |                ^\n  28 |\n  29 |     // Verify that the user is logged in and redirected to the home page\n  30 |     expect(page.url()).toContain('/customer/account');\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_playwright_locators_20260724_02/user_registration_book_purchase.spec.ts:27:16"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-24T19:28:17.760Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/tmp/avaliacao-prompts-playwright/user_registration_book_pur-f7865-he-cart-and-verify-the-cart/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_playwright_locators_20260724_02/user_registration_book_purchase.spec.ts",
+                        "column": 16,
+                        "line": 27
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "f7557647539060876791-2d14ecdac6faeb90d7a9",
+              "file": "user_registration_book_purchase.spec.ts",
+              "line": 4,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-07-24T19:25:17.097Z",
+    "duration": 181081.49599999998,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 14,
+    "flaky": 0
+  }
+}

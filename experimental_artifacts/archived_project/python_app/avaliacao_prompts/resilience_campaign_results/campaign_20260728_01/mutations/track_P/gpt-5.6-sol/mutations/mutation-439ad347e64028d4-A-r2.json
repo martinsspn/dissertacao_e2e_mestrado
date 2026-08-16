@@ -1,0 +1,164 @@
+{
+  "config": {
+    "argv": [
+      "/usr/bin/node",
+      "/home/martinsspn/dissertacao_e2e_semantico/node_modules/.bin/playwright",
+      "test",
+      "suite_login_invalido.spec.ts",
+      "--config=/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaigns/campaign_20260728_01/runtime/playwright/playwright.config.ts",
+      "--reporter=json",
+      "--workers=1",
+      "--retries=0",
+      "--trace=on",
+      "--output=/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/mutations/track_P/gpt-5.6-sol/mutations/mutation-439ad347e64028d4-A-r2.artifacts"
+    ],
+    "configFile": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaigns/campaign_20260728_01/runtime/playwright/playwright.config.ts",
+    "rootDir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaigns/campaign_20260728_01/prepared/track_P/gpt-5.6-sol/A",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/mutations/track_P/gpt-5.6-sol/mutations/mutation-439ad347e64028d4-A-r2.artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaigns/campaign_20260728_01/prepared/track_P/gpt-5.6-sol/A",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 20000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.61.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "suite_login_invalido.spec.ts",
+      "file": "suite_login_invalido.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Login attempt with an invalid password",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 20000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 14559,
+                  "error": {
+                    "message": "TimeoutError: locator.fill: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#Password')\u001b[22m\n",
+                    "stack": "TimeoutError: locator.fill: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#Password')\u001b[22m\n\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaigns/campaign_20260728_01/prepared/track_P/gpt-5.6-sol/A/suite_login_invalido.spec.ts:28:35",
+                    "location": {
+                      "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaigns/campaign_20260728_01/prepared/track_P/gpt-5.6-sol/A/suite_login_invalido.spec.ts",
+                      "column": 35,
+                      "line": 28
+                    },
+                    "snippet": "  26 |\n  27 |   await page.locator('#Email').fill(email);\n> 28 |   await page.locator('#Password').fill(invalidPassword);\n     |                                   ^\n  29 |   await page.locator('input.login-button').click();\n  30 |\n  31 |   await expect("
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaigns/campaign_20260728_01/prepared/track_P/gpt-5.6-sol/A/suite_login_invalido.spec.ts",
+                        "column": 35,
+                        "line": 28
+                      },
+                      "message": "TimeoutError: locator.fill: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#Password')\u001b[22m\n\n\n  26 |\n  27 |   await page.locator('#Email').fill(email);\n> 28 |   await page.locator('#Password').fill(invalidPassword);\n     |                                   ^\n  29 |   await page.locator('input.login-button').click();\n  30 |\n  31 |   await expect(\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaigns/campaign_20260728_01/prepared/track_P/gpt-5.6-sol/A/suite_login_invalido.spec.ts:28:35"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-07-28T19:43:22.635Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/mutations/track_P/gpt-5.6-sol/mutations/mutation-439ad347e64028d4-A-r2.artifacts/suite_login_invalido-Login-attempt-with-an-invalid-password/test-failed-1.png"
+                    },
+                    {
+                      "name": "resilience-mutation-events",
+                      "contentType": "application/json",
+                      "body": "WwogIHsKICAgICJtdXRhdGlvbklkIjogIm11dGF0aW9uLTQzOWFkMzQ3ZTY0MDI4ZDQiLAogICAgInRhcmdldElkIjogInRhcmdldC0zZTM1ZTQwMjlmODFmYjJlIiwKICAgICJ1cmwiOiAiaHR0cHM6Ly9kZW1vd2Vic2hvcC50cmljZW50aXMuY29tL2xvZ2luIiwKICAgICJzdGF0dXMiOiAiYXBwbGllZCIsCiAgICAiZGV0YWlsIjogIiIKICB9Cl0="
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/mutations/track_P/gpt-5.6-sol/mutations/mutation-439ad347e64028d4-A-r2.artifacts/suite_login_invalido-Login-attempt-with-an-invalid-password/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/mutations/track_P/gpt-5.6-sol/mutations/mutation-439ad347e64028d4-A-r2.artifacts/suite_login_invalido-Login-attempt-with-an-invalid-password/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaigns/campaign_20260728_01/prepared/track_P/gpt-5.6-sol/A/suite_login_invalido.spec.ts",
+                    "column": 35,
+                    "line": 28
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "7f7239a4016ce59b97ad-9634f87e32e4fcc0fed4",
+          "file": "suite_login_invalido.spec.ts",
+          "line": 13,
+          "column": 5
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-07-28T19:43:21.594Z",
+    "duration": 16325.882,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

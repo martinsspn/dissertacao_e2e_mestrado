@@ -1,0 +1,1649 @@
+{
+  "schema_version": 2,
+  "execution_manifest_sha256": "80fd5e10decfc8045b98f2e4d0defced0e2e0bb067f9ce00f38df892afd9bdeb",
+  "mutation_plan_sha256": "7e1ed1318e46271b4a055e9a475e38b85f31b6f22c4614d4033656450fcbbbfc",
+  "track_id": "R",
+  "model_id": "gemini-3.6-flash",
+  "allowlist_sha256": "fe789a8242dbb9eac6b2f8b54dec0c416732ac6d7f439b822b5ecdf057bf9abc",
+  "semantic_review_sha256": "800a6803b8ee13b1954c67a6a4eafa54a76be6cd353b82f26d92ea0702745bf8",
+  "eligibility_results": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/eligibility/track_R/gemini-3.6-flash/eligibility_results.json",
+  "eligibility_results_sha256": "3834a2ef6286cc6e296b2e4b5acc0fa4e0161087b9d534ec2105dd5ab3606c8b",
+  "runtime": {
+    "node": "v18.19.1",
+    "playwright": "Version 1.61.1",
+    "chromium": "149.0.7827.55"
+  },
+  "configured_environment_names": [
+    "BASE_URL",
+    "DEMO_WEB_SHOP_EMAIL",
+    "DEMO_WEB_SHOP_PASSWORD",
+    "E2E_EMAIL",
+    "E2E_PASSWORD",
+    "PROMPT_E2E_BASE_URL",
+    "TEST_EMAIL",
+    "TEST_PASSWORD"
+  ],
+  "repetitions": 3,
+  "selection": {
+    "mode": "deterministic_neutral_sample",
+    "mutations_per_scenario": 2,
+    "included_strata": [
+      "E1",
+      "E2"
+    ],
+    "rule": "one_E1_then_one_E2_when_available_then_hash_ranked_neutral_fill",
+    "selected_mutation_ids": [
+      "mutation-3eaa4cad6dfee398",
+      "mutation-970dfe4afdc63621",
+      "mutation-5b72726c4f561716",
+      "mutation-d20cb5bb3f6fd31b"
+    ],
+    "requested_scenarios": []
+  },
+  "eligible_scenarios": [
+    "fluxo_computadores_desktops",
+    "suite_navegar_sobre_nos"
+  ],
+  "mutation_results": [
+    {
+      "mutation_id": "mutation-3eaa4cad6dfee398",
+      "scenario_id": "fluxo_computadores_desktops",
+      "stratum": "E1",
+      "operator": "insert_noninteractive_sibling_before",
+      "control_valid": false,
+      "paired_applicable": false,
+      "invalid_reasons": [
+        "mutated_control_failed",
+        "mutated_target_not_interacted",
+        "mutation_not_applied",
+        "original_control_failed",
+        "original_target_not_interacted",
+        "original_target_not_marked"
+      ],
+      "control_runs": [
+        {
+          "repetition": 1,
+          "original": {
+            "status": "failed",
+            "mutation_events": [
+              {
+                "mutationId": "mutation-3eaa4cad6dfee398",
+                "targetId": "target-94e76973e20445c8",
+                "url": "https://demowebshop.tricentis.com/",
+                "status": "ambiguous",
+                "detail": "3 bootstrap candidates"
+              }
+            ],
+            "control_observation": null,
+            "returncode": 1,
+            "duration_seconds": 14.492,
+            "error_type": "assertion_failure",
+            "error_message_excerpt": "Error: expect(locator).toHaveCount(expected) failed Locator: locator('[data-resilience-target=\"target-94e76973e20445c8\"]') Expected: 1 Received: 0 Timeout: 7000ms Call log: - Expect \"toHaveCount\" with timeout 7000ms - waiting for locator('[data-resilience-target=\"target-94e76973e20445c8\"]') 18 × locator resolved to 0 elements - unexpected value \"0\" 34 | await page.goto(mutation.target.page_url); 35 | const target = page.locator(`[data-resilience-target=\"${mutation.target.target_id}\"]`); > 36 |…",
+            "artifacts_dir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/mutations/track_R/gemini-3.6-flash/controls/mutation-3eaa4cad6dfee398-original-r1.artifacts"
+          },
+          "mutated": {
+            "status": "failed",
+            "mutation_events": [
+              {
+                "mutationId": "mutation-3eaa4cad6dfee398",
+                "targetId": "target-94e76973e20445c8",
+                "url": "https://demowebshop.tricentis.com/",
+                "status": "ambiguous",
+                "detail": "3 bootstrap candidates"
+              }
+            ],
+            "control_observation": null,
+            "returncode": 1,
+            "duration_seconds": 14.781,
+            "error_type": "assertion_failure",
+            "error_message_excerpt": "Error: expect(locator).toHaveCount(expected) failed Locator: locator('[data-resilience-target=\"target-94e76973e20445c8\"]') Expected: 1 Received: 0 Timeout: 7000ms Call log: - Expect \"toHaveCount\" with timeout 7000ms - waiting for locator('[data-resilience-target=\"target-94e76973e20445c8\"]') 18 × locator resolved to 0 elements - unexpected value \"0\" 34 | await page.goto(mutation.target.page_url); 35 | const target = page.locator(`[data-resilience-target=\"${mutation.target.target_id}\"]`); > 36 |…",
+            "artifacts_dir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/mutations/track_R/gemini-3.6-flash/controls/mutation-3eaa4cad6dfee398-mutated-r1.artifacts"
+          },
+          "invalid_reasons": [
+            "mutated_control_failed",
+            "mutated_target_not_interacted",
+            "mutation_not_applied",
+            "original_control_failed",
+            "original_target_not_interacted",
+            "original_target_not_marked"
+          ]
+        },
+        {
+          "repetition": 2,
+          "original": {
+            "status": "failed",
+            "mutation_events": [
+              {
+                "mutationId": "mutation-3eaa4cad6dfee398",
+                "targetId": "target-94e76973e20445c8",
+                "url": "https://demowebshop.tricentis.com/",
+                "status": "ambiguous",
+                "detail": "3 bootstrap candidates"
+              }
+            ],
+            "control_observation": null,
+            "returncode": 1,
+            "duration_seconds": 14.231,
+            "error_type": "assertion_failure",
+            "error_message_excerpt": "Error: expect(locator).toHaveCount(expected) failed Locator: locator('[data-resilience-target=\"target-94e76973e20445c8\"]') Expected: 1 Received: 0 Timeout: 7000ms Call log: - Expect \"toHaveCount\" with timeout 7000ms - waiting for locator('[data-resilience-target=\"target-94e76973e20445c8\"]') 18 × locator resolved to 0 elements - unexpected value \"0\" 34 | await page.goto(mutation.target.page_url); 35 | const target = page.locator(`[data-resilience-target=\"${mutation.target.target_id}\"]`); > 36 |…",
+            "artifacts_dir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/mutations/track_R/gemini-3.6-flash/controls/mutation-3eaa4cad6dfee398-original-r2.artifacts"
+          },
+          "mutated": {
+            "status": "failed",
+            "mutation_events": [
+              {
+                "mutationId": "mutation-3eaa4cad6dfee398",
+                "targetId": "target-94e76973e20445c8",
+                "url": "https://demowebshop.tricentis.com/",
+                "status": "ambiguous",
+                "detail": "3 bootstrap candidates"
+              }
+            ],
+            "control_observation": null,
+            "returncode": 1,
+            "duration_seconds": 14.028,
+            "error_type": "assertion_failure",
+            "error_message_excerpt": "Error: expect(locator).toHaveCount(expected) failed Locator: locator('[data-resilience-target=\"target-94e76973e20445c8\"]') Expected: 1 Received: 0 Timeout: 7000ms Call log: - Expect \"toHaveCount\" with timeout 7000ms - waiting for locator('[data-resilience-target=\"target-94e76973e20445c8\"]') 18 × locator resolved to 0 elements - unexpected value \"0\" 34 | await page.goto(mutation.target.page_url); 35 | const target = page.locator(`[data-resilience-target=\"${mutation.target.target_id}\"]`); > 36 |…",
+            "artifacts_dir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/mutations/track_R/gemini-3.6-flash/controls/mutation-3eaa4cad6dfee398-mutated-r2.artifacts"
+          },
+          "invalid_reasons": [
+            "mutated_control_failed",
+            "mutated_target_not_interacted",
+            "mutation_not_applied",
+            "original_control_failed",
+            "original_target_not_interacted",
+            "original_target_not_marked"
+          ]
+        },
+        {
+          "repetition": 3,
+          "original": {
+            "status": "failed",
+            "mutation_events": [
+              {
+                "mutationId": "mutation-3eaa4cad6dfee398",
+                "targetId": "target-94e76973e20445c8",
+                "url": "https://demowebshop.tricentis.com/",
+                "status": "ambiguous",
+                "detail": "3 bootstrap candidates"
+              }
+            ],
+            "control_observation": null,
+            "returncode": 1,
+            "duration_seconds": 14.154,
+            "error_type": "assertion_failure",
+            "error_message_excerpt": "Error: expect(locator).toHaveCount(expected) failed Locator: locator('[data-resilience-target=\"target-94e76973e20445c8\"]') Expected: 1 Received: 0 Timeout: 7000ms Call log: - Expect \"toHaveCount\" with timeout 7000ms - waiting for locator('[data-resilience-target=\"target-94e76973e20445c8\"]') 18 × locator resolved to 0 elements - unexpected value \"0\" 34 | await page.goto(mutation.target.page_url); 35 | const target = page.locator(`[data-resilience-target=\"${mutation.target.target_id}\"]`); > 36 |…",
+            "artifacts_dir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/mutations/track_R/gemini-3.6-flash/controls/mutation-3eaa4cad6dfee398-original-r3.artifacts"
+          },
+          "mutated": {
+            "status": "failed",
+            "mutation_events": [
+              {
+                "mutationId": "mutation-3eaa4cad6dfee398",
+                "targetId": "target-94e76973e20445c8",
+                "url": "https://demowebshop.tricentis.com/",
+                "status": "ambiguous",
+                "detail": "3 bootstrap candidates"
+              }
+            ],
+            "control_observation": null,
+            "returncode": 1,
+            "duration_seconds": 14.028,
+            "error_type": "assertion_failure",
+            "error_message_excerpt": "Error: expect(locator).toHaveCount(expected) failed Locator: locator('[data-resilience-target=\"target-94e76973e20445c8\"]') Expected: 1 Received: 0 Timeout: 7000ms Call log: - Expect \"toHaveCount\" with timeout 7000ms - waiting for locator('[data-resilience-target=\"target-94e76973e20445c8\"]') 18 × locator resolved to 0 elements - unexpected value \"0\" 34 | await page.goto(mutation.target.page_url); 35 | const target = page.locator(`[data-resilience-target=\"${mutation.target.target_id}\"]`); > 36 |…",
+            "artifacts_dir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/mutations/track_R/gemini-3.6-flash/controls/mutation-3eaa4cad6dfee398-mutated-r3.artifacts"
+          },
+          "invalid_reasons": [
+            "mutated_control_failed",
+            "mutated_target_not_interacted",
+            "mutation_not_applied",
+            "original_control_failed",
+            "original_target_not_interacted",
+            "original_target_not_marked"
+          ]
+        }
+      ],
+      "exposure_runs": [],
+      "condition_runs": []
+    },
+    {
+      "mutation_id": "mutation-970dfe4afdc63621",
+      "scenario_id": "fluxo_computadores_desktops",
+      "stratum": "E1",
+      "operator": "insert_wrapper",
+      "control_valid": false,
+      "paired_applicable": false,
+      "invalid_reasons": [
+        "mutated_control_failed",
+        "mutated_target_not_interacted",
+        "mutation_not_applied",
+        "original_control_failed",
+        "original_target_not_interacted",
+        "original_target_not_marked"
+      ],
+      "control_runs": [
+        {
+          "repetition": 1,
+          "original": {
+            "status": "failed",
+            "mutation_events": [
+              {
+                "mutationId": "mutation-970dfe4afdc63621",
+                "targetId": "target-94e76973e20445c8",
+                "url": "https://demowebshop.tricentis.com/",
+                "status": "ambiguous",
+                "detail": "3 bootstrap candidates"
+              }
+            ],
+            "control_observation": null,
+            "returncode": 1,
+            "duration_seconds": 14.674,
+            "error_type": "assertion_failure",
+            "error_message_excerpt": "Error: expect(locator).toHaveCount(expected) failed Locator: locator('[data-resilience-target=\"target-94e76973e20445c8\"]') Expected: 1 Received: 0 Timeout: 7000ms Call log: - Expect \"toHaveCount\" with timeout 7000ms - waiting for locator('[data-resilience-target=\"target-94e76973e20445c8\"]') 18 × locator resolved to 0 elements - unexpected value \"0\" 34 | await page.goto(mutation.target.page_url); 35 | const target = page.locator(`[data-resilience-target=\"${mutation.target.target_id}\"]`); > 36 |…",
+            "artifacts_dir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/mutations/track_R/gemini-3.6-flash/controls/mutation-970dfe4afdc63621-original-r1.artifacts"
+          },
+          "mutated": {
+            "status": "failed",
+            "mutation_events": [
+              {
+                "mutationId": "mutation-970dfe4afdc63621",
+                "targetId": "target-94e76973e20445c8",
+                "url": "https://demowebshop.tricentis.com/",
+                "status": "ambiguous",
+                "detail": "3 bootstrap candidates"
+              }
+            ],
+            "control_observation": null,
+            "returncode": 1,
+            "duration_seconds": 14.761,
+            "error_type": "assertion_failure",
+            "error_message_excerpt": "Error: expect(locator).toHaveCount(expected) failed Locator: locator('[data-resilience-target=\"target-94e76973e20445c8\"]') Expected: 1 Received: 0 Timeout: 7000ms Call log: - Expect \"toHaveCount\" with timeout 7000ms - waiting for locator('[data-resilience-target=\"target-94e76973e20445c8\"]') 18 × locator resolved to 0 elements - unexpected value \"0\" 34 | await page.goto(mutation.target.page_url); 35 | const target = page.locator(`[data-resilience-target=\"${mutation.target.target_id}\"]`); > 36 |…",
+            "artifacts_dir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/mutations/track_R/gemini-3.6-flash/controls/mutation-970dfe4afdc63621-mutated-r1.artifacts"
+          },
+          "invalid_reasons": [
+            "mutated_control_failed",
+            "mutated_target_not_interacted",
+            "mutation_not_applied",
+            "original_control_failed",
+            "original_target_not_interacted",
+            "original_target_not_marked"
+          ]
+        },
+        {
+          "repetition": 2,
+          "original": {
+            "status": "failed",
+            "mutation_events": [
+              {
+                "mutationId": "mutation-970dfe4afdc63621",
+                "targetId": "target-94e76973e20445c8",
+                "url": "https://demowebshop.tricentis.com/",
+                "status": "ambiguous",
+                "detail": "3 bootstrap candidates"
+              }
+            ],
+            "control_observation": null,
+            "returncode": 1,
+            "duration_seconds": 14.504,
+            "error_type": "assertion_failure",
+            "error_message_excerpt": "Error: expect(locator).toHaveCount(expected) failed Locator: locator('[data-resilience-target=\"target-94e76973e20445c8\"]') Expected: 1 Received: 0 Timeout: 7000ms Call log: - Expect \"toHaveCount\" with timeout 7000ms - waiting for locator('[data-resilience-target=\"target-94e76973e20445c8\"]') 18 × locator resolved to 0 elements - unexpected value \"0\" 34 | await page.goto(mutation.target.page_url); 35 | const target = page.locator(`[data-resilience-target=\"${mutation.target.target_id}\"]`); > 36 |…",
+            "artifacts_dir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/mutations/track_R/gemini-3.6-flash/controls/mutation-970dfe4afdc63621-original-r2.artifacts"
+          },
+          "mutated": {
+            "status": "failed",
+            "mutation_events": [
+              {
+                "mutationId": "mutation-970dfe4afdc63621",
+                "targetId": "target-94e76973e20445c8",
+                "url": "https://demowebshop.tricentis.com/",
+                "status": "ambiguous",
+                "detail": "3 bootstrap candidates"
+              }
+            ],
+            "control_observation": null,
+            "returncode": 1,
+            "duration_seconds": 14.743,
+            "error_type": "assertion_failure",
+            "error_message_excerpt": "Error: expect(locator).toHaveCount(expected) failed Locator: locator('[data-resilience-target=\"target-94e76973e20445c8\"]') Expected: 1 Received: 0 Timeout: 7000ms Call log: - Expect \"toHaveCount\" with timeout 7000ms - waiting for locator('[data-resilience-target=\"target-94e76973e20445c8\"]') 18 × locator resolved to 0 elements - unexpected value \"0\" 34 | await page.goto(mutation.target.page_url); 35 | const target = page.locator(`[data-resilience-target=\"${mutation.target.target_id}\"]`); > 36 |…",
+            "artifacts_dir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/mutations/track_R/gemini-3.6-flash/controls/mutation-970dfe4afdc63621-mutated-r2.artifacts"
+          },
+          "invalid_reasons": [
+            "mutated_control_failed",
+            "mutated_target_not_interacted",
+            "mutation_not_applied",
+            "original_control_failed",
+            "original_target_not_interacted",
+            "original_target_not_marked"
+          ]
+        },
+        {
+          "repetition": 3,
+          "original": {
+            "status": "failed",
+            "mutation_events": [
+              {
+                "mutationId": "mutation-970dfe4afdc63621",
+                "targetId": "target-94e76973e20445c8",
+                "url": "https://demowebshop.tricentis.com/",
+                "status": "ambiguous",
+                "detail": "3 bootstrap candidates"
+              }
+            ],
+            "control_observation": null,
+            "returncode": 1,
+            "duration_seconds": 14.633,
+            "error_type": "assertion_failure",
+            "error_message_excerpt": "Error: expect(locator).toHaveCount(expected) failed Locator: locator('[data-resilience-target=\"target-94e76973e20445c8\"]') Expected: 1 Received: 0 Timeout: 7000ms Call log: - Expect \"toHaveCount\" with timeout 7000ms - waiting for locator('[data-resilience-target=\"target-94e76973e20445c8\"]') 18 × locator resolved to 0 elements - unexpected value \"0\" 34 | await page.goto(mutation.target.page_url); 35 | const target = page.locator(`[data-resilience-target=\"${mutation.target.target_id}\"]`); > 36 |…",
+            "artifacts_dir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/mutations/track_R/gemini-3.6-flash/controls/mutation-970dfe4afdc63621-original-r3.artifacts"
+          },
+          "mutated": {
+            "status": "failed",
+            "mutation_events": [
+              {
+                "mutationId": "mutation-970dfe4afdc63621",
+                "targetId": "target-94e76973e20445c8",
+                "url": "https://demowebshop.tricentis.com/",
+                "status": "ambiguous",
+                "detail": "3 bootstrap candidates"
+              }
+            ],
+            "control_observation": null,
+            "returncode": 1,
+            "duration_seconds": 14.56,
+            "error_type": "assertion_failure",
+            "error_message_excerpt": "Error: expect(locator).toHaveCount(expected) failed Locator: locator('[data-resilience-target=\"target-94e76973e20445c8\"]') Expected: 1 Received: 0 Timeout: 7000ms Call log: - Expect \"toHaveCount\" with timeout 7000ms - waiting for locator('[data-resilience-target=\"target-94e76973e20445c8\"]') 18 × locator resolved to 0 elements - unexpected value \"0\" 34 | await page.goto(mutation.target.page_url); 35 | const target = page.locator(`[data-resilience-target=\"${mutation.target.target_id}\"]`); > 36 |…",
+            "artifacts_dir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/mutations/track_R/gemini-3.6-flash/controls/mutation-970dfe4afdc63621-mutated-r3.artifacts"
+          },
+          "invalid_reasons": [
+            "mutated_control_failed",
+            "mutated_target_not_interacted",
+            "mutation_not_applied",
+            "original_control_failed",
+            "original_target_not_interacted",
+            "original_target_not_marked"
+          ]
+        }
+      ],
+      "exposure_runs": [],
+      "condition_runs": []
+    },
+    {
+      "mutation_id": "mutation-5b72726c4f561716",
+      "scenario_id": "suite_navegar_sobre_nos",
+      "stratum": "E1",
+      "operator": "insert_noninteractive_sibling_before",
+      "control_valid": true,
+      "paired_applicable": true,
+      "invalid_reasons": [],
+      "control_runs": [
+        {
+          "repetition": 1,
+          "original": {
+            "status": "passed",
+            "mutation_events": [
+              {
+                "mutationId": "mutation-5b72726c4f561716",
+                "targetId": "target-189a40214a2c6700",
+                "url": "https://demowebshop.tricentis.com/",
+                "status": "marked",
+                "detail": ""
+              },
+              {
+                "mutationId": "mutation-5b72726c4f561716",
+                "targetId": "target-189a40214a2c6700",
+                "url": "https://demowebshop.tricentis.com/",
+                "status": "interacted",
+                "detail": "click"
+              }
+            ],
+            "control_observation": {
+              "supported": true,
+              "pathname": "/about-us",
+              "search": "",
+              "heading": [
+                "About Us"
+              ],
+              "notifications": [],
+              "targetPresent": false,
+              "targetValueChanged": null,
+              "pageErrors": [],
+              "failedResponses": []
+            },
+            "returncode": 0,
+            "duration_seconds": 7.68,
+            "error_type": "",
+            "error_message_excerpt": "",
+            "artifacts_dir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/mutations/track_R/gemini-3.6-flash/controls/mutation-5b72726c4f561716-original-r1.artifacts"
+          },
+          "mutated": {
+            "status": "passed",
+            "mutation_events": [
+              {
+                "mutationId": "mutation-5b72726c4f561716",
+                "targetId": "target-189a40214a2c6700",
+                "url": "https://demowebshop.tricentis.com/",
+                "status": "applied",
+                "detail": ""
+              },
+              {
+                "mutationId": "mutation-5b72726c4f561716",
+                "targetId": "target-189a40214a2c6700",
+                "url": "https://demowebshop.tricentis.com/",
+                "status": "interacted",
+                "detail": "click"
+              }
+            ],
+            "control_observation": {
+              "supported": true,
+              "pathname": "/about-us",
+              "search": "",
+              "heading": [
+                "About Us"
+              ],
+              "notifications": [],
+              "targetPresent": false,
+              "targetValueChanged": null,
+              "pageErrors": [],
+              "failedResponses": []
+            },
+            "returncode": 0,
+            "duration_seconds": 7.813,
+            "error_type": "",
+            "error_message_excerpt": "",
+            "artifacts_dir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/mutations/track_R/gemini-3.6-flash/controls/mutation-5b72726c4f561716-mutated-r1.artifacts"
+          },
+          "invalid_reasons": []
+        },
+        {
+          "repetition": 2,
+          "original": {
+            "status": "passed",
+            "mutation_events": [
+              {
+                "mutationId": "mutation-5b72726c4f561716",
+                "targetId": "target-189a40214a2c6700",
+                "url": "https://demowebshop.tricentis.com/",
+                "status": "marked",
+                "detail": ""
+              },
+              {
+                "mutationId": "mutation-5b72726c4f561716",
+                "targetId": "target-189a40214a2c6700",
+                "url": "https://demowebshop.tricentis.com/",
+                "status": "interacted",
+                "detail": "click"
+              }
+            ],
+            "control_observation": {
+              "supported": true,
+              "pathname": "/about-us",
+              "search": "",
+              "heading": [
+                "About Us"
+              ],
+              "notifications": [],
+              "targetPresent": false,
+              "targetValueChanged": null,
+              "pageErrors": [],
+              "failedResponses": []
+            },
+            "returncode": 0,
+            "duration_seconds": 7.533,
+            "error_type": "",
+            "error_message_excerpt": "",
+            "artifacts_dir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/mutations/track_R/gemini-3.6-flash/controls/mutation-5b72726c4f561716-original-r2.artifacts"
+          },
+          "mutated": {
+            "status": "passed",
+            "mutation_events": [
+              {
+                "mutationId": "mutation-5b72726c4f561716",
+                "targetId": "target-189a40214a2c6700",
+                "url": "https://demowebshop.tricentis.com/",
+                "status": "applied",
+                "detail": ""
+              },
+              {
+                "mutationId": "mutation-5b72726c4f561716",
+                "targetId": "target-189a40214a2c6700",
+                "url": "https://demowebshop.tricentis.com/",
+                "status": "interacted",
+                "detail": "click"
+              }
+            ],
+            "control_observation": {
+              "supported": true,
+              "pathname": "/about-us",
+              "search": "",
+              "heading": [
+                "About Us"
+              ],
+              "notifications": [],
+              "targetPresent": false,
+              "targetValueChanged": null,
+              "pageErrors": [],
+              "failedResponses": []
+            },
+            "returncode": 0,
+            "duration_seconds": 7.524,
+            "error_type": "",
+            "error_message_excerpt": "",
+            "artifacts_dir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/mutations/track_R/gemini-3.6-flash/controls/mutation-5b72726c4f561716-mutated-r2.artifacts"
+          },
+          "invalid_reasons": []
+        },
+        {
+          "repetition": 3,
+          "original": {
+            "status": "passed",
+            "mutation_events": [
+              {
+                "mutationId": "mutation-5b72726c4f561716",
+                "targetId": "target-189a40214a2c6700",
+                "url": "https://demowebshop.tricentis.com/",
+                "status": "marked",
+                "detail": ""
+              },
+              {
+                "mutationId": "mutation-5b72726c4f561716",
+                "targetId": "target-189a40214a2c6700",
+                "url": "https://demowebshop.tricentis.com/",
+                "status": "interacted",
+                "detail": "click"
+              }
+            ],
+            "control_observation": {
+              "supported": true,
+              "pathname": "/about-us",
+              "search": "",
+              "heading": [
+                "About Us"
+              ],
+              "notifications": [],
+              "targetPresent": false,
+              "targetValueChanged": null,
+              "pageErrors": [],
+              "failedResponses": []
+            },
+            "returncode": 0,
+            "duration_seconds": 7.587,
+            "error_type": "",
+            "error_message_excerpt": "",
+            "artifacts_dir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/mutations/track_R/gemini-3.6-flash/controls/mutation-5b72726c4f561716-original-r3.artifacts"
+          },
+          "mutated": {
+            "status": "passed",
+            "mutation_events": [
+              {
+                "mutationId": "mutation-5b72726c4f561716",
+                "targetId": "target-189a40214a2c6700",
+                "url": "https://demowebshop.tricentis.com/",
+                "status": "applied",
+                "detail": ""
+              },
+              {
+                "mutationId": "mutation-5b72726c4f561716",
+                "targetId": "target-189a40214a2c6700",
+                "url": "https://demowebshop.tricentis.com/",
+                "status": "interacted",
+                "detail": "click"
+              }
+            ],
+            "control_observation": {
+              "supported": true,
+              "pathname": "/about-us",
+              "search": "",
+              "heading": [
+                "About Us"
+              ],
+              "notifications": [],
+              "targetPresent": false,
+              "targetValueChanged": null,
+              "pageErrors": [],
+              "failedResponses": []
+            },
+            "returncode": 0,
+            "duration_seconds": 7.806,
+            "error_type": "",
+            "error_message_excerpt": "",
+            "artifacts_dir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/mutations/track_R/gemini-3.6-flash/controls/mutation-5b72726c4f561716-mutated-r3.artifacts"
+          },
+          "invalid_reasons": []
+        }
+      ],
+      "exposure_runs": [
+        {
+          "repetition": 1,
+          "order": [
+            "B",
+            "A"
+          ],
+          "conditions": {
+            "B": {
+              "status": "passed",
+              "interacted": true,
+              "outcome": {
+                "status": "passed",
+                "mutation_events": [
+                  {
+                    "mutationId": "mutation-5b72726c4f561716",
+                    "targetId": "target-189a40214a2c6700",
+                    "url": "https://demowebshop.tricentis.com/",
+                    "status": "marked",
+                    "detail": ""
+                  },
+                  {
+                    "mutationId": "mutation-5b72726c4f561716",
+                    "targetId": "target-189a40214a2c6700",
+                    "url": "https://demowebshop.tricentis.com/",
+                    "status": "interacted",
+                    "detail": "click"
+                  }
+                ],
+                "control_observation": null,
+                "returncode": 0,
+                "duration_seconds": 7.645,
+                "error_type": "",
+                "error_message_excerpt": "",
+                "artifacts_dir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/mutations/track_R/gemini-3.6-flash/exposure/mutation-5b72726c4f561716-B-r1.artifacts"
+              }
+            },
+            "A": {
+              "status": "passed",
+              "interacted": true,
+              "outcome": {
+                "status": "passed",
+                "mutation_events": [
+                  {
+                    "mutationId": "mutation-5b72726c4f561716",
+                    "targetId": "target-189a40214a2c6700",
+                    "url": "https://demowebshop.tricentis.com/",
+                    "status": "marked",
+                    "detail": ""
+                  },
+                  {
+                    "mutationId": "mutation-5b72726c4f561716",
+                    "targetId": "target-189a40214a2c6700",
+                    "url": "https://demowebshop.tricentis.com/",
+                    "status": "interacted",
+                    "detail": "click"
+                  }
+                ],
+                "control_observation": null,
+                "returncode": 0,
+                "duration_seconds": 7.464,
+                "error_type": "",
+                "error_message_excerpt": "",
+                "artifacts_dir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/mutations/track_R/gemini-3.6-flash/exposure/mutation-5b72726c4f561716-A-r1.artifacts"
+              }
+            }
+          }
+        },
+        {
+          "repetition": 2,
+          "order": [
+            "B",
+            "A"
+          ],
+          "conditions": {
+            "B": {
+              "status": "passed",
+              "interacted": true,
+              "outcome": {
+                "status": "passed",
+                "mutation_events": [
+                  {
+                    "mutationId": "mutation-5b72726c4f561716",
+                    "targetId": "target-189a40214a2c6700",
+                    "url": "https://demowebshop.tricentis.com/",
+                    "status": "marked",
+                    "detail": ""
+                  },
+                  {
+                    "mutationId": "mutation-5b72726c4f561716",
+                    "targetId": "target-189a40214a2c6700",
+                    "url": "https://demowebshop.tricentis.com/",
+                    "status": "interacted",
+                    "detail": "click"
+                  }
+                ],
+                "control_observation": null,
+                "returncode": 0,
+                "duration_seconds": 7.82,
+                "error_type": "",
+                "error_message_excerpt": "",
+                "artifacts_dir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/mutations/track_R/gemini-3.6-flash/exposure/mutation-5b72726c4f561716-B-r2.artifacts"
+              }
+            },
+            "A": {
+              "status": "passed",
+              "interacted": true,
+              "outcome": {
+                "status": "passed",
+                "mutation_events": [
+                  {
+                    "mutationId": "mutation-5b72726c4f561716",
+                    "targetId": "target-189a40214a2c6700",
+                    "url": "https://demowebshop.tricentis.com/",
+                    "status": "marked",
+                    "detail": ""
+                  },
+                  {
+                    "mutationId": "mutation-5b72726c4f561716",
+                    "targetId": "target-189a40214a2c6700",
+                    "url": "https://demowebshop.tricentis.com/",
+                    "status": "interacted",
+                    "detail": "click"
+                  }
+                ],
+                "control_observation": null,
+                "returncode": 0,
+                "duration_seconds": 7.841,
+                "error_type": "",
+                "error_message_excerpt": "",
+                "artifacts_dir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/mutations/track_R/gemini-3.6-flash/exposure/mutation-5b72726c4f561716-A-r2.artifacts"
+              }
+            }
+          }
+        },
+        {
+          "repetition": 3,
+          "order": [
+            "B",
+            "A"
+          ],
+          "conditions": {
+            "B": {
+              "status": "passed",
+              "interacted": true,
+              "outcome": {
+                "status": "passed",
+                "mutation_events": [
+                  {
+                    "mutationId": "mutation-5b72726c4f561716",
+                    "targetId": "target-189a40214a2c6700",
+                    "url": "https://demowebshop.tricentis.com/",
+                    "status": "marked",
+                    "detail": ""
+                  },
+                  {
+                    "mutationId": "mutation-5b72726c4f561716",
+                    "targetId": "target-189a40214a2c6700",
+                    "url": "https://demowebshop.tricentis.com/",
+                    "status": "interacted",
+                    "detail": "click"
+                  }
+                ],
+                "control_observation": null,
+                "returncode": 0,
+                "duration_seconds": 7.559,
+                "error_type": "",
+                "error_message_excerpt": "",
+                "artifacts_dir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/mutations/track_R/gemini-3.6-flash/exposure/mutation-5b72726c4f561716-B-r3.artifacts"
+              }
+            },
+            "A": {
+              "status": "passed",
+              "interacted": true,
+              "outcome": {
+                "status": "passed",
+                "mutation_events": [
+                  {
+                    "mutationId": "mutation-5b72726c4f561716",
+                    "targetId": "target-189a40214a2c6700",
+                    "url": "https://demowebshop.tricentis.com/",
+                    "status": "marked",
+                    "detail": ""
+                  },
+                  {
+                    "mutationId": "mutation-5b72726c4f561716",
+                    "targetId": "target-189a40214a2c6700",
+                    "url": "https://demowebshop.tricentis.com/",
+                    "status": "interacted",
+                    "detail": "click"
+                  }
+                ],
+                "control_observation": null,
+                "returncode": 0,
+                "duration_seconds": 7.757,
+                "error_type": "",
+                "error_message_excerpt": "",
+                "artifacts_dir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/mutations/track_R/gemini-3.6-flash/exposure/mutation-5b72726c4f561716-A-r3.artifacts"
+              }
+            }
+          }
+        }
+      ],
+      "condition_runs": [
+        {
+          "repetition": 1,
+          "order": [
+            "A",
+            "B"
+          ],
+          "outcomes": {
+            "A": "passed_interacted",
+            "B": "passed_interacted"
+          },
+          "details": {
+            "A": {
+              "status": "passed",
+              "mutation_events": [
+                {
+                  "mutationId": "mutation-5b72726c4f561716",
+                  "targetId": "target-189a40214a2c6700",
+                  "url": "https://demowebshop.tricentis.com/",
+                  "status": "applied",
+                  "detail": ""
+                },
+                {
+                  "mutationId": "mutation-5b72726c4f561716",
+                  "targetId": "target-189a40214a2c6700",
+                  "url": "https://demowebshop.tricentis.com/",
+                  "status": "interacted",
+                  "detail": "click"
+                }
+              ],
+              "control_observation": null,
+              "returncode": 0,
+              "duration_seconds": 7.708,
+              "error_type": "",
+              "error_message_excerpt": "",
+              "artifacts_dir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/mutations/track_R/gemini-3.6-flash/mutations/mutation-5b72726c4f561716-A-r1.artifacts"
+            },
+            "B": {
+              "status": "passed",
+              "mutation_events": [
+                {
+                  "mutationId": "mutation-5b72726c4f561716",
+                  "targetId": "target-189a40214a2c6700",
+                  "url": "https://demowebshop.tricentis.com/",
+                  "status": "applied",
+                  "detail": ""
+                },
+                {
+                  "mutationId": "mutation-5b72726c4f561716",
+                  "targetId": "target-189a40214a2c6700",
+                  "url": "https://demowebshop.tricentis.com/",
+                  "status": "interacted",
+                  "detail": "click"
+                }
+              ],
+              "control_observation": null,
+              "returncode": 0,
+              "duration_seconds": 7.873,
+              "error_type": "",
+              "error_message_excerpt": "",
+              "artifacts_dir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/mutations/track_R/gemini-3.6-flash/mutations/mutation-5b72726c4f561716-B-r1.artifacts"
+            }
+          }
+        },
+        {
+          "repetition": 2,
+          "order": [
+            "A",
+            "B"
+          ],
+          "outcomes": {
+            "A": "passed_interacted",
+            "B": "passed_interacted"
+          },
+          "details": {
+            "A": {
+              "status": "passed",
+              "mutation_events": [
+                {
+                  "mutationId": "mutation-5b72726c4f561716",
+                  "targetId": "target-189a40214a2c6700",
+                  "url": "https://demowebshop.tricentis.com/",
+                  "status": "applied",
+                  "detail": ""
+                },
+                {
+                  "mutationId": "mutation-5b72726c4f561716",
+                  "targetId": "target-189a40214a2c6700",
+                  "url": "https://demowebshop.tricentis.com/",
+                  "status": "interacted",
+                  "detail": "click"
+                }
+              ],
+              "control_observation": null,
+              "returncode": 0,
+              "duration_seconds": 7.757,
+              "error_type": "",
+              "error_message_excerpt": "",
+              "artifacts_dir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/mutations/track_R/gemini-3.6-flash/mutations/mutation-5b72726c4f561716-A-r2.artifacts"
+            },
+            "B": {
+              "status": "passed",
+              "mutation_events": [
+                {
+                  "mutationId": "mutation-5b72726c4f561716",
+                  "targetId": "target-189a40214a2c6700",
+                  "url": "https://demowebshop.tricentis.com/",
+                  "status": "applied",
+                  "detail": ""
+                },
+                {
+                  "mutationId": "mutation-5b72726c4f561716",
+                  "targetId": "target-189a40214a2c6700",
+                  "url": "https://demowebshop.tricentis.com/",
+                  "status": "interacted",
+                  "detail": "click"
+                }
+              ],
+              "control_observation": null,
+              "returncode": 0,
+              "duration_seconds": 7.779,
+              "error_type": "",
+              "error_message_excerpt": "",
+              "artifacts_dir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/mutations/track_R/gemini-3.6-flash/mutations/mutation-5b72726c4f561716-B-r2.artifacts"
+            }
+          }
+        },
+        {
+          "repetition": 3,
+          "order": [
+            "A",
+            "B"
+          ],
+          "outcomes": {
+            "A": "passed_interacted",
+            "B": "passed_interacted"
+          },
+          "details": {
+            "A": {
+              "status": "passed",
+              "mutation_events": [
+                {
+                  "mutationId": "mutation-5b72726c4f561716",
+                  "targetId": "target-189a40214a2c6700",
+                  "url": "https://demowebshop.tricentis.com/",
+                  "status": "applied",
+                  "detail": ""
+                },
+                {
+                  "mutationId": "mutation-5b72726c4f561716",
+                  "targetId": "target-189a40214a2c6700",
+                  "url": "https://demowebshop.tricentis.com/",
+                  "status": "interacted",
+                  "detail": "click"
+                }
+              ],
+              "control_observation": null,
+              "returncode": 0,
+              "duration_seconds": 7.91,
+              "error_type": "",
+              "error_message_excerpt": "",
+              "artifacts_dir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/mutations/track_R/gemini-3.6-flash/mutations/mutation-5b72726c4f561716-A-r3.artifacts"
+            },
+            "B": {
+              "status": "passed",
+              "mutation_events": [
+                {
+                  "mutationId": "mutation-5b72726c4f561716",
+                  "targetId": "target-189a40214a2c6700",
+                  "url": "https://demowebshop.tricentis.com/",
+                  "status": "applied",
+                  "detail": ""
+                },
+                {
+                  "mutationId": "mutation-5b72726c4f561716",
+                  "targetId": "target-189a40214a2c6700",
+                  "url": "https://demowebshop.tricentis.com/",
+                  "status": "interacted",
+                  "detail": "click"
+                }
+              ],
+              "control_observation": null,
+              "returncode": 0,
+              "duration_seconds": 7.719,
+              "error_type": "",
+              "error_message_excerpt": "",
+              "artifacts_dir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/mutations/track_R/gemini-3.6-flash/mutations/mutation-5b72726c4f561716-B-r3.artifacts"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "mutation_id": "mutation-d20cb5bb3f6fd31b",
+      "scenario_id": "suite_navegar_sobre_nos",
+      "stratum": "E1",
+      "operator": "insert_wrapper",
+      "control_valid": true,
+      "paired_applicable": true,
+      "invalid_reasons": [],
+      "control_runs": [
+        {
+          "repetition": 1,
+          "original": {
+            "status": "passed",
+            "mutation_events": [
+              {
+                "mutationId": "mutation-d20cb5bb3f6fd31b",
+                "targetId": "target-189a40214a2c6700",
+                "url": "https://demowebshop.tricentis.com/",
+                "status": "marked",
+                "detail": ""
+              },
+              {
+                "mutationId": "mutation-d20cb5bb3f6fd31b",
+                "targetId": "target-189a40214a2c6700",
+                "url": "https://demowebshop.tricentis.com/",
+                "status": "interacted",
+                "detail": "click"
+              }
+            ],
+            "control_observation": {
+              "supported": true,
+              "pathname": "/about-us",
+              "search": "",
+              "heading": [
+                "About Us"
+              ],
+              "notifications": [],
+              "targetPresent": false,
+              "targetValueChanged": null,
+              "pageErrors": [],
+              "failedResponses": []
+            },
+            "returncode": 0,
+            "duration_seconds": 7.918,
+            "error_type": "",
+            "error_message_excerpt": "",
+            "artifacts_dir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/mutations/track_R/gemini-3.6-flash/controls/mutation-d20cb5bb3f6fd31b-original-r1.artifacts"
+          },
+          "mutated": {
+            "status": "passed",
+            "mutation_events": [
+              {
+                "mutationId": "mutation-d20cb5bb3f6fd31b",
+                "targetId": "target-189a40214a2c6700",
+                "url": "https://demowebshop.tricentis.com/",
+                "status": "applied",
+                "detail": ""
+              },
+              {
+                "mutationId": "mutation-d20cb5bb3f6fd31b",
+                "targetId": "target-189a40214a2c6700",
+                "url": "https://demowebshop.tricentis.com/",
+                "status": "interacted",
+                "detail": "click"
+              }
+            ],
+            "control_observation": {
+              "supported": true,
+              "pathname": "/about-us",
+              "search": "",
+              "heading": [
+                "About Us"
+              ],
+              "notifications": [],
+              "targetPresent": false,
+              "targetValueChanged": null,
+              "pageErrors": [],
+              "failedResponses": []
+            },
+            "returncode": 0,
+            "duration_seconds": 7.995,
+            "error_type": "",
+            "error_message_excerpt": "",
+            "artifacts_dir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/mutations/track_R/gemini-3.6-flash/controls/mutation-d20cb5bb3f6fd31b-mutated-r1.artifacts"
+          },
+          "invalid_reasons": []
+        },
+        {
+          "repetition": 2,
+          "original": {
+            "status": "passed",
+            "mutation_events": [
+              {
+                "mutationId": "mutation-d20cb5bb3f6fd31b",
+                "targetId": "target-189a40214a2c6700",
+                "url": "https://demowebshop.tricentis.com/",
+                "status": "marked",
+                "detail": ""
+              },
+              {
+                "mutationId": "mutation-d20cb5bb3f6fd31b",
+                "targetId": "target-189a40214a2c6700",
+                "url": "https://demowebshop.tricentis.com/",
+                "status": "interacted",
+                "detail": "click"
+              }
+            ],
+            "control_observation": {
+              "supported": true,
+              "pathname": "/about-us",
+              "search": "",
+              "heading": [
+                "About Us"
+              ],
+              "notifications": [],
+              "targetPresent": false,
+              "targetValueChanged": null,
+              "pageErrors": [],
+              "failedResponses": []
+            },
+            "returncode": 0,
+            "duration_seconds": 7.437,
+            "error_type": "",
+            "error_message_excerpt": "",
+            "artifacts_dir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/mutations/track_R/gemini-3.6-flash/controls/mutation-d20cb5bb3f6fd31b-original-r2.artifacts"
+          },
+          "mutated": {
+            "status": "passed",
+            "mutation_events": [
+              {
+                "mutationId": "mutation-d20cb5bb3f6fd31b",
+                "targetId": "target-189a40214a2c6700",
+                "url": "https://demowebshop.tricentis.com/",
+                "status": "applied",
+                "detail": ""
+              },
+              {
+                "mutationId": "mutation-d20cb5bb3f6fd31b",
+                "targetId": "target-189a40214a2c6700",
+                "url": "https://demowebshop.tricentis.com/",
+                "status": "interacted",
+                "detail": "click"
+              }
+            ],
+            "control_observation": {
+              "supported": true,
+              "pathname": "/about-us",
+              "search": "",
+              "heading": [
+                "About Us"
+              ],
+              "notifications": [],
+              "targetPresent": false,
+              "targetValueChanged": null,
+              "pageErrors": [],
+              "failedResponses": []
+            },
+            "returncode": 0,
+            "duration_seconds": 7.769,
+            "error_type": "",
+            "error_message_excerpt": "",
+            "artifacts_dir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/mutations/track_R/gemini-3.6-flash/controls/mutation-d20cb5bb3f6fd31b-mutated-r2.artifacts"
+          },
+          "invalid_reasons": []
+        },
+        {
+          "repetition": 3,
+          "original": {
+            "status": "passed",
+            "mutation_events": [
+              {
+                "mutationId": "mutation-d20cb5bb3f6fd31b",
+                "targetId": "target-189a40214a2c6700",
+                "url": "https://demowebshop.tricentis.com/",
+                "status": "marked",
+                "detail": ""
+              },
+              {
+                "mutationId": "mutation-d20cb5bb3f6fd31b",
+                "targetId": "target-189a40214a2c6700",
+                "url": "https://demowebshop.tricentis.com/",
+                "status": "interacted",
+                "detail": "click"
+              }
+            ],
+            "control_observation": {
+              "supported": true,
+              "pathname": "/about-us",
+              "search": "",
+              "heading": [
+                "About Us"
+              ],
+              "notifications": [],
+              "targetPresent": false,
+              "targetValueChanged": null,
+              "pageErrors": [],
+              "failedResponses": []
+            },
+            "returncode": 0,
+            "duration_seconds": 7.78,
+            "error_type": "",
+            "error_message_excerpt": "",
+            "artifacts_dir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/mutations/track_R/gemini-3.6-flash/controls/mutation-d20cb5bb3f6fd31b-original-r3.artifacts"
+          },
+          "mutated": {
+            "status": "passed",
+            "mutation_events": [
+              {
+                "mutationId": "mutation-d20cb5bb3f6fd31b",
+                "targetId": "target-189a40214a2c6700",
+                "url": "https://demowebshop.tricentis.com/",
+                "status": "applied",
+                "detail": ""
+              },
+              {
+                "mutationId": "mutation-d20cb5bb3f6fd31b",
+                "targetId": "target-189a40214a2c6700",
+                "url": "https://demowebshop.tricentis.com/",
+                "status": "interacted",
+                "detail": "click"
+              }
+            ],
+            "control_observation": {
+              "supported": true,
+              "pathname": "/about-us",
+              "search": "",
+              "heading": [
+                "About Us"
+              ],
+              "notifications": [],
+              "targetPresent": false,
+              "targetValueChanged": null,
+              "pageErrors": [],
+              "failedResponses": []
+            },
+            "returncode": 0,
+            "duration_seconds": 7.794,
+            "error_type": "",
+            "error_message_excerpt": "",
+            "artifacts_dir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/mutations/track_R/gemini-3.6-flash/controls/mutation-d20cb5bb3f6fd31b-mutated-r3.artifacts"
+          },
+          "invalid_reasons": []
+        }
+      ],
+      "exposure_runs": [
+        {
+          "repetition": 1,
+          "order": [
+            "A",
+            "B"
+          ],
+          "conditions": {
+            "A": {
+              "status": "passed",
+              "interacted": true,
+              "outcome": {
+                "status": "passed",
+                "mutation_events": [
+                  {
+                    "mutationId": "mutation-d20cb5bb3f6fd31b",
+                    "targetId": "target-189a40214a2c6700",
+                    "url": "https://demowebshop.tricentis.com/",
+                    "status": "marked",
+                    "detail": ""
+                  },
+                  {
+                    "mutationId": "mutation-d20cb5bb3f6fd31b",
+                    "targetId": "target-189a40214a2c6700",
+                    "url": "https://demowebshop.tricentis.com/",
+                    "status": "interacted",
+                    "detail": "click"
+                  }
+                ],
+                "control_observation": null,
+                "returncode": 0,
+                "duration_seconds": 7.802,
+                "error_type": "",
+                "error_message_excerpt": "",
+                "artifacts_dir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/mutations/track_R/gemini-3.6-flash/exposure/mutation-d20cb5bb3f6fd31b-A-r1.artifacts"
+              }
+            },
+            "B": {
+              "status": "passed",
+              "interacted": true,
+              "outcome": {
+                "status": "passed",
+                "mutation_events": [
+                  {
+                    "mutationId": "mutation-d20cb5bb3f6fd31b",
+                    "targetId": "target-189a40214a2c6700",
+                    "url": "https://demowebshop.tricentis.com/",
+                    "status": "marked",
+                    "detail": ""
+                  },
+                  {
+                    "mutationId": "mutation-d20cb5bb3f6fd31b",
+                    "targetId": "target-189a40214a2c6700",
+                    "url": "https://demowebshop.tricentis.com/",
+                    "status": "interacted",
+                    "detail": "click"
+                  }
+                ],
+                "control_observation": null,
+                "returncode": 0,
+                "duration_seconds": 7.856,
+                "error_type": "",
+                "error_message_excerpt": "",
+                "artifacts_dir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/mutations/track_R/gemini-3.6-flash/exposure/mutation-d20cb5bb3f6fd31b-B-r1.artifacts"
+              }
+            }
+          }
+        },
+        {
+          "repetition": 2,
+          "order": [
+            "A",
+            "B"
+          ],
+          "conditions": {
+            "A": {
+              "status": "passed",
+              "interacted": true,
+              "outcome": {
+                "status": "passed",
+                "mutation_events": [
+                  {
+                    "mutationId": "mutation-d20cb5bb3f6fd31b",
+                    "targetId": "target-189a40214a2c6700",
+                    "url": "https://demowebshop.tricentis.com/",
+                    "status": "marked",
+                    "detail": ""
+                  },
+                  {
+                    "mutationId": "mutation-d20cb5bb3f6fd31b",
+                    "targetId": "target-189a40214a2c6700",
+                    "url": "https://demowebshop.tricentis.com/",
+                    "status": "interacted",
+                    "detail": "click"
+                  }
+                ],
+                "control_observation": null,
+                "returncode": 0,
+                "duration_seconds": 8.035,
+                "error_type": "",
+                "error_message_excerpt": "",
+                "artifacts_dir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/mutations/track_R/gemini-3.6-flash/exposure/mutation-d20cb5bb3f6fd31b-A-r2.artifacts"
+              }
+            },
+            "B": {
+              "status": "passed",
+              "interacted": true,
+              "outcome": {
+                "status": "passed",
+                "mutation_events": [
+                  {
+                    "mutationId": "mutation-d20cb5bb3f6fd31b",
+                    "targetId": "target-189a40214a2c6700",
+                    "url": "https://demowebshop.tricentis.com/",
+                    "status": "marked",
+                    "detail": ""
+                  },
+                  {
+                    "mutationId": "mutation-d20cb5bb3f6fd31b",
+                    "targetId": "target-189a40214a2c6700",
+                    "url": "https://demowebshop.tricentis.com/",
+                    "status": "interacted",
+                    "detail": "click"
+                  }
+                ],
+                "control_observation": null,
+                "returncode": 0,
+                "duration_seconds": 7.728,
+                "error_type": "",
+                "error_message_excerpt": "",
+                "artifacts_dir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/mutations/track_R/gemini-3.6-flash/exposure/mutation-d20cb5bb3f6fd31b-B-r2.artifacts"
+              }
+            }
+          }
+        },
+        {
+          "repetition": 3,
+          "order": [
+            "A",
+            "B"
+          ],
+          "conditions": {
+            "A": {
+              "status": "passed",
+              "interacted": true,
+              "outcome": {
+                "status": "passed",
+                "mutation_events": [
+                  {
+                    "mutationId": "mutation-d20cb5bb3f6fd31b",
+                    "targetId": "target-189a40214a2c6700",
+                    "url": "https://demowebshop.tricentis.com/",
+                    "status": "marked",
+                    "detail": ""
+                  },
+                  {
+                    "mutationId": "mutation-d20cb5bb3f6fd31b",
+                    "targetId": "target-189a40214a2c6700",
+                    "url": "https://demowebshop.tricentis.com/",
+                    "status": "interacted",
+                    "detail": "click"
+                  }
+                ],
+                "control_observation": null,
+                "returncode": 0,
+                "duration_seconds": 8.468,
+                "error_type": "",
+                "error_message_excerpt": "",
+                "artifacts_dir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/mutations/track_R/gemini-3.6-flash/exposure/mutation-d20cb5bb3f6fd31b-A-r3.artifacts"
+              }
+            },
+            "B": {
+              "status": "passed",
+              "interacted": true,
+              "outcome": {
+                "status": "passed",
+                "mutation_events": [
+                  {
+                    "mutationId": "mutation-d20cb5bb3f6fd31b",
+                    "targetId": "target-189a40214a2c6700",
+                    "url": "https://demowebshop.tricentis.com/",
+                    "status": "marked",
+                    "detail": ""
+                  },
+                  {
+                    "mutationId": "mutation-d20cb5bb3f6fd31b",
+                    "targetId": "target-189a40214a2c6700",
+                    "url": "https://demowebshop.tricentis.com/",
+                    "status": "interacted",
+                    "detail": "click"
+                  }
+                ],
+                "control_observation": null,
+                "returncode": 0,
+                "duration_seconds": 7.329,
+                "error_type": "",
+                "error_message_excerpt": "",
+                "artifacts_dir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/mutations/track_R/gemini-3.6-flash/exposure/mutation-d20cb5bb3f6fd31b-B-r3.artifacts"
+              }
+            }
+          }
+        }
+      ],
+      "condition_runs": [
+        {
+          "repetition": 1,
+          "order": [
+            "A",
+            "B"
+          ],
+          "outcomes": {
+            "A": "passed_interacted",
+            "B": "passed_interacted"
+          },
+          "details": {
+            "A": {
+              "status": "passed",
+              "mutation_events": [
+                {
+                  "mutationId": "mutation-d20cb5bb3f6fd31b",
+                  "targetId": "target-189a40214a2c6700",
+                  "url": "https://demowebshop.tricentis.com/",
+                  "status": "applied",
+                  "detail": ""
+                },
+                {
+                  "mutationId": "mutation-d20cb5bb3f6fd31b",
+                  "targetId": "target-189a40214a2c6700",
+                  "url": "https://demowebshop.tricentis.com/",
+                  "status": "interacted",
+                  "detail": "click"
+                }
+              ],
+              "control_observation": null,
+              "returncode": 0,
+              "duration_seconds": 7.75,
+              "error_type": "",
+              "error_message_excerpt": "",
+              "artifacts_dir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/mutations/track_R/gemini-3.6-flash/mutations/mutation-d20cb5bb3f6fd31b-A-r1.artifacts"
+            },
+            "B": {
+              "status": "passed",
+              "mutation_events": [
+                {
+                  "mutationId": "mutation-d20cb5bb3f6fd31b",
+                  "targetId": "target-189a40214a2c6700",
+                  "url": "https://demowebshop.tricentis.com/",
+                  "status": "applied",
+                  "detail": ""
+                },
+                {
+                  "mutationId": "mutation-d20cb5bb3f6fd31b",
+                  "targetId": "target-189a40214a2c6700",
+                  "url": "https://demowebshop.tricentis.com/",
+                  "status": "interacted",
+                  "detail": "click"
+                }
+              ],
+              "control_observation": null,
+              "returncode": 0,
+              "duration_seconds": 7.617,
+              "error_type": "",
+              "error_message_excerpt": "",
+              "artifacts_dir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/mutations/track_R/gemini-3.6-flash/mutations/mutation-d20cb5bb3f6fd31b-B-r1.artifacts"
+            }
+          }
+        },
+        {
+          "repetition": 2,
+          "order": [
+            "A",
+            "B"
+          ],
+          "outcomes": {
+            "A": "passed_interacted",
+            "B": "passed_interacted"
+          },
+          "details": {
+            "A": {
+              "status": "passed",
+              "mutation_events": [
+                {
+                  "mutationId": "mutation-d20cb5bb3f6fd31b",
+                  "targetId": "target-189a40214a2c6700",
+                  "url": "https://demowebshop.tricentis.com/",
+                  "status": "applied",
+                  "detail": ""
+                },
+                {
+                  "mutationId": "mutation-d20cb5bb3f6fd31b",
+                  "targetId": "target-189a40214a2c6700",
+                  "url": "https://demowebshop.tricentis.com/",
+                  "status": "interacted",
+                  "detail": "click"
+                }
+              ],
+              "control_observation": null,
+              "returncode": 0,
+              "duration_seconds": 8.12,
+              "error_type": "",
+              "error_message_excerpt": "",
+              "artifacts_dir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/mutations/track_R/gemini-3.6-flash/mutations/mutation-d20cb5bb3f6fd31b-A-r2.artifacts"
+            },
+            "B": {
+              "status": "passed",
+              "mutation_events": [
+                {
+                  "mutationId": "mutation-d20cb5bb3f6fd31b",
+                  "targetId": "target-189a40214a2c6700",
+                  "url": "https://demowebshop.tricentis.com/",
+                  "status": "applied",
+                  "detail": ""
+                },
+                {
+                  "mutationId": "mutation-d20cb5bb3f6fd31b",
+                  "targetId": "target-189a40214a2c6700",
+                  "url": "https://demowebshop.tricentis.com/",
+                  "status": "interacted",
+                  "detail": "click"
+                }
+              ],
+              "control_observation": null,
+              "returncode": 0,
+              "duration_seconds": 7.239,
+              "error_type": "",
+              "error_message_excerpt": "",
+              "artifacts_dir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/mutations/track_R/gemini-3.6-flash/mutations/mutation-d20cb5bb3f6fd31b-B-r2.artifacts"
+            }
+          }
+        },
+        {
+          "repetition": 3,
+          "order": [
+            "A",
+            "B"
+          ],
+          "outcomes": {
+            "A": "passed_interacted",
+            "B": "passed_interacted"
+          },
+          "details": {
+            "A": {
+              "status": "passed",
+              "mutation_events": [
+                {
+                  "mutationId": "mutation-d20cb5bb3f6fd31b",
+                  "targetId": "target-189a40214a2c6700",
+                  "url": "https://demowebshop.tricentis.com/",
+                  "status": "applied",
+                  "detail": ""
+                },
+                {
+                  "mutationId": "mutation-d20cb5bb3f6fd31b",
+                  "targetId": "target-189a40214a2c6700",
+                  "url": "https://demowebshop.tricentis.com/",
+                  "status": "interacted",
+                  "detail": "click"
+                }
+              ],
+              "control_observation": null,
+              "returncode": 0,
+              "duration_seconds": 7.838,
+              "error_type": "",
+              "error_message_excerpt": "",
+              "artifacts_dir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/mutations/track_R/gemini-3.6-flash/mutations/mutation-d20cb5bb3f6fd31b-A-r3.artifacts"
+            },
+            "B": {
+              "status": "passed",
+              "mutation_events": [
+                {
+                  "mutationId": "mutation-d20cb5bb3f6fd31b",
+                  "targetId": "target-189a40214a2c6700",
+                  "url": "https://demowebshop.tricentis.com/",
+                  "status": "applied",
+                  "detail": ""
+                },
+                {
+                  "mutationId": "mutation-d20cb5bb3f6fd31b",
+                  "targetId": "target-189a40214a2c6700",
+                  "url": "https://demowebshop.tricentis.com/",
+                  "status": "interacted",
+                  "detail": "click"
+                }
+              ],
+              "control_observation": null,
+              "returncode": 0,
+              "duration_seconds": 7.78,
+              "error_type": "",
+              "error_message_excerpt": "",
+              "artifacts_dir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/mutations/track_R/gemini-3.6-flash/mutations/mutation-d20cb5bb3f6fd31b-B-r3.artifacts"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

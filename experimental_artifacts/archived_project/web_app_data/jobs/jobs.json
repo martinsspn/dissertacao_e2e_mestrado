@@ -1,0 +1,583 @@
+[
+  {
+    "id": "infra_20260604_174902_016638",
+    "type": "infra",
+    "status": "failed",
+    "command": [
+      "docker-compose",
+      "up",
+      "-d",
+      "neo4j",
+      "selenium_chrome"
+    ],
+    "started_at": "2026-06-04T17:49:02",
+    "finished_at": "2026-06-04T17:49:02",
+    "exit_code": 1,
+    "log_path": "/app/web_app_data/jobs/infra_20260604_174902_016638.log"
+  },
+  {
+    "id": "infra_20260604_180329_747754",
+    "type": "infra",
+    "status": "failed",
+    "command": [
+      "docker-compose",
+      "up",
+      "-d",
+      "neo4j",
+      "selenium_chrome"
+    ],
+    "started_at": "2026-06-04T18:03:29",
+    "finished_at": "2026-06-04T18:03:30",
+    "exit_code": 1,
+    "log_path": "/app/web_app_data/jobs/infra_20260604_180329_747754.log"
+  },
+  {
+    "id": "infra_20260604_181031_333092",
+    "type": "infra",
+    "status": "failed",
+    "command": [
+      "docker-compose",
+      "up",
+      "-d",
+      "neo4j",
+      "selenium_chrome"
+    ],
+    "started_at": "2026-06-04T18:10:31",
+    "finished_at": "2026-06-04T18:10:38",
+    "exit_code": 1,
+    "log_path": "/home/martinsspn/dissertacao_e2e_semantico/web_app_data/jobs/infra_20260604_181031_333092.log"
+  },
+  {
+    "id": "infra_20260604_181242_671368",
+    "type": "infra",
+    "status": "succeeded",
+    "command": [
+      "docker",
+      "compose",
+      "up",
+      "-d",
+      "neo4j",
+      "selenium_chrome"
+    ],
+    "started_at": "2026-06-04T18:12:42",
+    "finished_at": "2026-06-04T18:12:43",
+    "exit_code": 0,
+    "log_path": "/home/martinsspn/dissertacao_e2e_semantico/web_app_data/jobs/infra_20260604_181242_671368.log"
+  },
+  {
+    "id": "crawl_20260604_181349_784062",
+    "type": "crawl",
+    "status": "succeeded",
+    "command": [
+      "docker",
+      "compose",
+      "run",
+      "--rm",
+      "crawljax_java"
+    ],
+    "started_at": "2026-06-04T18:13:49",
+    "finished_at": "2026-06-04T18:58:56",
+    "exit_code": 0,
+    "log_path": "/home/martinsspn/dissertacao_e2e_semantico/web_app_data/jobs/crawl_20260604_181349_784062.log"
+  },
+  {
+    "id": "prompts_20260605_175513_631758",
+    "type": "prompts",
+    "status": "succeeded",
+    "command": [
+      "docker",
+      "compose",
+      "run",
+      "--rm",
+      "prompt_e2e"
+    ],
+    "started_at": "2026-06-05T17:55:13",
+    "finished_at": "2026-06-05T17:55:15",
+    "exit_code": 0,
+    "log_path": "/home/martinsspn/dissertacao_e2e_semantico/web_app_data/jobs/prompts_20260605_175513_631758.log"
+  },
+  {
+    "id": "prompts_20260605_184110_422253",
+    "type": "prompts",
+    "status": "succeeded",
+    "command": [
+      "docker",
+      "compose",
+      "run",
+      "--rm",
+      "prompt_e2e"
+    ],
+    "started_at": "2026-06-05T18:41:10",
+    "finished_at": "2026-06-05T18:41:12",
+    "exit_code": 0,
+    "log_path": "/home/martinsspn/dissertacao_e2e_semantico/web_app_data/jobs/prompts_20260605_184110_422253.log"
+  },
+  {
+    "id": "prompts_20260605_185042_370890",
+    "type": "prompts",
+    "status": "succeeded",
+    "command": [
+      "docker",
+      "compose",
+      "run",
+      "--rm",
+      "prompt_e2e"
+    ],
+    "started_at": "2026-06-05T18:50:42",
+    "finished_at": "2026-06-05T18:50:44",
+    "exit_code": 0,
+    "log_path": "/home/martinsspn/dissertacao_e2e_semantico/web_app_data/jobs/prompts_20260605_185042_370890.log"
+  },
+  {
+    "id": "prompts_20260608_183646_993261",
+    "type": "prompts",
+    "status": "succeeded",
+    "command": [
+      "docker",
+      "compose",
+      "run",
+      "--rm",
+      "prompt_e2e"
+    ],
+    "started_at": "2026-06-08T18:36:46",
+    "finished_at": "2026-06-08T18:36:49",
+    "exit_code": 0,
+    "log_path": "/home/martinsspn/dissertacao_e2e_semantico/web_app_data/jobs/prompts_20260608_183646_993261.log"
+  },
+  {
+    "id": "crawl_20260713_175918_960695",
+    "type": "crawl",
+    "status": "succeeded",
+    "command": [
+      "docker",
+      "compose",
+      "run",
+      "--rm",
+      "crawljax_java"
+    ],
+    "started_at": "2026-07-13T17:59:18",
+    "finished_at": "2026-07-13T18:46:39",
+    "exit_code": 0,
+    "log_path": "/home/martinsspn/dissertacao_e2e_semantico/web_app_data/jobs/crawl_20260713_175918_960695.log"
+  },
+  {
+    "id": "prompts_20260713_191654_756145",
+    "type": "prompts",
+    "status": "succeeded",
+    "command": [
+      "docker",
+      "compose",
+      "run",
+      "--rm",
+      "prompt_e2e"
+    ],
+    "started_at": "2026-07-13T19:16:54",
+    "finished_at": "2026-07-13T19:17:00",
+    "exit_code": 0,
+    "log_path": "/home/martinsspn/dissertacao_e2e_semantico/web_app_data/jobs/prompts_20260713_191654_756145.log"
+  },
+  {
+    "id": "crawl_20260713_212320_106873",
+    "type": "crawl",
+    "status": "succeeded",
+    "command": [
+      "docker",
+      "compose",
+      "run",
+      "--rm",
+      "crawljax_java"
+    ],
+    "started_at": "2026-07-13T21:23:20",
+    "finished_at": "2026-07-13T21:23:56",
+    "exit_code": 0,
+    "log_path": "/home/martinsspn/dissertacao_e2e_semantico/web_app_data/jobs/crawl_20260713_212320_106873.log"
+  },
+  {
+    "id": "prompts_20260713_215107_265740",
+    "type": "prompts",
+    "status": "succeeded",
+    "command": [
+      "docker",
+      "compose",
+      "run",
+      "--rm",
+      "prompt_e2e"
+    ],
+    "started_at": "2026-07-13T21:51:07",
+    "finished_at": "2026-07-13T21:51:13",
+    "exit_code": 0,
+    "log_path": "/home/martinsspn/dissertacao_e2e_semantico/web_app_data/jobs/prompts_20260713_215107_265740.log"
+  },
+  {
+    "id": "crawl_20260713_215246_296943",
+    "type": "crawl",
+    "status": "succeeded",
+    "command": [
+      "docker",
+      "compose",
+      "run",
+      "--rm",
+      "crawljax_java"
+    ],
+    "started_at": "2026-07-13T21:52:46",
+    "finished_at": "2026-07-13T22:09:36",
+    "exit_code": 0,
+    "log_path": "/home/martinsspn/dissertacao_e2e_semantico/web_app_data/jobs/crawl_20260713_215246_296943.log"
+  },
+  {
+    "id": "prompts_20260713_221655_301700",
+    "type": "prompts",
+    "status": "succeeded",
+    "command": [
+      "docker",
+      "compose",
+      "run",
+      "--rm",
+      "prompt_e2e"
+    ],
+    "started_at": "2026-07-13T22:16:55",
+    "finished_at": "2026-07-13T22:17:05",
+    "exit_code": 0,
+    "log_path": "/home/martinsspn/dissertacao_e2e_semantico/web_app_data/jobs/prompts_20260713_221655_301700.log"
+  },
+  {
+    "id": "prompts_20260714_020414_438497",
+    "type": "prompts",
+    "status": "succeeded",
+    "command": [
+      "docker",
+      "compose",
+      "run",
+      "--rm",
+      "prompt_e2e"
+    ],
+    "started_at": "2026-07-14T02:04:14",
+    "finished_at": "2026-07-14T02:06:50",
+    "exit_code": 0,
+    "log_path": "/home/martinsspn/dissertacao_e2e_semantico/web_app_data/jobs/prompts_20260714_020414_438497.log"
+  },
+  {
+    "id": "prompts_20260714_130100_647779",
+    "type": "prompts",
+    "status": "succeeded",
+    "command": [
+      "docker",
+      "compose",
+      "run",
+      "--rm",
+      "prompt_e2e"
+    ],
+    "started_at": "2026-07-14T13:01:00",
+    "finished_at": "2026-07-14T13:03:42",
+    "exit_code": 0,
+    "log_path": "/home/martinsspn/dissertacao_e2e_semantico/web_app_data/jobs/prompts_20260714_130100_647779.log"
+  },
+  {
+    "id": "prompts_20260714_133433_821568",
+    "type": "prompts",
+    "status": "succeeded",
+    "command": [
+      "docker",
+      "compose",
+      "run",
+      "--rm",
+      "prompt_e2e"
+    ],
+    "started_at": "2026-07-14T13:34:33",
+    "finished_at": "2026-07-14T13:37:15",
+    "exit_code": 0,
+    "log_path": "/home/martinsspn/dissertacao_e2e_semantico/web_app_data/jobs/prompts_20260714_133433_821568.log"
+  },
+  {
+    "id": "prompts_20260714_140826_771292",
+    "type": "prompts",
+    "status": "succeeded",
+    "command": [
+      "docker",
+      "compose",
+      "run",
+      "--rm",
+      "prompt_e2e"
+    ],
+    "started_at": "2026-07-14T14:08:26",
+    "finished_at": "2026-07-14T14:11:04",
+    "exit_code": 0,
+    "log_path": "/home/martinsspn/dissertacao_e2e_semantico/web_app_data/jobs/prompts_20260714_140826_771292.log"
+  },
+  {
+    "id": "prompts_20260714_142510_815654",
+    "type": "prompts",
+    "status": "succeeded",
+    "command": [
+      "docker",
+      "compose",
+      "run",
+      "--rm",
+      "prompt_e2e"
+    ],
+    "started_at": "2026-07-14T14:25:10",
+    "finished_at": "2026-07-14T14:27:52",
+    "exit_code": 0,
+    "log_path": "/home/martinsspn/dissertacao_e2e_semantico/web_app_data/jobs/prompts_20260714_142510_815654.log"
+  },
+  {
+    "id": "prompts_20260714_143159_197500",
+    "type": "prompts",
+    "status": "succeeded",
+    "command": [
+      "docker",
+      "compose",
+      "run",
+      "--rm",
+      "prompt_e2e"
+    ],
+    "started_at": "2026-07-14T14:31:59",
+    "finished_at": "2026-07-14T14:34:38",
+    "exit_code": 0,
+    "log_path": "/home/martinsspn/dissertacao_e2e_semantico/web_app_data/jobs/prompts_20260714_143159_197500.log"
+  },
+  {
+    "id": "prompts_20260714_143456_036340",
+    "type": "prompts",
+    "status": "succeeded",
+    "command": [
+      "docker",
+      "compose",
+      "run",
+      "--rm",
+      "prompt_e2e"
+    ],
+    "started_at": "2026-07-14T14:34:56",
+    "finished_at": "2026-07-14T14:37:34",
+    "exit_code": 0,
+    "log_path": "/home/martinsspn/dissertacao_e2e_semantico/web_app_data/jobs/prompts_20260714_143456_036340.log"
+  },
+  {
+    "id": "prompts_20260714_144902_590610",
+    "type": "prompts",
+    "status": "succeeded",
+    "command": [
+      "docker",
+      "compose",
+      "run",
+      "--rm",
+      "prompt_e2e"
+    ],
+    "started_at": "2026-07-14T14:49:02",
+    "finished_at": "2026-07-14T14:51:36",
+    "exit_code": 0,
+    "log_path": "/home/martinsspn/dissertacao_e2e_semantico/web_app_data/jobs/prompts_20260714_144902_590610.log"
+  },
+  {
+    "id": "evaluation_20260720_135627_605379",
+    "type": "evaluation",
+    "status": "succeeded",
+    "command": [
+      "/usr/local/bin/python3.11",
+      "-m",
+      "teste_prompt_e2e_semantico.evaluation",
+      "--tests-dir",
+      "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context",
+      "--approach",
+      "structured_context",
+      "--base-url",
+      "https://demowebshop.tricentis.com/",
+      "--output",
+      "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/evaluation_reports/structured_context.json",
+      "--prompt-dir",
+      "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_prompts",
+      "--neo4j-uri",
+      "bolt://neo4j:7687",
+      "--neo4j-user",
+      "neo4j",
+      "--neo4j-password",
+      "neo4j_password"
+    ],
+    "started_at": "2026-07-20T13:56:27",
+    "finished_at": "2026-07-20T13:56:29",
+    "exit_code": 0,
+    "log_path": "/home/martinsspn/dissertacao_e2e_semantico/web_app_data/jobs/evaluation_20260720_135627_605379.log"
+  },
+  {
+    "id": "evaluation_20260720_135917_615955",
+    "type": "evaluation",
+    "status": "succeeded",
+    "command": [
+      "/usr/local/bin/python3.11",
+      "-m",
+      "teste_prompt_e2e_semantico.evaluation",
+      "--tests-dir",
+      "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline",
+      "--approach",
+      "baseline",
+      "--base-url",
+      "https://demowebshop.tricentis.com/",
+      "--output",
+      "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/evaluation_reports/baseline.json",
+      "--prompt-dir",
+      "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_prompts",
+      "--neo4j-uri",
+      "bolt://neo4j:7687",
+      "--neo4j-user",
+      "neo4j",
+      "--neo4j-password",
+      "neo4j_password"
+    ],
+    "started_at": "2026-07-20T13:59:17",
+    "finished_at": "2026-07-20T13:59:19",
+    "exit_code": 0,
+    "log_path": "/home/martinsspn/dissertacao_e2e_semantico/web_app_data/jobs/evaluation_20260720_135917_615955.log"
+  },
+  {
+    "id": "evaluation_20260720_141502_042711",
+    "type": "evaluation",
+    "status": "failed",
+    "command": [
+      "/usr/local/bin/python3.11",
+      "-m",
+      "teste_prompt_e2e_semantico.evaluation",
+      "--tests-dir",
+      "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context",
+      "--approach",
+      "structured_context",
+      "--base-url",
+      "https://demowebshop.tricentis.com/",
+      "--output",
+      "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/evaluation_reports/structured_context.json",
+      "--prompt-dir",
+      "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_prompts",
+      "--neo4j-uri",
+      "bolt://neo4j:7687",
+      "--neo4j-user",
+      "neo4j",
+      "--neo4j-password",
+      "neo4j_password"
+    ],
+    "started_at": "2026-07-20T14:15:02",
+    "finished_at": "2026-07-20T14:15:02",
+    "exit_code": 1,
+    "log_path": "/home/martinsspn/dissertacao_e2e_semantico/web_app_data/jobs/evaluation_20260720_141502_042711.log"
+  },
+  {
+    "id": "evaluation_20260720_141749_433392",
+    "type": "evaluation",
+    "status": "succeeded",
+    "command": [
+      "/usr/local/bin/python3.11",
+      "-m",
+      "avaliacao_prompts",
+      "--tests-dir",
+      "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context",
+      "--approach",
+      "structured_context",
+      "--base-url",
+      "https://demowebshop.tricentis.com/",
+      "--output",
+      "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/relatorios/structured_context.md",
+      "--prompt-dir",
+      "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_prompts",
+      "--neo4j-uri",
+      "bolt://neo4j:7687",
+      "--neo4j-user",
+      "neo4j",
+      "--neo4j-password",
+      "neo4j_password"
+    ],
+    "started_at": "2026-07-20T14:17:49",
+    "finished_at": "2026-07-20T14:17:50",
+    "exit_code": 0,
+    "log_path": "/home/martinsspn/dissertacao_e2e_semantico/web_app_data/jobs/evaluation_20260720_141749_433392.log"
+  },
+  {
+    "id": "evaluation_20260720_153819_736002",
+    "type": "evaluation",
+    "status": "succeeded",
+    "command": [
+      "/usr/local/bin/python3.11",
+      "-m",
+      "avaliacao_prompts",
+      "--tests-dir",
+      "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context",
+      "--approach",
+      "structured_context",
+      "--base-url",
+      "https://demowebshop.tricentis.com/",
+      "--output",
+      "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/relatorios/structured_context.md",
+      "--prompt-dir",
+      "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_prompts",
+      "--neo4j-uri",
+      "bolt://neo4j:7687",
+      "--neo4j-user",
+      "neo4j",
+      "--neo4j-password",
+      "neo4j_password"
+    ],
+    "started_at": "2026-07-20T15:38:19",
+    "finished_at": "2026-07-20T15:38:21",
+    "exit_code": 0,
+    "log_path": "/home/martinsspn/dissertacao_e2e_semantico/web_app_data/jobs/evaluation_20260720_153819_736002.log"
+  },
+  {
+    "id": "evaluation_20260720_153826_268587",
+    "type": "evaluation",
+    "status": "succeeded",
+    "command": [
+      "/usr/local/bin/python3.11",
+      "-m",
+      "avaliacao_prompts",
+      "--tests-dir",
+      "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline",
+      "--approach",
+      "baseline",
+      "--base-url",
+      "https://demowebshop.tricentis.com/",
+      "--output",
+      "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/relatorios/baseline.md",
+      "--prompt-dir",
+      "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_prompts",
+      "--neo4j-uri",
+      "bolt://neo4j:7687",
+      "--neo4j-user",
+      "neo4j",
+      "--neo4j-password",
+      "neo4j_password"
+    ],
+    "started_at": "2026-07-20T15:38:26",
+    "finished_at": "2026-07-20T15:38:27",
+    "exit_code": 0,
+    "log_path": "/home/martinsspn/dissertacao_e2e_semantico/web_app_data/jobs/evaluation_20260720_153826_268587.log"
+  },
+  {
+    "id": "evaluation_20260724_184709_114340",
+    "type": "evaluation",
+    "status": "succeeded",
+    "command": [
+      "/usr/local/bin/python3.11",
+      "-m",
+      "avaliacao_prompts",
+      "--tests-dir",
+      "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/structured_context",
+      "--approach",
+      "structured_context",
+      "--base-url",
+      "https://demowebshop.tricentis.com/",
+      "--output",
+      "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/relatorios/structured_context.md",
+      "--prompt-dir",
+      "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_prompts",
+      "--specs-dir",
+      "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/specs",
+      "--neo4j-uri",
+      "bolt://neo4j:7687",
+      "--neo4j-user",
+      "neo4j",
+      "--neo4j-password",
+      "neo4j_password"
+    ],
+    "started_at": "2026-07-24T18:47:09",
+    "finished_at": "2026-07-24T18:47:11",
+    "exit_code": 0,
+    "log_path": "/home/martinsspn/dissertacao_e2e_semantico/web_app_data/jobs/evaluation_20260724_184709_114340.log"
+  }
+]

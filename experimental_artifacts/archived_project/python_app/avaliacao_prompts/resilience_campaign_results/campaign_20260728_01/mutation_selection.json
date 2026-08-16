@@ -1,0 +1,203 @@
+{
+  "schema_version": 1,
+  "campaign_manifest_sha256": "88e5019719ad6e9f3f245414efe9ffc9494dc7bade0254a1fa09a73ec4aabea4",
+  "eligibility_campaign_sha256": "8b76e6a254d0e4667cee6b2877e10ae411858dba0bcd2b237fde750afc585b82",
+  "selection_rule": "two_neutral_mutations_per_scenario:one_E1_then_one_E2_when_available_else_second_E1:hash_ranked_reduced-neutral-v1",
+  "records": [
+    {
+      "track_id": "P",
+      "model_id": "gemini-3.6-flash",
+      "execution_manifest_sha256": "22043980e793220c7a1f1047c61ff2a95afe33608184853c2a863bf2e6baf423",
+      "eligibility_results_sha256": "f245d4e06b1169d14ebd70a286656c0013586d0b72e86a191833df92602a7bb0",
+      "plan_sha256": "7e1ed1318e46271b4a055e9a475e38b85f31b6f22c4614d4033656450fcbbbfc",
+      "eligible_scenarios": [
+        "suite_cadastro_campos_obrigatorios",
+        "suite_cadastro_confirmacao_senha",
+        "suite_navegar_categoria_livros"
+      ],
+      "selected_mutations": [
+        {
+          "mutation_id": "mutation-eba9a88e12218532",
+          "scenario_id": "suite_cadastro_campos_obrigatorios",
+          "target_id": "target-ca217ce5987930fb",
+          "stratum": "E1",
+          "operator": "insert_wrapper"
+        },
+        {
+          "mutation_id": "mutation-f449b64a22b3eb79",
+          "scenario_id": "suite_cadastro_campos_obrigatorios",
+          "target_id": "target-4547c70f780290ab",
+          "stratum": "E2",
+          "operator": "rename_id"
+        },
+        {
+          "mutation_id": "mutation-d8744bdb7fd5af84",
+          "scenario_id": "suite_cadastro_confirmacao_senha",
+          "target_id": "target-4a937ecd75f735f6",
+          "stratum": "E1",
+          "operator": "insert_noninteractive_sibling_before"
+        },
+        {
+          "mutation_id": "mutation-d5cd8e90b29b1b31",
+          "scenario_id": "suite_cadastro_confirmacao_senha",
+          "target_id": "target-d30aba59623a369d",
+          "stratum": "E2",
+          "operator": "rename_id"
+        },
+        {
+          "mutation_id": "mutation-8abd56080bd4efa1",
+          "scenario_id": "suite_navegar_categoria_livros",
+          "target_id": "target-a35bbfad32b20659",
+          "stratum": "E1",
+          "operator": "insert_noninteractive_sibling_before"
+        },
+        {
+          "mutation_id": "mutation-e0bcb5d5196386aa",
+          "scenario_id": "suite_navegar_categoria_livros",
+          "target_id": "target-a35bbfad32b20659",
+          "stratum": "E1",
+          "operator": "insert_wrapper"
+        }
+      ]
+    },
+    {
+      "track_id": "P",
+      "model_id": "gpt-5.6-sol",
+      "execution_manifest_sha256": "9c62b7e71d75310999b2d89ae5349c212790d0685fe02414f00b6726d636bd09",
+      "eligibility_results_sha256": "1f4d3678ebfac116405365c4b1c1512f59b7d1a5808c2b9d4432195811ab3342",
+      "plan_sha256": "054db1613694d3f96ce00a85fc77e01126e32b3e58225e63652864c038e81979",
+      "eligible_scenarios": [
+        "suite_busca_blue_jeans",
+        "suite_detalhes_fiction",
+        "suite_login_invalido",
+        "suite_login_valido"
+      ],
+      "selected_mutations": [
+        {
+          "mutation_id": "mutation-f026cc4f906a76d1",
+          "scenario_id": "suite_busca_blue_jeans",
+          "target_id": "target-b07d4eccac8216ab",
+          "stratum": "E1",
+          "operator": "insert_noninteractive_sibling_before"
+        },
+        {
+          "mutation_id": "mutation-8b066797110a117f",
+          "scenario_id": "suite_busca_blue_jeans",
+          "target_id": "target-b07d4eccac8216ab",
+          "stratum": "E2",
+          "operator": "input_submit_to_button"
+        },
+        {
+          "mutation_id": "mutation-b745f8523a2ad8e7",
+          "scenario_id": "suite_detalhes_fiction",
+          "target_id": "target-6d39364196ae5545",
+          "stratum": "E1",
+          "operator": "insert_noninteractive_sibling_before"
+        },
+        {
+          "mutation_id": "mutation-361a9103a5072567",
+          "scenario_id": "suite_detalhes_fiction",
+          "target_id": "target-ccee1138025fac43",
+          "stratum": "E2",
+          "operator": "input_submit_to_button"
+        },
+        {
+          "mutation_id": "mutation-5fdf1828cabd53de",
+          "scenario_id": "suite_login_invalido",
+          "target_id": "target-ab0e88088e6baad5",
+          "stratum": "E1",
+          "operator": "insert_wrapper"
+        },
+        {
+          "mutation_id": "mutation-439ad347e64028d4",
+          "scenario_id": "suite_login_invalido",
+          "target_id": "target-3e35e4029f81fb2e",
+          "stratum": "E2",
+          "operator": "rename_id"
+        },
+        {
+          "mutation_id": "mutation-ac2305bb5ac9e7a3",
+          "scenario_id": "suite_login_valido",
+          "target_id": "target-2f1d5f47d5e3a493",
+          "stratum": "E1",
+          "operator": "insert_noninteractive_sibling_before"
+        },
+        {
+          "mutation_id": "mutation-01c92a29170fe542",
+          "scenario_id": "suite_login_valido",
+          "target_id": "target-2f1d5f47d5e3a493",
+          "stratum": "E2",
+          "operator": "input_submit_to_button"
+        }
+      ]
+    },
+    {
+      "track_id": "R",
+      "model_id": "gemini-3.6-flash",
+      "execution_manifest_sha256": "80fd5e10decfc8045b98f2e4d0defced0e2e0bb067f9ce00f38df892afd9bdeb",
+      "eligibility_results_sha256": "3834a2ef6286cc6e296b2e4b5acc0fa4e0161087b9d534ec2105dd5ab3606c8b",
+      "plan_sha256": "7e1ed1318e46271b4a055e9a475e38b85f31b6f22c4614d4033656450fcbbbfc",
+      "eligible_scenarios": [
+        "fluxo_computadores_desktops",
+        "suite_navegar_sobre_nos"
+      ],
+      "selected_mutations": [
+        {
+          "mutation_id": "mutation-3eaa4cad6dfee398",
+          "scenario_id": "fluxo_computadores_desktops",
+          "target_id": "target-94e76973e20445c8",
+          "stratum": "E1",
+          "operator": "insert_noninteractive_sibling_before"
+        },
+        {
+          "mutation_id": "mutation-970dfe4afdc63621",
+          "scenario_id": "fluxo_computadores_desktops",
+          "target_id": "target-94e76973e20445c8",
+          "stratum": "E1",
+          "operator": "insert_wrapper"
+        },
+        {
+          "mutation_id": "mutation-5b72726c4f561716",
+          "scenario_id": "suite_navegar_sobre_nos",
+          "target_id": "target-189a40214a2c6700",
+          "stratum": "E1",
+          "operator": "insert_noninteractive_sibling_before"
+        },
+        {
+          "mutation_id": "mutation-d20cb5bb3f6fd31b",
+          "scenario_id": "suite_navegar_sobre_nos",
+          "target_id": "target-189a40214a2c6700",
+          "stratum": "E1",
+          "operator": "insert_wrapper"
+        }
+      ]
+    },
+    {
+      "track_id": "R",
+      "model_id": "gpt-5.6-sol",
+      "execution_manifest_sha256": "9a50ff72b76673470fc52f6efc9bf63d8710aef446e9127baadd8730d0162c7a",
+      "eligibility_results_sha256": "8e768ed93338d6cceab18b7dde923c73e88204124522da5634b216361bbf56d4",
+      "plan_sha256": "054db1613694d3f96ce00a85fc77e01126e32b3e58225e63652864c038e81979",
+      "eligible_scenarios": [
+        "suite_adicionar_carrinho"
+      ],
+      "selected_mutations": [
+        {
+          "mutation_id": "mutation-defa59a332c6148b",
+          "scenario_id": "suite_adicionar_carrinho",
+          "target_id": "target-dc71d044e20dec79",
+          "stratum": "E1",
+          "operator": "insert_noninteractive_sibling_before"
+        },
+        {
+          "mutation_id": "mutation-766d2310c5144a4d",
+          "scenario_id": "suite_adicionar_carrinho",
+          "target_id": "target-dc71d044e20dec79",
+          "stratum": "E2",
+          "operator": "input_submit_to_button"
+        }
+      ]
+    }
+  ],
+  "mutation_selection_sha256": "34e8623812ef3dd2b650ab23efdba5a435d085730196416cd8b589101f441431"
+}

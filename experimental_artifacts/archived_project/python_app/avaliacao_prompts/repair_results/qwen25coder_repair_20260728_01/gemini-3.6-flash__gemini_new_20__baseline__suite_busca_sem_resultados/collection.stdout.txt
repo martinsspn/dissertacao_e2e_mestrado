@@ -1,0 +1,3 @@
+Listing tests:
+  suite_busca_sem_resultados.spec.ts:4:7 › Store Product Search › should inform user when searching for a nonexistent product
+Total: 1 test in 1 file

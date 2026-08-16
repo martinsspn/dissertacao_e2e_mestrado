@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "mutation_plan": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaigns/campaign_20260728_01/plans/gemini_new_20.mutation_plan.json",
+  "mutation_plan_sha256": "7e1ed1318e46271b4a055e9a475e38b85f31b6f22c4614d4033656450fcbbbfc",
+  "fixture": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaigns/campaign_20260728_01/runtime/playwright/fixture.ts",
+  "fixture_sha256": "754f39892284ec2553a52ec727dfb892d2e3208cea7309fb818a5cb74f926c10",
+  "track_id": "P",
+  "model_id": "gemini-3.6-flash",
+  "allowlist": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaigns/campaign_20260728_01/allowlists/track_P_gemini-3.6-flash.json",
+  "allowlist_sha256": "207a742db6759ef848b92b1d6fc37f3c4e0e0b62781e65af07c2be1b3847fe99",
+  "semantic_review": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaigns/campaign_20260728_01/reviews/track_P_review_bundle.json",
+  "semantic_review_sha256": "00c12610f3da690f94f1ff68d7a7f81a7f02a3e3b7f81f449478a55b8d1a7d99",
+  "transformation": "only_replace_import_source_from_@playwright/test_to_frozen_fixture",
+  "condition_key": {
+    "A": "baseline",
+    "B": "structured_context"
+  },
+  "pairs": [
+    {
+      "scenario_id": "suite_cadastro_campos_obrigatorios",
+      "baseline_original": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaigns/campaign_20260728_01/cohort_sources/track_P/gemini-3.6-flash/baseline/suite_cadastro_campos_obrigatorios.spec.ts",
+      "structured_original": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaigns/campaign_20260728_01/cohort_sources/track_P/gemini-3.6-flash/structured_context/suite_cadastro_campos_obrigatorios.spec.ts",
+      "baseline_sha256": "4bc58a38ecc89a7c084395f473b30ef94950b4d256b79dd2134efccd4c860ef1",
+      "structured_sha256": "b40c769d8f50ec006447ff6cb26c1954066dc85ffd1d4de98eceae14a91fea41",
+      "baseline_derived": "e5ec78fe03c6c4a67e1f6824d828dd76609e26d157110e312c8f8ceac95e4933",
+      "structured_derived": "f453ec422d03ee72063b3efe1af869bda137c9fb0ef7b48812712780b8015ae0"
+    },
+    {
+      "scenario_id": "suite_cadastro_confirmacao_senha",
+      "baseline_original": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaigns/campaign_20260728_01/cohort_sources/track_P/gemini-3.6-flash/baseline/suite_cadastro_confirmacao_senha.spec.ts",
+      "structured_original": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaigns/campaign_20260728_01/cohort_sources/track_P/gemini-3.6-flash/structured_context/suite_cadastro_confirmacao_senha.spec.ts",
+      "baseline_sha256": "cd2d9224322526cdeace6056363751113bbff0920da36b64bde736fb81ea7f96",
+      "structured_sha256": "68dab7d8b9c12719226db814658850c712f586d8ad22e02a5d5eaf9e1bc17573",
+      "baseline_derived": "bdcdc540c7c512b9eb3de9a89458a2e665adcb328832d86f0a6471e3e1974133",
+      "structured_derived": "05095249a23688666aca16cc7d11f1f1916c8efbc5f72fca60ad4e83958d0e82"
+    },
+    {
+      "scenario_id": "suite_navegar_categoria_livros",
+      "baseline_original": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaigns/campaign_20260728_01/cohort_sources/track_P/gemini-3.6-flash/baseline/suite_navegar_categoria_livros.spec.ts",
+      "structured_original": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaigns/campaign_20260728_01/cohort_sources/track_P/gemini-3.6-flash/structured_context/suite_navegar_categoria_livros.spec.ts",
+      "baseline_sha256": "0680fb0c6f413437f5416c4ea92dc4eded1f7afe674c2f604eaa043be99100a0",
+      "structured_sha256": "e5be758f7c2b66855405333273a2e8f32e44290ac92a4713f7d6b8d5eb6cb82c",
+      "baseline_derived": "77f51bb669d1b84d4e856a62952f752a55475fdb63f8c0faef5710602274b484",
+      "structured_derived": "2289e390890f5f0cfaf890e3e6c21717ef4ce60e93939ca76e3f3f5165a741f2"
+    }
+  ],
+  "execution_manifest_sha256": "22043980e793220c7a1f1047c61ff2a95afe33608184853c2a863bf2e6baf423"
+}

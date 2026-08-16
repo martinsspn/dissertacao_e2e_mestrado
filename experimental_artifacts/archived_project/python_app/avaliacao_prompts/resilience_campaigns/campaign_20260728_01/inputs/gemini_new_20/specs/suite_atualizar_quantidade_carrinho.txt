@@ -1,0 +1,1 @@
+Updating a product quantity in the cart: The user adds Computing and Internet to the cart to prepare the scenario. The user accesses Shopping cart and changes the quantity of Computing and Internet from one to two. The user selects Update shopping cart. The system keeps the product in the cart with quantity two and updates its subtotal consistently with the displayed unit price.

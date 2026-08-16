@@ -1,0 +1,3 @@
+Listing tests:
+  suite_persistencia_carrinho_apos_login.spec.ts:14:7 › Persistence of an authenticated user's cart › should persist the cart across sessions
+Total: 1 test in 1 file

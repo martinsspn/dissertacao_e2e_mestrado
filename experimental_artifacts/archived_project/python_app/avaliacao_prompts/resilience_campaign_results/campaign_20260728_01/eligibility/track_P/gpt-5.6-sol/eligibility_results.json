@@ -1,0 +1,638 @@
+{
+  "schema_version": 1,
+  "execution_manifest": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaigns/campaign_20260728_01/prepared/track_P/gpt-5.6-sol/execution_manifest.json",
+  "execution_manifest_sha256": "9c62b7e71d75310999b2d89ae5349c212790d0685fe02414f00b6726d636bd09",
+  "mutation_plan_sha256": "054db1613694d3f96ce00a85fc77e01126e32b3e58225e63652864c038e81979",
+  "track_id": "P",
+  "model_id": "gpt-5.6-sol",
+  "repetitions": 3,
+  "runtime": {
+    "node": "v18.19.1",
+    "playwright": "Version 1.61.1",
+    "chromium": "149.0.7827.55"
+  },
+  "configured_environment_names": [
+    "BASE_URL",
+    "DEMO_WEB_SHOP_EMAIL",
+    "DEMO_WEB_SHOP_PASSWORD",
+    "E2E_EMAIL",
+    "E2E_PASSWORD",
+    "PROMPT_E2E_BASE_URL",
+    "TEST_EMAIL",
+    "TEST_PASSWORD"
+  ],
+  "statuses": {
+    "suite_busca_blue_jeans": {
+      "A": [
+        "passed",
+        "passed",
+        "passed"
+      ],
+      "B": [
+        "passed",
+        "passed",
+        "passed"
+      ]
+    },
+    "suite_detalhes_fiction": {
+      "A": [
+        "passed",
+        "passed",
+        "passed"
+      ],
+      "B": [
+        "passed",
+        "passed",
+        "passed"
+      ]
+    },
+    "suite_limpar_carrinho": {
+      "A": [
+        "failed",
+        "passed",
+        "failed"
+      ],
+      "B": [
+        "passed",
+        "passed",
+        "passed"
+      ]
+    },
+    "suite_login_invalido": {
+      "A": [
+        "passed",
+        "passed",
+        "passed"
+      ],
+      "B": [
+        "passed",
+        "passed",
+        "passed"
+      ]
+    },
+    "suite_login_valido": {
+      "A": [
+        "passed",
+        "passed",
+        "passed"
+      ],
+      "B": [
+        "passed",
+        "passed",
+        "passed"
+      ]
+    }
+  },
+  "details": {
+    "suite_busca_blue_jeans": {
+      "A": [
+        {
+          "repetition": 1,
+          "order": [
+            "A",
+            "B"
+          ],
+          "outcome": {
+            "status": "passed",
+            "mutation_events": [],
+            "control_observation": null,
+            "returncode": 0,
+            "duration_seconds": 9.961,
+            "error_type": "",
+            "error_message_excerpt": "",
+            "artifacts_dir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/eligibility/track_P/gpt-5.6-sol/runs/suite_busca_blue_jeans-A-r1.artifacts"
+          }
+        },
+        {
+          "repetition": 2,
+          "order": [
+            "A",
+            "B"
+          ],
+          "outcome": {
+            "status": "passed",
+            "mutation_events": [],
+            "control_observation": null,
+            "returncode": 0,
+            "duration_seconds": 9.305,
+            "error_type": "",
+            "error_message_excerpt": "",
+            "artifacts_dir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/eligibility/track_P/gpt-5.6-sol/runs/suite_busca_blue_jeans-A-r2.artifacts"
+          }
+        },
+        {
+          "repetition": 3,
+          "order": [
+            "A",
+            "B"
+          ],
+          "outcome": {
+            "status": "passed",
+            "mutation_events": [],
+            "control_observation": null,
+            "returncode": 0,
+            "duration_seconds": 9.366,
+            "error_type": "",
+            "error_message_excerpt": "",
+            "artifacts_dir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/eligibility/track_P/gpt-5.6-sol/runs/suite_busca_blue_jeans-A-r3.artifacts"
+          }
+        }
+      ],
+      "B": [
+        {
+          "repetition": 1,
+          "order": [
+            "A",
+            "B"
+          ],
+          "outcome": {
+            "status": "passed",
+            "mutation_events": [],
+            "control_observation": null,
+            "returncode": 0,
+            "duration_seconds": 9.66,
+            "error_type": "",
+            "error_message_excerpt": "",
+            "artifacts_dir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/eligibility/track_P/gpt-5.6-sol/runs/suite_busca_blue_jeans-B-r1.artifacts"
+          }
+        },
+        {
+          "repetition": 2,
+          "order": [
+            "A",
+            "B"
+          ],
+          "outcome": {
+            "status": "passed",
+            "mutation_events": [],
+            "control_observation": null,
+            "returncode": 0,
+            "duration_seconds": 9.379,
+            "error_type": "",
+            "error_message_excerpt": "",
+            "artifacts_dir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/eligibility/track_P/gpt-5.6-sol/runs/suite_busca_blue_jeans-B-r2.artifacts"
+          }
+        },
+        {
+          "repetition": 3,
+          "order": [
+            "A",
+            "B"
+          ],
+          "outcome": {
+            "status": "passed",
+            "mutation_events": [],
+            "control_observation": null,
+            "returncode": 0,
+            "duration_seconds": 9.639,
+            "error_type": "",
+            "error_message_excerpt": "",
+            "artifacts_dir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/eligibility/track_P/gpt-5.6-sol/runs/suite_busca_blue_jeans-B-r3.artifacts"
+          }
+        }
+      ]
+    },
+    "suite_detalhes_fiction": {
+      "A": [
+        {
+          "repetition": 1,
+          "order": [
+            "A",
+            "B"
+          ],
+          "outcome": {
+            "status": "passed",
+            "mutation_events": [],
+            "control_observation": null,
+            "returncode": 0,
+            "duration_seconds": 10.304,
+            "error_type": "",
+            "error_message_excerpt": "",
+            "artifacts_dir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/eligibility/track_P/gpt-5.6-sol/runs/suite_detalhes_fiction-A-r1.artifacts"
+          }
+        },
+        {
+          "repetition": 2,
+          "order": [
+            "A",
+            "B"
+          ],
+          "outcome": {
+            "status": "passed",
+            "mutation_events": [],
+            "control_observation": null,
+            "returncode": 0,
+            "duration_seconds": 9.792,
+            "error_type": "",
+            "error_message_excerpt": "",
+            "artifacts_dir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/eligibility/track_P/gpt-5.6-sol/runs/suite_detalhes_fiction-A-r2.artifacts"
+          }
+        },
+        {
+          "repetition": 3,
+          "order": [
+            "A",
+            "B"
+          ],
+          "outcome": {
+            "status": "passed",
+            "mutation_events": [],
+            "control_observation": null,
+            "returncode": 0,
+            "duration_seconds": 8.98,
+            "error_type": "",
+            "error_message_excerpt": "",
+            "artifacts_dir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/eligibility/track_P/gpt-5.6-sol/runs/suite_detalhes_fiction-A-r3.artifacts"
+          }
+        }
+      ],
+      "B": [
+        {
+          "repetition": 1,
+          "order": [
+            "A",
+            "B"
+          ],
+          "outcome": {
+            "status": "passed",
+            "mutation_events": [],
+            "control_observation": null,
+            "returncode": 0,
+            "duration_seconds": 10.085,
+            "error_type": "",
+            "error_message_excerpt": "",
+            "artifacts_dir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/eligibility/track_P/gpt-5.6-sol/runs/suite_detalhes_fiction-B-r1.artifacts"
+          }
+        },
+        {
+          "repetition": 2,
+          "order": [
+            "A",
+            "B"
+          ],
+          "outcome": {
+            "status": "passed",
+            "mutation_events": [],
+            "control_observation": null,
+            "returncode": 0,
+            "duration_seconds": 9.008,
+            "error_type": "",
+            "error_message_excerpt": "",
+            "artifacts_dir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/eligibility/track_P/gpt-5.6-sol/runs/suite_detalhes_fiction-B-r2.artifacts"
+          }
+        },
+        {
+          "repetition": 3,
+          "order": [
+            "A",
+            "B"
+          ],
+          "outcome": {
+            "status": "passed",
+            "mutation_events": [],
+            "control_observation": null,
+            "returncode": 0,
+            "duration_seconds": 8.845,
+            "error_type": "",
+            "error_message_excerpt": "",
+            "artifacts_dir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/eligibility/track_P/gpt-5.6-sol/runs/suite_detalhes_fiction-B-r3.artifacts"
+          }
+        }
+      ]
+    },
+    "suite_limpar_carrinho": {
+      "A": [
+        {
+          "repetition": 1,
+          "order": [
+            "A",
+            "B"
+          ],
+          "outcome": {
+            "status": "failed",
+            "mutation_events": [],
+            "control_observation": null,
+            "returncode": 1,
+            "duration_seconds": 9.155,
+            "error_type": "selector_ambiguity",
+            "error_message_excerpt": "Error: locator.click: Error: strict mode violation: locator('input[value=\"Add to cart\"]') resolved to 4 elements: 1) <input type=\"button\" value=\"Add to cart\" data-productid=\"36\" id=\"add-to-cart-button-36\" class=\"button-1 add-to-cart-button\" onclick=\"AjaxCart.addproducttocart_details('/addproducttocart/details/36/1', '#product-details-form');return false;\"/> aka locator('#add-to-cart-button-36') 2) <input type=\"button\" value=\"Add to cart\" class=\"button-2 product-box-add-to-cart-button\" onclick=\"…",
+            "artifacts_dir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/eligibility/track_P/gpt-5.6-sol/runs/suite_limpar_carrinho-A-r1.artifacts"
+          }
+        },
+        {
+          "repetition": 2,
+          "order": [
+            "A",
+            "B"
+          ],
+          "outcome": {
+            "status": "passed",
+            "mutation_events": [],
+            "control_observation": null,
+            "returncode": 0,
+            "duration_seconds": 12.428,
+            "error_type": "",
+            "error_message_excerpt": "",
+            "artifacts_dir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/eligibility/track_P/gpt-5.6-sol/runs/suite_limpar_carrinho-A-r2.artifacts"
+          }
+        },
+        {
+          "repetition": 3,
+          "order": [
+            "A",
+            "B"
+          ],
+          "outcome": {
+            "status": "failed",
+            "mutation_events": [],
+            "control_observation": null,
+            "returncode": 1,
+            "duration_seconds": 9.309,
+            "error_type": "selector_ambiguity",
+            "error_message_excerpt": "Error: locator.click: Error: strict mode violation: locator('input[value=\"Add to cart\"]') resolved to 4 elements: 1) <input type=\"button\" value=\"Add to cart\" data-productid=\"36\" id=\"add-to-cart-button-36\" class=\"button-1 add-to-cart-button\" onclick=\"AjaxCart.addproducttocart_details('/addproducttocart/details/36/1', '#product-details-form');return false;\"/> aka locator('#add-to-cart-button-36') 2) <input type=\"button\" value=\"Add to cart\" class=\"button-2 product-box-add-to-cart-button\" onclick=\"…",
+            "artifacts_dir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/eligibility/track_P/gpt-5.6-sol/runs/suite_limpar_carrinho-A-r3.artifacts"
+          }
+        }
+      ],
+      "B": [
+        {
+          "repetition": 1,
+          "order": [
+            "A",
+            "B"
+          ],
+          "outcome": {
+            "status": "passed",
+            "mutation_events": [],
+            "control_observation": null,
+            "returncode": 0,
+            "duration_seconds": 11.115,
+            "error_type": "",
+            "error_message_excerpt": "",
+            "artifacts_dir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/eligibility/track_P/gpt-5.6-sol/runs/suite_limpar_carrinho-B-r1.artifacts"
+          }
+        },
+        {
+          "repetition": 2,
+          "order": [
+            "A",
+            "B"
+          ],
+          "outcome": {
+            "status": "passed",
+            "mutation_events": [],
+            "control_observation": null,
+            "returncode": 0,
+            "duration_seconds": 10.905,
+            "error_type": "",
+            "error_message_excerpt": "",
+            "artifacts_dir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/eligibility/track_P/gpt-5.6-sol/runs/suite_limpar_carrinho-B-r2.artifacts"
+          }
+        },
+        {
+          "repetition": 3,
+          "order": [
+            "A",
+            "B"
+          ],
+          "outcome": {
+            "status": "passed",
+            "mutation_events": [],
+            "control_observation": null,
+            "returncode": 0,
+            "duration_seconds": 10.963,
+            "error_type": "",
+            "error_message_excerpt": "",
+            "artifacts_dir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/eligibility/track_P/gpt-5.6-sol/runs/suite_limpar_carrinho-B-r3.artifacts"
+          }
+        }
+      ]
+    },
+    "suite_login_invalido": {
+      "A": [
+        {
+          "repetition": 1,
+          "order": [
+            "B",
+            "A"
+          ],
+          "outcome": {
+            "status": "passed",
+            "mutation_events": [],
+            "control_observation": null,
+            "returncode": 0,
+            "duration_seconds": 8.496,
+            "error_type": "",
+            "error_message_excerpt": "",
+            "artifacts_dir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/eligibility/track_P/gpt-5.6-sol/runs/suite_login_invalido-A-r1.artifacts"
+          }
+        },
+        {
+          "repetition": 2,
+          "order": [
+            "B",
+            "A"
+          ],
+          "outcome": {
+            "status": "passed",
+            "mutation_events": [],
+            "control_observation": null,
+            "returncode": 0,
+            "duration_seconds": 8.612,
+            "error_type": "",
+            "error_message_excerpt": "",
+            "artifacts_dir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/eligibility/track_P/gpt-5.6-sol/runs/suite_login_invalido-A-r2.artifacts"
+          }
+        },
+        {
+          "repetition": 3,
+          "order": [
+            "B",
+            "A"
+          ],
+          "outcome": {
+            "status": "passed",
+            "mutation_events": [],
+            "control_observation": null,
+            "returncode": 0,
+            "duration_seconds": 8.203,
+            "error_type": "",
+            "error_message_excerpt": "",
+            "artifacts_dir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/eligibility/track_P/gpt-5.6-sol/runs/suite_login_invalido-A-r3.artifacts"
+          }
+        }
+      ],
+      "B": [
+        {
+          "repetition": 1,
+          "order": [
+            "B",
+            "A"
+          ],
+          "outcome": {
+            "status": "passed",
+            "mutation_events": [],
+            "control_observation": null,
+            "returncode": 0,
+            "duration_seconds": 8.502,
+            "error_type": "",
+            "error_message_excerpt": "",
+            "artifacts_dir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/eligibility/track_P/gpt-5.6-sol/runs/suite_login_invalido-B-r1.artifacts"
+          }
+        },
+        {
+          "repetition": 2,
+          "order": [
+            "B",
+            "A"
+          ],
+          "outcome": {
+            "status": "passed",
+            "mutation_events": [],
+            "control_observation": null,
+            "returncode": 0,
+            "duration_seconds": 8.447,
+            "error_type": "",
+            "error_message_excerpt": "",
+            "artifacts_dir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/eligibility/track_P/gpt-5.6-sol/runs/suite_login_invalido-B-r2.artifacts"
+          }
+        },
+        {
+          "repetition": 3,
+          "order": [
+            "B",
+            "A"
+          ],
+          "outcome": {
+            "status": "passed",
+            "mutation_events": [],
+            "control_observation": null,
+            "returncode": 0,
+            "duration_seconds": 8.458,
+            "error_type": "",
+            "error_message_excerpt": "",
+            "artifacts_dir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/eligibility/track_P/gpt-5.6-sol/runs/suite_login_invalido-B-r3.artifacts"
+          }
+        }
+      ]
+    },
+    "suite_login_valido": {
+      "A": [
+        {
+          "repetition": 1,
+          "order": [
+            "B",
+            "A"
+          ],
+          "outcome": {
+            "status": "passed",
+            "mutation_events": [],
+            "control_observation": null,
+            "returncode": 0,
+            "duration_seconds": 9.248,
+            "error_type": "",
+            "error_message_excerpt": "",
+            "artifacts_dir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/eligibility/track_P/gpt-5.6-sol/runs/suite_login_valido-A-r1.artifacts"
+          }
+        },
+        {
+          "repetition": 2,
+          "order": [
+            "B",
+            "A"
+          ],
+          "outcome": {
+            "status": "passed",
+            "mutation_events": [],
+            "control_observation": null,
+            "returncode": 0,
+            "duration_seconds": 9.033,
+            "error_type": "",
+            "error_message_excerpt": "",
+            "artifacts_dir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/eligibility/track_P/gpt-5.6-sol/runs/suite_login_valido-A-r2.artifacts"
+          }
+        },
+        {
+          "repetition": 3,
+          "order": [
+            "B",
+            "A"
+          ],
+          "outcome": {
+            "status": "passed",
+            "mutation_events": [],
+            "control_observation": null,
+            "returncode": 0,
+            "duration_seconds": 9.619,
+            "error_type": "",
+            "error_message_excerpt": "",
+            "artifacts_dir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/eligibility/track_P/gpt-5.6-sol/runs/suite_login_valido-A-r3.artifacts"
+          }
+        }
+      ],
+      "B": [
+        {
+          "repetition": 1,
+          "order": [
+            "B",
+            "A"
+          ],
+          "outcome": {
+            "status": "passed",
+            "mutation_events": [],
+            "control_observation": null,
+            "returncode": 0,
+            "duration_seconds": 9.283,
+            "error_type": "",
+            "error_message_excerpt": "",
+            "artifacts_dir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/eligibility/track_P/gpt-5.6-sol/runs/suite_login_valido-B-r1.artifacts"
+          }
+        },
+        {
+          "repetition": 2,
+          "order": [
+            "B",
+            "A"
+          ],
+          "outcome": {
+            "status": "passed",
+            "mutation_events": [],
+            "control_observation": null,
+            "returncode": 0,
+            "duration_seconds": 9.272,
+            "error_type": "",
+            "error_message_excerpt": "",
+            "artifacts_dir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/eligibility/track_P/gpt-5.6-sol/runs/suite_login_valido-B-r2.artifacts"
+          }
+        },
+        {
+          "repetition": 3,
+          "order": [
+            "B",
+            "A"
+          ],
+          "outcome": {
+            "status": "passed",
+            "mutation_events": [],
+            "control_observation": null,
+            "returncode": 0,
+            "duration_seconds": 8.929,
+            "error_type": "",
+            "error_message_excerpt": "",
+            "artifacts_dir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/eligibility/track_P/gpt-5.6-sol/runs/suite_login_valido-B-r3.artifacts"
+          }
+        }
+      ]
+    }
+  },
+  "eligible_scenarios": [
+    "suite_busca_blue_jeans",
+    "suite_detalhes_fiction",
+    "suite_login_invalido",
+    "suite_login_valido"
+  ],
+  "ineligible_scenarios": [
+    "suite_limpar_carrinho"
+  ],
+  "eligibility_results_sha256": "1f4d3678ebfac116405365c4b1c1512f59b7d1a5808c2b9d4432195811ab3342"
+}

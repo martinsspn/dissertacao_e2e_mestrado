@@ -1,0 +1,155 @@
+{
+  "config": {
+    "argv": [
+      "/usr/bin/node",
+      "/home/martinsspn/dissertacao_e2e_semantico/node_modules/.bin/playwright",
+      "test",
+      "control.spec.ts",
+      "--config=/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/playwright.config.ts",
+      "--reporter=json"
+    ],
+    "configFile": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/playwright.config.ts",
+    "rootDir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/playwright_resilience",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/tmp/avaliacao-prompts-playwright",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/playwright_resilience",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 20000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.61.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "control.spec.ts",
+      "file": "control.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "differential functional control",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 20000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 3614,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 3\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   \"Cannot set properties of null (setting '_renderItem')\",\u001b[39m\n\u001b[31m+ ]\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 3\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   \"Cannot set properties of null (setting '_renderItem')\",\u001b[39m\n\u001b[31m+ ]\u001b[39m\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/playwright_resilience/control.spec.ts:95:34",
+                    "location": {
+                      "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/playwright_resilience/control.spec.ts",
+                      "column": 34,
+                      "line": 95
+                    },
+                    "snippet": "  93 |   });\n  94 |   expect(observation.supported).toBe(true);\n> 95 |   expect(observation.pageErrors).toEqual([]);\n     |                                  ^\n  96 |   expect(observation.failedResponses).toEqual([]);\n  97 | });\n  98 |"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/playwright_resilience/control.spec.ts",
+                        "column": 34,
+                        "line": 95
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 3\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   \"Cannot set properties of null (setting '_renderItem')\",\u001b[39m\n\u001b[31m+ ]\u001b[39m\n\n  93 |   });\n  94 |   expect(observation.supported).toBe(true);\n> 95 |   expect(observation.pageErrors).toEqual([]);\n     |                                  ^\n  96 |   expect(observation.failedResponses).toEqual([]);\n  97 | });\n  98 |\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/playwright_resilience/control.spec.ts:95:34"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-07-20T18:05:44.904Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "resilience-control-observation",
+                      "contentType": "application/json",
+                      "body": "ewogICJzdXBwb3J0ZWQiOiB0cnVlLAogICJwYXRobmFtZSI6ICIvIiwKICAic2VhcmNoIjogIiIsCiAgImhlYWRpbmciOiBbXSwKICAibm90aWZpY2F0aW9ucyI6IFtdLAogICJ0YXJnZXRQcmVzZW50IjogdHJ1ZSwKICAidGFyZ2V0VmFsdWVDaGFuZ2VkIjogdHJ1ZSwKICAicGFnZUVycm9ycyI6IFsKICAgICJDYW5ub3Qgc2V0IHByb3BlcnRpZXMgb2YgbnVsbCAoc2V0dGluZyAnX3JlbmRlckl0ZW0nKSIKICBdLAogICJmYWlsZWRSZXNwb25zZXMiOiBbXQp9"
+                    },
+                    {
+                      "name": "resilience-mutation-events",
+                      "contentType": "application/json",
+                      "body": "WwogIHsKICAgICJtdXRhdGlvbklkIjogIm11dGF0aW9uLTdiNGI5N2YwNzJhNzQ0ZGIiLAogICAgInRhcmdldElkIjogInRhcmdldC02ZjZmZTdlNGIyZDk2YTA2IiwKICAgICJ1cmwiOiAiaHR0cHM6Ly9kZW1vd2Vic2hvcC50cmljZW50aXMuY29tLyIsCiAgICAic3RhdHVzIjogImFwcGxpZWQiLAogICAgImRldGFpbCI6ICIiCiAgfSwKICB7CiAgICAibXV0YXRpb25JZCI6ICJtdXRhdGlvbi03YjRiOTdmMDcyYTc0NGRiIiwKICAgICJ0YXJnZXRJZCI6ICJ0YXJnZXQtNmY2ZmU3ZTRiMmQ5NmEwNiIsCiAgICAidXJsIjogImh0dHBzOi8vZGVtb3dlYnNob3AudHJpY2VudGlzLmNvbS8iLAogICAgInN0YXR1cyI6ICJpbnRlcmFjdGVkIiwKICAgICJkZXRhaWwiOiAiaW5wdXQiCiAgfQpd"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/tmp/avaliacao-prompts-playwright/control-differential-functional-control/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/playwright_resilience/control.spec.ts",
+                    "column": 34,
+                    "line": 95
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "df0f65ccd0bbb0c6ab20-3d90b5ff79bfc8b60b9a",
+          "file": "control.spec.ts",
+          "line": 25,
+          "column": 5
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-07-20T18:05:43.832Z",
+    "duration": 5190.441000000001,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

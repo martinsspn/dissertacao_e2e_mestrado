@@ -1,0 +1,3 @@
+$ /usr/local/bin/python3.11 -m avaliacao_prompts --tests-dir /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline --approach baseline --base-url https://demowebshop.tricentis.com/ --output /home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/relatorios/baseline.md --prompt-dir /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_prompts --neo4j-uri bolt://neo4j:7687 --neo4j-user neo4j --neo4j-password neo4j_password
+
+[avaliar-prompts] 12 teste(s) analisado(s) -> /home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/relatorios/baseline.md

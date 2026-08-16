@@ -1,0 +1,23 @@
+{
+  "model": "qwen2.5-coder:7b",
+  "created_at": "2026-07-24T18:33:11.1363508Z",
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 18071042300,
+  "load_duration": 361065700,
+  "prompt_eval_count": 975,
+  "prompt_eval_duration": 3502011000,
+  "eval_count": 261,
+  "eval_duration": 14156322000,
+  "condition": "structured_context",
+  "scenario": "suite_busca_blue_jeans",
+  "model_requested": "qwen2.5-coder:7b",
+  "seed": 20260724,
+  "temperature": 0,
+  "num_ctx": 8192,
+  "num_predict": 2048,
+  "elapsed_seconds_client": 17.173,
+  "input_sha256": "4e0b99b39270e0395d19ac7f268cdf52338739752faf998c93684461085dc6eb",
+  "response_sha256": "b3462db6a85de9c85c071e32e45a6a50a3eb0e5d7517e8b5b9fceaae4de9f349",
+  "stateless": true
+}

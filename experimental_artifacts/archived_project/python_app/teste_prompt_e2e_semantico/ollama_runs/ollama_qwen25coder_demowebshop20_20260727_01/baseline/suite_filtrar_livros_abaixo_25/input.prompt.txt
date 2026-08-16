@@ -1,0 +1,1 @@
+Filtering books by price: The user accesses the Books category. The user selects the Under 25.00 price filter. The system keeps the Books category visible and displays only products whose current sale price is below 25.00.

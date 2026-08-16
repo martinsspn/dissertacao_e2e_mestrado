@@ -1,0 +1,6 @@
+Listing tests:
+  suite_adicionar_dois_produtos_carrinho.spec.ts:4:7 › Suite Adicionar Dois Produtos Carrinho › Adicionar Computing and Internet ao carrinho
+  suite_adicionar_dois_produtos_carrinho.spec.ts:10:7 › Suite Adicionar Dois Produtos Carrinho › Adicionar Fiction ao carrinho
+  suite_adicionar_dois_produtos_carrinho.spec.ts:16:7 › Suite Adicionar Dois Produtos Carrinho › Acessar carrinho
+  suite_adicionar_dois_produtos_carrinho.spec.ts:22:7 › Suite Adicionar Dois Produtos Carrinho › Verificar itens no carrinho
+Total: 4 tests in 1 file

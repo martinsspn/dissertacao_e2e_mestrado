@@ -1,0 +1,395 @@
+{
+  "schema_version": 1,
+  "execution_manifest": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaigns/campaign_20260728_01/prepared/track_P/gemini-3.6-flash/execution_manifest.json",
+  "execution_manifest_sha256": "22043980e793220c7a1f1047c61ff2a95afe33608184853c2a863bf2e6baf423",
+  "mutation_plan_sha256": "7e1ed1318e46271b4a055e9a475e38b85f31b6f22c4614d4033656450fcbbbfc",
+  "track_id": "P",
+  "model_id": "gemini-3.6-flash",
+  "repetitions": 3,
+  "runtime": {
+    "node": "v18.19.1",
+    "playwright": "Version 1.61.1",
+    "chromium": "149.0.7827.55"
+  },
+  "configured_environment_names": [
+    "BASE_URL",
+    "DEMO_WEB_SHOP_EMAIL",
+    "DEMO_WEB_SHOP_PASSWORD",
+    "E2E_EMAIL",
+    "E2E_PASSWORD",
+    "PROMPT_E2E_BASE_URL",
+    "TEST_EMAIL",
+    "TEST_PASSWORD"
+  ],
+  "statuses": {
+    "suite_cadastro_campos_obrigatorios": {
+      "A": [
+        "passed",
+        "passed",
+        "passed"
+      ],
+      "B": [
+        "passed",
+        "passed",
+        "passed"
+      ]
+    },
+    "suite_cadastro_confirmacao_senha": {
+      "A": [
+        "passed",
+        "passed",
+        "passed"
+      ],
+      "B": [
+        "passed",
+        "passed",
+        "passed"
+      ]
+    },
+    "suite_navegar_categoria_livros": {
+      "A": [
+        "passed",
+        "passed",
+        "passed"
+      ],
+      "B": [
+        "passed",
+        "passed",
+        "passed"
+      ]
+    }
+  },
+  "details": {
+    "suite_cadastro_campos_obrigatorios": {
+      "A": [
+        {
+          "repetition": 1,
+          "order": [
+            "B",
+            "A"
+          ],
+          "outcome": {
+            "status": "passed",
+            "mutation_events": [],
+            "control_observation": null,
+            "returncode": 0,
+            "duration_seconds": 6.963,
+            "error_type": "",
+            "error_message_excerpt": "",
+            "artifacts_dir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/eligibility/track_P/gemini-3.6-flash/runs/suite_cadastro_campos_obrigatorios-A-r1.artifacts"
+          }
+        },
+        {
+          "repetition": 2,
+          "order": [
+            "B",
+            "A"
+          ],
+          "outcome": {
+            "status": "passed",
+            "mutation_events": [],
+            "control_observation": null,
+            "returncode": 0,
+            "duration_seconds": 6.886,
+            "error_type": "",
+            "error_message_excerpt": "",
+            "artifacts_dir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/eligibility/track_P/gemini-3.6-flash/runs/suite_cadastro_campos_obrigatorios-A-r2.artifacts"
+          }
+        },
+        {
+          "repetition": 3,
+          "order": [
+            "B",
+            "A"
+          ],
+          "outcome": {
+            "status": "passed",
+            "mutation_events": [],
+            "control_observation": null,
+            "returncode": 0,
+            "duration_seconds": 6.955,
+            "error_type": "",
+            "error_message_excerpt": "",
+            "artifacts_dir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/eligibility/track_P/gemini-3.6-flash/runs/suite_cadastro_campos_obrigatorios-A-r3.artifacts"
+          }
+        }
+      ],
+      "B": [
+        {
+          "repetition": 1,
+          "order": [
+            "B",
+            "A"
+          ],
+          "outcome": {
+            "status": "passed",
+            "mutation_events": [],
+            "control_observation": null,
+            "returncode": 0,
+            "duration_seconds": 9.168,
+            "error_type": "",
+            "error_message_excerpt": "",
+            "artifacts_dir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/eligibility/track_P/gemini-3.6-flash/runs/suite_cadastro_campos_obrigatorios-B-r1.artifacts"
+          }
+        },
+        {
+          "repetition": 2,
+          "order": [
+            "B",
+            "A"
+          ],
+          "outcome": {
+            "status": "passed",
+            "mutation_events": [],
+            "control_observation": null,
+            "returncode": 0,
+            "duration_seconds": 8.583,
+            "error_type": "",
+            "error_message_excerpt": "",
+            "artifacts_dir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/eligibility/track_P/gemini-3.6-flash/runs/suite_cadastro_campos_obrigatorios-B-r2.artifacts"
+          }
+        },
+        {
+          "repetition": 3,
+          "order": [
+            "B",
+            "A"
+          ],
+          "outcome": {
+            "status": "passed",
+            "mutation_events": [],
+            "control_observation": null,
+            "returncode": 0,
+            "duration_seconds": 8.555,
+            "error_type": "",
+            "error_message_excerpt": "",
+            "artifacts_dir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/eligibility/track_P/gemini-3.6-flash/runs/suite_cadastro_campos_obrigatorios-B-r3.artifacts"
+          }
+        }
+      ]
+    },
+    "suite_cadastro_confirmacao_senha": {
+      "A": [
+        {
+          "repetition": 1,
+          "order": [
+            "B",
+            "A"
+          ],
+          "outcome": {
+            "status": "passed",
+            "mutation_events": [],
+            "control_observation": null,
+            "returncode": 0,
+            "duration_seconds": 7.313,
+            "error_type": "",
+            "error_message_excerpt": "",
+            "artifacts_dir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/eligibility/track_P/gemini-3.6-flash/runs/suite_cadastro_confirmacao_senha-A-r1.artifacts"
+          }
+        },
+        {
+          "repetition": 2,
+          "order": [
+            "B",
+            "A"
+          ],
+          "outcome": {
+            "status": "passed",
+            "mutation_events": [],
+            "control_observation": null,
+            "returncode": 0,
+            "duration_seconds": 6.729,
+            "error_type": "",
+            "error_message_excerpt": "",
+            "artifacts_dir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/eligibility/track_P/gemini-3.6-flash/runs/suite_cadastro_confirmacao_senha-A-r2.artifacts"
+          }
+        },
+        {
+          "repetition": 3,
+          "order": [
+            "B",
+            "A"
+          ],
+          "outcome": {
+            "status": "passed",
+            "mutation_events": [],
+            "control_observation": null,
+            "returncode": 0,
+            "duration_seconds": 7.041,
+            "error_type": "",
+            "error_message_excerpt": "",
+            "artifacts_dir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/eligibility/track_P/gemini-3.6-flash/runs/suite_cadastro_confirmacao_senha-A-r3.artifacts"
+          }
+        }
+      ],
+      "B": [
+        {
+          "repetition": 1,
+          "order": [
+            "B",
+            "A"
+          ],
+          "outcome": {
+            "status": "passed",
+            "mutation_events": [],
+            "control_observation": null,
+            "returncode": 0,
+            "duration_seconds": 8.512,
+            "error_type": "",
+            "error_message_excerpt": "",
+            "artifacts_dir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/eligibility/track_P/gemini-3.6-flash/runs/suite_cadastro_confirmacao_senha-B-r1.artifacts"
+          }
+        },
+        {
+          "repetition": 2,
+          "order": [
+            "B",
+            "A"
+          ],
+          "outcome": {
+            "status": "passed",
+            "mutation_events": [],
+            "control_observation": null,
+            "returncode": 0,
+            "duration_seconds": 8.106,
+            "error_type": "",
+            "error_message_excerpt": "",
+            "artifacts_dir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/eligibility/track_P/gemini-3.6-flash/runs/suite_cadastro_confirmacao_senha-B-r2.artifacts"
+          }
+        },
+        {
+          "repetition": 3,
+          "order": [
+            "B",
+            "A"
+          ],
+          "outcome": {
+            "status": "passed",
+            "mutation_events": [],
+            "control_observation": null,
+            "returncode": 0,
+            "duration_seconds": 8.171,
+            "error_type": "",
+            "error_message_excerpt": "",
+            "artifacts_dir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/eligibility/track_P/gemini-3.6-flash/runs/suite_cadastro_confirmacao_senha-B-r3.artifacts"
+          }
+        }
+      ]
+    },
+    "suite_navegar_categoria_livros": {
+      "A": [
+        {
+          "repetition": 1,
+          "order": [
+            "A",
+            "B"
+          ],
+          "outcome": {
+            "status": "passed",
+            "mutation_events": [],
+            "control_observation": null,
+            "returncode": 0,
+            "duration_seconds": 8.585,
+            "error_type": "",
+            "error_message_excerpt": "",
+            "artifacts_dir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/eligibility/track_P/gemini-3.6-flash/runs/suite_navegar_categoria_livros-A-r1.artifacts"
+          }
+        },
+        {
+          "repetition": 2,
+          "order": [
+            "A",
+            "B"
+          ],
+          "outcome": {
+            "status": "passed",
+            "mutation_events": [],
+            "control_observation": null,
+            "returncode": 0,
+            "duration_seconds": 8.892,
+            "error_type": "",
+            "error_message_excerpt": "",
+            "artifacts_dir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/eligibility/track_P/gemini-3.6-flash/runs/suite_navegar_categoria_livros-A-r2.artifacts"
+          }
+        },
+        {
+          "repetition": 3,
+          "order": [
+            "A",
+            "B"
+          ],
+          "outcome": {
+            "status": "passed",
+            "mutation_events": [],
+            "control_observation": null,
+            "returncode": 0,
+            "duration_seconds": 8.533,
+            "error_type": "",
+            "error_message_excerpt": "",
+            "artifacts_dir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/eligibility/track_P/gemini-3.6-flash/runs/suite_navegar_categoria_livros-A-r3.artifacts"
+          }
+        }
+      ],
+      "B": [
+        {
+          "repetition": 1,
+          "order": [
+            "A",
+            "B"
+          ],
+          "outcome": {
+            "status": "passed",
+            "mutation_events": [],
+            "control_observation": null,
+            "returncode": 0,
+            "duration_seconds": 8.65,
+            "error_type": "",
+            "error_message_excerpt": "",
+            "artifacts_dir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/eligibility/track_P/gemini-3.6-flash/runs/suite_navegar_categoria_livros-B-r1.artifacts"
+          }
+        },
+        {
+          "repetition": 2,
+          "order": [
+            "A",
+            "B"
+          ],
+          "outcome": {
+            "status": "passed",
+            "mutation_events": [],
+            "control_observation": null,
+            "returncode": 0,
+            "duration_seconds": 8.642,
+            "error_type": "",
+            "error_message_excerpt": "",
+            "artifacts_dir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/eligibility/track_P/gemini-3.6-flash/runs/suite_navegar_categoria_livros-B-r2.artifacts"
+          }
+        },
+        {
+          "repetition": 3,
+          "order": [
+            "A",
+            "B"
+          ],
+          "outcome": {
+            "status": "passed",
+            "mutation_events": [],
+            "control_observation": null,
+            "returncode": 0,
+            "duration_seconds": 8.799,
+            "error_type": "",
+            "error_message_excerpt": "",
+            "artifacts_dir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/eligibility/track_P/gemini-3.6-flash/runs/suite_navegar_categoria_livros-B-r3.artifacts"
+          }
+        }
+      ]
+    }
+  },
+  "eligible_scenarios": [
+    "suite_cadastro_campos_obrigatorios",
+    "suite_cadastro_confirmacao_senha",
+    "suite_navegar_categoria_livros"
+  ],
+  "ineligible_scenarios": [],
+  "eligibility_results_sha256": "f245d4e06b1169d14ebd70a286656c0013586d0b72e86a191833df92602a7bb0"
+}

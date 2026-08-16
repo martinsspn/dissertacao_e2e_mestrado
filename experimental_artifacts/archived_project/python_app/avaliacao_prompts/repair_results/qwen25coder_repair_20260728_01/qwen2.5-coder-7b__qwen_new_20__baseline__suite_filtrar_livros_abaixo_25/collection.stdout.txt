@@ -1,0 +1,3 @@
+Listing tests:
+  suite_filtrar_livros_abaixo_25.spec.ts:4:7 › Filtering books by price › should keep the Books category visible and display only products under 25.00
+Total: 1 test in 1 file

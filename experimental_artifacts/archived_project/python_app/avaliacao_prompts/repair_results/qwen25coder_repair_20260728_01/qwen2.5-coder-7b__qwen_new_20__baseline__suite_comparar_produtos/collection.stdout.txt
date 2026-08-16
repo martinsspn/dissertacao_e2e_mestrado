@@ -1,0 +1,3 @@
+Listing tests:
+  suite_comparar_produtos.spec.ts:4:7 › Product Comparison › should add two products to compare list and display them on Compare Products page
+Total: 1 test in 1 file

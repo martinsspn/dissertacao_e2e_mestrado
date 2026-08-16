@@ -1,0 +1,274 @@
+{
+  "schema_version": 1,
+  "execution_manifest": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaigns/campaign_20260728_01/prepared/track_R/gemini-3.6-flash/execution_manifest.json",
+  "execution_manifest_sha256": "80fd5e10decfc8045b98f2e4d0defced0e2e0bb067f9ce00f38df892afd9bdeb",
+  "mutation_plan_sha256": "7e1ed1318e46271b4a055e9a475e38b85f31b6f22c4614d4033656450fcbbbfc",
+  "track_id": "R",
+  "model_id": "gemini-3.6-flash",
+  "repetitions": 3,
+  "runtime": {
+    "node": "v18.19.1",
+    "playwright": "Version 1.61.1",
+    "chromium": "149.0.7827.55"
+  },
+  "configured_environment_names": [
+    "BASE_URL",
+    "DEMO_WEB_SHOP_EMAIL",
+    "DEMO_WEB_SHOP_PASSWORD",
+    "E2E_EMAIL",
+    "E2E_PASSWORD",
+    "PROMPT_E2E_BASE_URL",
+    "TEST_EMAIL",
+    "TEST_PASSWORD"
+  ],
+  "statuses": {
+    "fluxo_computadores_desktops": {
+      "A": [
+        "passed",
+        "passed",
+        "passed"
+      ],
+      "B": [
+        "passed",
+        "passed",
+        "passed"
+      ]
+    },
+    "suite_navegar_sobre_nos": {
+      "A": [
+        "passed",
+        "passed",
+        "passed"
+      ],
+      "B": [
+        "passed",
+        "passed",
+        "passed"
+      ]
+    }
+  },
+  "details": {
+    "fluxo_computadores_desktops": {
+      "A": [
+        {
+          "repetition": 1,
+          "order": [
+            "A",
+            "B"
+          ],
+          "outcome": {
+            "status": "passed",
+            "mutation_events": [],
+            "control_observation": null,
+            "returncode": 0,
+            "duration_seconds": 8.856,
+            "error_type": "",
+            "error_message_excerpt": "",
+            "artifacts_dir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/eligibility/track_R/gemini-3.6-flash/runs/fluxo_computadores_desktops-A-r1.artifacts"
+          }
+        },
+        {
+          "repetition": 2,
+          "order": [
+            "A",
+            "B"
+          ],
+          "outcome": {
+            "status": "passed",
+            "mutation_events": [],
+            "control_observation": null,
+            "returncode": 0,
+            "duration_seconds": 8.714,
+            "error_type": "",
+            "error_message_excerpt": "",
+            "artifacts_dir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/eligibility/track_R/gemini-3.6-flash/runs/fluxo_computadores_desktops-A-r2.artifacts"
+          }
+        },
+        {
+          "repetition": 3,
+          "order": [
+            "A",
+            "B"
+          ],
+          "outcome": {
+            "status": "passed",
+            "mutation_events": [],
+            "control_observation": null,
+            "returncode": 0,
+            "duration_seconds": 8.404,
+            "error_type": "",
+            "error_message_excerpt": "",
+            "artifacts_dir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/eligibility/track_R/gemini-3.6-flash/runs/fluxo_computadores_desktops-A-r3.artifacts"
+          }
+        }
+      ],
+      "B": [
+        {
+          "repetition": 1,
+          "order": [
+            "A",
+            "B"
+          ],
+          "outcome": {
+            "status": "passed",
+            "mutation_events": [],
+            "control_observation": null,
+            "returncode": 0,
+            "duration_seconds": 8.836,
+            "error_type": "",
+            "error_message_excerpt": "",
+            "artifacts_dir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/eligibility/track_R/gemini-3.6-flash/runs/fluxo_computadores_desktops-B-r1.artifacts"
+          }
+        },
+        {
+          "repetition": 2,
+          "order": [
+            "A",
+            "B"
+          ],
+          "outcome": {
+            "status": "passed",
+            "mutation_events": [],
+            "control_observation": null,
+            "returncode": 0,
+            "duration_seconds": 8.398,
+            "error_type": "",
+            "error_message_excerpt": "",
+            "artifacts_dir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/eligibility/track_R/gemini-3.6-flash/runs/fluxo_computadores_desktops-B-r2.artifacts"
+          }
+        },
+        {
+          "repetition": 3,
+          "order": [
+            "A",
+            "B"
+          ],
+          "outcome": {
+            "status": "passed",
+            "mutation_events": [],
+            "control_observation": null,
+            "returncode": 0,
+            "duration_seconds": 8.557,
+            "error_type": "",
+            "error_message_excerpt": "",
+            "artifacts_dir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/eligibility/track_R/gemini-3.6-flash/runs/fluxo_computadores_desktops-B-r3.artifacts"
+          }
+        }
+      ]
+    },
+    "suite_navegar_sobre_nos": {
+      "A": [
+        {
+          "repetition": 1,
+          "order": [
+            "A",
+            "B"
+          ],
+          "outcome": {
+            "status": "passed",
+            "mutation_events": [],
+            "control_observation": null,
+            "returncode": 0,
+            "duration_seconds": 8.144,
+            "error_type": "",
+            "error_message_excerpt": "",
+            "artifacts_dir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/eligibility/track_R/gemini-3.6-flash/runs/suite_navegar_sobre_nos-A-r1.artifacts"
+          }
+        },
+        {
+          "repetition": 2,
+          "order": [
+            "A",
+            "B"
+          ],
+          "outcome": {
+            "status": "passed",
+            "mutation_events": [],
+            "control_observation": null,
+            "returncode": 0,
+            "duration_seconds": 7.791,
+            "error_type": "",
+            "error_message_excerpt": "",
+            "artifacts_dir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/eligibility/track_R/gemini-3.6-flash/runs/suite_navegar_sobre_nos-A-r2.artifacts"
+          }
+        },
+        {
+          "repetition": 3,
+          "order": [
+            "A",
+            "B"
+          ],
+          "outcome": {
+            "status": "passed",
+            "mutation_events": [],
+            "control_observation": null,
+            "returncode": 0,
+            "duration_seconds": 7.948,
+            "error_type": "",
+            "error_message_excerpt": "",
+            "artifacts_dir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/eligibility/track_R/gemini-3.6-flash/runs/suite_navegar_sobre_nos-A-r3.artifacts"
+          }
+        }
+      ],
+      "B": [
+        {
+          "repetition": 1,
+          "order": [
+            "A",
+            "B"
+          ],
+          "outcome": {
+            "status": "passed",
+            "mutation_events": [],
+            "control_observation": null,
+            "returncode": 0,
+            "duration_seconds": 8.495,
+            "error_type": "",
+            "error_message_excerpt": "",
+            "artifacts_dir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/eligibility/track_R/gemini-3.6-flash/runs/suite_navegar_sobre_nos-B-r1.artifacts"
+          }
+        },
+        {
+          "repetition": 2,
+          "order": [
+            "A",
+            "B"
+          ],
+          "outcome": {
+            "status": "passed",
+            "mutation_events": [],
+            "control_observation": null,
+            "returncode": 0,
+            "duration_seconds": 7.949,
+            "error_type": "",
+            "error_message_excerpt": "",
+            "artifacts_dir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/eligibility/track_R/gemini-3.6-flash/runs/suite_navegar_sobre_nos-B-r2.artifacts"
+          }
+        },
+        {
+          "repetition": 3,
+          "order": [
+            "A",
+            "B"
+          ],
+          "outcome": {
+            "status": "passed",
+            "mutation_events": [],
+            "control_observation": null,
+            "returncode": 0,
+            "duration_seconds": 7.613,
+            "error_type": "",
+            "error_message_excerpt": "",
+            "artifacts_dir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/eligibility/track_R/gemini-3.6-flash/runs/suite_navegar_sobre_nos-B-r3.artifacts"
+          }
+        }
+      ]
+    }
+  },
+  "eligible_scenarios": [
+    "fluxo_computadores_desktops",
+    "suite_navegar_sobre_nos"
+  ],
+  "ineligible_scenarios": [],
+  "eligibility_results_sha256": "3834a2ef6286cc6e296b2e4b5acc0fa4e0161087b9d534ec2105dd5ab3606c8b"
+}

@@ -1,0 +1,23 @@
+{
+  "model": "qwen2.5-coder:7b",
+  "created_at": "2026-07-27T18:11:50.3547343Z",
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 21226203800,
+  "load_duration": 359900400,
+  "prompt_eval_count": 197,
+  "prompt_eval_duration": 2009427000,
+  "eval_count": 270,
+  "eval_duration": 18801299000,
+  "condition": "baseline",
+  "scenario": "suite_cadastro_campos_obrigatorios",
+  "model_requested": "qwen2.5-coder:7b",
+  "seed": 20260724,
+  "temperature": 0,
+  "num_ctx": 8192,
+  "num_predict": 2048,
+  "elapsed_seconds_client": 20.262,
+  "input_sha256": "a20a695ffa0a4ad6c66a50a3d13968f98dd02fedb4996d41d734e55858fd560c",
+  "response_sha256": "1000d7de297d3a37e58b8d47bd772315f06b716d1a4a9205a3968bcd3f52ef1b",
+  "stateless": true
+}

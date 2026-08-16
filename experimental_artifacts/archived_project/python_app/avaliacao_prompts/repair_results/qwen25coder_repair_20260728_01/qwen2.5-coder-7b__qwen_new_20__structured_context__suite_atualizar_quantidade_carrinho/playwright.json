@@ -1,0 +1,154 @@
+{
+  "config": {
+    "argv": [
+      "/usr/bin/node",
+      "/home/martinsspn/dissertacao_e2e_semantico/node_modules/.bin/playwright",
+      "test",
+      "suite_atualizar_quantidade_carrinho.spec.ts",
+      "--config=/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/playwright.config.ts",
+      "--reporter=json"
+    ],
+    "configFile": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/playwright.config.ts",
+    "rootDir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/repair_runs/qwen25coder_repair_20260728_01/qwen2-5-coder-7b/qwen_new_20/structured_context/suite_atualizar_quantidade_carrinho",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/tmp/avaliacao-prompts-playwright",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/repair_runs/qwen25coder_repair_20260728_01/qwen2-5-coder-7b/qwen_new_20/structured_context/suite_atualizar_quantidade_carrinho",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 20000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.61.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "suite_atualizar_quantidade_carrinho.spec.ts",
+      "file": "suite_atualizar_quantidade_carrinho.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Suite Atualizar Quantidade Carrinho",
+          "file": "suite_atualizar_quantidade_carrinho.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should update quantity in cart and keep product with updated subtotal",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 20000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 13451,
+                      "error": {
+                        "message": "TimeoutError: locator.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[id=\"add-to-cart-button-13\"]')\u001b[22m\n",
+                        "stack": "TimeoutError: locator.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[id=\"add-to-cart-button-13\"]')\u001b[22m\n\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/repair_runs/qwen25coder_repair_20260728_01/qwen2-5-coder-7b/qwen_new_20/structured_context/suite_atualizar_quantidade_carrinho/suite_atualizar_quantidade_carrinho.spec.ts:7:58",
+                        "location": {
+                          "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/repair_runs/qwen25coder_repair_20260728_01/qwen2-5-coder-7b/qwen_new_20/structured_context/suite_atualizar_quantidade_carrinho/suite_atualizar_quantidade_carrinho.spec.ts",
+                          "column": 58,
+                          "line": 7
+                        },
+                        "snippet": "   5 |     // Etapa 1: Adicionar produto ao carrinho\n   6 |     await page.goto('https://demowebshop.tricentis.com/');\n>  7 |     await page.locator(\"[id=\\\"add-to-cart-button-13\\\"]\").click();\n     |                                                          ^\n   8 |     await expect(page).toHaveURL('https://demowebshop.tricentis.com/cart');\n   9 |\n  10 |     // Etapa 2: Acessar carrinho e alterar quantidade"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/repair_runs/qwen25coder_repair_20260728_01/qwen2-5-coder-7b/qwen_new_20/structured_context/suite_atualizar_quantidade_carrinho/suite_atualizar_quantidade_carrinho.spec.ts",
+                            "column": 58,
+                            "line": 7
+                          },
+                          "message": "TimeoutError: locator.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[id=\"add-to-cart-button-13\"]')\u001b[22m\n\n\n   5 |     // Etapa 1: Adicionar produto ao carrinho\n   6 |     await page.goto('https://demowebshop.tricentis.com/');\n>  7 |     await page.locator(\"[id=\\\"add-to-cart-button-13\\\"]\").click();\n     |                                                          ^\n   8 |     await expect(page).toHaveURL('https://demowebshop.tricentis.com/cart');\n   9 |\n  10 |     // Etapa 2: Acessar carrinho e alterar quantidade\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/repair_runs/qwen25coder_repair_20260728_01/qwen2-5-coder-7b/qwen_new_20/structured_context/suite_atualizar_quantidade_carrinho/suite_atualizar_quantidade_carrinho.spec.ts:7:58"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-28T15:17:00.614Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/tmp/avaliacao-prompts-playwright/suite_atualizar_quantidade-2ffca-oduct-with-updated-subtotal/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/repair_runs/qwen25coder_repair_20260728_01/qwen2-5-coder-7b/qwen_new_20/structured_context/suite_atualizar_quantidade_carrinho/suite_atualizar_quantidade_carrinho.spec.ts",
+                        "column": 58,
+                        "line": 7
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "0631d563be86abbaa468-564be948857d62d1998b",
+              "file": "suite_atualizar_quantidade_carrinho.spec.ts",
+              "line": 4,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-07-28T15:16:59.576Z",
+    "duration": 14925.982,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

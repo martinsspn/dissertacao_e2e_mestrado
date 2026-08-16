@@ -1,0 +1,522 @@
+
+Running 20 tests using 1 worker
+
+[1/20] ../teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/fluxo_computadores_desktops.spec.ts:4:7 › Digital Downloads Page › should display the digital downloads page
+  1) ../teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/fluxo_computadores_desktops.spec.ts:4:7 › Digital Downloads Page › should display the digital downloads page 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('.digital-item')
+    Expected: visible
+    Timeout: 7000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 7000ms
+      - waiting for locator('.digital-item')
+
+
+       8 |     // Wait for the digital items to be visible
+       9 |     const digitalItems = page.locator('.digital-item');
+    > 10 |     await expect(digitalItems).toBeVisible();
+         |                                ^
+      11 |
+      12 |     // Validate that the digital downloads page is visible
+      13 |     const pageTitle = page.locator('h1');
+        at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/fluxo_computadores_desktops.spec.ts:10:32
+
+    Error Context: ../../../../../tmp/avaliacao-prompts-playwright/fluxo_computadores_desktop-09ce9--the-digital-downloads-page/error-context.md
+
+
+[2/20] ../teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_adicionar_dois_produtos_carrinho.spec.ts:4:7 › Cart Test › Adding two different products to the cart
+  2) ../teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_adicionar_dois_produtos_carrinho.spec.ts:4:7 › Cart Test › Adding two different products to the cart 
+
+    TimeoutError: page.click: Timeout 10000ms exceeded.
+    Call log:
+      - waiting for locator('#computing-product')
+
+
+       7 |
+       8 |     // Add Computing product to the cart
+    >  9 |     await page.click('#computing-product');
+         |                ^
+      10 |     await page.click('#add-to-cart-computing');
+      11 |
+      12 |     // Add Fiction product to the cart
+        at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_adicionar_dois_produtos_carrinho.spec.ts:9:16
+
+    Error Context: ../../../../../tmp/avaliacao-prompts-playwright/suite_adicionar_dois_produ-61d4e-ferent-products-to-the-cart/error-context.md
+
+
+[3/20] ../teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_atualizar_quantidade_carrinho.spec.ts:4:7 › Updating a product quantity in the cart › should update the quantity of Computing and Internet to two and keep it in the cart
+  3) ../teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_atualizar_quantidade_carrinho.spec.ts:4:7 › Updating a product quantity in the cart › should update the quantity of Computing and Internet to two and keep it in the cart 
+
+    TimeoutError: page.click: Timeout 10000ms exceeded.
+    Call log:
+      - waiting for locator('text=Computing and Internet')
+
+
+       5 |     // Add Computing and Internet to the cart
+       6 |     await page.goto('/products');
+    >  7 |     await page.click('text=Computing and Internet');
+         |                ^
+       8 |     await page.click('button=add-to-cart');
+       9 |
+      10 |     // Access Shopping cart
+        at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_atualizar_quantidade_carrinho.spec.ts:7:16
+
+    Error Context: ../../../../../tmp/avaliacao-prompts-playwright/suite_atualizar_quantidade-69f93-two-and-keep-it-in-the-cart/error-context.md
+
+
+[4/20] ../teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_busca_sem_resultados.spec.ts:4:7 › Search for nonexistent product › should display no results message when searching for a nonexistent product
+  4) ../teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_busca_sem_resultados.spec.ts:4:7 › Search for nonexistent product › should display no results message when searching for a nonexistent product 
+
+    TimeoutError: locator.fill: Timeout 10000ms exceeded.
+    Call log:
+      - waiting for locator('#search-input')
+
+
+       8 |     // Enter a unique term that does not correspond to any product
+       9 |     const searchInput = page.locator('#search-input');
+    > 10 |     await searchInput.fill('nonexistent-product-term');
+         |                       ^
+      11 |
+      12 |     // Submit the search
+      13 |     const searchButton = page.locator('#search-button');
+        at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_busca_sem_resultados.spec.ts:10:23
+
+    Error Context: ../../../../../tmp/avaliacao-prompts-playwright/suite_busca_sem_resultados-82470-g-for-a-nonexistent-product/error-context.md
+
+
+[5/20] ../teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_cadastro_campos_obrigatorios.spec.ts:4:7 › Validation of required registration fields › should display validation messages for empty fields
+  5) ../teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_cadastro_campos_obrigatorios.spec.ts:4:7 › Validation of required registration fields › should display validation messages for empty fields 
+
+    TimeoutError: page.click: Timeout 10000ms exceeded.
+    Call log:
+      - waiting for locator('button[type="submit"]')
+
+
+      17 |
+      18 |     // Submit the form
+    > 19 |     await page.click('button[type="submit"]');
+         |                ^
+      20 |
+      21 |     // Check for validation messages
+      22 |     await expect(page.locator('.message-error')).toHaveText('First name is required.');
+        at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_cadastro_campos_obrigatorios.spec.ts:19:16
+
+    Error Context: ../../../../../tmp/avaliacao-prompts-playwright/suite_cadastro_campos_obri-7f462-n-messages-for-empty-fields/error-context.md
+
+
+[6/20] ../teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_cadastro_confirmacao_senha.spec.ts:4:7 › Validation of mismatched registration passwords › should inform when password and confirmation password do not match
+  6) ../teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_cadastro_confirmacao_senha.spec.ts:4:7 › Validation of mismatched registration passwords › should inform when password and confirmation password do not match 
+
+    TimeoutError: page.fill: Timeout 10000ms exceeded.
+    Call log:
+      - waiting for locator('#firstName')
+
+
+       7 |
+       8 |     // Fill in First name and Last name with valid data
+    >  9 |     await page.fill('#firstName', 'John');
+         |                ^
+      10 |     await page.fill('#lastName', 'Doe');
+      11 |
+      12 |     // Fill in Email with a unique address generated for this execution
+        at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_cadastro_confirmacao_senha.spec.ts:9:16
+
+    Error Context: ../../../../../tmp/avaliacao-prompts-playwright/suite_cadastro_confirmacao-3bc51-ation-password-do-not-match/error-context.md
+
+
+[7/20] ../teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_cadastro_senha_curta.spec.ts:4:7 › Short registration password validation › should prevent registration with short password
+  7) ../teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_cadastro_senha_curta.spec.ts:4:7 › Short registration password validation › should prevent registration with short password 
+
+    TimeoutError: page.fill: Timeout 10000ms exceeded.
+    Call log:
+      - waiting for locator('#firstName')
+
+
+       7 |
+       8 |     // Fill in First name and Last name with valid data
+    >  9 |     await page.fill('#firstName', 'John');
+         |                ^
+      10 |     await page.fill('#lastName', 'Doe');
+      11 |
+      12 |     // Fill in Email with a unique address generated for this execution
+        at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_cadastro_senha_curta.spec.ts:9:16
+
+    Error Context: ../../../../../tmp/avaliacao-prompts-playwright/suite_cadastro_senha_curta-3c45c-tration-with-short-password/error-context.md
+
+
+[8/20] ../teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_carrinho_inicialmente_vazio.spec.ts:4:7 › Viewing an empty shopping cart › should display the shopping cart page with zero items and an empty message
+  8) ../teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_carrinho_inicialmente_vazio.spec.ts:4:7 › Viewing an empty shopping cart › should display the shopping cart page with zero items and an empty message 
+
+    TimeoutError: page.textContent: Timeout 10000ms exceeded.
+    Call log:
+      - waiting for locator('.item-count')
+
+
+       7 |
+       8 |     // Check if the item count is displayed as zero
+    >  9 |     const itemCount = await page.textContent('.item-count');
+         |                                  ^
+      10 |     expect(itemCount).toBe('0');
+      11 |
+      12 |     // Check if the empty cart message is displayed
+        at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_carrinho_inicialmente_vazio.spec.ts:9:34
+
+    Error Context: ../../../../../tmp/avaliacao-prompts-playwright/suite_carrinho_inicialment-cbf1c--items-and-an-empty-message/error-context.md
+
+
+[9/20] ../teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_comparar_produtos.spec.ts:4:7 › Product Comparison › should add two products to compare list and display them on Compare Products page
+  9) ../teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_comparar_produtos.spec.ts:4:7 › Product Comparison › should add two products to compare list and display them on Compare Products page 
+
+    TimeoutError: page.click: Timeout 10000ms exceeded.
+    Call log:
+      - waiting for locator('#addToCompareButton')
+
+
+       6 |     await page.goto('/computing-and-internet');
+       7 |     // Select Add to compare list
+    >  8 |     await page.click('#addToCompareButton');
+         |                ^
+       9 |
+      10 |     // Navigate to Fiction product page
+      11 |     await page.goto('/fiction');
+        at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_comparar_produtos.spec.ts:8:16
+
+    Error Context: ../../../../../tmp/avaliacao-prompts-playwright/suite_comparar_produtos-Pr-8e467-em-on-Compare-Products-page/error-context.md
+
+
+[10/20] ../teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_enquete_sem_resposta.spec.ts:4:7 › Community Poll Voting › should prevent voting without selecting an answer
+  10) ../teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_enquete_sem_resposta.spec.ts:4:7 › Community Poll Voting › should prevent voting without selecting an answer 
+
+    TimeoutError: page.click: Timeout 10000ms exceeded.
+    Call log:
+      - waiting for locator('text="Community polls"')
+
+
+       7 |
+       8 |     // Navigate to the Community poll titled "Do you like nopCommerce?"
+    >  9 |     await page.click('text="Community polls"');
+         |                ^
+      10 |     await page.click('text="Do you like nopCommerce?"');
+      11 |
+      12 |     // Attempt to vote without selecting an answer
+        at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_enquete_sem_resposta.spec.ts:9:16
+
+    Error Context: ../../../../../tmp/avaliacao-prompts-playwright/suite_enquete_sem_resposta-793a9-without-selecting-an-answer/error-context.md
+
+
+[11/20] ../teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_exibir_quatro_livros.spec.ts:8:7 › Books Category Display Control › displays no more than four product items when 4 is selected in the Display control
+  11) ../teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_exibir_quatro_livros.spec.ts:8:7 › Books Category Display Control › displays no more than four product items when 4 is selected in the Display control 
+
+    TimeoutError: locator.selectOption: Timeout 10000ms exceeded.
+    Call log:
+      - waiting for locator('#display-control')
+
+
+       8 |   test('displays no more than four product items when 4 is selected in the Display control', async ({ page }) => {
+       9 |     // Select 4 in the Display control
+    > 10 |     await page.locator('#display-control').selectOption('4');
+         |                                            ^
+      11 |
+      12 |     // Wait for the products to update
+      13 |     await page.waitForSelector('.product-item');
+        at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_exibir_quatro_livros.spec.ts:10:44
+
+    Error Context: ../../../../../tmp/avaliacao-prompts-playwright/suite_exibir_quatro_livros-6ef10-cted-in-the-Display-control/error-context.md
+
+
+[12/20] ../teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_filtrar_livros_abaixo_25.spec.ts:4:7 › Filtering books by price › should keep the Books category visible and display only products under 25.00
+  12) ../teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_filtrar_livros_abaixo_25.spec.ts:4:7 › Filtering books by price › should keep the Books category visible and display only products under 25.00 
+
+    TimeoutError: page.textContent: Timeout 10000ms exceeded.
+    Call log:
+      - waiting for locator('.product-price')
+
+
+      13 |
+      14 |     // Verify that only products under 25.00 are displayed
+    > 15 |     const productPrices = await page.textContent('.product-price');
+         |                                      ^
+      16 |     expect(productPrices).not.toContain('Over 25.00');
+      17 |   });
+      18 | });
+        at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_filtrar_livros_abaixo_25.spec.ts:15:38
+
+    Error Context: ../../../../../tmp/avaliacao-prompts-playwright/suite_filtrar_livros_abaix-f8ce0-y-only-products-under-25-00/error-context.md
+
+
+[13/20] ../teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_navegar_cartoes_presente.spec.ts:4:7 › Gift Cards Category › displays the Gift Cards category page with breadcrumb and products
+  13) ../teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_navegar_cartoes_presente.spec.ts:4:7 › Gift Cards Category › displays the Gift Cards category page with breadcrumb and products 
+
+    Error: expect(locator).toContainText(expected) failed
+
+    Locator: locator('.breadcrumb')
+    Timeout: 7000ms
+    - Expected substring  - 1
+    + Received string     + 9
+
+    - Home > Gift Cards
+    +
+    +         
+    +             Home
+    +                 / 
+    +                 
+    +                         Gift Cards
+    +                 
+    +         
+    +     
+
+    Call log:
+      - Expect "toContainText" with timeout 7000ms
+      - waiting for locator('.breadcrumb')
+        18 × locator resolved to <div class="breadcrumb">…</div>
+           - unexpected value "
+            
+                Home
+                    / 
+                    
+                            Gift Cards
+                    
+            
+        "
+
+
+      11 |     // System displays the Gift Cards category page, its breadcrumb, and the available gift card products
+      12 |     await expect(page.locator('h1')).toHaveText('Gift Cards');
+    > 13 |     await expect(page.locator('.breadcrumb')).toContainText('Home > Gift Cards');
+         |                                               ^
+      14 |     await expect(page.locator('.product-list-item')).toBeVisible();
+      15 |   });
+      16 | });
+        at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_navegar_cartoes_presente.spec.ts:13:47
+
+    Error Context: ../../../../../tmp/avaliacao-prompts-playwright/suite_navegar_cartoes_pres-ab661-ith-breadcrumb-and-products/error-context.md
+
+
+[14/20] ../teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_navegar_categoria_livros.spec.ts:4:7 › Books Category Test › should display the Books category page with correct breadcrumb and products
+  14) ../teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_navegar_categoria_livros.spec.ts:4:7 › Books Category Test › should display the Books category page with correct breadcrumb and products 
+
+    Error: expect(locator).toContainText(expected) failed
+
+    Locator: locator('.breadcrumb')
+    Timeout: 7000ms
+    - Expected substring  - 1
+    + Received string     + 9
+
+    - Home > Books
+    +
+    +         
+    +             Home
+    +                 / 
+    +                 
+    +                         Books
+    +                 
+    +         
+    +     
+
+    Call log:
+      - Expect "toContainText" with timeout 7000ms
+      - waiting for locator('.breadcrumb')
+        18 × locator resolved to <div class="breadcrumb">…</div>
+           - unexpected value "
+            
+                Home
+                    / 
+                    
+                            Books
+                    
+            
+        "
+
+
+      10 |
+      11 |     // System displays the Books category page, its breadcrumb, and the available book products
+    > 12 |     await expect(page.locator('.breadcrumb')).toContainText('Home > Books');
+         |                                               ^
+      13 |     await expect(page.locator('.product-list-item')).toHaveCount(3);
+      14 |     await expect(page.locator('.product-name:has-text("Computing and Internet")')).toBeVisible();
+      15 |     await expect(page.locator('.product-name:has-text("Fiction")')).toBeVisible();
+        at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_navegar_categoria_livros.spec.ts:12:47
+
+    Error Context: ../../../../../tmp/avaliacao-prompts-playwright/suite_navegar_categoria_li-0408a-ect-breadcrumb-and-products/error-context.md
+
+
+[15/20] ../teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_navegar_sobre_nos.spec.ts:4:7 › Institutional Information Page › should display the About us page and its corresponding heading
+  15) ../teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_navegar_sobre_nos.spec.ts:4:7 › Institutional Information Page › should display the About us page and its corresponding heading 
+
+    TimeoutError: page.click: Timeout 10000ms exceeded.
+    Call log:
+      - waiting for locator('footer a:has-text("Information")')
+
+
+       7 |
+       8 |     // Select About us in the Information section of the footer
+    >  9 |     await page.click('footer a:has-text("Information")');
+         |                ^
+      10 |     await page.click('a:has-text("About us")');
+      11 |
+      12 |     // Verify that the About us page is displayed
+        at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_navegar_sobre_nos.spec.ts:9:16
+
+    Error Context: ../../../../../tmp/avaliacao-prompts-playwright/suite_navegar_sobre_nos-In-eb6a3-d-its-corresponding-heading/error-context.md
+
+
+[16/20] ../teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_ordenar_livros_por_preco.spec.ts:4:7 › Sorting books by ascending price › should sort books by ascending price
+  16) ../teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_ordenar_livros_por_preco.spec.ts:4:7 › Sorting books by ascending price › should sort books by ascending price 
+
+    TimeoutError: page.click: Timeout 10000ms exceeded.
+    Call log:
+      - waiting for locator('text=Price: Low to High')
+        - locator resolved to <option value="https://demowebshop.tricentis.com/books?orderby=10">Price: Low to High</option>
+      - attempting click action
+        2 × waiting for element to be visible, enabled and stable
+          - element is not visible
+        - retrying click action
+        - waiting 20ms
+        2 × waiting for element to be visible, enabled and stable
+          - element is not visible
+        - retrying click action
+          - waiting 100ms
+        19 × waiting for element to be visible, enabled and stable
+           - element is not visible
+         - retrying click action
+           - waiting 500ms
+
+
+       8 |     // Select Price: Low to High in the Sort by control
+       9 |     await page.click('text=Sort by');
+    > 10 |     await page.click('text=Price: Low to High');
+         |                ^
+      11 |
+      12 |     // The system keeps the Books category visible and displays the products in nondecreasing order according to their current sale prices
+      13 |     const productPrices = await page.locator('.product-price').allTextContents();
+        at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_ordenar_livros_por_preco.spec.ts:10:16
+
+    Error Context: ../../../../../tmp/avaliacao-prompts-playwright/suite_ordenar_livros_por_p-9bc33-rt-books-by-ascending-price/error-context.md
+
+
+[17/20] ../teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_persistencia_carrinho_apos_login.spec.ts:14:7 › Persistence of an authenticated user's cart › should persist the cart across sessions
+  17) ../teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_persistencia_carrinho_apos_login.spec.ts:14:7 › Persistence of an authenticated user's cart › should persist the cart across sessions 
+
+    TimeoutError: page.fill: Timeout 10000ms exceeded.
+    Call log:
+      - waiting for locator('#username')
+
+
+      15 |     // Authenticate with valid credentials
+      16 |     await page.goto('https://example.com/login');
+    > 17 |     await page.fill('#username', 'testuser');
+         |                ^
+      18 |     await page.fill('#password', 'testpass');
+      19 |     await page.click('#login-button');
+      20 |
+        at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_persistencia_carrinho_apos_login.spec.ts:17:16
+
+    Error Context: ../../../../../tmp/avaliacao-prompts-playwright/suite_persistencia_carrinh-5e532-st-the-cart-across-sessions/error-context.md
+
+
+[18/20] ../teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_produtos_visualizados_recentemente.spec.ts:4:7 › Product History › displays recently viewed products in the correct order
+  18) ../teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_produtos_visualizados_recentemente.spec.ts:4:7 › Product History › displays recently viewed products in the correct order 
+
+    TimeoutError: page.click: Timeout 10000ms exceeded.
+    Call log:
+      - waiting for locator('text=Customer Service')
+
+
+      14 |
+      15 |     // Select Recently viewed products in the Customer service section
+    > 16 |     await newPage.click('text=Customer Service');
+         |                   ^
+      17 |     await newPage.click('text=Recently Viewed Products');
+      18 |
+      19 |     // Check if both products are displayed
+        at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_produtos_visualizados_recentemente.spec.ts:16:19
+
+    Error Context: ../../../../../tmp/avaliacao-prompts-playwright/suite_produtos_visualizado-6df6c-oducts-in-the-correct-order/error-context.md
+
+
+[19/20] ../teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_visualizacao_livros_em_lista.spec.ts:4:7 › Changing the book catalog view › should switch to list view when user selects List in the View as control
+  19) ../teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_visualizacao_livros_em_lista.spec.ts:4:7 › Changing the book catalog view › should switch to list view when user selects List in the View as control 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('.grid-view')
+    Expected: visible
+    Timeout: 7000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 7000ms
+      - waiting for locator('.grid-view')
+
+
+       8 |     // Verify initial Grid view
+       9 |     const gridView = page.locator('.grid-view');
+    > 10 |     expect(gridView).toBeVisible();
+         |                      ^
+      11 |
+      12 |     // Select List view
+      13 |     await page.click('button.view-as-list');
+        at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_visualizacao_livros_em_lista.spec.ts:10:22
+
+    Error: page.click: Test ended.
+    Call log:
+      - waiting for locator('button.view-as-list')
+
+
+      11 |
+      12 |     // Select List view
+    > 13 |     await page.click('button.view-as-list');
+         |                ^
+      14 |
+      15 |     // Verify List view is displayed
+      16 |     const listView = page.locator('.list-view');
+        at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_visualizacao_livros_em_lista.spec.ts:13:16
+
+    Error Context: ../../../../../tmp/avaliacao-prompts-playwright/suite_visualizacao_livros_-11166-List-in-the-View-as-control/error-context.md
+
+
+[20/20] ../teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/user_registration_book_purchase.spec.ts:4:7 › Book purchase flow (registration + cart) › should register a new user, add a book to the cart, and verify the cart
+  20) ../teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/user_registration_book_purchase.spec.ts:4:7 › Book purchase flow (registration + cart) › should register a new user, add a book to the cart, and verify the cart 
+
+    TimeoutError: page.click: Timeout 10000ms exceeded.
+    Call log:
+      - waiting for locator('button[type="submit"]')
+
+
+      25 |
+      26 |     // Click on the Register button to complete the registration
+    > 27 |     await page.click('button[type="submit"]');
+         |                ^
+      28 |
+      29 |     // Verify that the user is logged in and redirected to the home page
+      30 |     expect(page.url()).toContain('/customer/account');
+        at /home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/user_registration_book_purchase.spec.ts:27:16
+
+    Error Context: ../../../../../tmp/avaliacao-prompts-playwright/user_registration_book_pur-f7865-he-cart-and-verify-the-cart/error-context.md
+
+
+  20 failed
+    ../teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/fluxo_computadores_desktops.spec.ts:4:7 › Digital Downloads Page › should display the digital downloads page 
+    ../teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_adicionar_dois_produtos_carrinho.spec.ts:4:7 › Cart Test › Adding two different products to the cart 
+    ../teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_atualizar_quantidade_carrinho.spec.ts:4:7 › Updating a product quantity in the cart › should update the quantity of Computing and Internet to two and keep it in the cart 
+    ../teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_busca_sem_resultados.spec.ts:4:7 › Search for nonexistent product › should display no results message when searching for a nonexistent product 
+    ../teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_cadastro_campos_obrigatorios.spec.ts:4:7 › Validation of required registration fields › should display validation messages for empty fields 
+    ../teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_cadastro_confirmacao_senha.spec.ts:4:7 › Validation of mismatched registration passwords › should inform when password and confirmation password do not match 
+    ../teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_cadastro_senha_curta.spec.ts:4:7 › Short registration password validation › should prevent registration with short password 
+    ../teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_carrinho_inicialmente_vazio.spec.ts:4:7 › Viewing an empty shopping cart › should display the shopping cart page with zero items and an empty message 
+    ../teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_comparar_produtos.spec.ts:4:7 › Product Comparison › should add two products to compare list and display them on Compare Products page 
+    ../teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_enquete_sem_resposta.spec.ts:4:7 › Community Poll Voting › should prevent voting without selecting an answer 
+    ../teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_exibir_quatro_livros.spec.ts:8:7 › Books Category Display Control › displays no more than four product items when 4 is selected in the Display control 
+    ../teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_filtrar_livros_abaixo_25.spec.ts:4:7 › Filtering books by price › should keep the Books category visible and display only products under 25.00 
+    ../teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_navegar_cartoes_presente.spec.ts:4:7 › Gift Cards Category › displays the Gift Cards category page with breadcrumb and products 
+    ../teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_navegar_categoria_livros.spec.ts:4:7 › Books Category Test › should display the Books category page with correct breadcrumb and products 
+    ../teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_navegar_sobre_nos.spec.ts:4:7 › Institutional Information Page › should display the About us page and its corresponding heading 
+    ../teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_ordenar_livros_por_preco.spec.ts:4:7 › Sorting books by ascending price › should sort books by ascending price 
+    ../teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_persistencia_carrinho_apos_login.spec.ts:14:7 › Persistence of an authenticated user's cart › should persist the cart across sessions 
+    ../teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_produtos_visualizados_recentemente.spec.ts:4:7 › Product History › displays recently viewed products in the correct order 
+    ../teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/suite_visualizacao_livros_em_lista.spec.ts:4:7 › Changing the book catalog view › should switch to list view when user selects List in the View as control 
+    ../teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01/user_registration_book_purchase.spec.ts:4:7 › Book purchase flow (registration + cart) › should register a new user, add a book to the cart, and verify the cart 

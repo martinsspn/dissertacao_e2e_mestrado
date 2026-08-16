@@ -1,0 +1,3 @@
+Listing tests:
+  suite_busca_blue_jeans.spec.ts:4:7 › Searching and opening a product › should display the details page for Blue Jeans
+Total: 1 test in 1 file

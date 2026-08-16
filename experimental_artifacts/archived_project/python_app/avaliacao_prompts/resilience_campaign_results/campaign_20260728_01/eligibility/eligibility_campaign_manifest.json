@@ -1,0 +1,87 @@
+{
+  "schema_version": 1,
+  "campaign_manifest_sha256": "88e5019719ad6e9f3f245414efe9ffc9494dc7bade0254a1fa09a73ec4aabea4",
+  "campaign_files_aggregate_sha256": "19df85961205c9db61581a42499ed5b8b43b72600e6be7df79bf4a573dd82cab",
+  "runner_sha256": "13c70b715a9a9df8064fe5c3e22aba9203fb1806f0077b8c4887fe7ac720ccf5",
+  "account_helper_sha256": "e4a0e1a316cb6ceea3d9bdaf84150861014d8ea9881e4ca6d11bd4a4331a114d",
+  "repetitions": 3,
+  "account": {
+    "created_for_this_campaign": true,
+    "credential_values_recorded_in_results": false,
+    "credential_file_outside_repository": "/home/martinsspn/.config/demowebshop/resilience_campaign_20260728_01.json",
+    "credential_file_mode": "0o600"
+  },
+  "configured_environment_names": [
+    "DEMO_WEB_SHOP_EMAIL",
+    "DEMO_WEB_SHOP_FIRST_NAME",
+    "DEMO_WEB_SHOP_INVALID_PASSWORD",
+    "DEMO_WEB_SHOP_LAST_NAME",
+    "DEMO_WEB_SHOP_PASSWORD",
+    "DEMO_WEB_SHOP_USERNAME",
+    "E2E_EMAIL",
+    "E2E_PASSWORD",
+    "E2E_USERNAME",
+    "TEST_EMAIL",
+    "TEST_PASSWORD",
+    "TEST_USERNAME"
+  ],
+  "records": [
+    {
+      "track_id": "P",
+      "model_id": "gemini-3.6-flash",
+      "execution_manifest_sha256": "dc6b70efc6862131e35555e949dc2ccf8d3ff95e2712542c6cb7f9c6a6348ee2",
+      "result": "track_P/gemini-3.6-flash/eligibility_results.json",
+      "result_file_sha256": "a5de1f7c6a0acab0346fe355babcf1843f6e4ad053a050f553a3312c71f4db89",
+      "eligibility_results_sha256": "f245d4e06b1169d14ebd70a286656c0013586d0b72e86a191833df92602a7bb0",
+      "eligible_scenarios": [
+        "suite_cadastro_campos_obrigatorios",
+        "suite_cadastro_confirmacao_senha",
+        "suite_navegar_categoria_livros"
+      ],
+      "ineligible_scenarios": []
+    },
+    {
+      "track_id": "P",
+      "model_id": "gpt-5.6-sol",
+      "execution_manifest_sha256": "aba697a1735b726e0a74cf37c18a9c81be4a16f0391ba982f351c172613e7c72",
+      "result": "track_P/gpt-5.6-sol/eligibility_results.json",
+      "result_file_sha256": "d063ca2208c31da860faa3fd0cd7c714f5f11358ebfa505b8dd327aea989924f",
+      "eligibility_results_sha256": "1f4d3678ebfac116405365c4b1c1512f59b7d1a5808c2b9d4432195811ab3342",
+      "eligible_scenarios": [
+        "suite_busca_blue_jeans",
+        "suite_detalhes_fiction",
+        "suite_login_invalido",
+        "suite_login_valido"
+      ],
+      "ineligible_scenarios": [
+        "suite_limpar_carrinho"
+      ]
+    },
+    {
+      "track_id": "R",
+      "model_id": "gemini-3.6-flash",
+      "execution_manifest_sha256": "8192543250190412cccf8d599a0aaa103553d7723a4c889632eab5207015a313",
+      "result": "track_R/gemini-3.6-flash/eligibility_results.json",
+      "result_file_sha256": "e1e18a3a96007fdf75aa58accfbfa572550930b0cb7762fa966df9a0399b8617",
+      "eligibility_results_sha256": "3834a2ef6286cc6e296b2e4b5acc0fa4e0161087b9d534ec2105dd5ab3606c8b",
+      "eligible_scenarios": [
+        "fluxo_computadores_desktops",
+        "suite_navegar_sobre_nos"
+      ],
+      "ineligible_scenarios": []
+    },
+    {
+      "track_id": "R",
+      "model_id": "gpt-5.6-sol",
+      "execution_manifest_sha256": "a13543a25847bf67b0a9e81b7857d427a4cf3f3924015ab650ca8645ba44c152",
+      "result": "track_R/gpt-5.6-sol/eligibility_results.json",
+      "result_file_sha256": "ec7eb3dfb625c7f223d5de89235f92bc984bf9e76d598be39ef311ad74f4ff80",
+      "eligibility_results_sha256": "8e768ed93338d6cceab18b7dde923c73e88204124522da5634b216361bbf56d4",
+      "eligible_scenarios": [
+        "suite_adicionar_carrinho"
+      ],
+      "ineligible_scenarios": []
+    }
+  ],
+  "eligibility_campaign_sha256": "8b76e6a254d0e4667cee6b2877e10ae411858dba0bcd2b237fde750afc585b82"
+}

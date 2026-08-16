@@ -1,0 +1,3 @@
+Listing tests:
+  suite_navegar_sobre_nos.spec.ts:4:7 › Suite Navegar Sobre Nos › Deve navegar para a pagina About us a partir do rodape
+Total: 1 test in 1 file

@@ -1,0 +1,154 @@
+{
+  "config": {
+    "argv": [
+      "/usr/bin/node",
+      "/home/martinsspn/dissertacao_e2e_semantico/node_modules/.bin/playwright",
+      "test",
+      "suite_cadastro_campos_obrigatorios.spec.ts",
+      "--config=/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/playwright.config.ts",
+      "--reporter=json"
+    ],
+    "configFile": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/playwright.config.ts",
+    "rootDir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/repair_runs/qwen25coder_repair_20260728_01/qwen2-5-coder-7b/qwen_new_20/structured_context/suite_cadastro_campos_obrigatorios",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/tmp/avaliacao-prompts-playwright",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/repair_runs/qwen25coder_repair_20260728_01/qwen2-5-coder-7b/qwen_new_20/structured_context/suite_cadastro_campos_obrigatorios",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 20000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.61.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "suite_cadastro_campos_obrigatorios.spec.ts",
+      "file": "suite_cadastro_campos_obrigatorios.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Suite Cadastro Campos Obrigatorios",
+          "file": "suite_cadastro_campos_obrigatorios.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "The user accesses the Register page of the Demo Web Shop and submits the form with empty fields",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 20000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 4407,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText('Password is required')\nExpected: visible\nError: strict mode violation: getByText('Password is required') resolved to 2 elements:\n    1) <span class=\"\" for=\"Password\">Password is required.</span> aka getByText('Password is required.').first()\n    2) <span class=\"\" for=\"ConfirmPassword\">Password is required.</span> aka getByText('Password is required.').nth(1)\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 7000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Password is required')\u001b[22m\n",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText('Password is required')\nExpected: visible\nError: strict mode violation: getByText('Password is required') resolved to 2 elements:\n    1) <span class=\"\" for=\"Password\">Password is required.</span> aka getByText('Password is required.').first()\n    2) <span class=\"\" for=\"ConfirmPassword\">Password is required.</span> aka getByText('Password is required.').nth(1)\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 7000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Password is required')\u001b[22m\n\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/repair_runs/qwen25coder_repair_20260728_01/qwen2-5-coder-7b/qwen_new_20/structured_context/suite_cadastro_campos_obrigatorios/suite_cadastro_campos_obrigatorios.spec.ts:24:58",
+                        "location": {
+                          "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/repair_runs/qwen25coder_repair_20260728_01/qwen2-5-coder-7b/qwen_new_20/structured_context/suite_cadastro_campos_obrigatorios/suite_cadastro_campos_obrigatorios.spec.ts",
+                          "column": 58,
+                          "line": 24
+                        },
+                        "snippet": "  22 |     await expect(page.getByText(\"Last name is required\")).toBeVisible();\n  23 |     await expect(page.getByText(\"Email is required\")).toBeVisible();\n> 24 |     await expect(page.getByText(\"Password is required\")).toBeVisible();\n     |                                                          ^\n  25 |     await expect(page.getByText(\"Confirm password is required\")).toBeVisible();\n  26 |   });\n  27 | });"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/repair_runs/qwen25coder_repair_20260728_01/qwen2-5-coder-7b/qwen_new_20/structured_context/suite_cadastro_campos_obrigatorios/suite_cadastro_campos_obrigatorios.spec.ts",
+                            "column": 58,
+                            "line": 24
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText('Password is required')\nExpected: visible\nError: strict mode violation: getByText('Password is required') resolved to 2 elements:\n    1) <span class=\"\" for=\"Password\">Password is required.</span> aka getByText('Password is required.').first()\n    2) <span class=\"\" for=\"ConfirmPassword\">Password is required.</span> aka getByText('Password is required.').nth(1)\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 7000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Password is required')\u001b[22m\n\n\n  22 |     await expect(page.getByText(\"Last name is required\")).toBeVisible();\n  23 |     await expect(page.getByText(\"Email is required\")).toBeVisible();\n> 24 |     await expect(page.getByText(\"Password is required\")).toBeVisible();\n     |                                                          ^\n  25 |     await expect(page.getByText(\"Confirm password is required\")).toBeVisible();\n  26 |   });\n  27 | });\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/repair_runs/qwen25coder_repair_20260728_01/qwen2-5-coder-7b/qwen_new_20/structured_context/suite_cadastro_campos_obrigatorios/suite_cadastro_campos_obrigatorios.spec.ts:24:58"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-28T15:17:39.317Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/tmp/avaliacao-prompts-playwright/suite_cadastro_campos_obri-24890--the-form-with-empty-fields/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/repair_runs/qwen25coder_repair_20260728_01/qwen2-5-coder-7b/qwen_new_20/structured_context/suite_cadastro_campos_obrigatorios/suite_cadastro_campos_obrigatorios.spec.ts",
+                        "column": 58,
+                        "line": 24
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "aaa9aa6f840f1d71d364-21128deb647251fac1cb",
+              "file": "suite_cadastro_campos_obrigatorios.spec.ts",
+              "line": 4,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-07-28T15:17:38.274Z",
+    "duration": 5913.724,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

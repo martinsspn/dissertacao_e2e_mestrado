@@ -1,0 +1,1303 @@
+{
+  "schema_version": 2,
+  "execution_manifest_sha256": "9a50ff72b76673470fc52f6efc9bf63d8710aef446e9127baadd8730d0162c7a",
+  "mutation_plan_sha256": "054db1613694d3f96ce00a85fc77e01126e32b3e58225e63652864c038e81979",
+  "track_id": "R",
+  "model_id": "gpt-5.6-sol",
+  "allowlist_sha256": "6a18fbc23e59571b52646dd8e1359ae2239193d67698942964baea32e0b63f93",
+  "semantic_review_sha256": "800a6803b8ee13b1954c67a6a4eafa54a76be6cd353b82f26d92ea0702745bf8",
+  "eligibility_results": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/eligibility/track_R/gpt-5.6-sol/eligibility_results.json",
+  "eligibility_results_sha256": "8e768ed93338d6cceab18b7dde923c73e88204124522da5634b216361bbf56d4",
+  "runtime": {
+    "node": "v18.19.1",
+    "playwright": "Version 1.61.1",
+    "chromium": "149.0.7827.55"
+  },
+  "configured_environment_names": [
+    "BASE_URL",
+    "DEMO_WEB_SHOP_EMAIL",
+    "DEMO_WEB_SHOP_PASSWORD",
+    "E2E_EMAIL",
+    "E2E_PASSWORD",
+    "PROMPT_E2E_BASE_URL",
+    "TEST_EMAIL",
+    "TEST_PASSWORD"
+  ],
+  "repetitions": 3,
+  "selection": {
+    "mode": "deterministic_neutral_sample",
+    "mutations_per_scenario": 2,
+    "included_strata": [
+      "E1",
+      "E2"
+    ],
+    "rule": "one_E1_then_one_E2_when_available_then_hash_ranked_neutral_fill",
+    "selected_mutation_ids": [
+      "mutation-defa59a332c6148b",
+      "mutation-766d2310c5144a4d"
+    ],
+    "requested_scenarios": []
+  },
+  "eligible_scenarios": [
+    "suite_adicionar_carrinho"
+  ],
+  "mutation_results": [
+    {
+      "mutation_id": "mutation-defa59a332c6148b",
+      "scenario_id": "suite_adicionar_carrinho",
+      "stratum": "E1",
+      "operator": "insert_noninteractive_sibling_before",
+      "control_valid": true,
+      "paired_applicable": true,
+      "invalid_reasons": [],
+      "control_runs": [
+        {
+          "repetition": 1,
+          "original": {
+            "status": "passed",
+            "mutation_events": [
+              {
+                "mutationId": "mutation-defa59a332c6148b",
+                "targetId": "target-dc71d044e20dec79",
+                "url": "https://demowebshop.tricentis.com/",
+                "status": "marked",
+                "detail": ""
+              },
+              {
+                "mutationId": "mutation-defa59a332c6148b",
+                "targetId": "target-dc71d044e20dec79",
+                "url": "https://demowebshop.tricentis.com/",
+                "status": "interacted",
+                "detail": "click"
+              }
+            ],
+            "control_observation": {
+              "supported": true,
+              "pathname": "/search",
+              "search": "?q=Blue+Jeans",
+              "heading": [
+                "Search"
+              ],
+              "notifications": [],
+              "targetPresent": false,
+              "targetValueChanged": null,
+              "pageErrors": [],
+              "failedResponses": []
+            },
+            "returncode": 0,
+            "duration_seconds": 8.645,
+            "error_type": "",
+            "error_message_excerpt": "",
+            "artifacts_dir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/mutations/track_R/gpt-5.6-sol/controls/mutation-defa59a332c6148b-original-r1.artifacts"
+          },
+          "mutated": {
+            "status": "passed",
+            "mutation_events": [
+              {
+                "mutationId": "mutation-defa59a332c6148b",
+                "targetId": "target-dc71d044e20dec79",
+                "url": "https://demowebshop.tricentis.com/",
+                "status": "applied",
+                "detail": ""
+              },
+              {
+                "mutationId": "mutation-defa59a332c6148b",
+                "targetId": "target-dc71d044e20dec79",
+                "url": "https://demowebshop.tricentis.com/",
+                "status": "interacted",
+                "detail": "click"
+              }
+            ],
+            "control_observation": {
+              "supported": true,
+              "pathname": "/search",
+              "search": "?q=Blue+Jeans",
+              "heading": [
+                "Search"
+              ],
+              "notifications": [],
+              "targetPresent": false,
+              "targetValueChanged": null,
+              "pageErrors": [],
+              "failedResponses": []
+            },
+            "returncode": 0,
+            "duration_seconds": 8.819,
+            "error_type": "",
+            "error_message_excerpt": "",
+            "artifacts_dir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/mutations/track_R/gpt-5.6-sol/controls/mutation-defa59a332c6148b-mutated-r1.artifacts"
+          },
+          "invalid_reasons": []
+        },
+        {
+          "repetition": 2,
+          "original": {
+            "status": "passed",
+            "mutation_events": [
+              {
+                "mutationId": "mutation-defa59a332c6148b",
+                "targetId": "target-dc71d044e20dec79",
+                "url": "https://demowebshop.tricentis.com/",
+                "status": "marked",
+                "detail": ""
+              },
+              {
+                "mutationId": "mutation-defa59a332c6148b",
+                "targetId": "target-dc71d044e20dec79",
+                "url": "https://demowebshop.tricentis.com/",
+                "status": "interacted",
+                "detail": "click"
+              }
+            ],
+            "control_observation": {
+              "supported": true,
+              "pathname": "/search",
+              "search": "?q=Blue+Jeans",
+              "heading": [
+                "Search"
+              ],
+              "notifications": [],
+              "targetPresent": false,
+              "targetValueChanged": null,
+              "pageErrors": [],
+              "failedResponses": []
+            },
+            "returncode": 0,
+            "duration_seconds": 8.916,
+            "error_type": "",
+            "error_message_excerpt": "",
+            "artifacts_dir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/mutations/track_R/gpt-5.6-sol/controls/mutation-defa59a332c6148b-original-r2.artifacts"
+          },
+          "mutated": {
+            "status": "passed",
+            "mutation_events": [
+              {
+                "mutationId": "mutation-defa59a332c6148b",
+                "targetId": "target-dc71d044e20dec79",
+                "url": "https://demowebshop.tricentis.com/",
+                "status": "applied",
+                "detail": ""
+              },
+              {
+                "mutationId": "mutation-defa59a332c6148b",
+                "targetId": "target-dc71d044e20dec79",
+                "url": "https://demowebshop.tricentis.com/",
+                "status": "interacted",
+                "detail": "click"
+              }
+            ],
+            "control_observation": {
+              "supported": true,
+              "pathname": "/search",
+              "search": "?q=Blue+Jeans",
+              "heading": [
+                "Search"
+              ],
+              "notifications": [],
+              "targetPresent": false,
+              "targetValueChanged": null,
+              "pageErrors": [],
+              "failedResponses": []
+            },
+            "returncode": 0,
+            "duration_seconds": 9.073,
+            "error_type": "",
+            "error_message_excerpt": "",
+            "artifacts_dir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/mutations/track_R/gpt-5.6-sol/controls/mutation-defa59a332c6148b-mutated-r2.artifacts"
+          },
+          "invalid_reasons": []
+        },
+        {
+          "repetition": 3,
+          "original": {
+            "status": "passed",
+            "mutation_events": [
+              {
+                "mutationId": "mutation-defa59a332c6148b",
+                "targetId": "target-dc71d044e20dec79",
+                "url": "https://demowebshop.tricentis.com/",
+                "status": "marked",
+                "detail": ""
+              },
+              {
+                "mutationId": "mutation-defa59a332c6148b",
+                "targetId": "target-dc71d044e20dec79",
+                "url": "https://demowebshop.tricentis.com/",
+                "status": "interacted",
+                "detail": "click"
+              }
+            ],
+            "control_observation": {
+              "supported": true,
+              "pathname": "/search",
+              "search": "?q=Blue+Jeans",
+              "heading": [
+                "Search"
+              ],
+              "notifications": [],
+              "targetPresent": false,
+              "targetValueChanged": null,
+              "pageErrors": [],
+              "failedResponses": []
+            },
+            "returncode": 0,
+            "duration_seconds": 8.32,
+            "error_type": "",
+            "error_message_excerpt": "",
+            "artifacts_dir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/mutations/track_R/gpt-5.6-sol/controls/mutation-defa59a332c6148b-original-r3.artifacts"
+          },
+          "mutated": {
+            "status": "passed",
+            "mutation_events": [
+              {
+                "mutationId": "mutation-defa59a332c6148b",
+                "targetId": "target-dc71d044e20dec79",
+                "url": "https://demowebshop.tricentis.com/",
+                "status": "applied",
+                "detail": ""
+              },
+              {
+                "mutationId": "mutation-defa59a332c6148b",
+                "targetId": "target-dc71d044e20dec79",
+                "url": "https://demowebshop.tricentis.com/",
+                "status": "interacted",
+                "detail": "click"
+              }
+            ],
+            "control_observation": {
+              "supported": true,
+              "pathname": "/search",
+              "search": "?q=Blue+Jeans",
+              "heading": [
+                "Search"
+              ],
+              "notifications": [],
+              "targetPresent": false,
+              "targetValueChanged": null,
+              "pageErrors": [],
+              "failedResponses": []
+            },
+            "returncode": 0,
+            "duration_seconds": 9.008,
+            "error_type": "",
+            "error_message_excerpt": "",
+            "artifacts_dir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/mutations/track_R/gpt-5.6-sol/controls/mutation-defa59a332c6148b-mutated-r3.artifacts"
+          },
+          "invalid_reasons": []
+        }
+      ],
+      "exposure_runs": [
+        {
+          "repetition": 1,
+          "order": [
+            "B",
+            "A"
+          ],
+          "conditions": {
+            "B": {
+              "status": "passed",
+              "interacted": true,
+              "outcome": {
+                "status": "passed",
+                "mutation_events": [
+                  {
+                    "mutationId": "mutation-defa59a332c6148b",
+                    "targetId": "target-dc71d044e20dec79",
+                    "url": "https://demowebshop.tricentis.com/",
+                    "status": "marked",
+                    "detail": ""
+                  },
+                  {
+                    "mutationId": "mutation-defa59a332c6148b",
+                    "targetId": "target-dc71d044e20dec79",
+                    "url": "https://demowebshop.tricentis.com/",
+                    "status": "interacted",
+                    "detail": "click"
+                  }
+                ],
+                "control_observation": null,
+                "returncode": 0,
+                "duration_seconds": 10.724,
+                "error_type": "",
+                "error_message_excerpt": "",
+                "artifacts_dir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/mutations/track_R/gpt-5.6-sol/exposure/mutation-defa59a332c6148b-B-r1.artifacts"
+              }
+            },
+            "A": {
+              "status": "passed",
+              "interacted": true,
+              "outcome": {
+                "status": "passed",
+                "mutation_events": [
+                  {
+                    "mutationId": "mutation-defa59a332c6148b",
+                    "targetId": "target-dc71d044e20dec79",
+                    "url": "https://demowebshop.tricentis.com/",
+                    "status": "marked",
+                    "detail": ""
+                  },
+                  {
+                    "mutationId": "mutation-defa59a332c6148b",
+                    "targetId": "target-dc71d044e20dec79",
+                    "url": "https://demowebshop.tricentis.com/",
+                    "status": "interacted",
+                    "detail": "click"
+                  }
+                ],
+                "control_observation": null,
+                "returncode": 0,
+                "duration_seconds": 10.552,
+                "error_type": "",
+                "error_message_excerpt": "",
+                "artifacts_dir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/mutations/track_R/gpt-5.6-sol/exposure/mutation-defa59a332c6148b-A-r1.artifacts"
+              }
+            }
+          }
+        },
+        {
+          "repetition": 2,
+          "order": [
+            "B",
+            "A"
+          ],
+          "conditions": {
+            "B": {
+              "status": "passed",
+              "interacted": true,
+              "outcome": {
+                "status": "passed",
+                "mutation_events": [
+                  {
+                    "mutationId": "mutation-defa59a332c6148b",
+                    "targetId": "target-dc71d044e20dec79",
+                    "url": "https://demowebshop.tricentis.com/",
+                    "status": "marked",
+                    "detail": ""
+                  },
+                  {
+                    "mutationId": "mutation-defa59a332c6148b",
+                    "targetId": "target-dc71d044e20dec79",
+                    "url": "https://demowebshop.tricentis.com/",
+                    "status": "interacted",
+                    "detail": "click"
+                  }
+                ],
+                "control_observation": null,
+                "returncode": 0,
+                "duration_seconds": 10.487,
+                "error_type": "",
+                "error_message_excerpt": "",
+                "artifacts_dir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/mutations/track_R/gpt-5.6-sol/exposure/mutation-defa59a332c6148b-B-r2.artifacts"
+              }
+            },
+            "A": {
+              "status": "passed",
+              "interacted": true,
+              "outcome": {
+                "status": "passed",
+                "mutation_events": [
+                  {
+                    "mutationId": "mutation-defa59a332c6148b",
+                    "targetId": "target-dc71d044e20dec79",
+                    "url": "https://demowebshop.tricentis.com/",
+                    "status": "marked",
+                    "detail": ""
+                  },
+                  {
+                    "mutationId": "mutation-defa59a332c6148b",
+                    "targetId": "target-dc71d044e20dec79",
+                    "url": "https://demowebshop.tricentis.com/",
+                    "status": "interacted",
+                    "detail": "click"
+                  }
+                ],
+                "control_observation": null,
+                "returncode": 0,
+                "duration_seconds": 10.478,
+                "error_type": "",
+                "error_message_excerpt": "",
+                "artifacts_dir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/mutations/track_R/gpt-5.6-sol/exposure/mutation-defa59a332c6148b-A-r2.artifacts"
+              }
+            }
+          }
+        },
+        {
+          "repetition": 3,
+          "order": [
+            "B",
+            "A"
+          ],
+          "conditions": {
+            "B": {
+              "status": "passed",
+              "interacted": true,
+              "outcome": {
+                "status": "passed",
+                "mutation_events": [
+                  {
+                    "mutationId": "mutation-defa59a332c6148b",
+                    "targetId": "target-dc71d044e20dec79",
+                    "url": "https://demowebshop.tricentis.com/",
+                    "status": "marked",
+                    "detail": ""
+                  },
+                  {
+                    "mutationId": "mutation-defa59a332c6148b",
+                    "targetId": "target-dc71d044e20dec79",
+                    "url": "https://demowebshop.tricentis.com/",
+                    "status": "interacted",
+                    "detail": "click"
+                  }
+                ],
+                "control_observation": null,
+                "returncode": 0,
+                "duration_seconds": 10.748,
+                "error_type": "",
+                "error_message_excerpt": "",
+                "artifacts_dir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/mutations/track_R/gpt-5.6-sol/exposure/mutation-defa59a332c6148b-B-r3.artifacts"
+              }
+            },
+            "A": {
+              "status": "passed",
+              "interacted": true,
+              "outcome": {
+                "status": "passed",
+                "mutation_events": [
+                  {
+                    "mutationId": "mutation-defa59a332c6148b",
+                    "targetId": "target-dc71d044e20dec79",
+                    "url": "https://demowebshop.tricentis.com/",
+                    "status": "marked",
+                    "detail": ""
+                  },
+                  {
+                    "mutationId": "mutation-defa59a332c6148b",
+                    "targetId": "target-dc71d044e20dec79",
+                    "url": "https://demowebshop.tricentis.com/",
+                    "status": "interacted",
+                    "detail": "click"
+                  }
+                ],
+                "control_observation": null,
+                "returncode": 0,
+                "duration_seconds": 10.645,
+                "error_type": "",
+                "error_message_excerpt": "",
+                "artifacts_dir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/mutations/track_R/gpt-5.6-sol/exposure/mutation-defa59a332c6148b-A-r3.artifacts"
+              }
+            }
+          }
+        }
+      ],
+      "condition_runs": [
+        {
+          "repetition": 1,
+          "order": [
+            "B",
+            "A"
+          ],
+          "outcomes": {
+            "B": "passed_interacted",
+            "A": "passed_interacted"
+          },
+          "details": {
+            "B": {
+              "status": "passed",
+              "mutation_events": [
+                {
+                  "mutationId": "mutation-defa59a332c6148b",
+                  "targetId": "target-dc71d044e20dec79",
+                  "url": "https://demowebshop.tricentis.com/",
+                  "status": "applied",
+                  "detail": ""
+                },
+                {
+                  "mutationId": "mutation-defa59a332c6148b",
+                  "targetId": "target-dc71d044e20dec79",
+                  "url": "https://demowebshop.tricentis.com/",
+                  "status": "interacted",
+                  "detail": "click"
+                }
+              ],
+              "control_observation": null,
+              "returncode": 0,
+              "duration_seconds": 10.618,
+              "error_type": "",
+              "error_message_excerpt": "",
+              "artifacts_dir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/mutations/track_R/gpt-5.6-sol/mutations/mutation-defa59a332c6148b-B-r1.artifacts"
+            },
+            "A": {
+              "status": "passed",
+              "mutation_events": [
+                {
+                  "mutationId": "mutation-defa59a332c6148b",
+                  "targetId": "target-dc71d044e20dec79",
+                  "url": "https://demowebshop.tricentis.com/",
+                  "status": "applied",
+                  "detail": ""
+                },
+                {
+                  "mutationId": "mutation-defa59a332c6148b",
+                  "targetId": "target-dc71d044e20dec79",
+                  "url": "https://demowebshop.tricentis.com/",
+                  "status": "interacted",
+                  "detail": "click"
+                }
+              ],
+              "control_observation": null,
+              "returncode": 0,
+              "duration_seconds": 10.652,
+              "error_type": "",
+              "error_message_excerpt": "",
+              "artifacts_dir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/mutations/track_R/gpt-5.6-sol/mutations/mutation-defa59a332c6148b-A-r1.artifacts"
+            }
+          }
+        },
+        {
+          "repetition": 2,
+          "order": [
+            "B",
+            "A"
+          ],
+          "outcomes": {
+            "B": "passed_interacted",
+            "A": "passed_interacted"
+          },
+          "details": {
+            "B": {
+              "status": "passed",
+              "mutation_events": [
+                {
+                  "mutationId": "mutation-defa59a332c6148b",
+                  "targetId": "target-dc71d044e20dec79",
+                  "url": "https://demowebshop.tricentis.com/",
+                  "status": "applied",
+                  "detail": ""
+                },
+                {
+                  "mutationId": "mutation-defa59a332c6148b",
+                  "targetId": "target-dc71d044e20dec79",
+                  "url": "https://demowebshop.tricentis.com/",
+                  "status": "interacted",
+                  "detail": "click"
+                }
+              ],
+              "control_observation": null,
+              "returncode": 0,
+              "duration_seconds": 10.796,
+              "error_type": "",
+              "error_message_excerpt": "",
+              "artifacts_dir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/mutations/track_R/gpt-5.6-sol/mutations/mutation-defa59a332c6148b-B-r2.artifacts"
+            },
+            "A": {
+              "status": "passed",
+              "mutation_events": [
+                {
+                  "mutationId": "mutation-defa59a332c6148b",
+                  "targetId": "target-dc71d044e20dec79",
+                  "url": "https://demowebshop.tricentis.com/",
+                  "status": "applied",
+                  "detail": ""
+                },
+                {
+                  "mutationId": "mutation-defa59a332c6148b",
+                  "targetId": "target-dc71d044e20dec79",
+                  "url": "https://demowebshop.tricentis.com/",
+                  "status": "interacted",
+                  "detail": "click"
+                }
+              ],
+              "control_observation": null,
+              "returncode": 0,
+              "duration_seconds": 10.958,
+              "error_type": "",
+              "error_message_excerpt": "",
+              "artifacts_dir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/mutations/track_R/gpt-5.6-sol/mutations/mutation-defa59a332c6148b-A-r2.artifacts"
+            }
+          }
+        },
+        {
+          "repetition": 3,
+          "order": [
+            "B",
+            "A"
+          ],
+          "outcomes": {
+            "B": "passed_interacted",
+            "A": "passed_interacted"
+          },
+          "details": {
+            "B": {
+              "status": "passed",
+              "mutation_events": [
+                {
+                  "mutationId": "mutation-defa59a332c6148b",
+                  "targetId": "target-dc71d044e20dec79",
+                  "url": "https://demowebshop.tricentis.com/",
+                  "status": "applied",
+                  "detail": ""
+                },
+                {
+                  "mutationId": "mutation-defa59a332c6148b",
+                  "targetId": "target-dc71d044e20dec79",
+                  "url": "https://demowebshop.tricentis.com/",
+                  "status": "interacted",
+                  "detail": "click"
+                }
+              ],
+              "control_observation": null,
+              "returncode": 0,
+              "duration_seconds": 10.408,
+              "error_type": "",
+              "error_message_excerpt": "",
+              "artifacts_dir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/mutations/track_R/gpt-5.6-sol/mutations/mutation-defa59a332c6148b-B-r3.artifacts"
+            },
+            "A": {
+              "status": "passed",
+              "mutation_events": [
+                {
+                  "mutationId": "mutation-defa59a332c6148b",
+                  "targetId": "target-dc71d044e20dec79",
+                  "url": "https://demowebshop.tricentis.com/",
+                  "status": "applied",
+                  "detail": ""
+                },
+                {
+                  "mutationId": "mutation-defa59a332c6148b",
+                  "targetId": "target-dc71d044e20dec79",
+                  "url": "https://demowebshop.tricentis.com/",
+                  "status": "interacted",
+                  "detail": "click"
+                }
+              ],
+              "control_observation": null,
+              "returncode": 0,
+              "duration_seconds": 11.2,
+              "error_type": "",
+              "error_message_excerpt": "",
+              "artifacts_dir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/mutations/track_R/gpt-5.6-sol/mutations/mutation-defa59a332c6148b-A-r3.artifacts"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "mutation_id": "mutation-766d2310c5144a4d",
+      "scenario_id": "suite_adicionar_carrinho",
+      "stratum": "E2",
+      "operator": "input_submit_to_button",
+      "control_valid": true,
+      "paired_applicable": true,
+      "invalid_reasons": [],
+      "control_runs": [
+        {
+          "repetition": 1,
+          "original": {
+            "status": "passed",
+            "mutation_events": [
+              {
+                "mutationId": "mutation-766d2310c5144a4d",
+                "targetId": "target-dc71d044e20dec79",
+                "url": "https://demowebshop.tricentis.com/",
+                "status": "marked",
+                "detail": ""
+              },
+              {
+                "mutationId": "mutation-766d2310c5144a4d",
+                "targetId": "target-dc71d044e20dec79",
+                "url": "https://demowebshop.tricentis.com/",
+                "status": "interacted",
+                "detail": "click"
+              }
+            ],
+            "control_observation": {
+              "supported": true,
+              "pathname": "/search",
+              "search": "?q=Blue+Jeans",
+              "heading": [
+                "Search"
+              ],
+              "notifications": [],
+              "targetPresent": false,
+              "targetValueChanged": null,
+              "pageErrors": [],
+              "failedResponses": []
+            },
+            "returncode": 0,
+            "duration_seconds": 8.573,
+            "error_type": "",
+            "error_message_excerpt": "",
+            "artifacts_dir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/mutations/track_R/gpt-5.6-sol/controls/mutation-766d2310c5144a4d-original-r1.artifacts"
+          },
+          "mutated": {
+            "status": "passed",
+            "mutation_events": [
+              {
+                "mutationId": "mutation-766d2310c5144a4d",
+                "targetId": "target-dc71d044e20dec79",
+                "url": "https://demowebshop.tricentis.com/",
+                "status": "applied",
+                "detail": ""
+              },
+              {
+                "mutationId": "mutation-766d2310c5144a4d",
+                "targetId": "target-dc71d044e20dec79",
+                "url": "https://demowebshop.tricentis.com/",
+                "status": "interacted",
+                "detail": "click"
+              }
+            ],
+            "control_observation": {
+              "supported": true,
+              "pathname": "/search",
+              "search": "?q=Blue+Jeans",
+              "heading": [
+                "Search"
+              ],
+              "notifications": [],
+              "targetPresent": false,
+              "targetValueChanged": null,
+              "pageErrors": [],
+              "failedResponses": []
+            },
+            "returncode": 0,
+            "duration_seconds": 9.054,
+            "error_type": "",
+            "error_message_excerpt": "",
+            "artifacts_dir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/mutations/track_R/gpt-5.6-sol/controls/mutation-766d2310c5144a4d-mutated-r1.artifacts"
+          },
+          "invalid_reasons": []
+        },
+        {
+          "repetition": 2,
+          "original": {
+            "status": "passed",
+            "mutation_events": [
+              {
+                "mutationId": "mutation-766d2310c5144a4d",
+                "targetId": "target-dc71d044e20dec79",
+                "url": "https://demowebshop.tricentis.com/",
+                "status": "marked",
+                "detail": ""
+              },
+              {
+                "mutationId": "mutation-766d2310c5144a4d",
+                "targetId": "target-dc71d044e20dec79",
+                "url": "https://demowebshop.tricentis.com/",
+                "status": "interacted",
+                "detail": "click"
+              }
+            ],
+            "control_observation": {
+              "supported": true,
+              "pathname": "/search",
+              "search": "?q=Blue+Jeans",
+              "heading": [
+                "Search"
+              ],
+              "notifications": [],
+              "targetPresent": false,
+              "targetValueChanged": null,
+              "pageErrors": [],
+              "failedResponses": []
+            },
+            "returncode": 0,
+            "duration_seconds": 9.317,
+            "error_type": "",
+            "error_message_excerpt": "",
+            "artifacts_dir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/mutations/track_R/gpt-5.6-sol/controls/mutation-766d2310c5144a4d-original-r2.artifacts"
+          },
+          "mutated": {
+            "status": "passed",
+            "mutation_events": [
+              {
+                "mutationId": "mutation-766d2310c5144a4d",
+                "targetId": "target-dc71d044e20dec79",
+                "url": "https://demowebshop.tricentis.com/",
+                "status": "applied",
+                "detail": ""
+              },
+              {
+                "mutationId": "mutation-766d2310c5144a4d",
+                "targetId": "target-dc71d044e20dec79",
+                "url": "https://demowebshop.tricentis.com/",
+                "status": "interacted",
+                "detail": "click"
+              }
+            ],
+            "control_observation": {
+              "supported": true,
+              "pathname": "/search",
+              "search": "?q=Blue+Jeans",
+              "heading": [
+                "Search"
+              ],
+              "notifications": [],
+              "targetPresent": false,
+              "targetValueChanged": null,
+              "pageErrors": [],
+              "failedResponses": []
+            },
+            "returncode": 0,
+            "duration_seconds": 8.891,
+            "error_type": "",
+            "error_message_excerpt": "",
+            "artifacts_dir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/mutations/track_R/gpt-5.6-sol/controls/mutation-766d2310c5144a4d-mutated-r2.artifacts"
+          },
+          "invalid_reasons": []
+        },
+        {
+          "repetition": 3,
+          "original": {
+            "status": "passed",
+            "mutation_events": [
+              {
+                "mutationId": "mutation-766d2310c5144a4d",
+                "targetId": "target-dc71d044e20dec79",
+                "url": "https://demowebshop.tricentis.com/",
+                "status": "marked",
+                "detail": ""
+              },
+              {
+                "mutationId": "mutation-766d2310c5144a4d",
+                "targetId": "target-dc71d044e20dec79",
+                "url": "https://demowebshop.tricentis.com/",
+                "status": "interacted",
+                "detail": "click"
+              }
+            ],
+            "control_observation": {
+              "supported": true,
+              "pathname": "/search",
+              "search": "?q=Blue+Jeans",
+              "heading": [
+                "Search"
+              ],
+              "notifications": [],
+              "targetPresent": false,
+              "targetValueChanged": null,
+              "pageErrors": [],
+              "failedResponses": []
+            },
+            "returncode": 0,
+            "duration_seconds": 8.562,
+            "error_type": "",
+            "error_message_excerpt": "",
+            "artifacts_dir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/mutations/track_R/gpt-5.6-sol/controls/mutation-766d2310c5144a4d-original-r3.artifacts"
+          },
+          "mutated": {
+            "status": "passed",
+            "mutation_events": [
+              {
+                "mutationId": "mutation-766d2310c5144a4d",
+                "targetId": "target-dc71d044e20dec79",
+                "url": "https://demowebshop.tricentis.com/",
+                "status": "applied",
+                "detail": ""
+              },
+              {
+                "mutationId": "mutation-766d2310c5144a4d",
+                "targetId": "target-dc71d044e20dec79",
+                "url": "https://demowebshop.tricentis.com/",
+                "status": "interacted",
+                "detail": "click"
+              }
+            ],
+            "control_observation": {
+              "supported": true,
+              "pathname": "/search",
+              "search": "?q=Blue+Jeans",
+              "heading": [
+                "Search"
+              ],
+              "notifications": [],
+              "targetPresent": false,
+              "targetValueChanged": null,
+              "pageErrors": [],
+              "failedResponses": []
+            },
+            "returncode": 0,
+            "duration_seconds": 8.795,
+            "error_type": "",
+            "error_message_excerpt": "",
+            "artifacts_dir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/mutations/track_R/gpt-5.6-sol/controls/mutation-766d2310c5144a4d-mutated-r3.artifacts"
+          },
+          "invalid_reasons": []
+        }
+      ],
+      "exposure_runs": [
+        {
+          "repetition": 1,
+          "order": [
+            "A",
+            "B"
+          ],
+          "conditions": {
+            "A": {
+              "status": "passed",
+              "interacted": true,
+              "outcome": {
+                "status": "passed",
+                "mutation_events": [
+                  {
+                    "mutationId": "mutation-766d2310c5144a4d",
+                    "targetId": "target-dc71d044e20dec79",
+                    "url": "https://demowebshop.tricentis.com/",
+                    "status": "marked",
+                    "detail": ""
+                  },
+                  {
+                    "mutationId": "mutation-766d2310c5144a4d",
+                    "targetId": "target-dc71d044e20dec79",
+                    "url": "https://demowebshop.tricentis.com/",
+                    "status": "interacted",
+                    "detail": "click"
+                  }
+                ],
+                "control_observation": null,
+                "returncode": 0,
+                "duration_seconds": 10.391,
+                "error_type": "",
+                "error_message_excerpt": "",
+                "artifacts_dir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/mutations/track_R/gpt-5.6-sol/exposure/mutation-766d2310c5144a4d-A-r1.artifacts"
+              }
+            },
+            "B": {
+              "status": "passed",
+              "interacted": true,
+              "outcome": {
+                "status": "passed",
+                "mutation_events": [
+                  {
+                    "mutationId": "mutation-766d2310c5144a4d",
+                    "targetId": "target-dc71d044e20dec79",
+                    "url": "https://demowebshop.tricentis.com/",
+                    "status": "marked",
+                    "detail": ""
+                  },
+                  {
+                    "mutationId": "mutation-766d2310c5144a4d",
+                    "targetId": "target-dc71d044e20dec79",
+                    "url": "https://demowebshop.tricentis.com/",
+                    "status": "interacted",
+                    "detail": "click"
+                  }
+                ],
+                "control_observation": null,
+                "returncode": 0,
+                "duration_seconds": 10.667,
+                "error_type": "",
+                "error_message_excerpt": "",
+                "artifacts_dir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/mutations/track_R/gpt-5.6-sol/exposure/mutation-766d2310c5144a4d-B-r1.artifacts"
+              }
+            }
+          }
+        },
+        {
+          "repetition": 2,
+          "order": [
+            "A",
+            "B"
+          ],
+          "conditions": {
+            "A": {
+              "status": "passed",
+              "interacted": true,
+              "outcome": {
+                "status": "passed",
+                "mutation_events": [
+                  {
+                    "mutationId": "mutation-766d2310c5144a4d",
+                    "targetId": "target-dc71d044e20dec79",
+                    "url": "https://demowebshop.tricentis.com/",
+                    "status": "marked",
+                    "detail": ""
+                  },
+                  {
+                    "mutationId": "mutation-766d2310c5144a4d",
+                    "targetId": "target-dc71d044e20dec79",
+                    "url": "https://demowebshop.tricentis.com/",
+                    "status": "interacted",
+                    "detail": "click"
+                  }
+                ],
+                "control_observation": null,
+                "returncode": 0,
+                "duration_seconds": 10.563,
+                "error_type": "",
+                "error_message_excerpt": "",
+                "artifacts_dir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/mutations/track_R/gpt-5.6-sol/exposure/mutation-766d2310c5144a4d-A-r2.artifacts"
+              }
+            },
+            "B": {
+              "status": "passed",
+              "interacted": true,
+              "outcome": {
+                "status": "passed",
+                "mutation_events": [
+                  {
+                    "mutationId": "mutation-766d2310c5144a4d",
+                    "targetId": "target-dc71d044e20dec79",
+                    "url": "https://demowebshop.tricentis.com/",
+                    "status": "marked",
+                    "detail": ""
+                  },
+                  {
+                    "mutationId": "mutation-766d2310c5144a4d",
+                    "targetId": "target-dc71d044e20dec79",
+                    "url": "https://demowebshop.tricentis.com/",
+                    "status": "interacted",
+                    "detail": "click"
+                  }
+                ],
+                "control_observation": null,
+                "returncode": 0,
+                "duration_seconds": 10.887,
+                "error_type": "",
+                "error_message_excerpt": "",
+                "artifacts_dir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/mutations/track_R/gpt-5.6-sol/exposure/mutation-766d2310c5144a4d-B-r2.artifacts"
+              }
+            }
+          }
+        },
+        {
+          "repetition": 3,
+          "order": [
+            "A",
+            "B"
+          ],
+          "conditions": {
+            "A": {
+              "status": "passed",
+              "interacted": true,
+              "outcome": {
+                "status": "passed",
+                "mutation_events": [
+                  {
+                    "mutationId": "mutation-766d2310c5144a4d",
+                    "targetId": "target-dc71d044e20dec79",
+                    "url": "https://demowebshop.tricentis.com/",
+                    "status": "marked",
+                    "detail": ""
+                  },
+                  {
+                    "mutationId": "mutation-766d2310c5144a4d",
+                    "targetId": "target-dc71d044e20dec79",
+                    "url": "https://demowebshop.tricentis.com/",
+                    "status": "interacted",
+                    "detail": "click"
+                  }
+                ],
+                "control_observation": null,
+                "returncode": 0,
+                "duration_seconds": 10.883,
+                "error_type": "",
+                "error_message_excerpt": "",
+                "artifacts_dir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/mutations/track_R/gpt-5.6-sol/exposure/mutation-766d2310c5144a4d-A-r3.artifacts"
+              }
+            },
+            "B": {
+              "status": "passed",
+              "interacted": true,
+              "outcome": {
+                "status": "passed",
+                "mutation_events": [
+                  {
+                    "mutationId": "mutation-766d2310c5144a4d",
+                    "targetId": "target-dc71d044e20dec79",
+                    "url": "https://demowebshop.tricentis.com/",
+                    "status": "marked",
+                    "detail": ""
+                  },
+                  {
+                    "mutationId": "mutation-766d2310c5144a4d",
+                    "targetId": "target-dc71d044e20dec79",
+                    "url": "https://demowebshop.tricentis.com/",
+                    "status": "interacted",
+                    "detail": "click"
+                  }
+                ],
+                "control_observation": null,
+                "returncode": 0,
+                "duration_seconds": 10.584,
+                "error_type": "",
+                "error_message_excerpt": "",
+                "artifacts_dir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/mutations/track_R/gpt-5.6-sol/exposure/mutation-766d2310c5144a4d-B-r3.artifacts"
+              }
+            }
+          }
+        }
+      ],
+      "condition_runs": [
+        {
+          "repetition": 1,
+          "order": [
+            "B",
+            "A"
+          ],
+          "outcomes": {
+            "B": "passed_interacted",
+            "A": "locator_not_found"
+          },
+          "details": {
+            "B": {
+              "status": "passed",
+              "mutation_events": [
+                {
+                  "mutationId": "mutation-766d2310c5144a4d",
+                  "targetId": "target-dc71d044e20dec79",
+                  "url": "https://demowebshop.tricentis.com/",
+                  "status": "applied",
+                  "detail": ""
+                },
+                {
+                  "mutationId": "mutation-766d2310c5144a4d",
+                  "targetId": "target-dc71d044e20dec79",
+                  "url": "https://demowebshop.tricentis.com/",
+                  "status": "interacted",
+                  "detail": "click"
+                }
+              ],
+              "control_observation": null,
+              "returncode": 0,
+              "duration_seconds": 10.305,
+              "error_type": "",
+              "error_message_excerpt": "",
+              "artifacts_dir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/mutations/track_R/gpt-5.6-sol/mutations/mutation-766d2310c5144a4d-B-r1.artifacts"
+            },
+            "A": {
+              "status": "failed",
+              "mutation_events": [
+                {
+                  "mutationId": "mutation-766d2310c5144a4d",
+                  "targetId": "target-dc71d044e20dec79",
+                  "url": "https://demowebshop.tricentis.com/",
+                  "status": "applied",
+                  "detail": ""
+                }
+              ],
+              "control_observation": null,
+              "returncode": 1,
+              "duration_seconds": 17.586,
+              "error_type": "locator_timeout",
+              "error_message_excerpt": "TimeoutError: locator.click: Timeout 10000ms exceeded. Call log: - waiting for locator('input.search-box-button') 8 | await searchField.fill('Blue Jeans'); 9 | > 10 | await page.locator('input.search-box-button').click(); | ^ 11 | 12 | const blueJeansProduct = page 13 | .locator('.product-item') at /home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaigns/campaign_20260728_01/prepared/track_R/gpt-5.6-sol/A/suite_adicionar_carrinho.spec.ts:10:49",
+              "artifacts_dir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/mutations/track_R/gpt-5.6-sol/mutations/mutation-766d2310c5144a4d-A-r1.artifacts"
+            }
+          }
+        },
+        {
+          "repetition": 2,
+          "order": [
+            "B",
+            "A"
+          ],
+          "outcomes": {
+            "B": "passed_interacted",
+            "A": "locator_not_found"
+          },
+          "details": {
+            "B": {
+              "status": "passed",
+              "mutation_events": [
+                {
+                  "mutationId": "mutation-766d2310c5144a4d",
+                  "targetId": "target-dc71d044e20dec79",
+                  "url": "https://demowebshop.tricentis.com/",
+                  "status": "applied",
+                  "detail": ""
+                },
+                {
+                  "mutationId": "mutation-766d2310c5144a4d",
+                  "targetId": "target-dc71d044e20dec79",
+                  "url": "https://demowebshop.tricentis.com/",
+                  "status": "interacted",
+                  "detail": "click"
+                }
+              ],
+              "control_observation": null,
+              "returncode": 0,
+              "duration_seconds": 10.399,
+              "error_type": "",
+              "error_message_excerpt": "",
+              "artifacts_dir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/mutations/track_R/gpt-5.6-sol/mutations/mutation-766d2310c5144a4d-B-r2.artifacts"
+            },
+            "A": {
+              "status": "failed",
+              "mutation_events": [
+                {
+                  "mutationId": "mutation-766d2310c5144a4d",
+                  "targetId": "target-dc71d044e20dec79",
+                  "url": "https://demowebshop.tricentis.com/",
+                  "status": "applied",
+                  "detail": ""
+                }
+              ],
+              "control_observation": null,
+              "returncode": 1,
+              "duration_seconds": 17.866,
+              "error_type": "locator_timeout",
+              "error_message_excerpt": "TimeoutError: locator.click: Timeout 10000ms exceeded. Call log: - waiting for locator('input.search-box-button') 8 | await searchField.fill('Blue Jeans'); 9 | > 10 | await page.locator('input.search-box-button').click(); | ^ 11 | 12 | const blueJeansProduct = page 13 | .locator('.product-item') at /home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaigns/campaign_20260728_01/prepared/track_R/gpt-5.6-sol/A/suite_adicionar_carrinho.spec.ts:10:49",
+              "artifacts_dir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/mutations/track_R/gpt-5.6-sol/mutations/mutation-766d2310c5144a4d-A-r2.artifacts"
+            }
+          }
+        },
+        {
+          "repetition": 3,
+          "order": [
+            "B",
+            "A"
+          ],
+          "outcomes": {
+            "B": "passed_interacted",
+            "A": "locator_not_found"
+          },
+          "details": {
+            "B": {
+              "status": "passed",
+              "mutation_events": [
+                {
+                  "mutationId": "mutation-766d2310c5144a4d",
+                  "targetId": "target-dc71d044e20dec79",
+                  "url": "https://demowebshop.tricentis.com/",
+                  "status": "applied",
+                  "detail": ""
+                },
+                {
+                  "mutationId": "mutation-766d2310c5144a4d",
+                  "targetId": "target-dc71d044e20dec79",
+                  "url": "https://demowebshop.tricentis.com/",
+                  "status": "interacted",
+                  "detail": "click"
+                }
+              ],
+              "control_observation": null,
+              "returncode": 0,
+              "duration_seconds": 10.47,
+              "error_type": "",
+              "error_message_excerpt": "",
+              "artifacts_dir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/mutations/track_R/gpt-5.6-sol/mutations/mutation-766d2310c5144a4d-B-r3.artifacts"
+            },
+            "A": {
+              "status": "failed",
+              "mutation_events": [
+                {
+                  "mutationId": "mutation-766d2310c5144a4d",
+                  "targetId": "target-dc71d044e20dec79",
+                  "url": "https://demowebshop.tricentis.com/",
+                  "status": "applied",
+                  "detail": ""
+                }
+              ],
+              "control_observation": null,
+              "returncode": 1,
+              "duration_seconds": 17.64,
+              "error_type": "locator_timeout",
+              "error_message_excerpt": "TimeoutError: locator.click: Timeout 10000ms exceeded. Call log: - waiting for locator('input.search-box-button') 8 | await searchField.fill('Blue Jeans'); 9 | > 10 | await page.locator('input.search-box-button').click(); | ^ 11 | 12 | const blueJeansProduct = page 13 | .locator('.product-item') at /home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaigns/campaign_20260728_01/prepared/track_R/gpt-5.6-sol/A/suite_adicionar_carrinho.spec.ts:10:49",
+              "artifacts_dir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/mutations/track_R/gpt-5.6-sol/mutations/mutation-766d2310c5144a4d-A-r3.artifacts"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

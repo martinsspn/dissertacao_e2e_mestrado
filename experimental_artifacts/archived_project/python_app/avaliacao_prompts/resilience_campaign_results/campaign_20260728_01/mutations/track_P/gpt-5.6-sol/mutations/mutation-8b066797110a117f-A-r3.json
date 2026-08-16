@@ -1,0 +1,164 @@
+{
+  "config": {
+    "argv": [
+      "/usr/bin/node",
+      "/home/martinsspn/dissertacao_e2e_semantico/node_modules/.bin/playwright",
+      "test",
+      "suite_busca_blue_jeans.spec.ts",
+      "--config=/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaigns/campaign_20260728_01/runtime/playwright/playwright.config.ts",
+      "--reporter=json",
+      "--workers=1",
+      "--retries=0",
+      "--trace=on",
+      "--output=/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/mutations/track_P/gpt-5.6-sol/mutations/mutation-8b066797110a117f-A-r3.artifacts"
+    ],
+    "configFile": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaigns/campaign_20260728_01/runtime/playwright/playwright.config.ts",
+    "rootDir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaigns/campaign_20260728_01/prepared/track_P/gpt-5.6-sol/A",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/mutations/track_P/gpt-5.6-sol/mutations/mutation-8b066797110a117f-A-r3.artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaigns/campaign_20260728_01/prepared/track_P/gpt-5.6-sol/A",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 20000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.61.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "suite_busca_blue_jeans.spec.ts",
+      "file": "suite_busca_blue_jeans.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Searching and opening the Blue Jeans product",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 20000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 14290,
+                  "error": {
+                    "message": "TimeoutError: locator.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('input.search-box-button')\u001b[22m\n",
+                    "stack": "TimeoutError: locator.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('input.search-box-button')\u001b[22m\n\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaigns/campaign_20260728_01/prepared/track_P/gpt-5.6-sol/A/suite_busca_blue_jeans.spec.ts:10:49",
+                    "location": {
+                      "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaigns/campaign_20260728_01/prepared/track_P/gpt-5.6-sol/A/suite_busca_blue_jeans.spec.ts",
+                      "column": 49,
+                      "line": 10
+                    },
+                    "snippet": "   8 |   await searchField.fill('Blue Jeans');\n   9 |\n> 10 |   await page.locator('input.search-box-button').click();\n     |                                                 ^\n  11 |\n  12 |   const blueJeansProduct = page\n  13 |     .locator('.product-item')"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaigns/campaign_20260728_01/prepared/track_P/gpt-5.6-sol/A/suite_busca_blue_jeans.spec.ts",
+                        "column": 49,
+                        "line": 10
+                      },
+                      "message": "TimeoutError: locator.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('input.search-box-button')\u001b[22m\n\n\n   8 |   await searchField.fill('Blue Jeans');\n   9 |\n> 10 |   await page.locator('input.search-box-button').click();\n     |                                                 ^\n  11 |\n  12 |   const blueJeansProduct = page\n  13 |     .locator('.product-item')\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaigns/campaign_20260728_01/prepared/track_P/gpt-5.6-sol/A/suite_busca_blue_jeans.spec.ts:10:49"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-07-28T19:31:24.490Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/mutations/track_P/gpt-5.6-sol/mutations/mutation-8b066797110a117f-A-r3.artifacts/suite_busca_blue_jeans-Sea-365b2-ning-the-Blue-Jeans-product/test-failed-1.png"
+                    },
+                    {
+                      "name": "resilience-mutation-events",
+                      "contentType": "application/json",
+                      "body": "WwogIHsKICAgICJtdXRhdGlvbklkIjogIm11dGF0aW9uLThiMDY2Nzk3MTEwYTExN2YiLAogICAgInRhcmdldElkIjogInRhcmdldC1iMDdkNGVjY2FjODIxNmFiIiwKICAgICJ1cmwiOiAiaHR0cHM6Ly9kZW1vd2Vic2hvcC50cmljZW50aXMuY29tLyIsCiAgICAic3RhdHVzIjogImFwcGxpZWQiLAogICAgImRldGFpbCI6ICIiCiAgfQpd"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/mutations/track_P/gpt-5.6-sol/mutations/mutation-8b066797110a117f-A-r3.artifacts/suite_busca_blue_jeans-Sea-365b2-ning-the-Blue-Jeans-product/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/mutations/track_P/gpt-5.6-sol/mutations/mutation-8b066797110a117f-A-r3.artifacts/suite_busca_blue_jeans-Sea-365b2-ning-the-Blue-Jeans-product/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaigns/campaign_20260728_01/prepared/track_P/gpt-5.6-sol/A/suite_busca_blue_jeans.spec.ts",
+                    "column": 49,
+                    "line": 10
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "c2d5174642ec155dc900-59729dd79b90259676a1",
+          "file": "suite_busca_blue_jeans.spec.ts",
+          "line": 3,
+          "column": 5
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-07-28T19:31:19.889Z",
+    "duration": 16213.327,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

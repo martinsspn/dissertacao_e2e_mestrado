@@ -1,0 +1,1 @@
+Adding two different products to the cart: The user adds Computing and Internet to the cart. The user then adds Fiction to the cart. The user accesses Shopping cart. The system displays both Computing and Internet and Fiction as separate cart items, each with its quantity and price.

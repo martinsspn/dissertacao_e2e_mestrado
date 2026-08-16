@@ -1,0 +1,3 @@
+Listing tests:
+  suite_busca_sem_resultados.spec.ts:4:7 › Search for nonexistent product › should display no results message when searching for a nonexistent product
+Total: 1 test in 1 file

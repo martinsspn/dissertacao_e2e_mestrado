@@ -1,0 +1,140 @@
+{
+  "config": {
+    "argv": [
+      "/usr/bin/node",
+      "/home/martinsspn/dissertacao_e2e_semantico/node_modules/.bin/playwright",
+      "test",
+      "control.spec.ts",
+      "--config=/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaigns/campaign_20260728_01/runtime/playwright/playwright.config.ts",
+      "--reporter=json",
+      "--workers=1",
+      "--retries=0",
+      "--trace=on",
+      "--output=/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/mutations/track_P/gpt-5.6-sol/controls/mutation-ac2305bb5ac9e7a3-original-r1.artifacts"
+    ],
+    "configFile": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaigns/campaign_20260728_01/runtime/playwright/playwright.config.ts",
+    "rootDir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaigns/campaign_20260728_01/runtime/playwright",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/mutations/track_P/gpt-5.6-sol/controls/mutation-ac2305bb5ac9e7a3-original-r1.artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaigns/campaign_20260728_01/runtime/playwright",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 20000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.61.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "control.spec.ts",
+      "file": "control.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "differential functional control",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 20000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4296,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-07-28T19:44:11.401Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "resilience-control-observation",
+                      "contentType": "application/json",
+                      "body": "ewogICJzdXBwb3J0ZWQiOiB0cnVlLAogICJwYXRobmFtZSI6ICIvbG9naW4iLAogICJzZWFyY2giOiAiIiwKICAiaGVhZGluZyI6IFsKICAgICJXZWxjb21lLCBQbGVhc2UgU2lnbiBJbiEiCiAgXSwKICAibm90aWZpY2F0aW9ucyI6IFsKICAgICJMb2dpbiB3YXMgdW5zdWNjZXNzZnVsLiBQbGVhc2UgY29ycmVjdCB0aGUgZXJyb3JzIGFuZCB0cnkgYWdhaW4uIE5vIGN1c3RvbWVyIGFjY291bnQgZm91bmQiCiAgXSwKICAidGFyZ2V0UHJlc2VudCI6IHRydWUsCiAgInRhcmdldFZhbHVlQ2hhbmdlZCI6IHRydWUsCiAgInBhZ2VFcnJvcnMiOiBbXSwKICAiZmFpbGVkUmVzcG9uc2VzIjogW10KfQ=="
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/mutations/track_P/gpt-5.6-sol/controls/mutation-ac2305bb5ac9e7a3-original-r1.artifacts/control-differential-functional-control/test-finished-1.png"
+                    },
+                    {
+                      "name": "resilience-mutation-events",
+                      "contentType": "application/json",
+                      "body": "WwogIHsKICAgICJtdXRhdGlvbklkIjogIm11dGF0aW9uLWFjMjMwNWJiNWFjOWU3YTMiLAogICAgInRhcmdldElkIjogInRhcmdldC0yZjFkNWY0N2Q1ZTNhNDkzIiwKICAgICJ1cmwiOiAiaHR0cHM6Ly9kZW1vd2Vic2hvcC50cmljZW50aXMuY29tL2xvZ2luIiwKICAgICJzdGF0dXMiOiAibWFya2VkIiwKICAgICJkZXRhaWwiOiAiIgogIH0sCiAgewogICAgIm11dGF0aW9uSWQiOiAibXV0YXRpb24tYWMyMzA1YmI1YWM5ZTdhMyIsCiAgICAidGFyZ2V0SWQiOiAidGFyZ2V0LTJmMWQ1ZjQ3ZDVlM2E0OTMiLAogICAgInVybCI6ICJodHRwczovL2RlbW93ZWJzaG9wLnRyaWNlbnRpcy5jb20vbG9naW4iLAogICAgInN0YXR1cyI6ICJpbnRlcmFjdGVkIiwKICAgICJkZXRhaWwiOiAiY2xpY2siCiAgfSwKICB7CiAgICAibXV0YXRpb25JZCI6ICJtdXRhdGlvbi1hYzIzMDViYjVhYzllN2EzIiwKICAgICJ0YXJnZXRJZCI6ICJ0YXJnZXQtMmYxZDVmNDdkNWUzYTQ5MyIsCiAgICAidXJsIjogImh0dHBzOi8vZGVtb3dlYnNob3AudHJpY2VudGlzLmNvbS9sb2dpbiIsCiAgICAic3RhdHVzIjogIm1hcmtlZCIsCiAgICAiZGV0YWlsIjogIiIKICB9Cl0="
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/mutations/track_P/gpt-5.6-sol/controls/mutation-ac2305bb5ac9e7a3-original-r1.artifacts/control-differential-functional-control/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "df0f65ccd0bbb0c6ab20-3d90b5ff79bfc8b60b9a",
+          "file": "control.spec.ts",
+          "line": 25,
+          "column": 5
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-07-28T19:44:10.339Z",
+    "duration": 6602.5689999999995,
+    "expected": 1,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

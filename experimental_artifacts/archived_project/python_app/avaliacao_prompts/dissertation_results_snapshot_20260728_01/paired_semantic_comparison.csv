@@ -1,0 +1,5 @@
+model,round,pairs,structured_improved,same_score,structured_worsened,mean_score_delta
+gemini-3.6-flash,gemini_new_20,20,8,11,1,0.4
+gpt-5.6-sol,gpt_original_12,12,1,10,1,0.0
+qwen2.5-coder:7b,qwen_new_20,20,9,6,5,0.2
+qwen2.5-coder:7b,qwen_old_14,14,8,3,3,0.429

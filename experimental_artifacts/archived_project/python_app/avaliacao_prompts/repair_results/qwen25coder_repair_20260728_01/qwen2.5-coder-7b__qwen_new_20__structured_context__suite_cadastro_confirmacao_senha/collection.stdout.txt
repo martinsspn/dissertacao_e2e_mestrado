@@ -1,0 +1,3 @@
+Listing tests:
+  suite_cadastro_confirmacao_senha.spec.ts:4:7 › Suite Cadastro Confirmacao Senha › should not register user with mismatched passwords
+Total: 1 test in 1 file

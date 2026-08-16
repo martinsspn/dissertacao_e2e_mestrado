@@ -1,0 +1,23 @@
+{
+  "model": "granite3.2-vision:latest",
+  "created_at": "2026-07-24T17:58:07.618629992Z",
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 59979879982,
+  "load_duration": 62814864,
+  "prompt_eval_count": 1132,
+  "prompt_eval_duration": 29497933787,
+  "eval_count": 271,
+  "eval_duration": 30256086423,
+  "condition": "structured_context",
+  "scenario": "suite_login_invalido",
+  "model_requested": "granite3.2-vision:latest",
+  "seed": 20260724,
+  "temperature": 0,
+  "num_ctx": 16384,
+  "num_predict": 4096,
+  "elapsed_seconds_client": 59.985,
+  "input_sha256": "70ac44e7c54ed425dc0108b90d4425ff93ca90c424829d200171597014a6949d",
+  "response_sha256": "2b91da01e4f9a97e355e22412438f807c4857ebf798e68b46159b5e3c2b2e661",
+  "stateless": true
+}

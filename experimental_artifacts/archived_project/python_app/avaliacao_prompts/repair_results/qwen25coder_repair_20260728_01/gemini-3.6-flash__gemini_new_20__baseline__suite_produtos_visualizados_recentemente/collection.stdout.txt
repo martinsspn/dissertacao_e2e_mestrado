@@ -1,0 +1,3 @@
+Listing tests:
+  suite_produtos_visualizados_recentemente.spec.ts:4:7 › Product History - Recently Viewed Products › displays recently viewed products in reverse chronological order
+Total: 1 test in 1 file

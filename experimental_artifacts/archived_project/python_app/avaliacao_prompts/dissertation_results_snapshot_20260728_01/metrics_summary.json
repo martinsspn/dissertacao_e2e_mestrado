@@ -1,0 +1,830 @@
+{
+  "schema_version": 1,
+  "snapshot_id": "dissertation_results_snapshot_20260728_01",
+  "latex_modified": false,
+  "scope": {
+    "generated_test_files_reviewed": 132,
+    "paired_scenarios": 66,
+    "rounds": [
+      "gpt_original_12",
+      "qwen_old_14",
+      "qwen_new_20",
+      "gemini_new_20"
+    ],
+    "conditions": [
+      "baseline",
+      "structured_context"
+    ]
+  },
+  "execution_and_semantic_conformity": {
+    "total_files": 132,
+    "conditions": [
+      {
+        "model": "gemini-3.6-flash",
+        "round": "gemini_new_20",
+        "condition": "baseline",
+        "files": 20,
+        "adequate": 12,
+        "partially_adequate": 8,
+        "inadequate": 0,
+        "adequacy_rate": 0.6,
+        "mean_semantic_score_6": 5.5,
+        "execution_passed": 8,
+        "syntax_errors": 1
+      },
+      {
+        "model": "gemini-3.6-flash",
+        "round": "gemini_new_20",
+        "condition": "structured_context",
+        "files": 20,
+        "adequate": 18,
+        "partially_adequate": 2,
+        "inadequate": 0,
+        "adequacy_rate": 0.9,
+        "mean_semantic_score_6": 5.9,
+        "execution_passed": 12,
+        "syntax_errors": 0
+      },
+      {
+        "model": "gpt-5.6-sol",
+        "round": "gpt_original_12",
+        "condition": "baseline",
+        "files": 12,
+        "adequate": 7,
+        "partially_adequate": 5,
+        "inadequate": 0,
+        "adequacy_rate": 0.5833,
+        "mean_semantic_score_6": 5.583,
+        "execution_passed": 7,
+        "syntax_errors": 0
+      },
+      {
+        "model": "gpt-5.6-sol",
+        "round": "gpt_original_12",
+        "condition": "structured_context",
+        "files": 12,
+        "adequate": 7,
+        "partially_adequate": 5,
+        "inadequate": 0,
+        "adequacy_rate": 0.5833,
+        "mean_semantic_score_6": 5.583,
+        "execution_passed": 7,
+        "syntax_errors": 0
+      },
+      {
+        "model": "qwen2.5-coder:7b",
+        "round": "qwen_new_20",
+        "condition": "baseline",
+        "files": 20,
+        "adequate": 0,
+        "partially_adequate": 19,
+        "inadequate": 1,
+        "adequacy_rate": 0.0,
+        "mean_semantic_score_6": 3.7,
+        "execution_passed": 0,
+        "syntax_errors": 0
+      },
+      {
+        "model": "qwen2.5-coder:7b",
+        "round": "qwen_new_20",
+        "condition": "structured_context",
+        "files": 20,
+        "adequate": 0,
+        "partially_adequate": 16,
+        "inadequate": 4,
+        "adequacy_rate": 0.0,
+        "mean_semantic_score_6": 3.9,
+        "execution_passed": 2,
+        "syntax_errors": 0
+      },
+      {
+        "model": "qwen2.5-coder:7b",
+        "round": "qwen_old_14",
+        "condition": "baseline",
+        "files": 14,
+        "adequate": 0,
+        "partially_adequate": 13,
+        "inadequate": 1,
+        "adequacy_rate": 0.0,
+        "mean_semantic_score_6": 3.143,
+        "execution_passed": 0,
+        "syntax_errors": 0
+      },
+      {
+        "model": "qwen2.5-coder:7b",
+        "round": "qwen_old_14",
+        "condition": "structured_context",
+        "files": 14,
+        "adequate": 0,
+        "partially_adequate": 12,
+        "inadequate": 2,
+        "adequacy_rate": 0.0,
+        "mean_semantic_score_6": 3.571,
+        "execution_passed": 2,
+        "syntax_errors": 0
+      }
+    ],
+    "paired_comparison": [
+      {
+        "model": "gemini-3.6-flash",
+        "round": "gemini_new_20",
+        "pairs": 20,
+        "structured_improved": 8,
+        "same_score": 11,
+        "structured_worsened": 1,
+        "mean_score_delta": 0.4
+      },
+      {
+        "model": "gpt-5.6-sol",
+        "round": "gpt_original_12",
+        "pairs": 12,
+        "structured_improved": 1,
+        "same_score": 10,
+        "structured_worsened": 1,
+        "mean_score_delta": 0.0
+      },
+      {
+        "model": "qwen2.5-coder:7b",
+        "round": "qwen_new_20",
+        "pairs": 20,
+        "structured_improved": 9,
+        "same_score": 6,
+        "structured_worsened": 5,
+        "mean_score_delta": 0.2
+      },
+      {
+        "model": "qwen2.5-coder:7b",
+        "round": "qwen_old_14",
+        "pairs": 14,
+        "structured_improved": 8,
+        "same_score": 3,
+        "structured_worsened": 3,
+        "mean_score_delta": 0.429
+      }
+    ]
+  },
+  "generation_effort": {
+    "qwen_new_20": {
+      "run_id": "ollama_qwen25coder_demowebshop20_20260727_01",
+      "status": "completed",
+      "model": "qwen2.5-coder:7b",
+      "quantization": "Q4_K_M",
+      "conditions": {
+        "baseline": {
+          "files": 20,
+          "playwright_collected_tests": 20,
+          "completed_responses": 20,
+          "done_reason_stop": 20,
+          "input_characters": 7232,
+          "input_tokens": 3944,
+          "output_tokens": 4500,
+          "client_seconds_total": 362.639,
+          "client_seconds_mean": 18.132,
+          "playwright_import": 20,
+          "test_block": 20,
+          "expect_assertion": 20,
+          "locator_count": 30,
+          "semantic_locator_count": 0,
+          "xpath_count": 0,
+          "wait_for_timeout_files": 0,
+          "selector_risk": {
+            "low": 0,
+            "medium": 11,
+            "high": 0,
+            "none": 9
+          }
+        },
+        "structured_context": {
+          "files": 20,
+          "playwright_collected_tests": 25,
+          "completed_responses": 20,
+          "done_reason_stop": 20,
+          "input_characters": 83751,
+          "input_tokens": 24789,
+          "output_tokens": 5879,
+          "client_seconds_total": 574.396,
+          "client_seconds_mean": 28.72,
+          "playwright_import": 20,
+          "test_block": 20,
+          "expect_assertion": 20,
+          "locator_count": 97,
+          "semantic_locator_count": 63,
+          "xpath_count": 0,
+          "wait_for_timeout_files": 0,
+          "selector_risk": {
+            "low": 11,
+            "medium": 9,
+            "high": 0,
+            "none": 0
+          }
+        }
+      },
+      "comparison": {
+        "input_token_increase_percent": 528.524,
+        "output_token_increase_percent": 30.644,
+        "client_time_increase_percent": 58.393
+      },
+      "settings": {
+        "temperature": 0,
+        "seed": 20260724,
+        "num_ctx": 8192,
+        "num_predict": 2048,
+        "stateless": true,
+        "context_reused": false
+      },
+      "generated_test_directories": {
+        "baseline": "python_app/teste_prompt_e2e_semantico/generated_tests/baseline_qwen25coder_demowebshop20_20260727_01",
+        "structured_context": "python_app/teste_prompt_e2e_semantico/generated_tests/structured_context_qwen25coder_demowebshop20_20260727_01"
+      },
+      "static_reports": {
+        "baseline": "python_app/avaliacao_prompts/relatorios/qwen25coder_demowebshop20_baseline_20260727_01.md",
+        "structured_context": "python_app/avaliacao_prompts/relatorios/qwen25coder_demowebshop20_structured_20260727_01.md"
+      },
+      "notes": [
+        "The two-scenario smoke run used different context and output limits and is excluded.",
+        "Basic structure is not equivalent to successful Playwright execution or semantic conformity.",
+        "Graph conformity and live execution remain to be evaluated."
+      ]
+    },
+    "gemini_new_20": {
+      "model": "gemini-3.6-flash",
+      "reasoning_effort": "medium",
+      "stateless_requests": true,
+      "conditions": {
+        "baseline": {
+          "requests": 20,
+          "elapsed_seconds": 220.624,
+          "input_tokens": 4743,
+          "output_tokens": 11400,
+          "thought_tokens": 32862,
+          "total_tokens": 49005
+        },
+        "structured_context": {
+          "requests": 20,
+          "elapsed_seconds": 222.082,
+          "input_tokens": 25833,
+          "output_tokens": 8661,
+          "thought_tokens": 34858,
+          "total_tokens": 69352
+        }
+      },
+      "source": "/home/martinsspn/openai_playwright_batch/runs/gemini-3.6-flash-demowebshop20-20260727/run_manifest.json"
+    },
+    "gpt_original_12": {
+      "tokens": null,
+      "elapsed_seconds": null,
+      "availability": "not_recorded_in_original_interactive_generation"
+    }
+  },
+  "static_analysis_reported": {
+    "gpt_original_12": {
+      "source": "python_app/avaliacao_prompts/relatorios/comparativo_resultados.md",
+      "baseline": {
+        "low_risk_files": "6/12",
+        "graph_url_coverage_percent": 100.0,
+        "graph_text_coverage_percent": 88.2,
+        "getby_share_percent": 49.4,
+        "mean_locators_per_test": 13.67,
+        "mean_actions_per_test": 8.33,
+        "mean_prompt_characters": 386
+      },
+      "structured_context": {
+        "low_risk_files": "11/12",
+        "graph_url_coverage_percent": 100.0,
+        "graph_text_coverage_percent": 96.5,
+        "getby_share_percent": 72.8,
+        "mean_locators_per_test": 13.17,
+        "mean_actions_per_test": 6.92,
+        "mean_prompt_characters": 3480
+      }
+    },
+    "qwen_old_14_post_locator_instruction": {
+      "source": "python_app/avaliacao_prompts/relatorios/comparativo_qwen_playwright_locators_20260724_02.md",
+      "baseline": {
+        "execution_passed": "0/14",
+        "graph_url_coverage_percent": 60.7,
+        "graph_text_coverage_percent": 91.1,
+        "low_risk_files": "0/14",
+        "mean_human_review_score_12": 4.43
+      },
+      "structured_context": {
+        "execution_passed": "2/14",
+        "graph_url_coverage_percent": 100.0,
+        "graph_text_coverage_percent": 90.8,
+        "low_risk_files": "7/14",
+        "mean_human_review_score_12": 7.43
+      }
+    }
+  },
+  "repair_effort": {
+    "repair_model": "qwen2.5-coder:7b",
+    "attempts_per_file": 1,
+    "totals": {
+      "attempted": 94,
+      "collected": 93,
+      "execution_passed": 6,
+      "semantic_false_passes": 1,
+      "successful_repairs": 5,
+      "repair_success_rate": 0.0532,
+      "client_seconds_total": 3379.884,
+      "client_seconds_median": 30.734,
+      "prompt_tokens": 130114,
+      "output_tokens": 35313,
+      "lines_added": 311,
+      "lines_deleted": 277,
+      "line_churn": 588,
+      "mean_line_similarity": 0.9112,
+      "failure_classes": {
+        "passed": 6,
+        "assertion_failure": 25,
+        "locator_timeout": 51,
+        "selector_ambiguity": 9,
+        "collection_error": 1,
+        "runtime_code_error": 2
+      },
+      "client_seconds_per_successful_repair": 675.977,
+      "tokens_per_successful_repair": 33085.4
+    },
+    "groups": [
+      {
+        "model_origin": "gemini-3.6-flash",
+        "round": "gemini_new_20",
+        "condition": "baseline",
+        "attempted": 12,
+        "collected": 11,
+        "execution_passed": 1,
+        "successful_repairs": 1,
+        "repair_success_rate": 0.0833,
+        "client_seconds_total": 439.934,
+        "client_seconds_mean": 36.661,
+        "prompt_tokens": 11398,
+        "output_tokens": 5842,
+        "line_churn": 62,
+        "mean_line_similarity": 0.945
+      },
+      {
+        "model_origin": "gemini-3.6-flash",
+        "round": "gemini_new_20",
+        "condition": "structured_context",
+        "attempted": 8,
+        "collected": 8,
+        "execution_passed": 2,
+        "successful_repairs": 2,
+        "repair_success_rate": 0.25,
+        "client_seconds_total": 316.101,
+        "client_seconds_mean": 39.513,
+        "prompt_tokens": 14302,
+        "output_tokens": 2860,
+        "line_churn": 17,
+        "mean_line_similarity": 0.9477
+      },
+      {
+        "model_origin": "gpt-5.6-sol",
+        "round": "gpt_original_12",
+        "condition": "baseline",
+        "attempted": 5,
+        "collected": 5,
+        "execution_passed": 1,
+        "successful_repairs": 1,
+        "repair_success_rate": 0.2,
+        "client_seconds_total": 283.096,
+        "client_seconds_mean": 56.619,
+        "prompt_tokens": 5288,
+        "output_tokens": 3281,
+        "line_churn": 46,
+        "mean_line_similarity": 0.9476
+      },
+      {
+        "model_origin": "gpt-5.6-sol",
+        "round": "gpt_original_12",
+        "condition": "structured_context",
+        "attempted": 5,
+        "collected": 5,
+        "execution_passed": 0,
+        "successful_repairs": 0,
+        "repair_success_rate": 0.0,
+        "client_seconds_total": 384.399,
+        "client_seconds_mean": 76.88,
+        "prompt_tokens": 11241,
+        "output_tokens": 3911,
+        "line_churn": 50,
+        "mean_line_similarity": 0.9534
+      },
+      {
+        "model_origin": "qwen2.5-coder:7b",
+        "round": "qwen_new_20",
+        "condition": "baseline",
+        "attempted": 20,
+        "collected": 20,
+        "execution_passed": 0,
+        "successful_repairs": 0,
+        "repair_success_rate": 0.0,
+        "client_seconds_total": 372.178,
+        "client_seconds_mean": 18.609,
+        "prompt_tokens": 12862,
+        "output_tokens": 4906,
+        "line_churn": 145,
+        "mean_line_similarity": 0.8645
+      },
+      {
+        "model_origin": "qwen2.5-coder:7b",
+        "round": "qwen_new_20",
+        "condition": "structured_context",
+        "attempted": 18,
+        "collected": 18,
+        "execution_passed": 1,
+        "successful_repairs": 0,
+        "repair_success_rate": 0.0,
+        "client_seconds_total": 752.682,
+        "client_seconds_mean": 41.816,
+        "prompt_tokens": 40318,
+        "output_tokens": 5541,
+        "line_churn": 93,
+        "mean_line_similarity": 0.9105
+      },
+      {
+        "model_origin": "qwen2.5-coder:7b",
+        "round": "qwen_old_14",
+        "condition": "baseline",
+        "attempted": 14,
+        "collected": 14,
+        "execution_passed": 0,
+        "successful_repairs": 0,
+        "repair_success_rate": 0.0,
+        "client_seconds_total": 288.659,
+        "client_seconds_mean": 20.619,
+        "prompt_tokens": 9369,
+        "output_tokens": 3913,
+        "line_churn": 114,
+        "mean_line_similarity": 0.8738
+      },
+      {
+        "model_origin": "qwen2.5-coder:7b",
+        "round": "qwen_old_14",
+        "condition": "structured_context",
+        "attempted": 12,
+        "collected": 12,
+        "execution_passed": 1,
+        "successful_repairs": 1,
+        "repair_success_rate": 0.0833,
+        "client_seconds_total": 542.835,
+        "client_seconds_mean": 45.236,
+        "prompt_tokens": 25336,
+        "output_tokens": 5059,
+        "line_churn": 61,
+        "mean_line_similarity": 0.9426
+      }
+    ],
+    "provisional_mutation_eligible_pairs": [
+      {
+        "model": "gemini-3.6-flash",
+        "round": "gemini_new_20",
+        "scenario": "fluxo_computadores_desktops"
+      },
+      {
+        "model": "gemini-3.6-flash",
+        "round": "gemini_new_20",
+        "scenario": "suite_cadastro_campos_obrigatorios"
+      },
+      {
+        "model": "gemini-3.6-flash",
+        "round": "gemini_new_20",
+        "scenario": "suite_cadastro_confirmacao_senha"
+      },
+      {
+        "model": "gemini-3.6-flash",
+        "round": "gemini_new_20",
+        "scenario": "suite_navegar_categoria_livros"
+      },
+      {
+        "model": "gemini-3.6-flash",
+        "round": "gemini_new_20",
+        "scenario": "suite_navegar_sobre_nos"
+      },
+      {
+        "model": "gemini-3.6-flash",
+        "round": "gemini_new_20",
+        "scenario": "user_registration_book_purchase"
+      },
+      {
+        "model": "gpt-5.6-sol",
+        "round": "gpt_original_12",
+        "scenario": "suite_adicionar_carrinho"
+      },
+      {
+        "model": "gpt-5.6-sol",
+        "round": "gpt_original_12",
+        "scenario": "suite_busca_blue_jeans"
+      },
+      {
+        "model": "gpt-5.6-sol",
+        "round": "gpt_original_12",
+        "scenario": "suite_detalhes_fiction"
+      },
+      {
+        "model": "gpt-5.6-sol",
+        "round": "gpt_original_12",
+        "scenario": "suite_limpar_carrinho"
+      },
+      {
+        "model": "gpt-5.6-sol",
+        "round": "gpt_original_12",
+        "scenario": "suite_login_invalido"
+      },
+      {
+        "model": "gpt-5.6-sol",
+        "round": "gpt_original_12",
+        "scenario": "suite_login_valido"
+      },
+      {
+        "model": "gpt-5.6-sol",
+        "round": "gpt_original_12",
+        "scenario": "suite_logout"
+      }
+    ],
+    "provisional_eligible_pair_count": 13,
+    "notes": [
+      "Original generated files were not modified.",
+      "Execution pass alone was not accepted as successful repair.",
+      "Eligibility is provisional until three normalized original/repaired repetitions are completed.",
+      "Repaired and unrepaired artifacts must be reported as separate resilience tracks."
+    ]
+  },
+  "resilience": {
+    "schema_version": 1,
+    "campaign": "campaign_20260728_01",
+    "verified": true,
+    "mutation_campaign_manifest_sha256": "37406d85410bafb5cef3418e92c25b2e17a4d2d35d37a718eba2444165717c61",
+    "signed_mutation_campaign_sha256": "a98c0cb6a1b6d6b4e970a15d803e577c39e37cc77565764e5c1d500cc83c8a93",
+    "condition_mapping": {
+      "A": "baseline",
+      "B": "structured"
+    },
+    "robustness_rule": "passed_interacted em 3 de 3 repeticoes",
+    "overall": {
+      "selected": 20,
+      "control_valid": 16,
+      "applicable": 14,
+      "baseline_survived": 9,
+      "baseline_rate": 0.6428571428571429,
+      "structured_survived": 14,
+      "structured_rate": 1.0,
+      "both": 9,
+      "baseline_only": 0,
+      "structured_only": 5,
+      "neither": 0,
+      "mcnemar_exact_two_sided_p": 0.0625
+    },
+    "by_track_and_model": [
+      {
+        "track": "P",
+        "model": "gemini-3.6-flash",
+        "selected": 6,
+        "control_valid": 4,
+        "applicable": 2,
+        "baseline_survived": 2,
+        "baseline_rate": 1.0,
+        "structured_survived": 2,
+        "structured_rate": 1.0,
+        "both": 2,
+        "baseline_only": 0,
+        "structured_only": 0,
+        "neither": 0,
+        "mcnemar_exact_two_sided_p": 1.0
+      },
+      {
+        "track": "P",
+        "model": "gpt-5.6-sol",
+        "selected": 8,
+        "control_valid": 8,
+        "applicable": 8,
+        "baseline_survived": 4,
+        "baseline_rate": 0.5,
+        "structured_survived": 8,
+        "structured_rate": 1.0,
+        "both": 4,
+        "baseline_only": 0,
+        "structured_only": 4,
+        "neither": 0,
+        "mcnemar_exact_two_sided_p": 0.125
+      },
+      {
+        "track": "R",
+        "model": "gemini-3.6-flash",
+        "selected": 4,
+        "control_valid": 2,
+        "applicable": 2,
+        "baseline_survived": 2,
+        "baseline_rate": 1.0,
+        "structured_survived": 2,
+        "structured_rate": 1.0,
+        "both": 2,
+        "baseline_only": 0,
+        "structured_only": 0,
+        "neither": 0,
+        "mcnemar_exact_two_sided_p": 1.0
+      },
+      {
+        "track": "R",
+        "model": "gpt-5.6-sol",
+        "selected": 2,
+        "control_valid": 2,
+        "applicable": 2,
+        "baseline_survived": 1,
+        "baseline_rate": 0.5,
+        "structured_survived": 2,
+        "structured_rate": 1.0,
+        "both": 1,
+        "baseline_only": 0,
+        "structured_only": 1,
+        "neither": 0,
+        "mcnemar_exact_two_sided_p": 1.0
+      }
+    ],
+    "by_track": [
+      {
+        "track": "P",
+        "selected": 14,
+        "control_valid": 12,
+        "applicable": 10,
+        "baseline_survived": 6,
+        "baseline_rate": 0.6,
+        "structured_survived": 10,
+        "structured_rate": 1.0,
+        "both": 6,
+        "baseline_only": 0,
+        "structured_only": 4,
+        "neither": 0,
+        "mcnemar_exact_two_sided_p": 0.125
+      },
+      {
+        "track": "R",
+        "selected": 6,
+        "control_valid": 4,
+        "applicable": 4,
+        "baseline_survived": 3,
+        "baseline_rate": 0.75,
+        "structured_survived": 4,
+        "structured_rate": 1.0,
+        "both": 3,
+        "baseline_only": 0,
+        "structured_only": 1,
+        "neither": 0,
+        "mcnemar_exact_two_sided_p": 1.0
+      }
+    ],
+    "by_model": [
+      {
+        "model": "gemini-3.6-flash",
+        "selected": 10,
+        "control_valid": 6,
+        "applicable": 4,
+        "baseline_survived": 4,
+        "baseline_rate": 1.0,
+        "structured_survived": 4,
+        "structured_rate": 1.0,
+        "both": 4,
+        "baseline_only": 0,
+        "structured_only": 0,
+        "neither": 0,
+        "mcnemar_exact_two_sided_p": 1.0
+      },
+      {
+        "model": "gpt-5.6-sol",
+        "selected": 10,
+        "control_valid": 10,
+        "applicable": 10,
+        "baseline_survived": 5,
+        "baseline_rate": 0.5,
+        "structured_survived": 10,
+        "structured_rate": 1.0,
+        "both": 5,
+        "baseline_only": 0,
+        "structured_only": 5,
+        "neither": 0,
+        "mcnemar_exact_two_sided_p": 0.0625
+      }
+    ],
+    "by_operator": [
+      {
+        "operator": "input_submit_to_button",
+        "selected": 4,
+        "control_valid": 4,
+        "applicable": 4,
+        "baseline_survived": 0,
+        "baseline_rate": 0.0,
+        "structured_survived": 4,
+        "structured_rate": 1.0,
+        "both": 0,
+        "baseline_only": 0,
+        "structured_only": 4,
+        "neither": 0,
+        "mcnemar_exact_two_sided_p": 0.125
+      },
+      {
+        "operator": "insert_noninteractive_sibling_before",
+        "selected": 8,
+        "control_valid": 6,
+        "applicable": 6,
+        "baseline_survived": 6,
+        "baseline_rate": 1.0,
+        "structured_survived": 6,
+        "structured_rate": 1.0,
+        "both": 6,
+        "baseline_only": 0,
+        "structured_only": 0,
+        "neither": 0,
+        "mcnemar_exact_two_sided_p": 1.0
+      },
+      {
+        "operator": "insert_wrapper",
+        "selected": 5,
+        "control_valid": 3,
+        "applicable": 2,
+        "baseline_survived": 2,
+        "baseline_rate": 1.0,
+        "structured_survived": 2,
+        "structured_rate": 1.0,
+        "both": 2,
+        "baseline_only": 0,
+        "structured_only": 0,
+        "neither": 0,
+        "mcnemar_exact_two_sided_p": 1.0
+      },
+      {
+        "operator": "rename_id",
+        "selected": 3,
+        "control_valid": 3,
+        "applicable": 2,
+        "baseline_survived": 1,
+        "baseline_rate": 0.5,
+        "structured_survived": 2,
+        "structured_rate": 1.0,
+        "both": 1,
+        "baseline_only": 0,
+        "structured_only": 1,
+        "neither": 0,
+        "mcnemar_exact_two_sided_p": 1.0
+      }
+    ],
+    "by_stratum": [
+      {
+        "stratum": "E1",
+        "selected": 13,
+        "control_valid": 9,
+        "applicable": 8,
+        "baseline_survived": 8,
+        "baseline_rate": 1.0,
+        "structured_survived": 8,
+        "structured_rate": 1.0,
+        "both": 8,
+        "baseline_only": 0,
+        "structured_only": 0,
+        "neither": 0,
+        "mcnemar_exact_two_sided_p": 1.0
+      },
+      {
+        "stratum": "E2",
+        "selected": 7,
+        "control_valid": 7,
+        "applicable": 6,
+        "baseline_survived": 1,
+        "baseline_rate": 0.16666666666666666,
+        "structured_survived": 6,
+        "structured_rate": 1.0,
+        "both": 1,
+        "baseline_only": 0,
+        "structured_only": 5,
+        "neither": 0,
+        "mcnemar_exact_two_sided_p": 0.0625
+      }
+    ],
+    "invalid_reason_counts": {
+      "mutated_control_failed": 4,
+      "mutated_target_not_interacted": 4,
+      "mutation_not_applied": 4,
+      "original_control_failed": 4,
+      "original_target_not_interacted": 4,
+      "original_target_not_marked": 4
+    },
+    "execution_evidence": {
+      "eligibility_playwright_executions": 66,
+      "mutation_control_executions": 120,
+      "mutation_exposure_executions": 96,
+      "mutation_condition_executions": 84,
+      "mutation_total_playwright_executions": 300,
+      "resilience_total_playwright_executions": 366,
+      "mutation_artifact_directories": 300,
+      "mutation_traces": 300,
+      "mutation_screenshot_directories": 300
+    }
+  },
+  "exclusions_and_limits": [
+    "Pilotos de mutacao anteriores ao congelamento foram excluidos.",
+    "Unidades sem controle valido ou sem exposicao pareada foram excluidas do denominador de sobrevivencia.",
+    "Resultados agregados entre modelos sao secundarios; a leitura principal deve permanecer separada por modelo e rodada.",
+    "Aprovacao de execucao nao implica conformidade semantica.",
+    "Tokens e tempo da geracao interativa original do GPT nao foram registrados."
+  ],
+  "artifact_index": "artifact_index.csv"
+}

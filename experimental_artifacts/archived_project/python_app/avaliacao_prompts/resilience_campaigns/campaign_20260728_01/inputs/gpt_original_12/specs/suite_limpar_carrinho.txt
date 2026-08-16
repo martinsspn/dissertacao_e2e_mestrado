@@ -1,0 +1,1 @@
+Removal of all products from the cart: The user adds the product Blue Jeans to the cart to prepare the scenario. The user accesses Shopping cart. The user marks Blue Jeans for removal. The user selects Update shopping cart. The system displays the empty cart.

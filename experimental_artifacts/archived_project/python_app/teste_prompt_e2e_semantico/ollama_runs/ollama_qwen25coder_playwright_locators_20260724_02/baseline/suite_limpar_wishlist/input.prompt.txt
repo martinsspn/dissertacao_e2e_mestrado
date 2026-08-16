@@ -1,0 +1,1 @@
+Removal of all products from the wishlist: The user is authenticated with valid credentials provided by the testing environment. The user adds a Camera product to the wishlist to prepare the scenario. The user accesses Wishlist. The user marks the Camera product for removal. The user selects Update wishlist. The system displays the empty wishlist.

@@ -1,0 +1,8 @@
+$ docker-compose up -d neo4j selenium_chrome
+
+
+        Can't find a suitable configuration file in this directory or any
+        parent. Are you in the right directory?
+
+        Supported filenames: docker-compose.yml, docker-compose.yaml, compose.yml, compose.yaml
+        

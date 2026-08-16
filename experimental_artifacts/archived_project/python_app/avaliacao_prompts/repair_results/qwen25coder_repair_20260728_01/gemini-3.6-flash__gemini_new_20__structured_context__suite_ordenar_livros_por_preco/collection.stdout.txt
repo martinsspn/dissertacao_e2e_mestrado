@@ -1,0 +1,3 @@
+Listing tests:
+  suite_ordenar_livros_por_preco.spec.ts:4:7 › Suite Ordenar Livros Por Preco › Deve ordenar livros por preco do menor para o maior
+Total: 1 test in 1 file

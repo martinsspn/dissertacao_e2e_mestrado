@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "track_id": "R",
+  "model_id": "gemini-3.6-flash",
+  "scenario_ids": [
+    "fluxo_computadores_desktops",
+    "suite_navegar_sobre_nos"
+  ]
+}

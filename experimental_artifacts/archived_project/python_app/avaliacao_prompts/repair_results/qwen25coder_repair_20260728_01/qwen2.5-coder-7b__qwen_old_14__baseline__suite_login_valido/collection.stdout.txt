@@ -1,0 +1,3 @@
+Listing tests:
+  suite_login_valido.spec.ts:4:7 › Login with valid credentials › should authenticate user and display account and logout links
+Total: 1 test in 1 file

@@ -1,0 +1,150 @@
+{
+  "config": {
+    "argv": [
+      "/usr/bin/node",
+      "/home/martinsspn/dissertacao_e2e_semantico/node_modules/.bin/playwright",
+      "test",
+      "suite_limpar_wishlist.spec.ts",
+      "--config=/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/playwright.config.ts",
+      "--reporter=json"
+    ],
+    "configFile": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/playwright.config.ts",
+    "rootDir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_artifacts/prepared_execution/A",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/tmp/avaliacao-prompts-playwright",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_artifacts/prepared_execution/A",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 20000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.61.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "suite_limpar_wishlist.spec.ts",
+      "file": "suite_limpar_wishlist.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Removal of all products from the wishlist",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 20000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 250,
+                  "error": {
+                    "message": "Error: The environment variable DEMO_WEB_SHOP_EMAIL is required.",
+                    "stack": "Error: The environment variable DEMO_WEB_SHOP_EMAIL is required.\n    at requireEnvironmentVariable (/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_artifacts/prepared_execution/A/suite_limpar_wishlist.spec.ts:7:11)\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_artifacts/prepared_execution/A/suite_limpar_wishlist.spec.ts:14:17",
+                    "location": {
+                      "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_artifacts/prepared_execution/A/suite_limpar_wishlist.spec.ts",
+                      "column": 11,
+                      "line": 7
+                    },
+                    "snippet": "   5 |\n   6 |   if (!value) {\n>  7 |     throw new Error(`The environment variable ${name} is required.`);\n     |           ^\n   8 |   }\n   9 |\n  10 |   return value;"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_artifacts/prepared_execution/A/suite_limpar_wishlist.spec.ts",
+                        "column": 11,
+                        "line": 7
+                      },
+                      "message": "Error: The environment variable DEMO_WEB_SHOP_EMAIL is required.\n\n   5 |\n   6 |   if (!value) {\n>  7 |     throw new Error(`The environment variable ${name} is required.`);\n     |           ^\n   8 |   }\n   9 |\n  10 |   return value;\n    at requireEnvironmentVariable (/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_artifacts/prepared_execution/A/suite_limpar_wishlist.spec.ts:7:11)\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_artifacts/prepared_execution/A/suite_limpar_wishlist.spec.ts:14:17"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-07-20T17:45:33.100Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "resilience-mutation-events",
+                      "contentType": "application/json",
+                      "body": "W10="
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/tmp/avaliacao-prompts-playwright/suite_limpar_wishlist-Remo-de9be--products-from-the-wishlist/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_artifacts/prepared_execution/A/suite_limpar_wishlist.spec.ts",
+                    "column": 11,
+                    "line": 7
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "d86af201ab92a631acc4-75d4cdafc51c4bd8ad06",
+          "file": "suite_limpar_wishlist.spec.ts",
+          "line": 13,
+          "column": 5
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-07-20T17:45:31.959Z",
+    "duration": 1941.99,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

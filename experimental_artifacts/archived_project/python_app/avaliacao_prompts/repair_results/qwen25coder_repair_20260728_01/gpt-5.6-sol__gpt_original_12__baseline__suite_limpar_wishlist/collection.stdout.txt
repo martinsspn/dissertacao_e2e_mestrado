@@ -1,0 +1,3 @@
+Listing tests:
+  suite_limpar_wishlist.spec.ts:13:5 › Removal of all products from the wishlist
+Total: 1 test in 1 file

@@ -1,0 +1,3 @@
+Listing tests:
+  suite_login_valido.spec.ts:4:7 › Suite Login Valido › should log in with valid credentials and display account links
+Total: 1 test in 1 file

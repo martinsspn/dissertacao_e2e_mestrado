@@ -1,0 +1,5 @@
+Listing tests:
+  suite_navegar_cartoes_presente.spec.ts:4:7 › Suite Navegar Cartoes Presente › The user accesses the Demo Web Shop home page
+  suite_navegar_cartoes_presente.spec.ts:9:7 › Suite Navegar Cartoes Presente › The user selects Gift Cards in the main category menu
+  suite_navegar_cartoes_presente.spec.ts:14:7 › Suite Navegar Cartoes Presente › The system displays the Gift Cards category page, its breadcrumb, and the available gift card products
+Total: 3 tests in 1 file

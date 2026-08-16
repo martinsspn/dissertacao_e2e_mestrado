@@ -1,0 +1,18 @@
+import { test, expect } from '@playwright/test';
+
+test.describe('Suite Exibir Quatro Livros', () => {
+  test('The user accesses the Books category and displays no more than four product items on the current page', async ({ page }) => {
+    // Etapa 1: Access the Books category
+    await page.goto('https://demowebshop.tricentis.com/');
+    await page.getByText("Books", { exact: true }).first().click();
+    await expect(page).toHaveURL('https://demowebshop.tricentis.com/books');
+
+    // Etapa 2: Select 4 in the Display control
+    await page.locator('#products-view-mode').selectOption({ label: 'List' });
+    await page.locator('#product-list-form > div > select[name="products-pagesize"]').selectOption('4');
+
+    // Etapa 3: Verify no more than four product items are displayed
+    const productItems = page.locator('.product-item');
+    await expect(productItems).toHaveCount(4);
+  });
+});

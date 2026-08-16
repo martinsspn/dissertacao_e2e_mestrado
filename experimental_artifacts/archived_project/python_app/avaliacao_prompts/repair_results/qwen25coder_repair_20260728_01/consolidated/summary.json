@@ -1,0 +1,234 @@
+{
+  "repair_model": "qwen2.5-coder:7b",
+  "attempts_per_file": 1,
+  "totals": {
+    "attempted": 94,
+    "collected": 93,
+    "execution_passed": 6,
+    "semantic_false_passes": 1,
+    "successful_repairs": 5,
+    "repair_success_rate": 0.0532,
+    "client_seconds_total": 3379.884,
+    "client_seconds_median": 30.734,
+    "prompt_tokens": 130114,
+    "output_tokens": 35313,
+    "lines_added": 311,
+    "lines_deleted": 277,
+    "line_churn": 588,
+    "mean_line_similarity": 0.9112,
+    "failure_classes": {
+      "passed": 6,
+      "assertion_failure": 25,
+      "locator_timeout": 51,
+      "selector_ambiguity": 9,
+      "collection_error": 1,
+      "runtime_code_error": 2
+    },
+    "client_seconds_per_successful_repair": 675.977,
+    "tokens_per_successful_repair": 33085.4
+  },
+  "groups": [
+    {
+      "model_origin": "gemini-3.6-flash",
+      "round": "gemini_new_20",
+      "condition": "baseline",
+      "attempted": 12,
+      "collected": 11,
+      "execution_passed": 1,
+      "successful_repairs": 1,
+      "repair_success_rate": 0.0833,
+      "client_seconds_total": 439.934,
+      "client_seconds_mean": 36.661,
+      "prompt_tokens": 11398,
+      "output_tokens": 5842,
+      "line_churn": 62,
+      "mean_line_similarity": 0.945
+    },
+    {
+      "model_origin": "gemini-3.6-flash",
+      "round": "gemini_new_20",
+      "condition": "structured_context",
+      "attempted": 8,
+      "collected": 8,
+      "execution_passed": 2,
+      "successful_repairs": 2,
+      "repair_success_rate": 0.25,
+      "client_seconds_total": 316.101,
+      "client_seconds_mean": 39.513,
+      "prompt_tokens": 14302,
+      "output_tokens": 2860,
+      "line_churn": 17,
+      "mean_line_similarity": 0.9477
+    },
+    {
+      "model_origin": "gpt-5.6-sol",
+      "round": "gpt_original_12",
+      "condition": "baseline",
+      "attempted": 5,
+      "collected": 5,
+      "execution_passed": 1,
+      "successful_repairs": 1,
+      "repair_success_rate": 0.2,
+      "client_seconds_total": 283.096,
+      "client_seconds_mean": 56.619,
+      "prompt_tokens": 5288,
+      "output_tokens": 3281,
+      "line_churn": 46,
+      "mean_line_similarity": 0.9476
+    },
+    {
+      "model_origin": "gpt-5.6-sol",
+      "round": "gpt_original_12",
+      "condition": "structured_context",
+      "attempted": 5,
+      "collected": 5,
+      "execution_passed": 0,
+      "successful_repairs": 0,
+      "repair_success_rate": 0.0,
+      "client_seconds_total": 384.399,
+      "client_seconds_mean": 76.88,
+      "prompt_tokens": 11241,
+      "output_tokens": 3911,
+      "line_churn": 50,
+      "mean_line_similarity": 0.9534
+    },
+    {
+      "model_origin": "qwen2.5-coder:7b",
+      "round": "qwen_new_20",
+      "condition": "baseline",
+      "attempted": 20,
+      "collected": 20,
+      "execution_passed": 0,
+      "successful_repairs": 0,
+      "repair_success_rate": 0.0,
+      "client_seconds_total": 372.178,
+      "client_seconds_mean": 18.609,
+      "prompt_tokens": 12862,
+      "output_tokens": 4906,
+      "line_churn": 145,
+      "mean_line_similarity": 0.8645
+    },
+    {
+      "model_origin": "qwen2.5-coder:7b",
+      "round": "qwen_new_20",
+      "condition": "structured_context",
+      "attempted": 18,
+      "collected": 18,
+      "execution_passed": 1,
+      "successful_repairs": 0,
+      "repair_success_rate": 0.0,
+      "client_seconds_total": 752.682,
+      "client_seconds_mean": 41.816,
+      "prompt_tokens": 40318,
+      "output_tokens": 5541,
+      "line_churn": 93,
+      "mean_line_similarity": 0.9105
+    },
+    {
+      "model_origin": "qwen2.5-coder:7b",
+      "round": "qwen_old_14",
+      "condition": "baseline",
+      "attempted": 14,
+      "collected": 14,
+      "execution_passed": 0,
+      "successful_repairs": 0,
+      "repair_success_rate": 0.0,
+      "client_seconds_total": 288.659,
+      "client_seconds_mean": 20.619,
+      "prompt_tokens": 9369,
+      "output_tokens": 3913,
+      "line_churn": 114,
+      "mean_line_similarity": 0.8738
+    },
+    {
+      "model_origin": "qwen2.5-coder:7b",
+      "round": "qwen_old_14",
+      "condition": "structured_context",
+      "attempted": 12,
+      "collected": 12,
+      "execution_passed": 1,
+      "successful_repairs": 1,
+      "repair_success_rate": 0.0833,
+      "client_seconds_total": 542.835,
+      "client_seconds_mean": 45.236,
+      "prompt_tokens": 25336,
+      "output_tokens": 5059,
+      "line_churn": 61,
+      "mean_line_similarity": 0.9426
+    }
+  ],
+  "provisional_mutation_eligible_pairs": [
+    {
+      "model": "gemini-3.6-flash",
+      "round": "gemini_new_20",
+      "scenario": "fluxo_computadores_desktops"
+    },
+    {
+      "model": "gemini-3.6-flash",
+      "round": "gemini_new_20",
+      "scenario": "suite_cadastro_campos_obrigatorios"
+    },
+    {
+      "model": "gemini-3.6-flash",
+      "round": "gemini_new_20",
+      "scenario": "suite_cadastro_confirmacao_senha"
+    },
+    {
+      "model": "gemini-3.6-flash",
+      "round": "gemini_new_20",
+      "scenario": "suite_navegar_categoria_livros"
+    },
+    {
+      "model": "gemini-3.6-flash",
+      "round": "gemini_new_20",
+      "scenario": "suite_navegar_sobre_nos"
+    },
+    {
+      "model": "gemini-3.6-flash",
+      "round": "gemini_new_20",
+      "scenario": "user_registration_book_purchase"
+    },
+    {
+      "model": "gpt-5.6-sol",
+      "round": "gpt_original_12",
+      "scenario": "suite_adicionar_carrinho"
+    },
+    {
+      "model": "gpt-5.6-sol",
+      "round": "gpt_original_12",
+      "scenario": "suite_busca_blue_jeans"
+    },
+    {
+      "model": "gpt-5.6-sol",
+      "round": "gpt_original_12",
+      "scenario": "suite_detalhes_fiction"
+    },
+    {
+      "model": "gpt-5.6-sol",
+      "round": "gpt_original_12",
+      "scenario": "suite_limpar_carrinho"
+    },
+    {
+      "model": "gpt-5.6-sol",
+      "round": "gpt_original_12",
+      "scenario": "suite_login_invalido"
+    },
+    {
+      "model": "gpt-5.6-sol",
+      "round": "gpt_original_12",
+      "scenario": "suite_login_valido"
+    },
+    {
+      "model": "gpt-5.6-sol",
+      "round": "gpt_original_12",
+      "scenario": "suite_logout"
+    }
+  ],
+  "provisional_eligible_pair_count": 13,
+  "notes": [
+    "Original generated files were not modified.",
+    "Execution pass alone was not accepted as successful repair.",
+    "Eligibility is provisional until three normalized original/repaired repetitions are completed.",
+    "Repaired and unrepaired artifacts must be reported as separate resilience tracks."
+  ]
+}

@@ -1,0 +1,3 @@
+Listing tests:
+  suite_produtos_visualizados_recentemente.spec.ts:4:7 › Suite Produtos Visualizados Recentemente › Viewing the product history and verifying recently viewed products
+Total: 1 test in 1 file

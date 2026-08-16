@@ -1,0 +1,3 @@
+Listing tests:
+  suite_persistencia_carrinho_apos_login.spec.ts:4:7 › Authenticated User Cart Persistence › should persist Computing and Internet in cart across user sessions and clean up state
+Total: 1 test in 1 file

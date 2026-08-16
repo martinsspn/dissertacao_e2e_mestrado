@@ -1,0 +1,1 @@
+Login with valid credentials: The user accesses the Log in page of the Demo Web Shop. The user fills in Email and Password with the valid credentials provided by the testing environment. The user submits the login form. The system authenticates the user and displays the account and Log out links.

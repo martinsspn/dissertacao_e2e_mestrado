@@ -1,0 +1,3 @@
+Listing tests:
+  suite_carrinho_inicialmente_vazio.spec.ts:4:7 › Viewing an empty shopping cart › should display the shopping cart page with zero items and an empty message
+Total: 1 test in 1 file

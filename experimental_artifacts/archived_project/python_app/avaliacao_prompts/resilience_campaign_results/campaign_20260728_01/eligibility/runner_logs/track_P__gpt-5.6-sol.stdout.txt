@@ -1,0 +1,1 @@
+[avaliar-resiliencia] Elegibilidade: /home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaign_results/campaign_20260728_01/eligibility/track_P/gpt-5.6-sol/eligibility_results.json

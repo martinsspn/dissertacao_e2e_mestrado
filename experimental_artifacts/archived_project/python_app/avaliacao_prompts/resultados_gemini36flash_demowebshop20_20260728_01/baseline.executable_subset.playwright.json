@@ -1,0 +1,1371 @@
+{
+  "config": {
+    "argv": [
+      "/usr/bin/node",
+      "/home/martinsspn/dissertacao_e2e_semantico/node_modules/.bin/playwright",
+      "test",
+      "--config=python_app/avaliacao_prompts/playwright.config.ts",
+      "--reporter=json"
+    ],
+    "configFile": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/playwright.config.ts",
+    "rootDir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resultados_gemini36flash_demowebshop20_20260728_01/baseline_executable_subset",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/tmp/avaliacao-prompts-playwright",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resultados_gemini36flash_demowebshop20_20260728_01/baseline_executable_subset",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 20000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.61.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "fluxo_computadores_desktops.spec.ts",
+      "file": "fluxo_computadores_desktops.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Digital Downloads Category",
+          "file": "fluxo_computadores_desktops.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should access Digital downloads, view items, and confirm page visibility",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 20000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 8039,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('link', { name: 'Digital downloads', exact: true }).first()\nExpected: visible\nTimeout: 7000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 7000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('link', { name: 'Digital downloads', exact: true }).first()\u001b[22m\n",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('link', { name: 'Digital downloads', exact: true }).first()\nExpected: visible\nTimeout: 7000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 7000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('link', { name: 'Digital downloads', exact: true }).first()\u001b[22m\n\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resultados_gemini36flash_demowebshop20_20260728_01/baseline_executable_subset/fluxo_computadores_desktops.spec.ts:12:32",
+                        "location": {
+                          "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resultados_gemini36flash_demowebshop20_20260728_01/baseline_executable_subset/fluxo_computadores_desktops.spec.ts",
+                          "column": 32,
+                          "line": 12
+                        },
+                        "snippet": "  10 |     // 2. Locate and click on the 'Digital downloads' category\n  11 |     const categoryLink = page.getByRole('link', { name: 'Digital downloads', exact: true }).first();\n> 12 |     await expect(categoryLink).toBeVisible();\n     |                                ^\n  13 |     await categoryLink.click();\n  14 |\n  15 |     // 3. Validate that the Digital downloads page is visible"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resultados_gemini36flash_demowebshop20_20260728_01/baseline_executable_subset/fluxo_computadores_desktops.spec.ts",
+                            "column": 32,
+                            "line": 12
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('link', { name: 'Digital downloads', exact: true }).first()\nExpected: visible\nTimeout: 7000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 7000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('link', { name: 'Digital downloads', exact: true }).first()\u001b[22m\n\n\n  10 |     // 2. Locate and click on the 'Digital downloads' category\n  11 |     const categoryLink = page.getByRole('link', { name: 'Digital downloads', exact: true }).first();\n> 12 |     await expect(categoryLink).toBeVisible();\n     |                                ^\n  13 |     await categoryLink.click();\n  14 |\n  15 |     // 3. Validate that the Digital downloads page is visible\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resultados_gemini36flash_demowebshop20_20260728_01/baseline_executable_subset/fluxo_computadores_desktops.spec.ts:12:32"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-28T13:28:26.618Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/tmp/avaliacao-prompts-playwright/fluxo_computadores_desktop-87a72-and-confirm-page-visibility/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resultados_gemini36flash_demowebshop20_20260728_01/baseline_executable_subset/fluxo_computadores_desktops.spec.ts",
+                        "column": 32,
+                        "line": 12
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "5ffdfa1a8a18bafbf733-c58c0f80a0b55fdb4077",
+              "file": "fluxo_computadores_desktops.spec.ts",
+              "line": 4,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "suite_adicionar_dois_produtos_carrinho.spec.ts",
+      "file": "suite_adicionar_dois_produtos_carrinho.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Shopping Cart - Add Multiple Products",
+          "file": "suite_adicionar_dois_produtos_carrinho.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should display both Computing and Internet and Fiction in cart with quantity and price",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 20000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 5366,
+                      "error": {
+                        "message": "Error: locator.click: Error: strict mode violation: getByRole('button', { name: 'Add to cart' }) resolved to 6 elements:\n    1) <input type=\"button\" value=\"Add to cart\" data-productid=\"13\" id=\"add-to-cart-button-13\" class=\"button-1 add-to-cart-button\" onclick=\"AjaxCart.addproducttocart_details('/addproducttocart/details/13/1', '#product-details-form');return false;\"/> aka locator('#add-to-cart-button-13')\n    2) <input type=\"button\" value=\"Add to cart\" class=\"button-2 product-box-add-to-cart-button\" onclick=\"AjaxCart.addproducttocart_catalog('/addproducttocart/catalog/75/1/1    ');return false;\"/> aka getByRole('button', { name: 'Add to cart' }).nth(1)\n    3) <input type=\"button\" value=\"Add to cart\" class=\"button-2 product-box-add-to-cart-button\" onclick=\"AjaxCart.addproducttocart_catalog('/addproducttocart/catalog/74/1/1    ');return false;\"/> aka getByRole('button', { name: 'Add to cart' }).nth(2)\n    4) <input type=\"button\" value=\"Add to cart\" class=\"button-2 product-box-add-to-cart-button\" onclick=\"AjaxCart.addproducttocart_catalog('/addproducttocart/catalog/36/1/1    ');return false;\"/> aka getByRole('button', { name: 'Add to cart' }).nth(3)\n    5) <input type=\"button\" value=\"Add to cart\" class=\"button-2 product-box-add-to-cart-button\" onclick=\"AjaxCart.addproducttocart_catalog('/addproducttocart/catalog/22/1/1    ');return false;\"/> aka getByRole('button', { name: 'Add to cart' }).nth(4)\n    6) <input type=\"button\" value=\"Add to cart\" class=\"button-2 product-box-add-to-cart-button\" onclick=\"AjaxCart.addproducttocart_catalog('/addproducttocart/catalog/45/1/1    ');return false;\"/> aka getByRole('button', { name: 'Add to cart' }).nth(5)\n\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'Add to cart' })\u001b[22m\n",
+                        "stack": "Error: locator.click: Error: strict mode violation: getByRole('button', { name: 'Add to cart' }) resolved to 6 elements:\n    1) <input type=\"button\" value=\"Add to cart\" data-productid=\"13\" id=\"add-to-cart-button-13\" class=\"button-1 add-to-cart-button\" onclick=\"AjaxCart.addproducttocart_details('/addproducttocart/details/13/1', '#product-details-form');return false;\"/> aka locator('#add-to-cart-button-13')\n    2) <input type=\"button\" value=\"Add to cart\" class=\"button-2 product-box-add-to-cart-button\" onclick=\"AjaxCart.addproducttocart_catalog('/addproducttocart/catalog/75/1/1    ');return false;\"/> aka getByRole('button', { name: 'Add to cart' }).nth(1)\n    3) <input type=\"button\" value=\"Add to cart\" class=\"button-2 product-box-add-to-cart-button\" onclick=\"AjaxCart.addproducttocart_catalog('/addproducttocart/catalog/74/1/1    ');return false;\"/> aka getByRole('button', { name: 'Add to cart' }).nth(2)\n    4) <input type=\"button\" value=\"Add to cart\" class=\"button-2 product-box-add-to-cart-button\" onclick=\"AjaxCart.addproducttocart_catalog('/addproducttocart/catalog/36/1/1    ');return false;\"/> aka getByRole('button', { name: 'Add to cart' }).nth(3)\n    5) <input type=\"button\" value=\"Add to cart\" class=\"button-2 product-box-add-to-cart-button\" onclick=\"AjaxCart.addproducttocart_catalog('/addproducttocart/catalog/22/1/1    ');return false;\"/> aka getByRole('button', { name: 'Add to cart' }).nth(4)\n    6) <input type=\"button\" value=\"Add to cart\" class=\"button-2 product-box-add-to-cart-button\" onclick=\"AjaxCart.addproducttocart_catalog('/addproducttocart/catalog/45/1/1    ');return false;\"/> aka getByRole('button', { name: 'Add to cart' }).nth(5)\n\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'Add to cart' })\u001b[22m\n\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resultados_gemini36flash_demowebshop20_20260728_01/baseline_executable_subset/suite_adicionar_dois_produtos_carrinho.spec.ts:18:61",
+                        "location": {
+                          "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resultados_gemini36flash_demowebshop20_20260728_01/baseline_executable_subset/suite_adicionar_dois_produtos_carrinho.spec.ts",
+                          "column": 61,
+                          "line": 18
+                        },
+                        "snippet": "  16 |\n  17 |     // Click 'Add to cart' and wait for notification\n> 18 |     await page.getByRole('button', { name: 'Add to cart' }).click();\n     |                                                             ^\n  19 |     const notification = page.locator('#bar-notification');\n  20 |     await expect(notification).toBeVisible();\n  21 |     await expect(notification).toContainText('The product has been added to your');"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resultados_gemini36flash_demowebshop20_20260728_01/baseline_executable_subset/suite_adicionar_dois_produtos_carrinho.spec.ts",
+                            "column": 61,
+                            "line": 18
+                          },
+                          "message": "Error: locator.click: Error: strict mode violation: getByRole('button', { name: 'Add to cart' }) resolved to 6 elements:\n    1) <input type=\"button\" value=\"Add to cart\" data-productid=\"13\" id=\"add-to-cart-button-13\" class=\"button-1 add-to-cart-button\" onclick=\"AjaxCart.addproducttocart_details('/addproducttocart/details/13/1', '#product-details-form');return false;\"/> aka locator('#add-to-cart-button-13')\n    2) <input type=\"button\" value=\"Add to cart\" class=\"button-2 product-box-add-to-cart-button\" onclick=\"AjaxCart.addproducttocart_catalog('/addproducttocart/catalog/75/1/1    ');return false;\"/> aka getByRole('button', { name: 'Add to cart' }).nth(1)\n    3) <input type=\"button\" value=\"Add to cart\" class=\"button-2 product-box-add-to-cart-button\" onclick=\"AjaxCart.addproducttocart_catalog('/addproducttocart/catalog/74/1/1    ');return false;\"/> aka getByRole('button', { name: 'Add to cart' }).nth(2)\n    4) <input type=\"button\" value=\"Add to cart\" class=\"button-2 product-box-add-to-cart-button\" onclick=\"AjaxCart.addproducttocart_catalog('/addproducttocart/catalog/36/1/1    ');return false;\"/> aka getByRole('button', { name: 'Add to cart' }).nth(3)\n    5) <input type=\"button\" value=\"Add to cart\" class=\"button-2 product-box-add-to-cart-button\" onclick=\"AjaxCart.addproducttocart_catalog('/addproducttocart/catalog/22/1/1    ');return false;\"/> aka getByRole('button', { name: 'Add to cart' }).nth(4)\n    6) <input type=\"button\" value=\"Add to cart\" class=\"button-2 product-box-add-to-cart-button\" onclick=\"AjaxCart.addproducttocart_catalog('/addproducttocart/catalog/45/1/1    ');return false;\"/> aka getByRole('button', { name: 'Add to cart' }).nth(5)\n\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'Add to cart' })\u001b[22m\n\n\n  16 |\n  17 |     // Click 'Add to cart' and wait for notification\n> 18 |     await page.getByRole('button', { name: 'Add to cart' }).click();\n     |                                                             ^\n  19 |     const notification = page.locator('#bar-notification');\n  20 |     await expect(notification).toBeVisible();\n  21 |     await expect(notification).toContainText('The product has been added to your');\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resultados_gemini36flash_demowebshop20_20260728_01/baseline_executable_subset/suite_adicionar_dois_produtos_carrinho.spec.ts:18:61"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-28T13:28:36.740Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/tmp/avaliacao-prompts-playwright/suite_adicionar_dois_produ-edc11-art-with-quantity-and-price/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resultados_gemini36flash_demowebshop20_20260728_01/baseline_executable_subset/suite_adicionar_dois_produtos_carrinho.spec.ts",
+                        "column": 61,
+                        "line": 18
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "733afb2cd731fa9edb91-1c1bfb5a27c887a7e9b6",
+              "file": "suite_adicionar_dois_produtos_carrinho.spec.ts",
+              "line": 4,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "suite_atualizar_quantidade_carrinho.spec.ts",
+      "file": "suite_atualizar_quantidade_carrinho.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Shopping Cart Quantity Update",
+          "file": "suite_atualizar_quantidade_carrinho.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should update product quantity in cart and reflect correct subtotal",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 20000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 10591,
+                      "error": {
+                        "message": "TimeoutError: locator.fill: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByPlaceholder('Search store')\u001b[22m\n",
+                        "stack": "TimeoutError: locator.fill: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByPlaceholder('Search store')\u001b[22m\n\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resultados_gemini36flash_demowebshop20_20260728_01/baseline_executable_subset/suite_atualizar_quantidade_carrinho.spec.ts:12:23",
+                        "location": {
+                          "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resultados_gemini36flash_demowebshop20_20260728_01/baseline_executable_subset/suite_atualizar_quantidade_carrinho.spec.ts",
+                          "column": 23,
+                          "line": 12
+                        },
+                        "snippet": "  10 |     // Search for \"Computing and Internet\"\n  11 |     const searchInput = page.getByPlaceholder('Search store');\n> 12 |     await searchInput.fill('Computing and Internet');\n     |                       ^\n  13 |     await page.getByRole('button', { name: 'Search' }).click();\n  14 |\n  15 |     // Open the product page"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resultados_gemini36flash_demowebshop20_20260728_01/baseline_executable_subset/suite_atualizar_quantidade_carrinho.spec.ts",
+                            "column": 23,
+                            "line": 12
+                          },
+                          "message": "TimeoutError: locator.fill: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByPlaceholder('Search store')\u001b[22m\n\n\n  10 |     // Search for \"Computing and Internet\"\n  11 |     const searchInput = page.getByPlaceholder('Search store');\n> 12 |     await searchInput.fill('Computing and Internet');\n     |                       ^\n  13 |     await page.getByRole('button', { name: 'Search' }).click();\n  14 |\n  15 |     // Open the product page\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resultados_gemini36flash_demowebshop20_20260728_01/baseline_executable_subset/suite_atualizar_quantidade_carrinho.spec.ts:12:23"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-28T13:28:46.283Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/tmp/avaliacao-prompts-playwright/suite_atualizar_quantidade-1882c-nd-reflect-correct-subtotal/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resultados_gemini36flash_demowebshop20_20260728_01/baseline_executable_subset/suite_atualizar_quantidade_carrinho.spec.ts",
+                        "column": 23,
+                        "line": 12
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "0631d563be86abbaa468-3c4236d5a223d40387d1",
+              "file": "suite_atualizar_quantidade_carrinho.spec.ts",
+              "line": 4,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "suite_busca_sem_resultados.spec.ts",
+      "file": "suite_busca_sem_resultados.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Store Product Search",
+          "file": "suite_busca_sem_resultados.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should inform user when searching for a nonexistent product",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 20000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 7777,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByPlaceholder(/search store/i).or(getByLabel(/search store/i)).or(getByRole('textbox', { name: /search/i })).first()\nExpected: visible\nTimeout: 7000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 7000ms\u001b[22m\n\u001b[2m  - waiting for getByPlaceholder(/search store/i).or(getByLabel(/search store/i)).or(getByRole('textbox', { name: /search/i })).first()\u001b[22m\n",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByPlaceholder(/search store/i).or(getByLabel(/search store/i)).or(getByRole('textbox', { name: /search/i })).first()\nExpected: visible\nTimeout: 7000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 7000ms\u001b[22m\n\u001b[2m  - waiting for getByPlaceholder(/search store/i).or(getByLabel(/search store/i)).or(getByRole('textbox', { name: /search/i })).first()\u001b[22m\n\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resultados_gemini36flash_demowebshop20_20260728_01/baseline_executable_subset/suite_busca_sem_resultados.spec.ts:18:31",
+                        "location": {
+                          "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resultados_gemini36flash_demowebshop20_20260728_01/baseline_executable_subset/suite_busca_sem_resultados.spec.ts",
+                          "column": 31,
+                          "line": 18
+                        },
+                        "snippet": "  16 |       .first();\n  17 |\n> 18 |     await expect(searchInput).toBeVisible();\n     |                               ^\n  19 |\n  20 |     // Enter a unique search term that does not match any product\n  21 |     await searchInput.fill(nonexistentTerm);"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resultados_gemini36flash_demowebshop20_20260728_01/baseline_executable_subset/suite_busca_sem_resultados.spec.ts",
+                            "column": 31,
+                            "line": 18
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByPlaceholder(/search store/i).or(getByLabel(/search store/i)).or(getByRole('textbox', { name: /search/i })).first()\nExpected: visible\nTimeout: 7000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 7000ms\u001b[22m\n\u001b[2m  - waiting for getByPlaceholder(/search store/i).or(getByLabel(/search store/i)).or(getByRole('textbox', { name: /search/i })).first()\u001b[22m\n\n\n  16 |       .first();\n  17 |\n> 18 |     await expect(searchInput).toBeVisible();\n     |                               ^\n  19 |\n  20 |     // Enter a unique search term that does not match any product\n  21 |     await searchInput.fill(nonexistentTerm);\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resultados_gemini36flash_demowebshop20_20260728_01/baseline_executable_subset/suite_busca_sem_resultados.spec.ts:18:31"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-28T13:28:58.746Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/tmp/avaliacao-prompts-playwright/suite_busca_sem_resultados-6e797-g-for-a-nonexistent-product/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resultados_gemini36flash_demowebshop20_20260728_01/baseline_executable_subset/suite_busca_sem_resultados.spec.ts",
+                        "column": 31,
+                        "line": 18
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "2fa21ebe7e7d4f5dd10e-dd6685831a793a31b20b",
+              "file": "suite_busca_sem_resultados.spec.ts",
+              "line": 4,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "suite_cadastro_campos_obrigatorios.spec.ts",
+      "file": "suite_cadastro_campos_obrigatorios.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Demo Web Shop - Registration Validation",
+          "file": "suite_cadastro_campos_obrigatorios.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should display required-field validation messages when submitting empty form",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 20000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 3359,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-28T13:29:08.897Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "aaa9aa6f840f1d71d364-7ebf930e8f516be03a4d",
+              "file": "suite_cadastro_campos_obrigatorios.spec.ts",
+              "line": 4,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "suite_cadastro_confirmacao_senha.spec.ts",
+      "file": "suite_cadastro_confirmacao_senha.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Registration - Mismatched Password Validation",
+          "file": "suite_cadastro_confirmacao_senha.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should display error when password and confirm password do not match",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 20000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 3314,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-28T13:29:12.586Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "51f27eb1d4e883d20ddc-2322d096c32e61658dec",
+              "file": "suite_cadastro_confirmacao_senha.spec.ts",
+              "line": 4,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "suite_cadastro_senha_curta.spec.ts",
+      "file": "suite_cadastro_senha_curta.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "User Registration Validation",
+          "file": "suite_cadastro_senha_curta.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should reject registration when password has fewer than six characters",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 20000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 260,
+                      "error": {
+                        "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3000/register\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3000/register\", waiting until \"load\"\u001b[22m\n",
+                        "stack": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3000/register\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3000/register\", waiting until \"load\"\u001b[22m\n\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resultados_gemini36flash_demowebshop20_20260728_01/baseline_executable_subset/suite_cadastro_senha_curta.spec.ts:6:16",
+                        "location": {
+                          "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resultados_gemini36flash_demowebshop20_20260728_01/baseline_executable_subset/suite_cadastro_senha_curta.spec.ts",
+                          "column": 16,
+                          "line": 6
+                        },
+                        "snippet": "  4 |   test('should reject registration when password has fewer than six characters', async ({ page }) => {\n  5 |     const baseUrl = process.env.BASE_URL || 'http://localhost:3000';\n> 6 |     await page.goto(`${baseUrl}/register`);\n    |                ^\n  7 |\n  8 |     const uniqueEmail = `testuser_${Date.now()}_${Math.floor(Math.random() * 1000)}@example.com`;\n  9 |     const shortPassword = '12345'; // 5 characters (< 6)"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resultados_gemini36flash_demowebshop20_20260728_01/baseline_executable_subset/suite_cadastro_senha_curta.spec.ts",
+                            "column": 16,
+                            "line": 6
+                          },
+                          "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3000/register\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3000/register\", waiting until \"load\"\u001b[22m\n\n\n  4 |   test('should reject registration when password has fewer than six characters', async ({ page }) => {\n  5 |     const baseUrl = process.env.BASE_URL || 'http://localhost:3000';\n> 6 |     await page.goto(`${baseUrl}/register`);\n    |                ^\n  7 |\n  8 |     const uniqueEmail = `testuser_${Date.now()}_${Math.floor(Math.random() * 1000)}@example.com`;\n  9 |     const shortPassword = '12345'; // 5 characters (< 6)\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resultados_gemini36flash_demowebshop20_20260728_01/baseline_executable_subset/suite_cadastro_senha_curta.spec.ts:6:16"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-28T13:29:15.938Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/tmp/avaliacao-prompts-playwright/suite_cadastro_senha_curta-f2363-s-fewer-than-six-characters/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resultados_gemini36flash_demowebshop20_20260728_01/baseline_executable_subset/suite_cadastro_senha_curta.spec.ts",
+                        "column": 16,
+                        "line": 6
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "17823d8be8fb679760fc-69b265b5773951c7e29c",
+              "file": "suite_cadastro_senha_curta.spec.ts",
+              "line": 4,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "suite_carrinho_inicialmente_vazio.spec.ts",
+      "file": "suite_carrinho_inicialmente_vazio.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Shopping Cart - Empty State",
+          "file": "suite_carrinho_inicialmente_vazio.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "displays empty cart message and zero item count when accessed without adding products",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 20000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 5,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 10744,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('heading', { name: /shopping cart|your cart/i })\nExpected: visible\nTimeout: 7000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 7000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('heading', { name: /shopping cart|your cart/i })\u001b[22m\n",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('heading', { name: /shopping cart|your cart/i })\nExpected: visible\nTimeout: 7000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 7000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('heading', { name: /shopping cart|your cart/i })\u001b[22m\n\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resultados_gemini36flash_demowebshop20_20260728_01/baseline_executable_subset/suite_carrinho_inicialmente_vazio.spec.ts:12:31",
+                        "location": {
+                          "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resultados_gemini36flash_demowebshop20_20260728_01/baseline_executable_subset/suite_carrinho_inicialmente_vazio.spec.ts",
+                          "column": 31,
+                          "line": 12
+                        },
+                        "snippet": "  10 |     // Verify Shopping Cart page is displayed\n  11 |     const cartHeading = page.getByRole('heading', { name: /shopping cart|your cart/i });\n> 12 |     await expect(cartHeading).toBeVisible();\n     |                               ^\n  13 |\n  14 |     // Verify notice informing that the shopping cart is empty\n  15 |     const emptyCartNotice = page.getByText(/shopping cart is empty|your cart is empty|you have no items/i);"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resultados_gemini36flash_demowebshop20_20260728_01/baseline_executable_subset/suite_carrinho_inicialmente_vazio.spec.ts",
+                            "column": 31,
+                            "line": 12
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('heading', { name: /shopping cart|your cart/i })\nExpected: visible\nTimeout: 7000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 7000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('heading', { name: /shopping cart|your cart/i })\u001b[22m\n\n\n  10 |     // Verify Shopping Cart page is displayed\n  11 |     const cartHeading = page.getByRole('heading', { name: /shopping cart|your cart/i });\n> 12 |     await expect(cartHeading).toBeVisible();\n     |                               ^\n  13 |\n  14 |     // Verify notice informing that the shopping cart is empty\n  15 |     const emptyCartNotice = page.getByText(/shopping cart is empty|your cart is empty|you have no items/i);\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resultados_gemini36flash_demowebshop20_20260728_01/baseline_executable_subset/suite_carrinho_inicialmente_vazio.spec.ts:12:31"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-28T13:29:20.538Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/tmp/avaliacao-prompts-playwright/suite_carrinho_inicialment-f6c79-sed-without-adding-products/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resultados_gemini36flash_demowebshop20_20260728_01/baseline_executable_subset/suite_carrinho_inicialmente_vazio.spec.ts",
+                        "column": 31,
+                        "line": 12
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "416516fdabcf7507d9d7-40736eb434aa3e9f2c4a",
+              "file": "suite_carrinho_inicialmente_vazio.spec.ts",
+              "line": 4,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "suite_comparar_produtos.spec.ts",
+      "file": "suite_comparar_produtos.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Product Comparison",
+          "file": "suite_comparar_produtos.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should add two products to compare list, view comparison, and clear list",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 20000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 6,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 6225,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-28T13:29:33.222Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "c7461115bb411687791d-96555a76eca06177e855",
+              "file": "suite_comparar_produtos.spec.ts",
+              "line": 4,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "suite_enquete_sem_resposta.spec.ts",
+      "file": "suite_enquete_sem_resposta.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Community Poll",
+          "file": "suite_enquete_sem_resposta.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should inform user to select an answer when attempting to vote without selection",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 20000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 6,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 4480,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-28T13:29:39.853Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "4387e95b3423d9c93de2-8dc604234a987e14a1ce",
+              "file": "suite_enquete_sem_resposta.spec.ts",
+              "line": 4,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "suite_exibir_quatro_livros.spec.ts",
+      "file": "suite_exibir_quatro_livros.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Books Category Display Control",
+          "file": "suite_exibir_quatro_livros.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should keep Books visible and display no more than 4 items when 4 is selected",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 20000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 6,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 8768,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeLessThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: <= \u001b[32m4\u001b[39m\nReceived:    \u001b[31m8\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeLessThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: <= \u001b[32m4\u001b[39m\nReceived:    \u001b[31m8\u001b[39m\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resultados_gemini36flash_demowebshop20_20260728_01/baseline_executable_subset/suite_exibir_quatro_livros.spec.ts:44:19",
+                        "location": {
+                          "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resultados_gemini36flash_demowebshop20_20260728_01/baseline_executable_subset/suite_exibir_quatro_livros.spec.ts",
+                          "column": 19,
+                          "line": 44
+                        },
+                        "snippet": "  42 |\n  43 |     expect(count).toBeGreaterThan(0);\n> 44 |     expect(count).toBeLessThanOrEqual(4);\n     |                   ^\n  45 |   });\n  46 | });\n  47 |"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resultados_gemini36flash_demowebshop20_20260728_01/baseline_executable_subset/suite_exibir_quatro_livros.spec.ts",
+                            "column": 19,
+                            "line": 44
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeLessThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: <= \u001b[32m4\u001b[39m\nReceived:    \u001b[31m8\u001b[39m\n\n  42 |\n  43 |     expect(count).toBeGreaterThan(0);\n> 44 |     expect(count).toBeLessThanOrEqual(4);\n     |                   ^\n  45 |   });\n  46 | });\n  47 |\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resultados_gemini36flash_demowebshop20_20260728_01/baseline_executable_subset/suite_exibir_quatro_livros.spec.ts:44:19"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-28T13:29:44.377Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/tmp/avaliacao-prompts-playwright/suite_exibir_quatro_livros-e2b06--4-items-when-4-is-selected/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resultados_gemini36flash_demowebshop20_20260728_01/baseline_executable_subset/suite_exibir_quatro_livros.spec.ts",
+                        "column": 19,
+                        "line": 44
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "05e94cded513047be844-421020ddd5ae98c8ca05",
+              "file": "suite_exibir_quatro_livros.spec.ts",
+              "line": 4,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "suite_navegar_cartoes_presente.spec.ts",
+      "file": "suite_navegar_cartoes_presente.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Gift Cards Category Navigation",
+          "file": "suite_navegar_cartoes_presente.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should navigate to Gift Cards category and display breadcrumb and products",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 20000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 7,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 4529,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-28T13:29:57.461Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "0f27faa2236d41ed8b7f-a70272e4be0c17b0463e",
+              "file": "suite_navegar_cartoes_presente.spec.ts",
+              "line": 4,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "suite_navegar_categoria_livros.spec.ts",
+      "file": "suite_navegar_categoria_livros.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Browsing the Books category",
+          "file": "suite_navegar_categoria_livros.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "user can navigate to Books category and view available book products",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 20000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 7,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 4354,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-28T13:30:02.315Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "61bc05f7827c8102ba30-edcb2d0385c5feccbbd2",
+              "file": "suite_navegar_categoria_livros.spec.ts",
+              "line": 4,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "suite_navegar_sobre_nos.spec.ts",
+      "file": "suite_navegar_sobre_nos.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Institutional Information",
+          "file": "suite_navegar_sobre_nos.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "User opens the About us page from footer",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 20000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 7,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 4073,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-28T13:30:06.716Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a4f6fd2d19baf70beb70-e0dca30197f6953420a3",
+              "file": "suite_navegar_sobre_nos.spec.ts",
+              "line": 4,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "suite_ordenar_livros_por_preco.spec.ts",
+      "file": "suite_ordenar_livros_por_preco.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Books Category - Price Sorting",
+          "file": "suite_ordenar_livros_por_preco.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should display books sorted by ascending price when Price: Low to High is selected",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 20000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 7,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 11036,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByLabel(/sort by/i).first()\nExpected: visible\nTimeout: 7000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 7000ms\u001b[22m\n\u001b[2m  - waiting for getByLabel(/sort by/i).first()\u001b[22m\n",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByLabel(/sort by/i).first()\nExpected: visible\nTimeout: 7000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 7000ms\u001b[22m\n\u001b[2m  - waiting for getByLabel(/sort by/i).first()\u001b[22m\n\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resultados_gemini36flash_demowebshop20_20260728_01/baseline_executable_subset/suite_ordenar_livros_por_preco.spec.ts:23:34",
+                        "location": {
+                          "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resultados_gemini36flash_demowebshop20_20260728_01/baseline_executable_subset/suite_ordenar_livros_por_preco.spec.ts",
+                          "column": 34,
+                          "line": 23
+                        },
+                        "snippet": "  21 |     // Select 'Price: Low to High' in the Sort by control\n  22 |     const sortByDropdown = page.getByLabel(/sort by/i).first();\n> 23 |     await expect(sortByDropdown).toBeVisible();\n     |                                  ^\n  24 |     await sortByDropdown.selectOption({ label: 'Price: Low to High' });\n  25 |\n  26 |     // Verify the Books category header remains visible after sorting"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resultados_gemini36flash_demowebshop20_20260728_01/baseline_executable_subset/suite_ordenar_livros_por_preco.spec.ts",
+                            "column": 34,
+                            "line": 23
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByLabel(/sort by/i).first()\nExpected: visible\nTimeout: 7000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 7000ms\u001b[22m\n\u001b[2m  - waiting for getByLabel(/sort by/i).first()\u001b[22m\n\n\n  21 |     // Select 'Price: Low to High' in the Sort by control\n  22 |     const sortByDropdown = page.getByLabel(/sort by/i).first();\n> 23 |     await expect(sortByDropdown).toBeVisible();\n     |                                  ^\n  24 |     await sortByDropdown.selectOption({ label: 'Price: Low to High' });\n  25 |\n  26 |     // Verify the Books category header remains visible after sorting\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resultados_gemini36flash_demowebshop20_20260728_01/baseline_executable_subset/suite_ordenar_livros_por_preco.spec.ts:23:34"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-28T13:30:10.828Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/tmp/avaliacao-prompts-playwright/suite_ordenar_livros_por_p-5eedd-ice-Low-to-High-is-selected/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resultados_gemini36flash_demowebshop20_20260728_01/baseline_executable_subset/suite_ordenar_livros_por_preco.spec.ts",
+                        "column": 34,
+                        "line": 23
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "6a0ecf7bc5c58eb26676-8d16decb365f53877688",
+              "file": "suite_ordenar_livros_por_preco.spec.ts",
+              "line": 4,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "suite_persistencia_carrinho_apos_login.spec.ts",
+      "file": "suite_persistencia_carrinho_apos_login.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Authenticated User Cart Persistence",
+          "file": "suite_persistencia_carrinho_apos_login.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should persist Computing and Internet in cart across user sessions and clean up state",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 20000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 8,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 452,
+                      "error": {
+                        "message": "Error: E2E_EMAIL environment variable must be set\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mundefined\u001b[39m",
+                        "stack": "Error: E2E_EMAIL environment variable must be set\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mundefined\u001b[39m\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resultados_gemini36flash_demowebshop20_20260728_01/baseline_executable_subset/suite_persistencia_carrinho_apos_login.spec.ts:9:65",
+                        "location": {
+                          "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resultados_gemini36flash_demowebshop20_20260728_01/baseline_executable_subset/suite_persistencia_carrinho_apos_login.spec.ts",
+                          "column": 65,
+                          "line": 9
+                        },
+                        "snippet": "   7 |     const baseUrl = process.env.BASE_URL || 'https://demowebshop.tricentis.com';\n   8 |\n>  9 |     expect(email, 'E2E_EMAIL environment variable must be set').toBeTruthy();\n     |                                                                 ^\n  10 |     expect(password, 'E2E_PASSWORD environment variable must be set').toBeTruthy();\n  11 |\n  12 |     const productName = 'Computing and Internet';"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resultados_gemini36flash_demowebshop20_20260728_01/baseline_executable_subset/suite_persistencia_carrinho_apos_login.spec.ts",
+                            "column": 65,
+                            "line": 9
+                          },
+                          "message": "Error: E2E_EMAIL environment variable must be set\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mundefined\u001b[39m\n\n   7 |     const baseUrl = process.env.BASE_URL || 'https://demowebshop.tricentis.com';\n   8 |\n>  9 |     expect(email, 'E2E_EMAIL environment variable must be set').toBeTruthy();\n     |                                                                 ^\n  10 |     expect(password, 'E2E_PASSWORD environment variable must be set').toBeTruthy();\n  11 |\n  12 |     const productName = 'Computing and Internet';\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resultados_gemini36flash_demowebshop20_20260728_01/baseline_executable_subset/suite_persistencia_carrinho_apos_login.spec.ts:9:65"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-28T13:30:26.735Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/tmp/avaliacao-prompts-playwright/suite_persistencia_carrinh-f28ee-sessions-and-clean-up-state/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resultados_gemini36flash_demowebshop20_20260728_01/baseline_executable_subset/suite_persistencia_carrinho_apos_login.spec.ts",
+                        "column": 65,
+                        "line": 9
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "41c61cdee9c7da90c203-5c6af6e91d690cee0ada",
+              "file": "suite_persistencia_carrinho_apos_login.spec.ts",
+              "line": 4,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "suite_produtos_visualizados_recentemente.spec.ts",
+      "file": "suite_produtos_visualizados_recentemente.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Product History - Recently Viewed Products",
+          "file": "suite_produtos_visualizados_recentemente.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "displays recently viewed products in reverse chronological order",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 20000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 9,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 10758,
+                      "error": {
+                        "message": "TimeoutError: locator.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('link', { name: 'Fiction' }).first()\u001b[22m\n",
+                        "stack": "TimeoutError: locator.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('link', { name: 'Fiction' }).first()\u001b[22m\n\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resultados_gemini36flash_demowebshop20_20260728_01/baseline_executable_subset/suite_produtos_visualizados_recentemente.spec.ts:20:65",
+                        "location": {
+                          "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resultados_gemini36flash_demowebshop20_20260728_01/baseline_executable_subset/suite_produtos_visualizados_recentemente.spec.ts",
+                          "column": 65,
+                          "line": 20
+                        },
+                        "snippet": "  18 |       await page.getByRole('link', { name: 'Fiction', exact: true }).first().click();\n  19 |     } else {\n> 20 |       await page.getByRole('link', { name: 'Fiction' }).first().click();\n     |                                                                 ^\n  21 |     }\n  22 |\n  23 |     await expect(page.getByRole('heading', { name: 'Fiction' })).toBeVisible();"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resultados_gemini36flash_demowebshop20_20260728_01/baseline_executable_subset/suite_produtos_visualizados_recentemente.spec.ts",
+                            "column": 65,
+                            "line": 20
+                          },
+                          "message": "TimeoutError: locator.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('link', { name: 'Fiction' }).first()\u001b[22m\n\n\n  18 |       await page.getByRole('link', { name: 'Fiction', exact: true }).first().click();\n  19 |     } else {\n> 20 |       await page.getByRole('link', { name: 'Fiction' }).first().click();\n     |                                                                 ^\n  21 |     }\n  22 |\n  23 |     await expect(page.getByRole('heading', { name: 'Fiction' })).toBeVisible();\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resultados_gemini36flash_demowebshop20_20260728_01/baseline_executable_subset/suite_produtos_visualizados_recentemente.spec.ts:20:65"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-28T13:30:31.978Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/tmp/avaliacao-prompts-playwright/suite_produtos_visualizado-a4595-reverse-chronological-order/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resultados_gemini36flash_demowebshop20_20260728_01/baseline_executable_subset/suite_produtos_visualizados_recentemente.spec.ts",
+                        "column": 65,
+                        "line": 20
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "d98f5a1d4f9f872bf201-2bc8171d458522aa6277",
+              "file": "suite_produtos_visualizados_recentemente.spec.ts",
+              "line": 4,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "suite_visualizacao_livros_em_lista.spec.ts",
+      "file": "suite_visualizacao_livros_em_lista.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Book Catalog View",
+          "file": "suite_visualizacao_livros_em_lista.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "user can switch Books category view from Grid to List",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 20000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 10,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 14394,
+                      "error": {
+                        "message": "TimeoutError: locator.selectOption: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByLabel('View as')\u001b[22m\n",
+                        "stack": "TimeoutError: locator.selectOption: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByLabel('View as')\u001b[22m\n\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resultados_gemini36flash_demowebshop20_20260728_01/baseline_executable_subset/suite_visualizacao_livros_em_lista.spec.ts:20:24",
+                        "location": {
+                          "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resultados_gemini36flash_demowebshop20_20260728_01/baseline_executable_subset/suite_visualizacao_livros_em_lista.spec.ts",
+                          "column": 24,
+                          "line": 20
+                        },
+                        "snippet": "  18 |     // Select 'List' in the 'View as' control\n  19 |     const viewAsSelect = page.getByLabel('View as');\n> 20 |     await viewAsSelect.selectOption({ label: 'List' });\n     |                        ^\n  21 |\n  22 |     // Verify the system keeps the Books category visible\n  23 |     await expect(booksHeading).toBeVisible();"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resultados_gemini36flash_demowebshop20_20260728_01/baseline_executable_subset/suite_visualizacao_livros_em_lista.spec.ts",
+                            "column": 24,
+                            "line": 20
+                          },
+                          "message": "TimeoutError: locator.selectOption: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByLabel('View as')\u001b[22m\n\n\n  18 |     // Select 'List' in the 'View as' control\n  19 |     const viewAsSelect = page.getByLabel('View as');\n> 20 |     await viewAsSelect.selectOption({ label: 'List' });\n     |                        ^\n  21 |\n  22 |     // Verify the system keeps the Books category visible\n  23 |     await expect(booksHeading).toBeVisible();\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resultados_gemini36flash_demowebshop20_20260728_01/baseline_executable_subset/suite_visualizacao_livros_em_lista.spec.ts:20:24"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-28T13:30:44.434Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/tmp/avaliacao-prompts-playwright/suite_visualizacao_livros_-656ef-gory-view-from-Grid-to-List/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resultados_gemini36flash_demowebshop20_20260728_01/baseline_executable_subset/suite_visualizacao_livros_em_lista.spec.ts",
+                        "column": 24,
+                        "line": 20
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "85a035ab5d29d2279d94-e6daf9242efb4371a389",
+              "file": "suite_visualizacao_livros_em_lista.spec.ts",
+              "line": 4,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "user_registration_book_purchase.spec.ts",
+      "file": "user_registration_book_purchase.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Book Purchase Flow (Registration + Cart)",
+          "file": "user_registration_book_purchase.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should register a new user, add Health Book to cart, and verify cart contents",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 20000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 11,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 8816,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-28T13:31:00.294Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "f7557647539060876791-d578c7e674b7438d3ebd",
+              "file": "user_registration_book_purchase.spec.ts",
+              "line": 4,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-07-28T13:28:25.033Z",
+    "duration": 153464.74,
+    "expected": 8,
+    "skipped": 0,
+    "unexpected": 11,
+    "flaky": 0
+  }
+}

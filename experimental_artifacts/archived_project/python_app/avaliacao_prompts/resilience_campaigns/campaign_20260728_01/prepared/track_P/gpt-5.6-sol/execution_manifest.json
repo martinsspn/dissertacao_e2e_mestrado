@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "mutation_plan": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaigns/campaign_20260728_01/plans/gpt_original_12.mutation_plan.json",
+  "mutation_plan_sha256": "054db1613694d3f96ce00a85fc77e01126e32b3e58225e63652864c038e81979",
+  "fixture": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaigns/campaign_20260728_01/runtime/playwright/fixture.ts",
+  "fixture_sha256": "754f39892284ec2553a52ec727dfb892d2e3208cea7309fb818a5cb74f926c10",
+  "track_id": "P",
+  "model_id": "gpt-5.6-sol",
+  "allowlist": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaigns/campaign_20260728_01/allowlists/track_P_gpt-5.6-sol.json",
+  "allowlist_sha256": "b863b6cf89bb2e35f720b339c31362f5f9f46d4f8bd1ed477b05152ed35ba6b6",
+  "semantic_review": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaigns/campaign_20260728_01/reviews/track_P_review_bundle.json",
+  "semantic_review_sha256": "00c12610f3da690f94f1ff68d7a7f81a7f02a3e3b7f81f449478a55b8d1a7d99",
+  "transformation": "only_replace_import_source_from_@playwright/test_to_frozen_fixture",
+  "condition_key": {
+    "A": "baseline",
+    "B": "structured_context"
+  },
+  "pairs": [
+    {
+      "scenario_id": "suite_busca_blue_jeans",
+      "baseline_original": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaigns/campaign_20260728_01/cohort_sources/track_P/gpt-5.6-sol/baseline/suite_busca_blue_jeans.spec.ts",
+      "structured_original": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaigns/campaign_20260728_01/cohort_sources/track_P/gpt-5.6-sol/structured_context/suite_busca_blue_jeans.spec.ts",
+      "baseline_sha256": "17ec6c09f2ce08cb07ab469e30f5bac03d5cabc4dcbcddb2eaf96d5a79551d1a",
+      "structured_sha256": "e10cc3926ee28b9bd0741c5b3cb62c91de1b698c50b45462620d9fd92fac9dd0",
+      "baseline_derived": "6e9d2ee1f9353a3646c873556307262420338ff539a61ff11818f16b5fe94c8f",
+      "structured_derived": "ca88ca85c5d31e32c71674b8ac930c743734e60c8845ef5308161befe0bbfa51"
+    },
+    {
+      "scenario_id": "suite_detalhes_fiction",
+      "baseline_original": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaigns/campaign_20260728_01/cohort_sources/track_P/gpt-5.6-sol/baseline/suite_detalhes_fiction.spec.ts",
+      "structured_original": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaigns/campaign_20260728_01/cohort_sources/track_P/gpt-5.6-sol/structured_context/suite_detalhes_fiction.spec.ts",
+      "baseline_sha256": "e37acf41a8f7ef479386f4a0883ab6b3d67d2bf89cc052c729d80689b93084b9",
+      "structured_sha256": "90733e4dbe579605b96c2a75e08af62646816b9dd718c0e1cf1a63d10f49f994",
+      "baseline_derived": "221bedd8f4db06fd6b3bb9f4309d8f74efec4741b4ab7ff913b4b92d5a2ac605",
+      "structured_derived": "13f2dd770a2793da8bcabea38c810cf10b33df9eac830ff50f780add2cde1c31"
+    },
+    {
+      "scenario_id": "suite_limpar_carrinho",
+      "baseline_original": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaigns/campaign_20260728_01/cohort_sources/track_P/gpt-5.6-sol/baseline/suite_limpar_carrinho.spec.ts",
+      "structured_original": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaigns/campaign_20260728_01/cohort_sources/track_P/gpt-5.6-sol/structured_context/suite_limpar_carrinho.spec.ts",
+      "baseline_sha256": "3f3281654537451fdd86ff7a143a5625f0b1e69d86caf63277105e64defad857",
+      "structured_sha256": "e3c5a47e651f7e646804a66338588ef3fdf0d66b3835ee6fc1715ec01746f435",
+      "baseline_derived": "ec696926bb83fbcdd50908553d6c91f756ec7b3de40a40d7b0d96f5560339e51",
+      "structured_derived": "f9a644190b52e2a9a84ddca9f15acf85dc4f09d51e8e1b6eef871c6db187966d"
+    },
+    {
+      "scenario_id": "suite_login_invalido",
+      "baseline_original": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaigns/campaign_20260728_01/cohort_sources/track_P/gpt-5.6-sol/baseline/suite_login_invalido.spec.ts",
+      "structured_original": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaigns/campaign_20260728_01/cohort_sources/track_P/gpt-5.6-sol/structured_context/suite_login_invalido.spec.ts",
+      "baseline_sha256": "7c9a3f0564c97e1872f7c38905caf9f6bf998e47f7acef900d4ee9158b082304",
+      "structured_sha256": "3c7900621e6808f93c27263b4a4c0266af045336462b5479ce67f98f1b9bd627",
+      "baseline_derived": "7f1f88ce07c94e2308c28d825d3f486d30c807f00908e9651d617f6227fe3f82",
+      "structured_derived": "17a2e3a50723a4a754d3d57745f8c96287516aea5579e06adaed3b1b84610193"
+    },
+    {
+      "scenario_id": "suite_login_valido",
+      "baseline_original": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaigns/campaign_20260728_01/cohort_sources/track_P/gpt-5.6-sol/baseline/suite_login_valido.spec.ts",
+      "structured_original": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_campaigns/campaign_20260728_01/cohort_sources/track_P/gpt-5.6-sol/structured_context/suite_login_valido.spec.ts",
+      "baseline_sha256": "1e47ef9724fb3ebc42dd0ee577ad69ff9d39600ffc7f69f0ed76f179240bb11a",
+      "structured_sha256": "c52624d5408e36154f5d87b09c661c7e3841732f4af3a38fb485819471748e37",
+      "baseline_derived": "061eb8e3af77e5d773ab2fff8f87841ef0db581023cfb54463c3057fa04265fa",
+      "structured_derived": "0b803446c2ba011692ec61c6b2087587f100567e93035179cfcd178e2165cdf1"
+    }
+  ],
+  "execution_manifest_sha256": "9c62b7e71d75310999b2d89ae5349c212790d0685fe02414f00b6726d636bd09"
+}

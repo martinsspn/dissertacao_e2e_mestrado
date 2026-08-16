@@ -1,0 +1,3 @@
+Listing tests:
+  suite_enquete_sem_resposta.spec.ts:4:7 › Community Poll Voting › should prevent voting without selecting an answer
+Total: 1 test in 1 file

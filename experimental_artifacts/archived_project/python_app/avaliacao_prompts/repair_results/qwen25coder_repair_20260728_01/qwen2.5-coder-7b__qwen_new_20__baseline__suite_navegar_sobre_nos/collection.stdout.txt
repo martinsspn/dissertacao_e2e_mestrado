@@ -1,0 +1,3 @@
+Listing tests:
+  suite_navegar_sobre_nos.spec.ts:4:7 › Institutional Information Page › should display the About us page and its corresponding heading
+Total: 1 test in 1 file

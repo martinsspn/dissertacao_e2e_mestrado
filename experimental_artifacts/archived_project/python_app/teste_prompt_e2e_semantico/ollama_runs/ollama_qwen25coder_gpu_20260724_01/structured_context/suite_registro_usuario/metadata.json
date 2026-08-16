@@ -1,0 +1,23 @@
+{
+  "model": "qwen2.5-coder:7b",
+  "created_at": "2026-07-24T18:37:13.956485Z",
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 26999264200,
+  "load_duration": 356870100,
+  "prompt_eval_count": 1321,
+  "prompt_eval_duration": 6688134000,
+  "eval_count": 358,
+  "eval_duration": 19942674000,
+  "condition": "structured_context",
+  "scenario": "suite_registro_usuario",
+  "model_requested": "qwen2.5-coder:7b",
+  "seed": 20260724,
+  "temperature": 0,
+  "num_ctx": 8192,
+  "num_predict": 2048,
+  "elapsed_seconds_client": 25.357,
+  "input_sha256": "84b3908084621cef735a013e89dd9ba59874601c61782b4bbfb8c695c5e2a00a",
+  "response_sha256": "96d6567db65ce13d847afcf9ed7bde8463500343ce9dc72bfa1580e6f9cc02de",
+  "stateless": true
+}

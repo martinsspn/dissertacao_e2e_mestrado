@@ -1,0 +1,23 @@
+{
+  "model": "qwen2.5-coder:7b",
+  "created_at": "2026-07-24T18:34:43.9555939Z",
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 27859236000,
+  "load_duration": 353577900,
+  "prompt_eval_count": 1113,
+  "prompt_eval_duration": 4532925000,
+  "eval_count": 416,
+  "eval_duration": 22885707000,
+  "condition": "structured_context",
+  "scenario": "suite_configurar_desktop",
+  "model_requested": "qwen2.5-coder:7b",
+  "seed": 20260724,
+  "temperature": 0,
+  "num_ctx": 8192,
+  "num_predict": 2048,
+  "elapsed_seconds_client": 26.15,
+  "input_sha256": "30753c999d3caee38670a0cafecd2a1cfe43902af24e3bb136577035c49eff90",
+  "response_sha256": "595759bd903592e50528418e2ed6690cd078eca4a2bf8bd4dc261a2aa7ee45a0",
+  "stateless": true
+}

@@ -1,0 +1,114 @@
+[
+  {
+    "spec": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/specs/fluxo_computadores_desktops.txt",
+    "approach": "structured_context",
+    "output": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_prompts_playwright_locators_20260724_02/fluxo_computadores_desktops.structured_context.prompt.md",
+    "requirements": "1",
+    "context_items": "2",
+    "characters": "3504"
+  },
+  {
+    "spec": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/specs/suite_adicionar_carrinho.txt",
+    "approach": "structured_context",
+    "output": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_prompts_playwright_locators_20260724_02/suite_adicionar_carrinho.structured_context.prompt.md",
+    "requirements": "6",
+    "context_items": "6",
+    "characters": "4570"
+  },
+  {
+    "spec": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/specs/suite_adicionar_wishlist.txt",
+    "approach": "structured_context",
+    "output": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_prompts_playwright_locators_20260724_02/suite_adicionar_wishlist.structured_context.prompt.md",
+    "requirements": "7",
+    "context_items": "6",
+    "characters": "4703"
+  },
+  {
+    "spec": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/specs/suite_busca_blue_jeans.txt",
+    "approach": "structured_context",
+    "output": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_prompts_playwright_locators_20260724_02/suite_busca_blue_jeans.structured_context.prompt.md",
+    "requirements": "4",
+    "context_items": "4",
+    "characters": "3934"
+  },
+  {
+    "spec": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/specs/suite_checkout_blue_jeans.txt",
+    "approach": "structured_context",
+    "output": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_prompts_playwright_locators_20260724_02/suite_checkout_blue_jeans.structured_context.prompt.md",
+    "requirements": "12",
+    "context_items": "6",
+    "characters": "5011"
+  },
+  {
+    "spec": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/specs/suite_configurar_desktop.txt",
+    "approach": "structured_context",
+    "output": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_prompts_playwright_locators_20260724_02/suite_configurar_desktop.structured_context.prompt.md",
+    "requirements": "7",
+    "context_items": "6",
+    "characters": "4400"
+  },
+  {
+    "spec": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/specs/suite_detalhes_fiction.txt",
+    "approach": "structured_context",
+    "output": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_prompts_playwright_locators_20260724_02/suite_detalhes_fiction.structured_context.prompt.md",
+    "requirements": "4",
+    "context_items": "4",
+    "characters": "3932"
+  },
+  {
+    "spec": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/specs/suite_limpar_carrinho.txt",
+    "approach": "structured_context",
+    "output": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_prompts_playwright_locators_20260724_02/suite_limpar_carrinho.structured_context.prompt.md",
+    "requirements": "5",
+    "context_items": "3",
+    "characters": "3873"
+  },
+  {
+    "spec": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/specs/suite_limpar_wishlist.txt",
+    "approach": "structured_context",
+    "output": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_prompts_playwright_locators_20260724_02/suite_limpar_wishlist.structured_context.prompt.md",
+    "requirements": "6",
+    "context_items": "2",
+    "characters": "3674"
+  },
+  {
+    "spec": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/specs/suite_login_invalido.txt",
+    "approach": "structured_context",
+    "output": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_prompts_playwright_locators_20260724_02/suite_login_invalido.structured_context.prompt.md",
+    "requirements": "4",
+    "context_items": "5",
+    "characters": "4326"
+  },
+  {
+    "spec": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/specs/suite_login_valido.txt",
+    "approach": "structured_context",
+    "output": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_prompts_playwright_locators_20260724_02/suite_login_valido.structured_context.prompt.md",
+    "requirements": "4",
+    "context_items": "5",
+    "characters": "4278"
+  },
+  {
+    "spec": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/specs/suite_logout.txt",
+    "approach": "structured_context",
+    "output": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_prompts_playwright_locators_20260724_02/suite_logout.structured_context.prompt.md",
+    "requirements": "4",
+    "context_items": "0",
+    "characters": "3285"
+  },
+  {
+    "spec": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/specs/suite_registro_usuario.txt",
+    "approach": "structured_context",
+    "output": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_prompts_playwright_locators_20260724_02/suite_registro_usuario.structured_context.prompt.md",
+    "requirements": "8",
+    "context_items": "8",
+    "characters": "5424"
+  },
+  {
+    "spec": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/specs/user_registration_book_purchase.txt",
+    "approach": "structured_context",
+    "output": "/home/martinsspn/dissertacao_e2e_semantico/python_app/teste_prompt_e2e_semantico/generated_prompts_playwright_locators_20260724_02/user_registration_book_purchase.structured_context.prompt.md",
+    "requirements": "21",
+    "context_items": "16",
+    "characters": "7893"
+  }
+]

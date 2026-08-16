@@ -1,0 +1,150 @@
+{
+  "config": {
+    "argv": [
+      "/usr/bin/node",
+      "/home/martinsspn/dissertacao_e2e_semantico/node_modules/.bin/playwright",
+      "test",
+      "suite_configurar_desktop.spec.ts",
+      "--config=/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/playwright.config.ts",
+      "--reporter=json"
+    ],
+    "configFile": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/playwright.config.ts",
+    "rootDir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_artifacts/prepared_execution/A",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/tmp/avaliacao-prompts-playwright",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_artifacts/prepared_execution/A",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 20000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.61.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "suite_configurar_desktop.spec.ts",
+      "file": "suite_configurar_desktop.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Configuration of a computer before purchase",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 20000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 15911,
+                  "error": {
+                    "message": "TimeoutError: locator.check: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByLabel('Fast', { exact: true })\u001b[22m\n",
+                    "stack": "TimeoutError: locator.check: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByLabel('Fast', { exact: true })\u001b[22m\n\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_artifacts/prepared_execution/A/suite_configurar_desktop.spec.ts:47:50",
+                    "location": {
+                      "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_artifacts/prepared_execution/A/suite_configurar_desktop.spec.ts",
+                      "column": 50,
+                      "line": 47
+                    },
+                    "snippet": "  45 |   ).toBeVisible();\n  46 |\n> 47 |   await page.getByLabel('Fast', { exact: true }).check();\n     |                                                  ^\n  48 |   await page.getByLabel('4 GB', { exact: true }).check();\n  49 |   await page.getByLabel('400 GB', { exact: true }).check();\n  50 |   await page.getByLabel('Office Suite', { exact: true }).check();"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_artifacts/prepared_execution/A/suite_configurar_desktop.spec.ts",
+                        "column": 50,
+                        "line": 47
+                      },
+                      "message": "TimeoutError: locator.check: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByLabel('Fast', { exact: true })\u001b[22m\n\n\n  45 |   ).toBeVisible();\n  46 |\n> 47 |   await page.getByLabel('Fast', { exact: true }).check();\n     |                                                  ^\n  48 |   await page.getByLabel('4 GB', { exact: true }).check();\n  49 |   await page.getByLabel('400 GB', { exact: true }).check();\n  50 |   await page.getByLabel('Office Suite', { exact: true }).check();\n    at /home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_artifacts/prepared_execution/A/suite_configurar_desktop.spec.ts:47:50"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-07-20T17:44:23.559Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "resilience-mutation-events",
+                      "contentType": "application/json",
+                      "body": "W10="
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/tmp/avaliacao-prompts-playwright/suite_configurar_desktop-C-c5470--a-computer-before-purchase/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/home/martinsspn/dissertacao_e2e_semantico/python_app/avaliacao_prompts/resilience_artifacts/prepared_execution/A/suite_configurar_desktop.spec.ts",
+                    "column": 50,
+                    "line": 47
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "ded8edc9abcd61cf5d5b-13bb237564cf29038eba",
+          "file": "suite_configurar_desktop.spec.ts",
+          "line": 3,
+          "column": 5
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-07-20T17:44:22.393Z",
+    "duration": 17502.783,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

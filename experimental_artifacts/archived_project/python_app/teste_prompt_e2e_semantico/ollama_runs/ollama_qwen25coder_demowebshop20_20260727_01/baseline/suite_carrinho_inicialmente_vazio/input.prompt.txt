@@ -1,0 +1,1 @@
+Viewing an empty shopping cart: In a new browser context, the user accesses Shopping cart without adding any product. The system displays the Shopping cart page, shows a zero item count, and informs that the shopping cart is empty.

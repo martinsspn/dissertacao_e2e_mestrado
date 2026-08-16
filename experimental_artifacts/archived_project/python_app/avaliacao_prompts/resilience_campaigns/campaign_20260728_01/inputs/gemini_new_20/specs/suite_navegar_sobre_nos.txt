@@ -1,0 +1,1 @@
+Opening the institutional information page: The user accesses the Demo Web Shop home page. In the Information section of the footer, the user selects About us. The system displays the About us page and its corresponding heading.

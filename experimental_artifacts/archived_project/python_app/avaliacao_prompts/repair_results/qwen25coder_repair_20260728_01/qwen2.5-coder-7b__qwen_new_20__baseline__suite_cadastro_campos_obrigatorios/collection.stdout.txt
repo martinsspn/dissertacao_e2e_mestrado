@@ -1,0 +1,3 @@
+Listing tests:
+  suite_cadastro_campos_obrigatorios.spec.ts:4:7 › Validation of required registration fields › should display validation messages for empty fields
+Total: 1 test in 1 file

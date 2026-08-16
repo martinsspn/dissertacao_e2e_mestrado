@@ -1,0 +1,3 @@
+Listing tests:
+  suite_cadastro_confirmacao_senha.spec.ts:4:7 › Validation of mismatched registration passwords › should inform when password and confirmation password do not match
+Total: 1 test in 1 file

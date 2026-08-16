@@ -1,0 +1,23 @@
+{
+  "model": "qwen2.5-coder:7b",
+  "created_at": "2026-07-27T18:10:24.0396211Z",
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 26807204800,
+  "load_duration": 13947658200,
+  "prompt_eval_count": 154,
+  "prompt_eval_duration": 3165391000,
+  "eval_count": 143,
+  "eval_duration": 9687145000,
+  "condition": "baseline",
+  "scenario": "fluxo_computadores_desktops",
+  "model_requested": "qwen2.5-coder:7b",
+  "seed": 20260724,
+  "temperature": 0,
+  "num_ctx": 8192,
+  "num_predict": 2048,
+  "elapsed_seconds_client": 25.509,
+  "input_sha256": "f60265f95fac4607578827c330b48c78979ab37e18c09148e48e0f5fd3262452",
+  "response_sha256": "28de1d36f2b6b09b152208d779e9937bec1d3b97319b2a5f7ada702817b3be83",
+  "stateless": true
+}

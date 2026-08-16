@@ -1,0 +1,3 @@
+Listing tests:
+  suite_adicionar_wishlist.spec.ts:13:7 › Add a product to the wishlist › should add product to wishlist and display it
+Total: 1 test in 1 file
